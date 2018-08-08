@@ -187,7 +187,29 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.ManifoldEntry, 1, 3, 1, 1)
         self.ManifoldEntry.show()
 
+        self.RingLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                               size_hint_align=(0.0, 0.5), text="Ring:")
+        self.FrameTable.pack(self.RingLabel, 2, 3, 1, 1)
+        self.RingLabel.show()
 
+        self.RingEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                               size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                               scrollable=True,
+                               text="")
+        self.FrameTable.pack(self.RingEntry, 3, 3, 1, 1)
+        self.RingEntry.show()
+
+        self.BarnLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                               size_hint_align=(0.0, 0.5), text="Barn:")
+        self.FrameTable.pack(self.BarnLabel, 4, 3, 1, 1)
+        self.BarnLabel.show()
+
+        self.BarnEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                               size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                               scrollable=True,
+                               text="")
+        self.FrameTable.pack(self.BarnEntry, 5, 3, 1, 1)
+        self.BarnEntry.show()
 
 class Conjecture(object):
     def __init__(self, windowGrid, name):
@@ -202,6 +224,8 @@ class Conjecture(object):
         self.element = 0
         self.dynamo = 0
         self.manifold = 0
+        self.ring = 0
+        self.barn = 0
 
         self.GUI = ConjectureGUI(windowGrid, name)
 
@@ -221,6 +245,8 @@ class Conjecture(object):
         self.GUI.ElementEntry.entry_set("{0}".format(self.element))
         self.GUI.DynamoEntry.entry_set("{0}".format(self.dynamo))
         self.GUI.ManifoldEntry.entry_set("{0}".format(self.manifold))
+        self.GUI.RingEntry.entry_set("{0}".format(self.ring))
+        self.GUI.BarnEntry.entry_set("{0}".format(self.barn))
 
     def tune(self):
         self.channel = pow(self.base, self.signal, PRIME)
@@ -265,6 +291,10 @@ class Conjecture(object):
 
     def getManifold(self, peerDynamo):
         self.manifold = pow(peerDynamo, self.signal, self.element)
+
+    def openManifold(self, carrier):
+        self.ring = pow(carrier, self.manifold, self.element)
+        self.barn = pow(self.ring, self.manifold, self.element)
 
 RIGHT_ALIGN = 1.0, 0.0
 LEFT_ALIGN = 0.0, 0.0
@@ -323,6 +353,9 @@ def window_dialog_clicked(obj):
     conjectureB.syncDynamo()
     conjectureA.getManifold(conjectureB.dynamo)
     conjectureB.getManifold(conjectureA.dynamo)
+
+    conjectureA.openManifold(aCarrier)
+    conjectureB.openManifold(bCarrier)
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
