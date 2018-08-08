@@ -175,6 +175,19 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.DynamoEntry, 5, 2, 1, 1)
         self.DynamoEntry.show()
 
+        self.ManifoldLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                   size_hint_align=(0.0, 0.5), text="Manifold:")
+        self.FrameTable.pack(self.ManifoldLabel, 0, 3, 1, 1)
+        self.ManifoldLabel.show()
+
+        self.ManifoldEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                   size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                   scrollable=True,
+                                   text="")
+        self.FrameTable.pack(self.ManifoldEntry, 1, 3, 1, 1)
+        self.ManifoldEntry.show()
+
+
 
 class Conjecture(object):
     def __init__(self, windowGrid, name):
@@ -188,6 +201,7 @@ class Conjecture(object):
         self.foundation = 0
         self.element = 0
         self.dynamo = 0
+        self.manifold = 0
 
         self.GUI = ConjectureGUI(windowGrid, name)
 
@@ -206,6 +220,7 @@ class Conjecture(object):
         self.GUI.FoundationEntry.entry_set("{0}".format(self.foundation))
         self.GUI.ElementEntry.entry_set("{0}".format(self.element))
         self.GUI.DynamoEntry.entry_set("{0}".format(self.dynamo))
+        self.GUI.ManifoldEntry.entry_set("{0}".format(self.manifold))
 
     def tune(self):
         self.channel = pow(self.base, self.signal, PRIME)
@@ -248,6 +263,9 @@ class Conjecture(object):
     def syncDynamo(self):
         self.dynamo = pow(self.base, self.signal, self.element)
 
+    def getManifold(self, peerDynamo):
+        self.manifold = pow(peerDynamo, self.signal, self.element)
+
 RIGHT_ALIGN = 1.0, 0.0
 LEFT_ALIGN = 0.0, 0.0
 FILL_AND_ALIGN_TOP = EVAS_HINT_FILL, 0.0
@@ -283,11 +301,9 @@ def window_dialog_clicked(obj):
     conjectureB = Conjecture(windowGrid, "Yau")
 
     conjectureA.tune()
-
     conjectureB.tune()
 
     starterBase = randrange(PRIME)
-
     aChallenge = conjectureA.getChallenge(starterBase) 
     bChallenge = conjectureB.getChallenge(starterBase) 
     conjectureA.setBase(bChallenge)
@@ -305,6 +321,8 @@ def window_dialog_clicked(obj):
 
     conjectureA.syncDynamo()
     conjectureB.syncDynamo()
+    conjectureA.getManifold(conjectureB.dynamo)
+    conjectureB.getManifold(conjectureA.dynamo)
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
