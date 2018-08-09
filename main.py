@@ -20,7 +20,6 @@ from efl.elementary.scroller import Scroller, ELM_SCROLLER_POLICY_OFF
 import json
 import time
 from random import randrange
-from coinmarketcap import Market
 
 PRIME = 257
 
