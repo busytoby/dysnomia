@@ -150,17 +150,17 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.FoundationEntry, 1, 2, 1, 1)
         self.FoundationEntry.show()
 
-        self.ElementLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
-                                  size_hint_align=(0.0, 0.5), text="Element:")
-        self.FrameTable.pack(self.ElementLabel, 2, 2, 1, 1)
-        self.ElementLabel.show()
+        self.TxTxElementLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                      size_hint_align=(0.0, 0.5), text="TxTx:")
+        self.FrameTable.pack(self.TxTxElementLabel, 2, 2, 1, 1)
+        self.TxTxElementLabel.show()
 
-        self.ElementEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
-                                  size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
-                                  scrollable=True,
-                                  text="")
-        self.FrameTable.pack(self.ElementEntry, 3, 2, 1, 1)
-        self.ElementEntry.show()
+        self.TxTxElementEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                      size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                      scrollable=True,
+                                      text="")
+        self.FrameTable.pack(self.TxTxElementEntry, 3, 2, 1, 1)
+        self.TxTxElementEntry.show()
 
         self.DynamoLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
                                  size_hint_align=(0.0, 0.5), text="Dynamo:")
@@ -220,7 +220,7 @@ class Conjecture(object):
         self.pole = 0
         self.identity = 0
         self.foundation = 0
-        self.element = 0
+        self.txTxElement = 0
         self.dynamo = 0
         self.manifold = 0
         self.ring = 0
@@ -228,6 +228,7 @@ class Conjecture(object):
 
         self.GUI = ConjectureGUI(windowGrid, name)
 
+    def seed(self):
         while(self.base < 3 or self.secret < 3 or self.signal < 3):
             self.base = randrange(PRIME)
             self.secret = randrange(PRIME)
@@ -241,7 +242,7 @@ class Conjecture(object):
         self.GUI.PoleEntry.entry_set("{0}".format(self.pole))
         self.GUI.IdentityEntry.entry_set("{0}".format(self.identity))
         self.GUI.FoundationEntry.entry_set("{0}".format(self.foundation))
-        self.GUI.ElementEntry.entry_set("{0}".format(self.element))
+        self.GUI.TxTxElementEntry.entry_set("{0}".format(self.txTxElement))
         self.GUI.DynamoEntry.entry_set("{0}".format(self.dynamo))
         self.GUI.ManifoldEntry.entry_set("{0}".format(self.manifold))
         self.GUI.RingEntry.entry_set("{0}".format(self.ring))
@@ -269,7 +270,7 @@ class Conjecture(object):
         self.isListener = True
         self.GUI.frame.text_set(self.GUI.frame.text + " (Listener)")
 
-    def establishElement(self, peerFoundation, peerChannel):
+    def establishTxTxElement(self, peerFoundation, peerChannel):
         if not self.isListener:
             self.identity = randrange(PRIME)
             self.foundation = pow(self.base, self.identity, PRIME)
@@ -283,17 +284,24 @@ class Conjecture(object):
         element = convergence + accord
         discardMoment = element + peerMoment
 
-        self.element = element
+        self.txTxElement = element
 
-    def syncDynamo(self):
-        self.dynamo = pow(self.base, self.signal, self.element)
+    def syncDynamo(self, element):
+        self.dynamo = pow(self.base, self.signal, element)
 
-    def getManifold(self, peerDynamo):
-        self.manifold = pow(peerDynamo, self.signal, self.element)
+    def getManifold(self, peerDynamo, element):
+        self.manifold = pow(peerDynamo, self.signal, element)
 
-    def openManifold(self, carrier):
-        self.ring = pow(carrier, self.manifold, self.element)
-        self.barn = pow(self.ring, self.manifold, self.element)
+    def openManifold(self, carrier, element):
+        self.ring = pow(carrier, self.manifold, element)
+        self.barn = pow(self.ring, self.manifold, element)
+
+    def validateManifold(self):
+        validateList = [ self.base, self.secret, self.signal, self.channel, self.pole,
+                         self.identity, self.foundation, self.txTxElement, self.dynamo,
+                         self.manifold, self.ring, self.barn ]
+        return all(i >= 17 for i in validateList)
+
 
 RIGHT_ALIGN = 1.0, 0.0
 LEFT_ALIGN = 0.0, 0.0
@@ -329,32 +337,41 @@ def window_dialog_clicked(obj):
     conjectureA = Conjecture(windowGrid, "Calibi")
     conjectureB = Conjecture(windowGrid, "Yau")
 
-    conjectureA.tune()
-    conjectureB.tune()
+    while True:
+        try:
+            conjectureA.seed()
+            conjectureB.seed()
+            conjectureA.tune()
+            conjectureB.tune()
 
-    starterBase = randrange(PRIME)
-    aChallenge = conjectureA.getChallenge(starterBase) 
-    bChallenge = conjectureB.getChallenge(starterBase) 
-    conjectureA.setBase(bChallenge)
-    conjectureB.setBase(aChallenge)
+            starterBase = randrange(PRIME)
+            aChallenge = conjectureA.getChallenge(starterBase)
+            bChallenge = conjectureB.getChallenge(starterBase)
+            conjectureA.setBase(bChallenge)
+            conjectureB.setBase(aChallenge)
 
-    conjectureA.generate()
-    conjectureB.generate()
+            conjectureA.generate()
+            conjectureB.generate()
 
-    aCarrier = conjectureA.getCarrier(conjectureB.pole) 
-    bCarrier = conjectureB.getCarrier(conjectureA.pole) 
+            aCarrier = conjectureA.getCarrier(conjectureB.pole)
+            bCarrier = conjectureB.getCarrier(conjectureA.pole)
 
-    conjectureB.establishListener()
-    conjectureA.establishElement(conjectureB.foundation, conjectureB.channel)
-    conjectureB.establishElement(conjectureA.foundation, conjectureA.channel)
+            conjectureB.establishListener()
+            conjectureA.establishTxTxElement(conjectureB.foundation, conjectureB.channel)
+            conjectureB.establishTxTxElement(conjectureA.foundation, conjectureA.channel)
 
-    conjectureA.syncDynamo()
-    conjectureB.syncDynamo()
-    conjectureA.getManifold(conjectureB.dynamo)
-    conjectureB.getManifold(conjectureA.dynamo)
+            conjectureA.syncDynamo(conjectureA.txTxElement)
+            conjectureB.syncDynamo(conjectureB.txTxElement)
+            conjectureA.getManifold(conjectureB.dynamo, conjectureA.txTxElement)
+            conjectureB.getManifold(conjectureA.dynamo, conjectureB.txTxElement)
 
-    conjectureA.openManifold(aCarrier)
-    conjectureB.openManifold(bCarrier)
+            conjectureA.openManifold(aCarrier, conjectureA.txTxElement)
+            conjectureB.openManifold(bCarrier, conjectureB.txTxElement)
+            if conjectureA.validateManifold() and conjectureB.validateManifold():
+                break
+        except:
+            print("err")
+            continue
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
