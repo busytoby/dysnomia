@@ -47,6 +47,7 @@ def window_dialog_clicked(obj):
     win.resize_object_add(windowGrid)
     windowGrid.show()
 
+    starterBase = 0
     conjectureA = Conjecture(windowGrid, "Calibi")
     conjectureB = Conjecture(windowGrid, "Yau")
 
@@ -57,7 +58,8 @@ def window_dialog_clicked(obj):
             conjectureA.tune()
             conjectureB.tune()
 
-            starterBase = conjectureA.rand()
+            while(starterBase < conjectureA.ENTROPY_CUTOFF):
+                starterBase = conjectureA.rand()
             aChallenge = conjectureA.getChallenge(starterBase)
             bChallenge = conjectureB.getChallenge(starterBase)
             conjectureA.setBase(bChallenge)
@@ -70,16 +72,16 @@ def window_dialog_clicked(obj):
             bCarrier = conjectureB.getCarrier(conjectureA.pole)
 
             conjectureB.establishListener()
-            conjectureA.establishTxTxElement(conjectureB.foundation, conjectureB.channel)
-            conjectureB.establishTxTxElement(conjectureA.foundation, conjectureA.channel)
+            conjectureA.establishElement(conjectureB.foundation, conjectureB.channel)
+            conjectureB.establishElement(conjectureA.foundation, conjectureA.channel)
 
-            conjectureA.syncDynamo(conjectureA.txTxElement)
-            conjectureB.syncDynamo(conjectureB.txTxElement)
-            conjectureA.getManifold(conjectureB.dynamo, conjectureA.txTxElement)
-            conjectureB.getManifold(conjectureA.dynamo, conjectureB.txTxElement)
+            conjectureA.syncDynamo()
+            conjectureB.syncDynamo()
+            conjectureA.getManifold(conjectureB.dynamo)
+            conjectureB.getManifold(conjectureA.dynamo)
 
-            conjectureA.openManifold(aCarrier, conjectureA.txTxElement)
-            conjectureB.openManifold(bCarrier, conjectureB.txTxElement)
+            conjectureA.openManifold(aCarrier)
+            conjectureB.openManifold(bCarrier)
             if conjectureA.validateManifold() and conjectureB.validateManifold():
                 break
         except:

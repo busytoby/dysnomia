@@ -141,17 +141,17 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.FoundationEntry, 1, 2, 1, 1)
         self.FoundationEntry.show()
 
-        self.TxTxElementLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
-                                      size_hint_align=(0.0, 0.5), text="TxTx:")
-        self.FrameTable.pack(self.TxTxElementLabel, 2, 2, 1, 1)
-        self.TxTxElementLabel.show()
+        self.ElementLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                      size_hint_align=(0.0, 0.5), text="Element:")
+        self.FrameTable.pack(self.ElementLabel, 2, 2, 1, 1)
+        self.ElementLabel.show()
 
-        self.TxTxElementEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+        self.ElementEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
                                       size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
                                       scrollable=True,
                                       text="")
-        self.FrameTable.pack(self.TxTxElementEntry, 3, 2, 1, 1)
-        self.TxTxElementEntry.show()
+        self.FrameTable.pack(self.ElementEntry, 3, 2, 1, 1)
+        self.ElementEntry.show()
 
         self.DynamoLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
                                  size_hint_align=(0.0, 0.5), text="Dynamo:")
@@ -200,4 +200,5 @@ class ConjectureGUI(object):
                                text="")
         self.FrameTable.pack(self.BarnEntry, 5, 3, 1, 1)
         self.BarnEntry.show()
+
 
