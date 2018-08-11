@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import binascii
 from conjecture.gui import ConjectureGUI 
 from random import randrange
 
@@ -49,6 +50,13 @@ class Conjecture(object):
 
     def tune(self):
         self.channel = pow(self.base, self.signal, PRIME)
+
+    # Provably Best Hash Function Executed On Any Computer To Date!??
+    def hashString(self, string):
+        stringUnicode = string.encode('utf-8')
+        hex = binascii.hexlify(stringUnicode)
+        intHex = int(hex, 16)
+        return pow(intHex, self.txTxElement, pow(self.ring, self.barn))
 
     def getChallenge(self, starterBase):
         return pow(starterBase, self.secret, PRIME)

@@ -83,11 +83,15 @@ def window_dialog_clicked(obj):
             if conjectureA.validateManifold() and conjectureB.validateManifold():
                 break
         except:
-            traceback.print_exc()
-            break
+            continue
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
+
+    configureStringHashA = conjectureA.hashString("Configuration") 
+    configureStringHashB = conjectureB.hashString("Configuration") 
+    print(configureStringHashA == configureStringHashB)
+    print(configureStringHashB)
 #    win.borderless_set(1)
     win.show()
 
