@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import base64
 import binascii
+from decimal import Decimal
 from conjecture.gui import ConjectureGUI 
 from random import randrange
 
@@ -15,18 +17,18 @@ class Conjecture(object):
         self.GUI = None
 
         self.isListener = False
-        self.base = 0
-        self.secret = 0
-        self.signal = 0
-        self.channel = 0
-        self.pole = 0
-        self.identity = 0
-        self.foundation = 0
-        self.element = 0
-        self.dynamo = 0
-        self.manifold = 0
-        self.ring = 0
-        self.barn = 0
+        self.base = 0                   # 1. Like A Number
+        self.secret = 0                 # 2. Like A Point
+        self.signal = 0                 # 3. Like A Line
+        self.channel = 0                # 4. Like The Center Point Of A Disc
+        self.pole = 0                   # 5. Like A Disc With A Radius But No Thickness
+        self.identity = 0               # 6. Like A Disc
+        self.foundation = 0             # 7. Like A Disc With A Charge
+        self.element = 0                # 8. Like A Disc With A Mass
+        self.dynamo = 0                 # 9. Like A Certainty With An Observation
+        self.manifold = 0               # 10. Like A Binocular Focus
+        self.ring = 0                   # 11. Like A Binocular Focus Through A Medium
+        self.barn = 0                   # 12. The Nuclear Barn
 
         if(windowGrid is not None):
             self.GUI = ConjectureGUI(windowGrid, name)
@@ -117,7 +119,10 @@ class Conjecture(object):
         stringUnicode = string.encode('utf-8')
         hex = binascii.hexlify(stringUnicode)
         intHex = int(hex, 16)
-        return pow(intHex, self.element, pow(self.ring, self.barn))
+        hashNumber = pow(intHex, self.element, pow(self.ring, self.barn))
+#        hashCode = base64.b64encode(bytes(str(Decimal(hashNumber) ** (Decimal(1) / Decimal(self.identity))), encoding = 'ascii')) 
+#        return hashCode
+        return hashNumber
 
 
 
