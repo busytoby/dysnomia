@@ -100,6 +100,8 @@ class Conjecture(object):
                          self.manifold, self.ring, self.barn ]
         return all(i >= ENTROPY_CUTOFF for i in validateList)
 
+    # Charge Results In A Unit Of Heat, What A Barn Is Defined As Containing
+    # The Audit Says That The Ampere Is A Unit Of Heat With Specific Containment.
     def charge(self, voltpere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(self.barn, voltpere, chargeRing)
@@ -126,9 +128,12 @@ class Conjecture(object):
         self.GUI.VoltpereEntry.callback_changed_add(self.voltpereChanged)
 
     def voltpereChanged(self, entry):
-        voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
-        ampere = self.charge(voltpere)
-        self.updateGUIAmpereField(ampere)
+        if(len(self.GUI.VoltpereEntry.entry_get())):
+            voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
+            ampere = self.charge(voltpere)
+            self.updateGUIAmpereField(ampere)
+        else:
+            self.updateGUIAmpereField("")
 
     # Provably Best Hash Function Executed On Any Computer To Date!??
     def hashString(self, string):
