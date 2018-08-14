@@ -89,17 +89,19 @@ def window_dialog_clicked(obj):
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
+    conjectureA.initializeVoltpereGUIEntry()
+    conjectureB.initializeVoltpereGUIEntry()
 
-    configureStringHashA = conjectureA.hashString("Configuration") # A Voltpere
-    configureStringHashB = conjectureB.hashString("Configuration") 
-    print(configureStringHashA == configureStringHashB)
-    print(configureStringHashB)
+#    configureStringHashA = conjectureA.hashString("Configuration") # A Voltpere
+#    configureStringHashB = conjectureB.hashString("Configuration") 
+#    print(configureStringHashA == configureStringHashB)
+#    print(configureStringHashB)
 
-    ampereA = conjectureA.charge(configureStringHashA) 
-    ampereB = conjectureB.charge(configureStringHashB)
+#    ampereA = conjectureA.charge(configureStringHashA) 
+#    ampereB = conjectureB.charge(configureStringHashB)
 
-    conjectureA.updateGUIAmpereField(ampereA)
-    conjectureB.updateGUIAmpereField(ampereB)
+#    conjectureA.updateGUIAmpereField(ampereA)
+#    conjectureB.updateGUIAmpereField(ampereB)
     
 #    win.borderless_set(1)
     win.show()

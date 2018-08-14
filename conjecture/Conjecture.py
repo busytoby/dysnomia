@@ -120,7 +120,15 @@ class Conjecture(object):
             self.GUI.BarnEntry.entry_set("{0}".format(self.barn))
 
     def updateGUIAmpereField(self, value):
-            self.GUI.AmpereEntry.entry_set("{0}".format(value))
+        self.GUI.AmpereEntry.entry_set("{0}".format(value))
+
+    def initializeVoltpereGUIEntry(self):
+        self.GUI.VoltpereEntry.callback_changed_add(self.voltpereChanged)
+
+    def voltpereChanged(self, entry):
+        voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
+        ampere = self.charge(voltpere)
+        self.updateGUIAmpereField(ampere)
 
     # Provably Best Hash Function Executed On Any Computer To Date!??
     def hashString(self, string):
