@@ -201,4 +201,15 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.BarnEntry, 5, 3, 1, 1)
         self.BarnEntry.show()
 
+        self.AmpereLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                size_hint_align=(0.0, 0.5), text="Ampere:")
+        self.FrameTable.pack(self.AmpereLabel, 0, 4, 1, 1)
+        self.AmpereLabel.show()
+
+        self.AmpereEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                 size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                 scrollable=True,
+                                 text="")
+        self.FrameTable.pack(self.AmpereEntry, 1, 4, 2, 1)
+        self.AmpereEntry.show()
 

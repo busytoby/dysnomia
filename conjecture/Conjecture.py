@@ -9,6 +9,7 @@ from random import randrange
 
 PRIME = 257
 ENTROPY_CUTOFF = 111  # Not Simple Stars But Complex Organisms
+FERMAT_CUTOFF = 4294967297  # Used For Printable Fields For Now
 
 class Conjecture(object):
     def __init__(self, windowGrid, name):
@@ -99,6 +100,10 @@ class Conjecture(object):
                          self.manifold, self.ring, self.barn ]
         return all(i >= ENTROPY_CUTOFF for i in validateList)
 
+    def charge(self, voltpere):
+        chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
+        return pow(self.barn, voltpere, chargeRing)
+
     def updateGUIFields(self):
         if(self.GUI is not None):
             self.GUI.BaseEntry.entry_set("{0}".format(self.base))
@@ -113,6 +118,9 @@ class Conjecture(object):
             self.GUI.ManifoldEntry.entry_set("{0}".format(self.manifold))
             self.GUI.RingEntry.entry_set("{0}".format(self.ring))
             self.GUI.BarnEntry.entry_set("{0}".format(self.barn))
+
+    def updateGUIAmpereField(self, value):
+            self.GUI.AmpereEntry.entry_set("{0}".format(value))
 
     # Provably Best Hash Function Executed On Any Computer To Date!??
     def hashString(self, string):
