@@ -108,18 +108,20 @@ class Conjecture(object):
     # Not Completely Sold On The ChargeRing But It Works For Now
     # Induce (A Labor) Results In A Henry, A 5th Column With Dimensional Containment
     # This Defintion Of The Henry Results In Perfect Mathematical Construct For Discussing The Fermi Paradox
+    # Hard Definition Of ProofOfWork
     def induce(self, ampere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(ampere, self.manifold, chargeRing)
 
     # Physical Definition Of Light As The Intent After The Henry
+    # Hard Definition Of ProofOfStake, Which Mathematically Holds Identity As Nameless
     def intend(self, ampere):
         ampereChannel = pow(self.channel, self.channel, FERMAT_CUTOFF)
         return pow(ampere, self.element, ampereChannel)
 
     # Intending The Intention Results In Fermat's Prime
-    def prime(self, intent):
-        return self.intend(intent)
+    def prime(self, proofOfStake):
+        return self.intend(proofOfStake)
 
     def updateGUIFields(self):
         if(self.GUI is not None):
@@ -158,10 +160,10 @@ class Conjecture(object):
             self.updateGUIAmpereField(ampere)
             henry = self.induce(ampere)
             self.updateGUIHenryField(henry)
-            intent = self.intend(ampere)
-            self.updateGUIIntentField(intent)
-            prime = self.prime(intent)
-            self.updateGUIFermatField(prime)
+            proofOfStake = self.intend(ampere)
+            self.updateGUIIntentField(proofOfStake)
+            fermat = self.prime(proofOfStake)
+            self.updateGUIFermatField(fermat)
         else:
             self.updateGUIAmpereField("")
 
