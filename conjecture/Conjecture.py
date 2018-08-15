@@ -106,6 +106,12 @@ class Conjecture(object):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(self.barn, voltpere, chargeRing)
 
+    # Not Completely Sold On The ChargeRing But It Works For Now
+    # Induce Results In A Henry, A 5th Column With Dimensional Containment
+    def induce(self, ampere):
+        chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
+        return pow(ampere, self.manifold, chargeRing)
+
     def updateGUIFields(self):
         if(self.GUI is not None):
             self.GUI.BaseEntry.entry_set("{0}".format(self.base))
@@ -121,17 +127,22 @@ class Conjecture(object):
             self.GUI.RingEntry.entry_set("{0}".format(self.ring))
             self.GUI.BarnEntry.entry_set("{0}".format(self.barn))
 
+    def initializeVoltpereGUIEntry(self):
+        self.GUI.VoltpereEntry.callback_changed_add(self.voltpereChanged)
+
     def updateGUIAmpereField(self, value):
         self.GUI.AmpereEntry.entry_set("{0}".format(value))
 
-    def initializeVoltpereGUIEntry(self):
-        self.GUI.VoltpereEntry.callback_changed_add(self.voltpereChanged)
+    def updateGUIHenryField(self, value):
+        self.GUI.HenryEntry.entry_set("{0}".format(value))
 
     def voltpereChanged(self, entry):
         if(len(self.GUI.VoltpereEntry.entry_get())):
             voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
             ampere = self.charge(voltpere)
             self.updateGUIAmpereField(ampere)
+            henry = self.induce(ampere)
+            self.updateGUIHenryField(henry)
         else:
             self.updateGUIAmpereField("")
 

@@ -225,3 +225,16 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.AmpereEntry, 1, 5, 2, 1)
         self.AmpereEntry.show()
 
+        self.HenryLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                size_hint_align=(0.0, 0.5), text="Henry:")
+        self.FrameTable.pack(self.HenryLabel, 0, 6, 1, 1)
+        self.HenryLabel.show()
+
+        self.HenryEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                scrollable=True,
+                                text="")
+        self.FrameTable.pack(self.HenryEntry, 1, 6, 2, 1)
+        self.HenryEntry.show()
+
+
