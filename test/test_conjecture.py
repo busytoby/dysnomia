@@ -92,3 +92,36 @@ class TestConjecture(unittest.TestCase):
         self.conjecture.openManifold(self.carrier)
         self.assertEqual(self.conjecture.ring, pow(self.carrier, self.conjecture.manifold, self.conjecture.element))
         self.assertEqual(self.conjecture.barn, pow(self.conjecture.ring, self.conjecture.manifold, self.conjecture.element))
+
+    # all it really tests for
+    def testValidateManifold(self):
+        validateFixture = Conjecture(None, None)
+        validateFixture.base = validateFixture.rand()
+        validateFixture.secret = validateFixture.rand()
+        validateFixture.signal = validateFixture.rand()
+        validateFixture.channel = validateFixture.rand()
+        validateFixture.pole = validateFixture.rand()
+        validateFixture.identity = validateFixture.rand()
+        validateFixture.foundation = validateFixture.rand()
+        validateFixture.element = validateFixture.rand()
+        validateFixture.dynamo = validateFixture.rand()
+        validateFixture.manifold = validateFixture.rand()
+        validateFixture.ring = validateFixture.rand()
+        validateFixture.barn = validateFixture.rand()
+        self.assertTrue(validateFixture.validateManifold())
+        validateFixture.base = 0
+        self.assertFalse(validateFixture.validateManifold())
+
+    def testHashStringAndVoltpereFunctions(self):
+        self.testOpenManifold()
+        voltpere = self.conjecture.hashString("testcases")
+        chargeRing = pow(self.conjecture.ring, self.conjecture.ring, self.conjecture.FERMAT_CUTOFF)
+        ampere = self.conjecture.charge(voltpere)
+        self.assertEqual(ampere, pow(self.conjecture.barn, voltpere, chargeRing))
+        henry = self.conjecture.induce(ampere)
+        self.assertEqual(henry, pow(ampere, self.conjecture.manifold, chargeRing))
+        proofOfStake = self.conjecture.intend(ampere) 
+        ampereChannel = pow(self.conjecture.channel, self.conjecture.channel, self.conjecture.FERMAT_CUTOFF)
+        self.assertEqual(proofOfStake, pow(ampere, self.conjecture.element, ampereChannel))
+        fermat = self.conjecture.prime(proofOfStake)
+        self.assertEqual(fermat, pow(proofOfStake, self.conjecture.element, ampereChannel)) 

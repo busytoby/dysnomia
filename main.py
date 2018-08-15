@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 
 from conjecture import Conjecture
@@ -37,7 +37,7 @@ def clicked_mouse(event):
 
 def window_dialog_clicked(obj):
     win = StandardWindow("window-states", "This is a StandardWindow",
-                         autodel=True, size=(732, 800))
+                         autodel=True, size=(800, 600))
     if obj is None:
         win.callback_delete_request_add(lambda o: elementary.exit())
 
@@ -89,8 +89,8 @@ def window_dialog_clicked(obj):
 
     conjectureA.updateGUIFields()
     conjectureB.updateGUIFields()
-    conjectureA.initializeVoltpereGUIEntry()
-    conjectureB.initializeVoltpereGUIEntry()
+    conjectureA.initializeGUIEntry()
+    conjectureB.initializeGUIEntry()
 
 #    win.borderless_set(1)
     win.show()

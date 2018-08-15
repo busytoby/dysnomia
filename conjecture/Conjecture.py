@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
 import base64
 import binascii
 from decimal import Decimal
@@ -15,6 +12,7 @@ class Conjecture(object):
     def __init__(self, windowGrid, name):
         self.PRIME = PRIME
         self.ENTROPY_CUTOFF = ENTROPY_CUTOFF
+        self.FERMAT_CUTOFF = FERMAT_CUTOFF
         self.GUI = None
 
         self.isListener = False
@@ -65,7 +63,7 @@ class Conjecture(object):
         self.identity = self.rand()
         self.foundation = pow(self.base, self.identity, PRIME)
         self.isListener = True
-        if(self.GUI is not None):
+        if(self.GUI is not None and "Listener" not in self.GUI.frame.text):
             self.GUI.frame.text_set(self.GUI.frame.text + " (Listener)")
 
     def establishElement(self, peerFoundation, peerChannel):
@@ -109,9 +107,19 @@ class Conjecture(object):
 
     # Not Completely Sold On The ChargeRing But It Works For Now
     # Induce (A Labor) Results In A Henry, A 5th Column With Dimensional Containment
+    # This Defintion Of The Henry Results In Perfect Mathematical Construct For Discussing The Fermi Paradox
     def induce(self, ampere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(ampere, self.manifold, chargeRing)
+
+    # Physical Definition Of Light As The Intent After The Henry
+    def intend(self, ampere):
+        ampereChannel = pow(self.channel, self.channel, FERMAT_CUTOFF)
+        return pow(ampere, self.element, ampereChannel)
+
+    # Intending The Intention Results In Fermat's Prime
+    def prime(self, intent):
+        return self.intend(intent)
 
     def updateGUIFields(self):
         if(self.GUI is not None):
@@ -128,7 +136,7 @@ class Conjecture(object):
             self.GUI.RingEntry.entry_set("{0}".format(self.ring))
             self.GUI.BarnEntry.entry_set("{0}".format(self.barn))
 
-    def initializeVoltpereGUIEntry(self):
+    def initializeGUIEntry(self):
         self.GUI.VoltpereEntry.callback_changed_add(self.voltpereChanged)
 
     def updateGUIAmpereField(self, value):
@@ -137,6 +145,12 @@ class Conjecture(object):
     def updateGUIHenryField(self, value):
         self.GUI.HenryEntry.entry_set("{0}".format(value))
 
+    def updateGUIIntentField(self, value):
+        self.GUI.IntentEntry.entry_set("{0}".format(value))
+
+    def updateGUIFermatField(self, fermat):
+        self.GUI.FermatEntry.entry_set("{0}".format(fermat))
+
     def voltpereChanged(self, entry):
         if(len(self.GUI.VoltpereEntry.entry_get())):
             voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
@@ -144,15 +158,19 @@ class Conjecture(object):
             self.updateGUIAmpereField(ampere)
             henry = self.induce(ampere)
             self.updateGUIHenryField(henry)
+            intent = self.intend(ampere)
+            self.updateGUIIntentField(intent)
+            prime = self.prime(intent)
+            self.updateGUIFermatField(prime)
         else:
             self.updateGUIAmpereField("")
 
     # Provably Best Hash Function Executed On Any Computer To Date!??
     def hashString(self, string):
         stringUnicode = string.encode('utf-8')
-        hex = binascii.hexlify(stringUnicode)
-        intHex = int(hex, 16)
-        hashNumber = pow(intHex, self.element, pow(self.ring, self.barn))
+        stringHex = binascii.hexlify(stringUnicode)
+        stringInt = int(stringHex, 16)
+        hashNumber = pow(stringInt, self.element, pow(self.ring, self.barn))
 #        hashCode = base64.b64encode(bytes(str(Decimal(hashNumber) ** (Decimal(1) / Decimal(self.identity))), encoding = 'ascii')) 
 #        return hashCode
         return hashNumber
