@@ -101,7 +101,7 @@ class Conjecture(object):
         return all(i >= ENTROPY_CUTOFF for i in validateList)
 
     # Charge Results In A Unit Of Heat, What A Barn Is Defined As Containing
-    # The Audit Says That The Ampere Is A Unit Of Heat With Specific Containment.
+    # The Audit Says That The Ampere Is A Unit Of Non-Relative Heat With Specific Containment.
     def charge(self, voltpere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(self.barn, voltpere, chargeRing)
