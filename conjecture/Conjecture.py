@@ -102,12 +102,13 @@ class Conjecture(object):
 
     # Charge Results In A 5th Column, What A Barn Is Defined As Containing While It Exists
     # The Audit Says That The Ampere Is A Unit Of Charge With Specific Containment.
+    # A Charge With A Containment Is A Labor But Not A Work
     def charge(self, voltpere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(self.barn, voltpere, chargeRing)
 
     # Not Completely Sold On The ChargeRing But It Works For Now
-    # Induce Results In A Henry, A 5th Column With Dimensional Containment
+    # Induce (A Labor) Results In A Henry, A 5th Column With Dimensional Containment
     def induce(self, ampere):
         chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
         return pow(ampere, self.manifold, chargeRing)
