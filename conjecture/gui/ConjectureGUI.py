@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
 from efl.evas import EVAS_HINT_EXPAND, EVAS_HINT_FILL, EXPAND_BOTH, FILL_BOTH, \
    EXPAND_HORIZ, FILL_HORIZ, EVAS_TEXT_STYLE_SOFT_OUTLINE, EXPAND_VERT
 from efl.elementary.window import StandardWindow, DialogWindow
@@ -237,4 +234,36 @@ class ConjectureGUI(object):
         self.FrameTable.pack(self.HenryEntry, 1, 6, 2, 1)
         self.HenryEntry.show()
 
+        self.MaxwellLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                  size_hint_align=(0.0, 0.5), text="Maxwell:")
+        self.FrameTable.pack(self.MaxwellLabel, 0, 7, 1, 1)
+        self.MaxwellLabel.show()
+
+        self.MaxwellEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                scrollable=True,
+                                text="")
+        self.FrameTable.pack(self.MaxwellEntry, 1, 7, 2, 1)
+        self.MaxwellEntry.show()
+
+        self.FermatLabel = Label(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                 size_hint_align=(0.0, 0.5), text="Fermat:")
+        self.FrameTable.pack(self.FermatLabel, 0, 8, 1, 1)
+        self.FermatLabel.show()
+
+        self.FermatEntry = Entry(self.FrameTable, size_hint_weight=(EVAS_HINT_EXPAND, 0.0),
+                                 size_hint_align=(EVAS_HINT_FILL, 0.5), single_line=True,
+                                 scrollable=True,
+                                 text="")
+        self.FrameTable.pack(self.FermatEntry, 1, 8, 2, 1)
+        self.FermatEntry.show()
+
+        self.PropelButton = Button(self.FrameTable, size_hint_weight=(0.0, 0.0),
+                                   size_hint_align=(0.0, 0.5), text="Propel")
+        self.FrameTable.pack(self.PropelButton, 4, 8, 1, 1)
+        self.PropelButton.show()
+        self.PropelButton.callback_clicked_add(self.propelClicked)
+
+    def propelClicked(self, obj):
+        print("clicked")
 

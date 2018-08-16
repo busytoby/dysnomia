@@ -2,6 +2,7 @@ import base64
 import binascii
 from decimal import Decimal
 from conjecture.gui import ConjectureGUI 
+from conductor import Conductor
 from random import randrange
 
 PRIME = 257
@@ -102,31 +103,6 @@ class Conjecture(object):
     def germanate(self, element):
         return pow(self.element, self.ring, self.manifold)
 
-    # Charge Results In A 5th Column, What A Barn Is Defined As Containing While It Exists
-    # The Audit Says That The Ampere Is A Unit Of Charge With Specific Containment.
-    # A Charge With A Containment Is A Labor But Not A Work
-    def charge(self, voltpere):
-        chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
-        return pow(self.barn, voltpere, chargeRing)
-
-    # Not Completely Sold On The ChargeRing But It Works For Now
-    # Induce (A Labor) Results In A Henry, A 5th Column With Dimensional Containment
-    # This Defintion Of The Henry Results In Perfect Mathematical Construct For Discussing The Fermi Paradox
-    # Hard Definition Of ProofOfWork
-    def induce(self, ampere):
-        chargeRing = pow(self.ring, self.ring, FERMAT_CUTOFF)
-        return pow(ampere, self.manifold, chargeRing)
-
-    # Physical Definition Of Light As The Intent After The Henry
-    # Hard Definition Of ProofOfStake, Which Mathematically Holds Identity As Nameless
-    def intend(self, ampere):
-        ampereChannel = pow(self.channel, self.channel, FERMAT_CUTOFF)
-        return pow(ampere, self.element, ampereChannel)
-
-    # Intending The Intention Results In Fermat's Prime
-    def prime(self, proofOfStake):
-        return self.intend(proofOfStake)
-
     def updateGUIFields(self):
         if(self.GUI is not None):
             self.GUI.BaseEntry.entry_set("{0}".format(self.base))
@@ -151,35 +127,24 @@ class Conjecture(object):
     def updateGUIHenryField(self, value):
         self.GUI.HenryEntry.entry_set("{0}".format(value))
 
-    def updateGUIIntentField(self, value):
-        self.GUI.IntentEntry.entry_set("{0}".format(value))
+    def updateGUIMaxwellField(self, value):
+        self.GUI.MaxwellEntry.entry_set("{0}".format(value))
 
     def updateGUIFermatField(self, fermat):
         self.GUI.FermatEntry.entry_set("{0}".format(fermat))
 
     def voltpereChanged(self, entry):
         if(len(self.GUI.VoltpereEntry.entry_get())):
-            voltpere = self.hashString(self.GUI.VoltpereEntry.entry_get())
-            ampere = self.charge(voltpere)
+            voltConductor = Conductor(self.element, self.ring, self.barn)
+            voltpere = voltConductor.hashString(self.GUI.VoltpereEntry.entry_get())
+            ampere = voltConductor.charge(voltpere)
             self.updateGUIAmpereField(ampere)
-            henry = self.induce(ampere)
+            henry = voltConductor.induce(ampere)
             self.updateGUIHenryField(henry)
-            proofOfStake = self.intend(ampere)
-            self.updateGUIIntentField(proofOfStake)
-            fermat = self.prime(proofOfStake)
+            maxwell = voltConductor.refract(henry)
+            self.updateGUIMaxwellField(maxwell)
+            fermat = voltConductor.prime(maxwell)
             self.updateGUIFermatField(fermat)
         else:
             self.updateGUIAmpereField("")
-
-    # Provably Best Hash Function Executed On Any Computer To Date!??
-    def hashString(self, string):
-        stringUnicode = string.encode('utf-8')
-        stringHex = binascii.hexlify(stringUnicode)
-        stringInt = int(stringHex, 16)
-        hashNumber = pow(stringInt, self.element, pow(self.ring, self.barn))
-#        hashCode = base64.b64encode(bytes(str(Decimal(hashNumber) ** (Decimal(1) / Decimal(self.identity))), encoding = 'ascii')) 
-#        return hashCode
-        return hashNumber
-
-
 
