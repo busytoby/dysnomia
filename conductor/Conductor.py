@@ -27,7 +27,7 @@ class Conductor(object):
     def induce(self, ampere):
         return pow(ampere, self.barn, self.FERMAT_CUTOFF)
 
-    # Ringing The Henry Through The Barn Refracts A Maxwell
+    # Ringing The Henry Refracts A Maxwell
     def refract(self, henry):
         return pow(self.ring, henry, self.FERMAT_CUTOFF)
 

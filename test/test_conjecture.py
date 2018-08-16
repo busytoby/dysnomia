@@ -1,5 +1,6 @@
 import unittest
 from conjecture import Conjecture
+from conductor import Conductor
 
 class TestConjecture(unittest.TestCase):
     def setUp(self):
@@ -114,14 +115,13 @@ class TestConjecture(unittest.TestCase):
 
     def testHashStringAndVoltpereFunctions(self):
         self.testOpenManifold()
-        voltpere = self.conjecture.hashString("testcases")
-        chargeRing = pow(self.conjecture.ring, self.conjecture.ring, self.conjecture.FERMAT_CUTOFF)
-        ampere = self.conjecture.charge(voltpere)
-        self.assertEqual(ampere, pow(self.conjecture.barn, voltpere, chargeRing))
-        henry = self.conjecture.induce(ampere)
-        self.assertEqual(henry, pow(ampere, self.conjecture.manifold, chargeRing))
-        proofOfStake = self.conjecture.intend(ampere) 
-        ampereChannel = pow(self.conjecture.channel, self.conjecture.channel, self.conjecture.FERMAT_CUTOFF)
-        self.assertEqual(proofOfStake, pow(ampere, self.conjecture.element, ampereChannel))
-        fermat = self.conjecture.prime(proofOfStake)
-        self.assertEqual(fermat, pow(proofOfStake, self.conjecture.element, ampereChannel)) 
+        voltConductor = Conductor(self.conjecture.element, self.conjecture.ring, self.conjecture.barn)
+        voltpere = voltConductor.hashString("testcases")
+        ampere = voltConductor.charge(voltpere)
+        self.assertEqual(ampere, pow(self.conjecture.barn, voltpere, voltConductor.FERMAT_CUTOFF))
+        henry = voltConductor.induce(ampere)
+        self.assertEqual(henry, pow(ampere, self.conjecture.barn, voltConductor.FERMAT_CUTOFF))
+        maxwell = voltConductor.refract(henry) 
+        self.assertEqual(maxwell, pow(self.conjecture.ring, henry, voltConductor.FERMAT_CUTOFF))
+        fermat = voltConductor.prime(maxwell)
+        self.assertEqual(fermat, pow(self.conjecture.ring, maxwell, voltConductor.FERMAT_CUTOFF)) 
