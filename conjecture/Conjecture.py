@@ -98,6 +98,10 @@ class Conjecture(object):
                          self.manifold, self.ring, self.barn ]
         return all(i >= ENTROPY_CUTOFF for i in validateList)
 
+    # Reuse germanate to get a quartz-like timer
+    def germanate(self, element):
+        return pow(self.element, self.ring, self.manifold)
+
     # Charge Results In A 5th Column, What A Barn Is Defined As Containing While It Exists
     # The Audit Says That The Ampere Is A Unit Of Charge With Specific Containment.
     # A Charge With A Containment Is A Labor But Not A Work
