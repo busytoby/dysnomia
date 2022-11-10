@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Affinity\Affinity.vcxproj" />
+    <ProjectReference Include="..\Dynamic\Dynamic.vcxproj" />
+    <ProjectReference Include="..\Math\Math.vcxproj" />
+  </ItemGroup>
+
+</Project>
