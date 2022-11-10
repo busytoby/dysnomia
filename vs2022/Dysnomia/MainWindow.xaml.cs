@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Windows.Perception.Automation.Core;
 
 namespace Dysnomia
 {
@@ -23,7 +24,8 @@ namespace Dysnomia
         public MainWindow()
         {
             InitializeComponent();
-            Affinity A = new Affinity();
+            Perception P = new Perception();
+            P.LogOne(); // temp
         }
     }
 }

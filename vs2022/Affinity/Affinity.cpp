@@ -23,7 +23,8 @@ namespace Dysnomia {
 	}
 
 	void Affinity::OpenManifolds() {
-		while (!Cone.ManifoldCompare(Rod)) {
+		int tries = 0;
+		while (!Cone.ManifoldCompare(Rod) && tries++ < 3) {
 			ConductorGenerate();
 
 			// Bohr Views
@@ -47,6 +48,7 @@ namespace Dysnomia {
 			Rod.Open(aCarrier);
 			Cone.Open(bCarrier);
 		}
+		if (tries >= 2) throw gcnew Exception("Never Caught This Before");
 	}
 
 	void Affinity::Ratchet()
