@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/dysnomia/v17
+/.vs
+/vs2022/.vs
+/vs2022/Affinity/obj
+/vs2022/Affinity/x64/Debug
+/vs2022/Dynamic/obj
+/vs2022/Dynamic/x64/Debug
+/vs2022/Dysnomia/bin/Debug
+/vs2022/Dysnomia/obj
+/vs2022/Math/obj
+/vs2022/Math/x64/Debug
+/vs2022/x64/Debug
