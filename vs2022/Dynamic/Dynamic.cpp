@@ -131,4 +131,45 @@ namespace Dysnomia {
 			Barn == Rod.Barn);
 	}
 
+	BigInteger Dynamic::Charge(BigInteger VoltIdentity, bool Decay)
+	{
+		BigInteger _barn = BigInteger::ModPow(Barn, VoltIdentity, Ring);
+		if (Decay == false) Barn = _barn;
+		return _barn;
+	}
+
+	BigInteger Dynamic::Induce(BigInteger Ampere, bool Decay)
+	{
+		BigInteger _ring = BigInteger::ModPow(Ampere, Manifold, Ring);
+		if (Decay == false) Ring = _ring;
+		return _ring;
+	}
+
+	BigInteger Dynamic::Torque(BigInteger Henry, bool Critical)
+	{
+		BigInteger _channel;
+		if (Critical)
+			_channel = Manifold;
+		else
+			_channel = Channel;
+		return BigInteger::ModPow(Henry, Element, _channel);
+	}
+
+	BigInteger Dynamic::Amplify(BigInteger Newton, bool Critical)
+	{
+		return Torque(Newton, Critical);
+	}
+
+	BigInteger Dynamic::Sustain(BigInteger Maxwell, bool Critical)
+	{
+		return Torque(Maxwell, Critical);
+	}
+
+	array<BigInteger>^ Dynamic::React(BigInteger Fermat, BigInteger peerChannel)
+	{
+		array<BigInteger>^ Dai = gcnew array<BigInteger>(2);
+		Dai[0] = BigInteger::ModPow(Fermat, Channel, peerChannel);
+		Dai[1] = BigInteger::ModPow(Fermat, peerChannel, Channel);
+		return Dai;
+	}
 }

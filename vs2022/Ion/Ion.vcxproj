@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{62CB15C3-5514-442A-9396-97F2D8D60E12}</ProjectGuid>
+    <ProjectGuid>{9C11F74F-5142-42B1-880A-F6753831034E}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Perception</RootNamespace>
+    <RootNamespace>Ion</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -120,36 +120,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ion.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Perception.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Ion.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Perception.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Affinity\Affinity.vcxproj">
-      <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Bond\Bond.vcxproj">
-      <Project>{36249a63-d2c9-4592-a50d-458470240893}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Orbital\Orbital.vcxproj">
-      <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,6 +21,7 @@ namespace Dysnomia {
 		static Random rnd;
 
 		static BigInteger Random();
+		static String^ ByteArrayToHexString(array<Byte>^);
 
 		// TODO: Add your methods for this class here.
 	};

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Bond\Bond.vcxproj" />
     <ProjectReference Include="..\Perception\Perception.vcxproj" />
   </ItemGroup>
 

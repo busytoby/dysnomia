@@ -20,4 +20,17 @@ namespace Dysnomia {
 
 		return R;
 	}
+
+    String^ Math::ByteArrayToHexString(array<Byte>^ Bytes) {
+        String^ S;
+
+        System::Text::StringBuilder sb;
+        for each (System::Byte b in Bytes)
+        {
+            sb.AppendFormat("{0:X}", b);
+        }
+
+        return sb.ToString();
+    }
+
 }

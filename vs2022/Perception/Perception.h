@@ -8,9 +8,12 @@ namespace Dysnomia {
 	private:
 		Affinity Norbornylene;
 		Affinity Norcamphene;
+		Bond B;
+		Orbital S;
 
 	public:
 		Perception();
+		void Bridge();
 		void LogOne();
 	};
 }

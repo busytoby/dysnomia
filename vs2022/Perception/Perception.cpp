@@ -4,7 +4,11 @@
 
 namespace Dysnomia {
 	Perception::Perception() {
-		// nothing to construct yet
+		Bridge();
+	}
+
+	void Perception::Bridge() {
+		S.Wave = Norcamphene.BigDetermine("Norbornylene");
 	}
 
 	void Perception::LogOne() {

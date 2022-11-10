@@ -15,5 +15,11 @@ namespace Dysnomia {
 
 	public:
 		Affinity();
+		BigInteger BigDetermine(String^ data);
+		array<BigInteger>^ Determine(String^ Roentgen);
+		array<BigInteger>^ Determine(BigInteger Sievert);
+		BigInteger WaveFunction(String^ Roentgen);
+
+
 	};
 }
