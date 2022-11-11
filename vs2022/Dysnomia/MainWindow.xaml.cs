@@ -25,6 +25,7 @@ namespace Dysnomia
         {
             InitializeComponent();
             Perception P = new Perception();
+
             P.LogOne(); // temp
         }
     }
