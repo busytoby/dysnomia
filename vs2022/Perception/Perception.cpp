@@ -16,8 +16,8 @@ namespace Dysnomia {
 		S.Boson.Polarize();
 		BigInteger Substrate = N.Form(Ligand);
 		S.Coordinate = S.Boson.Coordinate(Substrate);
-		BigInteger PlanckSpin = N.Conjugate(S.Boson.Pole);
-		S.Boson.Saturate(PlanckSpin, N.S.Boson.Channel);
+		BigInteger Paradox = N.Conjugate(S.Boson.Pole);
+		S.Boson.Saturate(Paradox, N.S.Boson.Channel);
 		N.Saturate(S.Boson.Foundation, S.Boson.Channel);
 		S.Boson.Bond();
 		S.Boson.Adduct(N.S.Boson.Dynamo);

@@ -22,8 +22,8 @@ namespace Dysnomia {
 		return S.Boson.Pole;
 	}
 
-	BigInteger Situation::Conjugate(BigInteger Planck) {
-		S.Coordinate = S.Boson.Coordinate(Planck);
+	BigInteger Situation::Conjugate(BigInteger Paradox) {
+		S.Coordinate = S.Boson.Coordinate(Paradox);
 		S.Boson.Conify();
 
 		return S.Boson.Foundation;
