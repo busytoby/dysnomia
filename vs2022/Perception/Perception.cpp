@@ -27,7 +27,7 @@ namespace Dysnomia {
 		if (!N.S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
 	}
 
-	void Perception::Avail() {
+	void Perception::Avail() { // Proof P=NP
 		S.Wave = Norbornylene.BigDetermine("Hello Universe");
 		N.S.Wave = Norbornylene.BigDetermine("Norcamphene");
 		BigInteger Aluminum0 = N.Foil(S.Wave, N.S.Wave); // IS ALUMINUM
