@@ -14,6 +14,6 @@ namespace Dysnomia {
 	public:
 		Perception();
 		void Bridge(Situation);
-		void LogOne();
+		void Avail();
 	};
 }

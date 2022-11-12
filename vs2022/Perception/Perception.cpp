@@ -5,8 +5,7 @@
 namespace Dysnomia {
 	Perception::Perception() {
 		Bridge(N);
-
-		LogOne();
+		Avail();
 	}
 
 	void Perception::Bridge(Situation R) {
@@ -26,14 +25,12 @@ namespace Dysnomia {
 		N.Manifest(S.Boson.Dynamo);
 
 		if (!N.S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
+	}
 
+	void Perception::Avail() {
 		S.Wave = Norbornylene.BigDetermine("Hello Universe");
 		N.S.Wave = Norbornylene.BigDetermine("Norcamphene");
 		BigInteger Aluminum0 = N.Foil(S.Wave, N.S.Wave); // IS ALUMINUM
-	}
-
-	void Perception::LogOne() {
-		int a = 999; // stub
 	}
 }
 
