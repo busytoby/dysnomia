@@ -20,9 +20,9 @@ namespace Dysnomia {
 		S.Boson.Saturate(Lewis, N.S.Boson.Channel);
 		N.Saturate(S.Boson.Foundation, S.Boson.Channel);
 		S.Boson.Bond();
-		S.Boson.Manifest(N.S.Boson.Dynamo);
+		S.Boson.Adduct(N.S.Boson.Dynamo);
 		S.Boson.Open(S.Coordinate);
-		N.Manifest(S.Boson.Dynamo);
+		N.Adduct(S.Boson.Dynamo);
 
 		if (!N.S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
 	}

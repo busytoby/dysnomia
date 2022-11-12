@@ -105,7 +105,7 @@ namespace Dysnomia {
 		Dynamo = BigInteger::ModPow(Base, Signal, Element);
 	}
 
-	void Dynamic::Manifest(BigInteger peerDynamo)
+	void Dynamic::Adduct(BigInteger peerDynamo)
 	{
 		Manifold = BigInteger::ModPow(peerDynamo, Signal, Element);
 	}

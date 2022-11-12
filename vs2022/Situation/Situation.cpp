@@ -34,8 +34,8 @@ namespace Dysnomia {
 		S.Boson.Bond();
 	}
 
-	void Situation::Manifest(BigInteger Dynamo) {
-		S.Boson.Manifest(Dynamo);
+	void Situation::Adduct(BigInteger Dynamo) {
+		S.Boson.Adduct(Dynamo);
 		S.Boson.Open(S.Coordinate);
 	}
 

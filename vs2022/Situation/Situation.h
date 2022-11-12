@@ -20,7 +20,7 @@ namespace Dysnomia {
 		BigInteger Form(BigInteger);
 		BigInteger Conjugate(BigInteger);
 		void Saturate(BigInteger, BigInteger);
-		void Manifest(BigInteger);
+		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
 	};
 }

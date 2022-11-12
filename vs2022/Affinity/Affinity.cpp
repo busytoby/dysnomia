@@ -43,8 +43,8 @@ namespace Dysnomia {
 
 			Ratchet();
 
-			Rod.Manifest(Cone.Dynamo);
-			Cone.Manifest(Rod.Dynamo);
+			Rod.Adduct(Cone.Dynamo);
+			Cone.Adduct(Rod.Dynamo);
 
 			Rod.Open(aCoordinate);
 			Cone.Open(bCoordinate);

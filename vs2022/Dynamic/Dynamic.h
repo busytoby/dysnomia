@@ -30,7 +30,7 @@ namespace Dysnomia {
 		void Conify();
 		void Saturate(BigInteger, BigInteger);
 		void Bond();
-		void Manifest(BigInteger);
+		void Adduct(BigInteger);
 		void Open(BigInteger);
 		bool ManifoldCompare(Dynamic);
 		BigInteger Charge(BigInteger, bool);
