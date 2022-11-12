@@ -28,7 +28,7 @@ namespace Dysnomia {
 		while (!Cone.ManifoldCompare(Rod) && tries++ < 3) {
 			ConductorGenerate();
 
-			// Bohr Views
+			// Last Relativity
 			BigInteger aCoordinate = Rod.Coordinate(Cone.Pole);
 			BigInteger bCoordinate = Cone.Coordinate(Rod.Pole);
 	
