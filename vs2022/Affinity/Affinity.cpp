@@ -12,12 +12,12 @@ namespace Dysnomia {
 		BigInteger Hamilton, SeaborgRod, SeaborgCone;
 
 		Hamilton = Math::Random();
-		// All 9 Seaborg Types Decay And Are Not Stored
-		BigInteger Seaborg_TypeRod = Rod.Avail(Hamilton);
-		BigInteger Seaborg_TypeCone = Cone.Avail(Hamilton);
 
-		Rod.Form(Seaborg_TypeCone);
-		Cone.Form(Seaborg_TypeRod);
+		BigInteger RodSubstrate = Rod.Avail(Hamilton);
+		BigInteger ConeSubstrate = Cone.Avail(Hamilton);
+
+		Rod.Form(ConeSubstrate);
+		Cone.Form(RodSubstrate);
 
 		Rod.Polarize();
 		Cone.Polarize();

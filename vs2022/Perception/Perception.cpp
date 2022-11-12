@@ -14,8 +14,8 @@ namespace Dysnomia {
 		BigInteger Hilbert = N.Avail(S.Wave);
 		S.Boson.Form(Hilbert);
 		S.Boson.Polarize();
-		BigInteger ConePole = N.Form(Ehrenfest);
-		S.DiracCarrier = S.Boson.GetCarrier(ConePole);
+		BigInteger Substrate = N.Form(Ehrenfest);
+		S.DiracCarrier = S.Boson.GetCarrier(Substrate);
 		BigInteger NFoundation = N.LockPole(S.Boson.Pole);
 		S.Boson.EstablishElement(NFoundation, N.S.Boson.Channel);
 		N.EstablishElement(S.Boson.Foundation, S.Boson.Channel);
