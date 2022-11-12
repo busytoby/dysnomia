@@ -26,7 +26,7 @@ namespace Dysnomia
             InitializeComponent();
             Perception P = new Perception();
 
-            P.LogOne(); // temp
+            int a = 999; // What Planet
         }
     }
 }

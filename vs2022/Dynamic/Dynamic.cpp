@@ -13,10 +13,14 @@ namespace Dysnomia {
 	}
 
 	Dynamic::Dynamic(const Dynamic% Copier) {
+		Base = Copier.Base;
 		Secret = Copier.Secret;
 		Signal = Copier.Signal;
 		Channel = Copier.Channel;
 		Pole = Copier.Pole;
+		Identity = Copier.Identity;
+		Foundation = Copier.Foundation;
+		Element = Copier.Element;
 		Dynamo = Copier.Dynamo;
 		Manifold = Copier.Manifold;
 		Ring = Copier.Ring;

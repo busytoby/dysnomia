@@ -8,10 +8,10 @@ namespace Dysnomia {
 	{
 	private:
 		Affinity Norcamphene;
-		Bond B;
 
 	public:
 		Orbital S;
+		Ion^ I;
 
 		Situation();
 		Situation::Situation(const Situation%);
@@ -21,6 +21,6 @@ namespace Dysnomia {
 		BigInteger LockPole(BigInteger);
 		void EstablishElement(BigInteger, BigInteger);
 		void Manifest(BigInteger);
-
+		BigInteger Foil(BigInteger, BigInteger);
 	};
 }

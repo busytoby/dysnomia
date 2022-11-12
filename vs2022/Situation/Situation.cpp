@@ -39,4 +39,9 @@ namespace Dysnomia {
 		S.Boson.Open(S.DiracCarrier);
 	}
 
+	BigInteger Situation::Foil(BigInteger Wave, BigInteger Fourier) {
+		I = gcnew Ion(S.Boson);
+		Avail(Wave);
+		return I->Hydrate(Fourier);
+	}
 }

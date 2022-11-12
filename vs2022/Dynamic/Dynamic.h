@@ -12,14 +12,14 @@ namespace Dysnomia {
 	{
 	private:
 		bool is_conic;
-		BigInteger Base, Secret, Signal, Identity, Ring;
+		BigInteger Secret, Identity, Ring;
 
 		void Initialize();
 		void Seed();
 		void Tune();
 
 	public:
-		BigInteger Channel, Pole, Foundation, Element, Dynamo, Manifold, Barn;
+		BigInteger Base, Signal, Channel, Pole, Foundation, Element, Dynamo, Manifold, Barn;
 
 		Dynamic();
 		Dynamic(const Dynamic% Copier);

@@ -10,6 +10,6 @@ namespace Dysnomia {
 		BigInteger Wave;
 		Dynamic Boson;
 		BigInteger DiracCarrier;
-
+		Ion^ Ion;
 	};
 }

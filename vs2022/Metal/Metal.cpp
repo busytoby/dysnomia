@@ -2,3 +2,6 @@
 
 #include "Metal.h"
 
+namespace Dysnomia {
+	Metal::Metal() {}
+}

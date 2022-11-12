@@ -22,8 +22,6 @@ namespace Dysnomia {
 	}
 
     String^ Math::ByteArrayToHexString(array<Byte>^ Bytes) {
-        String^ S;
-
         System::Text::StringBuilder sb;
         for each (System::Byte b in Bytes)
         {
