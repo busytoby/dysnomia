@@ -110,9 +110,9 @@ namespace Dysnomia {
 		Manifold = BigInteger::ModPow(peerDynamo, Signal, Element);
 	}
 
-	void Dynamic::Open(BigInteger carrier)
+	void Dynamic::Open(BigInteger Dirac)
 	{
-		Ring = BigInteger::ModPow(carrier, Manifold, Element);
+		Ring = BigInteger::ModPow(Dirac, Manifold, Element);
 		Barn = BigInteger::ModPow(Ring, Manifold, Element);
 	}
 
