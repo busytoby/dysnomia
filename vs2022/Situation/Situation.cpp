@@ -16,8 +16,8 @@ namespace Dysnomia {
 		return Ligand;
 	}
 
-	BigInteger Situation::Form(BigInteger Hilbert) {
-		S.Boson.Form(Hilbert);
+	BigInteger Situation::Form(BigInteger Donor) {
+		S.Boson.Form(Donor);
 		S.Boson.Polarize();
 		return S.Boson.Pole;
 	}
