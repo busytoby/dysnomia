@@ -19,7 +19,7 @@ namespace Dysnomia {
 		BigInteger NFoundation = N.LockPole(S.Boson.Pole);
 		S.Boson.EstablishElement(NFoundation, N.S.Boson.Channel);
 		N.EstablishElement(S.Boson.Foundation, S.Boson.Channel);
-		S.Boson.SyncDynamo();
+		S.Boson.Bond();
 		S.Boson.Manifest(N.S.Boson.Dynamo);
 		S.Boson.Open(S.DiracCarrier);
 		N.Manifest(S.Boson.Dynamo);

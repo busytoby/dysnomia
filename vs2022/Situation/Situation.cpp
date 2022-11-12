@@ -31,7 +31,7 @@ namespace Dysnomia {
 
 	void Situation::EstablishElement(BigInteger Foundation, BigInteger Channel) {
 		S.Boson.EstablishElement(Foundation, Channel);
-		S.Boson.SyncDynamo();
+		S.Boson.Bond();
 	}
 
 	void Situation::Manifest(BigInteger Dynamo) {

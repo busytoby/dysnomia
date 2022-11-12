@@ -54,8 +54,8 @@ namespace Dysnomia {
 
 	void Affinity::Ratchet()
 	{
-		Rod.SyncDynamo();
-		Cone.SyncDynamo();
+		Rod.Bond();
+		Cone.Bond();
 	}
 
 	BigInteger Affinity::BigDetermine(String^ data)

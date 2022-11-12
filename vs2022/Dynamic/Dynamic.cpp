@@ -100,7 +100,7 @@ namespace Dysnomia {
 		//discardMoment = BigInteger::Add(Element, peerMoment);
 	}
 
-	void Dynamic::SyncDynamo()
+	void Dynamic::Bond()
 	{
 		Dynamo = BigInteger::ModPow(Base, Signal, Element);
 	}

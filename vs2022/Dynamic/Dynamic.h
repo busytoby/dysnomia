@@ -29,7 +29,7 @@ namespace Dysnomia {
 		BigInteger GetCarrier(BigInteger);
 		void Conify();
 		void EstablishElement(BigInteger, BigInteger);
-		void SyncDynamo();
+		void Bond();
 		void Manifest(BigInteger);
 		void Open(BigInteger);
 		bool ManifoldCompare(Dynamic);
