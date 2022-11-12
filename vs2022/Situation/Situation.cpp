@@ -22,7 +22,7 @@ namespace Dysnomia {
 		return S.Boson.Pole;
 	}
 
-	BigInteger Situation::LockPole(BigInteger Planck) {
+	BigInteger Situation::Conjugate(BigInteger Planck) {
 		S.DiracCarrier = S.Boson.GetCarrier(Planck);
 		S.Boson.Conify();
 

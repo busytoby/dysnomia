@@ -18,7 +18,7 @@ namespace Dysnomia {
 
 		BigInteger Avail(BigInteger);
 		BigInteger Form(BigInteger);
-		BigInteger LockPole(BigInteger);
+		BigInteger Conjugate(BigInteger);
 		void Saturate(BigInteger, BigInteger);
 		void Manifest(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
