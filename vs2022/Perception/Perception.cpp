@@ -15,13 +15,13 @@ namespace Dysnomia {
 		S.Boson.Form(Hilbert);
 		S.Boson.Polarize();
 		BigInteger Substrate = N.Form(Ehrenfest);
-		S.DiracCarrier = S.Boson.GetCarrier(Substrate);
+		S.Coordinate = S.Boson.Coordinate(Substrate);
 		BigInteger Lewis = N.Conjugate(S.Boson.Pole);
 		S.Boson.Saturate(Lewis, N.S.Boson.Channel);
 		N.Saturate(S.Boson.Foundation, S.Boson.Channel);
 		S.Boson.Bond();
 		S.Boson.Manifest(N.S.Boson.Dynamo);
-		S.Boson.Open(S.DiracCarrier);
+		S.Boson.Open(S.Coordinate);
 		N.Manifest(S.Boson.Dynamo);
 
 		if (!N.S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");

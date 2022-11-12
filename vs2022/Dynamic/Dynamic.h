@@ -26,7 +26,7 @@ namespace Dysnomia {
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();
-		BigInteger GetCarrier(BigInteger);
+		BigInteger Coordinate(BigInteger);
 		void Conify();
 		void Saturate(BigInteger, BigInteger);
 		void Bond();

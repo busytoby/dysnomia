@@ -9,7 +9,7 @@ namespace Dysnomia {
 	public:
 		BigInteger Wave;
 		Dynamic Boson;
-		BigInteger DiracCarrier;
+		BigInteger Coordinate;
 		Ion^ Ion;
 	};
 }

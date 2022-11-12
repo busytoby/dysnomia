@@ -29,10 +29,10 @@ namespace Dysnomia {
 			ConductorGenerate();
 
 			// Bohr Views
-			BigInteger aCarrier = Rod.GetCarrier(Cone.Pole);
-			BigInteger bCarrier = Cone.GetCarrier(Rod.Pole);
+			BigInteger aCoordinate = Rod.Coordinate(Cone.Pole);
+			BigInteger bCoordinate = Cone.Coordinate(Rod.Pole);
 	
-			if (aCarrier != bCarrier) continue;
+			if (aCoordinate != bCoordinate) continue;
 
 			Cone.Conify();
 
@@ -46,8 +46,8 @@ namespace Dysnomia {
 			Rod.Manifest(Cone.Dynamo);
 			Cone.Manifest(Rod.Dynamo);
 
-			Rod.Open(aCarrier);
-			Cone.Open(bCarrier);
+			Rod.Open(aCoordinate);
+			Cone.Open(bCoordinate);
 		}
 		if (tries >= 2) throw gcnew Exception("Never Caught This Before");
 	}

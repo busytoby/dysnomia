@@ -66,7 +66,7 @@ namespace Dysnomia {
 		Pole = BigInteger::ModPow(Base, Secret, Math::Prime);
 	}
 
-	BigInteger Dynamic::GetCarrier(BigInteger peerPole)
+	BigInteger Dynamic::Coordinate(BigInteger peerPole)
 	{
 		return BigInteger::ModPow(peerPole, Secret, Math::Prime);
 	}

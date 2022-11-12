@@ -23,7 +23,7 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Conjugate(BigInteger Planck) {
-		S.DiracCarrier = S.Boson.GetCarrier(Planck);
+		S.Coordinate = S.Boson.Coordinate(Planck);
 		S.Boson.Conify();
 
 		return S.Boson.Foundation;
@@ -36,7 +36,7 @@ namespace Dysnomia {
 
 	void Situation::Manifest(BigInteger Dynamo) {
 		S.Boson.Manifest(Dynamo);
-		S.Boson.Open(S.DiracCarrier);
+		S.Boson.Open(S.Coordinate);
 	}
 
 	BigInteger Situation::Foil(BigInteger Wave, BigInteger Fourier) {
