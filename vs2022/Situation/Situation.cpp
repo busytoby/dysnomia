@@ -12,8 +12,8 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Avail(BigInteger Wave) {
-		BigInteger Ehrenfest = S.Boson.Avail(Wave);
-		return Ehrenfest;
+		BigInteger Ligand = S.Boson.Avail(Wave);
+		return Ligand;
 	}
 
 	BigInteger Situation::Form(BigInteger Hilbert) {

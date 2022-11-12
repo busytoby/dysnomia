@@ -55,9 +55,9 @@ namespace Dysnomia {
 		return BigInteger::ModPow(Hamilton, Secret, Math::Prime);
 	}
 
-	void Dynamic::Form(BigInteger Ehrenfest)
+	void Dynamic::Form(BigInteger Ligand)
 	{
-		Base = BigInteger::ModPow(Ehrenfest, Secret, Math::Prime);
+		Base = BigInteger::ModPow(Ligand, Secret, Math::Prime);
 		Tune();
 	}
 

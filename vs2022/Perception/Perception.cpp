@@ -10,11 +10,11 @@ namespace Dysnomia {
 
 	void Perception::Bridge(Situation R) {
 		S.Wave = Norbornylene.BigDetermine("Norbornylene");
-		BigInteger Ehrenfest = S.Boson.Avail(S.Wave);
+		BigInteger Ligand = S.Boson.Avail(S.Wave);
 		BigInteger Hilbert = N.Avail(S.Wave);
 		S.Boson.Form(Hilbert);
 		S.Boson.Polarize();
-		BigInteger Substrate = N.Form(Ehrenfest);
+		BigInteger Substrate = N.Form(Ligand);
 		S.Coordinate = S.Boson.Coordinate(Substrate);
 		BigInteger Lewis = N.Conjugate(S.Boson.Pole);
 		S.Boson.Saturate(Lewis, N.S.Boson.Channel);
