@@ -29,8 +29,8 @@ namespace Dysnomia {
 		return S.Boson.Foundation;
 	}
 
-	void Situation::EstablishElement(BigInteger Foundation, BigInteger Channel) {
-		S.Boson.EstablishElement(Foundation, Channel);
+	void Situation::Saturate(BigInteger Foundation, BigInteger Channel) {
+		S.Boson.Saturate(Foundation, Channel);
 		S.Boson.Bond();
 	}
 

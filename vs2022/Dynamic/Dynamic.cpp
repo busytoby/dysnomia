@@ -78,7 +78,7 @@ namespace Dysnomia {
 		is_conic = true;
 	}
 
-	void Dynamic::EstablishElement(BigInteger peerFoundation, BigInteger peerChannel)
+	void Dynamic::Saturate(BigInteger peerFoundation, BigInteger peerChannel)
 	{
 		if (!is_conic)
 		{

@@ -16,9 +16,9 @@ namespace Dysnomia {
 		S.Boson.Polarize();
 		BigInteger Substrate = N.Form(Ehrenfest);
 		S.DiracCarrier = S.Boson.GetCarrier(Substrate);
-		BigInteger NFoundation = N.LockPole(S.Boson.Pole);
-		S.Boson.EstablishElement(NFoundation, N.S.Boson.Channel);
-		N.EstablishElement(S.Boson.Foundation, S.Boson.Channel);
+		BigInteger Lewis = N.LockPole(S.Boson.Pole);
+		S.Boson.Saturate(Lewis, N.S.Boson.Channel);
+		N.Saturate(S.Boson.Foundation, S.Boson.Channel);
 		S.Boson.Bond();
 		S.Boson.Manifest(N.S.Boson.Dynamo);
 		S.Boson.Open(S.DiracCarrier);

@@ -36,8 +36,8 @@ namespace Dysnomia {
 
 			Cone.Conify();
 
-			Rod.EstablishElement(Cone.Foundation, Cone.Channel);
-			Cone.EstablishElement(Rod.Foundation, Rod.Channel);
+			Rod.Saturate(Cone.Foundation, Cone.Channel);
+			Cone.Saturate(Rod.Foundation, Rod.Channel);
 
 			if (Rod.Element != Cone.Element) continue;
 
