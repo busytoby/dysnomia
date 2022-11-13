@@ -30,7 +30,7 @@ namespace Dysnomia {
 	void Perception::Avail() { // Proof P=NP
 		S.Wave = Norbornylene.BigDetermine("Hello Universe");
 		N.S.Wave = Norbornylene.BigDetermine("Norcamphene");
-		BigInteger Aluminum0 = N.Foil(S.Wave, N.S.Wave); // IS ALUMINUM
+		BigInteger Aluminum0 = N.Foil(S.Wave, N.S.Wave); // Trademark Aluminum
 	}
 }
 
