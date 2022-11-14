@@ -7,9 +7,8 @@ namespace Dysnomia {
 	public ref class Orbital
 	{
 	public:
-		BigInteger Wave;
+		BigInteger Ligand;
 		Dynamic Boson;
 		BigInteger Coordinate;
-		Ion^ Ion;
 	};
 }

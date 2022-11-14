@@ -9,9 +9,9 @@ namespace Dysnomia {
 	}
 
 	void Perception::Bridge(Situation R) {
-		S.Wave = Norbornylene.BigDetermine("Norbornylene");
-		BigInteger Ligand = S.Boson.Avail(S.Wave);
-		BigInteger Donor = N.Avail(S.Wave);
+		S.Ligand = Norbornylene.BigDetermine("Norbornylene");
+		BigInteger Ligand = S.Boson.Avail(S.Ligand);
+		BigInteger Donor = N.Avail(S.Ligand);
 		S.Boson.Form(Donor);
 		S.Boson.Polarize();
 		BigInteger Substrate = N.Form(Ligand);
@@ -28,9 +28,9 @@ namespace Dysnomia {
 	}
 
 	void Perception::Avail() { // Proof P=NP
-		S.Wave = Norbornylene.BigDetermine("Hello Universe");
-		N.S.Wave = Norbornylene.BigDetermine("Norcamphene");
-		BigInteger Aluminum0 = N.Foil(S.Wave, N.S.Wave); // Trademark Aluminum
+		S.Ligand = Norbornylene.BigDetermine("Hello Universe");
+		N.S.Ligand = Norbornylene.BigDetermine("Norcamphene");
+		BigInteger Aluminum0 = N.Foil(S.Ligand, N.S.Ligand); // Trademark Aluminum
 	}
 }
 
