@@ -1,4 +1,6 @@
 #pragma once
+#define LEFT 0
+#define RIGHT 1
 
 using namespace System;
 using namespace System::Numerics;
@@ -27,5 +29,8 @@ namespace Dysnomia {
 
 		void Ln1(array<Byte>^, LinkedList<LinkedList<char>^>^);
 		bool Ln2(LinkedList<LinkedList<char>^>^);
+		LinkedListNode<LinkedList<char>^>^ Ln2_PL(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
+
+		int AdjacencyCount(LinkedListNode<char>^, int);
 	};
 }

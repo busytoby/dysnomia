@@ -57,54 +57,7 @@ namespace Dysnomia {
 		while (Ln2(% R2D)) continue;
 
 		throw gcnew Exception("Escaped Infinite Loop, The Universe Was Destroyed");
-		/* 
-0 Length:
-Pass1 nothing
-Pass2 Prepend to Next
-
-2 <-->:
-1s become 4s & continue
-2s nothing & stop
-3s become 4s & stop
-4s continue
-5s break into 2 and retain end 2
-6s adjacent become both 0 & collapse
-6s non-adjacent become 0 and self-collapse
-7s become 9s
-8s don't occur yet
-9s become A & Ln3
-
-4 <-->:
-1s nothing & stop
-2s nothing & continue
-3s become 1s & continue
-4s count #
-	5 4s become 21 left or 12 right & continue 4
-	4 4s become 23 left or 32 right & continue 4
-	3 4s become 11 & break into 2 & retain end 1
-	2 4s become 1 & continue 2
-5s break into 2 and retain end reacted 2
-6s continue as 2
-7s become 5 & break into 2 and retain ends reacted 2
-8s don't occur yet
-9s become D & Ln4
-
-6 <-->:
-1s become 5 & break into 2 & retain ends react 2
-2s adjacent become 0 & both collapse
-2s non-adjacent 6 moves adjacent
-3s react 2 then 6 moves adjacent
-4s stop
-5s become 7 & 6 moves adjacent with 4s in between if 3s reacted
-6s count #
-	7 6s become 9
-	6 6s become 5
-	5 6s or less become 1 & continue
-7s become A & Ln3
-8s don't occur yet
-9s become F & Ln5
-		*/
-		// ++
+		// ++ TODO
 		// Ln3 Alanine Candida Per-Sulfate Pass
 		// Ln4 Aspartate Nitrogenation Phase, Secant Trigs
 		// Ln5 Phenylalanine Consumer Pass, Sine Trigs
@@ -128,14 +81,267 @@ Pass2 Prepend to Next
 	}
 
 	bool Situation::Ln2(LinkedList<LinkedList<char>^>^ R2D2) {
+		LinkedList<char>^ R = gcnew LinkedList<char>();
+		LinkedListNode<LinkedList<char>^>^ P1;
+		LinkedListNode<LinkedList<char>^>^ P = R2D2->First;
+
+		do {
+			while (P->Value->Count == 0) {
+				R->AddLast('7');
+				LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
+				R2D2->Remove(P);
+				P = P2;
+			}
+			
+			LinkedListNode<char>^ E = P->Value->First;
+			do {
+				switch (E->Value) {
+				case '2':
+				case '4':
+					P = Ln2_PL(R, E, P);
+					break;
+				case '6':
+//					Ln2_PL(R, E, P);
+					R->AddLast(E->Value);
+					break;
+				default:
+					R->AddLast(E->Value);
+					break;
+				}
+			} while (E = E->Next);
+
+			if (P == R2D2->First) {
+				R2D2->Remove(P);
+				R2D2->AddFirst(R);
+				P = R2D2->First;
+			}
+			else {
+				P1 = P->Previous;
+				R2D2->Remove(P);
+				P = R2D2->AddAfter(P1, R);
+			}
+
+			R = gcnew LinkedList<char>();
+		} while (P = P->Next);
+
 		Threading::Thread::Sleep(1);
+		return true;
+	}
+
+	LinkedListNode<LinkedList<char>^>^ Situation::Ln2_PL(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+		if (R->Count == 0) { R->AddLast(E->Value); return P; }
+
+		LinkedListNode<char>^ NZ = R->Last;
+		R->AddLast(E->Value);
+
+		LinkedListNode<LinkedList<char>^>^ P1;
+		LinkedList<char>^ D2;
+		int AC, temp;
+
+		do {
+			switch (E->Value) {
+			case '2':
+				switch (NZ->Value) {
+				case '1': NZ->Value = '4'; break;
+				case '2': return P;
+				case '3': NZ->Value = '4'; return P;
+				case '4': break;
+				case '5':
+					R->RemoveLast();
+					P1 = P->List->AddBefore(P, R);
+					R = gcnew LinkedList<char>();
+					D2 = gcnew LinkedList<char>();
+					do {
+						D2->AddLast(E->Value);
+					} while (E = E->Next);
+					P1->List->Remove(P);
+					P = P1->List->AddAfter(P1, D2);
+					return P;
+				case '6':
+					if (NZ == R->Last->Previous) R->RemoveLast();
+					R->RemoveLast();
+					break;
+				case '7': NZ->Value = '9'; return P;
+				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P;
+				default:
+					temp = 0;
+					break;
+				}
+				break;
+			case '4':
+				switch (NZ->Value) {
+				case '1': return P;
+				case '2': break;
+				case '3': NZ->Value = '1'; break;
+				case '4':
+					AC = AdjacencyCount(NZ, LEFT);
+					if (AC >= 5) {
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
+						R->AddLast('2'); R->AddLast('1');
+						break;
+					}
+					else if (AC == 4) {
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
+						R->AddLast('2'); R->AddLast('3');
+					}
+					else if (AC == 3) {
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
+						R->AddLast('1'); R->AddLast('1');
+						P1 = P->List->AddBefore(P, R);
+						R = gcnew LinkedList<char>();
+						D2 = gcnew LinkedList<char>();
+						D2->AddLast('1');
+						do {
+							D2->AddLast(E->Value);
+						} while (E = E->Next);
+						P1->List->Remove(P);
+						P = P1->List->AddAfter(P1, D2);
+						return P;
+					}
+					else if (AC == 2) {
+						R->RemoveLast(); R->RemoveLast();
+						R->AddLast('1');
+						E->Value = '2';
+					}
+					break;
+				case '5':
+					R->RemoveLast();
+					P1 = P->List->AddBefore(P, R);
+					R = gcnew LinkedList<char>();
+					D2 = gcnew LinkedList<char>();
+					do {
+						D2->AddLast(E->Value);
+					} while (E = E->Next);
+					P1->List->Remove(P);
+					P = P1->List->AddAfter(P1, D2);
+					//NZ = R->Last;
+					// react right
+					//temp = 0;
+					// might bounce
+					return P;
+				case '6':
+					E->Value = '2';
+					break;
+				case '7':
+					R->RemoveLast();
+					P1 = P->List->AddBefore(P, R);
+					R = gcnew LinkedList<char>();
+					D2 = gcnew LinkedList<char>();
+					do {
+						D2->AddLast(E->Value);
+					} while (E = E->Next);
+					P1->List->Remove(P);
+					P = P1->List->AddAfter(P1, D2);
+					NZ->Value = '5';
+					//NZ = R->Last;
+					// react right
+					//temp = 0;
+					// might bounce
+					return P;
+				case '9':
+					NZ->Value = 'D';
+					//Ln4 stub
+					return P;
+				default:
+					temp = 99;
+					break;
+				}
+				break;
+			case '6':
+				switch (NZ->Value) {
+				case '1':
+					R->RemoveLast();
+					P1 = P->List->AddBefore(P, R);
+					R = gcnew LinkedList<char>();
+					D2 = gcnew LinkedList<char>();
+					D2->AddLast('2');
+					do {
+						D2->AddLast(E->Value);
+					} while (E = E->Next);
+					P1->List->Remove(P);
+					P = P1->List->AddAfter(P1, D2);
+					NZ->Value = '5';
+					//NZ = R->Last;
+					// react right
+					//temp = 0;
+					// might bounce
+					return P;
+				case '2':
+					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
+					R->AddAfter(NZ, '6');
+					return P;
+				case '3':
+					R->RemoveLast();
+					R->AddAfter(NZ, '6');
+					R->AddAfter(NZ, '2');
+					break;
+				case '4': return P;
+				case '5':
+					R->RemoveLast();
+					NZ->Value = '7';
+					while (NZ->Next->Value == '3') {
+						NZ->Next->Value = '4';
+						NZ = NZ->Next;
+					}
+					R->AddAfter(NZ, '6');
+					return P;
+				case '6':
+					AC = AdjacencyCount(NZ, LEFT);
+					if (AC >= 5)
+						for (int i = 0; i < AC; i++) {
+							R->RemoveLast();
+						}
+					if (AC >= 7) {
+						R->AddLast('9');
+						return P;
+					}
+					else if (AC == 6) {
+						R->AddLast('5');
+						return P;
+					}
+					else if (AC == 5) {
+						R->AddLast('1');
+						break;
+						break;
+					}
+				case '7':
+					NZ->Value = 'A';
+					//Ln3 stub
+					return P;
+				case '9':
+					NZ->Value = 'F';
+					//Ln5 stub
+					return P;
+				default:
+					temp = 99;
+					break;
+				}
+			}
+		} while (NZ = NZ->Previous);
+
+		return P;
+	}
+
+	int Situation::AdjacencyCount(LinkedListNode<char>^ Z, int Direction) {
+		int count = 1;
+		if (Direction == LEFT) {
+			while (Z->Previous != nullptr && Z->Previous->Value == Z->Value) {
+				count++;
+				Z = Z->Previous;
+			}
+		}
+		else if (Direction == RIGHT) {
+			while (Z->Next != nullptr && Z->Next->Value == Z->Value) {
+				count++;
+				Z = Z->Next;
+			}
+		}
+		else throw gcnew Exception("Unknown Direction");
+
+		return count;
 	}
 
 	/*
-0 Length:
-Pass1 nothing
-Pass2 Prepend to Next
-
 2 <-->:
 1s become 4s & continue
 2s nothing & stop
