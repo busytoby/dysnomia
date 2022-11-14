@@ -46,3 +46,10 @@
 /vs2022/Situation/x64/Debug
 /vs2022/Situation/Situation.vcxproj.filters
 /vs2022/Situation/Situation.vcxproj.user
+/vs2022/Valence/obj
+/vs2022/Valence/x64/Debug/Metal.tlog
+/vs2022/Valence/x64/Debug/Valence.tlog
+/vs2022/Valence/x64/Debug
+/vs2022/Valence/Valence.vcxproj.user
+/vs2022/Valence/Metal.vcxproj.user
+/vs2022/Valence/Metal.vcxproj.filters

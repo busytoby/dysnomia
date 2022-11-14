@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Perception\Perception.vcxproj" />
   </ItemGroup>
 

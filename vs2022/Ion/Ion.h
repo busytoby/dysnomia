@@ -8,8 +8,7 @@ namespace Dysnomia {
 	public ref class Ion
 	{
 	public:
-		Metal V;
-		LinkedList<Metal^> M;
+		Valence V;
 		Dynamic^ P;
 
 		Ion();

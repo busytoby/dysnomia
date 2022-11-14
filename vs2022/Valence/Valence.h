@@ -4,7 +4,7 @@ using namespace System;
 using namespace System::Numerics;
 
 namespace Dysnomia {
-	public ref class Metal
+	public ref class Valence
 	{
 	public:
 		BigInteger H;
@@ -13,6 +13,6 @@ namespace Dysnomia {
 		BigInteger O;
 		BigInteger P;
 
-		Metal();
+		Valence();
 	};
 }
