@@ -52,6 +52,7 @@ namespace Dysnomia {
 		for (int i = 0; i < L->Length; i++) {
 			String^ R = Convert::ToString(L[i], 8)->PadLeft(3, '0');
 			for (int j = 0; j < R->Length; j++) {
+				if (R[j] == '0') continue;
 				if (R[j] != '7') N.Append(R[j]);
 				else {
 					R2D->AddLast(N.ToString());
