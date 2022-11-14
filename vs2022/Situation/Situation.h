@@ -24,5 +24,8 @@ namespace Dysnomia {
 		void Saturate(BigInteger, BigInteger);
 		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
+
+		void Ln1(array<Byte>^, LinkedList<LinkedList<char>^>^);
+		bool Ln2(LinkedList<LinkedList<char>^>^);
 	};
 }
