@@ -214,10 +214,6 @@ namespace Dysnomia {
 					} while (E = E->Next);
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
-					//NZ = R->Last;
-					// react right
-					//temp = 0;
-					// might bounce
 					return P;
 				case '6':
 					E->Value = '2';
@@ -233,10 +229,6 @@ namespace Dysnomia {
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					//NZ = R->Last;
-					// react right
-					//temp = 0;
-					// might bounce
 					return P;
 				case '9':
 					NZ->Value = 'D';
@@ -261,10 +253,6 @@ namespace Dysnomia {
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					//NZ = R->Last;
-					// react right
-					//temp = 0;
-					// might bounce
 					return P;
 				case '2':
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
@@ -340,48 +328,4 @@ namespace Dysnomia {
 
 		return count;
 	}
-
-	/*
-2 <-->:
-1s become 4s & continue
-2s nothing & stop
-3s become 4s & stop
-4s continue
-5s break into 2 and retain end 2
-6s adjacent become both 0 & collapse
-6s non-adjacent become 0 and self-collapse
-7s become 9s
-8s don't occur yet
-9s become A & Ln3
-
-4 <-->:
-1s nothing & stop
-2s nothing & continue
-3s become 1s & continue
-4s count #
-	5 4s become 21 left or 12 right & continue 4
-	4 4s become 23 left or 32 right & continue 4
-	3 4s become 11 & break into 2 & retain end 1
-	2 4s become 1 & continue 2
-5s break into 2 and retain end reacted 2
-6s continue as 2
-7s become 5 & break into 2 and retain ends reacted 2
-8s don't occur yet
-9s become D & Ln4
-
-6 <-->:
-1s become 5 & break into 2 & retain ends react 2
-2s adjacent become 0 & both collapse
-2s non-adjacent 6 moves adjacent
-3s react 2 then 6 moves adjacent
-4s stop
-5s become 7 & 6 moves adjacent with 4s in between if 3s reacted
-6s count #
-	7 6s become 9
-	6 6s become 5
-	5 6s or less become 1 & continue
-7s become A & Ln3
-8s don't occur yet
-9s become F & Ln5
-		*/
 }
