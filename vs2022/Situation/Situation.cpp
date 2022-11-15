@@ -98,11 +98,8 @@ namespace Dysnomia {
 				switch (E->Value) {
 				case '2':
 				case '4':
-					P = Ln2_PL(R, E, P);
-					break;
 				case '6':
-//					Ln2_PL(R, E, P);
-					R->AddLast(E->Value);
+					P = Ln2_PL(R, E, P);
 					break;
 				default:
 					R->AddLast(E->Value);
@@ -156,7 +153,7 @@ namespace Dysnomia {
 					} while (E = E->Next);
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
-					return P;
+					return P1;
 				case '6':
 					if (NZ == R->Last->Previous) R->RemoveLast();
 					R->RemoveLast();
@@ -196,7 +193,7 @@ namespace Dysnomia {
 						} while (E = E->Next);
 						P1->List->Remove(P);
 						P = P1->List->AddAfter(P1, D2);
-						return P;
+						return P1;
 					}
 					else if (AC == 2) {
 						R->RemoveLast(); R->RemoveLast();
@@ -214,7 +211,7 @@ namespace Dysnomia {
 					} while (E = E->Next);
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
-					return P;
+					return P1;
 				case '6':
 					E->Value = '2';
 					break;
@@ -229,7 +226,7 @@ namespace Dysnomia {
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					return P;
+					return P1;
 				case '9':
 					NZ->Value = 'D';
 					//Ln4 stub
@@ -253,21 +250,21 @@ namespace Dysnomia {
 					P1->List->Remove(P);
 					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					return P;
+					return P1;
 				case '2':
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
-					R->AddAfter(NZ, '6');
+					else R->AddAfter(NZ, '6');
 					return P;
 				case '3':
 					R->RemoveLast();
 					R->AddAfter(NZ, '6');
 					R->AddAfter(NZ, '2');
-					break;
+					return P;
 				case '4': return P;
 				case '5':
 					R->RemoveLast();
 					NZ->Value = '7';
-					while (NZ->Next->Value == '3') {
+					while (NZ->Next != nullptr && NZ->Next->Value == '3') {
 						NZ->Next->Value = '4';
 						NZ = NZ->Next;
 					}
@@ -289,7 +286,6 @@ namespace Dysnomia {
 					}
 					else if (AC == 5) {
 						R->AddLast('1');
-						break;
 						break;
 					}
 				case '7':
