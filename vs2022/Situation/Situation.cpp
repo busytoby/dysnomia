@@ -84,17 +84,17 @@ namespace Dysnomia {
 
 	bool Situation::Ln2(LinkedList<LinkedList<char>^>^ R2D2) {
 		LinkedList<char>^ R = gcnew LinkedList<char>();
-		LinkedListNode<LinkedList<char>^>^ P1;
+		LinkedListNode<LinkedList<char>^>^ W;
 		LinkedListNode<LinkedList<char>^>^ P = R2D2->First;
 
 		do {
 			while (P->Value->Count == 0) {
 				R->AddLast('7');
-				LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
+				LinkedListNode<LinkedList<char>^>^ N = P->Next;
 				R2D2->Remove(P);
-				if (P2 == nullptr)
+				if (N == nullptr)
 					return true;
-				P = P2;
+				P = N;
 			}
 			
 			LinkedListNode<char>^ E = P->Value->First;
@@ -117,9 +117,9 @@ namespace Dysnomia {
 				P = R2D2->First;
 			}
 			else {
-				P1 = P->Previous;
+				W = P->Previous;
 				R2D2->Remove(P);
-				P = R2D2->AddAfter(P1, R);
+				P = R2D2->AddAfter(W, R);
 			}
 
 			R = gcnew LinkedList<char>();
