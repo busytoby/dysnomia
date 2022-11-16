@@ -86,13 +86,24 @@ namespace Dysnomia {
 		LinkedListNode<LinkedList<char>^>^ P = R2D2->First;
 
 		do {
-			while (P->Value->Count == 0) {
-				R->AddLast('7');
-				LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
-				R2D2->Remove(P);
-				P = P2;
+			try {
+				P1 = P;
+				while (P->Value->Count == 0) {
+					R->AddLast('7');
+					if (P->Next == nullptr) 
+						return true;
+					LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
+					R2D2->Remove(P);
+					P = P2;
+				}
+			}
+			catch (Exception^ e) { 
+				int a = 99; 
 			}
 			
+			if (P == nullptr)
+				int a = 99;
+
 			LinkedListNode<char>^ E = P->Value->First;
 			do {
 				switch (E->Value) {
@@ -107,6 +118,9 @@ namespace Dysnomia {
 				}
 			} while (E = E->Next);
 
+			if (P == nullptr)
+				int a = 99;
+
 			if (P == R2D2->First) {
 				R2D2->Remove(P);
 				R2D2->AddFirst(R);
@@ -117,6 +131,9 @@ namespace Dysnomia {
 				R2D2->Remove(P);
 				P = R2D2->AddAfter(P1, R);
 			}
+
+			if (P == nullptr)
+				int a = 99;
 
 			R = gcnew LinkedList<char>();
 		} while (P = P->Next);
