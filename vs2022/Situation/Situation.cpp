@@ -91,7 +91,7 @@ namespace Dysnomia {
 				LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
 				R2D2->Remove(P);
 				P = P2;
-				if (P->Next == nullptr)
+				if (P == nullptr)
 					return true;
 			}
 			
