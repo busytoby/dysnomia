@@ -270,9 +270,9 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::AsEx(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		LinkedListNode<LinkedList<char>^>^ P1;
 		LinkedList<char>^ D = gcnew LinkedList<char>(R);
-		R->RemoveLast();
-		P1 = P->List->AddBefore(P, D);
 		R->Clear();
+		D->RemoveLast();
+		P1 = P->List->AddBefore(P, D);
 		D = gcnew LinkedList<char>();
 		do {
 			D->AddLast(E->Value);
