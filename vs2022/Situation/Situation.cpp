@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 
 #include "Situation.h"
 
@@ -44,7 +44,7 @@ namespace Dysnomia {
 		Avail(Carbenium);
 		BigInteger T = I->Hydrate(Carbonium);
 
-		// Azimuth
+		// Azimuth เครื่องหมายการค้า
 		array<Byte>^ L = T.ToByteArray();
 
 		// Azimuth Foil
