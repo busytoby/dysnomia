@@ -48,13 +48,13 @@ namespace Dysnomia {
 		array<Byte>^ L = T.ToByteArray();
 
 		// Azimuth Foil
-		LinkedList<LinkedList<char>^> R2D;
+		LinkedList<LinkedList<char>^>^ R2D;
 
 		// Ln1 Sulfite Performed Only Once As F(Y)
-		Ln1(L, %R2D);		
+		R2D = Ln1(L);		
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
-		while (Ln2(% R2D)) continue;
+		while (Ln2(R2D)) continue;
 
 		throw gcnew Exception("Escaped Infinite Loop, The Universe Was Destroyed");
 		// ++ TODO
@@ -65,7 +65,8 @@ namespace Dysnomia {
 		return T;
 	}
 
-	void Situation::Ln1(array<Byte>^ L, LinkedList<LinkedList<char>^>^ R2D) {
+	LinkedList<LinkedList<char>^>^ Situation::Ln1(array<Byte>^ L) {
+		LinkedList<LinkedList<char>^>^ R2D = gcnew LinkedList<LinkedList<char>^>();
 		LinkedList<char>^ N = gcnew LinkedList<char>();
 		for (int i = 0; i < L->Length; i++) {
 			String^ R = Convert::ToString(L[i], 8);
@@ -78,6 +79,7 @@ namespace Dysnomia {
 				}
 			}
 		}
+		return R2D;
 	}
 
 	bool Situation::Ln2(LinkedList<LinkedList<char>^>^ R2D2) {
@@ -90,9 +92,9 @@ namespace Dysnomia {
 				R->AddLast('7');
 				LinkedListNode<LinkedList<char>^>^ P2 = P->Next;
 				R2D2->Remove(P);
-				P = P2;
-				if (P == nullptr)
+				if (P2 == nullptr)
 					return true;
+				P = P2;
 			}
 			
 			LinkedListNode<char>^ E = P->Value->First;

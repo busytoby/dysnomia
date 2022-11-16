@@ -27,7 +27,7 @@ namespace Dysnomia {
 		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
 
-		void Ln1(array<Byte>^, LinkedList<LinkedList<char>^>^);
+		LinkedList<LinkedList<char>^>^ Ln1(array<Byte>^);
 		bool Ln2(LinkedList<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ Ln2_PL(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ AsEx(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P);
