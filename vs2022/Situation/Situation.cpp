@@ -104,7 +104,6 @@ namespace Dysnomia {
 				case '2':
 				case '4':
 				case '6':
-					N = R2D2->First;
 					P = Ln2_PL(R, E, P);
 					break;
 				default:
