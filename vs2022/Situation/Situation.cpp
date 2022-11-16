@@ -74,7 +74,7 @@ namespace Dysnomia {
 				if (D[j] == '0') continue;
 				if (D[j] != '7') N->AddLast((char) D[j]);
 				else {
-					M->AddLast(N);
+					M->AddFirst(N);
 					N = gcnew LinkedList<char>();
 				}
 			}
