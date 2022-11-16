@@ -39,10 +39,10 @@ namespace Dysnomia {
 		S.Boson.Open(S.Coordinate);
 	}
 
-	BigInteger Situation::Foil(BigInteger Wave, BigInteger Fourier) {
+	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
 		I = gcnew Ion(S.Boson);
-		Avail(Wave);
-		BigInteger T = I->Hydrate(Fourier);
+		Avail(Carbenium);
+		BigInteger T = I->Hydrate(Carbonium);
 
 		// Azimuth
 		array<Byte>^ L = T.ToByteArray();
