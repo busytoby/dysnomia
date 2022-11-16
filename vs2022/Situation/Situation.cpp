@@ -144,16 +144,7 @@ namespace Dysnomia {
 				case '3': NZ->Value = '4'; return P;
 				case '4': break;
 				case '5':
-					R->RemoveLast();
-					P1 = P->List->AddBefore(P, R);
-					R = gcnew LinkedList<char>();
-					D2 = gcnew LinkedList<char>();
-					do {
-						D2->AddLast(E->Value);
-					} while (E = E->Next);
-					P1->List->Remove(P);
-					P = P1->List->AddAfter(P1, D2);
-					return P1;
+					return(AsEx(R, E, P));
 				case '6':
 					if (NZ == R->Last->Previous) R->RemoveLast();
 					R->RemoveLast();
@@ -183,17 +174,9 @@ namespace Dysnomia {
 					}
 					else if (AC == 3) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
-						R->AddLast('1'); R->AddLast('1');
-						P1 = P->List->AddBefore(P, R);
-						R = gcnew LinkedList<char>();
-						D2 = gcnew LinkedList<char>();
-						D2->AddLast('1');
-						do {
-							D2->AddLast(E->Value);
-						} while (E = E->Next);
-						P1->List->Remove(P);
-						P = P1->List->AddAfter(P1, D2);
-						return P1;
+						R->AddLast('1'); R->AddLast('1'); R->AddLast('1');
+						E->List->AddBefore(E, '1');
+						return AsEx(R, E, P);
 					}
 					else if (AC == 2) {
 						R->RemoveLast(); R->RemoveLast();
@@ -202,31 +185,13 @@ namespace Dysnomia {
 					}
 					break;
 				case '5':
-					R->RemoveLast();
-					P1 = P->List->AddBefore(P, R);
-					R = gcnew LinkedList<char>();
-					D2 = gcnew LinkedList<char>();
-					do {
-						D2->AddLast(E->Value);
-					} while (E = E->Next);
-					P1->List->Remove(P);
-					P = P1->List->AddAfter(P1, D2);
-					return P1;
+					return(AsEx(R, E, P));
 				case '6':
 					E->Value = '2';
 					break;
 				case '7':
-					R->RemoveLast();
-					P1 = P->List->AddBefore(P, R);
-					R = gcnew LinkedList<char>();
-					D2 = gcnew LinkedList<char>();
-					do {
-						D2->AddLast(E->Value);
-					} while (E = E->Next);
-					P1->List->Remove(P);
-					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					return P1;
+					return(AsEx(R, E, P));
 				case '9':
 					NZ->Value = 'D';
 					//Ln4 stub
@@ -239,18 +204,9 @@ namespace Dysnomia {
 			case '6':
 				switch (NZ->Value) {
 				case '1':
-					R->RemoveLast();
-					P1 = P->List->AddBefore(P, R);
-					R = gcnew LinkedList<char>();
-					D2 = gcnew LinkedList<char>();
-					D2->AddLast('2');
-					do {
-						D2->AddLast(E->Value);
-					} while (E = E->Next);
-					P1->List->Remove(P);
-					P = P1->List->AddAfter(P1, D2);
 					NZ->Value = '5';
-					return P1;
+					E = E->List->AddBefore(E, '2');
+					return(AsEx(R, E, P));
 				case '2':
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
 					else R->AddAfter(NZ, '6');
@@ -304,6 +260,20 @@ namespace Dysnomia {
 		} while (NZ = NZ->Previous);
 
 		return P;
+	}
+
+	LinkedListNode<LinkedList<char>^>^ Situation::AsEx(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+		LinkedListNode<LinkedList<char>^>^ P1;
+		LinkedList<char>^ D;
+		R->RemoveLast();
+		P1 = P->List->AddBefore(P, R);
+		R = gcnew LinkedList<char>();
+		D = gcnew LinkedList<char>();
+		do {
+			D->AddLast(E->Value);
+		} while (E = E->Next);
+		P1->List->Remove(P);
+		return(P1->List->AddAfter(P1, D));
 	}
 
 	int Situation::AdjacencyCount(LinkedListNode<char>^ Z, int Direction) {
