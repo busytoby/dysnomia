@@ -66,20 +66,20 @@ namespace Dysnomia {
 	}
 
 	LinkedList<LinkedList<char>^>^ Situation::Ln1(array<Byte>^ L) {
-		LinkedList<LinkedList<char>^>^ R2D = gcnew LinkedList<LinkedList<char>^>();
+		LinkedList<LinkedList<char>^>^ M = gcnew LinkedList<LinkedList<char>^>();
 		LinkedList<char>^ N = gcnew LinkedList<char>();
 		for (int i = 0; i < L->Length; i++) {
-			String^ R = Convert::ToString(L[i], 8);
-			for (int j = 0; j < R->Length; j++) {
-				if (R[j] == '0') continue;
-				if (R[j] != '7') N->AddLast((char) R[j]);
+			String^ D = Convert::ToString(L[i], 8);
+			for (int j = 0; j < D->Length; j++) {
+				if (D[j] == '0') continue;
+				if (D[j] != '7') N->AddLast((char) D[j]);
 				else {
-					R2D->AddLast(N);
+					M->AddLast(N);
 					N = gcnew LinkedList<char>();
 				}
 			}
 		}
-		return R2D;
+		return M;
 	}
 
 	bool Situation::Ln2(LinkedList<LinkedList<char>^>^ R2D2) {
