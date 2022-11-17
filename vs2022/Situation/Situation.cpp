@@ -53,48 +53,6 @@ namespace Dysnomia {
 		// Ln1 Sulfite Performed Only Once As F(Y)
 		R2D = Ln1(L);		
 
-///* Testcase
-		R2D->Clear();
-		LinkedList<char>^ Test = gcnew LinkedList<char>();
-		Test->AddLast('1');
-		Test->AddLast('6');
-		Test->AddLast('1');
-		Test->AddLast('2');
-		Test->AddLast('6');
-		Test->AddLast('2');
-		Test->AddLast('3');
-		Test->AddLast('6');
-		Test->AddLast('4');
-		Test->AddLast('3');
-		Test->AddLast('2');
-		Test->AddLast('6');
-		Test->AddLast('5');
-		Test->AddLast('3');
-		Test->AddLast('6');
-		Test->AddLast('5');
-		Test->AddLast('3');
-		Test->AddLast('3');
-		Test->AddLast('3');
-		Test->AddLast('3');
-		Test->AddLast('6');
-		Test->AddLast('4');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		R2D->AddFirst(Test);
-//*/
-
 		// Ln2 Sulfide Passes Indefinitely As F(U)
 		while (Ln2(R2D)) continue;
 
@@ -210,28 +168,32 @@ namespace Dysnomia {
 				case '2': break;
 				case '3': NZ->Value = '1'; break;
 				case '4':
-					AC = AdjacencyCount(NZ, LEFT);
+					AC = EndAdjacencyCount(R, RIGHT);
+					for (int i = 0; i < AC && i < 7; i++) {
+						R->RemoveLast();
+					}
 					if (AC >= 4) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('2'); R->AddLast('1');
 					}
 					else if (AC == 3) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('2'); R->AddLast('3');
 					}
 					else if (AC == 2) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('1'); R->AddLast('1');
 						P = AsEx(NZ, R, E, P);
 						R->AddFirst('1');
 						return P;
 					}
 					else if (AC == 1) {
-						R->RemoveLast(); R->RemoveLast();
 						R->AddLast('1');
 						NZ = R->Last;
 						E->Value = '2';
 					}
+					/*
+					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
+						NZ = NZ->Next;
+					else NZ = R->Last;
+					*/
 					break;
 				case '5':
 					NZ->List->AddAfter(NZ, '2');
@@ -279,9 +241,8 @@ namespace Dysnomia {
 					R->AddAfter(NZ, '6');
 					return P;
 				case '6':
-					AC = AdjacencyCount(NZ, LEFT);
-					NZ = NZ->Previous;
-					for (int i = 0; i <= AC && i < 7; i++) {
+					AC = EndAdjacencyCount(R, RIGHT);
+					for (int i = 0; i < AC && i < 7; i++) {
 						R->RemoveLast();
 					}
 					if (AC >= 6) {
@@ -294,7 +255,7 @@ namespace Dysnomia {
 					}
 					else
 						R->AddLast('1');
-					if (NZ != nullptr)
+					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
 						NZ = NZ->Next;
 					else NZ = R->Last;
 					break;
@@ -322,7 +283,8 @@ namespace Dysnomia {
 		LinkedListNode<LinkedList<char>^>^ P1;
 		LinkedList<char>^ D = gcnew LinkedList<char>();
 		LinkedListNode<char>^ L = T;
-		do D->AddFirst(L->Value); while (L = L->Previous);
+		if(L != nullptr)
+			do D->AddFirst(L->Value); while (L = L->Previous);
 		P1 = P->List->AddBefore(P, D); // Trademark Streptococcus
 		D = gcnew LinkedList<char>();
 		while (T = T->Next) {
@@ -333,15 +295,18 @@ namespace Dysnomia {
 		return(P1->List->AddAfter(P1, D));
 	}
 
-	int Situation::AdjacencyCount(LinkedListNode<char>^ Z, int Direction) {
+	int Situation::EndAdjacencyCount(LinkedList<char>^ R, int Direction) {
 		int count = 1;
-		if (Direction == LEFT) {
+
+		if (Direction == RIGHT) {
+			LinkedListNode<char>^ Z = R->Last;
 			while (Z->Previous != nullptr && Z->Previous->Value == Z->Value) {
 				count++;
 				Z = Z->Previous;
 			}
 		}
-		else if (Direction == RIGHT) {
+		else if (Direction == LEFT) {
+			LinkedListNode<char>^ Z = R->First;
 			while (Z->Next != nullptr && Z->Next->Value == Z->Value) {
 				count++;
 				Z = Z->Next;

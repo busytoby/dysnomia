@@ -31,6 +31,6 @@ namespace Dysnomia {
 		bool Ln2(LinkedList<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ Ln2_PL(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ AsEx(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P);
-		int AdjacencyCount(LinkedListNode<char>^, int);
+		int EndAdjacencyCount(LinkedList<char>^, int);
 	};
 }
