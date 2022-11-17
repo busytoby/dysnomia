@@ -142,27 +142,27 @@ namespace Dysnomia {
 
 		do {
 			switch (E->Value) {
-			case '2':
+			case '2': // Trademark NAD
 				switch (NZ->Value) {
-				case '1': NZ->Value = '4'; break;
-				case '2': return P;
+				case '1': NZ->Value = '4'; break; // Trademark NADH
+				case '2': return P; // Trademark Pyruvate Dehydrogenase
 				case '3': NZ->Value = '4'; return P;
 				case '4': break;
 				case '5':
 					P = AsEx(NZ, R, E, P);
 					R->AddFirst('2');
 					return P;
-				case '6':
+				case '6': // Trademark NAD+
 					if (NZ == R->Last->Previous) R->RemoveLast();
 					R->RemoveLast();
 					return P;
-				case '7': NZ->Value = '9'; return P;
-				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P;
+				case '7': NZ->Value = '9'; return P; // Trademark NADP
+				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P; // Trademark Glyceraldehyde 3-Phosphate Dehydrogenase 
 				default:
 					break;
 				}
 				break;
-			case '4':
+			case '4': // Trademark N-Acetyl Cysteine
 				switch (NZ->Value) {
 				case '1': return P;
 				case '2': break;
@@ -255,9 +255,11 @@ namespace Dysnomia {
 					}
 					else
 						R->AddLast('1');
+					/*
 					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
 						NZ = NZ->Next;
 					else NZ = R->Last;
+					*/
 					break;
 				case '7':
 					NZ->Value = 'A';
