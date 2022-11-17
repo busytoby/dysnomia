@@ -105,7 +105,7 @@ namespace Dysnomia {
 				case '2':
 				case '4':
 				case '6':
-					P = Ln2_PL(R, E, P);
+					P = C3PO(R, E, P);
 					break;
 				default:
 					R->AddLast(E->Value);
@@ -130,7 +130,8 @@ namespace Dysnomia {
 		return true;
 	}
 
-	LinkedListNode<LinkedList<char>^>^ Situation::Ln2_PL(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+	// Trademark 3-Phosphate Pathways
+	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
 		LinkedListNode<char>^ NZ = R->Last;
@@ -145,7 +146,7 @@ namespace Dysnomia {
 			case '2': // Trademark NAD
 				switch (NZ->Value) {
 				case '1': NZ->Value = '4'; break; // Trademark NADH
-				case '2': return P; // Trademark Pyruvate Dehydrogenase
+				case '2': return P; // Trademark Pyruvate
 				case '3': NZ->Value = '4'; return P;
 				case '4': break;
 				case '5':
@@ -157,12 +158,12 @@ namespace Dysnomia {
 					R->RemoveLast();
 					return P;
 				case '7': NZ->Value = '9'; return P; // Trademark NADP
-				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P; // Trademark Glyceraldehyde 3-Phosphate Dehydrogenase 
+				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P; // Trademark Glyceraldehyde
 				default:
 					break;
 				}
 				break;
-			case '4': // Trademark N-Acetyl Cysteine
+			case '4': // Trademark Acetyl Cysteine
 				switch (NZ->Value) {
 				case '1': return P;
 				case '2': break;
@@ -175,7 +176,7 @@ namespace Dysnomia {
 					if (AC >= 4) {
 						R->AddLast('2'); R->AddLast('1');
 					}
-					else if (AC == 3) {
+					else if (AC == 3) { // Trademark Glutathione
 						R->AddLast('2'); R->AddLast('3');
 					}
 					else if (AC == 2) {

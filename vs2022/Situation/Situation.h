@@ -29,7 +29,7 @@ namespace Dysnomia {
 
 		LinkedList<LinkedList<char>^>^ Ln1(array<Byte>^);
 		bool Ln2(LinkedList<LinkedList<char>^>^);
-		LinkedListNode<LinkedList<char>^>^ Ln2_PL(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
+		LinkedListNode<LinkedList<char>^>^ C3PO(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ AsEx(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P);
 		int EndAdjacencyCount(LinkedList<char>^, int);
 	};
