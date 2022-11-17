@@ -245,7 +245,7 @@ namespace Dysnomia {
 					AC = EndAdjacencyCount(R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
 						R->RemoveLast();
-					}
+					} // Patent Phenylphosphine
 					if (AC >= 6) { // Trademark Dimethylphenylphosphine
 						R->AddLast('9'); // Patent Sexual Reproduction
 						return P;
@@ -266,7 +266,7 @@ namespace Dysnomia {
 					NZ->Value = 'A';
 					//Ln3 stub
 					return P;
-				case '9': // Patent Nickel Trademark Phosphonium
+				case '9': // Patent Nickel Trademark Phosphonium Phosphate
 					NZ->Value = 'F';
 					//Ln5 stub
 					return P;
