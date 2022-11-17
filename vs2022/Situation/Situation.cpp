@@ -53,39 +53,47 @@ namespace Dysnomia {
 		// Ln1 Sulfite Performed Only Once As F(Y)
 		R2D = Ln1(L);		
 
-/* Testcase
+///* Testcase
 		R2D->Clear();
 		LinkedList<char>^ Test = gcnew LinkedList<char>();
-		Test->AddLast('2');
-		Test->AddLast('5');
 		Test->AddLast('1');
+		Test->AddLast('6');
+		Test->AddLast('1');
+		Test->AddLast('2');
+		Test->AddLast('6');
+		Test->AddLast('2');
 		Test->AddLast('3');
 		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('1');
-		Test->AddLast('6');
-		Test->AddLast('5');
-		Test->AddLast('2');
-		Test->AddLast('6');
-		Test->AddLast('6');
-		Test->AddLast('1');
-		Test->AddLast('1');
-		Test->AddLast('1');
-		Test->AddLast('1');
 		Test->AddLast('4');
+		Test->AddLast('3');
 		Test->AddLast('2');
 		Test->AddLast('6');
-		Test->AddLast('2');
 		Test->AddLast('5');
+		Test->AddLast('3');
+		Test->AddLast('6');
 		Test->AddLast('5');
 		Test->AddLast('3');
 		Test->AddLast('3');
+		Test->AddLast('3');
+		Test->AddLast('3');
+		Test->AddLast('6');
+		Test->AddLast('4');
 		Test->AddLast('6');
 		Test->AddLast('6');
-		Test->AddLast('2');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
 		R2D->AddFirst(Test);
-*/
+//*/
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
 		while (Ln2(R2D)) continue;
@@ -204,36 +212,37 @@ namespace Dysnomia {
 				case '4':
 					AC = AdjacencyCount(NZ, LEFT);
 					if (AC >= 4) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('2'); R->AddLast('1');
 					}
 					else if (AC == 3) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('2'); R->AddLast('3');
 					}
 					else if (AC == 2) {
-						R->RemoveLast(); R->RemoveLast();
+						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('1'); R->AddLast('1');
 						P = AsEx(NZ, R, E, P);
 						R->AddFirst('1');
 						return P;
 					}
 					else if (AC == 1) {
-						R->RemoveLast();
+						R->RemoveLast(); R->RemoveLast();
 						R->AddLast('1');
+						NZ = R->Last;
 						E->Value = '2';
 					}
 					break;
 				case '5':
-					R->AddLast('2');
+					NZ->List->AddAfter(NZ, '2');
 					P = AsEx(NZ, R, E, P);
-					R->AddFirst('2');
 					return P;
 				case '6':
 					E->Value = '2';
 					break;
 				case '7':
 					NZ->Value = '5';
+					NZ->List->AddAfter(NZ, '2');
 					return AsEx(NZ, R, E, P);
 				case '9':
 					NZ->Value = 'D';
@@ -247,10 +256,8 @@ namespace Dysnomia {
 				switch (NZ->Value) {
 				case '1':
 					NZ->Value = '5';
-					R->AddLast('2'); 
-					P = AsEx(NZ, R, E, P);
-					R->AddFirst('2');
-					return P;
+					NZ->List->AddAfter(NZ, '2');
+					return AsEx(NZ, R, E, P);
 				case '2':
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
 					else R->AddAfter(NZ, '6');
@@ -273,8 +280,8 @@ namespace Dysnomia {
 					return P;
 				case '6':
 					AC = AdjacencyCount(NZ, LEFT);
-					R->RemoveLast();
-					for (int i = 0; i < AC && i < 7; i++) {
+					NZ = NZ->Previous;
+					for (int i = 0; i <= AC && i < 7; i++) {
 						R->RemoveLast();
 					}
 					if (AC >= 6) {
@@ -287,6 +294,9 @@ namespace Dysnomia {
 					}
 					else
 						R->AddLast('1');
+					if (NZ != nullptr)
+						NZ = NZ->Next;
+					else NZ = R->Last;
 					break;
 				case '7':
 					NZ->Value = 'A';
