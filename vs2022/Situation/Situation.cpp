@@ -313,7 +313,7 @@ namespace Dysnomia {
 		LinkedList<char>^ D = gcnew LinkedList<char>();
 		LinkedListNode<char>^ L = T;
 		do D->AddFirst(L->Value); while (L = L->Previous);
-		P1 = P->List->AddBefore(P, D);
+		P1 = P->List->AddBefore(P, D); // Trademark Streptococcus
 		D = gcnew LinkedList<char>();
 		while (T = T->Next) {
 			D->AddLast(T->Value);
