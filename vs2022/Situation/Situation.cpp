@@ -147,8 +147,8 @@ namespace Dysnomia {
 				switch (NZ->Value) {
 				case '1': NZ->Value = '4'; break; // Trademark NADH
 				case '2': return P; // Trademark Pyruvate
-				case '3': NZ->Value = '4'; return P;
-				case '4': break;
+				case '3': NZ->Value = '4'; return P; // Trademark Glycerone
+				case '4': break; // Patent Dihydroxyacetone
 				case '5':
 					P = AsEx(NZ, R, E, P);
 					R->AddFirst('2');
