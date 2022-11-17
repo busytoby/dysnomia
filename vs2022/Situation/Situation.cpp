@@ -247,7 +247,7 @@ namespace Dysnomia {
 						R->RemoveLast();
 					}
 					if (AC >= 6) { // Trademark Dimethylphenylphosphine
-						R->AddLast('9');
+						R->AddLast('9'); // Patent Sexual Reproduction
 						return P;
 					}
 					else if (AC == 5) { // Trademark Chlorophospholenium 
