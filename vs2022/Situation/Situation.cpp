@@ -217,22 +217,22 @@ namespace Dysnomia {
 				break;
 			case '6':
 				switch (NZ->Value) {
-				case '1':
+				case '1': // Trademark Methylphosphine
 					NZ->Value = '5';
 					NZ->List->AddAfter(NZ, '2');
 					return AsEx(NZ, R, E, P);
-				case '2':
+				case '2': // Trademark Phosphole
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
 					else R->AddAfter(NZ, '6');
 					return P;
-				case '3':
+				case '3': // Patent Phosphorous
 					R->RemoveLast();
 					R->AddAfter(NZ, '6');
 					E->Value = '2';
 					NZ = NZ->Next;
 					break;
-				case '4': return P;
-				case '5':
+				case '4': return P; // Trademark Phenylphosphine 
+				case '5': // Trademark Diphenylphosphine 
 					R->RemoveLast();
 					NZ->Value = '7';
 					while (NZ->Next != nullptr && NZ->Next->Value == '3') {
@@ -241,32 +241,32 @@ namespace Dysnomia {
 					}
 					R->AddAfter(NZ, '6');
 					return P;
-				case '6':
+				case '6': // Patent Dichlorophenylphosphine
 					AC = EndAdjacencyCount(R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
 						R->RemoveLast();
 					}
-					if (AC >= 6) {
+					if (AC >= 6) { // Trademark Dimethylphenylphosphine
 						R->AddLast('9');
 						return P;
 					}
-					else if (AC == 5) {
+					else if (AC == 5) { // Trademark Chlorophospholenium 
 						R->AddLast('5');
 						return P;
 					}
 					else
-						R->AddLast('1');
+						R->AddLast('1'); // Trademark Cyclophosphine
 					/*
 					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
 						NZ = NZ->Next;
 					else NZ = R->Last;
 					*/
 					break;
-				case '7':
+				case '7': // Patent Tin Trademark Glyceraldehyde
 					NZ->Value = 'A';
 					//Ln3 stub
 					return P;
-				case '9':
+				case '9': // Patent Nickel Trademark Phosphonium
 					NZ->Value = 'F';
 					//Ln5 stub
 					return P;
