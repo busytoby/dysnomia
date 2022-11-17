@@ -53,37 +53,39 @@ namespace Dysnomia {
 		// Ln1 Sulfite Performed Only Once As F(Y)
 		R2D = Ln1(L);		
 
+/* Testcase
 		R2D->Clear();
 		LinkedList<char>^ Test = gcnew LinkedList<char>();
+		Test->AddLast('2');
+		Test->AddLast('5');
 		Test->AddLast('1');
-		Test->AddLast('2');
-		Test->AddLast('2');
-		Test->AddLast('2');
 		Test->AddLast('3');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('1');
+		Test->AddLast('6');
+		Test->AddLast('5');
 		Test->AddLast('2');
+		Test->AddLast('6');
+		Test->AddLast('6');
+		Test->AddLast('1');
+		Test->AddLast('1');
 		Test->AddLast('1');
 		Test->AddLast('1');
 		Test->AddLast('4');
-		Test->AddLast('2');
-		Test->AddLast('5');
-		Test->AddLast('2');
-		Test->AddLast('5');
-		Test->AddLast('1');
-		Test->AddLast('1');
-		Test->AddLast('4');
-		Test->AddLast('1');
 		Test->AddLast('2');
 		Test->AddLast('6');
 		Test->AddLast('2');
-		Test->AddLast('6');
-		Test->AddLast('1');
-		Test->AddLast('4');
-		Test->AddLast('1');
-		Test->AddLast('2');
 		Test->AddLast('5');
-		Test->AddLast('7');
+		Test->AddLast('5');
+		Test->AddLast('3');
+		Test->AddLast('3');
+		Test->AddLast('6');
+		Test->AddLast('6');
 		Test->AddLast('2');
 		R2D->AddFirst(Test);
+*/
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
 		while (Ln2(R2D)) continue;
@@ -130,23 +132,30 @@ namespace Dysnomia {
 					return true;
 				P = N;
 			}
-			
+
 			LinkedListNode<char>^ E = P->Value->First;
 			do {
 				switch (E->Value) {
 				case '2':
-					P = Ln2_PL(R, E, P);
-					break;
 				case '4':
 				case '6':
+					P = Ln2_PL(R, E, P);
+					break;
 				default:
 					R->AddLast(E->Value);
 					break;
 				}
 			} while (E = E->Next);
 
-			if (P != W)
+			if (P == W) {
+				W = R2D2->AddAfter(P, R);
+				R2D2->Remove(P);
+				P = W;
+			}
+			else {
 				P = R2D2->AddAfter(P, R);
+				//P = W;
+			}
 
 			R = gcnew LinkedList<char>();
 		} while (P = P->Next);
@@ -194,29 +203,29 @@ namespace Dysnomia {
 				case '3': NZ->Value = '1'; break;
 				case '4':
 					AC = AdjacencyCount(NZ, LEFT);
-					if (AC >= 5) {
-						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
-						R->AddLast('2'); R->AddLast('1');
-					}
-					else if (AC == 4) {
+					if (AC >= 4) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
-						R->AddLast('2'); R->AddLast('3');
+						R->AddLast('2'); R->AddLast('1');
 					}
 					else if (AC == 3) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
-						R->AddLast('1'); R->AddLast('1'); R->AddLast('0');
+						R->AddLast('2'); R->AddLast('3');
+					}
+					else if (AC == 2) {
+						R->RemoveLast(); R->RemoveLast();
+						R->AddLast('1'); R->AddLast('1');
 						P = AsEx(NZ, R, E, P);
 						R->AddFirst('1');
 						return P;
 					}
-					else if (AC == 2) {
-						R->RemoveLast(); R->RemoveLast();
+					else if (AC == 1) {
+						R->RemoveLast();
 						R->AddLast('1');
 						E->Value = '2';
 					}
 					break;
 				case '5':
-					R->AddLast('2'); R->AddLast('0');
+					R->AddLast('2');
 					P = AsEx(NZ, R, E, P);
 					R->AddFirst('2');
 					return P;
@@ -238,7 +247,7 @@ namespace Dysnomia {
 				switch (NZ->Value) {
 				case '1':
 					NZ->Value = '5';
-					R->AddLast('2'); R->AddLast('0');
+					R->AddLast('2'); 
 					P = AsEx(NZ, R, E, P);
 					R->AddFirst('2');
 					return P;
@@ -249,8 +258,9 @@ namespace Dysnomia {
 				case '3':
 					R->RemoveLast();
 					R->AddAfter(NZ, '6');
-					R->AddAfter(NZ, '2');
-					return P;
+					E->Value = '2';
+					NZ = NZ->Next;
+					break;
 				case '4': return P;
 				case '5':
 					R->RemoveLast();
@@ -263,21 +273,20 @@ namespace Dysnomia {
 					return P;
 				case '6':
 					AC = AdjacencyCount(NZ, LEFT);
-					if (AC >= 5)
-						for (int i = 0; i < AC; i++) {
-							R->RemoveLast();
-						}
-					else if (AC >= 7) {
+					R->RemoveLast();
+					for (int i = 0; i < AC && i < 7; i++) {
+						R->RemoveLast();
+					}
+					if (AC >= 6) {
 						R->AddLast('9');
 						return P;
 					}
-					else if (AC == 6) {
+					else if (AC == 5) {
 						R->AddLast('5');
 						return P;
 					}
-					else if (AC <= 5) {
+					else
 						R->AddLast('1');
-					}
 					break;
 				case '7':
 					NZ->Value = 'A';
