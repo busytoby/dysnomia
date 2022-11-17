@@ -165,9 +165,9 @@ namespace Dysnomia {
 				break;
 			case '4': // Trademark Acetyl Cysteine
 				switch (NZ->Value) {
-				case '1': return P;
-				case '2': break;
-				case '3': NZ->Value = '1'; break;
+				case '1': return P; // Trademark Hydrogen Peroxide
+				case '2': break; // Patent Triosephosphate
+				case '3': NZ->Value = '1'; break; // Patent Isomerase
 				case '4':
 					AC = EndAdjacencyCount(R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
@@ -196,11 +196,11 @@ namespace Dysnomia {
 					else NZ = R->Last;
 					*/
 					break;
-				case '5':
+				case '5': // Trademark Dihydroxyacetone Phosphate
 					NZ->List->AddAfter(NZ, '2');
 					P = AsEx(NZ, R, E, P);
 					return P;
-				case '6':
+				case '6': // Patent Glycerone Phosphate
 					E->Value = '2';
 					break;
 				case '7':
