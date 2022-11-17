@@ -173,19 +173,19 @@ namespace Dysnomia {
 					for (int i = 0; i < AC && i < 7; i++) {
 						R->RemoveLast();
 					}
-					if (AC >= 4) {
+					if (AC >= 4) { // Trademark GAP
 						R->AddLast('2'); R->AddLast('1');
 					}
 					else if (AC == 3) { // Trademark Glutathione
 						R->AddLast('2'); R->AddLast('3');
 					}
-					else if (AC == 2) {
+					else if (AC == 2) { // Trademark G3P
 						R->AddLast('1'); R->AddLast('1');
 						P = AsEx(NZ, R, E, P);
 						R->AddFirst('1');
 						return P;
 					}
-					else if (AC == 1) {
+					else if (AC == 1) { // Trademark GALP
 						R->AddLast('1');
 						NZ = R->Last;
 						E->Value = '2';
@@ -196,18 +196,18 @@ namespace Dysnomia {
 					else NZ = R->Last;
 					*/
 					break;
-				case '5': // Trademark Dihydroxyacetone Phosphate
+				case '5': // Trademark Glycerone Phosphate
 					NZ->List->AddAfter(NZ, '2');
 					P = AsEx(NZ, R, E, P);
 					return P;
-				case '6': // Patent Glycerone Phosphate
+				case '6': // Patent Dihydroxyacetone Phosphate
 					E->Value = '2';
 					break;
-				case '7':
+				case '7': // Trademark PGAL
 					NZ->Value = '5';
 					NZ->List->AddAfter(NZ, '2');
 					return AsEx(NZ, R, E, P);
-				case '9':
+				case '9': // Trademark TP
 					NZ->Value = 'D';
 					//Ln4 stub
 					return P;
