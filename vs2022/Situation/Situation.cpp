@@ -53,6 +53,38 @@ namespace Dysnomia {
 		// Ln1 Sulfite Performed Only Once As F(Y)
 		R2D = Ln1(L);		
 
+		R2D->Clear();
+		LinkedList<char>^ Test = gcnew LinkedList<char>();
+		Test->AddLast('1');
+		Test->AddLast('2');
+		Test->AddLast('2');
+		Test->AddLast('2');
+		Test->AddLast('3');
+		Test->AddLast('2');
+		Test->AddLast('1');
+		Test->AddLast('1');
+		Test->AddLast('4');
+		Test->AddLast('2');
+		Test->AddLast('5');
+		Test->AddLast('2');
+		Test->AddLast('5');
+		Test->AddLast('1');
+		Test->AddLast('1');
+		Test->AddLast('4');
+		Test->AddLast('1');
+		Test->AddLast('2');
+		Test->AddLast('6');
+		Test->AddLast('2');
+		Test->AddLast('6');
+		Test->AddLast('1');
+		Test->AddLast('4');
+		Test->AddLast('1');
+		Test->AddLast('2');
+		Test->AddLast('5');
+		Test->AddLast('7');
+		Test->AddLast('2');
+		R2D->AddFirst(Test);
+
 		// Ln2 Sulfide Passes Indefinitely As F(U)
 		while (Ln2(R2D)) continue;
 
@@ -89,6 +121,7 @@ namespace Dysnomia {
 		LinkedListNode<LinkedList<char>^>^ N;
 
 		do {
+			W = P;
 			while (P->Value->Count == 0) {
 				R->AddLast('7');
 				N = P->Next;
@@ -102,26 +135,18 @@ namespace Dysnomia {
 			do {
 				switch (E->Value) {
 				case '2':
-				case '4':
-				case '6':
 					P = Ln2_PL(R, E, P);
 					break;
+				case '4':
+				case '6':
 				default:
 					R->AddLast(E->Value);
 					break;
 				}
 			} while (E = E->Next);
 
-			if (P == R2D2->First) {
-				R2D2->Remove(P);
-				R2D2->AddFirst(R);
-				P = R2D2->First;
-			}
-			else {
-				W = P->Previous;
-				R2D2->Remove(P);
-				P = R2D2->AddAfter(W, R);
-			}
+			if (P != W)
+				P = R2D2->AddAfter(P, R);
 
 			R = gcnew LinkedList<char>();
 		} while (P = P->Next);
@@ -137,8 +162,8 @@ namespace Dysnomia {
 		R->AddLast(E->Value);
 
 		LinkedListNode<LinkedList<char>^>^ P1;
-		LinkedList<char>^ D2;
-		int AC, temp;
+
+		int AC;
 
 		do {
 			switch (E->Value) {
@@ -149,15 +174,16 @@ namespace Dysnomia {
 				case '3': NZ->Value = '4'; return P;
 				case '4': break;
 				case '5':
-					return AsEx(R, E, P);
+					P = AsEx(NZ, R, E, P);
+					R->AddFirst('2');
+					return P;
 				case '6':
 					if (NZ == R->Last->Previous) R->RemoveLast();
 					R->RemoveLast();
-					break;
+					return P;
 				case '7': NZ->Value = '9'; return P;
 				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P;
 				default:
-					temp = 0;
 					break;
 				}
 				break;
@@ -171,7 +197,6 @@ namespace Dysnomia {
 					if (AC >= 5) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
 						R->AddLast('2'); R->AddLast('1');
-						break;
 					}
 					else if (AC == 4) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
@@ -179,9 +204,10 @@ namespace Dysnomia {
 					}
 					else if (AC == 3) {
 						R->RemoveLast(); R->RemoveLast(); R->RemoveLast();
-						R->AddLast('1'); R->AddLast('1'); R->AddLast('1');
-						E->List->AddBefore(E, '1');
-						return AsEx(R, E, P);
+						R->AddLast('1'); R->AddLast('1'); R->AddLast('0');
+						P = AsEx(NZ, R, E, P);
+						R->AddFirst('1');
+						return P;
 					}
 					else if (AC == 2) {
 						R->RemoveLast(); R->RemoveLast();
@@ -190,19 +216,21 @@ namespace Dysnomia {
 					}
 					break;
 				case '5':
-					return AsEx(R, E, P);
+					R->AddLast('2'); R->AddLast('0');
+					P = AsEx(NZ, R, E, P);
+					R->AddFirst('2');
+					return P;
 				case '6':
 					E->Value = '2';
 					break;
 				case '7':
 					NZ->Value = '5';
-					return AsEx(R, E, P);
+					return AsEx(NZ, R, E, P);
 				case '9':
 					NZ->Value = 'D';
 					//Ln4 stub
 					return P;
 				default:
-					temp = 99;
 					break;
 				}
 				break;
@@ -210,8 +238,10 @@ namespace Dysnomia {
 				switch (NZ->Value) {
 				case '1':
 					NZ->Value = '5';
-					E = E->List->AddBefore(E, '2');
-					return AsEx(R, E, P);
+					R->AddLast('2'); R->AddLast('0');
+					P = AsEx(NZ, R, E, P);
+					R->AddFirst('2');
+					return P;
 				case '2':
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
 					else R->AddAfter(NZ, '6');
@@ -237,7 +267,7 @@ namespace Dysnomia {
 						for (int i = 0; i < AC; i++) {
 							R->RemoveLast();
 						}
-					if (AC >= 7) {
+					else if (AC >= 7) {
 						R->AddLast('9');
 						return P;
 					}
@@ -245,10 +275,10 @@ namespace Dysnomia {
 						R->AddLast('5');
 						return P;
 					}
-					else if (AC == 5) {
+					else if (AC <= 5) {
 						R->AddLast('1');
-						break;
 					}
+					break;
 				case '7':
 					NZ->Value = 'A';
 					//Ln3 stub
@@ -258,26 +288,29 @@ namespace Dysnomia {
 					//Ln5 stub
 					return P;
 				default:
-					temp = 99;
 					break;
 				}
+			}
+			if (NZ->List == nullptr) {
+				int a = 99;
 			}
 		} while (NZ = NZ->Previous);
 
 		return P;
 	}
 
-	LinkedListNode<LinkedList<char>^>^ Situation::AsEx(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+	LinkedListNode<LinkedList<char>^>^ Situation::AsEx(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		LinkedListNode<LinkedList<char>^>^ P1;
-		LinkedList<char>^ D = gcnew LinkedList<char>(R);
-		R->Clear();
-		D->RemoveLast();
+		LinkedList<char>^ D = gcnew LinkedList<char>();
+		LinkedListNode<char>^ L = T;
+		do D->AddFirst(L->Value); while (L = L->Previous);
 		P1 = P->List->AddBefore(P, D);
 		D = gcnew LinkedList<char>();
-		do {
-			D->AddLast(E->Value);
-		} while (E = E->Next);
+		while (T = T->Next) {
+			D->AddLast(T->Value);
+		} 
 		P1->List->Remove(P);
+		R->Clear();
 		return(P1->List->AddAfter(P1, D));
 	}
 
