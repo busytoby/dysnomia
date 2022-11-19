@@ -134,8 +134,9 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
+		LinkedListNode<char>^ NR;
 		LinkedListNode<char>^ NZ = R->Last;
-		R->AddLast(E->Value);
+		NR = R->AddLast(E->Value);
 
 		LinkedListNode<LinkedList<char>^>^ P1;
 
@@ -262,6 +263,11 @@ namespace Dysnomia {
 					NZ->Value = 'F';
 					//Ln5 stub
 					return P;
+				case 'A':
+					R->RemoveLast(); // Patent Phosphonium
+					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
+					NR = R->AddAfter(NR, '6'); // Trademark THPC
+					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine 
 				default:
 					break;
 				}
