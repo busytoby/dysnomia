@@ -6,16 +6,21 @@ namespace Dysnomia {
 	Perception::Perception() {
 		BigInteger Carbenium = Norbornylene.BigDetermine("Norbornylene");
 		BigInteger Carbonium = Norbornylene.BigDetermine("Norcamphene");
+
 		N = gcnew Situation();
 		Bridge(N, Carbenium);
+
 		BigInteger Ligand = Norbornylene.BigDetermine("Hello Universe");
+		S.Ligand = Ligand;
+		N->S.Ligand = Carbonium;
 		Avail(N, Ligand, Carbonium);
 	}
 
+	// uncalled stub
 	Perception::Perception(Situation^ V, BigInteger Ligand, BigInteger Carbenium, BigInteger Carbonium) {
-		//Bridge(V, Carbenium);
+		Bridge(V, Carbenium);
 		S.Ligand = Ligand;
-		N->S.Ligand = Carbonium;
+		V->S.Ligand = Carbonium;
 	}
 
 	Situation Perception::Bridge(Situation^ R, BigInteger Carbenium) {

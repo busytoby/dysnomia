@@ -7,11 +7,17 @@ namespace Dysnomia {
 	public ref class Valence
 	{
 	public:
-		BigInteger H;
-		BigInteger T;
-		BigInteger S;
-		BigInteger O;
-		BigInteger P;
+		BigInteger R; // Foundation
+		BigInteger T; // Element
+		BigInteger P; // Dynamo
+		BigInteger Y; // Manifold
+		BigInteger O; // Ring
+		BigInteger E; // Barn
+
+/*
+Ordered Pairs:
+		BigInteger Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn;
+*/
 
 		Valence();
 	};

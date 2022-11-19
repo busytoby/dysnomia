@@ -5,11 +5,14 @@ using namespace System::Collections::Generic;
 
 
 namespace Dysnomia {
+	class Perception;
+
 	public ref class Ion
 	{
 	public:
 		Valence V;
 		Dynamic^ P;
+		Perception* E;
 
 		Ion();
 		Ion(Dynamic);

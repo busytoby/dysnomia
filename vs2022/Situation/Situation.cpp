@@ -134,11 +134,10 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
+		Ion^ I;
 		LinkedListNode<char>^ NR;
 		LinkedListNode<char>^ NZ = R->Last;
 		NR = R->AddLast(E->Value);
-
-		LinkedListNode<LinkedList<char>^>^ P1;
 
 		int AC;
 
