@@ -268,11 +268,13 @@ namespace Dysnomia {
 					P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox
 					// Patent Confirmation
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
+					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
 					NR = R->AddAfter(NR, '6'); // Trademark THPC
 					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine (** Up)
 				case 'F': // Patent Arrow Pushing Mechanism (** Down)
 					R->RemoveLast(); // Patent Phosphine Gas
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
+					NR = R->AddAfter(NR, '6'); // Trademark THPC
 					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
 					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxyformyl)phosphine (** Down)
 				default:
