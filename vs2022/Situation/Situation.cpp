@@ -261,8 +261,9 @@ namespace Dysnomia {
 					return Deprotonate(NZ, R, E, P); // Patent Birth
 				case '9': // Patent Nickel Trademark Phosphonium Phosphate
 					NZ->Value = 'F';
-					//Ln5 stub
-					return P;
+					R->AddLast('6'); // Trademark THPC
+					R->AddLast('6'); // Trademark Formaldehyde
+					return P; // Patent Sound
 				case 'A': // Patent Arrow Pushing Mechanism (** Up) Manganese
 					R->RemoveLast(); // Patent Phosphonium
 					P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox Patent Confirmation
