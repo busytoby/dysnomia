@@ -263,13 +263,18 @@ namespace Dysnomia {
 					NZ->Value = 'F';
 					//Ln5 stub
 					return P;
-				case 'A': // Patent Arrow Pushing Mechanism
+				case 'A': // Patent Arrow Pushing Mechanism (** Up)
 					R->RemoveLast(); // Patent Phosphonium
 					P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox
 					// Patent Confirmation
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
 					NR = R->AddAfter(NR, '6'); // Trademark THPC
-					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine 
+					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine (** Up)
+				case 'F': // Patent Arrow Pushing Mechanism (** Down)
+					R->RemoveLast(); // Patent Phosphine Gas
+					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
+					NR = R->AddAfter(NR, '6'); // Trademark THPC
+					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine (** Down)
 				default:
 					break;
 				}
