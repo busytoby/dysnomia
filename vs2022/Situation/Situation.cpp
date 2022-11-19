@@ -195,7 +195,7 @@ namespace Dysnomia {
 					NZ->List->AddAfter(NZ, '2');
 					P = Deprotonate(NZ, R, E, P);
 					return P;
-				case '6': // Patent Dihydroxyacetone Phosphate
+				case '6': // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					E->Value = '2';
 					break;
 				case '7': // Trademark PGAL
@@ -203,7 +203,7 @@ namespace Dysnomia {
 					NZ->List->AddAfter(NZ, '2');
 					return Deprotonate(NZ, R, E, P);
 				case '9': // Trademark TP
-					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate
+					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					return P; // Patent TIM
 				case 'A':
 					NZ->Value = '6';
