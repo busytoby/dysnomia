@@ -206,7 +206,7 @@ namespace Dysnomia {
 					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					return P; // Patent TIM
 				case 'A':
-					NZ->Value = '6';
+					NZ->Value = '6'; // Patent Apoptosis
 					return P; // Patent Glycerol Dehydrogenase
 				default:
 					break;
