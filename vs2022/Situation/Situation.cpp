@@ -226,7 +226,7 @@ namespace Dysnomia {
 					R->RemoveLast();
 					R->AddAfter(NZ, '6');
 					E->Value = '2';
-					NZ = NZ->Next;
+					NZ = NZ->Next; // Patent Right
 					break;
 				case '4': return P; // Trademark Phenylphosphine 
 				case '5': // Trademark Diphenylphosphine 
