@@ -12,9 +12,9 @@ namespace Dysnomia {
 	Ion::Ion(Dynamic Boson) {
         P = gcnew Dynamic(Boson);
 
-        V.R = BigInteger::ModPow(P->Identity, P->Barn, Math::Prime);
-        V.T = BigInteger::ModPow(V.R, P->Foundation, Math::CatalanPrime); // Catalan Prime Magnetic Paradox
-        V.P = BigInteger::ModPow(P->Dynamo, V.T, Math::CatalanPrime);
+        V.R = BigInteger::ModPow(P->Identity, P->Barn, Math::Prime); // Patent Lepton
+        V.T = BigInteger::ModPow(V.R, P->Foundation, Math::CatalanPrime); // Catalan Prime Magnetic Paradox Tau
+        V.P = BigInteger::ModPow(P->Dynamo, V.T, Math::CatalanPrime); // Patent Muon
         V.Y = BigInteger::ModPow(V.R, V.T, Math::CatalanPrime); // Patent Electron
 	}
 
