@@ -265,6 +265,7 @@ namespace Dysnomia {
 					return P;
 				case 'A': // Patent Arrow Pushing Mechanism
 					R->RemoveLast(); // Patent Phosphonium
+					P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
 					NR = R->AddAfter(NR, '6'); // Trademark THPC
 					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine 
