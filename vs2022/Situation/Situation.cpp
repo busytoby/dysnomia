@@ -273,8 +273,8 @@ namespace Dysnomia {
 				case 'F': // Patent Arrow Pushing Mechanism (** Down)
 					R->RemoveLast(); // Patent Phosphine Gas
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
-					NR = R->AddAfter(NR, '6'); // Trademark THPC
-					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine (** Down)
+					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
+					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxyformyl)phosphine (** Down)
 				default:
 					break;
 				}
