@@ -11,8 +11,8 @@ namespace Dysnomia {
 
 	}
 
-	BigInteger Situation::Avail(BigInteger Wave) {
-		BigInteger Ligand = S.Boson.Avail(Wave);
+	BigInteger Situation::Avail(BigInteger Cation) {
+		BigInteger Ligand = S.Boson.Avail(Cation);
 		return Ligand;
 	}
 
@@ -286,6 +286,15 @@ namespace Dysnomia {
 					R->AddAfter(NZ, '2'); // Monoxide
 					R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
 					break; // Patent Respiration
+				case '2': 
+					/*
+					Orbital O;
+					O.Ligand = S.Ligand;
+					O.Coordinate = 0;
+					*/
+					//Perception P = new Perception()
+
+					break;
 				default:
 					break;
 				}

@@ -150,6 +150,9 @@
     <ProjectReference Include="..\Ion\Ion.vcxproj">
       <Project>{9c11f74f-5142-42b1-880a-f6753831034e}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Math\Math.vcxproj">
+      <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Orbital\Orbital.vcxproj">
       <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
     </ProjectReference>
