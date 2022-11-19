@@ -230,14 +230,14 @@ namespace Dysnomia {
 					break;
 				case '4': return P; // Trademark Phenylphosphine 
 				case '5': // Trademark Diphenylphosphine 
-					R->RemoveLast();
-					NZ->Value = '7';
+					R->RemoveLast(); // Patent DHAP
+					NZ->Value = '7'; // Patent Sugar Trademark Triose
 					while (NZ->Next != nullptr && NZ->Next->Value == '3') {
 						NZ->Next->Value = '4';
 						NZ = NZ->Next;
-					}
-					R->AddAfter(NZ, '6');
-					return P;
+					} // Patent GAP
+					R->AddAfter(NZ, '6'); // Trademark Triose Phosphate Isomerate 
+					return P; // Patent Enzyme 
 				case '6': // Patent Dichlorophenylphosphine
 					AC = EndAdjacencyCount(R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
