@@ -199,9 +199,9 @@ namespace Dysnomia {
 					E->Value = '2';
 					break;
 				case '7': // Trademark PGAL
-					NZ->Value = '5';
-					NZ->List->AddAfter(NZ, '2');
-					return Deprotonate(NZ, R, E, P);
+					NZ->Value = '5'; // Trademark Hydronium
+					NZ->List->AddAfter(NZ, '2'); // Patent Conjugate Acid
+					return Deprotonate(NZ, R, E, P); // Patent Acid-Base Reaction
 				case '9': // Trademark TP
 					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					return P; // Patent TIM
