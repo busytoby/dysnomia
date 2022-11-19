@@ -192,11 +192,11 @@ namespace Dysnomia {
 					}
 					break;
 				case '5': // Trademark Glycerone Phosphate
-					NZ->List->AddAfter(NZ, '2');
-					P = Deprotonate(NZ, R, E, P);
-					return P;
+					NZ->List->AddAfter(NZ, '2'); // Patent Acid Dissociation Constant
+					P = Deprotonate(NZ, R, E, P); // Patent Titration
+					return P; // Patent Analyte
 				case '6': // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
-					E->Value = '2';
+					E->Value = '2'; // Patent Antibody
 					break;
 				case '7': // Trademark PGAL
 					NZ->Value = '5'; // Trademark Hydronium
