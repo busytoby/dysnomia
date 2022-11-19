@@ -203,7 +203,7 @@ namespace Dysnomia {
 					NZ->List->AddAfter(NZ, '2');
 					return Deprotonate(NZ, R, E, P);
 				case '9': // Trademark TP
-					NZ->Value = 'D';
+					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate
 					return P; // Patent TIM
 				case 'A':
 					NZ->Value = '6';
