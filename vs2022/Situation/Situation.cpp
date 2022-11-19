@@ -263,7 +263,7 @@ namespace Dysnomia {
 					NZ->Value = 'F';
 					//Ln5 stub
 					return P;
-				case 'A':
+				case 'A': // Patent Arrow Pushing Mechanism
 					R->RemoveLast(); // Patent Phosphonium
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium
 					NR = R->AddAfter(NR, '6'); // Trademark THPC
