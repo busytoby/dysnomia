@@ -253,16 +253,11 @@ namespace Dysnomia {
 					}
 					else
 						R->AddLast('1'); // Trademark Cyclophosphine
-					/*
-					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
-						NZ = NZ->Next;
-					else NZ = R->Last;
-					*/
 					break;
 				case '7': // Patent Tin Trademark Glyceraldehyde
 					NZ->Value = 'A';
-					//Ln3 stub
-					return P;
+					NZ->List->AddAfter(NZ, 'A');
+					return Deprotonate(NZ, R, E, P); // Patent Birth
 				case '9': // Patent Nickel Trademark Phosphonium Phosphate
 					NZ->Value = 'F';
 					//Ln5 stub
