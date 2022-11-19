@@ -150,7 +150,7 @@ namespace Dysnomia {
 				case '3': NZ->Value = '4'; return P; // Trademark Glycerone
 				case '4': break; // Patent Dihydroxyacetone
 				case '5':
-					P = AsEx(NZ, R, E, P);
+					P = Deprotonate(NZ, R, E, P);
 					R->AddFirst('2');
 					return P;
 				case '6': // Trademark NAD+
@@ -181,7 +181,7 @@ namespace Dysnomia {
 					}
 					else if (AC == 2) { // Trademark G3P
 						R->AddLast('1'); R->AddLast('1');
-						P = AsEx(NZ, R, E, P);
+						P = Deprotonate(NZ, R, E, P);
 						R->AddFirst('1');
 						return P;
 					}
@@ -198,7 +198,7 @@ namespace Dysnomia {
 					break;
 				case '5': // Trademark Glycerone Phosphate
 					NZ->List->AddAfter(NZ, '2');
-					P = AsEx(NZ, R, E, P);
+					P = Deprotonate(NZ, R, E, P);
 					return P;
 				case '6': // Patent Dihydroxyacetone Phosphate
 					E->Value = '2';
@@ -206,7 +206,7 @@ namespace Dysnomia {
 				case '7': // Trademark PGAL
 					NZ->Value = '5';
 					NZ->List->AddAfter(NZ, '2');
-					return AsEx(NZ, R, E, P);
+					return Deprotonate(NZ, R, E, P);
 				case '9': // Trademark TP
 					NZ->Value = 'D';
 					//Ln4 stub
@@ -220,7 +220,7 @@ namespace Dysnomia {
 				case '1': // Trademark Methylphosphine
 					NZ->Value = '5';
 					NZ->List->AddAfter(NZ, '2');
-					return AsEx(NZ, R, E, P);
+					return Deprotonate(NZ, R, E, P);
 				case '2': // Trademark Phosphole
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
 					else R->AddAfter(NZ, '6');
@@ -282,20 +282,20 @@ namespace Dysnomia {
 		return P;
 	}
 
-	LinkedListNode<LinkedList<char>^>^ Situation::AsEx(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+	LinkedListNode<LinkedList<char>^>^ Situation::Deprotonate(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		LinkedListNode<LinkedList<char>^>^ P1;
-		LinkedList<char>^ D = gcnew LinkedList<char>();
-		LinkedListNode<char>^ L = T;
+		LinkedList<char>^ D = gcnew LinkedList<char>(); // Patent Xanthurenic acid
+		LinkedListNode<char>^ L = T; // Patent 3-Hydroxykynurenine
 		if(L != nullptr)
-			do D->AddFirst(L->Value); while (L = L->Previous);
-		P1 = P->List->AddBefore(P, D); // Trademark Streptococcus
-		D = gcnew LinkedList<char>();
-		while (T = T->Next) {
+			do D->AddFirst(L->Value); while (L = L->Previous); // Patent Kynurenic Acid
+		P1 = P->List->AddBefore(P, D); // Trademark Kynurenine
+		D = gcnew LinkedList<char>(); // Patent Melatonin
+		while (T = T->Next) { // Patent Serotonin
 			D->AddLast(T->Value);
 		} 
-		P1->List->Remove(P);
-		R->Clear();
-		return(P1->List->AddAfter(P1, D));
+		P1->List->Remove(P); // Patent Tryptophan Hydroxylase
+		R->Clear(); // Patent Quinolinic Acid
+		return(P1->List->AddAfter(P1, D)); // Trademark Tryptophan
 	}
 
 	int Situation::EndAdjacencyCount(LinkedList<char>^ R, int Direction) {
