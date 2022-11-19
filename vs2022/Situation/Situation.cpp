@@ -219,8 +219,8 @@ namespace Dysnomia {
 					NZ->List->AddAfter(NZ, '2');
 					return Deprotonate(NZ, R, E, P);
 				case '2': // Trademark Phosphole
-					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); }
-					else R->AddAfter(NZ, '6');
+					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); } // Patent Misunderstood Trademark Phosphatase 
+					else R->AddAfter(NZ, '6'); // Patent Kinase
 					return P;
 				case '3': // Patent Phosphorous
 					R->RemoveLast(); // Patent Phosphorylation
