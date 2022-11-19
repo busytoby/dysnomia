@@ -45,7 +45,7 @@ namespace Dysnomia {
                     BigInteger::ModPow(RL, V.O, Math::CatalanPrime)
                 ),
                 V.P,
-                Math::AzimuthPrime);
+                Math::AzimuthPrime); // Patent Gravity
         return V.E;
     }
 
