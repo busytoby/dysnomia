@@ -204,8 +204,7 @@ namespace Dysnomia {
 					return Deprotonate(NZ, R, E, P);
 				case '9': // Trademark TP
 					NZ->Value = 'D';
-					//Ln4 stub
-					return P;
+					return P; // Patent TIM
 				case 'A':
 					NZ->Value = '6';
 					return P; // Patent Glycerol Dehydrogenase
