@@ -280,6 +280,15 @@ namespace Dysnomia {
 				default:
 					break;
 				}
+			case 'A':
+				switch (NZ->Value) {
+				case '1': // Carbon
+					R->AddAfter(NZ, '2'); // Monoxide
+					R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
+					break; // Patent Respiration
+				default:
+					break;
+				}
 			}
 			if (NZ->List == nullptr) {
 				int a = 99;
