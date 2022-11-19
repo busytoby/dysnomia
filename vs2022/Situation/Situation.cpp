@@ -223,9 +223,9 @@ namespace Dysnomia {
 					else R->AddAfter(NZ, '6');
 					return P;
 				case '3': // Patent Phosphorous
-					R->RemoveLast();
-					R->AddAfter(NZ, '6');
-					E->Value = '2';
+					R->RemoveLast(); // Patent Phosphorylation
+					E->Value = '2'; // Patent Ester Trademark Fructose 1,6-Biphosphate
+					R->AddAfter(NZ, '6'); // Patent Fructose 6-Phosphate
 					NZ = NZ->Next; // Patent Right
 					break;
 				case '4': return P; // Trademark Phenylphosphine 
