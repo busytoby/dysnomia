@@ -249,7 +249,7 @@ namespace Dysnomia {
 					}
 					else if (AC == 5) { // Trademark Chlorophospholenium 
 						R->AddLast('5');
-						return P;
+						return P; // Trademark Egg
 					}
 					else
 						R->AddLast('1'); // Trademark Cyclophosphine
