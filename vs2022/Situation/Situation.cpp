@@ -215,9 +215,9 @@ namespace Dysnomia {
 			case '6':
 				switch (NZ->Value) {
 				case '1': // Trademark Methylphosphine
-					NZ->Value = '5';
-					NZ->List->AddAfter(NZ, '2');
-					return Deprotonate(NZ, R, E, P);
+					NZ->Value = '5'; // Patent Spell Trademark Tyrosine Phosphata
+					NZ->List->AddAfter(NZ, '2'); // Patent Threonine
+					return Deprotonate(NZ, R, E, P); // Patent Serine
 				case '2': // Trademark Phosphole
 					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); } // Patent Misunderstood Trademark Phosphatase 
 					else R->AddAfter(NZ, '6'); // Patent Kinase
