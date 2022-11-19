@@ -156,9 +156,9 @@ namespace Dysnomia {
 				case '6': // Trademark NAD+
 					if (NZ == R->Last->Previous) R->RemoveLast();
 					R->RemoveLast();
-					return P;
+					return P; // Patent NADP+
 				case '7': NZ->Value = '9'; return P; // Trademark NADP
-				case '9': NZ->Value = 'A'; /* Ln3 Stub */ return P; // Trademark Glyceraldehyde
+				case '9': NZ->Value = 'A'; return P; // Trademark Glyceraldehyde
 				default:
 					break;
 				}
@@ -190,11 +190,6 @@ namespace Dysnomia {
 						NZ = R->Last;
 						E->Value = '2';
 					}
-					/*
-					if (NZ != nullptr && NZ->List != nullptr && NZ != NZ->List->Last)
-						NZ = NZ->Next;
-					else NZ = R->Last;
-					*/
 					break;
 				case '5': // Trademark Glycerone Phosphate
 					NZ->List->AddAfter(NZ, '2');
@@ -211,6 +206,9 @@ namespace Dysnomia {
 					NZ->Value = 'D';
 					//Ln4 stub
 					return P;
+				case 'A':
+					NZ->Value = '6';
+					return P; // Patent Glycerol Dehydrogenase
 				default:
 					break;
 				}
