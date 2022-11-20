@@ -6,15 +6,17 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	public ref class Valence
 	{
-	public:
-		BigInteger R; // Foundation
-		BigInteger T; // Element
-		BigInteger P; // Dynamo
-		BigInteger Y; // Manifold
-		BigInteger O; // Ring
-		BigInteger E; // Barn
+	private:
 
-		BigInteger X; // Gravital Prime
+	public:
+		BigInteger Foundation; // Foundation
+		BigInteger Element; // Element
+		BigInteger Dynamo; // Dynamo
+		BigInteger Manifold; // Manifold
+		BigInteger Ring; // Ring
+		BigInteger Barn; // Barn
+
+		BigInteger Prime; // Gravital Prime
 
 /*
 Ordered Pairs:

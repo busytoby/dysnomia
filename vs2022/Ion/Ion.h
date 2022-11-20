@@ -1,23 +1,20 @@
 #pragma once
+
 using namespace System;
 using namespace System::Numerics;
 using namespace System::Collections::Generic;
 
 
 namespace Dysnomia {
-	class Perception;
-
 	public ref class Ion
 	{
 	public:
-		Valence V;
-		Dynamic^ P;
-		Perception* E;
+		Dynamic^ R;
+		Valence Ir;
 
-		Ion();
 		Ion(Dynamic);
-		void Avail(BigInteger);
-		BigInteger Hydrate();
-		BigInteger Hydrate(BigInteger);
+		void Nitrate(BigInteger);
+		Ion^ Push();
+		Ion^ Push(BigInteger);
 	};
 }

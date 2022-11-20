@@ -23,7 +23,7 @@ namespace Dysnomia {
 		V->S.Ligand = Carbonium;
 	}
 
-	Situation Perception::Bridge(Situation^ R, BigInteger Carbenium) {
+	Situation^ Perception::Bridge(Situation^ R, BigInteger Carbenium) {
 		S.Ligand = Carbenium;
 		BigInteger Ligand = S.Boson.Avail(S.Ligand);
 		BigInteger Donor = R->Avail(S.Ligand);
@@ -40,6 +40,8 @@ namespace Dysnomia {
 		R->Adduct(S.Boson.Dynamo);
 
 		if (!R->S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
+
+		return R;
 	}
 
 	void Perception::Avail(Situation^ R, BigInteger Ligand, BigInteger Carbonium) { // Proof P=NP

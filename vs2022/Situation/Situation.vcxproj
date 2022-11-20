@@ -157,6 +157,9 @@
     <ProjectReference Include="..\Orbital\Orbital.vcxproj">
       <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Valence\Valence.vcxproj">
+      <Project>{d67664eb-2bf2-4ef6-8195-ef66f9afde6d}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

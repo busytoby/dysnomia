@@ -14,7 +14,7 @@ namespace Dysnomia {
 
 	public:
 		Orbital S;
-		Ion^ I;
+		Orbital N;
 
 		Situation();
 		Situation::Situation(const Situation%);

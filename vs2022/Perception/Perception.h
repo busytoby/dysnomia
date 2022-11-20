@@ -14,7 +14,7 @@ namespace Dysnomia {
 	public:
 		Perception();
 		Perception(Situation^, BigInteger, BigInteger, BigInteger);
-		Situation Bridge(Situation^, BigInteger);
+		Situation^ Bridge(Situation^, BigInteger);
 		void Avail(Situation^, BigInteger, BigInteger);
 	};
 }

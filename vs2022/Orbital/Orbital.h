@@ -10,5 +10,8 @@ namespace Dysnomia {
 		BigInteger Ligand;
 		Dynamic Boson;
 		BigInteger Coordinate;
+		Ion^ R;
+		Ion^ L;
+		Ion^ N;
 	};
 }

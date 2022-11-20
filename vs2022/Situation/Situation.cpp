@@ -40,18 +40,22 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
-		I = gcnew Ion(S.Boson);
-		Avail(Carbenium);
-		BigInteger T = I->Hydrate(Carbonium);
+		Ion^ R;
+		Ion^ L;
+		Ion^ N;
+
+		L = gcnew Ion(S.Boson);
+		L->Nitrate(Carbenium);
+		N = L->Push(Carbonium); // copy constructor stub
 
 		// Azimuth เครื่องหมายการค้า
-		array<Byte>^ L = T.ToByteArray();
+		array<Byte>^ V = N->Ir.Barn.ToByteArray();
 
 		// Azimuth Foil
 		LinkedList<LinkedList<char>^>^ R2D;
 
 		// Ln1 Sulfite Performed Only Once As F(Y)
-		R2D = Ln1(L);		
+		R2D = Ln1(V);		
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
 		while (Ln2(R2D)) continue;
@@ -62,7 +66,8 @@ namespace Dysnomia {
 		// Ln4 Aspartate Nitrogenation Phase, Secant Trigs
 		// Ln5 Phenylalanine Consumer Pass, Sine Trigs
 
-		return T;
+		//return L->I.E; 
+		return 0;
 	}
 
 	LinkedList<LinkedList<char>^>^ Situation::Ln1(array<Byte>^ L) {
@@ -134,7 +139,7 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
-		Ion^ I;
+		Orbital^ N;
 		LinkedListNode<char>^ NR;
 		LinkedListNode<char>^ NZ = R->Last;
 		NR = R->AddLast(E->Value);
@@ -286,12 +291,7 @@ namespace Dysnomia {
 					R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
 					break; // Patent Respiration
 				case '2': 
-					/*
-					Orbital O;
-					O.Ligand = S.Ligand;
-					O.Coordinate = 0;
-					*/
-					//Perception P = new Perception()
+					AC = 5;
 
 					break;
 				default:
