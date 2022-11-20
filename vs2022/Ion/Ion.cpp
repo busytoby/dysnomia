@@ -46,7 +46,7 @@ namespace Dysnomia {
                 ),
                 V.P,
                 Math::AzimuthPrime); // Patent Gravity
-        return V.E;
+        return V.E; // Patent Graviton
     }
 
 }
