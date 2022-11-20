@@ -14,6 +14,8 @@ namespace Dysnomia {
 		BigInteger O; // Ring
 		BigInteger E; // Barn
 
+		BigInteger X; // Gravital Prime
+
 /*
 Ordered Pairs:
 		BigInteger Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn;

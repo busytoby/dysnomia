@@ -31,10 +31,10 @@ namespace Dysnomia {
     BigInteger Ion::Hydrate(BigInteger RL)
     {
         if (V.E.IsZero)
-            V.E = BigInteger::ModPow(
+            V.X = V.E = BigInteger::ModPow(
                 BigInteger::Add(
                     BigInteger::ModPow(P->Barn, V.O, Math::CatalanPrime),
-                    BigInteger::ModPow(RL, V.O, Math::CatalanPrime)
+                    BigInteger::ModPow(RL, V.O, Math::AzimuthPrime)
                 ),
                 V.P,
                 Math::AzimuthPrime);
@@ -42,10 +42,10 @@ namespace Dysnomia {
             V.E = BigInteger::ModPow(
                 BigInteger::Add(
                     BigInteger::ModPow(V.E, V.O, Math::CatalanPrime),
-                    BigInteger::ModPow(RL, V.O, Math::CatalanPrime)
+                    BigInteger::ModPow(RL, V.O, Math::AzimuthPrime)
                 ),
                 V.P,
-                Math::AzimuthPrime); // Patent Gravity
+                V.X); // Patent Gravity
         return V.E; // Patent Graviton
     }
 
