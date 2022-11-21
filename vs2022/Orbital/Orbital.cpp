@@ -17,6 +17,9 @@ namespace Dysnomia {
 		L->Ir.Coordinate = N->R->Coordinate(L->Ir.Ring);
 		if (!L->Ir.Coordinate.IsZero) throw gcnew Exception("Universe Destroyed By Left Coordination");
 
+		BigInteger Wind = Ligand;
+		Ligand = BigInteger::ModPow(E->Barn, Ligand, Math::AzimuthPrime); // Patent Zephyr Is Zero Ligand		
+
 		E->Prime = BigInteger::ModPow(
 			BigInteger::Add(
 				BigInteger::ModPow(N->Ir.Barn, E->Dynamo, Math::AzimuthPrime),
@@ -44,6 +47,8 @@ namespace Dysnomia {
 			),
 			E->Element,
 			Math::AzimuthPrime);
+
+		Ligand = BigInteger::ModPow(E->Barn, Wind, Math::AzimuthPrime); // Patent Wind
 
 		L->Ir.Barn = N->Ir.Barn % E->Prime;
 		R->Ir.Ring = R->Ir.Ring % E->Prime;
