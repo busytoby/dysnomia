@@ -47,11 +47,6 @@ namespace Dysnomia {
 	void Perception::Avail(Situation^ R, BigInteger Ligand, BigInteger Carbonium) { // Proof P=NP
 		S.Ligand = Ligand;
 		R->S.Ligand = Carbonium;
-		R->S.Coordinate = 0;
-		R->S.R = gcnew Ion(S.Boson);
-		R->S.L = gcnew Ion(S.Boson, *S.R);
-		R->S.N = gcnew Ion(*S.L->R);
-
 		BigInteger Aluminum0 = R->Foil(S.Ligand, R->S.Ligand); // Trademark Aluminum
 	}
 }

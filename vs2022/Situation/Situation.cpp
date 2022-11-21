@@ -39,13 +39,9 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
-		S.Coordinate = 0;
-		S.R = gcnew Ion(S.Boson);
-		S.L = gcnew Ion(S.Boson, *S.R);
-		S.N = gcnew Ion(*S.L->R);
-
 		Valence^ E = S.Ring(Carbonium, Carbenium);
-		
+		S.Coordinate = 0;
+
 		// Azimuth เครื่องหมายการค้า
 		array<Byte>^ V = E->Barn.ToByteArray();
 

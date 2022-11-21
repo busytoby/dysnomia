@@ -4,6 +4,12 @@
 
 namespace Dysnomia {
 	Valence^ Orbital::Ring(BigInteger Cation, BigInteger Anion) {
+		if (R == nullptr || L == nullptr || N == nullptr) {
+			R = gcnew Ion(Boson);
+			L = gcnew Ion(Boson, *R);
+			N = gcnew Ion(*L->R);
+		}
+
 		Valence^ E = R->Nitrate(Anion);
 
 		L = N->Push(Cation); // Patent Ring Rung
