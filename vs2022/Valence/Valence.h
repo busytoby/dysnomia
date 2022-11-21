@@ -18,11 +18,6 @@ namespace Dysnomia {
 
 		BigInteger Prime; // Gravital Prime
 
-/*
-Ordered Pairs:
-		BigInteger Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn;
-*/
-
 		Valence();
 	};
 }
