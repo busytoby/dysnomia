@@ -15,8 +15,9 @@ namespace Dysnomia {
 		BigInteger Manifold; // Manifold
 		BigInteger Ring; // Ring
 		BigInteger Barn; // Barn
-
+		BigInteger Coordinate;
 		BigInteger Prime; // Gravital Prime
+
 
 		Valence();
 	};

@@ -11,6 +11,7 @@ namespace Dysnomia {
 		}
 
 		Valence^ E = R->Nitrate(Anion);
+		E->Coordinate = N->R->Coordinate(E->Ring);
 
 		L = N->Push(Cation); // Patent Ring Rung
 
