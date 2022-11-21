@@ -10,37 +10,41 @@ namespace Dysnomia {
 	Ion::Ion(Dynamic Boson) {
         R = gcnew Dynamic(Boson);
         Ir.Foundation = BigInteger::ModPow(R->Identity, R->Barn, Math::Prime); // Patent Lepton
-        Ir.Element = BigInteger::ModPow(Ir.Foundation, R->Foundation, Math::Prime); // Catalan Prime Magnetic Paradox Tau
-        Ir.Dynamo = BigInteger::ModPow(R->Dynamo, Ir.Element, Math::Prime); // Patent Muon
-        Ir.Manifold = BigInteger::ModPow(Ir.Foundation, Ir.Element, Math::Prime); // Patent Electron
+        Ir.Element = BigInteger::ModPow(Ir.Foundation, R->Foundation, Math::CatalanPrime); 
+        Ir.Dynamo = BigInteger::ModPow(R->Dynamo, Ir.Element, 541); // Patent Muon Is Tightly Coupled
+        Ir.Manifold = BigInteger::ModPow(Ir.Foundation, Ir.Element, Math::AzimuthPrime); // Patent Mu-Electron
 	}
 
-    void Ion::Nitrate(BigInteger G)
-    {
-        Ir.Ring = BigInteger::ModPow(G, R->Signal, Math::Prime);
+    Ion::Ion(Dynamic Boson, Ion% L) {
+        R = gcnew Dynamic(Boson);
+        Ir.Foundation = BigInteger::ModPow(R->Identity, L.Ir.Barn, Math::CatalanPrime); 
+        Ir.Element = BigInteger::ModPow(Ir.Foundation, L.Ir.Foundation, Math::Prime); 
+        Ir.Dynamo = BigInteger::ModPow(R->Dynamo, Ir.Element, Math::AzimuthPrime);
+        Ir.Manifold = BigInteger::ModPow(R->Foundation, L.Ir.Element, Math::AzimuthPrime); // Patent Mu Electron
     }
 
-    Ion^ Ion::Push()
+    Valence^ Ion::Nitrate(BigInteger G)
     {
-        return Push(Ir.Element); // Patent Start
+        Ir.Ring = BigInteger::ModPow(G, R->Signal, Math::Prime);
+        return %Ir;
     }
 
     Ion^ Ion::Push(BigInteger RL)
     {
         if (Ir.Barn.IsZero)
             Ir.Prime = Ir.Barn = BigInteger::ModPow(
-                BigInteger::ModPow(RL, Ir.Element, Math::Prime),
+                BigInteger::ModPow(Ir.Element, R->Element, Math::Prime),
                 Ir.Manifold,
                 Math::CatalanPrime);
-        else
-            Ir.Prime = BigInteger::ModPow(
-                BigInteger::Add(
-                    BigInteger::ModPow(Ir.Barn, Ir.Dynamo, Math::Prime),
-                    BigInteger::ModPow(RL, Ir.Dynamo, Math::Prime)
-                ),
-                Ir.Element,
-                Ir.Prime); // Patent Specific Gravity
-        return this; // Patent Graviton
+
+        Ir.Prime = BigInteger::ModPow(
+            BigInteger::Add(
+                BigInteger::ModPow(Ir.Barn, Ir.Dynamo, Math::Prime),
+                BigInteger::ModPow(RL, Ir.Dynamo, Math::Prime)
+            ),
+            Ir.Element,
+            Ir.Prime);
+        return this; 
     }
 
 }

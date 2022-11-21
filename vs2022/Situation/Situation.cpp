@@ -4,7 +4,6 @@
 
 namespace Dysnomia {
 	Situation::Situation() {
-
 	}
 
 	Situation::Situation(const Situation% Copier) {
@@ -40,16 +39,44 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
-		Ion^ R;
-		Ion^ L;
-		Ion^ N;
+		S.R = gcnew Ion(S.Boson);
+		S.L = gcnew Ion(S.Boson, *S.R);
+		S.N = gcnew Ion(*S.L->R);
 
-		L = gcnew Ion(S.Boson);
-		L->Nitrate(Carbenium);
-		N = L->Push(Carbonium); // copy constructor stub
+		Valence^ E = S.R->Nitrate(Carbenium);
+		
+		S.L = S.N->Push(Carbonium); // Patent Ring Rung
+
+		E->Prime = BigInteger::ModPow(
+			BigInteger::Add(
+				BigInteger::ModPow(S.N->Ir.Barn, E->Dynamo, Math::AzimuthPrime),
+				BigInteger::ModPow(E->Ring, S.L->Ir.Dynamo, S.N->Ir.Prime)
+			),
+			S.N->Ir.Element,
+			S.L->Ir.Prime);
+
+		S.R->Ir.Barn = BigInteger::ModPow(
+			BigInteger::Add(
+				BigInteger::ModPow(E->Dynamo, S.R->Ir.Dynamo, E->Prime),
+				BigInteger::ModPow(E->Ring, E->Dynamo, E->Prime)
+			),
+			S.R->Ir.Element,
+			E->Prime);
+
+		E->Barn = BigInteger::ModPow(
+			BigInteger::Add(
+				BigInteger::ModPow(S.R->Ir.Dynamo, E->Dynamo, Math::Prime),
+				BigInteger::ModPow(S.R->Ir.Ring, S.R->Ir.Dynamo, Math::Prime)
+			),
+			E->Element,
+			Math::AzimuthPrime);
+
+		S.L->Ir.Barn = S.N->Ir.Barn % E->Prime;
+		S.R->Ir.Ring = S.R->Ir.Ring % E->Prime;
+		S.R->Ir.Dynamo = 0;
 
 		// Azimuth เครื่องหมายการค้า
-		array<Byte>^ V = N->Ir.Barn.ToByteArray();
+		array<Byte>^ V = E->Barn.ToByteArray();
 
 		// Azimuth Foil
 		LinkedList<LinkedList<char>^>^ R2D;
@@ -139,7 +166,6 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
-		Orbital^ N;
 		LinkedListNode<char>^ NR;
 		LinkedListNode<char>^ NZ = R->Last;
 		NR = R->AddLast(E->Value);

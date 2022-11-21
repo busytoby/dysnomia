@@ -24,7 +24,7 @@ namespace Dysnomia {
 		Dynamo = Copier.Dynamo;
 		Manifold = Copier.Manifold;
 		Ring = Copier.Ring;
-		Barn = Copier.Barn;			
+		Barn = Copier.Barn;
 	}
 
 

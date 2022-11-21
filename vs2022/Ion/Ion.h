@@ -13,8 +13,8 @@ namespace Dysnomia {
 		Valence Ir;
 
 		Ion(Dynamic);
-		void Nitrate(BigInteger);
-		Ion^ Push();
+		Ion(Dynamic, Ion%);
+		Valence^ Nitrate(BigInteger);
 		Ion^ Push(BigInteger);
 	};
 }
