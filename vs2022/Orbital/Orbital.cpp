@@ -14,6 +14,8 @@ namespace Dysnomia {
 		E->Coordinate = N->R->Coordinate(E->Ring);
 
 		L = N->Push(Cation); // Patent Ring Rung
+		L->Ir.Coordinate = N->R->Coordinate(L->Ir.Ring);
+		if (!L->Ir.Coordinate.IsZero) throw gcnew Exception("Universe Destroyed By Left Coordination");
 
 		E->Prime = BigInteger::ModPow(
 			BigInteger::Add(
@@ -22,6 +24,8 @@ namespace Dysnomia {
 			),
 			N->Ir.Element,
 			L->Ir.Prime);
+		N->Ir.Coordinate = Boson.Coordinate(L->Ir.Ring);
+		if (!N->Ir.Coordinate.IsZero) throw gcnew Exception("Left Ringing Should Not Occur Yet");
 
 		R->Ir.Barn = BigInteger::ModPow(
 			BigInteger::Add(
@@ -30,6 +34,8 @@ namespace Dysnomia {
 			),
 			R->Ir.Element,
 			E->Prime);
+		R->Ir.Coordinate = L->R->Coordinate(N->Ir.Ring);
+		if (!N->Ir.Coordinate.IsZero) throw gcnew Exception("Resonance Should Not Occur Yet");
 
 		E->Barn = BigInteger::ModPow(
 			BigInteger::Add(
