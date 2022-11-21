@@ -1,6 +1,8 @@
 ﻿#include "pch.h"
 
 #include "Situation.h"
+using namespace System::Globalization;
+
 
 namespace Dysnomia {
 	Situation::Situation() {
@@ -41,17 +43,17 @@ namespace Dysnomia {
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
 		Valence^ E = S.Ring(Carbonium, Carbenium);
 
-		// Azimuth เครื่องหมายการค้า
-		array<Byte>^ V = E->Barn.ToByteArray();
-
 		// Azimuth Foil
 		LinkedList<LinkedList<char>^>^ R2D;
 
 		// Ln1 Sulfite Performed Only Once As F(Y)
-		R2D = Ln1(V);		
+		R2D = Ln1(E->R);
+		E->R->Clear();
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
-		while (Ln2(R2D)) continue;
+		while (Ln2(R2D)) {
+			GrowthFactor = 0;
+		}
 
 		throw gcnew Exception("Escaped Infinite Loop, The Universe Was Destroyed");
 		// ++ TODO
@@ -62,11 +64,13 @@ namespace Dysnomia {
 		return 0;
 	}
 
-	LinkedList<LinkedList<char>^>^ Situation::Ln1(array<Byte>^ L) {
+	LinkedList<LinkedList<char>^>^ Situation::Ln1(LinkedList<char>^ L) {
 		LinkedList<LinkedList<char>^>^ M = gcnew LinkedList<LinkedList<char>^>();
 		LinkedList<char>^ N = gcnew LinkedList<char>();
-		for (int i = 0; i < L->Length; i++) {
-			String^ D = Convert::ToString(L[i], 8);
+		LinkedListNode<char>^ P = L->First;
+
+		while(P != nullptr) {
+			String^ D = Convert::ToString(P->Value, 8);
 			for (int j = 0; j < D->Length; j++) {
 				if (D[j] == '0') continue;
 				if (D[j] != '7') N->AddLast((char) D[j]);
@@ -75,6 +79,7 @@ namespace Dysnomia {
 					N = gcnew LinkedList<char>();
 				}
 			}
+			P = P->Next;
 		}
 		return M;
 	}
@@ -117,7 +122,6 @@ namespace Dysnomia {
 			}
 			else {
 				P = R2D2->AddAfter(P, R);
-				//P = W;
 			}
 
 			R = gcnew LinkedList<char>();
@@ -131,6 +135,8 @@ namespace Dysnomia {
 	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		if (R->Count == 0) { R->AddLast(E->Value); return P; }
 
+		BigInteger Carbenium;
+		Valence^ A;
 		LinkedListNode<char>^ NR;
 		LinkedListNode<char>^ NZ = R->Last;
 		NR = R->AddLast(E->Value);
@@ -261,7 +267,10 @@ namespace Dysnomia {
 					return P; // Patent Sound
 				case 'A': // Patent Arrow Pushing Mechanism (** Up) Manganese
 					R->RemoveLast(); // Patent Phosphonium
-					P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox Patent Confirmation
+					if (GrowthFactor++ < 2) {
+						P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox Patent Confirmation
+						AC = 999;
+					}
 					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium Trademark Soul
 					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
 					NR = R->AddAfter(NR, '6'); // Trademark THPC
@@ -275,6 +284,7 @@ namespace Dysnomia {
 				default:
 					break;
 				}
+				break;
 			case 'A':
 				switch (NZ->Value) {
 				case '1': // Carbon
@@ -282,12 +292,69 @@ namespace Dysnomia {
 					R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
 					break; // Patent Respiration
 				case '2': 
-					AC = 5;
-
+					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+					A = S.Ring(S.Ligand, Carbenium);
+					Carbenium = S.Ligand;
 					break;
+				case '3':
+				case '4':
+				case '5':
+					/*
+					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+					A = S.Ring(S.Ligand, Carbenium);
+					Carbenium = S.Ligand;
+					NZ->List->AddAfter(NZ, '5'); 
+					P = Deprotonate(NZ, R, E, P); 
+					return P; 
+					*/
+					AC = 999;
+					break;
+				case '6':
+					R->RemoveLast();
+					if (R->Count == 0) return P;
+					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+					A = S.Ring(S.Ligand, Carbenium);
+					A->Coordinate = Carbenium = S.Ligand;
+					NR = A->R->First;
+					do {
+						R->AddLast(NR->Value);
+					} while (NR = NR->Next);
+					A->R->Clear();
+
+					R->AddLast('S');
+					R->AddLast('6');
+					return P;
+				case 'A':
+					if (NZ->Next != NZ->List->Last) return P;
+					R->RemoveLast();
+					if (R->Count == 0) return P;
+
+					A = S.Ring(S.Ligand);
+					A->Coordinate = S.Ligand;
+					NR = A->R->First;
+					do {
+						R->AddLast(NR->Value);
+					} while (NR = NR->Next);
+					A->R->Clear();
+
+					NZ = R->AddLast('S');
+					A->Pull(S.Ligand);
+					NR = A->H->Last;
+					do {
+						R->AddLast(NR->Value);
+					} while (NR = NR->Previous);
+
+					R->AddLast('A');
+					A->H->Clear();
+
+					return P;
 				default:
 					break;
 				}
+				break;
+			case 'S':
+				AC = 999; // Stub
+				break;
 			}
 			if (NZ->List == nullptr) {
 				int a = 99;

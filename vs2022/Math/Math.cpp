@@ -31,4 +31,12 @@ namespace Dysnomia {
         return sb.ToString();
     }
 
+    String^ Math::LinkedListToHexString(LinkedList<char>^ Bytes) {
+        System::Text::StringBuilder sb;
+        for each (char b in Bytes)
+            sb.Append(Char::ToString(b));
+
+        return sb.ToString();
+    }
+
 }

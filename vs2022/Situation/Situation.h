@@ -11,6 +11,7 @@ namespace Dysnomia {
 	{
 	private:
 		Affinity Norcamphene;
+		int GrowthFactor = 0;
 
 	public:
 		Orbital S;
@@ -26,7 +27,7 @@ namespace Dysnomia {
 		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
 
-		LinkedList<LinkedList<char>^>^ Ln1(array<Byte>^);
+		LinkedList<LinkedList<char>^>^ Ln1(LinkedList<char>^);
 		bool Ln2(LinkedList<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ C3PO(LinkedList<char>^, LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
 		LinkedListNode<LinkedList<char>^>^ Deprotonate(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P);

@@ -3,6 +3,7 @@
 using namespace System;
 using namespace System::Globalization;
 using namespace System::Numerics;
+using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	public ref class Math
@@ -48,6 +49,7 @@ namespace Dysnomia {
 
 		static BigInteger Random();
 		static String^ ByteArrayToHexString(array<Byte>^);
+		static String^ LinkedListToHexString(LinkedList<char>^ Bytes);
 
 		// TODO: Add your methods for this class here.
 	};

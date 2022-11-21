@@ -14,6 +14,7 @@ namespace Dysnomia {
 		Ion^ L;
 		Ion^ N;
 
+		Valence^ Ring(BigInteger);
 		Valence^ Ring(BigInteger, BigInteger);
 	};
 }

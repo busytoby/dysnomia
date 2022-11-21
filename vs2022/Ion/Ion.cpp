@@ -25,8 +25,13 @@ namespace Dysnomia {
 
     Valence^ Ion::Nitrate(BigInteger G)
     {
-        Ir.Ring = BigInteger::ModPow(G, R->Signal, Math::Prime);
-        return %Ir;
+        if(Ir.Ring.IsZero)
+            Ir.Ring = BigInteger::ModPow(G, R->Signal, Math::Prime);
+        else {
+            Ir.Ring = BigInteger::Add(Ir.Ring,
+                BigInteger::ModPow(G, R->Signal, Math::Prime));
+        }
+        return %Ir; // Strongly Coupled
     }
 
     Ion^ Ion::Push(BigInteger RL)
@@ -44,6 +49,9 @@ namespace Dysnomia {
             ),
             Ir.Element,
             Ir.Prime);
+
+        Ir.Dynamo = 0;
+
         return this; 
     }
 
