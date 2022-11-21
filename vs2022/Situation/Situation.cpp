@@ -39,7 +39,6 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
-		S.Ligand = Norcamphene.BigDetermine("Hello Boson");
 		S.Coordinate = 0;
 		S.R = gcnew Ion(S.Boson);
 		S.L = gcnew Ion(S.Boson, *S.R);
