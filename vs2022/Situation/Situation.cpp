@@ -40,7 +40,6 @@ namespace Dysnomia {
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
 		Valence^ E = S.Ring(Carbonium, Carbenium);
-		S.Coordinate = 0;
 
 		// Azimuth เครื่องหมายการค้า
 		array<Byte>^ V = E->Barn.ToByteArray();
@@ -60,7 +59,6 @@ namespace Dysnomia {
 		// Ln4 Aspartate Nitrogenation Phase, Secant Trigs
 		// Ln5 Phenylalanine Consumer Pass, Sine Trigs
 
-		//return L->I.E; 
 		return 0;
 	}
 
