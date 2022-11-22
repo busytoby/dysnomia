@@ -15,6 +15,6 @@ namespace Dysnomia {
 		Ion(Dynamic);
 		Ion(Dynamic, Ion%);
 		Valence^ Nitrate(BigInteger);
-		Ion^ Push(BigInteger);
+		Void Push(BigInteger);
 	};
 }

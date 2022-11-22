@@ -107,10 +107,9 @@ namespace Dysnomia {
 			} while (E = E->Next);
 
 			if (S.N->Ir.I == S.L->Ir.I) {
-				S.R->Ir.I = S.L->Ir.I;
 				S.L->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);
 				S.M->Remove(S.N->Ir.I);
-				S.N->Ir.I = S.R->Ir.I;
+				S.N->Ir.I = S.L->Ir.I;
 			}
 			else {
 				S.N->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);

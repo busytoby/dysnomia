@@ -34,7 +34,7 @@ namespace Dysnomia {
         return %Ir; // Strongly Coupled
     }
 
-    Ion^ Ion::Push(BigInteger RL)
+    void Ion::Push(BigInteger RL)
     {
         if (Ir.Barn.IsZero)
             Ir.Prime = Ir.Barn = BigInteger::ModPow(
@@ -51,8 +51,6 @@ namespace Dysnomia {
             Ir.Prime);
 
         Ir.Dynamo = 0;
-
-        return this; 
     }
 
 }

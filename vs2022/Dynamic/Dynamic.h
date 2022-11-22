@@ -22,7 +22,7 @@ namespace Dysnomia {
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn;
 
 		Dynamic();
-		Dynamic(const Dynamic% Copier);
+		Dynamic(const Dynamic%);
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();

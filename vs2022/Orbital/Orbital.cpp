@@ -17,9 +17,11 @@ namespace Dysnomia {
 		Valence^ E = R->Nitrate(Anion);
 		E->Coordinate = N->R->Coordinate(E->Ring);
 
-		L = N->Push(Cation); // Patent Ring Rung
+		N->Push(Cation); // Patent Ring Rung
+		L->Ir.Prime = N->Ir.Prime;
+		L->Ir.Dynamo = 0;
 		L->Ir.Coordinate = N->R->Coordinate(L->Ir.Ring);
-		if (!L->Ir.Coordinate.IsZero || !L->Ir.Dynamo.IsZero) throw gcnew Exception("Universe Destroyed By Left Coordination");
+		if (!L->Ir.Coordinate.IsZero) throw gcnew Exception("Universe Destroyed By Left Coordination");
 
 		BigInteger Wind = Ligand;
 		Ligand = BigInteger::ModPow(E->Barn, Ligand, Math::AzimuthPrime); // Patent Bromonium
