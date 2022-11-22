@@ -26,7 +26,7 @@ namespace Dysnomia {
 		array<Byte>^ V = L.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {
-			String^ D = Convert::ToString(V[i], 8);
+			String^ D = Convert::ToString(V[i], 16)->ToUpper();
 			for (int j = 0; j < D->Length; j++) {
 				if (D[j] == '0') continue;
 				H->AddFirst((char)D[j]);
