@@ -21,5 +21,7 @@ namespace Dysnomia {
 		void Ring(BigInteger, BigInteger);
 		void Pull();
 		void DetectCollision();
+		void Vent();
+		void Fly();
 	};
 }

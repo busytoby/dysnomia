@@ -27,10 +27,12 @@ namespace Dysnomia {
 		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
 
+		/*
 		LinkedList<LinkedList<char>^>^ Pull(LinkedList<char>^);
 		bool Ln2();
 		void Push(LinkedListNode<char>^);
 		LinkedListNode<LinkedList<char>^>^ Deprotonate(LinkedListNode<char>^ T, LinkedListNode<char>^ E);
 		int EndAdjacencyCount(LinkedList<char>^, int);
+		*/
 	};
 }

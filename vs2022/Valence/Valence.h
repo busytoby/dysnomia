@@ -20,13 +20,14 @@ namespace Dysnomia {
 		BigInteger Coordinate;
 		BigInteger Prime; // Gravital Prime
 
-		LinkedList<char>^ R; // Azimuth
-		LinkedList<char>^ H;
+		LinkedList<Int16>^ R; // Azimuth
+		LinkedList<Int16>^ H;
+		LinkedListNode<Int16>^ L;
 		LinkedListNode<LinkedList<char>^>^ I; // Focus
 
 		Valence();
 		Valence(const Valence%);
-		LinkedList<char>^ Push();
-		LinkedList<char>^ Pull(BigInteger);
+		void Push();
+		void Pull(BigInteger);
 	};
 }

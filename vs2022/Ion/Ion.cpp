@@ -53,7 +53,7 @@ namespace Dysnomia {
                 BigInteger::ModPow(N->Dynamo, Ir.Dynamo, N->Prime) // n4
             ),
             Ir.Element, // R
-            Ir.Prime); // O
+            Ir.Prime); // O = 4
     }
 
     void Ion::Push(BigInteger RL)

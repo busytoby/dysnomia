@@ -41,8 +41,9 @@ namespace Dysnomia {
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
-		S.Ring(Carbonium, Carbenium);
+ 		S.Ring(Carbonium, Carbenium);
 
+		/*
 		Pull(S.R->Ir.R);
 		S.R->Ir.R->Clear();
 		S.R->Ir.H->Clear();
@@ -53,23 +54,23 @@ namespace Dysnomia {
 		}
 
 		throw gcnew Exception("Escaped Infinite Loop, The Universe Was Destroyed");
-
+		*/
 		return 0;
 	}
-
-	LinkedList<LinkedList<char>^>^ Situation::Pull(LinkedList<char>^ L) {
-		LinkedListNode<char>^ P = L->First;
-		S.M = gcnew LinkedList<LinkedList<char>^>();
-		S.L->Ir.R = gcnew LinkedList<char>();
+/*
+	LinkedList<LinkedList<char>^>^ Situation::Pull(LinkedList<short>^ L) {
+		LinkedListNode<short>^ P = L->First;
+		S.M = gcnew LinkedList<LinkedList<short>^>();
+		S.L->Ir.R = gcnew LinkedList<short>();
 
 		while(P != nullptr) {
 			String^ D = Convert::ToString(P->Value, 8);
 			for (int j = 0; j < D->Length; j++) {
 				if (D[j] == '0') continue;
-				if (D[j] != '7') S.L->Ir.R->AddLast((char) D[j]);
+				if (D[j] != '7') S.L->Ir.R->AddLast((short) D[j]);
 				else {
 					S.M->AddFirst(S.L->Ir.R);
-					S.L->Ir.R = gcnew LinkedList<char>();
+					S.L->Ir.R = gcnew LinkedList<short>();
 				}
 			}
 			P = P->Next;
@@ -295,14 +296,14 @@ namespace Dysnomia {
 				case '3':
 				case '4':
 				case '5':
-					/*
-					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
-					A = S.Ring(S.Ligand, Carbenium);
-					Carbenium = S.Ligand;
-					NZ->List->AddAfter(NZ, '5'); 
-					P = Deprotonate(NZ, R, E, P); 
-					return P; 
-					*/
+					
+//					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+//					A = S.Ring(S.Ligand, Carbenium);
+//					Carbenium = S.Ligand;
+//					NZ->List->AddAfter(NZ, '5'); 
+//					P = Deprotonate(NZ, R, E, P); 
+//					return P; 
+	
 					AC = 999;
 					break;
 				case '6':
@@ -396,4 +397,5 @@ namespace Dysnomia {
 
 		return count;
 	}
+	*/
 }

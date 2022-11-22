@@ -22,7 +22,7 @@ namespace Dysnomia {
 		L->Ir.Coordinate = N->R->Coordinate(L->Ir.Prime); // Relative Left Position
 		if (L->Ir.Coordinate.IsZero) throw gcnew Exception("Universe Destroyed By Black Hole");
 
-		BigInteger Wind = Ligand;
+		N->Ir.Ring = Ligand;
 		Pull();
 		R->Prime(%N->Ir, %L->Ir);
 
@@ -32,24 +32,14 @@ namespace Dysnomia {
 		DetectCollision();
 
 		R->Swing(%N->Ir, %L->Ir);
-		R->Ir.Coordinate = L->R->Coordinate(N->Ir.Ring);
-		if (!N->Ir.Coordinate.IsZero) throw gcnew Exception("Resonance Should Not Occur Yet");
-
-		R->Ir.Barn = BigInteger::ModPow(
-			BigInteger::Add(
-				BigInteger::ModPow(R->Ir.Dynamo, R->Ir.Dynamo, Math::Prime),
-				BigInteger::ModPow(R->Ir.Ring, R->Ir.Dynamo, Math::Prime)
-			),
-			R->Ir.Element,
-			Math::AzimuthPrime);
 
 		R->Ir.Push();
-		Ligand = BigInteger::ModPow(R->Ir.Barn, Wind, Math::AzimuthPrime); // Patent Wind
+		Vent();
 		R->Ir.Pull(Ligand);
-		Wind = 0;
+
+		Fly();
 
 		L->Ir.Barn = N->Ir.Barn % R->Ir.Prime;
-		R->Ir.Ring = R->Ir.Ring % R->Ir.Prime;
 		R->Ir.Dynamo = 0;
 	}
 
@@ -63,5 +53,110 @@ namespace Dysnomia {
 		}
 		else throw gcnew Exception("Universe Destroyed By Hadron Collision");
 		if (R->Ir.Dynamo != N->Ir.Dynamo) throw gcnew Exception("Universe Destroyed By Hadron Collision");
+	}
+
+	void Orbital::Vent() {
+		Ligand = BigInteger::ModPow(R->Ir.Barn, N->Ir.Ring, Math::AzimuthPrime); // Patent Wind
+		N->Ir.Ring = 0;
+	}
+
+	void Orbital::Fly() {
+		R->Ir.L = R->Ir.R->First;
+		N->Ir.L = R->Ir.H->First;
+		
+		do {
+			switch (R->Ir.L->Value) {
+			case 1:
+				while (N->Ir.L && N->Ir.L->Value < 4) {
+					N->Ir.L = N->Ir.L->Next;
+					R->Ir.H->Remove(N->Ir.L->Previous);
+				}
+				if (N->Ir.L->Value >= 4) {
+					R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 4);
+					if (N->Ir.L->Value < 8) {
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+					}
+				}
+				break;
+			case 2:
+				break;
+			case 3:
+				do {
+					N->Ir.L = N->Ir.L->Next;
+					R->Ir.H->Remove(N->Ir.L->Previous);
+				} while (N->Ir.L && N->Ir.L->Value < 9);
+				if (!N->Ir.L) break;
+				R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 5);
+				N->Ir.L = N->Ir.L->Next;
+				R->Ir.H->Remove(N->Ir.L->Previous);
+				break;
+			case 4:
+				L->Ir.L = N->Ir.L;
+				do {
+					while (N->Ir.L->Value < 9) N->Ir.L = N->Ir.L->Next;
+					if (N->Ir.L->Value < 15) N->Ir.L->Value++;
+					else {
+						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 10);
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+						break;
+					}
+				} while (N->Ir.L = N->Ir.L->Next);
+				if(L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+				break;
+			case 5:
+				L->Ir.L = N->Ir.L;
+				do {
+					if (N->Ir.L->Value == 1) {
+						R->Ir.L = R->Ir.L->Next;
+						R->Ir.R->Remove(R->Ir.L->Previous);
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+					}
+					else if (N->Ir.L->Value < 5) {
+						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+					}
+					else if (N->Ir.L->Value < 8) {
+						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+						break;
+					} else
+						N->Ir.L = N->Ir.L->Next;
+				} while (N->Ir.L->Value < 15);
+				break;
+			case 6:
+				L->Ir.L = N->Ir.L;
+				do {
+					if (N->Ir.L->Value == 1) {
+						R->Ir.L = R->Ir.L->Next;
+						R->Ir.R->Remove(R->Ir.L->Previous);
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+					}
+					else if (N->Ir.L->Value < 9) {
+						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						N->Ir.L = N->Ir.L->Next;
+						R->Ir.H->Remove(N->Ir.L->Previous);
+					}
+					else {
+						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						N->Ir.L = N->Ir.L->Next;
+					}
+				} while (N->Ir.L->Value < 15);
+				if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+				break;
+			case 7:
+				break;
+			default:
+				throw gcnew Exception("Universe Totally Busted");
+			}
+			if (!N->Ir.L) 
+				break;
+		} while (R->Ir.L = R->Ir.L->Next);
+		R->Ir.L = R->Ir.R->First;
+		N->Ir.L = nullptr;
 	}
 }
