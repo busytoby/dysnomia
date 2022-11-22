@@ -58,6 +58,7 @@ namespace Dysnomia {
 
 		E->Push();
 		Ligand = BigInteger::ModPow(E->Barn, Wind, Math::AzimuthPrime); // Patent Wind
+		E->Pull(Ligand);
 		Wind = 0;
 
 		L->Ir.Barn = N->Ir.Barn % E->Prime;

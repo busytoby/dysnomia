@@ -43,89 +43,81 @@ namespace Dysnomia {
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
 		Valence^ E = S.Ring(Carbonium, Carbenium);
 
-		// Azimuth Foil
-		LinkedList<LinkedList<char>^>^ R2D;
-
 		// Ln1 Sulfite Performed Only Once As F(Y)
-		R2D = Ln1(E->R);
-		E->R->Clear();
+		Ln1(E->R);
+		E->R->Clear(); // Consumed
+		E->H->Clear(); // Blows Off
 
 		// Ln2 Sulfide Passes Indefinitely As F(U)
-		while (Ln2(R2D)) {
+		while (Ln2()) {
 			GrowthFactor = 0;
 		}
 
 		throw gcnew Exception("Escaped Infinite Loop, The Universe Was Destroyed");
-		// ++ TODO
-		// Ln3 Alanine Candida Per-Sulfate Pass
-		// Ln4 Aspartate Nitrogenation Phase, Secant Trigs
-		// Ln5 Phenylalanine Consumer Pass, Sine Trigs
 
 		return 0;
 	}
 
 	LinkedList<LinkedList<char>^>^ Situation::Ln1(LinkedList<char>^ L) {
-		LinkedList<LinkedList<char>^>^ M = gcnew LinkedList<LinkedList<char>^>();
-		LinkedList<char>^ N = gcnew LinkedList<char>();
 		LinkedListNode<char>^ P = L->First;
+		S.M = gcnew LinkedList<LinkedList<char>^>();
+		S.L->Ir.R = gcnew LinkedList<char>();
 
 		while(P != nullptr) {
 			String^ D = Convert::ToString(P->Value, 8);
 			for (int j = 0; j < D->Length; j++) {
 				if (D[j] == '0') continue;
-				if (D[j] != '7') N->AddLast((char) D[j]);
+				if (D[j] != '7') S.L->Ir.R->AddLast((char) D[j]);
 				else {
-					M->AddFirst(N);
-					N = gcnew LinkedList<char>();
+					S.M->AddFirst(S.L->Ir.R);
+					S.L->Ir.R = gcnew LinkedList<char>();
 				}
 			}
 			P = P->Next;
 		}
-		return M;
+		return S.M;
 	}
 
-	bool Situation::Ln2(LinkedList<LinkedList<char>^>^ R2D2) {
-		LinkedList<char>^ R = gcnew LinkedList<char>();
-		LinkedListNode<LinkedList<char>^>^ W;
-		LinkedListNode<LinkedList<char>^>^ P = R2D2->First;
-		LinkedListNode<LinkedList<char>^>^ N;
+	bool Situation::Ln2() {
+		S.N->Ir.I = S.M->First;
 
 		do {
-			W = P;
-			while (P->Value->Count == 0) {
-				R->AddLast('7');
-				N = P->Next;
-				R2D2->Remove(P);
-				if (N == nullptr)
+			S.L->Ir.I = S.N->Ir.I;
+			while (S.N->Ir.I->Value->Count == 0) {
+				S.L->Ir.R->AddLast('7');
+				S.R->Ir.I = S.N->Ir.I->Next;
+				S.M->Remove(S.N->Ir.I);
+				if (S.R->Ir.I == nullptr)
 					return true;
-				P = N;
+				S.N->Ir.I = S.R->Ir.I;
 			}
 
-			LinkedListNode<char>^ E = P->Value->First;
+			LinkedListNode<char>^ E = S.N->Ir.I->Value->First;
 			do {
 				switch (E->Value) {
 				case '2':
 				case '4':
 				case '6':
-					P = C3PO(R, E, P);
+					S.N->Ir.I = C3PO(S.L->Ir.R, E, S.N->Ir.I);
 					break;
 				default:
-					R->AddLast(E->Value);
+					S.L->Ir.R->AddLast(E->Value);
 					break;
 				}
 			} while (E = E->Next);
 
-			if (P == W) {
-				W = R2D2->AddAfter(P, R);
-				R2D2->Remove(P);
-				P = W;
+			if (S.N->Ir.I == S.L->Ir.I) {
+				S.R->Ir.I = S.L->Ir.I;
+				S.L->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);
+				S.M->Remove(S.N->Ir.I);
+				S.N->Ir.I = S.R->Ir.I;
 			}
 			else {
-				P = R2D2->AddAfter(P, R);
+				S.N->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);
 			}
 
-			R = gcnew LinkedList<char>();
-		} while (P = P->Next);
+			S.L->Ir.R = gcnew LinkedList<char>();
+		} while (S.N->Ir.I = S.N->Ir.I->Next);
 
 		Threading::Thread::Sleep(1);
 		return true;
@@ -338,7 +330,6 @@ namespace Dysnomia {
 					A->R->Clear();
 
 					NZ = R->AddLast('S');
-					A->Pull(S.Ligand);
 					NR = A->H->Last;
 					do {
 						R->AddLast(NR->Value);

@@ -2,6 +2,8 @@
 
 using namespace System;
 using namespace System::Numerics;
+using namespace System::Collections::Generic;
+
 
 namespace Dysnomia {
 	public ref class Orbital
@@ -13,6 +15,7 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ L;
 		Ion^ N;
+		LinkedList<LinkedList<char>^>^ M;
 
 		Valence^ Ring(BigInteger);
 		Valence^ Ring(BigInteger, BigInteger);
