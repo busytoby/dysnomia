@@ -17,7 +17,9 @@ namespace Dysnomia {
 		Ion^ N;
 		LinkedList<LinkedList<char>^>^ M;
 
-		Valence^ Ring(BigInteger);
-		Valence^ Ring(BigInteger, BigInteger);
+		void Ring(BigInteger);
+		void Ring(BigInteger, BigInteger);
+		void Pull();
+		void DetectCollision();
 	};
 }

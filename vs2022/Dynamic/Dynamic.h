@@ -26,13 +26,13 @@ namespace Dysnomia {
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();
-		BigInteger Coordinate(BigInteger);
+		BigInteger Coordinate(BigInteger%);
 		void Conify();
 		void Saturate(BigInteger, BigInteger);
 		void Bond();
 		void Adduct(BigInteger);
 		void Open(BigInteger);
-		bool ManifoldCompare(Dynamic);
+		bool ManifoldCompare(Dynamic%);
 		BigInteger Charge(BigInteger, bool);
 		BigInteger Induce(BigInteger Ampere, bool);
 		BigInteger Torque(BigInteger Henry, bool);

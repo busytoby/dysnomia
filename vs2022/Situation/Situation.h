@@ -22,15 +22,15 @@ namespace Dysnomia {
 
 		BigInteger Avail(BigInteger);
 		BigInteger Form(BigInteger);
-		BigInteger Conjugate(BigInteger);
+		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
 		void Adduct(BigInteger);
 		BigInteger Foil(BigInteger, BigInteger);
 
-		LinkedList<LinkedList<char>^>^ Ln1(LinkedList<char>^);
+		LinkedList<LinkedList<char>^>^ Pull(LinkedList<char>^);
 		bool Ln2();
-		LinkedListNode<LinkedList<char>^>^ C3PO(LinkedListNode<char>^, LinkedListNode<LinkedList<char>^>^);
-		LinkedListNode<LinkedList<char>^>^ Deprotonate(LinkedListNode<char>^ T, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P);
+		void Push(LinkedListNode<char>^);
+		LinkedListNode<LinkedList<char>^>^ Deprotonate(LinkedListNode<char>^ T, LinkedListNode<char>^ E);
 		int EndAdjacencyCount(LinkedList<char>^, int);
 	};
 }

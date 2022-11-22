@@ -5,6 +5,21 @@
 namespace Dysnomia {
 	Valence::Valence() {}
 
+	Valence::Valence(const Valence% Copier) {
+		Foundation = Copier.Foundation;
+		Element = Copier.Element;
+		Dynamo = Copier.Dynamo;
+		Manifold = Copier.Manifold;
+		Ring = Copier.Ring;
+		Barn = Copier.Barn;
+		Coordinate = Copier.Coordinate;
+		Prime = Copier.Prime;
+
+		R = Copier.R;
+		H = Copier.H;
+		I = Copier.I;
+	}
+
 	LinkedList<char>^ Valence::Push() {
 		if (R == nullptr) R = gcnew LinkedList<char>();
 		if (R->Count != 0) throw gcnew Exception("Valence Barn Is Already Pushed");

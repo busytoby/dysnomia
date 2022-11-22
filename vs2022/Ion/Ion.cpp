@@ -23,7 +23,7 @@ namespace Dysnomia {
         Ir.Manifold = BigInteger::ModPow(R->Foundation, L.Ir.Element, Math::AzimuthPrime); // Patent Mu Electron
     }
 
-    Valence^ Ion::Nitrate(BigInteger G)
+    void Ion::Nitrate(BigInteger G)
     {
         if(Ir.Ring.IsZero)
             Ir.Ring = BigInteger::ModPow(G, R->Signal, Math::Prime);
@@ -31,7 +31,30 @@ namespace Dysnomia {
             Ir.Ring = BigInteger::Add(Ir.Ring,
                 BigInteger::ModPow(G, R->Signal, Math::Prime));
         }
-        return %Ir; // Strongly Coupled
+        Ir.Prime = Ir.Ring;
+    }
+
+    void Ion::Prime(Valence^ N, Valence^ L) {
+        N->Dynamo = Ir.Dynamo;
+        Ir.Prime = BigInteger::ModPow(
+            BigInteger::Add(
+                BigInteger::ModPow(N->Barn, Ir.Dynamo, Math::CatalanPrime),
+                BigInteger::ModPow(Ir.Prime, N->Dynamo, N->Prime)
+            ),
+            Ir.Element,
+            Ir.Prime);
+        Ir.Dynamo = 0;
+    }
+
+    void Ion::Swing(Valence^ N, Valence^ L) { // Nucleophilic Substitution
+        Ir.Barn = BigInteger::ModPow(
+            BigInteger::Add(
+                BigInteger::ModPow(L->Dynamo, Ir.Dynamo, N->Prime), // at Trigonal Carbon (-c -x)
+                BigInteger::ModPow(Ir.Ring, Ir.Dynamo, Ir.Prime) // n4
+            ),
+            Ir.Element, // R
+            Ir.Prime); // O
+        N->Ring = Ir.Ring;
     }
 
     void Ion::Push(BigInteger RL)
@@ -49,7 +72,6 @@ namespace Dysnomia {
             ),
             Ir.Element,
             Ir.Prime);
-
         Ir.Dynamo = 0;
     }
 

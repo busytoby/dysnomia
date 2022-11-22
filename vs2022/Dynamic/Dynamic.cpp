@@ -66,9 +66,11 @@ namespace Dysnomia {
 		Pole = BigInteger::ModPow(Base, Secret, Math::Prime);
 	}
 
-	BigInteger Dynamic::Coordinate(BigInteger peerPole)
+	BigInteger Dynamic::Coordinate(BigInteger% Ligand)
 	{
-		return BigInteger::ModPow(peerPole, Secret, Math::Prime);
+		BigInteger C = BigInteger::ModPow(Ligand, Secret, Math::Prime);
+		Ligand = 0;
+		return C;
 	}
 
 	void Dynamic::Conify()
@@ -103,6 +105,7 @@ namespace Dysnomia {
 	void Dynamic::Bond()
 	{
 		Dynamo = BigInteger::ModPow(Base, Signal, Element);
+		Pole = 0;
 	}
 
 	void Dynamic::Adduct(BigInteger peerDynamo)
@@ -116,10 +119,10 @@ namespace Dysnomia {
 		Barn = BigInteger::ModPow(Ring, Manifold, Element);
 	}
 
-	bool Dynamic::ManifoldCompare(Dynamic Rod)
+	bool Dynamic::ManifoldCompare(Dynamic% Rod)
 	{
 		if (Secret == Rod.Secret || Signal == Rod.Signal || Channel == Rod.Channel ||
-			Pole == Rod.Pole || Dynamo == Rod.Dynamo) {
+			!Pole.IsZero || !Rod.Pole.IsZero || Dynamo == Rod.Dynamo) {
 			Seed(); return false;
 		}
 

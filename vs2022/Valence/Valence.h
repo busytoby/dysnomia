@@ -25,6 +25,7 @@ namespace Dysnomia {
 		LinkedListNode<LinkedList<char>^>^ I; // Focus
 
 		Valence();
+		Valence(const Valence%);
 		LinkedList<char>^ Push();
 		LinkedList<char>^ Pull(BigInteger);
 	};
