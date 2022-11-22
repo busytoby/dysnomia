@@ -49,12 +49,11 @@ namespace Dysnomia {
     void Ion::Swing(Valence^ N, Valence^ L) { // Nucleophilic Substitution
         Ir.Barn = BigInteger::ModPow(
             BigInteger::Add(
-                BigInteger::ModPow(L->Dynamo, Ir.Dynamo, N->Prime), // at Trigonal Carbon (-c -x)
-                BigInteger::ModPow(Ir.Ring, Ir.Dynamo, Ir.Prime) // n4
+                BigInteger::ModPow(L->Dynamo, N->Dynamo, N->Prime), // at Trigonal Carbon (-c -x)
+                BigInteger::ModPow(N->Dynamo, Ir.Dynamo, N->Prime) // n4
             ),
             Ir.Element, // R
             Ir.Prime); // O
-        N->Ring = Ir.Ring;
     }
 
     void Ion::Push(BigInteger RL)

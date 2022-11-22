@@ -31,8 +31,6 @@ namespace Dysnomia {
 
 		DetectCollision();
 
-		throw gcnew Exception("Large Hadron Avoidance Occurred And Was Detected Successfully Proving One Thing Is Not Another");
-
 		R->Swing(%N->Ir, %L->Ir);
 		R->Ir.Coordinate = L->R->Coordinate(N->Ir.Ring);
 		if (!N->Ir.Coordinate.IsZero) throw gcnew Exception("Resonance Should Not Occur Yet");
@@ -63,6 +61,7 @@ namespace Dysnomia {
 		if (R->Ir.Dynamo.IsZero) {
 			R->Ir.Dynamo = BigInteger::ModPow(N->R->Dynamo, N->Ir.Element, 541);
 		}
-		else throw gcnew Exception("Universe Destroyed By Large Hadron Collision");
+		else throw gcnew Exception("Universe Destroyed By Hadron Collision");
+		if (R->Ir.Dynamo != N->Ir.Dynamo) throw gcnew Exception("Universe Destroyed By Hadron Collision");
 	}
 }
