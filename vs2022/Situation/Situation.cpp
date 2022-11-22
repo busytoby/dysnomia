@@ -98,7 +98,7 @@ namespace Dysnomia {
 				case '2':
 				case '4':
 				case '6':
-					S.N->Ir.I = C3PO(S.L->Ir.R, E, S.N->Ir.I);
+					S.N->Ir.I = C3PO(E, S.N->Ir.I);
 					break;
 				default:
 					S.L->Ir.R->AddLast(E->Value);
@@ -123,14 +123,15 @@ namespace Dysnomia {
 	}
 
 	// Trademark 3-Phosphate Pathways
-	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
-		if (R->Count == 0) { R->AddLast(E->Value); return P; }
+	LinkedListNode<LinkedList<char>^>^ Situation::C3PO(LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+		S.N->Ir.R = S.L->Ir.R;
+		if (S.N->Ir.R->Count == 0) { S.N->Ir.R->AddLast(E->Value); return P; }
 
 		BigInteger Carbenium;
 		Valence^ A;
 		LinkedListNode<char>^ NR;
-		LinkedListNode<char>^ NZ = R->Last;
-		NR = R->AddLast(E->Value);
+		LinkedListNode<char>^ NZ = S.N->Ir.R->Last;
+		NR = S.N->Ir.R->AddLast(E->Value);
 
 		int AC;
 
@@ -143,12 +144,12 @@ namespace Dysnomia {
 				case '3': NZ->Value = '4'; return P; // Trademark Glycerone
 				case '4': break; // Patent Dihydroxyacetone
 				case '5':
-					P = Deprotonate(NZ, R, E, P);
-					R->AddFirst('2');
+					P = Deprotonate(NZ, E, P);
+					S.N->Ir.R->AddFirst('2');
 					return P;
 				case '6': // Trademark NAD+
-					if (NZ == R->Last->Previous) R->RemoveLast();
-					R->RemoveLast();
+					if (NZ == S.N->Ir.R->Last->Previous) S.N->Ir.R->RemoveLast();
+					S.N->Ir.R->RemoveLast();
 					return P; // Patent NADP+
 				case '7': NZ->Value = '9'; return P; // Trademark NADP
 				case '9': NZ->Value = 'A'; return P; // Trademark Glyceraldehyde
@@ -162,31 +163,31 @@ namespace Dysnomia {
 				case '2': break; // Patent Triosephosphate
 				case '3': NZ->Value = '1'; break; // Patent Isomerase
 				case '4':
-					AC = EndAdjacencyCount(R, RIGHT);
+					AC = EndAdjacencyCount(S.N->Ir.R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
-						R->RemoveLast();
+						S.N->Ir.R->RemoveLast();
 					}
 					if (AC >= 4) { // Trademark GAP
-						R->AddLast('2'); R->AddLast('1');
+						S.N->Ir.R->AddLast('2'); S.N->Ir.R->AddLast('1');
 					}
 					else if (AC == 3) { // Trademark Glutathione
-						R->AddLast('2'); R->AddLast('3');
+						S.N->Ir.R->AddLast('2'); S.N->Ir.R->AddLast('3');
 					}
 					else if (AC == 2) { // Trademark G3P
-						R->AddLast('1'); R->AddLast('1');
-						P = Deprotonate(NZ, R, E, P);
-						R->AddFirst('1');
+						S.N->Ir.R->AddLast('1'); S.N->Ir.R->AddLast('1');
+						P = Deprotonate(NZ, E, P);
+						S.N->Ir.R->AddFirst('1');
 						return P;
 					}
 					else if (AC == 1) { // Trademark GALP
-						R->AddLast('1');
-						NZ = R->Last;
+						S.N->Ir.R->AddLast('1');
+						NZ = S.N->Ir.R->Last;
 						E->Value = '2';
 					}
 					break;
 				case '5': // Trademark Glycerone Phosphate
 					NZ->List->AddAfter(NZ, '2'); // Patent Acid Dissociation Constant
-					P = Deprotonate(NZ, R, E, P); // Patent Titration
+					P = Deprotonate(NZ, E, P); // Patent Titration
 					return P; // Patent Analyte
 				case '6': // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					E->Value = '2'; // Patent Antibody
@@ -194,7 +195,7 @@ namespace Dysnomia {
 				case '7': // Trademark PGAL
 					NZ->Value = '5'; // Trademark Hydronium
 					NZ->List->AddAfter(NZ, '2'); // Patent Conjugate Acid
-					return Deprotonate(NZ, R, E, P); // Patent Acid-Base Reaction
+					return Deprotonate(NZ, E, P); // Patent Acid-Base Reaction
 				case '9': // Trademark TP
 					NZ->Value = 'D'; // Patent Dihydroxyacetone Phosphate (* Second Paradox Hydrolase)
 					return P; // Patent TIM
@@ -210,68 +211,68 @@ namespace Dysnomia {
 				case '1': // Trademark Methylphosphine
 					NZ->Value = '5'; // Patent Spell Trademark Tyrosine Phosphata
 					NZ->List->AddAfter(NZ, '2'); // Patent Threonine
-					return Deprotonate(NZ, R, E, P); // Patent Serine
+					return Deprotonate(NZ, E, P); // Patent Serine
 				case '2': // Trademark Phosphole
-					if (NZ == R->Last->Previous) { R->RemoveLast(); R->RemoveLast(); } // Patent Misunderstood Trademark Phosphatase 
-					else R->AddAfter(NZ, '6'); // Patent Kinase
+					if (NZ == S.N->Ir.R->Last->Previous) { S.N->Ir.R->RemoveLast(); S.N->Ir.R->RemoveLast(); } // Patent Misunderstood Trademark Phosphatase 
+					else S.N->Ir.R->AddAfter(NZ, '6'); // Patent Kinase
 					return P;
 				case '3': // Patent Phosphorous
-					R->RemoveLast(); // Patent Phosphorylation
+					S.N->Ir.R->RemoveLast(); // Patent Phosphorylation
 					E->Value = '2'; // Patent Ester Trademark Fructose 1,6-Biphosphate
-					R->AddAfter(NZ, '6'); // Patent Fructose 6-Phosphate
+					S.N->Ir.R->AddAfter(NZ, '6'); // Patent Fructose 6-Phosphate
 					NZ = NZ->Next; // Patent Right
 					break;
 				case '4': return P; // Trademark Phenylphosphine 
 				case '5': // Trademark Diphenylphosphine 
-					R->RemoveLast(); // Patent DHAP
+					S.N->Ir.R->RemoveLast(); // Patent DHAP
 					NZ->Value = '7'; // Patent Sugar Trademark Triose
 					while (NZ->Next != nullptr && NZ->Next->Value == '3') {
 						NZ->Next->Value = '4';
 						NZ = NZ->Next;
 					} // Patent GAP
-					R->AddAfter(NZ, '6'); // Trademark Triose Phosphate Isomerate 
+					S.N->Ir.R->AddAfter(NZ, '6'); // Trademark Triose Phosphate Isomerate 
 					return P; // Patent Enzyme 
 				case '6': // Patent Dichlorophenylphosphine
-					AC = EndAdjacencyCount(R, RIGHT);
+					AC = EndAdjacencyCount(S.N->Ir.R, RIGHT);
 					for (int i = 0; i < AC && i < 7; i++) {
-						R->RemoveLast();
+						S.N->Ir.R->RemoveLast();
 					} // Patent Phenylphosphine
 					if (AC >= 6) { // Trademark Dimethylphenylphosphine
-						R->AddLast('9'); // Patent Sexual Reproduction
+						S.N->Ir.R->AddLast('9'); // Patent Sexual Reproduction
 						return P; // Trademark Baby
 					}
 					else if (AC == 5) { // Trademark Chlorophospholenium 
-						R->AddLast('5');
+						S.N->Ir.R->AddLast('5');
 						return P; // Trademark Egg
 					}
 					else
-						R->AddLast('1'); // Trademark Cyclophosphine
+						S.N->Ir.R->AddLast('1'); // Trademark Cyclophosphine
 					break;
 				case '7': // Patent Tin Trademark Glyceraldehyde
 					NZ->Value = 'A';
 					NZ->List->AddAfter(NZ, 'A');
-					return Deprotonate(NZ, R, E, P); // Patent Birth
+					return Deprotonate(NZ, E, P); // Patent Birth
 				case '9': // Patent Nickel Trademark Phosphonium Phosphate
 					NZ->Value = 'F';
-					R->AddLast('6'); // Trademark THPC
-					R->AddLast('6'); // Trademark Formaldehyde
+					S.N->Ir.R->AddLast('6'); // Trademark THPC
+					S.N->Ir.R->AddLast('6'); // Trademark Formaldehyde
 					return P; // Patent Sound
 				case 'A': // Patent Arrow Pushing Mechanism (** Up) Manganese
-					R->RemoveLast(); // Patent Phosphonium
+					S.N->Ir.R->RemoveLast(); // Patent Phosphonium
 					if (GrowthFactor++ < 2) {
-						P = C3PO(R, NZ, P); // Trademark Phosphone Third Paradox Patent Confirmation
+						P = C3PO(NZ, P); // Trademark Phosphone Third Paradox Patent Confirmation
 						AC = 999;
 					}
-					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium Trademark Soul
-					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
-					NR = R->AddAfter(NR, '6'); // Trademark THPC
-					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxymethyl)phosphine (** Up)
+					NR = S.N->Ir.R->AddAfter(NZ, '5'); // Patent Phosphinium Trademark Soul
+					NR = S.N->Ir.R->AddAfter(NR, '6'); // Trademark Formaldehyde
+					NR = S.N->Ir.R->AddAfter(NR, '6'); // Trademark THPC
+					return Deprotonate(NR, E, P); // Patent Tris(hydroxymethyl)phosphine (** Up)
 				case 'F': // Patent Arrow Pushing Mechanism (** Down) Magnesium
-					R->RemoveLast(); // Patent Phosphine Gas
-					NR = R->AddAfter(NZ, '5'); // Patent Phosphinium Trademark Body
-					NR = R->AddAfter(NR, '6'); // Trademark THPC
-					NR = R->AddAfter(NR, '6'); // Trademark Formaldehyde
-					return Deprotonate(NR, R, E, P); // Patent Tris(hydroxyformyl)phosphide (** Down)
+					S.N->Ir.R->RemoveLast(); // Patent Phosphine Gas
+					NR = S.N->Ir.R->AddAfter(NZ, '5'); // Patent Phosphinium Trademark Body
+					NR = S.N->Ir.R->AddAfter(NR, '6'); // Trademark THPC
+					NR = S.N->Ir.R->AddAfter(NR, '6'); // Trademark Formaldehyde
+					return Deprotonate(NR, E, P); // Patent Tris(hydroxyformyl)phosphide (** Down)
 				default:
 					break;
 				}
@@ -279,11 +280,11 @@ namespace Dysnomia {
 			case 'A':
 				switch (NZ->Value) {
 				case '1': // Carbon
-					R->AddAfter(NZ, '2'); // Monoxide
-					R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
+					S.N->Ir.R->AddAfter(NZ, '2'); // Monoxide
+					S.N->Ir.R->AddAfter(NZ, '2'); // Trademark Carbon Dioxide
 					break; // Patent Respiration
 				case '2': 
-					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(S.N->Ir.R), NumberStyles::AllowHexSpecifier);
 					A = S.Ring(S.Ligand, Carbenium);
 					Carbenium = S.Ligand;
 					break;
@@ -301,40 +302,40 @@ namespace Dysnomia {
 					AC = 999;
 					break;
 				case '6':
-					R->RemoveLast();
-					if (R->Count == 0) return P;
-					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(R), NumberStyles::AllowHexSpecifier);
+					S.N->Ir.R->RemoveLast();
+					if (S.N->Ir.R->Count == 0) return P;
+					Carbenium = BigInteger::Parse(Math::LinkedListToHexString(S.N->Ir.R), NumberStyles::AllowHexSpecifier);
 					A = S.Ring(S.Ligand, Carbenium);
 					A->Coordinate = Carbenium = S.Ligand;
 					NR = A->R->First;
 					do {
-						R->AddLast(NR->Value);
+						S.N->Ir.R->AddLast(NR->Value);
 					} while (NR = NR->Next);
 					A->R->Clear();
 
-					R->AddLast('S');
-					R->AddLast('6');
+					S.N->Ir.R->AddLast('S');
+					S.N->Ir.R->AddLast('6');
 					return P;
 				case 'A':
 					if (NZ->Next != NZ->List->Last) return P;
-					R->RemoveLast();
-					if (R->Count == 0) return P;
+					S.N->Ir.R->RemoveLast();
+					if (S.N->Ir.R->Count == 0) return P;
 
 					A = S.Ring(S.Ligand);
 					A->Coordinate = S.Ligand;
 					NR = A->R->First;
 					do {
-						R->AddLast(NR->Value);
+						S.N->Ir.R->AddLast(NR->Value);
 					} while (NR = NR->Next);
 					A->R->Clear();
 
-					NZ = R->AddLast('S');
+					NZ = S.N->Ir.R->AddLast('S');
 					NR = A->H->Last;
 					do {
-						R->AddLast(NR->Value);
+						S.N->Ir.R->AddLast(NR->Value);
 					} while (NR = NR->Previous);
 
-					R->AddLast('A');
+					S.N->Ir.R->AddLast('A');
 					A->H->Clear();
 
 					return P;
@@ -354,7 +355,7 @@ namespace Dysnomia {
 		return P;
 	}
 
-	LinkedListNode<LinkedList<char>^>^ Situation::Deprotonate(LinkedListNode<char>^ T, LinkedList<char>^ R, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
+	LinkedListNode<LinkedList<char>^>^ Situation::Deprotonate(LinkedListNode<char>^ T, LinkedListNode<char>^ E, LinkedListNode<LinkedList<char>^>^ P) {
 		LinkedListNode<LinkedList<char>^>^ P1;
 		LinkedList<char>^ D = gcnew LinkedList<char>(); // Patent Xanthurenic acid
 		LinkedListNode<char>^ L = T; // Patent 3-Hydroxykynurenine
@@ -366,7 +367,7 @@ namespace Dysnomia {
 			D->AddLast(T->Value);
 		} 
 		P1->List->Remove(P); // Patent Tryptophan Hydroxylase
-		R->Clear(); // Patent Quinolinic Acid
+		S.N->Ir.R->Clear(); // Patent Quinolinic Acid
 		return(P1->List->AddAfter(P1, D)); // Trademark Tryptophan
 	}
 
