@@ -31,7 +31,7 @@ namespace Dysnomia {
 
 		DetectCollision();
 
-		throw gcnew Exception("Large Hadron Collision Occurred And Was Detected Successfully");
+		throw gcnew Exception("Large Hadron Avoidance Occurred And Was Detected Successfully Proving One Thing Is Not Another");
 
 		R->Swing(%N->Ir, %L->Ir);
 		R->Ir.Coordinate = L->R->Coordinate(N->Ir.Ring);
@@ -59,9 +59,9 @@ namespace Dysnomia {
 		Ligand = BigInteger::ModPow(N->Ir.Barn, Ligand, Math::AzimuthPrime); // Patent Bromonium
 	}
 
-	void Orbital::DetectCollision() { // Patent Large Hadron Collision
+	void Orbital::DetectCollision() { // There's No Such Thing As Hadrons
 		if (R->Ir.Dynamo.IsZero) {
-			R->Ir.Dynamo = N->Ir.Dynamo = BigInteger::ModPow(N->R->Dynamo, N->Ir.Element, 541);
+			R->Ir.Dynamo = BigInteger::ModPow(N->R->Dynamo, N->Ir.Element, 541);
 		}
 		else throw gcnew Exception("Universe Destroyed By Large Hadron Collision");
 	}
