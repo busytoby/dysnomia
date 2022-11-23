@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tEZ5HELFVnzlboh7f91C/bB0MiCIKtKVvIlHy4mdDC2QLNO50aEAiBk4Zqg39p6HofGousBpo/trcNCmrngAeA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mariarahel\\source\\repos\\dysnomia\\vs2022\\Salt\\Salt.vcxproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mariarahel\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.27\\microsoft.windows.sdk.net.ref.10.0.22621.27.nupkg.sha512"
+  ],
+  "logs": []
+}
