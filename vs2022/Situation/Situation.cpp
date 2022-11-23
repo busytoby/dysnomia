@@ -66,7 +66,7 @@ namespace Dysnomia {
 		S.L->Ir.L = S.L->Ir.H->First;
 		S.R->Ir.L = S.R->Ir.R->First;
 
-		S.M = gcnew LinkedList<LinkedList<Int16>^>();
+		//S.M = gcnew LinkedList<LinkedList<Int16>^>();
 		S.L->Ir.R = gcnew LinkedList<Int16>();
 
 		while (S.L->Ir.L != nullptr) {

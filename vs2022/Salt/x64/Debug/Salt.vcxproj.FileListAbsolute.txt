@@ -1,0 +1,5 @@
+C:\Users\mariarahel\source\repos\dysnomia\vs2022\x64\Debug\Ijwhost.dll
+C:\Users\mariarahel\source\repos\dysnomia\vs2022\x64\Debug\Salt.deps.json
+C:\Users\mariarahel\source\repos\dysnomia\vs2022\x64\Debug\Salt.runtimeconfig.json
+C:\Users\mariarahel\source\repos\dysnomia\vs2022\Salt\x64\Debug\Salt.vcxproj.AssemblyReference.cache
+C:\Users\mariarahel\source\repos\dysnomia\vs2022\Salt\x64\Debug\Salt.genruntimeconfig.cache
