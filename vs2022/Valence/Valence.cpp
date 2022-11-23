@@ -32,23 +32,23 @@ namespace Dysnomia {
 	}
 
 	void Valence::Pull(Valence% V) {
-		if (H == nullptr) H = gcnew LinkedList<Int16>();
+		if (R == nullptr) R = gcnew LinkedList<Int16>();
 
 		V.L = V.H->First;
 		while (V.L) {
-			L = H->AddLast(7);
+			L = R->AddLast(7);
 			while (V.L && V.L->Value < 14) {
-				L = H->AddAfter(L, V.L->Value);
+				L = R->AddAfter(L, V.L->Value);
 				V.L = V.L->Next;
 				if (V.L)
 					V.H->Remove(V.L->Previous);
 				else V.H->RemoveLast();
 			}
 			if (V.L && V.L->Value == 15 && V.L->Next && V.L->Next->Value == 15) {
-				L = H->AddAfter(L, V.L->Value);
+				L = R->AddAfter(L, V.L->Value);
 				V.L = V.L->Next;
 				V.H->Remove(V.L->Previous);
-				L = H->AddAfter(L, V.L->Value);
+				L = R->AddAfter(L, V.L->Value);
 				V.L = V.L->Next;
 				if (V.L)
 					V.H->Remove(V.L->Previous);
@@ -56,7 +56,7 @@ namespace Dysnomia {
 				continue;
 			}
 			while (V.L && V.L->Value >= 14) {
-				L = H->AddAfter(L, V.L->Value);
+				L = R->AddAfter(L, V.L->Value);
 				V.L = V.L->Next;
 				if (V.L)
 					V.H->Remove(V.L->Previous);
@@ -64,7 +64,7 @@ namespace Dysnomia {
 			}
 		}
 		V.L = V.H->First;
-		L = H->First;
+		L = R->First;
 
 		if (V.H->Count > 0) throw gcnew Exception("Fallout Failure");
 	}
