@@ -53,3 +53,6 @@
 /vs2022/Valence/Valence.vcxproj.user
 /vs2022/Valence/Metal.vcxproj.user
 /vs2022/Valence/Metal.vcxproj.filters
+/vs2022/Salt/obj
+/vs2022/Salt/x64/Debug
+/vs2022/Salt/Salt.vcxproj.filters
