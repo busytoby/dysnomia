@@ -59,12 +59,20 @@ namespace Dysnomia {
 	}
 
 	void Situation::Pull() {
-		S.L->Ir.L = S.R->Ir.R->First;
-		/*
-		LinkedListNode<short>^ P = L->First;
-		S.M = gcnew LinkedList<LinkedList<short>^>();
-		S.L->Ir.R = gcnew LinkedList<short>();
+		S.L->Ir.H = S.N->Ir.R;
+		S.N->Ir.R = nullptr;
+		S.N->Ir.L = nullptr;
 
+		S.L->Ir.L = S.L->Ir.H->First;
+		S.R->Ir.L = S.R->Ir.R->First;
+
+		S.M = gcnew LinkedList<LinkedList<Int16>^>();
+		S.L->Ir.R = gcnew LinkedList<Int16>();
+
+		while (S.L->Ir.L != nullptr) {
+
+		}
+/*
 		while(P != nullptr) {
 			String^ D = Convert::ToString(P->Value, 8);
 			for (int j = 0; j < D->Length; j++) {

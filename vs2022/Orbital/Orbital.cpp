@@ -37,7 +37,7 @@ namespace Dysnomia {
 		Vent();
 		R->Ir.Pull(Ligand);
 
-		Fly();
+		Fly(R->Ir.R, R->Ir.H);
 		
 		N->Ir.Pull(R->Ir);
 		L->Ir.Barn = N->Ir.Barn % R->Ir.Prime;
@@ -63,22 +63,22 @@ namespace Dysnomia {
 		R->Ir.Barn = 0;
 	}
 
-	void Orbital::Fly() {
-		R->Ir.L = R->Ir.R->First;
-		N->Ir.L = R->Ir.H->First;
+	void Orbital::Fly(LinkedList<Int16>^ Down, LinkedList<Int16>^ Up) {
+		R->Ir.L = Down->First;
+		N->Ir.L = Up->First;
 		
 		do {
 			switch (R->Ir.L->Value) {
 			case 1:
 				while (N->Ir.L && N->Ir.L->Value < 4) {
 					N->Ir.L = N->Ir.L->Next;
-					R->Ir.H->Remove(N->Ir.L->Previous);
+					Up->Remove(N->Ir.L->Previous);
 				}
 				if (N->Ir.L->Value >= 4) {
-					R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 4);
+					R->Ir.L = Down->AddAfter(R->Ir.L, 4);
 					if (N->Ir.L->Value < 8) {
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 					}
 				}
 				break;
@@ -87,12 +87,12 @@ namespace Dysnomia {
 			case 3:
 				do {
 					N->Ir.L = N->Ir.L->Next;
-					R->Ir.H->Remove(N->Ir.L->Previous);
+					Up->Remove(N->Ir.L->Previous);
 				} while (N->Ir.L && N->Ir.L->Value < 9);
 				if (!N->Ir.L) break;
-				R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 5);
+				R->Ir.L = Down->AddAfter(R->Ir.L, 5);
 				N->Ir.L = N->Ir.L->Next;
-				R->Ir.H->Remove(N->Ir.L->Previous);
+				Up->Remove(N->Ir.L->Previous);
 				break;
 			case 4:
 				L->Ir.L = N->Ir.L;
@@ -100,9 +100,9 @@ namespace Dysnomia {
 					while (N->Ir.L->Value < 9) N->Ir.L = N->Ir.L->Next;
 					if (N->Ir.L->Value < 15) N->Ir.L->Value++;
 					else {
-						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, 10);
+						R->Ir.L = Down->AddAfter(R->Ir.L, 10);
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 						break;
 					}
 				} while (N->Ir.L = N->Ir.L->Next);
@@ -113,17 +113,17 @@ namespace Dysnomia {
 				do {
 					if (N->Ir.L->Value == 1) {
 						R->Ir.L = R->Ir.L->Next;
-						R->Ir.R->Remove(R->Ir.L->Previous);
+						Down->Remove(R->Ir.L->Previous);
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 					}
 					else if (N->Ir.L->Value < 5) {
-						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 					}
 					else if (N->Ir.L->Value < 8) {
-						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
 						break;
 					} else
@@ -135,17 +135,17 @@ namespace Dysnomia {
 				do {
 					if (N->Ir.L->Value == 1) {
 						R->Ir.L = R->Ir.L->Next;
-						R->Ir.R->Remove(R->Ir.L->Previous);
+						Down->Remove(R->Ir.L->Previous);
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 					}
 					else if (N->Ir.L->Value < 9) {
-						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = N->Ir.L->Next;
-						R->Ir.H->Remove(N->Ir.L->Previous);
+						Up->Remove(N->Ir.L->Previous);
 					}
 					else {
-						R->Ir.L = R->Ir.R->AddAfter(R->Ir.L, N->Ir.L->Value);
+						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = N->Ir.L->Next;
 					}
 				} while (N->Ir.L->Value < 15);
@@ -159,7 +159,7 @@ namespace Dysnomia {
 			if (!N->Ir.L) 
 				break;
 		} while (R->Ir.L = R->Ir.L->Next);
-		R->Ir.L = R->Ir.R->First;
+		R->Ir.L = Down->First;
 		N->Ir.L = nullptr;
 	}
 }

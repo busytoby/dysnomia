@@ -23,6 +23,6 @@ namespace Dysnomia {
 		void Pull();
 		void DetectCollision();
 		void Vent();
-		void Fly();
+		void Fly(LinkedList<Int16>^, LinkedList<Int16>^);
 	};
 }
