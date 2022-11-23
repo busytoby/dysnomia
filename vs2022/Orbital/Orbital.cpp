@@ -37,6 +37,8 @@ namespace Dysnomia {
 		Vent();
 		R->Ir.Pull(Ligand);
 
+		R->Ir.L = R->Ir.R->First;
+		N->Ir.L = R->Ir.H->First;
 		Fly(R->Ir.R, R->Ir.H);
 		
 		N->Ir.Pull(R->Ir);
@@ -64,8 +66,9 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Fly(LinkedList<Int16>^ Down, LinkedList<Int16>^ Up) {
-		R->Ir.L = Down->First;
-		N->Ir.L = Up->First;
+		//  Initialize These Before Calling
+		//		R->Ir.L = Down->First;
+		//		N->Ir.L = Up->First;
 		
 		do {
 			switch (R->Ir.L->Value) {
