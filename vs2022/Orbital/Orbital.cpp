@@ -38,8 +38,11 @@ namespace Dysnomia {
 		R->Ir.Pull(Ligand);
 
 		Fly();
-
+		R->Ir.Barn = 0;
+		
+		N->Ir.Pull(R->Ir);
 		L->Ir.Barn = N->Ir.Barn % R->Ir.Prime;
+		R->Ir.L = R->Ir.R->First;
 		R->Ir.Dynamo = 0;
 	}
 

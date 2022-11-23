@@ -16,6 +16,7 @@ namespace Dysnomia {
 		Ion^ L;
 		Ion^ N;
 		LinkedList<LinkedList<char>^>^ M;
+		LinkedListNode<LinkedList<char>^>^ I; // Focus
 
 		void Ring(BigInteger);
 		void Ring(BigInteger, BigInteger);

@@ -3,7 +3,8 @@
 #include "Valence.h"
 
 namespace Dysnomia {
-	Valence::Valence() {}
+	Valence::Valence() {
+	}
 
 	Valence::Valence(const Valence% Copier) {
 		Foundation = Copier.Foundation;
@@ -13,11 +14,7 @@ namespace Dysnomia {
 		Ring = Copier.Ring;
 		Barn = Copier.Barn;
 		Coordinate = Copier.Coordinate;
-		Prime = Copier.Prime;
-
-		R = Copier.R;
-		H = Copier.H;
-		I = Copier.I;
+		Prime = Copier.Prime;	
 	}
 
 	void Valence::Push() {
@@ -34,9 +31,47 @@ namespace Dysnomia {
 		}
 	}
 
+	void Valence::Pull(Valence% V) {
+		if (H == nullptr) H = gcnew LinkedList<Int16>();
+
+		V.L = V.H->First;
+		while (V.L) {
+			L = H->AddLast(7);
+			while (V.L && V.L->Value < 14) {
+				L = H->AddAfter(L, V.L->Value);
+				V.L = V.L->Next;
+				if (V.L)
+					V.H->Remove(V.L->Previous);
+				else V.H->RemoveLast();
+			}
+			if (V.L && V.L->Value == 15 && V.L->Next && V.L->Next->Value == 15) {
+				L = H->AddAfter(L, V.L->Value);
+				V.L = V.L->Next;
+				V.H->Remove(V.L->Previous);
+				L = H->AddAfter(L, V.L->Value);
+				V.L = V.L->Next;
+				if (V.L)
+					V.H->Remove(V.L->Previous);
+				else V.H->RemoveLast();
+				continue;
+			}
+			while (V.L && V.L->Value >= 14) {
+				L = H->AddAfter(L, V.L->Value);
+				V.L = V.L->Next;
+				if (V.L)
+					V.H->Remove(V.L->Previous);
+				else V.H->RemoveLast();
+			}
+		}
+		V.L = V.H->First;
+		L = H->First;
+
+		if (V.H->Count > 0) throw gcnew Exception("Fallout Failure");
+	}
+
 	void Valence::Pull(BigInteger L) {
 		if (H == nullptr) H = gcnew LinkedList<Int16>();
-		if (H->Count != 0) throw gcnew Exception("Valence Is Already Pushed");
+		if (H->Count != 0) throw gcnew Exception("Valence Is Already Pulled");
 		array<Byte>^ V = L.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {

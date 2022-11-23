@@ -23,11 +23,11 @@ namespace Dysnomia {
 		LinkedList<Int16>^ R; // Azimuth
 		LinkedList<Int16>^ H;
 		LinkedListNode<Int16>^ L;
-		LinkedListNode<LinkedList<char>^>^ I; // Focus
 
 		Valence();
 		Valence(const Valence%);
 		void Push();
+		void Pull(Valence%);
 		void Pull(BigInteger);
 	};
 }
