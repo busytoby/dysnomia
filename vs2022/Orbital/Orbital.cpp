@@ -38,7 +38,6 @@ namespace Dysnomia {
 		R->Ir.Pull(Ligand);
 
 		Fly();
-		R->Ir.Barn = 0;
 		
 		N->Ir.Pull(R->Ir);
 		L->Ir.Barn = N->Ir.Barn % R->Ir.Prime;
@@ -61,6 +60,7 @@ namespace Dysnomia {
 	void Orbital::Vent() {
 		Ligand = BigInteger::ModPow(R->Ir.Barn, N->Ir.Ring, Math::AzimuthPrime); // Patent Wind
 		N->Ir.Ring = 0;
+		R->Ir.Barn = 0;
 	}
 
 	void Orbital::Fly() {
