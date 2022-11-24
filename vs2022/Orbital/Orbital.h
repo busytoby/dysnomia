@@ -15,6 +15,8 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ L;
 		Ion^ N;
+		LinkedList<Orbital^>^ D;
+
 
 		void Ring(BigInteger);
 		void Ring(BigInteger, BigInteger);
