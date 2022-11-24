@@ -56,3 +56,4 @@
 /vs2022/Salt/obj
 /vs2022/Salt/x64/Debug
 /vs2022/Salt/Salt.vcxproj.filters
+*.cache
