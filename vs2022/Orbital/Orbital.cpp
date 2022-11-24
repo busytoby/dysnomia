@@ -96,7 +96,11 @@ namespace Dysnomia {
 		R->Ir.L = Down->First;
 		N->Ir.L = Up->First;
 		
+		bool Peptides = false;
+
 		do {
+			if (!Peptides && R->Ir.L->Value > 7)
+				Peptides = true;
 			switch (R->Ir.L->Value) {
 			case 1:
 				while (N->Ir.L && N->Ir.L->Value < 4) {
@@ -160,7 +164,6 @@ namespace Dysnomia {
 				}
 				break;
 			case 6:
-			default:
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 					if (N->Ir.L->Value == 1) {
 						L->Ir.L = R->Ir.L;
@@ -183,9 +186,35 @@ namespace Dysnomia {
 				}
 				N->Ir.L = Up->First;
 				break;
-				/*
 			case 7:
+			default:
+				if (Peptides) {
+					while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
+						if (N->Ir.L->Value == 1) {
+							L->Ir.L = R->Ir.L;
+							R->Ir.L = R->Ir.L->Next;
+							Down->Remove(L->Ir.L);
+							L->Ir.L = N->Ir.L;
+							N->Ir.L = N->Ir.L->Next;
+							Up->Remove(L->Ir.L);
+						}
+						else if (N->Ir.L->Value < 11) {
+							R->Ir.L = Down->AddAfter(R->Ir.L, 11);
+							L->Ir.L = N->Ir.L;
+							N->Ir.L = N->Ir.L->Next;
+							Up->Remove(L->Ir.L);
+							break;
+						}
+						else {
+							L->Ir.L = N->Ir.L;
+							N->Ir.L = N->Ir.L->Next;
+							Up->Remove(L->Ir.L);
+						}
+					}
+					N->Ir.L = Up->First;
+				}
 				break;
+				/*
 			case 8:
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
