@@ -90,16 +90,6 @@ namespace Dysnomia {
 			Fly(L->Ir.R, R->Ir.R);
 			Fly(N->Ir.R, R->Ir.R);
 		}
-		/*
-				//  Initialize These Before Calling
-				//		R->Ir.L = Down->First;
-				//		N->Ir.L = Up->First;
-				S.Fly(N->Li, S.R->Ir.R);
-			}
-		} while (S.N->Ir.L = S.N->Ir.L->Next);
-	}
-
-	*/
 	}
 
 	void Orbital::Fly(LinkedList<Int16>^ Down, LinkedList<Int16>^ Up) {
@@ -146,7 +136,6 @@ namespace Dysnomia {
 				N->Ir.L = Up->First;
 				break;
 			case 5:
-			default:
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 					if (N->Ir.L->Value == 1) {
 						L->Ir.L = R->Ir.L;
@@ -170,28 +159,31 @@ namespace Dysnomia {
 						N->Ir.L = N->Ir.L->Next;
 				}
 				break;
-/*
 			case 6:
-				L->Ir.L = N->Ir.L;
-				do {
+			default:
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 					if (N->Ir.L->Value == 1) {
+						L->Ir.L = R->Ir.L;
 						R->Ir.L = R->Ir.L->Next;
-						Down->Remove(R->Ir.L->Previous);
+						Down->Remove(L->Ir.L);
+						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
+						Up->Remove(L->Ir.L);
 					}
 					else if (N->Ir.L->Value < 9) {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
+						Up->Remove(L->Ir.L);
 					}
 					else {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = N->Ir.L->Next;
 					}
-				} while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15);
-				if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+				}
+				N->Ir.L = Up->First;
 				break;
+				/*
 			case 7:
 				break;
 			case 8:
