@@ -43,7 +43,9 @@ namespace Dysnomia {
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
  		S.Ring(Carbonium, Carbenium);
 
-		Pull();
+		S.Push();
+
+		//Pull();
 		/*
 		S.R->Ir.R->Clear();
 		S.R->Ir.H->Clear();
@@ -57,38 +59,6 @@ namespace Dysnomia {
 		*/
 		return 0;
 	}
-
-	void Situation::Pull() {
-		S.L->Ir.H = S.N->Ir.R;
-		S.N->Ir.R = nullptr;
-		S.N->Ir.L = nullptr;
-
-		S.L->Ir.L = S.L->Ir.H->First;
-		S.R->Ir.L = S.R->Ir.R->First;
-
-		//S.M = gcnew LinkedList<LinkedList<Int16>^>();
-		S.L->Ir.R = gcnew LinkedList<Int16>();
-
-		while (S.L->Ir.L != nullptr) {
-
-		}
-/*
-		while(P != nullptr) {
-			String^ D = Convert::ToString(P->Value, 8);
-			for (int j = 0; j < D->Length; j++) {
-				if (D[j] == '0') continue;
-				if (D[j] != '7') S.L->Ir.R->AddLast((short) D[j]);
-				else {
-					S.M->AddFirst(S.L->Ir.R);
-					S.L->Ir.R = gcnew LinkedList<short>();
-				}
-			}
-			P = P->Next;
-		}
-		return S.M;
-		*/
-	}
-
 
 	/*
 	bool Situation::Ln2() {

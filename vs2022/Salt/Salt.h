@@ -8,7 +8,11 @@ namespace Dysnomia {
 	{
 	public:
 		LinkedList<Int16>^ Li;
-		LinkedListNode<LinkedList<Int16>^>^ Ti;
-		// TODO: Add your methods for this class here.
+		LinkedListNode<Int16>^ Ti;
+		
+		Salt();
+		Salt(LinkedList<Int16>^);
+
+		LinkedListNode<Int16>^ RemoveAndAdvance(LinkedListNode<Int16>^); // unused, needs rename
 	};
 }

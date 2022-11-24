@@ -65,74 +65,112 @@ namespace Dysnomia {
 		R->Ir.Barn = 0;
 	}
 
+	void Orbital::Push() {
+		L->Ir.L = N->Ir.R->First;
+		R->Ir.L = R->Ir.R->First;
+
+		// First Pull
+		if (L->Ir.R == nullptr)
+			L->Ir.R = gcnew LinkedList<Int16>();
+		else throw gcnew Exception("LR Remainder");
+		if(N->Ir.H == nullptr)
+			N->Ir.H = gcnew LinkedList<Int16>();
+		else throw gcnew Exception("NH Remainder");
+
+		while (N->Ir.L = N->Ir.R->First) {
+			if (N->Ir.L->Value == 0) {
+				N->Ir.R->RemoveFirst();
+				continue;
+			}
+			L->Ir.R->AddFirst(N->Ir.L->Value);
+			N->Ir.R->RemoveFirst();
+
+			if (N->Ir.L->Value != 7) continue;
+
+			Fly(L->Ir.R, R->Ir.R);
+			Fly(N->Ir.R, R->Ir.R);
+		}
+		/*
+				//  Initialize These Before Calling
+				//		R->Ir.L = Down->First;
+				//		N->Ir.L = Up->First;
+				S.Fly(N->Li, S.R->Ir.R);
+			}
+		} while (S.N->Ir.L = S.N->Ir.L->Next);
+	}
+
+	*/
+	}
+
 	void Orbital::Fly(LinkedList<Int16>^ Down, LinkedList<Int16>^ Up) {
-		//  Initialize These Before Calling
-		//		R->Ir.L = Down->First;
-		//		N->Ir.L = Up->First;
+		R->Ir.L = Down->First;
+		N->Ir.L = Up->First;
 		
 		do {
 			switch (R->Ir.L->Value) {
 			case 1:
 				while (N->Ir.L && N->Ir.L->Value < 4) {
+					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
-					Up->Remove(N->Ir.L->Previous);
+					Up->Remove(L->Ir.L);
 				}
-				if (N->Ir.L->Value >= 4) {
+				if (N->Ir.L && N->Ir.L->Value >= 4) {
 					R->Ir.L = Down->AddAfter(R->Ir.L, 4);
 					if (N->Ir.L->Value < 8) {
+						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
+						Up->Remove(L->Ir.L);
 					}
 				}
 				break;
 			case 2:
 				break;
 			case 3:
-				do {
+				while (N->Ir.L && N->Ir.L->Value < 9) {
+					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
-					Up->Remove(N->Ir.L->Previous);
-				} while (N->Ir.L && N->Ir.L->Value < 9);
-				if (!N->Ir.L) break;
+					Up->Remove(L->Ir.L);
+				}
 				R->Ir.L = Down->AddAfter(R->Ir.L, 5);
-				N->Ir.L = N->Ir.L->Next;
-				Up->Remove(N->Ir.L->Previous);
 				break;
 			case 4:
-				L->Ir.L = N->Ir.L;
-				do {
-					while (N->Ir.L->Value < 9) N->Ir.L = N->Ir.L->Next;
+				while (N->Ir.L) {
+					while (N->Ir.L && N->Ir.L->Value < 9) N->Ir.L = N->Ir.L->Next;
+					if (!N->Ir.L) break;
 					if (N->Ir.L->Value < 15) N->Ir.L->Value++;
 					else {
 						R->Ir.L = Down->AddAfter(R->Ir.L, 10);
-						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
 						break;
 					}
-				} while (N->Ir.L = N->Ir.L->Next);
-				if(L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+				}
+				N->Ir.L = Up->First;
 				break;
 			case 5:
-				L->Ir.L = N->Ir.L;
-				do {
+			default:
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 					if (N->Ir.L->Value == 1) {
+						L->Ir.L = R->Ir.L;
 						R->Ir.L = R->Ir.L->Next;
-						Down->Remove(R->Ir.L->Previous);
+						Down->Remove(L->Ir.L);
+						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
+						Up->Remove(L->Ir.L);
 					}
 					else if (N->Ir.L->Value < 5) {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
-						Up->Remove(N->Ir.L->Previous);
+						Up->Remove(L->Ir.L);
 					}
 					else if (N->Ir.L->Value < 8) {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
-						if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
+						N->Ir.L = Up->First;
 						break;
 					} else
 						N->Ir.L = N->Ir.L->Next;
-				} while (N->Ir.L->Value < 15);
+				}
 				break;
+/*
 			case 6:
 				L->Ir.L = N->Ir.L;
 				do {
@@ -151,18 +189,22 @@ namespace Dysnomia {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = N->Ir.L->Next;
 					}
-				} while (N->Ir.L->Value < 15);
+				} while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15);
 				if (L->Ir.L && L->Ir.L->List) N->Ir.L = L->Ir.L;
 				break;
 			case 7:
 				break;
+			case 8:
+				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				Up->Remove(N->Ir.L);
+				return;
 			default:
-				throw gcnew Exception("Universe Totally Busted");
+				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				Up->Remove(N->Ir.L);
+				return;
+				*/
 			}
-			if (!N->Ir.L) 
-				break;
+			if (!R->Ir.L || !N->Ir.L) break;
 		} while (R->Ir.L = R->Ir.L->Next);
-		R->Ir.L = Down->First;
-		N->Ir.L = nullptr;
 	}
 }

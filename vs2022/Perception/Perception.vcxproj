@@ -151,9 +151,6 @@
     <ProjectReference Include="..\Orbital\Orbital.vcxproj">
       <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Salt\Salt.vcxproj">
-      <Project>{bda96110-4b2d-4aae-9486-318c025b17e1}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Situation\Situation.vcxproj">
       <Project>{7b19856d-fc70-44c4-8c6c-4f3eaf8b0b91}</Project>
     </ProjectReference>

@@ -15,12 +15,11 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ L;
 		Ion^ N;
-		LinkedList<Salt^>^ M;
-		LinkedListNode<LinkedList<Int16>^>^ As; // Focus
 
 		void Ring(BigInteger);
 		void Ring(BigInteger, BigInteger);
 		void Pull();
+		void Push();
 		void DetectCollision();
 		void Vent();
 		void Fly(LinkedList<Int16>^, LinkedList<Int16>^);
