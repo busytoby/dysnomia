@@ -89,6 +89,8 @@ namespace Dysnomia {
 
 			Fly(L->Ir.R, R->Ir.R);
 			Fly(N->Ir.R, R->Ir.R);
+			if (R->Ir.R->Count == 0)
+				Fly(L->Ir.R, N->Ir.R);
 		}
 	}
 
@@ -96,6 +98,8 @@ namespace Dysnomia {
 		R->Ir.L = Down->First;
 		N->Ir.L = Up->First;
 		
+		if (!R->Ir.L || !N->Ir.L) return;
+
 		bool Peptides = false;
 
 		do {
@@ -187,7 +191,6 @@ namespace Dysnomia {
 				N->Ir.L = Up->First;
 				break;
 			case 7:
-			default:
 				if (Peptides) {
 					while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 						if (N->Ir.L->Value == 1) {
@@ -214,11 +217,13 @@ namespace Dysnomia {
 					N->Ir.L = Up->First;
 				}
 				break;
-				/*
 			case 8:
+			default:
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
-				return;
+				N->Ir.L = Up->First;
+				break;
+			/*
 			default:
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
