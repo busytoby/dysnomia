@@ -91,6 +91,7 @@ namespace Dysnomia {
 			Fly(N->Ir.R, R->Ir.R);
 			if (R->Ir.R->Count == 0)
 				Fly(L->Ir.R, N->Ir.R);
+			Fly(R->Ir.R, L->Ir.R);
 		}
 	}
 
@@ -101,6 +102,7 @@ namespace Dysnomia {
 		if (!R->Ir.L || !N->Ir.L) return;
 
 		bool Peptides = false;
+		int Blow;
 
 		do {
 			if (!Peptides && R->Ir.L->Value > 7)
@@ -218,17 +220,119 @@ namespace Dysnomia {
 				}
 				break;
 			case 8:
-			default:
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
 				N->Ir.L = Up->First;
 				break;
-			/*
+			case 9:
+				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 19) {
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					L->Ir.L = N->Ir.L;
+					N->Ir.L = N->Ir.L->Next;
+					if (N->Ir.L && N->Ir.L->Value != 12)
+						Up->Remove(L->Ir.L);
+					if (N->Ir.L && N->Ir.L->Value == 14) {
+						Up->AddLast(19);
+					}
+				}
+				if (N->Ir.L && N->Ir.L->Value >= 19) {
+					N->Ir.L->Value++;
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					L->Ir.L = N->Ir.L;
+					N->Ir.L = N->Ir.L->Next;
+				}
+				N->Ir.L = Up->First;
+				break;
+			case 10:
+			case 11:
+				while (N->Ir.L && R->Ir.L) {
+					Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+					if (N->Ir.L && N->Ir.L->Value >= 19) {
+						N->Ir.L->Value++;
+						R->Ir.H->AddLast(N->Ir.L->Value);
+						L->Ir.L = N->Ir.L;
+						N->Ir.L = N->Ir.L->Next;
+						if (N->Ir.L && N->Ir.L->Value == 21) break;
+						if (N->Ir.L && N->Ir.L->Value != 23) continue;
+					}
+					if (!N->Ir.L) return;
+					N->Ir.L = N->Ir.L->Next;
+					if (R->Ir.L->Value == 10) break;
+				}
+				break;
+			case 12:
+				L->Ir.L = N->Ir.L;
+				N->Ir.L = N->Ir.L->Next;
+				Up->Remove(L->Ir.L);
+				break;
+			case 13:
+			case 14:
+				R->Ir.H->AddLast(N->Ir.L->Value);
+				L->Ir.L = N->Ir.L;
+				N->Ir.L = N->Ir.L->Next;
+				Up->Remove(L->Ir.L);
+				if (R->Ir.L->Value == 13) break;
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					N->Ir.L = N->Ir.L->Next;
+				}
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
+					Down->AddLast(N->Ir.L->Value);
+					L->Ir.L = N->Ir.L;
+					N->Ir.L = N->Ir.L->Next;
+					Up->Remove(L->Ir.L);
+				}
+				break;
+			case 15:
+			case 16:
+			case 17:
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					N->Ir.L = N->Ir.L->Next;
+				}
+				Blow = 0;
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
+					Up->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					Up->Remove(N->Ir.L);
+					N->Ir.L = Up->First;
+					if (Blow++ > 999) break;
+				}
+				if (R->Ir.L->Value == 15) break;
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value <= 37) {
+					Up->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(N->Ir.L->Value);
+					L->Ir.L = N->Ir.L;
+					N->Ir.L = N->Ir.L->Next;
+					Up->Remove(L->Ir.L);
+				}
+				N->Ir.L = Up->First;
+				if (R->Ir.L->Value == 16) break;
+				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 99) {
+					Down->AddLast(1);
+					L->Ir.L = N->Ir.L;
+					N->Ir.L = N->Ir.L->Next;
+					Up->Remove(L->Ir.L);
+				}
+				break;
+			case 18:
+				R->Ir.H->AddLast(N->Ir.L->Value);
+				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				Up->Remove(N->Ir.L);
+				N->Ir.L = Up->First;
+				break;
+			case 19:
+				R->Ir.H->AddLast(N->Ir.L->Value);
+				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				Up->AddLast(N->Ir.L->Value);
+				Up->Remove(N->Ir.L);
+				break;
 			default:
+				if(N->Ir.L->Value == 1) Up->AddLast(N->Ir.L->Value);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
 				return;
-				*/
 			}
 			if (!R->Ir.L || !N->Ir.L) break;
 		} while (R->Ir.L = R->Ir.L->Next);

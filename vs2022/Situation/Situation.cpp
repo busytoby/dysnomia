@@ -61,49 +61,6 @@ namespace Dysnomia {
 	}
 
 	/*
-	bool Situation::Ln2() {
-		S.N->Ir.I = S.M->First;
-
-		do {
-			S.L->Ir.I = S.N->Ir.I;
-			while (S.N->Ir.I->Value->Count == 0) {
-				S.L->Ir.R->AddLast('7');
-				S.R->Ir.I = S.N->Ir.I->Next;
-				S.M->Remove(S.N->Ir.I);
-				if (S.R->Ir.I == nullptr)
-					return true;
-				S.N->Ir.I = S.R->Ir.I;
-			}
-
-			LinkedListNode<char>^ E = S.N->Ir.I->Value->First;
-			do {
-				switch (E->Value) {
-				case '2':
-				case '4':
-				case '6':
-					Push(E);
-					break;
-				default:
-					S.L->Ir.R->AddLast(E->Value);
-					break;
-				}
-			} while (E = E->Next);
-
-			if (S.N->Ir.I == S.L->Ir.I) {
-				S.L->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);
-				S.M->Remove(S.N->Ir.I);
-				S.N->Ir.I = S.L->Ir.I;
-			}
-			else {
-				S.N->Ir.I = S.M->AddAfter(S.N->Ir.I, S.L->Ir.R);
-			}
-
-			S.L->Ir.R = gcnew LinkedList<char>();
-		} while (S.N->Ir.I = S.N->Ir.I->Next);
-
-		Threading::Thread::Sleep(1);
-		return true;
-	}
 
 	// Trademark 3-Phosphate Pathways
 	void Situation::Push(LinkedListNode<char>^ E) {
