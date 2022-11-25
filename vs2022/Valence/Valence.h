@@ -29,5 +29,6 @@ namespace Dysnomia {
 		void Push();
 		void Pull(Valence%);
 		void Pull(BigInteger);
+		void Denature();
 	};
 }

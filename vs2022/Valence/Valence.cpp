@@ -30,6 +30,10 @@ namespace Dysnomia {
 		}
 	}
 
+	void Valence::Denature() {
+		// Stub
+	}
+
 	void Valence::Pull(Valence% V) {
 		if (R == nullptr) R = gcnew LinkedList<Int16>();
 
