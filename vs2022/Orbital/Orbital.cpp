@@ -138,7 +138,6 @@ namespace Dysnomia {
 			while ((Up = Eptr->Value->Parent->R->Ir.H->First) && (Eptr->Value->Parent->R->Ir.H->Count > (Eptr->Value->Parent->R->Ir.R->Count * 3.14))) {
 				Eptr->Value->Fly(Eptr->Value->N->Ir.R, Eptr->Value->Parent->R->Ir.H);
 				Eptr->Value->Fly(Eptr->Value->R->Ir.R, Eptr->Value->Parent->R->Ir.H);
-				Eptr->Value->Fly(Eptr->Value->L->Ir.R, Eptr->Value->Parent->R->Ir.H);
 				//Eptr->Value->Parent->R->Ir.H->RemoveFirst();
 			}
 
@@ -148,7 +147,7 @@ namespace Dysnomia {
 
 			Eptr = Eptr->Next;
 		}
-		if (R->Ir.R->Count == 0)
+		if ((Parent == nullptr) && (R->Ir.R->Count == 0))
 			Fly(L->Ir.R, N->Ir.R);
 	}
 
