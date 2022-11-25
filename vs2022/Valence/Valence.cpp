@@ -18,7 +18,7 @@ namespace Dysnomia {
 	}
 
 	void Valence::Push() {
-		if (R == nullptr) R = gcnew LinkedList<Int16>();
+		R = gcnew LinkedList<Int16>();
 		array<Byte>^ V = Barn.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {
@@ -69,7 +69,7 @@ namespace Dysnomia {
 	}
 
 	void Valence::Pull(BigInteger L) {
-		if (H == nullptr) H = gcnew LinkedList<Int16>();
+		H = gcnew LinkedList<Int16>();
 		array<Byte>^ V = L.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {

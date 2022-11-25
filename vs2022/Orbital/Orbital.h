@@ -31,5 +31,6 @@ namespace Dysnomia {
 		void DetectCollision();
 		void Vent();
 		void Fly(LinkedList<Int16>^%, LinkedList<Int16>^%);
+		bool Fry(LinkedListNode<Int16>^%);
 	};
 }

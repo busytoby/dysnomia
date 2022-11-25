@@ -134,6 +134,7 @@ namespace Dysnomia {
 				BigInteger Cation = Math::Hood(Mass);
 				Ring(Cation);
 				D->RemoveFirst();
+				Fly(L->Ir.R, N->Ir.R);
 			}
 		}
 
@@ -366,7 +367,7 @@ namespace Dysnomia {
 				N->Ir.R->AddLast(7);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 19) {
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 					if (N->Ir.L && N->Ir.L->Value != 12)
@@ -376,7 +377,7 @@ namespace Dysnomia {
 					}
 				}
 				if (N->Ir.L && N->Ir.L->Value >= 19) {
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 				}
@@ -388,7 +389,7 @@ namespace Dysnomia {
 				while (N->Ir.L && R->Ir.L) {
 					Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 					if (N->Ir.L && N->Ir.L->Value >= 19) {
-						R->Ir.H->AddLast(++N->Ir.L->Value);
+						if (Fry(N->Ir.L)) return;
 						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
 						if (N->Ir.L && N->Ir.L->Value == 21) break;
@@ -406,13 +407,13 @@ namespace Dysnomia {
 				break;
 			case 13:
 			case 14:
-				R->Ir.H->AddLast(++N->Ir.L->Value);
+				if (Fry(N->Ir.L)) return;
 				L->Ir.L = N->Ir.L;
 				N->Ir.L = N->Ir.L->Next;
 				Up->Remove(L->Ir.L);
 				if (R->Ir.L->Value == 13) break;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					N->Ir.L = N->Ir.L->Next;
 				}
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
@@ -426,13 +427,13 @@ namespace Dysnomia {
 			case 16:
 			case 17:
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					N->Ir.L = N->Ir.L->Next;
 				}
 				Blow = 0;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
 					Up->AddLast(N->Ir.L->Value);
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					Up->Remove(N->Ir.L);
 					N->Ir.L = Up->First;
 					if (Blow++ > 999) break;
@@ -440,7 +441,7 @@ namespace Dysnomia {
 				if (R->Ir.L->Value == 15) break;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value <= 37) {
 					Up->AddLast(N->Ir.L->Value);
-					R->Ir.H->AddLast(++N->Ir.L->Value);
+					if (Fry(N->Ir.L)) return;
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 					Up->Remove(L->Ir.L);
@@ -455,13 +456,13 @@ namespace Dysnomia {
 				}
 				break;
 			case 18:
-				R->Ir.H->AddLast(++N->Ir.L->Value);
+				if (Fry(N->Ir.L)) return;
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
 				N->Ir.L = Up->First;
 				break;
 			case 19:
-				R->Ir.H->AddLast(++N->Ir.L->Value);
+				if(Fry(N->Ir.L)) return;
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->AddLast(N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
@@ -473,9 +474,21 @@ namespace Dysnomia {
 				Up->Remove(N->Ir.L);
 				break;
 			}
-			if (R->Ir.H->Count > 12000) Plumb();
+			if (R->Ir.H->Count > 12000) {
+				Plumb();
+				return;
+			}
 			if (!R->Ir.L || !N->Ir.L) break;
 			if (!N->Ir.L->List) break;
 		} while (R->Ir.L = R->Ir.L->Next);
+	}
+
+	bool Orbital::Fry(LinkedListNode<Int16>^% N) {
+		R->Ir.H->AddLast(++N->Value);
+		if (R->Ir.H->Count > 12000) {
+			Plumb();
+			return true;
+		}
+		return false;
 	}
 }
