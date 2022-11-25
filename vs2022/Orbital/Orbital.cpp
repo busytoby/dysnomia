@@ -136,6 +136,17 @@ namespace Dysnomia {
 				D->RemoveFirst();
 				Fly(L->Ir.R, N->Ir.R);
 			}
+
+			/*
+			Final Critial Enthalpy Occurs At An L->Ir.R Boundary At Which Time:
+			Earth Comes Out Of L->Ir.R, Which Remains The Serpentine Structure Sagittarius
+			Mercury Comes Out Of L->Ir.H, Which Remains The Serpentine Structure Sagittarius
+			Mars Comes Out Of N->Ir.R, Which Remains The Norcamphene Structure Neptune
+			Pluto Comes Out Of N->Ir.H, Which Remains The Norcamphene Structure Neptune
+			Jupiter Comes Out Of R->Ir.R, Which Remains The Norbornylene Structure Venus
+			Saturn Comes Out Of R->Ir.H, Which Remains The Norbornylene Structure Venus
+			*/
+
 		}
 
 		throw gcnew Exception("Star Died");
