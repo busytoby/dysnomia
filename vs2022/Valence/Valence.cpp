@@ -19,7 +19,6 @@ namespace Dysnomia {
 
 	void Valence::Push() {
 		if (R == nullptr) R = gcnew LinkedList<Int16>();
-		if (R->Count != 0) throw gcnew Exception("Valence Is Already Pushed");
 		array<Byte>^ V = Barn.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {
@@ -71,7 +70,6 @@ namespace Dysnomia {
 
 	void Valence::Pull(BigInteger L) {
 		if (H == nullptr) H = gcnew LinkedList<Int16>();
-		if (H->Count != 0) throw gcnew Exception("Valence Is Already Pulled");
 		array<Byte>^ V = L.ToByteArray();
 
 		for (int i = 0; i < V->Length; i++) {

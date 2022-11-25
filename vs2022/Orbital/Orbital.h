@@ -25,6 +25,7 @@ namespace Dysnomia {
 		void Pull();
 		void Push();
 		void Plumb();
+		LinkedList<Int16>^ ObserveFlare(Orbital^);
 		LinkedList<Int16>^ Blast();
 		void Swim(LinkedList<Orbital^>^);
 		void DetectCollision();

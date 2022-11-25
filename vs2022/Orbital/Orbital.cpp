@@ -3,10 +3,13 @@
 #include "Orbital.h"
 
 namespace Dysnomia {
-	Orbital::Orbital() {}
+	Orbital::Orbital() {
+		D = gcnew LinkedList<Orbital^>();
+	}
 
 	Orbital::Orbital(Dynamic B) {
 		Boson = gcnew Dynamic(B);
+		D = gcnew LinkedList<Orbital^>();
 	}
 
 	void Orbital::Ring(BigInteger Cation) {
@@ -46,8 +49,6 @@ namespace Dysnomia {
 		Vent();
 		R->Ir.Pull(Ligand);
 
-		R->Ir.L = R->Ir.R->First;
-		N->Ir.L = R->Ir.H->First;
 		Fly(R->Ir.R, R->Ir.H);
 		
 		N->Ir.Pull(R->Ir);
@@ -65,7 +66,7 @@ namespace Dysnomia {
 			R->Ir.Dynamo = BigInteger::ModPow(N->R->Dynamo, N->Ir.Element, 541);
 		}
 		else throw gcnew Exception("Universe Destroyed By Hadron Collision");
-		if (R->Ir.Dynamo != N->Ir.Dynamo) throw gcnew Exception("Universe Destroyed By Hadron Collision");
+		// if (R->Ir.Dynamo != N->Ir.Dynamo) // Flare Returning
 	}
 
 	void Orbital::Vent() {
@@ -122,27 +123,45 @@ namespace Dysnomia {
 				N->Ir.R->AddFirst(R->Ir.H->Last->Value);
 			while (R->Ir.H->Count > (System::Math::Pow(L->Ir.R->Count, 2) * 3.14))
 				L->Ir.R->AddFirst(R->Ir.H->Last->Value);
+
+			while (D->Count > 0) {
+				LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>(R->Ir.H);
+				LinkedList<Int16>^ Flare = ObserveFlare(D->First->Value);
+				while (Flare->First) { 
+					Mass->AddLast(Flare->First->Value); 
+					Flare->RemoveFirst(); 
+				}
+				BigInteger Cation = Math::Hood(Mass);
+				Ring(Cation);
+				D->RemoveFirst();
+			}
 		}
 
 		throw gcnew Exception("Star Died");
 	}
 
+	LinkedList<Int16>^ Orbital::ObserveFlare(Orbital^ E) {
+		LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>(E->R->Ir.R);
+		while (E->D->First) {
+			LinkedList<Int16>^ Flare = ObserveFlare(E->D->First->Value); 
+			E->D->RemoveFirst();
+			while (Flare->First) { 
+				Mass->AddLast(Flare->First); 
+				Flare->RemoveFirst(); 
+			}
+		}
+		return Mass;
+	}
+
 	void Orbital::Swim(LinkedList<Orbital^>^ EList) {
 		if (EList == nullptr || EList->Count == 0) return;
 		LinkedListNode<Orbital^>^ Eptr = EList->First;
-		while (Eptr) {
+		while (Eptr) {	
 			Fly(Eptr->Value->L->Ir.R, Eptr->Value->R->Ir.R);
 			Fly(Eptr->Value->N->Ir.R, Eptr->Value->R->Ir.R);
-			Fly(Eptr->Value->L->Ir.H, Eptr->Value->Parent->R->Ir.R);
 
-			LinkedListNode<Int16>^ Down = Eptr->Value->N->Ir.R->First;
-			LinkedListNode<Int16>^ Up;
-
-			while ((Up = Eptr->Value->Parent->R->Ir.H->First) && (Eptr->Value->Parent->R->Ir.H->Count > (Eptr->Value->Parent->R->Ir.R->Count * 3.14))) {
-				Eptr->Value->Fly(Eptr->Value->N->Ir.R, Eptr->Value->Parent->R->Ir.H);
-				Eptr->Value->Fly(Eptr->Value->R->Ir.R, Eptr->Value->Parent->R->Ir.H);
-				//Eptr->Value->Parent->R->Ir.H->RemoveFirst();
-			}
+			Fly(Eptr->Value->R->Ir.R, Eptr->Value->Parent->R->Ir.R);
+			Fly(Eptr->Value->L->Ir.R, Eptr->Value->Parent->R->Ir.R);
 
 			Swim(Eptr->Value->D);
 
@@ -192,7 +211,6 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Plumb() {
-		if (D == nullptr) D = gcnew LinkedList<Orbital^>();
 		LinkedList<Int16>^ Mass = Blast();
 		if (Mass->Count < 1) return;
 		BigInteger Cation = Math::Hood(Mass);
