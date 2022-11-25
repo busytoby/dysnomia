@@ -3,16 +3,25 @@
 #include "Orbital.h"
 
 namespace Dysnomia {
+	Orbital::Orbital() {}
+
+	Orbital::Orbital(Dynamic B) {
+		Boson = gcnew Dynamic(B);
+	}
+
 	void Orbital::Ring(BigInteger Cation) {
 		Ring(Cation, N->Ir.Barn);
 	}
 
 	void Orbital::Ring(BigInteger Cation, BigInteger Anion) {
 		if (R == nullptr || L == nullptr || N == nullptr) {
-			R = gcnew Ion(Boson);
-			L = gcnew Ion(Boson, *R);
+			R = gcnew Ion(*Boson);
+			L = gcnew Ion(*Boson, *R);
 			N = gcnew Ion(*L->R);
 		}
+
+		if (N->Ir.R == nullptr)
+			N->Ir.R = gcnew LinkedList<Int16>();
 
 		R->Nitrate(Anion);
 		R->Ir.Coordinate = N->R->Coordinate(R->Ir.Ring); // Relative Right Position
@@ -26,7 +35,7 @@ namespace Dysnomia {
 		Pull();
 		R->Prime(%N->Ir, %L->Ir);
 
-		N->Ir.Coordinate = Boson.Coordinate(L->Ir.Ring);
+		N->Ir.Coordinate = Boson->Coordinate(L->Ir.Ring);
 		if (!N->Ir.Coordinate.IsZero) throw gcnew Exception("Universe Destroyed By White Hole");
 
 		DetectCollision();
@@ -77,6 +86,8 @@ namespace Dysnomia {
 			N->Ir.H = gcnew LinkedList<Int16>();
 		else throw gcnew Exception("NH Remainder");
 
+		bool Paradox = false;
+
 		while (N->Ir.L = N->Ir.R->First) {
 			if (N->Ir.L->Value == 0) {
 				N->Ir.R->RemoveFirst();
@@ -89,13 +100,117 @@ namespace Dysnomia {
 
 			Fly(L->Ir.R, R->Ir.R);
 			Fly(N->Ir.R, R->Ir.R);
-			if (R->Ir.R->Count == 0)
-				Fly(L->Ir.R, N->Ir.R);
+			
+			Swim(D);
+
 			Fly(R->Ir.R, L->Ir.R);
+
+			if (Paradox == false && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
+				Paradox = true;
+				Plumb();
+				// Beat Detected
+			}
+			else if (Paradox == true && N->Ir.R->Count > R->Ir.R->Count) {
+				Paradox = false;
+				// Beat Detected
+			}
+
+			while (R->Ir.H->Count > (N->Ir.R->Count * 3.14))
+				N->Ir.R->AddFirst(R->Ir.H->Last->Value);
+			while (R->Ir.H->Count > (System::Math::Pow(L->Ir.R->Count, 2) * 3.14))
+				L->Ir.R->AddFirst(R->Ir.H->Last->Value);
+		}
+
+		throw gcnew Exception("Star Died");
+	}
+
+	void Orbital::Swim(LinkedList<Orbital^>^ EList) {
+		if (R->Ir.R->Count == 0)
+			Fly(L->Ir.R, N->Ir.R);
+
+		if (EList == nullptr || EList->Count == 0) return;
+		LinkedListNode<Orbital^>^ Eptr = EList->First;
+		while (Eptr) {
+			Fly(Eptr->Value->L->Ir.R, Eptr->Value->R->Ir.R);
+			Fly(Eptr->Value->N->Ir.R, Eptr->Value->R->Ir.R);
+			Fly(Eptr->Value->L->Ir.H, Eptr->Value->Parent->R->Ir.R);
+
+			LinkedListNode<Int16>^ Down = Eptr->Value->N->Ir.R->First;
+			LinkedListNode<Int16>^ Up;
+
+			while ((Up = Eptr->Value->Parent->R->Ir.H->First) && (Eptr->Value->Parent->R->Ir.H->Count > Eptr->Value->Parent->R->Ir.R->Count)) {
+				Down->Value = Down->Value + Up->Value;
+				if (Down->Value > 8 || !Down->Next) Down = Eptr->Value->N->Ir.R->First;
+				else Down = Down->Next;
+				Eptr->Value->Parent->R->Ir.H->RemoveFirst();
+			}
+
+			Swim(Eptr->Value->D);
+
+			Fly(Eptr->Value->R->Ir.R, Eptr->Value->L->Ir.R);
+
+			Eptr = Eptr->Next;
 		}
 	}
 
-	void Orbital::Fly(LinkedList<Int16>^ Down, LinkedList<Int16>^ Up) {
+	LinkedList<Int16>^ Orbital::Blast() {
+		LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>();
+		if (L->Ir.R == nullptr) return Mass;
+		LinkedListNode<Int16>^ Drag = L->Ir.R->First;
+		while (Drag) {
+			if (Drag->Value < 2) {
+				Mass->AddFirst(1);
+				L->Ir.L = Drag;
+				Drag = Drag->Next;
+				L->Ir.R->Remove(L->Ir.L);
+			} else Drag = Drag->Next;
+		}
+
+		Drag = N->Ir.R->First;
+		while (Drag) {
+			if (Drag->Value < 5) {
+				Mass->AddFirst(Drag->Value);
+				N->Ir.L = Drag;
+				Drag = Drag->Next;
+				N->Ir.R->Remove(N->Ir.L);
+			}
+			else Drag = Drag->Next;
+		}
+
+		Drag = R->Ir.R->First;
+		while (Drag) {
+			if (Drag->Value < 7) {
+				Mass->AddFirst(Drag->Value);
+				R->Ir.L = Drag;
+				Drag = Drag->Next;
+				R->Ir.R->Remove(R->Ir.L);
+			}
+			else Drag = Drag->Next;
+		}
+
+		return Mass;
+	}
+
+	void Orbital::Plumb() {
+		if (D == nullptr) D = gcnew LinkedList<Orbital^>();
+		LinkedList<Int16>^ Mass = Blast();
+		if (Mass->Count < 1) return;
+		BigInteger Cation = Math::Hood(Mass);
+		BigInteger Anion = Math::Hood(R->Ir.H);
+		Orbital^ E = gcnew Orbital(*Boson);
+		E->Parent = this;
+		E->Ligand = Ligand;
+		E->Ring(Cation, Anion);
+		D->AddLast(E);
+	}
+
+	void Orbital::Fly(LinkedList<Int16>^% Down, LinkedList<Int16>^% Up) {
+		if (Down == nullptr) Down = gcnew LinkedList<Int16>();
+		if (Up == nullptr) Up = gcnew LinkedList<Int16>();
+
+		LinkedList<Int16>^ DownList = Down;
+		LinkedList<Int16>^ UpList = Up;
+
 		R->Ir.L = Down->First;
 		N->Ir.L = Up->First;
 		
@@ -105,6 +220,9 @@ namespace Dysnomia {
 		int Blow;
 
 		do {
+			if (R->Ir.L->List != DownList) R->Ir.L = DownList->First;
+			if (N->Ir.L->List != UpList) N->Ir.L = UpList->First;
+
 			if (!Peptides && R->Ir.L->Value > 7)
 				Peptides = true;
 			switch (R->Ir.L->Value) {
@@ -146,6 +264,7 @@ namespace Dysnomia {
 				N->Ir.L = Up->First;
 				break;
 			case 5:
+				N->Ir.R->AddLast(7);
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 15) {
 					if (N->Ir.L->Value == 1) {
 						L->Ir.L = R->Ir.L;
@@ -225,9 +344,10 @@ namespace Dysnomia {
 				N->Ir.L = Up->First;
 				break;
 			case 9:
+				N->Ir.R->AddLast(7);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 19) {
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 					if (N->Ir.L && N->Ir.L->Value != 12)
@@ -237,8 +357,7 @@ namespace Dysnomia {
 					}
 				}
 				if (N->Ir.L && N->Ir.L->Value >= 19) {
-					N->Ir.L->Value++;
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 				}
@@ -246,11 +365,11 @@ namespace Dysnomia {
 				break;
 			case 10:
 			case 11:
+				N->Ir.R->AddLast(7);
 				while (N->Ir.L && R->Ir.L) {
 					Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 					if (N->Ir.L && N->Ir.L->Value >= 19) {
-						N->Ir.L->Value++;
-						R->Ir.H->AddLast(N->Ir.L->Value);
+						R->Ir.H->AddLast(++N->Ir.L->Value);
 						L->Ir.L = N->Ir.L;
 						N->Ir.L = N->Ir.L->Next;
 						if (N->Ir.L && N->Ir.L->Value == 21) break;
@@ -268,13 +387,13 @@ namespace Dysnomia {
 				break;
 			case 13:
 			case 14:
-				R->Ir.H->AddLast(N->Ir.L->Value);
+				R->Ir.H->AddLast(++N->Ir.L->Value);
 				L->Ir.L = N->Ir.L;
 				N->Ir.L = N->Ir.L->Next;
 				Up->Remove(L->Ir.L);
 				if (R->Ir.L->Value == 13) break;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					N->Ir.L = N->Ir.L->Next;
 				}
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
@@ -288,13 +407,13 @@ namespace Dysnomia {
 			case 16:
 			case 17:
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value < 29) {
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					N->Ir.L = N->Ir.L->Next;
 				}
 				Blow = 0;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value > 100) {
 					Up->AddLast(N->Ir.L->Value);
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					Up->Remove(N->Ir.L);
 					N->Ir.L = Up->First;
 					if (Blow++ > 999) break;
@@ -302,7 +421,7 @@ namespace Dysnomia {
 				if (R->Ir.L->Value == 15) break;
 				while (N->Ir.L && R->Ir.L && N->Ir.L->Value <= 37) {
 					Up->AddLast(N->Ir.L->Value);
-					R->Ir.H->AddLast(N->Ir.L->Value);
+					R->Ir.H->AddLast(++N->Ir.L->Value);
 					L->Ir.L = N->Ir.L;
 					N->Ir.L = N->Ir.L->Next;
 					Up->Remove(L->Ir.L);
@@ -317,13 +436,13 @@ namespace Dysnomia {
 				}
 				break;
 			case 18:
-				R->Ir.H->AddLast(N->Ir.L->Value);
+				R->Ir.H->AddLast(++N->Ir.L->Value);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
 				N->Ir.L = Up->First;
 				break;
 			case 19:
-				R->Ir.H->AddLast(N->Ir.L->Value);
+				R->Ir.H->AddLast(++N->Ir.L->Value);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 				Up->AddLast(N->Ir.L->Value);
 				Up->Remove(N->Ir.L);
@@ -331,10 +450,12 @@ namespace Dysnomia {
 			default:
 				if(N->Ir.L->Value == 1) Up->AddLast(N->Ir.L->Value);
 				Down->AddAfter(R->Ir.L, N->Ir.L->Value);
+				N->Ir.L->Value++;
 				Up->Remove(N->Ir.L);
-				return;
+				break;
 			}
 			if (!R->Ir.L || !N->Ir.L) break;
+			if (!N->Ir.L->List) break;
 		} while (R->Ir.L = R->Ir.L->Next);
 	}
 }

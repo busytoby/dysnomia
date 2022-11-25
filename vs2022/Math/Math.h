@@ -50,6 +50,7 @@ namespace Dysnomia {
 		static BigInteger Random();
 		static String^ ByteArrayToHexString(array<Byte>^);
 		static String^ LinkedListToHexString(LinkedList<char>^ Bytes);
+		static BigInteger Math::Hood(LinkedList<Int16>^);
 
 		// TODO: Add your methods for this class here.
 	};

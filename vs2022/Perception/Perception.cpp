@@ -4,13 +4,14 @@
 
 namespace Dysnomia {
 	Perception::Perception() {
-		BigInteger Carbenium = Norbornylene.BigDetermine("Norbornylene");
-		BigInteger Carbonium = Norbornylene.BigDetermine("Norcamphene");
+		BigInteger Carbenium = Norbornylene.GetElement();
+		BigInteger Carbonium = Norbornylene.GetBarn();;
 
+		S.Boson = gcnew Dynamic();
 		N = gcnew Situation();
 		Bridge(N, Carbenium);
 
-		BigInteger Ligand = Norbornylene.BigDetermine("Hello Universe");
+		BigInteger Ligand = Norbornylene.GetSignal();;
 		S.Ligand = Ligand;
 		N->S.Ligand = Carbonium;
 		Avail(N, Ligand, Carbonium);
@@ -25,21 +26,21 @@ namespace Dysnomia {
 
 	Situation^ Perception::Bridge(Situation^ R, BigInteger Carbenium) {
 		S.Ligand = Carbenium;
-		BigInteger Ligand = S.Boson.Avail(S.Ligand);
+		BigInteger Ligand = S.Boson->Avail(S.Ligand);
 		BigInteger Donor = R->Avail(S.Ligand);
-		S.Boson.Form(Donor);
-		S.Boson.Polarize();
+		S.Boson->Form(Donor);
+		S.Boson->Polarize();
 		BigInteger Substrate = R->Form(Ligand);
-		S.Coordinate = S.Boson.Coordinate(Substrate);
-		BigInteger Paradox = R->Conjugate(S.Boson.Pole);
-		S.Boson.Saturate(Paradox, R->S.Boson.Channel);
-		R->Saturate(S.Boson.Foundation, S.Boson.Channel);
-		S.Boson.Bond();
-		S.Boson.Adduct(R->S.Boson.Dynamo);
-		S.Boson.Open(S.Coordinate);
-		R->Adduct(S.Boson.Dynamo);
+		S.Coordinate = S.Boson->Coordinate(Substrate);
+		BigInteger Paradox = R->Conjugate(S.Boson->Pole);
+		S.Boson->Saturate(Paradox, R->S.Boson->Channel);
+		R->Saturate(S.Boson->Foundation, S.Boson->Channel);
+		S.Boson->Bond();
+		S.Boson->Adduct(R->S.Boson->Dynamo);
+		S.Boson->Open(S.Coordinate);
+		R->Adduct(S.Boson->Dynamo);
 
-		if (!R->S.Boson.ManifoldCompare(S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
+		if (!R->S.Boson->ManifoldCompare(*S.Boson)) throw gcnew Exception("Never Failed The Boson Before");
 
 		return R;
 	}

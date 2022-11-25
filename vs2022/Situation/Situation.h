@@ -15,11 +15,8 @@ namespace Dysnomia {
 
 	public:
 		Orbital S;
-		Orbital N;
 
 		Situation();
-		Situation::Situation(const Situation%);
-
 		BigInteger Avail(BigInteger);
 		BigInteger Form(BigInteger);
 		BigInteger Conjugate(BigInteger%);

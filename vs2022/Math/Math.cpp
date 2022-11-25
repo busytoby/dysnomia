@@ -39,4 +39,21 @@ namespace Dysnomia {
         return sb.ToString();
     }
 
+    BigInteger Math::Hood(LinkedList<Int16>^ E) {
+        int i = E->Count;
+        array<System::Byte>^ bytes = gcnew array<System::Byte>(i);      
+        BigInteger R;
+
+        i = 0;
+        LinkedListNode<Int16>^ L = E->First;
+        while(L) {
+            bytes[i++] = (System::Byte)L->Value;
+            L = L->Next;
+        }
+
+        bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
+        R = BigInteger(bytes);
+
+        return R;
+    }
 }
