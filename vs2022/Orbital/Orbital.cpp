@@ -156,14 +156,15 @@ namespace Dysnomia {
 	LinkedList<Int16>^ Orbital::Blast() {
 		LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>();
 		if (L->Ir.R == nullptr) return Mass;
-		LinkedListNode<Int16>^ Drag = L->Ir.R->First;
+		LinkedListNode<Int16>^ Drag = R->Ir.R->First;
 		while (Drag) {
-			if (Drag->Value < 2) {
-				Mass->AddFirst(1);
-				L->Ir.L = Drag;
+			if (Drag->Value < 7) {
+				Mass->AddFirst(Drag->Value);
+				R->Ir.L = Drag;
 				Drag = Drag->Next;
-				L->Ir.R->Remove(L->Ir.L);
-			} else Drag = Drag->Next;
+				R->Ir.R->Remove(R->Ir.L);
+			}
+			else Drag = Drag->Next;
 		}
 
 		Drag = N->Ir.R->First;
@@ -176,14 +177,14 @@ namespace Dysnomia {
 			}
 			else Drag = Drag->Next;
 		}
-
-		Drag = R->Ir.R->First;
+		
+		Drag = L->Ir.R->First;
 		while (Drag) {
-			if (Drag->Value < 7) {
-				Mass->AddFirst(Drag->Value);
-				R->Ir.L = Drag;
+			if (Drag->Value < 2) {
+				Mass->AddFirst(1);
+				L->Ir.L = Drag;
 				Drag = Drag->Next;
-				R->Ir.R->Remove(R->Ir.L);
+				L->Ir.R->Remove(L->Ir.L);
 			}
 			else Drag = Drag->Next;
 		}
