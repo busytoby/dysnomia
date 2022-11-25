@@ -103,6 +103,9 @@ namespace Dysnomia {
 			
 			Swim(D);
 
+			if (R->Ir.R->Count == 0)
+				Fly(L->Ir.R, N->Ir.R);
+
 			Fly(R->Ir.R, L->Ir.R);
 
 			if (Paradox == false && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
@@ -147,8 +150,6 @@ namespace Dysnomia {
 
 			Eptr = Eptr->Next;
 		}
-		if ((Parent == nullptr) && (R->Ir.R->Count == 0))
-			Fly(L->Ir.R, N->Ir.R);
 	}
 
 	LinkedList<Int16>^ Orbital::Blast() {
