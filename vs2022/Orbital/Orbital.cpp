@@ -125,9 +125,6 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Swim(LinkedList<Orbital^>^ EList) {
-		if (R->Ir.R->Count == 0)
-			Fly(L->Ir.R, N->Ir.R);
-
 		if (EList == nullptr || EList->Count == 0) return;
 		LinkedListNode<Orbital^>^ Eptr = EList->First;
 		while (Eptr) {
@@ -138,11 +135,11 @@ namespace Dysnomia {
 			LinkedListNode<Int16>^ Down = Eptr->Value->N->Ir.R->First;
 			LinkedListNode<Int16>^ Up;
 
-			while ((Up = Eptr->Value->Parent->R->Ir.H->First) && (Eptr->Value->Parent->R->Ir.H->Count > Eptr->Value->Parent->R->Ir.R->Count)) {
-				Down->Value = Down->Value + Up->Value;
-				if (Down->Value > 8 || !Down->Next) Down = Eptr->Value->N->Ir.R->First;
-				else Down = Down->Next;
-				Eptr->Value->Parent->R->Ir.H->RemoveFirst();
+			while ((Up = Eptr->Value->Parent->R->Ir.H->First) && (Eptr->Value->Parent->R->Ir.H->Count > (Eptr->Value->Parent->R->Ir.R->Count * 3.14))) {
+				Eptr->Value->Fly(Eptr->Value->N->Ir.R, Eptr->Value->Parent->R->Ir.H);
+				Eptr->Value->Fly(Eptr->Value->R->Ir.R, Eptr->Value->Parent->R->Ir.H);
+				Eptr->Value->Fly(Eptr->Value->L->Ir.R, Eptr->Value->Parent->R->Ir.H);
+				//Eptr->Value->Parent->R->Ir.H->RemoveFirst();
 			}
 
 			Swim(Eptr->Value->D);
@@ -151,6 +148,8 @@ namespace Dysnomia {
 
 			Eptr = Eptr->Next;
 		}
+		if (R->Ir.R->Count == 0)
+			Fly(L->Ir.R, N->Ir.R);
 	}
 
 	LinkedList<Int16>^ Orbital::Blast() {
@@ -217,7 +216,7 @@ namespace Dysnomia {
 		
 		if (!R->Ir.L || !N->Ir.L) return;
 
-		bool Peptides = false;
+		bool Peptides = (!(Parent == nullptr));
 		int Blow;
 
 		do {
@@ -285,7 +284,8 @@ namespace Dysnomia {
 						R->Ir.L = Down->AddAfter(R->Ir.L, N->Ir.L->Value);
 						N->Ir.L = Up->First;
 						break;
-					} else
+					}
+					else
 						N->Ir.L = N->Ir.L->Next;
 				}
 				break;
@@ -455,6 +455,7 @@ namespace Dysnomia {
 				Up->Remove(N->Ir.L);
 				break;
 			}
+			if (R->Ir.H->Count > 12000) Plumb();
 			if (!R->Ir.L || !N->Ir.L) break;
 			if (!N->Ir.L->List) break;
 		} while (R->Ir.L = R->Ir.L->Next);
