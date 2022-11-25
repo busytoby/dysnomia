@@ -86,7 +86,7 @@ namespace Dysnomia {
 			N->Ir.H = gcnew LinkedList<Int16>();
 		else throw gcnew Exception("NH Remainder");
 
-		bool Paradox = false;
+		bool Paradox = true;
 
 		while (N->Ir.L = N->Ir.R->First) {
 			if (N->Ir.L->Value == 0) {
@@ -108,13 +108,13 @@ namespace Dysnomia {
 
 			Fly(R->Ir.R, L->Ir.R);
 
-			if (Paradox == false && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
-				Paradox = true;
+			if (Paradox == true && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
+				Paradox = false;
 				Plumb();
 				// Beat Detected
 			}
-			else if (Paradox == true && N->Ir.R->Count > R->Ir.R->Count) {
-				Paradox = false;
+			else if (Paradox == false && N->Ir.R->Count > R->Ir.R->Count) {
+				Paradox = true;
 				// Beat Detected
 			}
 
