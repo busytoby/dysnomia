@@ -111,13 +111,20 @@ namespace Dysnomia {
 
 			if (Paradox == true && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
 				Paradox = false;
-				R->Ir
+				R->InParadox = true;
+				R->Ir.InParadox = false;
 				Plumb();
+				R->Ir.InParadox = true;
+				R->InParadox = false;
 				// Beat Detected
 			}
 			else if (Paradox == false && N->Ir.R->Count > R->Ir.R->Count) {
 				Paradox = true;
-				// Beat Detected
+				R->InParadox = false;
+				R->Ir.InParadox = true;
+				// Beat
+				R->Ir.InParadox = false;
+				R->InParadox = true;
 			}
 
 			while (R->Ir.H->Count > (N->Ir.R->Count * 3.14))
