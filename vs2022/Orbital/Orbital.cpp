@@ -111,6 +111,7 @@ namespace Dysnomia {
 
 			if (Paradox == true && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
 				Paradox = false;
+				R->Ir
 				Plumb();
 				// Beat Detected
 			}

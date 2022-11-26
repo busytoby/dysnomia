@@ -24,6 +24,8 @@ namespace Dysnomia {
 		LinkedList<Int16>^ H;
 		LinkedListNode<Int16>^ L;
 
+		bool InParadox = true;
+
 		Valence();
 		Valence(const Valence%);
 		void Push();

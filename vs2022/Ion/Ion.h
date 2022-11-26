@@ -11,6 +11,7 @@ namespace Dysnomia {
 	public:
 		Dynamic^ R;
 		Valence Ir;
+		bool InParadox = false;
 
 		Ion(Dynamic);
 		Ion(Dynamic, Ion%);
