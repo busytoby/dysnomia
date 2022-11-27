@@ -17,6 +17,7 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Ring(BigInteger Cation, BigInteger Anion) {
+		/*
 		if (R == nullptr || L == nullptr || N == nullptr) {
 			R = gcnew Ion(*Boson);
 			L = gcnew Ion(*Boson, *R);
@@ -55,6 +56,7 @@ namespace Dysnomia {
 		L->Ir.Barn = N->Ir.Barn % R->Ir.Prime;
 		R->Ir.L = R->Ir.R->First;
 		R->Ir.Dynamo = 0;
+		*/
 	}
 
 	void Orbital::Pull() {
@@ -76,172 +78,22 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Push() {
-		L->Ir.L = N->Ir.R->First;
-		R->Ir.L = R->Ir.R->First;
-
-		// First Pull
-		if (L->Ir.R == nullptr)
-			L->Ir.R = gcnew LinkedList<Int16>();
-		else throw gcnew Exception("LR Remainder");
-		if(N->Ir.H == nullptr)
-			N->Ir.H = gcnew LinkedList<Int16>();
-		else throw gcnew Exception("NH Remainder");
-
-		bool Paradox = true;
-
-		while (N->Ir.L = N->Ir.R->First) {
-			if (N->Ir.L->Value == 0) {
-				N->Ir.R->RemoveFirst();
-				continue;
-			}
-			L->Ir.R->AddFirst(N->Ir.L->Value);
-			N->Ir.R->RemoveFirst();
-
-			if (N->Ir.L->Value != 7) continue;
-
-			Fly(L->Ir.R, R->Ir.R);
-			Fly(N->Ir.R, R->Ir.R);
-			
-			Swim(D);
-
-			if (R->Ir.R->Count == 0)
-				Fly(L->Ir.R, N->Ir.R);
-
-			Fly(R->Ir.R, L->Ir.R);
-
-			if (Paradox == true && ((R->Ir.R->Count > N->Ir.R->Count) || (L->Ir.R->Count > N->Ir.R->Count) || R->Ir.R->Count == 0)) {
-				Paradox = false;
-				R->InParadox = true;
-				R->Ir.InParadox = false;
-				Plumb();
-				R->Ir.InParadox = true;
-				R->InParadox = false;
-				// Beat Detected
-			}
-			else if (Paradox == false && N->Ir.R->Count > R->Ir.R->Count) {
-				Paradox = true;
-				R->InParadox = false;
-				R->Ir.InParadox = true;
-				// Beat
-				R->Ir.InParadox = false;
-				R->InParadox = true;
-			}
-
-			while (R->Ir.H->Count > (N->Ir.R->Count * 3.14))
-				N->Ir.R->AddFirst(R->Ir.H->Last->Value);
-			while (R->Ir.H->Count > (System::Math::Pow(L->Ir.R->Count, 2) * 3.14))
-				L->Ir.R->AddFirst(R->Ir.H->Last->Value);
-
-			while (D->Count > 0) {
-				LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>(R->Ir.H);
-				LinkedList<Int16>^ Flare = ObserveFlare(D->First->Value);
-				while (Flare->First) { 
-					Mass->AddLast(Flare->First->Value); 
-					Flare->RemoveFirst(); 
-				}
-				BigInteger Cation = Math::Hood(Mass);
-				Ring(Cation);
-				D->RemoveFirst();
-				Fly(L->Ir.R, N->Ir.R);
-			}
-
-			/*
-			Final Critial Enthalpy Occurs At An L->Ir.R Boundary At Which Time:
-			Earth Comes Out Of L->Ir.R, Which Remains The Serpentine Structure Sagittarius
-			Mercury Comes Out Of L->Ir.H, Which Remains The Serpentine Structure Sagittarius
-			Mars Comes Out Of N->Ir.R, Which Remains The Norcamphene Structure Neptune
-			Pluto Comes Out Of N->Ir.H, Which Remains The Norcamphene Structure Neptune
-			Jupiter Comes Out Of R->Ir.R, Which Remains The Norbornylene Structure Venus
-			Saturn Comes Out Of R->Ir.H, Which Remains The Norbornylene Structure Venus
-			*/
-
-		}
-
 		throw gcnew Exception("Star Died");
 	}
 
-	LinkedList<Int16>^ Orbital::ObserveFlare(Orbital^ E) {
-		LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>(E->R->Ir.R);
-		while (E->D->First) {
-			LinkedList<Int16>^ Flare = ObserveFlare(E->D->First->Value); 
-			E->D->RemoveFirst();
-			while (Flare->First) { 
-				Mass->AddLast(Flare->First); 
-				Flare->RemoveFirst(); 
-			}
-		}
-		return Mass;
-	}
-
-	void Orbital::Swim(LinkedList<Orbital^>^ EList) {
-		if (EList == nullptr || EList->Count == 0) return;
-		LinkedListNode<Orbital^>^ Eptr = EList->First;
-		while (Eptr) {	
-			Fly(Eptr->Value->L->Ir.R, Eptr->Value->R->Ir.R);
-			Fly(Eptr->Value->N->Ir.R, Eptr->Value->R->Ir.R);
-
-			Fly(Eptr->Value->R->Ir.R, Eptr->Value->Parent->R->Ir.R);
-			Fly(Eptr->Value->L->Ir.R, Eptr->Value->Parent->R->Ir.R);
-
-			Swim(Eptr->Value->D);
-
-			Fly(Eptr->Value->R->Ir.R, Eptr->Value->L->Ir.R);
-
-			Eptr = Eptr->Next;
-		}
-	}
-
-	LinkedList<Int16>^ Orbital::Blast() {
-		LinkedList<Int16>^ Mass = gcnew LinkedList<Int16>();
-		if (L->Ir.R == nullptr) return Mass;
-		LinkedListNode<Int16>^ Drag = R->Ir.R->First;
-		while (Drag) {
-			if (Drag->Value < 7) {
-				Mass->AddFirst(Drag->Value);
-				R->Ir.L = Drag;
-				Drag = Drag->Next;
-				R->Ir.R->Remove(R->Ir.L);
-			}
-			else Drag = Drag->Next;
-		}
-
-		Drag = N->Ir.R->First;
-		while (Drag) {
-			if (Drag->Value < 5) {
-				Mass->AddFirst(Drag->Value);
-				N->Ir.L = Drag;
-				Drag = Drag->Next;
-				N->Ir.R->Remove(N->Ir.L);
-			}
-			else Drag = Drag->Next;
-		}
-		
-		Drag = L->Ir.R->First;
-		while (Drag) {
-			if (Drag->Value < 2) {
-				Mass->AddFirst(1);
-				L->Ir.L = Drag;
-				Drag = Drag->Next;
-				L->Ir.R->Remove(L->Ir.L);
-			}
-			else Drag = Drag->Next;
-		}
-
-		return Mass;
-	}
-
 	void Orbital::Plumb() {
-		LinkedList<Int16>^ Mass = Blast();
-		if (Mass->Count < 1) return;
-		BigInteger Cation = Math::Hood(Mass);
-		BigInteger Anion = Math::Hood(R->Ir.H);
+		//LinkedList<Int16>^ Mass = Blast();
+		//if (Mass->Count < 1) return;
+		//BigInteger Cation = Math::Hood(Mass);
+		//BigInteger Anion = Math::Hood(R->Ir.H);
 		Orbital^ E = gcnew Orbital(*Boson);
 		E->Parent = this;
 		E->Ligand = Ligand;
-		E->Ring(Cation, Anion);
+		//E->Ring(Cation, Anion);
 		D->AddLast(E);
 	}
 
+	/*
 	void Orbital::Fly(LinkedList<Int16>^% Down, LinkedList<Int16>^% Up) {
 		if (Down == nullptr) Down = gcnew LinkedList<Int16>();
 		if (Up == nullptr) Up = gcnew LinkedList<Int16>();
@@ -501,13 +353,5 @@ namespace Dysnomia {
 			if (!N->Ir.L->List) break;
 		} while (R->Ir.L = R->Ir.L->Next);
 	}
-
-	bool Orbital::Fry(LinkedListNode<Int16>^% N) {
-		R->Ir.H->AddLast(++N->Value);
-		if (R->Ir.H->Count > 12000) {
-			Plumb();
-			return true;
-		}
-		return false;
-	}
+	*/
 }
