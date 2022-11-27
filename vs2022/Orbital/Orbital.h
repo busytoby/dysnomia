@@ -14,20 +14,10 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ Y;
 		Ion^ L;
-		//LinkedList<Orbital^>^ D;
 
 		Orbital();
-		Orbital(Dynamic);
-		Orbital(Ion^);
 		void Bridge(BigInteger Carbenium);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
-		void Ring(BigInteger);
-		void Ring(BigInteger, BigInteger);
-		void Pull();
-		void Push();
-		void Plumb();
-		void DetectCollision();
-		void Vent();
 	};
 }

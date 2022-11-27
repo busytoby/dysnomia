@@ -11,17 +11,9 @@ namespace Dysnomia {
 	public:
 		BigInteger Ligand;
 		Affinity^ M;
-		Valence Ir;
-		bool InParadox = false;
 
 		Ion();
-		Ion(Dynamic);
-		Ion(Dynamic, Ion%);
 		BigInteger Form();
 		void Adduct(BigInteger);
-		void Nitrate(BigInteger);
-		void Prime(Valence^, Valence^);
-		void Swing(Valence^, Valence^);
-		void Push(BigInteger);
 	};
 }
