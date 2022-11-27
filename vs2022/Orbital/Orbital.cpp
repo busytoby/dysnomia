@@ -4,26 +4,23 @@
 
 namespace Dysnomia {
 	Orbital::Orbital() {
-		D = gcnew LinkedList<Orbital^>();
 	}
 
 	Orbital::Orbital(Dynamic B) {
-		Boson = gcnew Dynamic(B);
-		D = gcnew LinkedList<Orbital^>();
+		N = gcnew Dynamic(B);
 	}
 
 	void Orbital::Ring(BigInteger Cation) {
-		Ring(Cation, N->Ir.Barn);
+		Ring(Cation, L->Ir.Barn);
 	}
 
 	void Orbital::Ring(BigInteger Cation, BigInteger Anion) {
-		/*
 		if (R == nullptr || L == nullptr || N == nullptr) {
-			R = gcnew Ion(*Boson);
-			L = gcnew Ion(*Boson, *R);
-			N = gcnew Ion(*L->R);
+			R = gcnew Ion(*N);
+			Y = gcnew Ion(*N, *R);
+			L = gcnew Ion(*Y->Y);
 		}
-
+		/*
 		if (N->Ir.R == nullptr)
 			N->Ir.R = gcnew LinkedList<Int16>();
 
@@ -60,20 +57,20 @@ namespace Dysnomia {
 	}
 
 	void Orbital::Pull() {
-		Ligand = BigInteger::ModPow(N->Ir.Barn, Ligand, Math::AzimuthPrime); // Patent Bromonium
+		Ligand = BigInteger::ModPow(L->Ir.Barn, Ligand, Math::AzimuthPrime); // Patent Bromonium
 	}
 
 	void Orbital::DetectCollision() { // There's No Such Thing As Hadrons
 		if (R->Ir.Dynamo.IsZero) {
-			R->Ir.Dynamo = BigInteger::ModPow(N->R->Dynamo, N->Ir.Element, 541);
+			R->Ir.Dynamo = BigInteger::ModPow(L->Y->Dynamo, L->Ir.Element, 541);
 		}
 		else throw gcnew Exception("Universe Destroyed By Hadron Collision");
 		// if (R->Ir.Dynamo != N->Ir.Dynamo) // Flare Returning
 	}
 
 	void Orbital::Vent() {
-		Ligand = BigInteger::ModPow(R->Ir.Barn, N->Ir.Ring, Math::AzimuthPrime); // Patent Wind
-		N->Ir.Ring = 0;
+		Ligand = BigInteger::ModPow(R->Ir.Barn, L->Ir.Ring, Math::AzimuthPrime); // Patent Wind
+		L->Ir.Ring = 0;
 		R->Ir.Barn = 0;
 	}
 
@@ -86,11 +83,9 @@ namespace Dysnomia {
 		//if (Mass->Count < 1) return;
 		//BigInteger Cation = Math::Hood(Mass);
 		//BigInteger Anion = Math::Hood(R->Ir.H);
-		Orbital^ E = gcnew Orbital(*Boson);
-		E->Parent = this;
+		Orbital^ E = gcnew Orbital(*N);
 		E->Ligand = Ligand;
 		//E->Ring(Cation, Anion);
-		D->AddLast(E);
 	}
 
 	/*

@@ -9,7 +9,8 @@ namespace Dysnomia {
 	public ref class Ion
 	{
 	public:
-		Dynamic^ R;
+		Dynamic^ X;
+		Dynamic^ Y;
 		Valence Ir;
 		bool InParadox = false;
 

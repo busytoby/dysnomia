@@ -9,14 +9,13 @@ namespace Dysnomia {
 	public ref class Orbital
 	{
 	public:
-		Orbital^ Parent;
 		BigInteger Ligand;
-		Dynamic^ Boson;
+		Dynamic^ N;
 		BigInteger Coordinate;
 		Ion^ R;
+		Ion^ Y;
 		Ion^ L;
-		Ion^ N;
-		LinkedList<Orbital^>^ D;
+		//LinkedList<Orbital^>^ D;
 
 		Orbital();
 		Orbital(Dynamic);

@@ -6,35 +6,35 @@ using namespace System::Globalization;
 
 namespace Dysnomia {
 	Situation::Situation() {
-		S.Boson = gcnew Dynamic();
+		S.N = gcnew Dynamic();
 	}
 
 	BigInteger Situation::Avail(BigInteger Cation) {
-		BigInteger Ligand = S.Boson->Avail(Cation);
+		BigInteger Ligand = S.N->Avail(Cation);
 		return Ligand;
 	}
 
 	BigInteger Situation::Form(BigInteger Donor) {
-		S.Boson->Form(Donor);
-		S.Boson->Polarize();
-		return S.Boson->Pole;
+		S.N->Form(Donor);
+		S.N->Polarize();
+		return S.N->Pole;
 	}
 
 	BigInteger Situation::Conjugate(BigInteger% Paradox) {
-		S.Coordinate = S.Boson->Coordinate(Paradox);
-		S.Boson->Conify();
+		S.Coordinate = S.N->Coordinate(Paradox);
+		S.N->Conify();
 
-		return S.Boson->Foundation;
+		return S.N->Foundation;
 	}
 
 	void Situation::Saturate(BigInteger Foundation, BigInteger Channel) {
-		S.Boson->Saturate(Foundation, Channel);
-		S.Boson->Bond();
+		S.N->Saturate(Foundation, Channel);
+		S.N->Bond();
 	}
 
 	void Situation::Adduct(BigInteger Dynamo) {
-		S.Boson->Adduct(Dynamo);
-		S.Boson->Open(S.Coordinate);
+		S.N->Adduct(Dynamo);
+		S.N->Open(S.Coordinate);
 	}
 
 	BigInteger Situation::Foil(BigInteger Carbenium, BigInteger Carbonium) {
