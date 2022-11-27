@@ -18,10 +18,7 @@ namespace Dysnomia {
 
 		Situation();
 		BigInteger Avail(BigInteger);
-		BigInteger Form(BigInteger);
-		BigInteger Conjugate(BigInteger%);
-		void Saturate(BigInteger, BigInteger);
-		void Adduct(BigInteger);
+
 		BigInteger Foil(BigInteger, BigInteger);
 
 		//void Pull();

@@ -10,6 +10,21 @@ namespace Dysnomia {
 		N = gcnew Dynamic(B);
 	}
 
+	Orbital::Orbital(Ion^ I) {
+		Y = I;
+	}
+
+	BigInteger Orbital::Conjugate(BigInteger% Paradox) {
+		Y->M->Cone->Conjugate(Paradox);
+		Y->M->Cone->Conify();
+
+		return Y->M->Cone->Foundation;
+	}
+
+	void Orbital::Saturate(BigInteger Foundation, BigInteger Channel) {
+		Y->M->Cone->Saturate(Foundation, Channel);
+		Y->M->Cone->Bond();
+	}
 	void Orbital::Ring(BigInteger Cation) {
 		Ring(Cation, L->Ir.Barn);
 	}
@@ -18,7 +33,7 @@ namespace Dysnomia {
 		if (R == nullptr || L == nullptr || N == nullptr) {
 			R = gcnew Ion(*N);
 			Y = gcnew Ion(*N, *R);
-			L = gcnew Ion(*Y->Y);
+			L = gcnew Ion(*Y->M->Cone);
 		}
 		/*
 		if (N->Ir.R == nullptr)
@@ -62,7 +77,7 @@ namespace Dysnomia {
 
 	void Orbital::DetectCollision() { // There's No Such Thing As Hadrons
 		if (R->Ir.Dynamo.IsZero) {
-			R->Ir.Dynamo = BigInteger::ModPow(L->Y->Dynamo, L->Ir.Element, 541);
+			R->Ir.Dynamo = BigInteger::ModPow(L->M->Cone->Dynamo, L->Ir.Element, 541);
 		}
 		else throw gcnew Exception("Universe Destroyed By Hadron Collision");
 		// if (R->Ir.Dynamo != N->Ir.Dynamo) // Flare Returning

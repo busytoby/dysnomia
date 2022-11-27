@@ -8,13 +8,13 @@ namespace Dysnomia {
 	{
 	private:
 		Affinity Norbornylene;
-		Situation^ N; // Norcamphene
+		Ion^ N; // Norcamphene
 		Orbital S;
 
 	public:
 		Perception();
-		Perception(Situation^, BigInteger, BigInteger, BigInteger);
-		Situation^ Bridge(Situation^, BigInteger);
-		void Avail(Situation^, BigInteger, BigInteger);
+		Perception(Ion^, BigInteger, BigInteger, BigInteger);
+		void Bridge(Ion^, BigInteger);
+		void Avail(Ion^, BigInteger, BigInteger);
 	};
 }

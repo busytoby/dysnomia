@@ -19,20 +19,20 @@ namespace Dysnomia {
 		void Tune();
 
 	public:
-		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn;
+		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();
-		BigInteger Coordinate(BigInteger%);
+		void Conjugate(BigInteger%);
 		void Conify();
 		void Saturate(BigInteger, BigInteger);
 		void Bond();
 		void Adduct(BigInteger);
-		void Open(BigInteger);
-		bool ManifoldCompare(Dynamic%);
+		void Open();
+		bool ManifoldCompare(Dynamic^);
 		BigInteger Charge(BigInteger, bool);
 		BigInteger Induce(BigInteger Ampere, bool);
 		BigInteger Torque(BigInteger Henry, bool);

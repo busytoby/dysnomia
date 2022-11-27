@@ -7,29 +7,44 @@ Ordered Pairs:
 */
 
 namespace Dysnomia {
+    Ion::Ion() {
+        M = gcnew Affinity();
+    }
+
 	Ion::Ion(Dynamic Boson) {
-        Y = gcnew Dynamic(Boson);
-        Ir.Foundation = BigInteger::ModPow(Y->Identity, Y->Barn, Math::Prime); // Patent Lepton
-        Ir.Element = BigInteger::ModPow(Ir.Foundation, Y->Foundation, Math::CatalanPrime); 
-        Ir.Dynamo = BigInteger::ModPow(Y->Dynamo, Ir.Element, 541); // Patent Muon Is Tightly Coupled
+        M->Cone = gcnew Dynamic(Boson);
+        Ir.Foundation = BigInteger::ModPow(M->Cone->Identity, M->Cone->Barn, Math::Prime); // Patent Lepton
+        Ir.Element = BigInteger::ModPow(Ir.Foundation, M->Cone->Foundation, Math::CatalanPrime);
+        Ir.Dynamo = BigInteger::ModPow(M->Cone->Dynamo, Ir.Element, 541); // Patent Muon Is Tightly Coupled
         Ir.Manifold = BigInteger::ModPow(Ir.Foundation, Ir.Element, Math::AzimuthPrime); // Patent Mu-Electron
 	}
 
     Ion::Ion(Dynamic Boson, Ion% L) {
-        Y = gcnew Dynamic(Boson);
-        Ir.Foundation = BigInteger::ModPow(Y->Identity, L.Ir.Barn, Math::CatalanPrime); 
+        M->Cone = gcnew Dynamic(Boson);
+        Ir.Foundation = BigInteger::ModPow(M->Cone->Identity, L.Ir.Barn, Math::CatalanPrime);
         Ir.Element = BigInteger::ModPow(Ir.Foundation, L.Ir.Foundation, Math::Prime); 
-        Ir.Dynamo = BigInteger::ModPow(Y->Dynamo, Ir.Element, Math::AzimuthPrime);
-        Ir.Manifold = BigInteger::ModPow(Y->Foundation, L.Ir.Element, Math::AzimuthPrime); // Patent Mu Electron
+        Ir.Dynamo = BigInteger::ModPow(M->Cone->Dynamo, Ir.Element, Math::AzimuthPrime);
+        Ir.Manifold = BigInteger::ModPow(M->Cone->Foundation, L.Ir.Element, Math::AzimuthPrime); // Patent Mu Electron
+    }
+
+    BigInteger Ion::Form(BigInteger Donor) {
+        M->Cone->Form(Donor);
+        M->Cone->Polarize();
+        return M->Cone->Pole;
+    }
+
+    void Ion::Adduct(BigInteger Dynamo) {
+        M->Cone->Adduct(Dynamo);
+        M->Cone->Open();
     }
 
     void Ion::Nitrate(BigInteger G)
     {
         if(Ir.Ring.IsZero)
-            Ir.Ring = BigInteger::ModPow(G, Y->Signal, Math::Prime);
+            Ir.Ring = BigInteger::ModPow(G, M->Cone->Signal, Math::Prime);
         else {
             Ir.Ring = BigInteger::Add(Ir.Ring,
-                BigInteger::ModPow(G, Y->Signal, Math::Prime));
+                BigInteger::ModPow(G, M->Cone->Signal, Math::Prime));
         }
         Ir.Prime = Ir.Ring;
     }
@@ -60,7 +75,7 @@ namespace Dysnomia {
     {
         if (Ir.Barn.IsZero)
             Ir.Prime = Ir.Barn = BigInteger::ModPow(
-                BigInteger::ModPow(Ir.Element, Y->Element, Math::Prime),
+                BigInteger::ModPow(Ir.Element, M->Cone->Element, Math::Prime),
                 Ir.Manifold,
                 Math::CatalanPrime);
 

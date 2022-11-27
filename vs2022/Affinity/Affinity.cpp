@@ -5,6 +5,8 @@ using namespace System::Globalization;
 
 namespace Dysnomia {
 	Affinity::Affinity() {
+		Rod = gcnew Dynamic();
+		Cone = gcnew Dynamic();
 		OpenManifolds();
 	}
 
@@ -13,49 +15,49 @@ namespace Dysnomia {
 
 		Hamilton = Math::Random();
 
-		BigInteger RodSubstrate = Rod.Avail(Hamilton);
-		BigInteger ConeSubstrate = Cone.Avail(Hamilton);
+		BigInteger RodSubstrate = Rod->Avail(Hamilton);
+		BigInteger ConeSubstrate = Cone->Avail(Hamilton);
 
-		Rod.Form(ConeSubstrate);
-		Cone.Form(RodSubstrate);
+		Rod->Form(ConeSubstrate);
+		Cone->Form(RodSubstrate);
 
-		Rod.Polarize();
-		Cone.Polarize();
+		Rod->Polarize();
+		Cone->Polarize();
 	}
 
 	void Affinity::OpenManifolds() {
 		int tries = 0;
-		while (!Cone.ManifoldCompare(Rod) && tries++ < 3) {
+		while (!Cone->ManifoldCompare(Rod) && tries++ < 3) {
 			ConductorGenerate();
 
 			// Last Relativity
-			BigInteger aCoordinate = Rod.Coordinate(Cone.Pole);
-			BigInteger bCoordinate = Cone.Coordinate(Rod.Pole);
+			Rod->Conjugate(Cone->Pole);
+			Cone->Conjugate(Rod->Pole);
 	
-			if (aCoordinate != bCoordinate) continue;
+			if (Rod->Coordinate != Cone->Coordinate) continue;
 
-			Cone.Conify();
+			Cone->Conify();
 
-			Rod.Saturate(Cone.Foundation, Cone.Channel);
-			Cone.Saturate(Rod.Foundation, Rod.Channel);
+			Rod->Saturate(Cone->Foundation, Cone->Channel);
+			Cone->Saturate(Rod->Foundation, Rod->Channel);
 
-			if (Rod.Element != Cone.Element) continue;
+			if (Rod->Element != Cone->Element) continue;
 
 			Ratchet();
 
-			Rod.Adduct(Cone.Dynamo);
-			Cone.Adduct(Rod.Dynamo);
+			Rod->Adduct(Cone->Dynamo);
+			Cone->Adduct(Rod->Dynamo);
 
-			Rod.Open(aCoordinate);
-			Cone.Open(bCoordinate);
+			Rod->Open();
+			Cone->Open();
 		}
 		if (tries >= 2) throw gcnew Exception("Never Caught This Before");
 	}
 
 	void Affinity::Ratchet()
 	{
-		Rod.Bond();
-		Cone.Bond();
+		Rod->Bond();
+		Cone->Bond();
 	}
 
 	BigInteger Affinity::BigDetermine(String^ data)
@@ -79,13 +81,13 @@ namespace Dysnomia {
 
 	array<BigInteger>^ Affinity::Determine(BigInteger Sievert)
 	{
-		BigInteger Ampere = Cone.Charge(Sievert, false);
-		BigInteger Henry = Rod.Induce(Ampere, false);
-		BigInteger Newton = Cone.Torque(Ampere, false);
-		BigInteger Maxwell = Cone.Amplify(Newton, false);
-		BigInteger Fermat = Cone.Sustain(Maxwell, false);
-		array<BigInteger>^ Material = Rod.React(Fermat, Cone.Channel);
-		array<BigInteger>^ ReferenceMaterial = Cone.React(Fermat, Rod.Channel);
+		BigInteger Ampere = Cone->Charge(Sievert, false);
+		BigInteger Henry = Rod->Induce(Ampere, false);
+		BigInteger Newton = Cone->Torque(Ampere, false);
+		BigInteger Maxwell = Cone->Amplify(Newton, false);
+		BigInteger Fermat = Cone->Sustain(Maxwell, false);
+		array<BigInteger>^ Material = Rod->React(Fermat, Cone->Channel);
+		array<BigInteger>^ ReferenceMaterial = Cone->React(Fermat, Rod->Channel);
 		if (Material[0] != ReferenceMaterial[1] || Material[1] != ReferenceMaterial[0]) throw gcnew Exception("ReactionException");
 		if (Material[0] == Material[1]) throw gcnew Exception("ReactionExceptionSingularity");
 		return Material;
@@ -95,21 +97,21 @@ namespace Dysnomia {
 	BigInteger Affinity::WaveFunction(String^ Roentgen)
 	{
 		array<Byte>^ dataBytes = System::Text::Encoding::UTF8->GetBytes(Roentgen);
-		int blocksize = Cone.Element.ToByteArray()->Length;
+		int blocksize = Cone->Element.ToByteArray()->Length;
 
 		if (blocksize > dataBytes->Length) blocksize = dataBytes->Length;
 
 		ArraySegment<Byte>^ segment = gcnew ArraySegment<Byte>(dataBytes, 0, blocksize);
 		array<Byte>^ segmentarray = gcnew array<Byte>(segment->Count);
 		Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-		BigInteger Hash = BigInteger::ModPow(Cone.Barn, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod.Manifold);
+		BigInteger Hash = BigInteger::ModPow(Cone->Barn, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		for (int i = blocksize; i < dataBytes->Length; i += blocksize)
 		{
 			int thisblocksize = (i + blocksize > dataBytes->Length) ? dataBytes->Length - i : blocksize;
 			segment = gcnew ArraySegment<Byte>(dataBytes, i, thisblocksize);
 			segmentarray = gcnew array<Byte>(segment->Count);
 			Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-			Hash = BigInteger::ModPow(Hash, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod.Manifold);
+			Hash = BigInteger::ModPow(Hash, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		}
 		if (BigInteger::IsNegative(Hash)) Hash = Hash * -1;
 		return Hash;

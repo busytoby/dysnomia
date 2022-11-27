@@ -11,7 +11,6 @@ namespace Dysnomia {
 	public:
 		BigInteger Ligand;
 		Dynamic^ N;
-		BigInteger Coordinate;
 		Ion^ R;
 		Ion^ Y;
 		Ion^ L;
@@ -19,6 +18,9 @@ namespace Dysnomia {
 
 		Orbital();
 		Orbital(Dynamic);
+		Orbital(Ion^);
+		BigInteger Conjugate(BigInteger%);
+		void Saturate(BigInteger, BigInteger);
 		void Ring(BigInteger);
 		void Ring(BigInteger, BigInteger);
 		void Pull();
