@@ -24,7 +24,7 @@ namespace Dysnomia
         public MainWindow()
         {
             InitializeComponent();
-            Perception P = new Perception();
+            Orbital P = new Orbital();
 
             int a = 999; // What Planet
         }

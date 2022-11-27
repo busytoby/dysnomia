@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Perception\Perception.vcxproj" />
+    <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
   </ItemGroup>
 
 </Project>
