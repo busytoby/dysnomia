@@ -9,15 +9,40 @@ namespace Dysnomia {
 		Y = gcnew Ion();
 		L = gcnew Ion();
 		
-		BigInteger Carbenium = L->M->GetElement();
-		BigInteger Carbonium = L->M->GetBarn();;
+		Ligand = L->M->GetElement();
+		BigInteger Ligate = L->M->GetBarn();;
 
-		Bridge(Carbenium);
+		Bridge(Ligand);
 
-		BigInteger Ligand = L->M->GetSignal();;
-		R->Ligand = Carbonium;
+		Ligand = L->M->GetSignal();;
 
-		array<BigInteger>^ EyeExam = Y->M->Determine("Selfish");
+		array<Affinity^>^ YM = Y->M->Denature();
+		array<Affinity^>^ RM = R->M->Denature();
+		array<Affinity^>^ LM = L->M->Denature();
+
+		Orbital^ Uranus = gcnew Orbital(L->M);
+		Orbital^ Neptune = gcnew Orbital(Y->M);
+		Orbital^ Venus = gcnew Orbital(R->M);
+		Orbital^ Pluto = gcnew Orbital(LM[0]);
+		Orbital^ Mars = gcnew Orbital(LM[1]);
+		Orbital^ Jupiter = gcnew Orbital(RM[0]);
+		Orbital^ Saturn = gcnew Orbital(RM[1]);
+		Orbital^ Earth = gcnew Orbital(YM[0]);
+		Orbital^ Mercury = gcnew Orbital(YM[1]);
+	}
+
+	Orbital::Orbital(Affinity^ A) {
+		N = gcnew Dynamic();
+		R = gcnew Ion();
+		Y = gcnew Ion();
+		L = gcnew Ion(A);
+
+		Ligand = L->M->GetElement();
+		BigInteger Ligate = L->M->GetBarn();;
+
+		Bridge(Ligand);
+
+		Ligand = L->M->GetSignal();;
 	}
 
 	void Orbital::Bridge(BigInteger Ligand) {

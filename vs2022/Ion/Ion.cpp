@@ -11,6 +11,10 @@ namespace Dysnomia {
         M = gcnew Affinity();
     }
 
+    Ion::Ion(Affinity^ A) {
+        M = A;
+    }
+
     BigInteger Ion::Form() {
         M->Cone->Form(Ligand);
         M->Cone->Polarize();

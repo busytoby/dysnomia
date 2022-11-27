@@ -8,21 +8,21 @@ namespace Dysnomia {
 	{
 	private:
 		Dynamic^ Rod;
-		void ConductorGenerate();
+		void ConductorGenerate(BigInteger);
 		void OpenManifolds();
+		void OpenManifolds(BigInteger);
 		void Ratchet();
 
 	public:
 		Dynamic^ Cone;
 
 		Affinity();
-		BigInteger BigDetermine(String^ data);
-		array<BigInteger>^ Determine(String^ Roentgen);
-		array<BigInteger>^ Determine(BigInteger Sievert);
+		Affinity::Affinity(BigInteger, BigInteger, BigInteger, BigInteger);
 		BigInteger WaveFunction(String^ Roentgen);
 		BigInteger GetSignal() { return Cone->Signal; }
 		BigInteger GetElement() { return Rod->Element; }
 		BigInteger GetBarn() { return Cone->Barn; }
+		array<Affinity^>^ Denature();
 
 	};
 }

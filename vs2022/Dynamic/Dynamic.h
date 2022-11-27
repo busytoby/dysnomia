@@ -16,13 +16,14 @@ namespace Dysnomia {
 
 		void Initialize();
 		void Seed();
-		void Tune();
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
+		void Tune();
+		void Initialize(BigInteger, BigInteger, BigInteger);
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();

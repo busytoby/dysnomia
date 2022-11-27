@@ -13,6 +13,7 @@ namespace Dysnomia {
 		Affinity^ M;
 
 		Ion();
+		Ion(Affinity^);
 		BigInteger Form();
 		void Adduct(BigInteger);
 	};

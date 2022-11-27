@@ -16,6 +16,7 @@ namespace Dysnomia {
 		Ion^ L;
 
 		Orbital();
+		Orbital(Affinity^);
 		void Bridge(BigInteger Carbenium);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
