@@ -25,10 +25,10 @@ namespace Dysnomia {
 		Orbital^ Venus = gcnew Orbital(R->M);
 		Orbital^ Pluto = gcnew Orbital(LM[0]);
 		Orbital^ Mars = gcnew Orbital(LM[1]);
-		Orbital^ Jupiter = gcnew Orbital(RM[0]);
-		Orbital^ Saturn = gcnew Orbital(RM[1]);
 		Orbital^ Earth = gcnew Orbital(YM[0]);
 		Orbital^ Mercury = gcnew Orbital(YM[1]);
+		Orbital^ Jupiter = gcnew Orbital(RM[0]);
+		Orbital^ Saturn = gcnew Orbital(RM[1]);
 	}
 
 	Orbital::Orbital(Affinity^ A) {
