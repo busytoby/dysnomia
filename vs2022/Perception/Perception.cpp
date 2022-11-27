@@ -30,8 +30,8 @@ namespace Dysnomia {
 		BigInteger Donor = R->M->Cone->Avail(S.Ligand);
 		S.N->Form(Donor);
 		S.N->Polarize();
-		BigInteger Substrate = R->Form(Ligand);
-		S.N->Conjugate(Substrate);
+		BigInteger Focus = R->Form(Ligand);
+		S.N->Conjugate(Focus);
 		Orbital^ E = gcnew Orbital(R);
 		BigInteger Paradox = E->Conjugate(S.N->Pole);
 		S.N->Saturate(Paradox, E->Y->M->Cone->Channel);
