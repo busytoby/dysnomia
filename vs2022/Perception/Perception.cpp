@@ -32,7 +32,7 @@ namespace Dysnomia {
 		S.N->Polarize();
 		BigInteger Focus = R->Form(Ligand);
 		S.N->Conjugate(Focus);
-		Orbital^ E = gcnew Orbital(R);
+		E = gcnew Orbital(R);
 		BigInteger Paradox = E->Conjugate(S.N->Pole);
 		S.N->Saturate(Paradox, E->Y->M->Cone->Channel);
 		E->Saturate(S.N->Foundation, S.N->Channel);
@@ -47,6 +47,7 @@ namespace Dysnomia {
 	void Perception::Avail(Ion^ R, BigInteger Ligand, BigInteger Carbonium) { // Proof P=NP
 		S.Ligand = Ligand;
 		R->Ligand = Carbonium;
+		array<BigInteger>^ EyeExam = E->Y->M->Determine("Selfish");
 //		BigInteger Aluminum0 = R->Foil(S.Ligand, R->Ligand); // Trademark Aluminum
 	}
 }

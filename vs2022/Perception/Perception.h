@@ -10,6 +10,7 @@ namespace Dysnomia {
 		Affinity Norbornylene;
 		Ion^ N; // Norcamphene
 		Orbital S;
+		Orbital^ E;
 
 	public:
 		Perception();
