@@ -27,8 +27,8 @@ namespace Dysnomia {
         Ir.Manifold = BigInteger::ModPow(M->Cone->Foundation, L.Ir.Element, Math::AzimuthPrime); // Patent Mu Electron
     }
 
-    BigInteger Ion::Form(BigInteger Donor) {
-        M->Cone->Form(Donor);
+    BigInteger Ion::Form() {
+        M->Cone->Form(Ligand);
         M->Cone->Polarize();
         return M->Cone->Pole;
     }

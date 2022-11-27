@@ -17,7 +17,7 @@ namespace Dysnomia {
 		Ion();
 		Ion(Dynamic);
 		Ion(Dynamic, Ion%);
-		BigInteger Form(BigInteger);
+		BigInteger Form();
 		void Adduct(BigInteger);
 		void Nitrate(BigInteger);
 		void Prime(Valence^, Valence^);
