@@ -38,8 +38,8 @@ namespace Dysnomia {
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
-		BigInteger Paradox = Conjugate(N->Pole);
-		N->Saturate(Paradox, Y->M->Cone->Channel);
+		BigInteger Rho = Conjugate(N->Pole);
+		N->Saturate(Rho, Y->M->Cone->Channel);
 		Saturate(N->Foundation, N->Channel);
 		N->Bond();
 		N->Adduct(Y->M->Cone->Dynamo);
@@ -49,8 +49,8 @@ namespace Dysnomia {
 		if (!Y->M->Cone->ManifoldCompare(N)) throw gcnew Exception("Never Failed The Boson Before");
 	}
 
-	BigInteger Orbital::Conjugate(BigInteger% Paradox) {
-		Y->M->Cone->Conjugate(Paradox);
+	BigInteger Orbital::Conjugate(BigInteger% Rho) {
+		Y->M->Cone->Conjugate(Rho);
 		Y->M->Cone->Conify();
 
 		return Y->M->Cone->Foundation;
