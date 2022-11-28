@@ -50,15 +50,15 @@ namespace Dysnomia {
 		Channel = BigInteger::ModPow(Base, Signal, Math::Prime);
 	}
 
-	void Dynamic::Initialize(BigInteger M, BigInteger L, BigInteger R) {
-		Base = L;
-		Secret = R;
-		Signal = M;
+	void Dynamic::Initialize(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
+		Base = Upsilon;
+		Secret = Ohm;
+		Signal = Rho;
 	}
 
-	BigInteger Dynamic::Avail(BigInteger Hamilton)
+	BigInteger Dynamic::Avail(BigInteger Xi)
 	{
-		return BigInteger::ModPow(Hamilton, Secret, Math::Prime);
+		return BigInteger::ModPow(Xi, Secret, Math::Prime);
 	}
 
 	void Dynamic::Form(BigInteger Ligand)

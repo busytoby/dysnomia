@@ -10,35 +10,35 @@ namespace Dysnomia {
 		OpenManifolds();
 	}
 
-	Affinity::Affinity(BigInteger Signal, BigInteger Base, BigInteger Secret, BigInteger Square) {
+	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Rod = gcnew Dynamic();
 		Cone = gcnew Dynamic();
-		Cone->Initialize(Signal, Base, Secret);
+		Cone->Initialize(Rho, Upsilon, Ohm);
 		Cone->Tune();
-		OpenManifolds(Square);
+		OpenManifolds(Xi);
 	}
 
 	void Affinity::OpenManifolds() {
-		BigInteger Hamilton = Math::Random();
-		OpenManifolds(Hamilton);
+		BigInteger Xi = Math::Random();
+		OpenManifolds(Xi);
 	}
 
-	void Affinity::ConductorGenerate(BigInteger Hamilton) {
+	void Affinity::ConductorGenerate(BigInteger Xi) {
 		BigInteger SeaborgRod, SeaborgCone;
 
-		BigInteger RodSubstrate = Rod->Avail(Hamilton);
-		BigInteger ConeSubstrate = Cone->Avail(Hamilton);
+		BigInteger Phi = Rod->Avail(Xi);
+		BigInteger Tau = Cone->Avail(Xi);
 
-		Rod->Form(ConeSubstrate);
-		Cone->Form(RodSubstrate);
+		Rod->Form(Tau);
+		Cone->Form(Phi);
 
 		Rod->Polarize();
 		Cone->Polarize();
 	}
 
-	void Affinity::OpenManifolds(BigInteger Hamilton) {
+	void Affinity::OpenManifolds(BigInteger Xi) {
 
-		ConductorGenerate(Hamilton);
+		ConductorGenerate(Xi);
 
 		// Last Relativity
 		Rod->Conjugate(Cone->Pole);
@@ -71,9 +71,9 @@ namespace Dysnomia {
 	}
 
 	// Hash Function
-	BigInteger Affinity::WaveFunction(String^ Roentgen)
+	BigInteger Affinity::WaveFunction(String^ Psi)
 	{
-		array<Byte>^ dataBytes = System::Text::Encoding::UTF8->GetBytes(Roentgen);
+		array<Byte>^ dataBytes = System::Text::Encoding::UTF8->GetBytes(Psi);
 		int blocksize = Cone->Element.ToByteArray()->Length;
 
 		if (blocksize > dataBytes->Length) blocksize = dataBytes->Length;
