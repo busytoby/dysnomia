@@ -35,10 +35,10 @@ namespace Dysnomia {
 		void Open();
 		bool ManifoldCompare(Dynamic^);
 		BigInteger Charge(BigInteger, bool);
-		BigInteger Induce(BigInteger Ampere, bool);
-		BigInteger Torque(BigInteger Henry, bool);
-		BigInteger Amplify(BigInteger Newton, bool);
-		BigInteger Sustain(BigInteger Maxwell, bool);
-		array<BigInteger>^ React(BigInteger Fermat, BigInteger peerChannel);
+		BigInteger Induce(BigInteger, bool);
+		BigInteger Torque(BigInteger, bool);
+		BigInteger Amplify(BigInteger, bool);
+		BigInteger Sustain(BigInteger, bool);
+		array<BigInteger>^ React(BigInteger, BigInteger peerChannel);
 	};
 }
