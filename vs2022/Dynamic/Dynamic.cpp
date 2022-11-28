@@ -50,7 +50,7 @@ namespace Dysnomia {
 		Channel = BigInteger::ModPow(Base, Signal, Math::Prime);
 	}
 
-	void Dynamic::Initialize(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
+	void Dynamic::Fuse(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
 		Base = Upsilon;
 		Secret = Ohm;
 		Signal = Rho;

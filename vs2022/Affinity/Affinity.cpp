@@ -13,7 +13,7 @@ namespace Dysnomia {
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Rod = gcnew Dynamic();
 		Cone = gcnew Dynamic();
-		Cone->Initialize(Rho, Upsilon, Ohm);
+		Cone->Fuse(Rho, Upsilon, Ohm);
 		Cone->Tune();
 		OpenManifolds(Xi);
 	}

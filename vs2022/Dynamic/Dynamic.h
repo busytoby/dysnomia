@@ -23,7 +23,7 @@ namespace Dysnomia {
 		Dynamic();
 		Dynamic(const Dynamic%);
 		void Tune();
-		void Initialize(BigInteger, BigInteger, BigInteger);
+		void Fuse(BigInteger, BigInteger, BigInteger);
 		BigInteger Avail(BigInteger);
 		void Form(BigInteger);
 		void Polarize();
