@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +30,9 @@ namespace Dysnomia
             Orbital P = new Orbital();
 
             Affinity[] YM = P.Y.M.Denature();
+            P.R.M.Cone.Initialize(P.Y.M.Rho, P.Y.M.Upsilon, P.Y.M.Ohm);
+            P.R.M.Cone.Tune();
+            P.R.M.OpenManifolds(P.Y.M.Omega);
             Affinity[] RM = P.R.M.Denature();
             Affinity[] LM = P.L.M.Denature();
 
