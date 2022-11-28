@@ -95,7 +95,7 @@ namespace Dysnomia {
 	}
 
 	array<Affinity^>^ Affinity::Denature() {
-		Sigma = Cone->Charge(Rod->Signal, false);
+		Sigma = Cone->Charge(Rod->Signal, true);
 		Rho = Rod->Induce(Sigma, false);
 		Upsilon = Cone->Torque(Sigma, false);
 		Ohm = Cone->Amplify(Upsilon, false);
