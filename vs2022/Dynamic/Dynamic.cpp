@@ -61,9 +61,9 @@ namespace Dysnomia {
 		return BigInteger::ModPow(Xi, Secret, Math::Prime);
 	}
 
-	void Dynamic::Form(BigInteger Ligand)
+	void Dynamic::Form(BigInteger Nu)
 	{
-		Base = BigInteger::ModPow(Ligand, Secret, Math::Prime);
+		Base = BigInteger::ModPow(Nu, Secret, Math::Prime);
 		Tune();
 	}
 
@@ -72,10 +72,10 @@ namespace Dysnomia {
 		Pole = BigInteger::ModPow(Base, Secret, Math::Prime);
 	}
 
-	void Dynamic::Conjugate(BigInteger% Ligand)
+	void Dynamic::Conjugate(BigInteger% Nu)
 	{
-		Coordinate = BigInteger::ModPow(Ligand, Secret, Math::Prime);
-		Ligand = 0;
+		Coordinate = BigInteger::ModPow(Nu, Secret, Math::Prime);
+		Nu = 0;
 	}
 
 	void Dynamic::Conify()

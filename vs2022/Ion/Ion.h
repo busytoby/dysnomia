@@ -9,7 +9,7 @@ namespace Dysnomia {
 	public ref class Ion
 	{
 	public:
-		BigInteger Ligand;
+		BigInteger Nu;
 		Affinity^ M;
 
 		Ion();

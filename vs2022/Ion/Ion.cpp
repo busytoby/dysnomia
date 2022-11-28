@@ -16,7 +16,7 @@ namespace Dysnomia {
     }
 
     BigInteger Ion::Form() {
-        M->Cone->Form(Ligand);
+        M->Cone->Form(Nu);
         M->Cone->Polarize();
         return M->Cone->Pole;
     }

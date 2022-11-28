@@ -9,12 +9,12 @@ namespace Dysnomia {
 		Y = gcnew Ion();
 		L = gcnew Ion();
 		
-		Ligand = L->M->GetElement();
+		Nu = L->M->GetElement();
 		BigInteger Ligate = L->M->GetBarn();
 
-		Bridge(Ligand);
+		Bridge(Nu);
 
-		Ligand = L->M->GetSignal();
+		Nu = L->M->GetSignal();
 	}
 
 	Orbital::Orbital(Affinity^ A) {
@@ -23,22 +23,22 @@ namespace Dysnomia {
 		Y = gcnew Ion();
 		L = gcnew Ion(A);
 
-		Ligand = L->M->GetElement();
+		Nu = L->M->GetElement();
 		BigInteger Ligate = L->M->GetBarn();;
 
-		Bridge(Ligand);
+		Bridge(Nu);
 
-		Ligand = L->M->GetSignal();;
+		Nu = L->M->GetSignal();;
 	}
 
-	void Orbital::Bridge(BigInteger Ligand) {
-		Y->Ligand = N->Avail(Ligand);
-		BigInteger Donor = Y->M->Cone->Avail(Ligand);
+	void Orbital::Bridge(BigInteger Nu) {
+		Y->Nu = N->Avail(Nu);
+		BigInteger Donor = Y->M->Cone->Avail(Nu);
 		N->Form(Donor);
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
-		BigInteger Rho = Conjugate(N->Pole);
+		Rho = Conjugate(N->Pole);
 		N->Saturate(Rho, Y->M->Cone->Channel);
 		Saturate(N->Foundation, N->Channel);
 		N->Bond();
