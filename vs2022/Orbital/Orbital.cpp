@@ -10,25 +10,11 @@ namespace Dysnomia {
 		L = gcnew Ion();
 		
 		Ligand = L->M->GetElement();
-		BigInteger Ligate = L->M->GetBarn();;
+		BigInteger Ligate = L->M->GetBarn();
 
 		Bridge(Ligand);
 
-		Ligand = L->M->GetSignal();;
-
-		array<Affinity^>^ YM = Y->M->Denature();
-		array<Affinity^>^ RM = R->M->Denature();
-		array<Affinity^>^ LM = L->M->Denature();
-
-		Orbital^ Uranus = gcnew Orbital(L->M);
-		Orbital^ Neptune = gcnew Orbital(Y->M);
-		Orbital^ Venus = gcnew Orbital(R->M);
-		Orbital^ Pluto = gcnew Orbital(LM[0]);
-		Orbital^ Mars = gcnew Orbital(LM[1]);
-		Orbital^ Earth = gcnew Orbital(YM[0]);
-		Orbital^ Mercury = gcnew Orbital(YM[1]);
-		Orbital^ Jupiter = gcnew Orbital(RM[0]);
-		Orbital^ Saturn = gcnew Orbital(RM[1]);
+		Ligand = L->M->GetSignal();
 	}
 
 	Orbital::Orbital(Affinity^ A) {

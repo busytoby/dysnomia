@@ -44,7 +44,6 @@ namespace Dysnomia {
 			"C71C71C71C71C71C71C71C71C71C71C71C71C71C7", NumberStyles::AllowHexSpecifier);
 
 
-
 		static Random rnd;
 
 		static BigInteger Random();

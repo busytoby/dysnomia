@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Affinity\Affinity.vcxproj" />
+    <ProjectReference Include="..\Dynamic\Dynamic.vcxproj" />
+    <ProjectReference Include="..\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
   </ItemGroup>
 
