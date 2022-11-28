@@ -99,7 +99,7 @@ namespace Dysnomia {
 		Rho = Rod->Induce(Sigma, true);
 		Upsilon = Cone->Torque(Sigma, true);
 		Ohm = Cone->Amplify(Upsilon, true);
-		Pi = Cone->Sustain(Ohm, false);
+		Pi = Cone->Sustain(Ohm, true);
 		array<BigInteger>^ Material = Rod->React(Pi, Cone->Channel);
 		array<BigInteger>^ ReferenceMaterial = Cone->React(Pi, Rod->Channel);
 		if (Material[0] != ReferenceMaterial[1] || Material[1] != ReferenceMaterial[0]) throw gcnew Exception("ReactionException");
