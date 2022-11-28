@@ -98,7 +98,7 @@ namespace Dysnomia {
 		Sigma = Cone->Charge(Rod->Signal, true);
 		Rho = Rod->Induce(Sigma, true);
 		Upsilon = Cone->Torque(Sigma, true);
-		Ohm = Cone->Amplify(Upsilon, false);
+		Ohm = Cone->Amplify(Upsilon, true);
 		Pi = Cone->Sustain(Ohm, false);
 		array<BigInteger>^ Material = Rod->React(Pi, Cone->Channel);
 		array<BigInteger>^ ReferenceMaterial = Cone->React(Pi, Rod->Channel);
