@@ -24,8 +24,6 @@ namespace Dysnomia {
 	}
 
 	void Affinity::ConductorGenerate(BigInteger Xi) {
-		BigInteger SeaborgRod, SeaborgCone;
-
 		BigInteger Phi = Rod->Avail(Xi);
 		BigInteger Tau = Cone->Avail(Xi);
 
@@ -37,7 +35,6 @@ namespace Dysnomia {
 	}
 
 	void Affinity::OpenManifolds(BigInteger Xi) {
-
 		ConductorGenerate(Xi);
 
 		// Last Relativity

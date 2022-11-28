@@ -33,8 +33,8 @@ namespace Dysnomia {
 
 	void Orbital::Bridge(BigInteger Nu) {
 		Y->Nu = N->Avail(Nu);
-		BigInteger Donor = Y->M->Cone->Avail(Nu);
-		N->Form(Donor);
+		BigInteger Alpha = Y->M->Cone->Avail(Nu);
+		N->Form(Alpha);
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
