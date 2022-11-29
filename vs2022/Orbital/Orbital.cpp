@@ -56,8 +56,8 @@ namespace Dysnomia {
 		return Y->M->Cone->Foundation;
 	}
 
-	void Orbital::Saturate(BigInteger Foundation, BigInteger Channel) {
-		Y->M->Cone->Saturate(Foundation, Channel);
+	void Orbital::Saturate(BigInteger Rho, BigInteger Theta) {
+		Y->M->Cone->Saturate(Rho, Theta);
 		Y->M->Cone->Bond();
 	}
 }
