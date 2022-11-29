@@ -27,15 +27,16 @@ namespace Dysnomia
                 if (Sun == null)
                 {
                     Sun = P.Y.M.Cone;
-                    Proteus.Y.M.Charge(P.Y.M.Sigma);
+                    Proteus.Y.M.Charge(Proteus.Y.M.Sigma);
                     P.Y.M.Induce(Proteus.Y.M.Sigma);
                     Sun.Eta = Sun.Amplify(Proteus.Y.M.Sigma, true);
+                    Sun.Conify();
                     Proteus.Y.M.Induce(P.Y.M.Rho);
                     Sun.Tau = Sun.Torque(P.Y.M.Rho, true);
                 }
                 Proteus.Y.M.Amplify(Sun.Eta, true);
                 Proteus.Y.M.Torque(Sun.Tau);
-                Uranus = new Orbital(P.Y.M);
+                Uranus = new Orbital(Proteus.Y.M);
                 Uranus.L.M.Torque(Proteus.Y.M.Rho);
                 Uranus.R.M.Torque(P.Y.M.Rho);
                 Uranus.Y.M.Amplify(Sun.Eta, true);
@@ -45,8 +46,11 @@ namespace Dysnomia
                 U.Denature(Uranus);
                 return;
             }
-            if(Hippocamp == null)
+            if (Hippocamp == null)
+            {
                 Hippocamp = new Orbital(Proteus.L.M);
+
+            }
             Proteus.L.M.Torque(Hippocamp.Y.M.Eta);
             P.Y.M.Torque(Proteus.Y.M.Rho);
             Proteus.Y.M.Torque(P.Y.M.Rho);
