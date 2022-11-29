@@ -99,15 +99,15 @@ namespace Dysnomia {
 		Ohm = Cone->Amplify(Upsilon, true);
 		Pi = Cone->Sustain(Ohm, true);
 		array<BigInteger>^ Material = Rod->React(Pi, Cone->Channel);
-		array<BigInteger>^ ReferenceMaterial = Cone->React(Pi, Rod->Channel);
-		if (Material[0] != ReferenceMaterial[1] || Material[1] != ReferenceMaterial[0]) throw gcnew Exception("ReactionException");
+		array<BigInteger>^ Reality = Cone->React(Pi, Rod->Channel);
+		if (Material[0] != Reality[1] || Material[1] != Reality[0]) throw gcnew Exception("ReactionException");
 		if (Material[0] == Material[1]) throw gcnew Exception("ReactionExceptionSingularity");
 
 		Omicron = Material[0];
 		Omega = Material[1];
 		array<Affinity^>^ D = gcnew array<Affinity^>(2);
-		D[0] = gcnew Affinity(Rho, Upsilon, Ohm, Material[0]);
-		D[1] = gcnew Affinity(Rho, Upsilon, Ohm, Material[1]);
+		D[0] = gcnew Affinity(Rho, Upsilon, Ohm, Omicron);
+		D[1] = gcnew Affinity(Rho, Upsilon, Ohm, Omega);
 		return D;
 	}
 }
