@@ -59,6 +59,7 @@ namespace Dysnomia {
 		Cone->Open();
 
 		if (!Cone->ManifoldCompare(Rod)) throw gcnew Exception("Never Failed Pairing Before");
+		this->Xi = Xi;
 	}
 
 	void Affinity::Ratchet()

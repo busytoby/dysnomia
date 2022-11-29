@@ -15,7 +15,7 @@ namespace Dysnomia {
 	public:
 		Dynamic^ Cone;
 
-		BigInteger Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega;
+		BigInteger Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Xi, Omega;
 
 		Affinity();
 		Affinity::Affinity(BigInteger, BigInteger, BigInteger, BigInteger);
