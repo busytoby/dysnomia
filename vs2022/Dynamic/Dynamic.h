@@ -39,6 +39,6 @@ namespace Dysnomia {
 		BigInteger Torque(BigInteger, bool);
 		BigInteger Amplify(BigInteger, bool);
 		BigInteger Sustain(BigInteger, bool);
-		array<BigInteger>^ React(BigInteger, BigInteger peerChannel);
+		array<BigInteger>^ React(BigInteger, BigInteger);
 	};
 }

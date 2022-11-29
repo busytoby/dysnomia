@@ -17,7 +17,7 @@ namespace Dysnomia {
 
 		Orbital();
 		Orbital(Affinity^);
-		void Bridge(BigInteger Carbenium);
+		void Bridge(BigInteger);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
 	};
