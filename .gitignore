@@ -57,3 +57,6 @@
 /vs2022/Salt/x64/Debug
 /vs2022/Salt/Salt.vcxproj.filters
 *.cache
+/vs2022/Prion/bin/Debug/net7.0
+/vs2022/Prion/obj/Debug/net7.0
+/vs2022/Prion/obj
