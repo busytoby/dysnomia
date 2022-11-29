@@ -85,7 +85,7 @@ namespace Dysnomia {
 		is_conic = true;
 	}
 
-	void Dynamic::Saturate(BigInteger peerFoundation, BigInteger peerChannel)
+	void Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
 	{
 		if (!is_conic)
 		{
@@ -93,19 +93,19 @@ namespace Dysnomia {
 			Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);
 		}
 
-		// BigInteger peerMoment, discardMoment
-		BigInteger convergence, moment, authentication,  accord;
+		// BigInteger Gamma, Kappa
+		BigInteger Beta, Rho, Eta, Phi;
 
-		convergence = BigInteger::ModPow(peerFoundation, Identity, Math::Prime);
-		moment = BigInteger::ModPow(peerChannel, Identity, Math::Prime);
-		authentication = BigInteger::ModPow(peerFoundation, Signal, Math::Prime);
+		Beta = BigInteger::ModPow(Epsilon, Identity, Math::Prime);
+		Rho = BigInteger::ModPow(Theta, Identity, Math::Prime);
+		Eta = BigInteger::ModPow(Epsilon, Signal, Math::Prime);
 
-		accord = BigInteger::Add(moment, authentication);
-		Element = BigInteger::Add(convergence, accord);
+		Phi = BigInteger::Add(Rho, Eta);
+		Element = BigInteger::Add(Beta, Phi);
 
 		// Principal Uncertainty
-		//peerMoment = BigInteger::ModPow(peerChannel, Signal, Math::Prime);
-		//discardMoment = BigInteger::Add(Element, peerMoment);
+		//Gamma = BigInteger::ModPow(Theta, Signal, Math::Prime);
+		//Kappa = BigInteger::Add(Element, Gamma);
 	}
 
 	void Dynamic::Bond()
