@@ -43,6 +43,8 @@ namespace Dysnomia {
 			"71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71" \
 			"C71C71C71C71C71C71C71C71C71C71C71C71C71C7", NumberStyles::AllowHexSpecifier);
 
+		static BigInteger DeathPrime = 4294967297;
+		static BigInteger MuPrime = 541;
 
 		static Random rnd;
 
