@@ -28,7 +28,9 @@ namespace Dysnomia
         {
             InitializeComponent();
             Orbital P = new Orbital();
+            Prion I = new Prion();
 
+            I.Denature(P);
             P.Denature();
             /*
             Affinity[] YM = P.Y.M.Denature();

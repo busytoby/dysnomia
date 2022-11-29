@@ -8,7 +8,7 @@ namespace Dysnomia
 {
     internal class React : Prion
     {
-        public React()
+        public React() // Base Class Constructor Is Called First
         {
             b = 66;
             this.b = 67;

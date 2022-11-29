@@ -63,6 +63,5 @@ namespace Dysnomia {
 
 	void Orbital::Denature() {
 		Y->M->Charge();
-		Prion P = Prion::Trust("React");
 	}
 }
