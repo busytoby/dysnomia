@@ -19,6 +19,7 @@ namespace Dysnomia
 
         public void Denature(Orbital P)
         {
+            if (N != null) throw new Exception("Prion Already Has An Orbital");
             N = new Orbital(P.Y.M);
             P.Y.M.Charge();
         }
