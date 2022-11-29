@@ -18,7 +18,7 @@ namespace Dysnomia {
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
-		BigInteger Tau;
+		BigInteger Tau, Mu;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
@@ -29,7 +29,7 @@ namespace Dysnomia {
 		void Polarize();
 		void Conjugate(BigInteger%);
 		void Conify();
-		void Saturate(BigInteger, BigInteger);
+		BigInteger Saturate(BigInteger, BigInteger);
 		void Bond();
 		void Adduct(BigInteger);
 		void Open();

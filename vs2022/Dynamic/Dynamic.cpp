@@ -85,7 +85,7 @@ namespace Dysnomia {
 		Tau = 1;
 	}
 
-	void Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
+	BigInteger Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
 	{
 		if (Tau.IsZero)
 		{
@@ -106,6 +106,13 @@ namespace Dysnomia {
 		// Principal Uncertainty
 		//Gamma = BigInteger::ModPow(Theta, Signal, Math::Prime);
 		//Kappa = BigInteger::Add(Element, Gamma);
+
+		if (Tau.IsZero)
+			Mu = Beta;
+		else
+			Mu = Rho;
+
+		return Eta;
 	}
 
 	void Dynamic::Bond()

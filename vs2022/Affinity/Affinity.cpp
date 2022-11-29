@@ -45,8 +45,8 @@ namespace Dysnomia {
 
 		Cone->Conify();
 
-		Rod->Saturate(Cone->Foundation, Cone->Channel);
-		Cone->Saturate(Rod->Foundation, Rod->Channel);
+		Eta = Rod->Saturate(Cone->Foundation, Cone->Channel);
+		Mu = Cone->Saturate(Rod->Foundation, Rod->Channel);
 
 		if (Rod->Element != Cone->Element) throw gcnew Exception("Never Failed Pairing Before");
 
