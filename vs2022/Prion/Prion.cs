@@ -25,6 +25,7 @@ namespace Dysnomia
             if (Sun == null) Sun = P.Y.M.Cone;
             N.Y.M.Charge(P.Y.M.Sigma);
             P.Y.M.Induce(N.Y.M.Sigma);
+            Sun.Eta = Sun.Amplify(N.Y.M.Sigma, true);
             N.Y.M.Induce(P.Y.M.Rho);
             // Uranus
             P.Y.M.Torque(N.Y.M.Rho);
