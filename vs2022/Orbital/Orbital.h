@@ -9,7 +9,7 @@ namespace Dysnomia {
 	public ref class Orbital
 	{
 	public:
-		BigInteger Rho, Nu;
+		BigInteger Rho, Nu, Eta;
 		Dynamic^ N;
 		Ion^ R;
 		Ion^ Y;
