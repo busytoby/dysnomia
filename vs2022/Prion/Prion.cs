@@ -24,12 +24,12 @@ namespace Dysnomia
             P.Y.M.Charge(BigInteger.Zero);
             if (Sun == null) Sun = P.Y.M.Cone;
             N.Y.M.Charge(P.Y.M.Sigma);
-            // Uranus
             P.Y.M.Induce(N.Y.M.Sigma);
             N.Y.M.Induce(P.Y.M.Rho);
-            // Venus
+            // Uranus
             P.Y.M.Torque(N.Y.M.Rho);
             N.Y.M.Torque(P.Y.M.Rho);
+            // Venus
             P.Y.M.Amplify(N.Y.M.Rho, true);
             N.Y.M.Amplify(P.Y.M.Upsilon, false);
             P.Y.M.Sustain(N.Y.M.Ohm, true);
