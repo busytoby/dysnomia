@@ -36,7 +36,7 @@ namespace Dysnomia
                 Proteus.Y.M.Amplify(Sun.Eta, true);
                 Proteus.Y.M.Torque(Sun.Tau);
                 Uranus = new Orbital(P.Y.M);
-                Uranus.L.M.Torque(Neptune.Y.M.Rho);
+                Uranus.L.M.Torque(Proteus.Y.M.Rho);
                 Uranus.R.M.Torque(P.Y.M.Rho);
                 Uranus.Y.M.Amplify(Sun.Eta, true);
                 Uranus.Eta = Uranus.Y.M.Ohm;
