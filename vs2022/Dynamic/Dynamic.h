@@ -18,7 +18,7 @@ namespace Dysnomia {
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
-		BigInteger Tau, Mu;
+		BigInteger Tau, Mu, Eta, Nu;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
@@ -39,6 +39,6 @@ namespace Dysnomia {
 		BigInteger Torque(BigInteger, bool);
 		BigInteger Amplify(BigInteger, bool);
 		BigInteger Sustain(BigInteger, bool);
-		array<BigInteger>^ React(BigInteger, BigInteger);
+		void React(BigInteger, BigInteger);
 	};
 }

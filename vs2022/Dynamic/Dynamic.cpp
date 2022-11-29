@@ -185,11 +185,9 @@ namespace Dysnomia {
 		return Torque(Ohm, Critical);
 	}
 
-	array<BigInteger>^ Dynamic::React(BigInteger Pi, BigInteger Theta)
+	void Dynamic::React(BigInteger Pi, BigInteger Theta)
 	{
-		array<BigInteger>^ Dai = gcnew array<BigInteger>(2);
-		Dai[0] = BigInteger::ModPow(Pi, Channel, Theta);
-		Dai[1] = BigInteger::ModPow(Pi, Theta, Channel);
-		return Dai;
+		Eta = BigInteger::ModPow(Pi, Channel, Theta);
+		Nu = BigInteger::ModPow(Pi, Theta, Channel);
 	}
 }

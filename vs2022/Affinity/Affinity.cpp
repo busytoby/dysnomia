@@ -98,13 +98,13 @@ namespace Dysnomia {
 		Upsilon = Cone->Torque(Sigma, true);
 		Ohm = Cone->Amplify(Upsilon, true);
 		Pi = Cone->Sustain(Ohm, true);
-		array<BigInteger>^ Material = Rod->React(Pi, Cone->Channel);
-		array<BigInteger>^ Reality = Cone->React(Pi, Rod->Channel);
-		if (Material[0] != Reality[1] || Material[1] != Reality[0]) throw gcnew Exception("ReactionException");
-		if (Material[0] == Material[1]) throw gcnew Exception("ReactionExceptionSingularity");
+		Rod->React(Pi, Cone->Channel);
+		Cone->React(Pi, Rod->Channel);
+		if (Cone->Nu != Rod->Eta || Rod->Nu != Cone->Eta) throw gcnew Exception("ReactionException");
+		if (Rod->Eta == Rod->Nu) throw gcnew Exception("Gross");
 
-		Omicron = Material[0];
-		Omega = Material[1];
+		Omicron = Cone->Nu;
+		Omega = Rod->Nu;
 		array<Affinity^>^ D = gcnew array<Affinity^>(2);
 		D[0] = gcnew Affinity(Rho, Upsilon, Ohm, Omicron);
 		D[1] = gcnew Affinity(Rho, Upsilon, Ohm, Omega);
