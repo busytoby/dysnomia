@@ -114,9 +114,9 @@ namespace Dysnomia {
 		Pole = 0;
 	}
 
-	void Dynamic::Adduct(BigInteger peerDynamo)
+	void Dynamic::Adduct(BigInteger Phi)
 	{
-		Manifold = BigInteger::ModPow(peerDynamo, Signal, Element);
+		Manifold = BigInteger::ModPow(Phi, Signal, Element);
 	}
 
 	void Dynamic::Open()
@@ -144,9 +144,9 @@ namespace Dysnomia {
 			Barn == Rod->Barn);
 	}
 
-	BigInteger Dynamic::Charge(BigInteger VoltIdentity, bool Decay)
+	BigInteger Dynamic::Charge(BigInteger Psi, bool Decay)
 	{
-		BigInteger _barn = BigInteger::ModPow(Barn, VoltIdentity, Ring);
+		BigInteger _barn = BigInteger::ModPow(Barn, Psi, Ring);
 		if (Decay == false) Barn = _barn;
 		return _barn;
 	}
@@ -178,11 +178,11 @@ namespace Dysnomia {
 		return Torque(Ohm, Critical);
 	}
 
-	array<BigInteger>^ Dynamic::React(BigInteger Pi, BigInteger peerChannel)
+	array<BigInteger>^ Dynamic::React(BigInteger Pi, BigInteger Theta)
 	{
 		array<BigInteger>^ Dai = gcnew array<BigInteger>(2);
-		Dai[0] = BigInteger::ModPow(Pi, Channel, peerChannel);
-		Dai[1] = BigInteger::ModPow(Pi, peerChannel, Channel);
+		Dai[0] = BigInteger::ModPow(Pi, Channel, Theta);
+		Dai[1] = BigInteger::ModPow(Pi, Theta, Channel);
 		return Dai;
 	}
 }
