@@ -4,6 +4,8 @@ namespace Dysnomia
 {
     public class Prion
     {
+        static public Dynamic Sun;
+
         public Orbital N;
         public int b;
 
@@ -22,6 +24,7 @@ namespace Dysnomia
             if (N != null) throw new Exception("Prion Already Has An Orbital");
             N = new Orbital(P.Y.M);
             P.Y.M.Charge(BigInteger.Zero);
+            if (Sun == null) Sun = P.Y.M.Cone;
             N.Y.M.Charge(P.Y.M.Sigma);
             P.Y.M.Induce(P.Y.M.Sigma);
             N.Y.M.Induce(P.Y.M.Rho);
