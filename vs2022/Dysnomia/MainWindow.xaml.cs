@@ -29,6 +29,8 @@ namespace Dysnomia
             InitializeComponent();
             Orbital P = new Orbital();
 
+            P.Denature();
+            /*
             Affinity[] YM = P.Y.M.Denature();
             P.R.M.Cone.Fuse(P.Y.M.Rho, P.Y.M.Upsilon, P.Y.M.Ohm);
             P.R.M.Cone.Tune();
@@ -49,6 +51,7 @@ namespace Dysnomia
             MyPlanets.Add("Saturn", new Orbital(RM[1]));
             
             Dynamic MySun = P.N;
+            */
 
             int a = 999; // What Planet
         }

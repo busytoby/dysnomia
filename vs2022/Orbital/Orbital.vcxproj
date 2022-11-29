@@ -153,6 +153,9 @@
     <ProjectReference Include="..\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Prion\Prion.csproj">
+      <Project>{a23c082b-0028-43e4-8c29-d1aabff82fc5}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,6 +24,7 @@ namespace Dysnomia {
 		BigInteger GetSignal() { return Cone->Signal; }
 		BigInteger GetElement() { return Rod->Element; }
 		BigInteger GetBarn() { return Cone->Barn; }
+		void Charge();
 		array<Affinity^>^ Denature();
 
 	};
