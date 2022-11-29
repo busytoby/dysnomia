@@ -24,10 +24,10 @@ namespace Dysnomia {
 	}
 
 	void Affinity::ConductorGenerate(BigInteger Xi) {
-		BigInteger Phi = Rod->Avail(Xi);
-		BigInteger Tau = Cone->Avail(Xi);
+		Phi = Rod->Avail(Xi);
+		Cone->Tau = Cone->Avail(Xi);
 
-		Rod->Form(Tau);
+		Rod->Form(Cone->Tau);
 		Cone->Form(Phi);
 
 		Rod->Polarize();

@@ -6,7 +6,7 @@ using namespace System;
 
 namespace Dysnomia {
 	Dynamic::Dynamic() {
-		is_conic = false;
+		Tau = 0;
 		Initialize();
 		Seed();
 		Tune();
@@ -82,12 +82,12 @@ namespace Dysnomia {
 	{
 		Identity = Math::Random();
 		Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);
-		is_conic = true;
+		Tau = 1;
 	}
 
 	void Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
 	{
-		if (!is_conic)
+		if (Tau.IsZero)
 		{
 			Identity = Math::Random();
 			Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);

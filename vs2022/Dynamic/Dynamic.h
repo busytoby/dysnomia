@@ -11,7 +11,6 @@ namespace Dysnomia {
 	public ref class Dynamic
 	{
 	private:
-		bool is_conic;
 		BigInteger Base, Secret, Ring;
 
 		void Initialize();
@@ -19,6 +18,7 @@ namespace Dysnomia {
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
+		BigInteger Tau;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
