@@ -94,6 +94,7 @@ namespace Dysnomia {
 
 	array<Affinity^>^ Affinity::Denature() {
 		Sigma = Cone->Charge(Rod->Signal, true);
+		// First Prion Stub
 		Rho = Rod->Induce(Sigma, true);
 		Upsilon = Cone->Torque(Sigma, true);
 		Ohm = Cone->Amplify(Upsilon, true);
