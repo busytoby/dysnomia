@@ -31,7 +31,7 @@ namespace Dysnomia
             Prion I = new Prion();
 
             I.Denature(P);
-            P.Denature();
+            
             /*
             Affinity[] YM = P.Y.M.Denature();
             P.R.M.Cone.Fuse(P.Y.M.Rho, P.Y.M.Upsilon, P.Y.M.Ohm);

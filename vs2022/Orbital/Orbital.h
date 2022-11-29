@@ -20,6 +20,5 @@ namespace Dysnomia {
 		void Bridge(BigInteger);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
-		void Denature();
 	};
 }

@@ -92,23 +92,37 @@ namespace Dysnomia {
 		return Hash;
 	}
 
-	void Affinity::Charge() {
-		Sigma = Cone->Charge(Rod->Signal, true);
+	void Affinity::Charge(BigInteger Signal) {
+		if (Signal.IsZero) Signal = Rod->Signal;
+		Sigma = Cone->Charge(Signal, true);
 	}
 
-	array<Affinity^>^ Affinity::Denature() {
-		Sigma = Cone->Charge(Rod->Signal, true);
+	void Affinity::Induce(BigInteger Sigma) {
 		Rho = Rod->Induce(Sigma, true);
+	}
+
+	void Affinity::Torque(BigInteger Sigma) {
 		Upsilon = Cone->Torque(Sigma, true);
-		Ohm = Cone->Amplify(Upsilon, true);
-		Pi = Cone->Sustain(Ohm, true);
+	}
+
+	void Affinity::Amplify(BigInteger Upsilon, bool Critical) {
+		Ohm = Cone->Amplify(Upsilon, Critical);
+	}
+
+	void Affinity::Sustain(BigInteger Ohm, bool Critical) {
+		Pi = Cone->Sustain(Ohm, Critical);
+	}
+
+	void Affinity::React(BigInteger Pi) {
 		Rod->React(Pi, Cone->Channel);
 		Cone->React(Pi, Rod->Channel);
 		if (Cone->Nu != Rod->Eta || Rod->Nu != Cone->Eta) throw gcnew Exception("ReactionException");
 		if (Rod->Eta == Rod->Nu) throw gcnew Exception("Gross");
-
 		Omicron = Cone->Nu;
 		Omega = Rod->Nu;
+	}
+
+	array<Affinity^>^ Affinity::Denature() {
 		array<Affinity^>^ D = gcnew array<Affinity^>(2);
 		D[0] = gcnew Affinity(Rho, Upsilon, Ohm, Omicron);
 		D[1] = gcnew Affinity(Rho, Upsilon, Ohm, Omega);

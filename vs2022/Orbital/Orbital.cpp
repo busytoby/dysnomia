@@ -60,8 +60,4 @@ namespace Dysnomia {
 		Y->M->Cone->Saturate(Rho, Theta);
 		Y->M->Cone->Bond();
 	}
-
-	void Orbital::Denature() {
-		Y->M->Charge();
-	}
 }
