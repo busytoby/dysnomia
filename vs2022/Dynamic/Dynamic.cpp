@@ -93,7 +93,8 @@ namespace Dysnomia {
 			Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);
 		}
 
-		BigInteger convergence, moment, authentication, peerMoment, accord, discardMoment;
+		// BigInteger peerMoment, discardMoment
+		BigInteger convergence, moment, authentication,  accord;
 
 		convergence = BigInteger::ModPow(peerFoundation, Identity, Math::Prime);
 		moment = BigInteger::ModPow(peerChannel, Identity, Math::Prime);

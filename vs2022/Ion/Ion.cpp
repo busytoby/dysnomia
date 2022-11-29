@@ -1,10 +1,6 @@
 #include "pch.h"
 
 #include "Ion.h"
-/*
-Ordered Pairs:
-		BigInteger Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn;
-*/
 
 namespace Dysnomia {
     Ion::Ion() {
