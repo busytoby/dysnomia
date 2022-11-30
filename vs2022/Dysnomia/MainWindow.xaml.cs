@@ -38,12 +38,16 @@ namespace Dysnomia
             BigInteger XX = Prion.Despina.R.M.WaveFunction(E.ToString());
             BigInteger XXX = Prion.Phoebe.L.M.WaveFunction(XX.ToString());
             BigInteger Uwu = Prion.Desdemona.R.M.WaveFunction(XXX.ToString());
-            BigInteger Uwu2 = Prion.Desdemona.L.M.WaveFunction(Uwu.ToString());
-            BigInteger Uwu3 = Prion.Desdemona.Y.M.WaveFunction(Uwu2.ToString());
-            for (int i = 0; i < 100; i++)
+            while (true)
             {
-                Uwu3 = Prion.Iapetus.L.M.WaveFunction(Uwu3.ToString());
-                Uwu = Prion.Desdemona.R.M.WaveFunction(Uwu3.ToString());
+                BigInteger Uwu2 = Prion.Desdemona.L.M.WaveFunction(Uwu.ToString());
+                BigInteger Uwu3 = Prion.Desdemona.Y.M.WaveFunction(Uwu2.ToString());
+                for (int i = 0; i < 100; i++)
+                {
+                    Uwu3 = Prion.Iapetus.L.M.WaveFunction(Uwu3.ToString());
+                    Uwu = Prion.Desdemona.R.M.WaveFunction(Uwu3.ToString());
+                }
+                System.Threading.Thread.Sleep(111);
             }
             
 
