@@ -38,6 +38,8 @@ namespace Dysnomia
             BigInteger XX = Prion.Despina.R.M.WaveFunction(E.ToString());
             BigInteger XXX = Prion.Phoebe.L.M.WaveFunction(XX.ToString());
             BigInteger Uwu = Prion.Desdemona.R.M.WaveFunction(XXX.ToString());
+            BigInteger Uwu2 = Prion.Desdemona.L.M.WaveFunction(Uwu.ToString());
+            BigInteger Uwu3 = Prion.Desdemona.Y.M.WaveFunction(Uwu2.ToString());
 
             int a = 999; // What Planet
         }
