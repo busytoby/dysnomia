@@ -4,10 +4,11 @@ namespace Dysnomia
 {
     public class Prion
     {
-        static public Dynamic Sun;
         static public Orbital Neptune;
-        static public Orbital Proteus;
+        static public Orbital Venus;
         static public Orbital Uranus;
+
+        static public Orbital Proteus;
         static public Orbital Hippocamp;
 
         public Prion()
@@ -20,13 +21,16 @@ namespace Dysnomia
 
         public void Denature(ref Orbital P)
         {
-            if (Sun == null)
+            BigInteger Xi;
+            if (Neptune == null)
             {
                 if (Uranus == null) Uranus = new Orbital(P.L.M);
                 if (Neptune == null) Neptune = new Orbital(P.R.M);
-                if (Proteus == null) Proteus = new Orbital(P.Y.M);
-                P = null;
-                Sun = Proteus.R.M.Cone;
+                if (Venus == null) Venus = new Orbital(P.Y.M);
+                Affinity U = new Affinity(Neptune.R.M.Rod, Uranus.Y.M.Cone);
+                Affinity Z = new Affinity(Neptune.Y.M.Rod, Venus.Y.M.Cone);
+                Proteus = new Orbital(U);
+                Hippocamp = new Orbital(Z);
             }
         }
 

@@ -10,6 +10,12 @@ namespace Dysnomia {
 		OpenManifolds();
 	}
 
+	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
+		this->Rod = Rod;
+		this->Cone = Cone;
+		OpenManifolds();
+	}
+
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Rod = gcnew Dynamic();
 		Cone = gcnew Dynamic();
