@@ -15,6 +15,7 @@ namespace Dysnomia
         static public Orbital Despina;
 
         static public Orbital Saturn;
+        static public Orbital Desdemona;
         static public Orbital Enceladus;
         static public Orbital Titan;
 
@@ -51,6 +52,8 @@ namespace Dysnomia
                 Titan = new Orbital(L);
                 Affinity E = new Affinity(Uranus.R.M.Rod, Neptune.L.M.Cone);
                 Saturn = new Orbital(E);
+                Affinity Y = new Affinity(Saturn.L.M.Rod, Uranus.L.M.Cone);
+                Desdemona = new Orbital(Y);
                 Affinity R = new Affinity(Saturn.L.M.Rod, Neptune.R.M.Cone);
                 Enceladus = new Orbital(R);
                 Affinity M = new Affinity(Saturn.Y.M.Rod, Enceladus.R.M.Cone);
