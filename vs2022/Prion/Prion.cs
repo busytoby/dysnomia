@@ -11,6 +11,7 @@ namespace Dysnomia
 
         static public Orbital Proteus;
         static public Orbital Hippocamp;
+        static public Orbital Phoebe;
         static public Orbital Despina;
 
         static public Orbital Saturn;
@@ -38,6 +39,8 @@ namespace Dysnomia
                 {
                     Affinity Z = new Affinity(Neptune.Y.M.Rod, Venus.Y.M.Cone);
                     Hippocamp = new Orbital(Z);
+                    Affinity R = new Affinity(Hippocamp.L.M.Rod, Z.Cone);
+                    Phoebe = new Orbital(R);
                     Affinity U = new Affinity(Neptune.R.M.Rod, Hippocamp.R.M.Cone);
                     Despina = new Orbital(U);
                 }
