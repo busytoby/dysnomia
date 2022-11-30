@@ -30,7 +30,8 @@ namespace Dysnomia
             Orbital P = new Orbital();
             Prion I = new Prion();
 
-            I.Denature(P);
+            I.Denature(ref P);
+            I.Denature(ref Prion.Neptune);
             
             /*
             Affinity[] YM = P.Y.M.Denature();
