@@ -30,29 +30,7 @@ namespace Dysnomia
             InitializeComponent();
             Prion X = new Prion();
             BigInteger H = Prion.Hippocamp.R.M.WaveFunction("Hello Singularity");
-            
-            /*
-            Affinity[] YM = P.Y.M.Denature();
-            P.R.M.Cone.Fuse(P.Y.M.Rho, P.Y.M.Upsilon, P.Y.M.Ohm);
-            P.R.M.Cone.Tune();
-            P.R.M.OpenManifolds(P.Y.M.Omega);
-            Affinity[] RM = P.R.M.Denature();
-            Affinity[] LM = P.L.M.Denature();
-
-            Dictionary<string, Orbital> MyPlanets = new Dictionary<string, Orbital>();
-
-            MyPlanets.Add("Uranus", new Orbital(P.L.M));
-            MyPlanets.Add("Neptune", new Orbital(P.Y.M));
-            MyPlanets.Add("Venus", new Orbital(P.R.M));
-            MyPlanets.Add("Pluto", new Orbital(LM[0]));
-            MyPlanets.Add("Mars", new Orbital(LM[1]));
-            MyPlanets.Add("Earth", new Orbital(YM[0]));
-            MyPlanets.Add("Mercury", new Orbital(YM[1]));
-            MyPlanets.Add("Jupiter", new Orbital(RM[0]));
-            MyPlanets.Add("Saturn", new Orbital(RM[1]));
-            
-            Dynamic MySun = P.N;
-            */
+            BigInteger V = Prion.Earth.L.M.WaveFunction("Hello Singularity");
 
             int a = 999; // What Planet
         }

@@ -11,6 +11,12 @@ namespace Dysnomia
         static public Orbital Proteus;
         static public Orbital Hippocamp;
 
+        static public Orbital Saturn;
+        static public Orbital Enceladus;
+        static public Orbital Titan;
+
+        static public Orbital Earth;
+
         public Prion()
         {
             if (Neptune == null)
@@ -29,6 +35,17 @@ namespace Dysnomia
                     Affinity Z = new Affinity(Neptune.Y.M.Rod, Venus.Y.M.Cone);
                     Hippocamp = new Orbital(Z);
                 }
+            }
+            if (Saturn == null)
+            {
+                Affinity L = new Affinity(Neptune.L.M.Rod, Hippocamp.L.M.Cone);
+                Titan = new Orbital(L);
+                Affinity E = new Affinity(Uranus.R.M.Rod, Neptune.L.M.Cone);
+                Saturn = new Orbital(E);
+                Affinity R = new Affinity(Saturn.L.M.Rod, Neptune.R.M.Cone);
+                Enceladus = new Orbital(R);
+                Affinity M = new Affinity(Saturn.Y.M.Rod, Enceladus.R.M.Cone);
+                Earth = new Orbital(M);
             }
         }
 
