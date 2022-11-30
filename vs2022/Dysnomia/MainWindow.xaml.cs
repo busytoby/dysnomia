@@ -34,6 +34,8 @@ namespace Dysnomia
             BigInteger V = Prion.Earth.L.M.WaveFunction("Hello Singularity");
             BigInteger HelloSingularity = H + V + L + 4;
 
+            BigInteger E = Prion.Enceladus.Y.M.WaveFunction(HelloSingularity.ToString());
+
             int a = 999; // What Planet
         }
     }
