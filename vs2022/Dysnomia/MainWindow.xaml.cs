@@ -40,6 +40,10 @@ namespace Dysnomia
             BigInteger Uwu = Prion.Desdemona.R.M.WaveFunction(XXX.ToString());
             BigInteger Uwu2 = Prion.Desdemona.L.M.WaveFunction(Uwu.ToString());
             BigInteger Uwu3 = Prion.Desdemona.Y.M.WaveFunction(Uwu2.ToString());
+            for (int i = 0; i < 100; i++)
+            {
+                Uwu3 = Prion.Iapetus.L.M.WaveFunction(Uwu3.ToString());
+            }
 
             int a = 999; // What Planet
         }
