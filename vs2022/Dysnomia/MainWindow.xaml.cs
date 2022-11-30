@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace Dysnomia
         {
             InitializeComponent();
             Prion X = new Prion();
+            BigInteger H = Prion.Hippocamp.R.M.WaveFunction("Hello Singularity");
             
             /*
             Affinity[] YM = P.Y.M.Denature();
