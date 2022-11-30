@@ -43,7 +43,9 @@ namespace Dysnomia
             for (int i = 0; i < 100; i++)
             {
                 Uwu3 = Prion.Iapetus.L.M.WaveFunction(Uwu3.ToString());
+                Uwu = Prion.Desdemona.R.M.WaveFunction(Uwu3.ToString());
             }
+            
 
             int a = 999; // What Planet
         }
