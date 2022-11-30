@@ -30,7 +30,9 @@ namespace Dysnomia
             InitializeComponent();
             Prion X = new Prion();
             BigInteger H = Prion.Hippocamp.R.M.WaveFunction("Hello Singularity");
+            BigInteger L = Prion.Neith.Y.M.WaveFunction("Hello Singularity");
             BigInteger V = Prion.Earth.L.M.WaveFunction("Hello Singularity");
+            BigInteger HelloSingularity = H + V + L + 4;
 
             int a = 999; // What Planet
         }

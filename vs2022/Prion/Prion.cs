@@ -6,6 +6,7 @@ namespace Dysnomia
     {
         static public Orbital Neptune;
         static public Orbital Venus;
+        static public Orbital Neith;
         static public Orbital Uranus;
 
         static public Orbital Proteus;
@@ -25,6 +26,8 @@ namespace Dysnomia
                 if (Uranus == null) Uranus = new Orbital(P.L.M);
                 if (Neptune == null) Neptune = new Orbital(P.R.M);
                 if (Venus == null) Venus = new Orbital(P.Y.M);
+                Affinity V = new Affinity(Venus.Y.M.Rod, Venus.R.M.Cone);
+                Neith = new Orbital(V);
                 if (Proteus == null)
                 {
                     Affinity U = new Affinity(Neptune.R.M.Rod, Uranus.Y.M.Cone);
