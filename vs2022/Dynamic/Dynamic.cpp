@@ -14,6 +14,7 @@ namespace Dysnomia {
 
 	Dynamic::Dynamic(const Dynamic% Copier) {
 		Base = Copier.Base;
+		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(5, "Negative Clone Base");
 		Secret = Copier.Secret;
 		Signal = Copier.Signal;
 		Channel = Copier.Channel;
@@ -40,7 +41,9 @@ namespace Dysnomia {
 
 	void Dynamic::Seed()
 	{
+	
 		Base = Math::Random();
+		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Secret = Math::Random();
 		Signal = Math::Random();
 	}
@@ -53,6 +56,7 @@ namespace Dysnomia {
 
 	void Dynamic::Fuse(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
 		Base = Upsilon;
+		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(3, "Negative Fusion Base");
 		Secret = Ohm;
 		Signal = Rho;
 	}
@@ -65,6 +69,7 @@ namespace Dysnomia {
 	void Dynamic::Form(BigInteger Nu)
 	{
 		Base = Math::ModPow(Nu, Secret, Math::Prime);
+		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(4, "Negative Ionic Base");
 		Tune();
 	}
 
