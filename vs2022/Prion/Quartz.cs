@@ -12,7 +12,6 @@ namespace Dysnomia
 {
     public class Quartz
     {
-        private static Mutex isPairing = new Mutex();
         public Thread Oscillation;
         public Orbital U;
         private Orbital Planet;
@@ -40,7 +39,7 @@ namespace Dysnomia
         {
             while (Prion.Saturn == null) Thread.Sleep(5000);
 
-            isPairing.WaitOne();
+            Prion.Saturn.Lock.WaitOne();
 
             if (U == null)
             {
@@ -50,7 +49,7 @@ namespace Dysnomia
                 OrbitWatch = new Stopwatch();
             }
 
-            isPairing.ReleaseMutex();
+            Prion.Saturn.Lock.ReleaseMutex();
 
             if (Gamma == 0)
             {

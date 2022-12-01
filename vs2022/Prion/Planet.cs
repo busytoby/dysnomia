@@ -10,6 +10,7 @@ namespace Dysnomia
     {
         public Orbital X;
         public Quartz Q;
+        public Mutex Lock = new Mutex();
 
         public Planet(Affinity D)
         {
