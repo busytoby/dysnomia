@@ -81,6 +81,7 @@ namespace Dysnomia {
 	void Dynamic::Conjugate(BigInteger% Nu)
 	{
 		Coordinate = Math::ModPow(Nu, Secret, Math::Prime);
+		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(6, "Negative Coordinate");
 		Nu = 0;
 	}
 
