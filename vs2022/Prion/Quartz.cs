@@ -45,7 +45,7 @@ namespace Dysnomia
             {
                 Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
                 U = new Orbital(N);
-                Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944));
+                Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }
 
@@ -54,7 +54,7 @@ namespace Dysnomia
             if (Gamma == 0)
             {
                 Gamma = Complex.Divide((Complex)(U.Rho / 6442450944), (Complex)(U.Nu / 6442450944));
-                RotationDegree = 360 / (24 / Gamma.Real);
+                RotationDegree = 360 / (1440 / Gamma.Real);
 
                 RotationWatch = new Stopwatch();
             }
@@ -75,7 +75,7 @@ namespace Dysnomia
                     if (Math.Abs(Orbit) > 360)
                     {
                         OrbitWatch.Stop();
-                        YearLength = OrbitWatch.ElapsedMilliseconds;
+                        YearLength = (OrbitWatch.ElapsedMilliseconds / DayLength);
                         Orbit -= (Sigma.Real > 0) ? 360 : -360;
                         OrbitWatch.Restart();
                     }
