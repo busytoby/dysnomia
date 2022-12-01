@@ -10,46 +10,49 @@ using System.Threading.Tasks;
 
 namespace Dysnomia
 {
-    public class Quartz : Prion
+    public class Quartz
     {
-        public static Thread Oscillation;
-        public static Orbital U;
-        public static Complex Gamma;
-        public static Complex Sigma;
-        public static double Rotation;
-        public static double RotationDegree;
-        public static double Orbit;
-        public static long DayLength;
-        public static Stopwatch RotationWatch;
-        public Thread Watch;
+        private static Mutex isPairing = new Mutex();
+        public Thread Oscillation;
+        public Orbital U;
+        private Orbital Planet;
+        public Complex Gamma;
+        public Complex Sigma;
+        public double Rotation;
+        public double RotationDegree;
+        public double Orbit;
+        public long DayLength;
+        public Stopwatch RotationWatch;
 
-        public Quartz()
+        public Quartz(Orbital Planet)
         {
-            if (U == null)
-            {
-                Affinity N = new Affinity(Saturn.R.M.Rod, Earth.Y.M.Cone);
-                U = new Orbital(N);
-            }
-
+            this.Planet = Planet;
             if (Oscillation == null)
             {
                 Oscillation = new Thread(new ThreadStart(Oscillator));
                 Oscillation.Start();
             }
-            /*
-            Charge = new Thread(new ThreadStart(Push));
-            Push.Start();
-            */
         }
 
-        private static void Oscillator()
+        private void Oscillator()
         {
+            while (Prion.Saturn == null) Thread.Sleep(5000);
+
+            isPairing.WaitOne();
+
+            if (U == null)
+            {
+                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
+                U = new Orbital(N);
+                Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944));
+            }
+
+            isPairing.ReleaseMutex();
+
             if (Gamma == 0)
             {
                 Gamma = Complex.Divide((Complex)(U.Rho / 6442450944), (Complex)(U.Nu / 6442450944));
                 RotationDegree = 360 / (24 / Gamma.Real);
-
-                Sigma = Complex.Divide((Complex)(Earth.L.M.Xi / 6442450944), (Complex)(Earth.L.M.Phi / 6442450944));
 
                 RotationWatch = new Stopwatch();
             }
@@ -71,11 +74,6 @@ namespace Dysnomia
                 Thread.Sleep(1000);
             }
             RotationWatch.Stop();
-        }
-
-        private void Push()
-        {
-
         }
     }
 }

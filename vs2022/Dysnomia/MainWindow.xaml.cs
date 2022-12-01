@@ -28,9 +28,7 @@ namespace Dysnomia
         public MainWindow()
         {
             InitializeComponent();
-            Prion X = new Prion();
-            Quartz Q = new Quartz();
-            
+            Prion X = new Prion();           
 
             int a = 999; // What Planet
         }
