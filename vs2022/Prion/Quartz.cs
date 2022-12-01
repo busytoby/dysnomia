@@ -22,7 +22,9 @@ namespace Dysnomia
         public double RotationDegree;
         public double Orbit;
         public long DayLength;
+        public long YearLength;
         public Stopwatch RotationWatch;
+        public Stopwatch OrbitWatch;
 
         public Quartz(Orbital Planet)
         {
@@ -45,6 +47,7 @@ namespace Dysnomia
                 Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
                 U = new Orbital(N);
                 Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944));
+                OrbitWatch = new Stopwatch();
             }
 
             isPairing.ReleaseMutex();
@@ -58,20 +61,27 @@ namespace Dysnomia
             }
 
             RotationWatch.Start();
+            OrbitWatch.Start();
 
             while (true)
             {
                 Rotation += RotationDegree;
-                if (Rotation > 360)
+                if (Math.Abs(Rotation) > 360)
                 {
                     Orbit += Sigma.Real;
                     RotationWatch.Stop();
                     DayLength = RotationWatch.ElapsedMilliseconds;
-                    RotationDegree -= 360;
+                    Rotation -= (RotationDegree > 0) ? 360 : -360;
                     RotationWatch.Restart();
-                    if (Orbit > 360) Orbit -= 360;
+                    if (Math.Abs(Orbit) > 360)
+                    {
+                        OrbitWatch.Stop();
+                        YearLength = OrbitWatch.ElapsedMilliseconds;
+                        Orbit -= (Sigma.Real > 0) ? 360 : -360;
+                        OrbitWatch.Restart();
+                    }
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(10);
             }
             RotationWatch.Stop();
         }
