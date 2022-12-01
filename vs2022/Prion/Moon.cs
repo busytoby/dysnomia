@@ -1,24 +1,19 @@
-﻿using System;
+﻿using Dysnomia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dysnomia
+namespace Prion
 {
-    public class Planet
+    public class Moon
     {
         public Orbital X;
         public Quartz Q;
         public Mutex Lock = new Mutex();
 
-        public Planet(Affinity D)
-        {
-            X = new Orbital(D);
-            Q = new Quartz(X);
-        }
-
-        public Planet(Dynamic R, Dynamic C)
+        public Moon(Dynamic R, Dynamic C)
         {
             bool Failed = true;
             while (Failed)

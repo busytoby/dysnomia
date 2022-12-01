@@ -22,6 +22,10 @@ namespace Dysnomia {
 			}
 			catch (DynamicException^ E) {
 				if (E->Code == 1) continue;
+				if (E->Code == 4) continue;
+				if (E->Code == 6) continue;
+				if (E->Code == 7) continue;
+				else throw;
 			}
 		}
 	}
@@ -45,6 +49,10 @@ namespace Dysnomia {
 			}
 			catch (DynamicException^ E) {
 				if (E->Code == 1) continue;
+				if (E->Code == 4) continue;
+				if (E->Code == 6) continue;
+				if (E->Code == 7) continue;
+				else throw;
 			}
 		}
 	}

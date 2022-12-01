@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,8 +44,14 @@ namespace Dysnomia
 
             if (U == null)
             {
-                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
-                U = new Orbital(N);
+                try
+                {
+                    Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
+                    U = new Orbital(N);
+                } catch (AffinityException E)
+                {
+                    throw;
+                }
                 Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }

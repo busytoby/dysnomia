@@ -46,6 +46,7 @@ namespace Dysnomia {
 		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Secret = Math::Random();
 		Signal = Math::Random();
+		if (BigInteger::IsNegative(Signal)) Signal = Signal * -1;
 	}
 
 	void Dynamic::Tune()
@@ -69,7 +70,7 @@ namespace Dysnomia {
 	void Dynamic::Form(BigInteger Nu)
 	{
 		Base = Math::ModPow(Nu, Secret, Math::Prime);
-		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(4, "Negative Ionic Base");
+		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Tune();
 	}
 
@@ -81,14 +82,15 @@ namespace Dysnomia {
 	void Dynamic::Conjugate(BigInteger% Nu)
 	{
 		Coordinate = Math::ModPow(Nu, Secret, Math::Prime);
-		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(6, "Negative Coordinate");
 		Nu = 0;
 	}
 
 	void Dynamic::Conify()
 	{
 		Identity = Math::Random();
+		if (BigInteger::IsNegative(Identity)) Identity = Identity * -1;
 		Foundation = Math::ModPow(Base, Identity, Math::Prime);
+		if (BigInteger::IsNegative(Foundation)) throw gcnew DynamicException(7, "Negative Foundation");
 		Tau = 1;
 	}
 

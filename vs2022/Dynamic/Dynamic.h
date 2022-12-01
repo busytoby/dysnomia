@@ -13,9 +13,9 @@ namespace Dysnomia {
 		int Code;
 		String^ Description;
 
-		DynamicException(int Code, String^ Description) : Exception(Description) {
-			Code = Code;
-			Description = Description;
+		DynamicException(int C, String^ D) : Exception(D) {
+			Code = C;
+			Description = D;
 		}
 	};
 

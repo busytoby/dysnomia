@@ -4,6 +4,17 @@ using namespace System;
 using namespace System::Numerics;
 
 namespace Dysnomia {
+	public ref class AffinityException : public Exception {
+	public:
+		int Code;
+		String^ Description;
+
+		AffinityException(int C, String^ D) : Exception(D) {
+			Code = C;
+			Description = D;
+		}
+	};
+
 	public ref class Affinity
 	{
 	private:
@@ -28,6 +39,5 @@ namespace Dysnomia {
 		void Sustain(BigInteger, bool);
 		void React(BigInteger);
 		array<Affinity^>^ Denature();
-
 	};
 }

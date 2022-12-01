@@ -15,6 +15,10 @@ namespace Dysnomia {
 			}
 			catch (DynamicException^ E) {
 				if (E->Code == 1) continue;
+				if (E->Code == 4) continue;
+				if (E->Code == 6) continue;
+				if (E->Code == 7) continue;
+				else throw;
 			}
 		}
 	}
@@ -26,7 +30,10 @@ namespace Dysnomia {
 			OpenManifolds();
 		}
 		catch (DynamicException^ E) {
-			if (E->Code == 1) throw gcnew DynamicException(2, "Quasar Exception");
+			if (E->Code == 1) throw gcnew AffinityException(1, "Quasar Exception");
+			if (E->Code == 4) throw gcnew AffinityException(2, "Magnetar Exception");
+			if (E->Code == 7) throw gcnew AffinityException(3, "Neutron Exception");
+			else throw;
 		}
 	}
 
@@ -40,6 +47,7 @@ namespace Dysnomia {
 
 	void Affinity::OpenManifolds() {
 		BigInteger Xi = Math::Random();
+		if (BigInteger::IsNegative(Xi)) Xi = Xi * -1;
 		OpenManifolds(Xi);
 	}
 
