@@ -15,8 +15,10 @@ namespace Dysnomia
         public static Thread Oscillation;
         public static Orbital U;
         public static Complex Gamma;
+        public static Complex Sigma;
         public static double Rotation;
-        public static double Degree;
+        public static double RotationDegree;
+        public static double Orbit;
         public static long DayLength;
         public static Stopwatch RotationWatch;
         public Thread Watch;
@@ -45,7 +47,10 @@ namespace Dysnomia
             if (Gamma == 0)
             {
                 Gamma = Complex.Divide((Complex)(U.Rho / 6442450944), (Complex)(U.Nu / 6442450944));
-                Degree = 360 / (24 / Gamma.Real);
+                RotationDegree = 360 / (24 / Gamma.Real);
+
+                Sigma = Complex.Divide((Complex)(Earth.L.M.Xi / 6442450944), (Complex)(Earth.L.M.Phi / 6442450944));
+
                 RotationWatch = new Stopwatch();
             }
 
@@ -53,13 +58,15 @@ namespace Dysnomia
 
             while (true)
             {
-                Rotation += Degree;
+                Rotation += RotationDegree;
                 if (Rotation > 360)
                 {
+                    Orbit += Sigma.Real;
                     RotationWatch.Stop();
                     DayLength = RotationWatch.ElapsedMilliseconds;
-                    Rotation -= 360;
+                    RotationDegree -= 360;
                     RotationWatch.Restart();
+                    if (Orbit > 360) Orbit -= 360;
                 }
                 Thread.Sleep(1000);
             }
