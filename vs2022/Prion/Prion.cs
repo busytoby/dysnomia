@@ -24,6 +24,8 @@ namespace Dysnomia
         static public Planet Mercury;
         static public Planet Pluto;
 
+        static public Planet Mars;
+
         public Prion()
         {
             if (Uranus == null)
@@ -67,6 +69,11 @@ namespace Dysnomia
                 Mercury = new Planet(Z);
                 Affinity S = new Affinity(Neptune.X.L.M.Rod, Mercury.X.R.M.Cone);
                 Pluto = new Planet(S);
+            }
+            if (Mars == null)
+            {
+                Affinity S = new Affinity(Pluto.X.L.M.Rod, Earth.X.R.M.Cone);
+                Mars = new Planet(S);
             }
         }
 
