@@ -85,14 +85,14 @@ namespace Dysnomia {
 		ArraySegment<Byte>^ segment = gcnew ArraySegment<Byte>(dataBytes, 0, blocksize);
 		array<Byte>^ segmentarray = gcnew array<Byte>(segment->Count);
 		Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-		BigInteger Hash = BigInteger::ModPow(Cone->Barn, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
+		BigInteger Hash = Math::ModPow(Cone->Barn, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		for (int i = blocksize; i < dataBytes->Length; i += blocksize)
 		{
 			int thisblocksize = (i + blocksize > dataBytes->Length) ? dataBytes->Length - i : blocksize;
 			segment = gcnew ArraySegment<Byte>(dataBytes, i, thisblocksize);
 			segmentarray = gcnew array<Byte>(segment->Count);
 			Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-			Hash = BigInteger::ModPow(Hash, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
+			Hash = Math::ModPow(Hash, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		}
 		if (BigInteger::IsNegative(Hash)) Hash = Hash * -1;
 		return Hash;

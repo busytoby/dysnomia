@@ -14,7 +14,7 @@ namespace Dysnomia {
         if (!rnd_Initialized) Initialize_Random();
 
         rnd.NextBytes(bytes);
-        bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
+        //bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
         R = BigInteger(bytes);
         while (R > Prime) R = R / 2;
 
@@ -29,5 +29,15 @@ namespace Dysnomia {
         }
 
         return sb.ToString();
+    }
+
+    BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
+        BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
+        bool Negative = false;
+        if (BigInteger::IsNegative(A)) Negative = !Negative;
+        if (BigInteger::IsNegative(B)) Negative = !Negative;
+        if (BigInteger::IsNegative(C)) Negative = !Negative;
+        if (Negative) Result = Result * -1;
+        return Result;
     }
 }

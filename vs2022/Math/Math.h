@@ -50,6 +50,7 @@ namespace Dysnomia {
 
 		static BigInteger Random();
 		static String^ ByteArrayToHexString(array<Byte>^);
+		static BigInteger ModPow(BigInteger, BigInteger, BigInteger);
 
 		// TODO: Add your methods for this class here.
 	};

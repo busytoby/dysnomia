@@ -47,7 +47,7 @@ namespace Dysnomia {
 
 	void Dynamic::Tune()
 	{
-		Channel = BigInteger::ModPow(Base, Signal, Math::Prime);
+		Channel = Math::ModPow(Base, Signal, Math::Prime);
 	}
 
 	void Dynamic::Fuse(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
@@ -58,30 +58,30 @@ namespace Dysnomia {
 
 	BigInteger Dynamic::Avail(BigInteger Xi)
 	{
-		return BigInteger::ModPow(Xi, Secret, Math::Prime);
+		return Math::ModPow(Xi, Secret, Math::Prime);
 	}
 
 	void Dynamic::Form(BigInteger Nu)
 	{
-		Base = BigInteger::ModPow(Nu, Secret, Math::Prime);
+		Base = Math::ModPow(Nu, Secret, Math::Prime);
 		Tune();
 	}
 
 	void Dynamic::Polarize()
 	{
-		Pole = BigInteger::ModPow(Base, Secret, Math::Prime);
+		Pole = Math::ModPow(Base, Secret, Math::Prime);
 	}
 
 	void Dynamic::Conjugate(BigInteger% Nu)
 	{
-		Coordinate = BigInteger::ModPow(Nu, Secret, Math::Prime);
+		Coordinate = Math::ModPow(Nu, Secret, Math::Prime);
 		Nu = 0;
 	}
 
 	void Dynamic::Conify()
 	{
 		Identity = Math::Random();
-		Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);
+		Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		Tau = 1;
 	}
 
@@ -90,21 +90,21 @@ namespace Dysnomia {
 		if (Tau.IsZero)
 		{
 			Identity = Math::Random();
-			Foundation = BigInteger::ModPow(Base, Identity, Math::Prime);
+			Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		}
 
 		// BigInteger Gamma, Kappa
 		BigInteger Beta, Rho, Eta, Phi;
 
-		Beta = BigInteger::ModPow(Epsilon, Identity, Math::Prime);
-		Rho = BigInteger::ModPow(Theta, Identity, Math::Prime);
-		Eta = BigInteger::ModPow(Epsilon, Signal, Math::Prime);
+		Beta = Math::ModPow(Epsilon, Identity, Math::Prime);
+		Rho = Math::ModPow(Theta, Identity, Math::Prime);
+		Eta = Math::ModPow(Epsilon, Signal, Math::Prime);
 
 		Phi = BigInteger::Add(Rho, Eta);
 		Element = BigInteger::Add(Beta, Phi);
 
 		// Principal Uncertainty
-		//Gamma = BigInteger::ModPow(Theta, Signal, Math::Prime);
+		//Gamma = Math::ModPow(Theta, Signal, Math::Prime);
 		//Kappa = BigInteger::Add(Element, Gamma);
 
 		if (Tau.IsZero)
@@ -117,19 +117,19 @@ namespace Dysnomia {
 
 	void Dynamic::Bond()
 	{
-		Dynamo = BigInteger::ModPow(Base, Signal, Element);
+		Dynamo = Math::ModPow(Base, Signal, Element);
 		Pole = 0;
 	}
 
 	void Dynamic::Adduct(BigInteger Phi)
 	{
-		Manifold = BigInteger::ModPow(Phi, Signal, Element);
+		Manifold = Math::ModPow(Phi, Signal, Element);
 	}
 
 	void Dynamic::Open()
 	{
-		Ring = BigInteger::ModPow(Coordinate, Manifold, Element);
-		Barn = BigInteger::ModPow(Ring, Manifold, Element);
+		Ring = Math::ModPow(Coordinate, Manifold, Element);
+		Barn = Math::ModPow(Ring, Manifold, Element);
 	}
 
 	bool Dynamic::ManifoldCompare(Dynamic^ Rod)
@@ -153,14 +153,14 @@ namespace Dysnomia {
 
 	BigInteger Dynamic::Charge(BigInteger Psi, bool Decay)
 	{
-		BigInteger _barn = BigInteger::ModPow(Barn, Psi, Ring);
+		BigInteger _barn = Math::ModPow(Barn, Psi, Ring);
 		if (Decay == false) Barn = _barn;
 		return _barn;
 	}
 
 	BigInteger Dynamic::Induce(BigInteger Sigma, bool Decay)
 	{
-		BigInteger _ring = BigInteger::ModPow(Sigma, Manifold, Ring);
+		BigInteger _ring = Math::ModPow(Sigma, Manifold, Ring);
 		if (Decay == false) Ring = _ring;
 		return _ring;
 	}
@@ -172,7 +172,7 @@ namespace Dysnomia {
 			_channel = Manifold;
 		else
 			_channel = Channel;
-		return BigInteger::ModPow(Sigma, Element, _channel);
+		return Math::ModPow(Sigma, Element, _channel);
 	}
 
 	BigInteger Dynamic::Amplify(BigInteger Upsilon, bool Critical)
@@ -187,7 +187,7 @@ namespace Dysnomia {
 
 	void Dynamic::React(BigInteger Pi, BigInteger Theta)
 	{
-		Eta = BigInteger::ModPow(Pi, Channel, Theta);
-		Nu = BigInteger::ModPow(Pi, Theta, Channel);
+		Eta = Math::ModPow(Pi, Channel, Theta);
+		Nu = Math::ModPow(Pi, Theta, Channel);
 	}
 }
