@@ -49,7 +49,7 @@ namespace Dysnomia {
 		BigInteger Xi = BigInteger::Add(Cone->Manifold, Rod->Manifold);
 		if(Xi.IsZero) Xi = Math::ModPow(Cone->Signal, Rod->Channel, Math::AzimuthPrime);
 		if (BigInteger::IsNegative(Xi)) Xi = Xi * -1;
-		if(Rod->Manifold.IsZero) Xi = Xi % Math::Prime;
+		if(!Rod->Manifold.IsZero) Xi = Xi % Math::Prime;
 		OpenManifolds(Xi);
 	}
 
