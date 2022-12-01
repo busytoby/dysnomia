@@ -21,7 +21,7 @@ namespace Dysnomia
         static public Orbital Titan;
 
         static public Planet Earth;
-        static public Orbital Mercury;
+        static public Planet Mercury;
 
         public Prion()
         {
@@ -63,7 +63,7 @@ namespace Dysnomia
                 Affinity M = new Affinity(Saturn.X.Y.M.Rod, Enceladus.R.M.Cone);
                 Earth = new Planet(M);
                 Affinity Z = new Affinity(Neptune.X.L.M.Rod, Earth.X.L.M.Cone);
-                Mercury = new Orbital(M);
+                Mercury = new Planet(M);
             }
         }
 
