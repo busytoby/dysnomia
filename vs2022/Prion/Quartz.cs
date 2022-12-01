@@ -44,14 +44,8 @@ namespace Dysnomia
 
             if (U == null)
             {
-                try
-                {
-                    Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
-                    U = new Orbital(N);
-                } catch (AffinityException E)
-                {
-                    throw;
-                }
+                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
+                U = new Orbital(N);
                 Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }

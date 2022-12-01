@@ -6,9 +6,12 @@ namespace Dysnomia
     public class Prion
     {
         static public Planet Neptune;
+        static public Planet Miranda;
         static public Planet Venus;
         static public Moon Neith;
         static public Planet Uranus;
+
+        static public Planet Titania;
 
         static public Moon Proteus;
         static public Moon Hippocamp;
@@ -34,11 +37,12 @@ namespace Dysnomia
                 Orbital P = new Orbital();
                 if (Uranus == null) Uranus = new Planet(P.L.M);
                 if (Neptune == null) Neptune = new Planet(P.R.M);
+                Miranda = new Planet(Neptune.X.L.M);
                 if (Venus == null) Venus = new Planet(P.Y.M);
                 Neith = new Moon(Venus.X.Y.M.Rod, Venus.X.R.M.Cone);
             }
-
             if (Proteus == null)
+                Titania = new Planet(Uranus.X.R.M);
                 Proteus = new Moon(Neptune.X.R.M.Rod, Uranus.X.Y.M.Cone);
             if (Hippocamp == null)
             {
