@@ -46,9 +46,8 @@ namespace Dysnomia {
 	}
 
 	void Affinity::OpenManifolds() {
-		BigInteger Xi = BigInteger::Add(Cone->Manifold, Rod->Manifold);
+		BigInteger Xi = (BigInteger::Add(Cone->Manifold, Rod->Manifold) % Math::CatalanPrime);
 		if(Xi.IsZero) Xi = Math::ModPow(Cone->Signal, Rod->Channel, Math::AzimuthPrime);
-		if(!Rod->Manifold.IsZero) Xi = Xi % Math::CatalanPrime;
 		OpenManifolds(Xi);
 	}
 
