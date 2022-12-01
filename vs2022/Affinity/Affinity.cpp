@@ -5,15 +5,29 @@ using namespace System::Globalization;
 
 namespace Dysnomia {
 	Affinity::Affinity() {
-		Rod = gcnew Dynamic();
-		Cone = gcnew Dynamic();
-		OpenManifolds();
+		bool Failed = true;
+		while (Failed) {
+			try {
+				Rod = gcnew Dynamic();
+				Cone = gcnew Dynamic();
+				OpenManifolds();
+				Failed = false;
+			}
+			catch (DynamicException^ E) {
+				if (E->Code == 1) continue;
+			}
+		}
 	}
 
 	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
-		this->Rod = Rod;
-		this->Cone = Cone;
-		OpenManifolds();
+		try {
+			this->Rod = Rod;
+			this->Cone = Cone;
+			OpenManifolds();
+		}
+		catch (DynamicException^ E) {
+			if (E->Code == 1) throw gcnew DynamicException(2, "Quasar Exception");
+		}
 	}
 
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {

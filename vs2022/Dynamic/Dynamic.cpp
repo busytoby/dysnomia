@@ -48,6 +48,7 @@ namespace Dysnomia {
 	void Dynamic::Tune()
 	{
 		Channel = Math::ModPow(Base, Signal, Math::Prime);
+		if (BigInteger::IsNegative(Channel)) throw gcnew DynamicException(1, "Pulsar Exception");
 	}
 
 	void Dynamic::Fuse(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {

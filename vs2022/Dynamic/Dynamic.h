@@ -8,6 +8,17 @@ using namespace System;
 using namespace System::Numerics;
 
 namespace Dysnomia {
+	public ref class DynamicException : public Exception {
+	public:
+		int Code;
+		String^ Description;
+
+		DynamicException(int Code, String^ Description) : Exception(Description) {
+			Code = Code;
+			Description = Description;
+		}
+	};
+
 	public ref class Dynamic
 	{
 	private:

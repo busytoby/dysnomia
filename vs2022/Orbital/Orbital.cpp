@@ -4,31 +4,49 @@
 
 namespace Dysnomia {
 	Orbital::Orbital() {
-		N = gcnew Dynamic();
-		R = gcnew Ion();
-		Y = gcnew Ion();
-		L = gcnew Ion();
+		bool Failed = true;
+		while (Failed) {
+			try {
+				N = gcnew Dynamic();
+				R = gcnew Ion();
+				Y = gcnew Ion();
+				L = gcnew Ion();
 
-		Nu = L->M->Rod->Element;
-		BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->M->Rod->Element;
+				BigInteger Ligate = L->M->Cone->Barn;
 
-		Bridge(Nu);
+				Bridge(Nu);
 
-		Nu = L->M->Cone->Signal;
+				Nu = L->M->Cone->Signal;
+				Failed = false;
+			}
+			catch (DynamicException^ E) {
+				if (E->Code == 1) continue;
+			}
+		}
 	}
 
 	Orbital::Orbital(Affinity^ A) {
-		N = gcnew Dynamic();
-		R = gcnew Ion();
-		Y = gcnew Ion();
-		L = gcnew Ion(A);
+		bool Failed = true;
+		while (Failed) {
+			try {
+				N = gcnew Dynamic();
+				R = gcnew Ion();
+				Y = gcnew Ion();
+				L = gcnew Ion(A);
 
-		Nu = L->M->Rod->Element;
-		BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->M->Rod->Element;
+				BigInteger Ligate = L->M->Cone->Barn;
 
-		Bridge(Nu);
+				Bridge(Nu);
 
-		Nu = L->M->Cone->Signal;
+				Nu = L->M->Cone->Signal;
+				Failed = false;
+			}
+			catch (DynamicException^ E) {
+				if (E->Code == 1) continue;
+			}
+		}
 	}
 
 	void Orbital::Bridge(BigInteger Nu) {
