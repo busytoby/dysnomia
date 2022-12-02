@@ -58,6 +58,8 @@ namespace Dysnomia {
 		else if (Cone->Tau == (long long)1) {
 			Rod->Gamma = Cone->Avail(Xi);
 			Cone->Tau = Math::ModPow(Xi, Rod->Gamma, Math::Prime);
+			if (!Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
+			Alpha = Math::ModPow(Cone->Tau, Phi, Rod->Gamma); 
 		}
 		else throw gcnew DynamicException(10, "Cone Tau Exception");
 
