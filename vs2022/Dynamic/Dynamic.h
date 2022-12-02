@@ -29,7 +29,7 @@ namespace Dysnomia {
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
-		BigInteger Tau, Mu, Eta, Nu;
+		BigInteger Tau, Mu, Eta, Gamma, Nu;
 
 		Dynamic();
 		Dynamic(const Dynamic%);

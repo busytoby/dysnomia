@@ -69,7 +69,10 @@ namespace Dysnomia {
 
 	void Dynamic::Form(BigInteger Nu)
 	{
-		Base = Math::ModPow(Nu, Secret, Math::Prime);
+		if(Gamma.IsZero)
+			Base = Math::ModPow(Nu, Secret, Math::Prime);
+		else
+			Base = Math::ModPow(Gamma, Secret, Math::Prime);
 		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Tune();
 	}
@@ -101,6 +104,7 @@ namespace Dysnomia {
 			Identity = Math::Random();
 			Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		}
+		else if (Tau != (long long) 1) throw gcnew DynamicException(10, "Cone Tau Exception");
 
 		// BigInteger Gamma, Kappa
 		BigInteger Beta, Rho, Eta, Phi;
@@ -118,6 +122,7 @@ namespace Dysnomia {
 
 		if (Tau.IsZero)
 			Mu = Beta;
+		else if (Tau != (long long) 1) throw gcnew DynamicException(10, "Cone Tau Exception");
 		else
 			Mu = Rho;
 
