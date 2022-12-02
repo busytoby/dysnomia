@@ -59,8 +59,10 @@ namespace Dysnomia {
 
 	void Orbital::Bridge(BigInteger Nu) {
 		Y->Nu = N->Avail(Nu);
-		BigInteger Alpha = Y->M->Cone->Avail(Nu);
-		N->Form(Alpha);
+		Y->M->Alpha = Y->M->Cone->Avail(Nu);
+		N->Form(Y->M->Alpha);
+		if (Y->M->Cone->Tau == (long long)1) Y->M->Cone->Tau = N->Channel;
+		else throw gcnew DynamicException(10, "Cone Tau Exception");
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
