@@ -71,8 +71,10 @@ namespace Dysnomia {
 	{
 		if(Gamma.IsZero)
 			Base = Math::ModPow(Nu, Secret, Math::Prime);
-		else
+		else {
 			Base = Math::ModPow(Gamma, Secret, Math::Prime);
+			Gamma = Math::ModPow(Gamma, Base, Math::Prime);
+		}
 		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Tune();
 	}
