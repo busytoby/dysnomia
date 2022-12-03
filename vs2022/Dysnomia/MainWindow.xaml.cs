@@ -30,7 +30,7 @@ namespace Dysnomia
             InitializeComponent();
             Prion X = new Prion();           
 
-            int a = 999; // What Planet
+            int a = 999; // Girls Planet
         }
     }
 }
