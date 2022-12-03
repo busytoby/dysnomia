@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace Dysnomia
         {
             X = new Orbital(D);
             Q = new Zinc(X);
+            Tin.Polygamma.AddLast(new KeyValuePair<BigInteger, Dynamic>(X.L.M.Mu, X.L.M.Cone));
         }
 
         public Planet(Dynamic R, Dynamic C)

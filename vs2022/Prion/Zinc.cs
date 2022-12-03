@@ -42,7 +42,7 @@ namespace Dysnomia
             {
                 while (Tin.Mu == 0) Thread.Sleep(5000);
                 Tin.Lock.WaitOne();
-                Affinity N = new Affinity(Tin.Polygamma.First.Value.Value, R.Y.M.Cone);
+                Affinity N = new Affinity(Tin.Rho, R.Y.M.Cone);
                 U = new Orbital(N);
                 Tin.Lock.ReleaseMutex();
                 Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
