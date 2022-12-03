@@ -58,7 +58,7 @@ namespace Dysnomia {
 		Rod->Polygamma->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
 		Alpha = 0;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->Polygamma) {
-			Alpha = BigInteger::Add(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
+			Alpha = BigInteger::Multiply(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
 		}
 
 		Rod->Form(Cone->Tau);
