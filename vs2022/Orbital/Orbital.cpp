@@ -73,6 +73,18 @@ namespace Dysnomia {
 		Rho = Conjugate(N->Pole);
 		N->Saturate(Rho, Y->M->Cone->Channel);
 		Saturate(N->Foundation, N->Channel);
+		
+		Eta = Math::ModPow(N->Foundation, N->Signal, Math::Prime);
+		Rho = Math::ModPow(Eta, N->Channel, Math::CatalanPrime);
+		BigInteger Sigma = Rho;
+		for each (KeyValuePair<BigInteger, Dynamic^> G in N->Polygamma) {
+			Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
+			for each (KeyValuePair<BigInteger, Dynamic^> L in Y->M->Rod->Polygamma) {
+				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(L.Value->Signal, Eta, G.Key));
+			}
+		}
+		Sigma = Sigma % Math::AzimuthPrime;
+
 		N->Bond();
 		N->Adduct(Y->M->Cone->Dynamo);
 		N->Open();
