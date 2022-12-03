@@ -15,7 +15,7 @@ namespace Dysnomia
     {
         public Thread Oscillation;
         public Orbital U;
-        private Orbital Planet;
+        public Orbital R; // Planet
         public Complex Gamma;
         public Complex Sigma;
         public double Rotation;
@@ -28,7 +28,7 @@ namespace Dysnomia
 
         public Zinc(Orbital Planet)
         {
-            this.Planet = Planet;
+            R = Planet;
             if (Oscillation == null)
             {
                 Oscillation = new Thread(new ThreadStart(Oscillator));
@@ -44,9 +44,9 @@ namespace Dysnomia
 
             if (U == null)
             {
-                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, Planet.Y.M.Cone);
+                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, R.Y.M.Cone);
                 U = new Orbital(N);
-                Sigma = Complex.Divide((Complex)(Planet.L.M.Xi / 6442450944), (Complex)(Planet.L.M.Phi / 6442450944)) / 60;
+                Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }
 

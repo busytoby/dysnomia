@@ -66,8 +66,9 @@ namespace Dysnomia
                 Mars = new Planet(Pluto.X.L.M.Rod, Earth.X.R.M.Cone);
             }
             while (Mars.Q.U == null) Thread.Sleep(5000);
-            
-            Joule K = new Joule(Mars.Q.U.Y.M.Rod, Mars.X.L.M.Rod.Polygamma);
+
+            Glia J = new Glia(Mars.Q);
+            Glia K = new Glia(Mars);
         }
 
         public Prion(Prion CopyPrion)
