@@ -81,7 +81,7 @@ namespace Dysnomia
                         OrbitWatch.Restart();
                     }
                 }
-                Thread.Sleep(10);
+                Thread.Sleep(100);
             }
             RotationWatch.Stop();
         }
