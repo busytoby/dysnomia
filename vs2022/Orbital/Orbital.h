@@ -33,8 +33,9 @@ namespace Dysnomia {
 		void Saturate(BigInteger, BigInteger);
 	};
 
-	public ref class Joule : Orbital {
+	public ref class Joule {
 	public:
+		Orbital^ O;
 		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
 
 		Joule(Dynamic^, Affinity^);

@@ -3,6 +3,11 @@
 #include "Orbital.h"
 
 namespace Dysnomia {
+	Joule::Joule(Dynamic^ Delta, Affinity^ Nu) {
+		Affinity^ E = gcnew Affinity(Delta, Nu->Cone);
+		O = gcnew Orbital(E);
+	}
+
 	Orbital::Orbital() {
 		bool Failed = true;
 		while (Failed) {
