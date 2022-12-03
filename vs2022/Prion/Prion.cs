@@ -69,7 +69,7 @@ namespace Dysnomia
             }
             while (Mars.Q.U == null) Thread.Sleep(5000);
 
-            Glia J = new Glia(Mars.Q);
+            Tin J = new Tin(Mars.Q);
             if (Jupiter == null)
             {
                 Jupiter = new Planet(J.K.O.L.M);
