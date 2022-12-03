@@ -45,8 +45,6 @@ namespace Dysnomia
                 Tin.Lock.ReleaseMutex();
             }
 
-            while (Tin.Polygamma == null) Thread.Sleep(5000);
-
             Tin.Lock.WaitOne();
 
             if (U == null)
