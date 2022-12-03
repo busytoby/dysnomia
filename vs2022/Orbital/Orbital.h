@@ -35,6 +35,8 @@ namespace Dysnomia {
 
 	public ref class Joule : Orbital {
 	public:
+		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
+
 		Joule(Dynamic^, LinkedList<KeyValuePair<BigInteger, Dynamic^>>^);
 	};
 }
