@@ -38,24 +38,16 @@ namespace Dysnomia
 
         private void Oscillator()
         {
-            if(Tin.Polygamma == null)
-            {
-                Tin.Lock.WaitOne();
-                Tin Sn = new Tin();
-                Tin.Lock.ReleaseMutex();
-            }
-
-            Tin.Lock.WaitOne();
-
             if (U == null)
             {
+                while (Tin.Mu == 0) Thread.Sleep(5000);
+                Tin.Lock.WaitOne();
                 Affinity N = new Affinity(Tin.Polygamma.First.Value.Value, R.Y.M.Cone);
                 U = new Orbital(N);
+                Tin.Lock.ReleaseMutex();
                 Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }
-
-            Tin.Lock.ReleaseMutex();
 
             if (Gamma == 0)
             {

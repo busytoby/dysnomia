@@ -34,6 +34,8 @@ namespace Dysnomia
 
         public Prion()
         {
+            Tin T = new Tin();
+
             if (Uranus == null)
             {
                 Orbital P = new Orbital();
@@ -67,7 +69,6 @@ namespace Dysnomia
             {
                 Mars = new Planet(Pluto.X.L.M.Rod, Earth.X.R.M.Cone);
             }
-            while (Mars.Q.U == null) Thread.Sleep(5000);
 
             Tin J = new Tin(Mars.Q);
             if (Jupiter == null)

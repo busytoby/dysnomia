@@ -11,23 +11,30 @@ namespace Dysnomia
     {
         static public LinkedList<KeyValuePair<BigInteger, Dynamic>> Polygamma;
         static public Mutex Lock = new Mutex();
+        static public BigInteger Mu;
 
         public Joule K;
 
         public Tin()
         {
             if (Polygamma != null) return;
-            while (Prion.Saturn == null) Thread.Sleep(5000);
-
             Polygamma = new LinkedList<KeyValuePair<BigInteger, Dynamic>>();
-
-            BigInteger M = Dysnomia.Math.Random();
-            KeyValuePair<BigInteger, Dynamic> R = new KeyValuePair<BigInteger, Dynamic>(M, Prion.Saturn.X.R.M.Rod);
-            Polygamma.AddFirst(R);
         }
 
         public Tin(Zinc Q)
         {
+            while (Prion.Saturn == null) Thread.Sleep(5000);
+
+            Lock.WaitOne();
+            if (Mu == 0)
+            {
+                Mu = Dysnomia.Math.Random();
+                KeyValuePair<BigInteger, Dynamic> R = new KeyValuePair<BigInteger, Dynamic>(Mu, Prion.Saturn.X.R.M.Rod);
+                Polygamma.AddLast(R);
+            }
+            Lock.ReleaseMutex();
+
+            while(Q.U == null) Thread.Sleep(5000);
             K = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
         }
     }
