@@ -33,7 +33,7 @@ namespace Dysnomia {
 			if (E->Code == 1) throw gcnew AffinityException(1, "Quasar Exception");
 			if (E->Code == 4) throw gcnew AffinityException(2, "Magnetar Exception");
 			if (E->Code == 7) throw gcnew AffinityException(3, "Neutron Exception");
-			else throw;
+			if (E->Code != 11) throw;
 		}
 	}
 
@@ -53,6 +53,9 @@ namespace Dysnomia {
 
 	void Affinity::ConductorGenerate(BigInteger Xi) {
 		Phi = Rod->Avail(Xi);
+		Cone->Tau = Cone->Avail(Xi);
+
+		/*
 		if (Cone->Tau.IsZero)
 			Cone->Tau = Cone->Avail(Xi);
 		else if (Cone->Tau == (long long)1) {
@@ -60,8 +63,8 @@ namespace Dysnomia {
 			Cone->Tau = Math::ModPow(Xi, Rod->Gamma, Math::Prime);
 			if (!Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
 			Alpha = Math::ModPow(Cone->Tau, Phi, Rod->Gamma); 
-		}
-		else throw gcnew DynamicException(10, "Cone Tau Exception");
+		} 
+		*/
 
 		Rod->Form(Cone->Tau);
 		Cone->Form(Phi);
@@ -73,7 +76,6 @@ namespace Dysnomia {
 	void Affinity::OpenManifolds(BigInteger Xi) {
 		ConductorGenerate(Xi);
 
-		// Last Relativity
 		Rod->Conjugate(Cone->Pole);
 		Cone->Conjugate(Rod->Pole);
 

@@ -6,6 +6,7 @@ Ordered Pairs:
 
 using namespace System;
 using namespace System::Numerics;
+using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	public ref class DynamicException : public Exception {
@@ -29,7 +30,8 @@ namespace Dysnomia {
 
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
-		BigInteger Tau, Mu, Eta, Gamma, Nu;
+		BigInteger Tau, Mu, Eta, Nu, Rho, Alpha;
+		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
