@@ -14,6 +14,8 @@ namespace Prion
         public Glia(Zinc Q)
         {
             J = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
+
+
         }
     }
 }

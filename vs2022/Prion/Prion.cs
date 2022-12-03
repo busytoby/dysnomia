@@ -30,6 +30,8 @@ namespace Dysnomia
 
         static public Planet Mars;
 
+        static public Planet Jupiter;
+
         public Prion()
         {
             if (Uranus == null)
