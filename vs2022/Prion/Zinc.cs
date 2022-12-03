@@ -41,10 +41,7 @@ namespace Dysnomia
             if (U == null)
             {
                 while (Tin.Mu == 0) Thread.Sleep(5000);
-                Tin.Lock.WaitOne();
-                Affinity N = new Affinity(Tin.Rho, R.Y.M.Cone);
-                U = new Orbital(N);
-                Tin.Lock.ReleaseMutex();
+                U = Tin.Breed(R.Y.M.Cone);
                 Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }
