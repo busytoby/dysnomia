@@ -9,13 +9,13 @@ namespace Dysnomia
     public class Planet
     {
         public Orbital X;
-        public Quartz Q;
+        public Zinc Q;
         public Mutex Lock = new Mutex();
 
         public Planet(Affinity D)
         {
             X = new Orbital(D);
-            Q = new Quartz(X);
+            Q = new Zinc(X);
         }
 
         public Planet(Dynamic R, Dynamic C)
@@ -27,7 +27,7 @@ namespace Dysnomia
                 {
                     Affinity V = new Affinity(R, C);
                     X = new Orbital(V);
-                    Q = new Quartz(X);
+                    Q = new Zinc(X);
                     Failed = false;
                 }
                 catch (AffinityException E)

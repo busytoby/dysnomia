@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Dysnomia
 {
-    public class Quartz
+    public class Zinc
     {
         public Thread Oscillation;
         public Orbital U;
@@ -26,7 +26,7 @@ namespace Dysnomia
         public Stopwatch RotationWatch;
         public Stopwatch OrbitWatch;
 
-        public Quartz(Orbital Planet)
+        public Zinc(Orbital Planet)
         {
             this.Planet = Planet;
             if (Oscillation == null)
