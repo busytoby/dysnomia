@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace Prion
 {
-    internal class Glia
+    public class Glia
     {
-        Joule J;
+        public Joule K;
 
         public Glia(Zinc Q)
         {
-            J = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
-
-
+            K = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
         }
     }
 }
