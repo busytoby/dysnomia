@@ -64,6 +64,9 @@ namespace Dysnomia {
 		N->Form(Y->M->Alpha);
 		if (Y->M->Cone->Tau == (long long)1) Y->M->Cone->Tau = N->Channel;
 		else throw gcnew DynamicException(10, "Cone Tau Exception");
+
+		N->Polygamma->AddLast(KeyValuePair<BigInteger, Dynamic^>(Y->M->Cone->Tau, Y->M->Cone));
+
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
