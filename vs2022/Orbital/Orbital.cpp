@@ -4,8 +4,11 @@
 
 namespace Dysnomia {
 	Joule::Joule(Dynamic^ Delta, Affinity^ Nu) {
+		Polygamma = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
 		Affinity^ E = gcnew Affinity(Delta, Nu->Cone);
 		O = gcnew Orbital(E);
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Nu->Rod->Polygamma)
+			Polygamma->AddLast(G);
 	}
 
 	Orbital::Orbital() {
