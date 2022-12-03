@@ -38,19 +38,26 @@ namespace Dysnomia
 
         private void Oscillator()
         {
-            while (Prion.Saturn == null) Thread.Sleep(5000);
+            if(Tin.Polygamma == null)
+            {
+                Tin.Lock.WaitOne();
+                Tin Sn = new Tin();
+                Tin.Lock.ReleaseMutex();
+            }
 
-            Prion.Saturn.Lock.WaitOne();
+            while (Tin.Polygamma == null) Thread.Sleep(5000);
+
+            Tin.Lock.WaitOne();
 
             if (U == null)
             {
-                Affinity N = new Affinity(Prion.Saturn.X.R.M.Rod, R.Y.M.Cone);
+                Affinity N = new Affinity(Tin.Polygamma.First.Value.Value, R.Y.M.Cone);
                 U = new Orbital(N);
                 Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
                 OrbitWatch = new Stopwatch();
             }
 
-            Prion.Saturn.Lock.ReleaseMutex();
+            Tin.Lock.ReleaseMutex();
 
             if (Gamma == 0)
             {
@@ -66,14 +73,14 @@ namespace Dysnomia
             while (true)
             {
                 Rotation += RotationDegree;
-                if (Math.Abs(Rotation) > 360)
+                if (System.Math.Abs(Rotation) > 360)
                 {
                     Orbit += Sigma.Real;
                     RotationWatch.Stop();
                     DayLength = RotationWatch.ElapsedMilliseconds;
                     Rotation -= (RotationDegree > 0) ? 360 : -360;
                     RotationWatch.Restart();
-                    if (Math.Abs(Orbit) > 360)
+                    if (System.Math.Abs(Orbit) > 360)
                     {
                         OrbitWatch.Stop();
                         YearLength = (OrbitWatch.ElapsedMilliseconds / DayLength);
