@@ -76,14 +76,14 @@ namespace Dysnomia {
 		
 		Eta = Math::ModPow(N->Foundation, N->Signal, Math::Prime);
 		Rho = Math::ModPow(Eta, N->Channel, Math::CatalanPrime);
-		BigInteger Sigma = Rho;
+		if (!Sigma.IsZero) throw gcnew OrbitalException(1, "Compounding Sigma");
+		Sigma = Rho;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in N->Polygamma) {
-			Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
 			for each (KeyValuePair<BigInteger, Dynamic^> L in Y->M->Rod->Polygamma) {
-				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(L.Value->Signal, Eta, G.Key));
+				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
+				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
 			}
 		}
-		Sigma = Sigma % Math::AzimuthPrime;
 
 		N->Bond();
 		N->Adduct(Y->M->Cone->Dynamo);
