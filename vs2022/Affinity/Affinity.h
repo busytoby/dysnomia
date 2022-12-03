@@ -2,6 +2,7 @@
 
 using namespace System;
 using namespace System::Numerics;
+using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	public ref class AffinityException : public Exception {

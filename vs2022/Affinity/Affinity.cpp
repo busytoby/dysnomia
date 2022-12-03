@@ -55,16 +55,12 @@ namespace Dysnomia {
 		Phi = Rod->Avail(Xi);
 		Cone->Tau = Cone->Avail(Xi);
 
-		/*
-		if (Cone->Tau.IsZero)
-			Cone->Tau = Cone->Avail(Xi);
-		else if (Cone->Tau == (long long)1) {
-			Rod->Gamma = Cone->Avail(Xi);
-			Cone->Tau = Math::ModPow(Xi, Rod->Gamma, Math::Prime);
-			if (!Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
-			Alpha = Math::ModPow(Cone->Tau, Phi, Rod->Gamma); 
-		} 
-		*/
+		Rod->Polygamma->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
+		Alpha = 0;
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->Polygamma) {
+			Alpha = BigInteger::Add(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
+			int i = 99;
+		}
 
 		Rod->Form(Cone->Tau);
 		Cone->Form(Phi);

@@ -59,13 +59,11 @@ namespace Dysnomia {
 
 	void Orbital::Bridge(BigInteger Nu) {
 		Y->Nu = N->Avail(Nu);
-
 		if (!Y->M->Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
 		Y->M->Alpha = Y->M->Cone->Avail(Nu);
 		N->Form(Y->M->Alpha);
 		if (Y->M->Cone->Tau == (long long)1) Y->M->Cone->Tau = N->Channel;
 		else throw gcnew DynamicException(10, "Cone Tau Exception");
-
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);

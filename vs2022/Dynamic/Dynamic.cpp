@@ -71,14 +71,7 @@ namespace Dysnomia {
 
 	void Dynamic::Form(BigInteger Nu)
 	{
-//		if(Gamma.IsZero)
-			Base = Math::ModPow(Nu, Secret, Math::Prime);
-/*
-		else {
-			Base = Math::ModPow(Gamma, Secret, Math::Prime);
-			Gamma = Math::ModPow(Gamma, Base, Math::Prime);
-		}
-*/
+		Base = Math::ModPow(Nu, Secret, Math::Prime);
 		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Tune();
 	}
@@ -86,20 +79,6 @@ namespace Dysnomia {
 	void Dynamic::Polarize()
 	{
 		Pole = Math::ModPow(Base, Secret, Math::Prime);
-/*
-		if (!Gamma.IsZero) {
-			if(Rho.IsZero) 
-				Rho = Math::ModPow(Gamma, Pole, Math::AzimuthPrime);
-			else {
-				if (!Alpha.IsZero)
-					Cubit = BigInteger::ModPow(Alpha, Rho, Math::CatalanPrime);
-				Alpha = Rho;
-				Rho = BigInteger::Multiply(
-					Math::ModPow(Pole, Gamma, Math::AzimuthPrime),
-					Rho);
-			}
-		}
-*/
 	}
 
 	void Dynamic::Conjugate(BigInteger% Nu)
