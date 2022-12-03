@@ -10,7 +10,6 @@ namespace Prion
     public class Moon
     {
         public Orbital X;
-        public Zinc Q;
         public Mutex Lock = new Mutex();
 
         public Moon(Dynamic R, Dynamic C)
@@ -22,7 +21,6 @@ namespace Prion
                 {
                     Affinity V = new Affinity(R, C);
                     X = new Orbital(V);
-                    Q = new Zinc(X);
                     Failed = false;
                 }
                 catch (AffinityException E)
