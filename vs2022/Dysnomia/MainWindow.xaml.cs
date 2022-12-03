@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Property Of Uwu University
+// This Application Is Distributed As Sharia Law
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
