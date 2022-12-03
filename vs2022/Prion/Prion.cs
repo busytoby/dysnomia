@@ -73,6 +73,7 @@ namespace Dysnomia
             if (Jupiter == null)
             {
                 Jupiter = new Planet(J.K.O.L.M);
+                // Presuming J.K.Polygamma Count Is Always 5, The First 5 Moons Of Jupiter Should Be Produced
             }
 
         }
