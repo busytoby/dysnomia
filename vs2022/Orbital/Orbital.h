@@ -37,6 +37,6 @@ namespace Dysnomia {
 	public:
 		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
 
-		Joule(Dynamic^, LinkedList<KeyValuePair<BigInteger, Dynamic^>>^);
+		Joule(Dynamic^, Affinity^);
 	};
 }

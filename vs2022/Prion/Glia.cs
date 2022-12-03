@@ -11,14 +11,9 @@ namespace Prion
     {
         Joule J;
 
-        public Glia(Planet M)
-        {
-            J = new Joule(M.Q.U.Y.M.Rod, M.X.L.M.Rod.Polygamma);
-        }
-
         public Glia(Zinc Q)
         {
-            J = new Joule(Q.U.Y.M.Rod, Q.R.L.M.Rod.Polygamma);
+            J = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
         }
     }
 }

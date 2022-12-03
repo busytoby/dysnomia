@@ -68,7 +68,6 @@ namespace Dysnomia
             while (Mars.Q.U == null) Thread.Sleep(5000);
 
             Glia J = new Glia(Mars.Q);
-            Glia K = new Glia(Mars);
         }
 
         public Prion(Prion CopyPrion)

@@ -3,7 +3,7 @@
 #include "Orbital.h"
 
 namespace Dysnomia {
-	Joule::Joule(Dynamic^ Delta, LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Eta) {
+	Joule::Joule(Dynamic^ Delta, Affinity^ Nu) {
 
 	}
 }
