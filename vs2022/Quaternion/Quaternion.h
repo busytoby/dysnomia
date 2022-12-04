@@ -1,6 +1,7 @@
 #pragma once
 
 using namespace System;
+using namespace System::Numerics;
 
 namespace Dysnomia {
 	public ref class QuaternionException : public Exception {
@@ -17,10 +18,12 @@ namespace Dysnomia {
 	public ref class Quaternion
 	{
 	public:
-		Affinity^ Rho;
+		BigInteger Epsilon;
+
+		Affinity^ Gamma;
 		Affinity^ Nu;
 		Affinity^ Phi;
-		Affinity^ Eta;
+		Affinity^ Rho;
 		Affinity^ Sigma;
 	};
 }
