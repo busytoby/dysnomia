@@ -11,7 +11,6 @@ namespace Prion.Elements
     public class Tin
     {
         static public Boron M;
-        static public Mutex Lock = new Mutex();
         static public BigInteger Mu;
         static public Dynamic Rho;
 
@@ -44,6 +43,7 @@ namespace Prion.Elements
         }
         */
 
+        /*
         static public Orbital Breed(Dynamic N)
         {
             Lock.WaitOne();
@@ -52,5 +52,6 @@ namespace Prion.Elements
             Lock.ReleaseMutex();
             return X;
         }
+        */
     }
 }

@@ -17,8 +17,8 @@ namespace Prion.Elements
                 Star.C.Add(Sigma, V.Y.M);
             else if (Star.C[Sigma] != V.Y.M) throw new Exception("Carbonic Failure");
 
-            if (!Star.B.ContainsKey(V.Y.M.Cone))
-                Star.B.Add(V.Y.M.Cone, Sigma);           
+            if (!Star.Eta.ContainsKey(V.Y.M.Cone))
+                Star.Eta.Add(V.Y.M.Cone, Sigma);           
         }
     }
 }

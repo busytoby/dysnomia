@@ -11,12 +11,12 @@ namespace Dysnomia
     public class Star
     {
         static public Carbon C;
-        static public Boron B;
+        static public Boron Eta;
 
         public Star()
         {
             if (C == null) C = new Carbon();
-            if (B == null) B = new Boron();
+            if (Eta == null) Eta = new Boron();
         }
     }
 }
