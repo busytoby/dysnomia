@@ -16,7 +16,7 @@ namespace Dysnomia
         {
             E = new Boron();
             foreach(KeyValuePair<Dynamic, BigInteger> B in Star.B) {
-
+                Oxygen.Learn(B.Value);
             }
         }
 

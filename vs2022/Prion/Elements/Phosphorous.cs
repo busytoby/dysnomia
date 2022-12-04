@@ -22,15 +22,21 @@ namespace Prion.Elements
 
         public Phosphorous()
         {
-            if (Sun == null) Sun = new Star();
-            if (Locks == null) Locks = new Dictionary<BigInteger, Mutex>();
-            if (Xi == null) Xi = new Neon();
+            if (Sun != null || Locks != null || Xi != null || V != null) throw new Exception("Phosphorous Already Initialized");
+            Sun = new Star();
+            Locks = new Dictionary<BigInteger, Mutex>();
+            Xi = new Neon();
             Sigma = new Dictionary<String, BigInteger>();
 
             Nu = new Parallax(new Orbital());
 
             V = new Venus(Nu.K.T.First.Value.Value.Rho.Rod, Nu.K.T.First.Value.Value.Gamma);
             int i = 998;
+        }
+
+        public Phosphorous(Affinity L)
+        {
+            Nu = new Parallax(L);
         }
 
         public void RecordOrbital(Orbital V, String Name)

@@ -12,7 +12,7 @@ namespace Prion.Elements
     {
         public Potassium(Orbital S, Orbital N) : base(S, N) {
             Star.C.Add(T.First.Value.Value.Gamma.Xi, T.First.Value.Value.Gamma);
-            Star.B.Add(T.First.Value.Value.Rho.Cone, T.First.Value.Value.Rho.Xi);
+            Star.C.Add(T.First.Value.Value.Rho.Xi, T.First.Value.Value.Rho);
         }
     }
 }

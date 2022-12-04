@@ -8,11 +8,11 @@ using Dysnomia;
 
 namespace Prion.Elements
 {
-    public class Carbon : Dictionary<BigInteger, Tuple<Dynamic, Dynamic>> { 
+    public class Carbon : Dictionary<BigInteger, Affinity> { 
 
         public void Add(BigInteger Sigma, Affinity T)
         {
-            base.Add(Sigma, new Tuple<Dynamic, Dynamic>(T.Rod, T.Cone));
+            base.Add(Sigma, T);
             Star.B.Add(T.Cone, Sigma);
         }
     }

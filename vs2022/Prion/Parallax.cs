@@ -32,5 +32,7 @@ namespace Dysnomia
             P = new Orbital();
             Star.C.Add(P.Sigma, P.Y.M);
         }
+
+        public Parallax(Affinity D) : base(D) { }
     }
 }
