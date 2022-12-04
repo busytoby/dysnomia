@@ -10,22 +10,23 @@ namespace Prion.Elements
 {
     public class Tin
     {
-        static public Dysnomia.Quaternion Saturn;
+        static public Dysnomia.Quaternion M;
 
-        public Tin(Boron A, Boron B)
+        public Tin()
         {
-            // Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone] == A[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone]
+            if (M != null) return;
 
-            // Star.Alpha[Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone][0]]
-            // Phosphorous.Sigmas["Neptune"]
-            // Saturn = new Planet(Uranus.X.R.M.Rod, Neptune.X.L.M.Cone);
-
-            Dynamic UranusRod = Star.Alpha[Phosphorous.Sigmas["Uranus"]].Rod;
             Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
             Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
+            Orbital SunOrbital = Star.GetOrbitalByName("Sun");
+            Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
 
-
-            int i = 99;
+            M = new Dysnomia.Quaternion();
+            M.Gamma = SunOrbital.L.M;
+            M.Nu = NeptuneOrbital.R.M;
+            M.Phi = UranusOrbital.Y.M;
+            M.Rho = VenusOrbital.L.M;
+            M.Sigma = null;
         }
 
         /*
@@ -49,15 +50,15 @@ namespace Prion.Elements
         }
         */
 
-        /*
-        static public Orbital Breed(Dynamic N)
-        {
-            Lock.WaitOne();
-            Affinity A = new Affinity(Rho, N);
-            Orbital X = new Orbital(A);
-            Lock.ReleaseMutex();
-            return X;
+            /*
+            static public Orbital Breed(Dynamic N)
+            {
+                Lock.WaitOne();
+                Affinity A = new Affinity(Rho, N);
+                Orbital X = new Orbital(A);
+                Lock.ReleaseMutex();
+                return X;
+            }
+            */
         }
-        */
     }
-}

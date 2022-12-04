@@ -47,7 +47,7 @@ namespace Dysnomia
             Venus V = new Venus(System.Nu.K.T.First.Value.Value.Rho.Rod, System.Nu.K.T.First.Value.Value.Gamma);
             System.RecordOrbital(V, "Venus");
 
-            Parallax.Saturn = new Tin(Star.Eta, Venus.Rho);
+            Parallax.Saturn = new Tin();
 
             /* stub process
             Tin T = new Tin();
