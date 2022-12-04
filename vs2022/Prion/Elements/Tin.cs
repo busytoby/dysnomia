@@ -4,8 +4,9 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Dysnomia;
 
-namespace Dysnomia
+namespace Prion.Elements
 {
     public class Tin
     {
@@ -22,6 +23,7 @@ namespace Dysnomia
             M = new LinkedList<KeyValuePair<BigInteger, Dynamic>>();
         }
 
+        /*
         public Tin(Zinc Q)
         {
             while (Prion.Saturn == null) Thread.Sleep(5000);
@@ -36,10 +38,11 @@ namespace Dysnomia
             }
             Lock.ReleaseMutex();
 
-            while(Q.U == null) Thread.Sleep(5000);
+            while (Q.U == null) Thread.Sleep(5000);
 
             K = new Orbital(Q.U.Y.M.Rod, Q.R.L.M);
         }
+        */
 
         static public Orbital Breed(Dynamic N)
         {

@@ -8,8 +8,9 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Dysnomia;
 
-namespace Dysnomia
+namespace Prion.Elements
 {
     public class Zinc
     {
@@ -65,13 +66,13 @@ namespace Dysnomia
                     Orbit += Sigma.Real;
                     RotationWatch.Stop();
                     DayLength = RotationWatch.ElapsedMilliseconds;
-                    Rotation -= (RotationDegree > 0) ? 360 : -360;
+                    Rotation -= RotationDegree > 0 ? 360 : -360;
                     RotationWatch.Restart();
                     if (System.Math.Abs(Orbit) > 360)
                     {
                         OrbitWatch.Stop();
-                        YearLength = (OrbitWatch.ElapsedMilliseconds / DayLength);
-                        Orbit -= (Sigma.Real > 0) ? 360 : -360;
+                        YearLength = OrbitWatch.ElapsedMilliseconds / DayLength;
+                        Orbit -= Sigma.Real > 0 ? 360 : -360;
                         OrbitWatch.Restart();
                     }
                 }

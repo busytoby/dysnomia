@@ -1,10 +1,11 @@
-﻿using Prion;
-using System.Numerics;
+﻿using System.Numerics;
+using Prion.Elements;
 
 namespace Dysnomia
 {
     public class Prion
     {
+        /*
         static public Planet Neptune;
         static public Planet Miranda;
         static public Planet Venus;
@@ -18,8 +19,9 @@ namespace Dysnomia
         static public Moon Phoebe;
         static public Moon Despina;
         static public Moon Iapetus;
-
+        */
         static public Planet Saturn;
+        /*
         static public Moon Desdemona;
         static public Moon Enceladus;
         static public Moon Titan;
@@ -31,39 +33,43 @@ namespace Dysnomia
         static public Planet Mars;
 
         static public Planet Jupiter;
+        */
 
         public Prion()
         {
+            Phosphorous System = new Phosphorous();
+
+            /* stub process
             Tin T = new Tin();
 
             if (Uranus == null)
             {
                 Orbital P = new Orbital();
+//                if (Neptune == null) Neptune = new Planet(P.R.M);
                 if (Uranus == null) Uranus = new Planet(P.L.M);
-                if (Neptune == null) Neptune = new Planet(P.R.M);
-                Miranda = new Planet(Neptune.X.L.M);
+//                Miranda = new Planet(Neptune.X.L.M);
                 if (Venus == null) Venus = new Planet(P.Y.M);
                 Neith = new Moon(Venus.X.Y.M.Rod, Venus.X.R.M.Cone);
             }
             if (Proteus == null)
                 Titania = new Planet(Uranus.X.R.M);
-                Proteus = new Moon(Neptune.X.R.M.Rod, Uranus.X.Y.M.Cone);
+//                Proteus = new Moon(Neptune.X.R.M.Rod, Uranus.X.Y.M.Cone);
             if (Hippocamp == null)
             {
-                Hippocamp = new Moon(Neptune.X.Y.M.Rod, Venus.X.Y.M.Cone);
+//                Hippocamp = new Moon(Neptune.X.Y.M.Rod, Venus.X.Y.M.Cone);
                 Phoebe = new Moon(Hippocamp.X.L.M.Rod, Hippocamp.X.L.M.Cone);
-                Despina = new Moon(Neptune.X.R.M.Rod, Hippocamp.X.R.M.Cone);
+//                Despina = new Moon(Neptune.X.R.M.Rod, Hippocamp.X.R.M.Cone);
                 Iapetus = new Moon(Despina.X.L.M.Rod, Hippocamp.X.Y.M.Cone);
             }
             if (Saturn == null)
             {
-                Titan = new Moon(Neptune.X.L.M.Rod, Hippocamp.X.L.M.Cone);
+//                Titan = new Moon(Neptune.X.L.M.Rod, Hippocamp.X.L.M.Cone);
                 Saturn = new Planet(Uranus.X.R.M.Rod, Neptune.X.L.M.Cone);
                 Desdemona = new Moon(Saturn.X.L.M.Rod, Uranus.X.L.M.Cone);
                 Enceladus = new Moon(Saturn.X.L.M.Rod, Neptune.X.R.M.Cone);
                 Earth = new Planet(Saturn.X.Y.M.Rod, Enceladus.X.R.M.Cone);
-                Mercury = new Planet(Neptune.X.L.M.Rod, Earth.X.L.M.Cone);
-                Pluto = new Planet(Neptune.X.L.M.Rod, Mercury.X.R.M.Cone);
+//                Mercury = new Planet(Neptune.X.L.M.Rod, Earth.X.L.M.Cone);
+//                Pluto = new Planet(Neptune.X.L.M.Rod, Mercury.X.R.M.Cone);
             }
             if (Mars == null)
             {
@@ -84,6 +90,7 @@ namespace Dysnomia
             S.Add(Saturn.X);
             Orbital X = new Orbital();
             S.Add(X);
+            */
         }
 
         public Prion(Prion CopyPrion)
