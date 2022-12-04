@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,9 @@ namespace Dysnomia
         public Venus(Dynamic Y, Affinity U) : base(Y, U)
         {
             E = new Boron();
+            foreach(KeyValuePair<Dynamic, BigInteger> B in Star.B) {
+
+            }
         }
 
     }

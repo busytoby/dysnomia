@@ -13,9 +13,9 @@ namespace Prion.Elements
         public void Add(BigInteger Sigma, Orbital V)
         {
             base.Add(Sigma, V);
-            if (!Star.B.ContainsKey(Sigma))
-                Star.B.Add(Sigma, V.Y.M.Cone);
-            else if (Star.B[Sigma] != V.Y.M.Cone) throw new Exception("Boronic Failure");
+            if (!Star.B.ContainsKey(V.Y.M.Cone))
+                Star.B.Add(V.Y.M.Cone, Sigma);
+            else if (Star.B[V.Y.M.Cone] != Sigma) throw new Exception("Boronic Failure");
             
         }
     }

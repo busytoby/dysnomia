@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Boron : Dictionary<BigInteger, Dynamic> {
+    public class Boron : Dictionary<Dynamic, BigInteger> {
 
     }
 }
