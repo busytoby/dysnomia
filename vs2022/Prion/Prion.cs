@@ -37,10 +37,17 @@ namespace Dysnomia
 
         public Prion()
         {
+            Star Sun = new Star();
+
             Phosphorous System = new Phosphorous();
             System.RecordOrbital(System.Nu, "Neptune");
             System.RecordOrbital(System.Nu.F, "Sun");
             System.RecordOrbital(System.Nu.P, "Uranus");
+
+            Venus V = new Venus(System.Nu.K.T.First.Value.Value.Rho.Rod, System.Nu.K.T.First.Value.Value.Gamma);
+            System.RecordOrbital(V, "Venus");
+
+            Parallax.Saturn = new Tin(Star.Eta, Venus.Rho);
 
             /* stub process
             Tin T = new Tin();

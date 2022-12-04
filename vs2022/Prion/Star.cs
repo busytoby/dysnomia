@@ -10,13 +10,20 @@ namespace Dysnomia
 {
     public class Star
     {
-        static public Carbon C;
+        static public Carbon Alpha;
         static public Boron Eta;
 
         public Star()
         {
-            if (C == null) C = new Carbon();
+            if (Alpha == null) Alpha = new Carbon();
             if (Eta == null) Eta = new Boron();
+        }
+
+        static public Orbital GetOrbitalByName(String Name)
+        {
+            List<BigInteger> OrbitalSigmas = Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone];
+            if (OrbitalSigmas.Count != 1) throw new Exception("More Than One Orbital Found");
+            return Phosphorous.Xi[OrbitalSigmas[0]];
         }
     }
 }

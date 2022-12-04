@@ -15,8 +15,8 @@ namespace Prion.Elements
         static public Phosphorous Learn(BigInteger Epsilon)
         {
             if (F == null) F = new Fluorine();
-            if (!Star.C.ContainsKey(Epsilon)) throw new Exception("Unlearnable");   
-            Phosphorous I = new Phosphorous(Star.C[Epsilon]);
+            if (!Star.Alpha.ContainsKey(Epsilon)) throw new Exception("Unlearnable");   
+            Phosphorous I = new Phosphorous(Star.Alpha[Epsilon]);
             F.Add(I.Nu, I.Nu.Nu);
 
             return I;

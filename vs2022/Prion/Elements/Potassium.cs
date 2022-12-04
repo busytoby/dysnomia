@@ -11,8 +11,8 @@ namespace Prion.Elements
     public class Potassium : Polygamma
     {
         public Potassium(Orbital S, Orbital N) : base(S, N) {
-            Star.C.Add(T.First.Value.Value.Gamma.Xi, T.First.Value.Value.Gamma);
-            Star.C.Add(T.First.Value.Value.Rho.Xi, T.First.Value.Value.Rho);
+            Star.Alpha.Add(T.First.Value.Value.Gamma.Xi, T.First.Value.Value.Gamma);
+            Star.Alpha.Add(T.First.Value.Value.Rho.Xi, T.First.Value.Value.Rho);
         }
     }
 }

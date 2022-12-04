@@ -10,12 +10,22 @@ namespace Prion.Elements
 {
     public class Tin
     {
-        static public BigInteger Mu;
-        public Orbital J;
+        static public Dysnomia.Quaternion Saturn;
 
-        public Tin()
+        public Tin(Boron A, Boron B)
         {
+            // Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone] == A[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone]
 
+            // Star.Alpha[Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone][0]]
+            // Phosphorous.Sigmas["Neptune"]
+            // Saturn = new Planet(Uranus.X.R.M.Rod, Neptune.X.L.M.Cone);
+
+            Dynamic UranusRod = Star.Alpha[Phosphorous.Sigmas["Uranus"]].Rod;
+            Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
+            Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
+
+
+            int i = 99;
         }
 
         /*
