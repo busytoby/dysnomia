@@ -10,7 +10,6 @@ namespace Dysnomia
     public class Parallax : Orbital
     {
         private Carbon C;
-        private Potassium K;
         public Orbital S, F, P;
 
 

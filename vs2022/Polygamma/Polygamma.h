@@ -11,7 +11,7 @@ namespace Dysnomia {
 		void CapSpinor(Ion^, Ion^, Ion^);
 
 	public:
-		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ M;
+		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ T;
 
 		Polygamma(Orbital^, Orbital^);
 		void Add(Orbital^);

@@ -20,8 +20,8 @@ namespace Dysnomia
 
             K = new Potassium(N.F, N);
 
-            U = new Orbital(K.M.Last.Value.Value.Rho);
-            R = new Orbital(K.M.First.Value.Value.Rho);
+            U = new Orbital(K.T.Last.Value.Value.Rho);
+            R = new Orbital(K.T.First.Value.Value.Rho);
         }
     }
 }
