@@ -23,13 +23,13 @@ namespace Dysnomia {
 	public ref class Dynamic
 	{
 	private:
-		BigInteger Base, Secret, Ring;
+		BigInteger Secret, Ring;
 
 		void Initialize();
 		void Seed();
 
 	public:
-		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
+		BigInteger Base, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
 		BigInteger Tau, Mu, Eta, Nu, Rho, Alpha;
 		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ R;
 

@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Potassium : Polygamma
+    public class Neon : Dictionary<BigInteger, Orbital>
     {
-        public Potassium(Orbital S, Orbital N) : base(S, N) {
-            Star.C.Add(T.First.Value.Value.Gamma.Sigma, T.First.Value.Value.Gamma);
+        public void Add(BigInteger Sigma, Orbital V)
+        {
+            base.Add(Sigma, V);
+            Star.B.Add(Sigma, V.Y.M.Cone);
         }
     }
 }
