@@ -16,7 +16,6 @@ namespace Prion.Elements
 
         static private Star Sun;
         static private Venus V;
-        static private Tin Saturn;
 
         public Parallax Nu;
         public Dictionary<String, BigInteger> Sigma;

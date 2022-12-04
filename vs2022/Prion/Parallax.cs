@@ -10,6 +10,8 @@ namespace Dysnomia
 {
     public class Parallax : Orbital
     {
+        static public Tin Saturn;
+
         public Potassium K;
         public Orbital S, F, P;
 
