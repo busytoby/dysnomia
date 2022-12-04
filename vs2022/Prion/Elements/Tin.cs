@@ -26,7 +26,7 @@ namespace Prion.Elements
             M.Nu = NeptuneOrbital.R.M;
             M.Phi = UranusOrbital.Y.M;
             M.Rho = VenusOrbital.L.M;
-            M.Sigma = null;
+            M.Sigma = new Affinity();
         }
 
         /*
