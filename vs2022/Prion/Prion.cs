@@ -81,6 +81,7 @@ namespace Dysnomia
             Tin L = new Tin(Earth.Q);
 
             Polygamma S = new Polygamma(Mars.X, Earth.X);
+            S.Add(Saturn.X);
         }
 
         public Prion(Prion CopyPrion)
