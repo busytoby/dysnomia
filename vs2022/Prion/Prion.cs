@@ -82,6 +82,8 @@ namespace Dysnomia
 
             Polygamma S = new Polygamma(Mars.X, Earth.X);
             S.Add(Saturn.X);
+            Orbital X = new Orbital();
+            S.Add(X);
         }
 
         public Prion(Prion CopyPrion)
