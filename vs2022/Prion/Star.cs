@@ -25,7 +25,6 @@ namespace Dysnomia
             N = new Parallax(new Orbital());
 
             K = new Potassium(N.F, N);
-            B.Add(K.T.First.Value.Value.Rho.Sigma, K.T.First.Value.Value.Rho.Cone);
 
             U = new Orbital(K.T.Last.Value.Value.Rho);
             R = new Orbital(K.T.First.Value.Value.Rho);
