@@ -14,7 +14,7 @@ namespace Dysnomia
         static public BigInteger Mu;
         static public Dynamic Rho;
 
-        public Joule K;
+        public Orbital K;
 
         public Tin()
         {
@@ -37,8 +37,17 @@ namespace Dysnomia
             Lock.ReleaseMutex();
 
             while(Q.U == null) Thread.Sleep(5000);
-            if (Polygamma.Count != 6) throw new Exception("Life Support Error");
-            K = new Joule(Q.U.Y.M.Rod, Q.R.L.M);
+
+            K = new Orbital(Q.U.Y.M.Rod, Q.R.L.M);
+        }
+
+        static public Orbital Breed(Dynamic N)
+        {
+            Lock.WaitOne();
+            Affinity A = new Affinity(Rho, N);
+            Orbital S = new Orbital(A);
+            Lock.ReleaseMutex();
+            return S;
         }
     }
 }

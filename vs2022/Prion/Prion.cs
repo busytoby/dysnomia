@@ -73,7 +73,7 @@ namespace Dysnomia
             Tin J = new Tin(Mars.Q);
             if (Jupiter == null)
             {
-                Jupiter = new Planet(J.K.O.L.M);
+                Jupiter = new Planet(J.K.L.M);
                 if (J.K.Polygamma.Count != 5) throw new Exception("Jupiter Production With Not 5 Initial Moons !!?");
                 if (Tin.Polygamma.Count != 7) throw new Exception("Universe Abort");
                 // Presuming J.K.Polygamma Count Is Always 5, The First 5 Moons Of Jupiter Should Be Produced

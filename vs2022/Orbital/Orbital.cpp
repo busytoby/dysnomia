@@ -3,11 +3,35 @@
 #include "Orbital.h"
 
 namespace Dysnomia {
-	Joule::Joule(Dynamic^ Delta, Affinity^ Nu) {
+	Orbital::Orbital(Dynamic^ Delta, Affinity^ Rho) {
 		Polygamma = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
-		Affinity^ E = gcnew Affinity(Delta, Nu->Cone);
-		O = gcnew Orbital(E);
-		for each (KeyValuePair<BigInteger, Dynamic^> G in Nu->Rod->Polygamma)
+		Affinity^ E = gcnew Affinity(Delta, Rho->Cone);
+
+		bool Failed = true;
+		while (Failed) {
+			try {
+				N = gcnew Dynamic();
+				R = gcnew Ion();
+				Y = gcnew Ion();
+				L = gcnew Ion(E);
+
+				Nu = L->M->Rod->Element;
+				BigInteger Ligate = L->M->Cone->Barn;
+
+				Bridge(Nu);
+
+				Nu = L->M->Cone->Signal;
+				Failed = false;
+			}
+			catch (DynamicException^ E) {
+				if (E->Code == 1) continue;
+				if (E->Code == 4) continue;
+				if (E->Code == 6) continue;
+				if (E->Code == 7) continue;
+				else throw;
+			}
+		}
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Rho->Rod->Polygamma)
 			Polygamma->AddLast(G);
 	}
 

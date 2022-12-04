@@ -25,19 +25,13 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ Y;
 		Ion^ L;
+		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
 
 		Orbital();
 		Orbital(Affinity^);
+		Orbital(Dynamic^, Affinity^);
 		void Bridge(BigInteger);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
-	};
-
-	public ref class Joule {
-	public:
-		Orbital^ O;
-		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
-
-		Joule(Dynamic^, Affinity^);
 	};
 }
