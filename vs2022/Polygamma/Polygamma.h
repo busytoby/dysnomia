@@ -7,6 +7,9 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	public ref class Polygamma
 	{
+	private:
+		void CapSpinor(Ion^, Ion^, Ion^);
+
 	public:
 		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ M;
 

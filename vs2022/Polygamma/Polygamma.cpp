@@ -13,7 +13,6 @@ namespace Dysnomia {
         Ion^ N = gcnew Ion();
 
         BigInteger Epsilon = Math::Random();
-        BigInteger Gamma = Math::ModPow(Epsilon, S->L->M->Cone->Manifold, Q->R->M->Rod->Barn);
         
         Quaternion^ V = gcnew Quaternion();
         V->Gamma = gcnew Affinity(S->Y->M->Rod, I->M->Cone);
@@ -22,15 +21,8 @@ namespace Dysnomia {
         V->Rho = gcnew Affinity(Q->Y->M->Rod, S->L->M->Cone);
         V->Sigma = gcnew Affinity(R->M->Rod, Q->R->M->Cone);
 
-        Quaternion^ L = gcnew Quaternion();
-        L->Gamma = gcnew Affinity(V->Gamma->Rod, V->Sigma->Cone);
-        L->Nu = gcnew Affinity(V->Rho->Rod, R->M->Cone);
-        L->Phi = gcnew Affinity(I->M->Rod, V->Rho->Cone);
-        L->Rho = gcnew Affinity(gcnew Dynamic(), V->Phi->Cone);
-        L->Sigma = gcnew Affinity(N->M->Rod, N->M->Cone);
-
         M->AddLast(KeyValuePair<BigInteger, Quaternion^>(Epsilon, V));
-        M->AddLast(KeyValuePair<BigInteger, Quaternion^>(Gamma, L));
+        CapSpinor(I, R, N);
 	}
 
     void Polygamma::Add(Orbital^ S) {
@@ -39,7 +31,6 @@ namespace Dysnomia {
         Ion^ N = gcnew Ion();
 
         BigInteger Epsilon = Math::ModPow(M->Last->Value.Key, M->Last->Value.Value->Nu->Cone->Manifold, S->R->M->Rod->Barn);
-        BigInteger Gamma = Math::ModPow(Epsilon, S->L->M->Cone->Manifold, N->M->Rod->Barn);
 
         Quaternion^ V = gcnew Quaternion();
         V->Gamma = gcnew Affinity(M->Last->Value.Value->Gamma->Rod, I->M->Cone);
@@ -48,14 +39,20 @@ namespace Dysnomia {
         V->Rho = gcnew Affinity(S->Y->M->Rod, M->Last->Value.Value->Rho->Cone);
         V->Sigma = gcnew Affinity(R->M->Rod, S->R->M->Cone);
 
+        M->AddLast(KeyValuePair<BigInteger, Quaternion^>(Epsilon, V));
+        CapSpinor(I, R, N);
+    }
+
+    void Polygamma::CapSpinor(Ion^ I, Ion^ R, Ion^ N) {
+        BigInteger Gamma = Math::ModPow(M->Last->Value.Key, M->Last->Value.Value->Rho->Cone->Manifold, N->M->Rod->Barn);
+
         Quaternion^ L = gcnew Quaternion();
-        L->Gamma = gcnew Affinity(V->Gamma->Rod, V->Sigma->Cone);
-        L->Nu = gcnew Affinity(V->Rho->Rod, R->M->Cone);
-        L->Phi = gcnew Affinity(I->M->Rod, V->Rho->Cone);
-        L->Rho = gcnew Affinity(gcnew Dynamic(), V->Phi->Cone);
+        L->Gamma = gcnew Affinity(M->Last->Value.Value->Gamma->Rod, M->Last->Value.Value->Sigma->Cone);
+        L->Nu = gcnew Affinity(M->Last->Value.Value->Rho->Rod, R->M->Cone);
+        L->Phi = gcnew Affinity(I->M->Rod, M->Last->Value.Value->Rho->Cone);
+        L->Rho = gcnew Affinity(gcnew Dynamic(), M->Last->Value.Value->Phi->Cone);
         L->Sigma = gcnew Affinity(N->M->Rod, N->M->Cone);
 
-        M->AddLast(KeyValuePair<BigInteger, Quaternion^>(Epsilon, V));
         M->AddLast(KeyValuePair<BigInteger, Quaternion^>(Gamma, L));
     }
 }
