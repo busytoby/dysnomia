@@ -153,9 +153,6 @@
     <ProjectReference Include="..\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
-      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

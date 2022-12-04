@@ -4,7 +4,7 @@
 
 namespace Dysnomia {
 	Orbital::Orbital(Dynamic^ Delta, Affinity^ Rho) {
-		P = gcnew Polygamma();
+		M = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
 		Affinity^ E = gcnew Affinity(Delta, Rho->Cone);
 
 		bool Failed = true;
@@ -32,7 +32,7 @@ namespace Dysnomia {
 			}
 		}
 		for each (KeyValuePair<BigInteger, Dynamic^> G in Rho->Rod->R)
-			P->P->AddLast(G);
+			M->AddLast(G);
 	}
 
 	Orbital::Orbital() {

@@ -8,9 +8,8 @@ namespace Dysnomia {
 	public ref class Polygamma
 	{
 	public:
-		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ P;
 		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ M;
 
-		Polygamma();
+		Polygamma(Orbital^, Orbital^);
 	};
 }

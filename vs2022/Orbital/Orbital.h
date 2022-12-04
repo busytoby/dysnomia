@@ -25,7 +25,7 @@ namespace Dysnomia {
 		Ion^ R;
 		Ion^ Y;
 		Ion^ L;
-		Polygamma^ P;
+		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ M;
 
 		Orbital();
 		Orbital(Affinity^);

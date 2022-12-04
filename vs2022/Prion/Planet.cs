@@ -17,7 +17,7 @@ namespace Dysnomia
         {
             X = new Orbital(D);
             Q = new Zinc(X);
-            Tin.S.P.AddLast(new KeyValuePair<BigInteger, Dynamic>(X.L.M.Mu, X.L.M.Cone));
+            Tin.M.AddLast(new KeyValuePair<BigInteger, Dynamic>(X.L.M.Mu, X.L.M.Cone));
         }
 
         public Planet(Dynamic R, Dynamic C)
