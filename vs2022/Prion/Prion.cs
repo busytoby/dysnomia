@@ -48,6 +48,7 @@ namespace Dysnomia
             System.RecordOrbital(V, "Venus");
 
             Parallax.Saturn = new Tin();
+            System.Nu.K.Add(new Orbital(Tin.M.Sigma));
 
             /* stub process
             Tin T = new Tin();
