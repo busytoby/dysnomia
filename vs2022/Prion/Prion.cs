@@ -38,6 +38,9 @@ namespace Dysnomia
         public Prion()
         {
             Phosphorous System = new Phosphorous();
+            System.RecordOrbital(System.Nu, "Neptune");
+            System.RecordOrbital(System.Nu.F, "Sun");
+            System.RecordOrbital(System.Nu.P, "Uranus");
 
             /* stub process
             Tin T = new Tin();
