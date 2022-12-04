@@ -15,22 +15,24 @@ namespace Prion.Elements
         static public Neon Xi;
 
         static private Star Sun;
+        static private Parallax P;
         static private Venus V;
 
         public Dictionary<String, BigInteger> Sigma;
 
         public Phosphorous()
         {
+            if (Sun == null) Sun = new Star();
             if (Locks == null) Locks = new Dictionary<BigInteger, Mutex>();
             if (Xi == null) Xi = new Neon();
             Sigma = new Dictionary<String, BigInteger>();
 
-            Sun = new Star();
-            RecordOrbital(Sun.R, "Sun");
-            RecordOrbital(Sun.U, "Uranus");
-            RecordOrbital(Sun.N, "Neptune");
+            P = new Parallax(new Orbital());
+            RecordOrbital(P, "Neptune");
+            RecordOrbital(P.F, "Sun");
+            RecordOrbital(P.P, "Uranus");
 
-            V = new Venus(Sun.U.Y.M.Rod, Sun.K.T.First.Value.Value.Gamma);
+            V = new Venus(P.K.T.First.Value.Value.Rho.Rod, P.K.T.First.Value.Value.Gamma);
             int i = 998;
         }
 
