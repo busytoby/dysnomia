@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dysnomia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -7,5 +8,5 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Carbon : LinkedList<KeyValuePair<BigInteger, BigInteger>> { }
+    public class Boron : LinkedList<KeyValuePair<BigInteger, Dynamic>> { }
 }

@@ -10,7 +10,7 @@ namespace Prion.Elements
 {
     public class Tin
     {
-        static public LinkedList<KeyValuePair<BigInteger, Dynamic>> M;
+        static public Boron M;
         static public Mutex Lock = new Mutex();
         static public BigInteger Mu;
         static public Dynamic Rho;
@@ -20,7 +20,7 @@ namespace Prion.Elements
         public Tin()
         {
             if (M != null) return;
-            M = new LinkedList<KeyValuePair<BigInteger, Dynamic>>();
+            M = new Boron();
         }
 
         /*
