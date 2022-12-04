@@ -12,6 +12,7 @@
     <ProjectReference Include="..\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Math\Math.vcxproj" />
     <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
+    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj" />
   </ItemGroup>
 
 </Project>

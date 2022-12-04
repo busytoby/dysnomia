@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prion", "Prion\Prion.csproj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quaternion", "Quaternion\Quaternion.vcxproj", "{5A69282D-0356-4496-915F-72FD74276C6B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygamma", "Polygamma\Polygamma.vcxproj", "{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,18 @@ Global
 		{5A69282D-0356-4496-915F-72FD74276C6B}.Release|x64.Build.0 = Release|x64
 		{5A69282D-0356-4496-915F-72FD74276C6B}.Release|x86.ActiveCfg = Release|Win32
 		{5A69282D-0356-4496-915F-72FD74276C6B}.Release|x86.Build.0 = Release|Win32
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|Any CPU.Build.0 = Debug|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|x64.ActiveCfg = Debug|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|x64.Build.0 = Debug|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|x86.ActiveCfg = Debug|Win32
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Debug|x86.Build.0 = Debug|Win32
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|Any CPU.ActiveCfg = Release|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|Any CPU.Build.0 = Release|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x64.ActiveCfg = Release|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x64.Build.0 = Release|x64
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x86.ActiveCfg = Release|Win32
+		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

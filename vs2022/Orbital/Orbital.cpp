@@ -4,7 +4,7 @@
 
 namespace Dysnomia {
 	Orbital::Orbital(Dynamic^ Delta, Affinity^ Rho) {
-		Polygamma = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
+		P = gcnew Polygamma();
 		Affinity^ E = gcnew Affinity(Delta, Rho->Cone);
 
 		bool Failed = true;
@@ -31,8 +31,8 @@ namespace Dysnomia {
 				else throw;
 			}
 		}
-		for each (KeyValuePair<BigInteger, Dynamic^> G in Rho->Rod->Polygamma)
-			Polygamma->AddLast(G);
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Rho->Rod->R)
+			P->P->AddLast(G);
 	}
 
 	Orbital::Orbital() {
@@ -97,7 +97,7 @@ namespace Dysnomia {
 		if (Y->M->Cone->Tau == (long long)1) Y->M->Cone->Tau = N->Channel;
 		else throw gcnew DynamicException(10, "Cone Tau Exception");
 
-		N->Polygamma->AddLast(KeyValuePair<BigInteger, Dynamic^>(Y->M->Cone->Tau, Y->M->Cone));
+		N->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Y->M->Cone->Tau, Y->M->Cone));
 
 		N->Polarize();
 		BigInteger Focus = Y->Form();
@@ -110,8 +110,8 @@ namespace Dysnomia {
 		Rho = Math::ModPow(Eta, N->Channel, Math::CatalanPrime);
 		if (!Sigma.IsZero) throw gcnew OrbitalException(1, "Compounding Sigma");
 		Sigma = Rho;
-		for each (KeyValuePair<BigInteger, Dynamic^> G in N->Polygamma) {
-			for each (KeyValuePair<BigInteger, Dynamic^> L in Y->M->Rod->Polygamma) {
+		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {
+			for each (KeyValuePair<BigInteger, Dynamic^> L in Y->M->Rod->R) {
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
 			}

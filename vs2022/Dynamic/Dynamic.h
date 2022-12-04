@@ -31,7 +31,7 @@ namespace Dysnomia {
 	public:
 		BigInteger Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Barn, Coordinate;
 		BigInteger Tau, Mu, Eta, Nu, Rho, Alpha;
-		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ Polygamma;
+		LinkedList<KeyValuePair<BigInteger, Dynamic^>>^ R;
 
 		Dynamic();
 		Dynamic(const Dynamic%);

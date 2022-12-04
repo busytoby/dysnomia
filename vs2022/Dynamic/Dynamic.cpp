@@ -6,7 +6,7 @@ using namespace System;
 
 namespace Dysnomia {
 	Dynamic::Dynamic() {
-		Polygamma = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
+		R = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
 		Tau = 0;
 		Initialize();
 		Seed();
@@ -27,7 +27,7 @@ namespace Dysnomia {
 		Manifold = Copier.Manifold;
 		Ring = Copier.Ring;
 		Barn = Copier.Barn;
-		Polygamma = Copier.Polygamma;
+		R = Copier.R;
 	}
 
 

@@ -9,7 +9,7 @@ namespace Dysnomia
 {
     public class Tin
     {
-        static public LinkedList<KeyValuePair<BigInteger, Dynamic>> Polygamma;
+        static public Polygamma S;
         static public Mutex Lock = new Mutex();
         static public BigInteger Mu;
         static public Dynamic Rho;
@@ -18,8 +18,8 @@ namespace Dysnomia
 
         public Tin()
         {
-            if (Polygamma != null) return;
-            Polygamma = new LinkedList<KeyValuePair<BigInteger, Dynamic>>();
+            if (S != null) return;
+            S = new Polygamma();
         }
 
         public Tin(Zinc Q)
@@ -31,7 +31,7 @@ namespace Dysnomia
             {
                 Mu = Dysnomia.Math.Random();
                 KeyValuePair<BigInteger, Dynamic> R = new KeyValuePair<BigInteger, Dynamic>(Mu, Prion.Saturn.X.R.M.Rod);
-                Polygamma.AddLast(R);
+                S.P.AddLast(R);
                 Rho = Prion.Saturn.X.R.M.Rod;
             }
             Lock.ReleaseMutex();
@@ -45,9 +45,9 @@ namespace Dysnomia
         {
             Lock.WaitOne();
             Affinity A = new Affinity(Rho, N);
-            Orbital S = new Orbital(A);
+            Orbital X = new Orbital(A);
             Lock.ReleaseMutex();
-            return S;
+            return X;
         }
     }
 }

@@ -47,9 +47,9 @@ namespace Dysnomia {
 
 	void Affinity::OpenManifolds() {
 		BigInteger Xi = 0;
-		if (Rod->Polygamma->Count > 0) {
+		if (Rod->R->Count > 0) {
 			Xi = Rod->Manifold;
-			for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->Polygamma) {
+			for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
 				Xi = BigInteger::Add(Xi, G.Value->Manifold);
 			}
 			Xi = Xi % Math::CatalanPrime;
@@ -63,9 +63,9 @@ namespace Dysnomia {
 		Phi = Rod->Avail(Xi);
 		Cone->Tau = Cone->Avail(Xi);
 
-		Rod->Polygamma->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
+		Rod->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
 		Alpha = 0;
-		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->Polygamma) {
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
 			Alpha = BigInteger::Multiply(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
 		}
 
