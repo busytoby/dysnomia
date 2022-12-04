@@ -17,7 +17,7 @@ namespace Dysnomia
         public Planet(Affinity D)
         {
             X = new Orbital(D);
-            Q = new Zinc(X);
+//            Q = new Zinc(X);
 //            Tin.M.Add(X.L.M.Mu, X.L.M.Cone);
         }
 
@@ -30,7 +30,7 @@ namespace Dysnomia
                 {
                     Affinity V = new Affinity(R, C);
                     X = new Orbital(V);
-                    Q = new Zinc(X);
+//                    Q = new Zinc(X);
                     Failed = false;
                 }
                 catch (AffinityException E)

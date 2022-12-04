@@ -14,6 +14,7 @@ namespace Prion.Elements
 {
     public class Zinc
     {
+        /*
         public Thread Oscillation;
         public Orbital U;
         public Orbital R; // Planet
@@ -80,5 +81,6 @@ namespace Prion.Elements
             }
             RotationWatch.Stop();
         }
+        */
     }
 }

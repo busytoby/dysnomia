@@ -10,16 +10,12 @@ namespace Prion.Elements
 {
     public class Tin
     {
-        static public Boron M;
         static public BigInteger Mu;
-        static public Dynamic Rho;
-
-        public Orbital K;
+        public Orbital J;
 
         public Tin()
         {
-            if (M != null) return;
-            M = new Boron();
+
         }
 
         /*
