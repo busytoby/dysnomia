@@ -60,3 +60,7 @@
 /vs2022/Prion/bin/Debug/net7.0
 /vs2022/Prion/obj/Debug/net7.0
 /vs2022/Prion/obj
+/vs2022/Quaternion/obj
+/vs2022/Quaternion/x64/Debug
+/vs2022/Quaternion/Quaternion.vcxproj.user
+/vs2022/Quaternion/Quaternion.vcxproj.filters
