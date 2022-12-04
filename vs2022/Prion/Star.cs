@@ -19,6 +19,21 @@ namespace Dysnomia
             if (Eta == null) Eta = new Boron();
         }
 
+        static public Affinity GetAffinityByName(String Name)
+        {
+            return Star.Alpha[Phosphorous.Sigmas[Name]];
+        }
+
+        static public Dynamic GetRodByName(String Name)
+        {
+            return GetAffinityByName(Name).Rod;
+        }
+
+        static public Dynamic GetConeByName(String Name)
+        {
+            return GetAffinityByName(Name).Cone;
+        }
+
         static public Orbital GetOrbitalByName(String Name)
         {
             List<BigInteger> OrbitalSigmas = Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone];
