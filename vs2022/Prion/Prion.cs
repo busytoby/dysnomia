@@ -52,6 +52,8 @@ namespace Dysnomia
 
             Pluto P = new Pluto();
 
+            System.Generate(P.Sigma, "Pluto");
+
             /* stub process
             Tin T = new Tin();
 
