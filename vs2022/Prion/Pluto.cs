@@ -45,5 +45,11 @@ namespace Dysnomia
             // Already Happened, Already Gone
             return Q;
         }
+
+        public Quaternion Mate(Octonion S, Orbital O, Polygamma X)
+        {
+            Quaternion Q = new Quaternion();
+            return Q;
+        }
     }
 }

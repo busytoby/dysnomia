@@ -11,6 +11,7 @@ namespace Prion.Elements
     public class Tin
     {
         static public Dysnomia.Quaternion Sigma;
+        static public Manganese Mu;
 
         public Tin()
         {
@@ -31,10 +32,10 @@ namespace Prion.Elements
 
                 Sigma.Epsilon = Sigma.Rho.Mu;
 
-                if (Magnesium.N != null) 
-                {
-                    int i = 99;
-                }
+                if(Mu == null) Mu = new Manganese();
+
+                if (Magnesium.N.Sigma == null) throw new Exception("No Magnesium");
+                if (Mu.Count != 1) throw new Exception("Magnesium Octonion Not Found");
             }
         }
 

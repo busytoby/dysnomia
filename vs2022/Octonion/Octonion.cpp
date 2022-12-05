@@ -65,6 +65,7 @@ namespace Dysnomia {
 		L->Nu = gcnew Affinity(Phi->Item2->Rod, Gamma->Item1->Cone);
 		L->Phi = gcnew Affinity(Rho->Item2->Rod, Phi->Item1->Cone);
 		L->Rho = gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone);
+		L->Sigma = gcnew Affinity(Sigma->Item2->Rod, X->T->Last->Value.Value->Sigma->Cone);
 
 		X->T->AddLast(KeyValuePair<BigInteger, Quaternion^>(Alpha, L));
 	}
