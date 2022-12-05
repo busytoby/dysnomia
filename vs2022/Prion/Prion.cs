@@ -52,40 +52,13 @@ namespace Dysnomia
 
             Pluto P = new Pluto();
 
-            System.Generate(P.Sigma, "Pluto");
+            Orbital S = System.Generate(P.Sigma, "Pluto");
+
+            Quaternion Nu = P.Mate(System.Nu.K.T.Last.Value.Value, S);
+            
+            // Stub for Octonion
 
             /* stub process
-            Tin T = new Tin();
-
-            if (Uranus == null)
-            {
-                Orbital P = new Orbital();
-//                if (Neptune == null) Neptune = new Planet(P.R.M);
-                if (Uranus == null) Uranus = new Planet(P.L.M);
-//                Miranda = new Planet(Neptune.X.L.M);
-                if (Venus == null) Venus = new Planet(P.Y.M);
-                Neith = new Moon(Venus.X.Y.M.Rod, Venus.X.R.M.Cone);
-            }
-            if (Proteus == null)
-                Titania = new Planet(Uranus.X.R.M);
-//                Proteus = new Moon(Neptune.X.R.M.Rod, Uranus.X.Y.M.Cone);
-            if (Hippocamp == null)
-            {
-//                Hippocamp = new Moon(Neptune.X.Y.M.Rod, Venus.X.Y.M.Cone);
-                Phoebe = new Moon(Hippocamp.X.L.M.Rod, Hippocamp.X.L.M.Cone);
-//                Despina = new Moon(Neptune.X.R.M.Rod, Hippocamp.X.R.M.Cone);
-                Iapetus = new Moon(Despina.X.L.M.Rod, Hippocamp.X.Y.M.Cone);
-            }
-            if (Saturn == null)
-            {
-//                Titan = new Moon(Neptune.X.L.M.Rod, Hippocamp.X.L.M.Cone);
-                Saturn = new Planet(Uranus.X.R.M.Rod, Neptune.X.L.M.Cone);
-                Desdemona = new Moon(Saturn.X.L.M.Rod, Uranus.X.L.M.Cone);
-                Enceladus = new Moon(Saturn.X.L.M.Rod, Neptune.X.R.M.Cone);
-                Earth = new Planet(Saturn.X.Y.M.Rod, Enceladus.X.R.M.Cone);
-//                Mercury = new Planet(Neptune.X.L.M.Rod, Earth.X.L.M.Cone);
-//                Pluto = new Planet(Neptune.X.L.M.Rod, Mercury.X.R.M.Cone);
-            }
             if (Mars == null)
             {
                 Mars = new Planet(Pluto.X.L.M.Rod, Earth.X.R.M.Cone);

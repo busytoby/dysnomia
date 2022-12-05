@@ -37,13 +37,17 @@ namespace Prion.Elements
             Nu = new Parallax(L);
         }
 
-        public void Generate(Affinity L, String Name)
+        public Orbital Generate(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);
             Nu.K.Add(P);
-            // P.Y.M.Cone == Nu.K.T.Last.Value.Value.Rho.Cone
-            Phi.Add(Nu.K.T.First.Value.Key, Nu.K.T.First.Value.Value);
             RecordOrbital(P, Name);
+            return P;
+        }
+
+        public void Pair(Dysnomia.Quaternion S)
+        {
+
         }
 
         public void RecordOrbital(Orbital V, String Name)
