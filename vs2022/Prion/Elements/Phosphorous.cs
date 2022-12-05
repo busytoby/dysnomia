@@ -35,7 +35,7 @@ namespace Prion.Elements
             Nu = new Parallax(L);
         }
 
-        public Orbital Generate(Affinity L, String Name)
+        static public Orbital Generate(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);
             Parallax.Kappa.Add(P);
@@ -48,7 +48,7 @@ namespace Prion.Elements
 
         }
 
-        public void RecordOrbital(Orbital V, String Name)
+        static public void RecordOrbital(Orbital V, String Name)
         {
             Xi.Add(V.Sigma, V);
             Locks.Add(V.Sigma, new Mutex());

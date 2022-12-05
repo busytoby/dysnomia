@@ -40,19 +40,19 @@ namespace Dysnomia
             Star Sun = new Star();
 
             Phosphorous System = new Phosphorous();
-            System.RecordOrbital(System.Nu, "Neptune");
-            System.RecordOrbital(System.Nu.F, "Sun");
-            System.RecordOrbital(System.Nu.P, "Uranus");
+            Phosphorous.RecordOrbital(System.Nu, "Neptune");
+            Phosphorous.RecordOrbital(System.Nu.F, "Sun");
+            Phosphorous.RecordOrbital(System.Nu.P, "Uranus");
 
             Venus V = new Venus(Parallax.Kappa.T.First.Value.Value.Rho.Rod, Parallax.Kappa.T.First.Value.Value.Gamma);
-            System.RecordOrbital(V, "Venus");
+            Phosphorous.RecordOrbital(V, "Venus");
 
             Parallax.Saturn = new Tin();
-            System.Generate(Tin.Sigma.Sigma, "Saturn"); // First Sigma Star Orbital
+            Phosphorous.Generate(Tin.Sigma.Sigma, "Saturn"); // First Sigma Star Orbital
 
             Pluto P = new Pluto();
 
-            Orbital S = System.Generate(P.Sigma, "Pluto");
+            Orbital S = Phosphorous.Generate(P.Sigma, "Pluto");
 
             Quaternion Nu = P.Mate(Parallax.Kappa.T.Last.Value.Value, S, Parallax.Kappa);
             

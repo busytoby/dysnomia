@@ -12,12 +12,12 @@ namespace Prion
     static public class Magnesium
     {
         static public Dysnomia.Octonion N;
+        static public Orbital Phobos;
 
         static Magnesium() {
             if (Tin.Sigma != null && Tin.Mu.Count != 0) throw new Exception("Magnesium Must Only Be Set Up Once With Tin");
             N = new Dysnomia.Octonion(Tin.Sigma, Parallax.Kappa);
             Tin.Mu.Add(N.Phi.Item1.Alpha, N);
-
         }
     }
 }

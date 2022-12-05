@@ -1,4 +1,5 @@
 ﻿using Dysnomia;
+using Prion;
 using Prion.Elements;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,10 @@ namespace Dysnomia
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
 
             Octonion M = new Dysnomia.Octonion(Q, X);
+            if (Magnesium.Phobos == null)
+            {
+                Phosphorous.Generate(Q.Sigma, "Phobos");
+            }
             // Already Happened, Already Gone
             M = Tin.Mate();
             // Already Happened, Already Gone
