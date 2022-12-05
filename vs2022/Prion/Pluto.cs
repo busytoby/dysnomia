@@ -46,7 +46,9 @@ namespace Dysnomia
             // Already Happened, Already Gone
             M = Tin.Mate();
             // Already Happened, Already Gone
-            return Q;
+            return Q; 
         }
+        // Q: What Does You Call The Quaternion Before The Octonion That Performs The First σ* Addition?
+        // A: "Once"
     }
 }
