@@ -41,7 +41,7 @@ namespace Dysnomia
             Q.Rho = new Affinity(O.Y.M.Rod, S.Rho.Cone);
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
 
-            LinkedListNode<KeyValuePair<BigInteger, Quaternion>> L = X.T.First; 
+            Octonion M = new Dysnomia.Octonion(Q, X);
 
             return Q;
         }

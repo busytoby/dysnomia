@@ -68,3 +68,7 @@
 /vs2022/Polygamma/x64/Debug
 /vs2022/Polygamma/Polygamma.vcxproj.user
 /vs2022/Polygamma/Polygamma.vcxproj.filters
+/vs2022/Octonion/obj
+/vs2022/Octonion/x64/Debug
+/vs2022/Octonion/Octonion.vcxproj.user
+/vs2022/Octonion/Octonion.vcxproj.filters

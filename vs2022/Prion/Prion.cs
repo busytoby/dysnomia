@@ -54,7 +54,7 @@ namespace Dysnomia
 
             Orbital S = System.Generate(P.Sigma, "Pluto");
 
-            Quaternion Nu = P.Mate(System.Nu.K.T.Last.Value.Value, S);
+            Quaternion Nu = P.Mate(System.Nu.K.T.Last.Value.Value, S, System.Nu.K);
             
             // Stub for Octonion
 

@@ -11,6 +11,7 @@
     <ProjectReference Include="..\Dynamic\Dynamic.vcxproj" />
     <ProjectReference Include="..\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Math\Math.vcxproj" />
+    <ProjectReference Include="..\Octonion\Octonion.vcxproj" />
     <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
     <ProjectReference Include="..\Polygamma\Polygamma.vcxproj" />
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj" />

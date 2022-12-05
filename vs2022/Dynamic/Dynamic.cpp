@@ -2,8 +2,6 @@
 
 #include "Dynamic.h"
 
-using namespace System;
-
 namespace Dysnomia {
 	Dynamic::Dynamic() {
 		R = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();

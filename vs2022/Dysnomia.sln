@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quaternion", "Quaternion\Qu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygamma", "Polygamma\Polygamma.vcxproj", "{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Octonion", "Octonion\Octonion.vcxproj", "{5CCA240E-63B7-403B-B88B-0F4562C2F87C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,18 @@ Global
 		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x64.Build.0 = Release|x64
 		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x86.ActiveCfg = Release|Win32
 		{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}.Release|x86.Build.0 = Release|Win32
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|Any CPU.Build.0 = Debug|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|x64.ActiveCfg = Debug|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|x64.Build.0 = Debug|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|x86.ActiveCfg = Debug|Win32
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Debug|x86.Build.0 = Debug|Win32
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|Any CPU.ActiveCfg = Release|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|Any CPU.Build.0 = Release|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|x64.ActiveCfg = Release|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|x64.Build.0 = Release|x64
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|x86.ActiveCfg = Release|Win32
+		{5CCA240E-63B7-403B-B88B-0F4562C2F87C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
     <ProjectReference Include="..\Prion\Prion.csproj" />
   </ItemGroup>
 
