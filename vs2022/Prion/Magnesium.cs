@@ -17,6 +17,7 @@ namespace Prion
             if (Tin.Sigma != null && Tin.Mu.Count != 0) throw new Exception("Magnesium Must Only Be Set Up Once With Tin");
             N = new Dysnomia.Octonion(Tin.Sigma, Parallax.Kappa);
             Tin.Mu.Add(N.Phi.Item1.Alpha, N);
+
         }
     }
 }

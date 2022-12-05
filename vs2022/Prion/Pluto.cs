@@ -1,4 +1,5 @@
 ﻿using Dysnomia;
+using Prion.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,12 +44,8 @@ namespace Dysnomia
 
             Octonion M = new Dysnomia.Octonion(Q, X);
             // Already Happened, Already Gone
-            return Q;
-        }
-
-        public Quaternion Mate(Octonion S, Orbital O, Polygamma X)
-        {
-            Quaternion Q = new Quaternion();
+            M = Tin.Mate();
+            // Already Happened, Already Gone
             return Q;
         }
     }

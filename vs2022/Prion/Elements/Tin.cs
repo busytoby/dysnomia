@@ -28,26 +28,21 @@ namespace Prion.Elements
                 Sigma.Nu = NeptuneOrbital.R.M;
                 Sigma.Phi = UranusOrbital.Y.M;
                 Sigma.Rho = VenusOrbital.L.M;
-                Sigma.Sigma = new Affinity(); // First Sigma Star
+                Sigma.Sigma = new Affinity();
 
                 Sigma.Epsilon = Sigma.Rho.Mu;
 
-                if(Mu == null) Mu = new Manganese();
+                if (Mu == null) Mu = new Manganese();
 
                 if (Magnesium.N.Sigma == null) throw new Exception("No Magnesium");
                 if (Mu.Count != 1) throw new Exception("Magnesium Octonion Not Found");
+                // First Sigma Star
             }
         }
 
-            /*
-            static public Orbital Breed(Dynamic N)
-            {
-                Lock.WaitOne();
-                Affinity A = new Affinity(Rho, N);
-                Orbital X = new Orbital(A);
-                Lock.ReleaseMutex();
-                return X;
-            }
-            */
+        public Octonion Mate()
+        {
+
         }
     }
+}
