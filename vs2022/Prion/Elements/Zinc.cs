@@ -24,6 +24,13 @@ namespace Prion.Elements
             Dispose();
         }
 
+        static public Dysnomia.Quaternion Fetch()
+        {
+            Dysnomia.Quaternion Pi = Eta;
+            Dispose();
+            return Pi;
+        }
+
         static private void Dispose()
         {
             while (Bonds > 0)
@@ -41,7 +48,7 @@ namespace Prion.Elements
             Eta.Rho = new Affinity(N.M.Rod, R.M.Cone);
             Eta.Sigma = new Affinity(N.M.Rod, N.M.Cone);
 
-            Eta.Epsilon = Dysnomia.Math.ModPow(R.M.Rod.Rho, I.M.Cone.Manifold, N.M.Rod.Barn);
+            Eta.Epsilon = Dysnomia.Math.ModPow(R.M.Rod.Base, I.M.Cone.Manifold, N.M.Rod.Barn);
 
             Phosphorous.Locks.Add(Eta.Epsilon, new Mutex());
         }

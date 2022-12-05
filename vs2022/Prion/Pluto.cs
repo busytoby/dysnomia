@@ -35,8 +35,8 @@ namespace Dysnomia
             Ion I = new Ion(O.L.M);
             Ion R = new Ion(O.R.M);
             Ion N = new Ion(O.Y.M);
-        
-            Epsilon = Math.ModPow(S.Epsilon, R.M.Cone.Manifold, O.R.M.Rod.Barn);
+
+            Q.Epsilon = Math.ModPow(R.M.Rod.Base, I.M.Cone.Manifold, N.M.Rod.Barn);
 
             Q.Gamma = new Affinity(S.Gamma.Rod, I.M.Cone);
             Q.Nu = new Affinity(S.Rho.Rod, O.R.M.Cone);
@@ -54,6 +54,8 @@ namespace Dysnomia
 
             Octonion J = Tin.Mate();
             Phosphorous.Sigmas.RecordOctonion(J, "Jupiter");
+            Octonion P = new Dysnomia.Octonion(Zinc.Fetch(), X);
+            Phosphorous.Sigmas.RecordOctonion(P, "Mercury");
         }
         // Q: What Does You Call The Quaternion Before The Octonion That Performs The First σ* Addition?
         // A: "Once"
