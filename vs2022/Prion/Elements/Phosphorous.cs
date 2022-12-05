@@ -35,6 +35,19 @@ namespace Prion.Elements
             Nu = new Parallax(L);
         }
 
+        public void Generate(Affinity L, String Name)
+        {
+            Orbital P = new Orbital(L);
+            Nu.K.Add(P);
+            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Gamma.Xi, Nu.K.T.Last.Value.Value.Gamma);
+            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Nu.Xi, Nu.K.T.Last.Value.Value.Nu);
+            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Phi.Xi, Nu.K.T.Last.Value.Value.Phi);
+            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Rho.Xi, Nu.K.T.Last.Value.Value.Rho);
+            // P.Y.M.Cone == Nu.K.T.Last.Value.Value.Rho.Cone
+            RecordOrbital(P, Name);
+            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Sigma.Xi, Nu.K.T.Last.Value.Value.Sigma);
+        }
+
         public void RecordOrbital(Orbital V, String Name)
         {
             Xi.Add(V.Sigma, V);

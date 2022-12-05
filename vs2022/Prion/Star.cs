@@ -34,11 +34,21 @@ namespace Dysnomia
             return GetAffinityByName(Name).Cone;
         }
 
+        static public List<BigInteger> GetSigmasByName(String Name)
+        {
+            return Star.Eta[GetConeByName(Name)];         
+        }
+
         static public Orbital GetOrbitalByName(String Name)
         {
-            List<BigInteger> OrbitalSigmas = Star.Eta[Star.Alpha[Phosphorous.Sigmas["Neptune"]].Cone];
-            if (OrbitalSigmas.Count != 1) throw new Exception("More Than One Orbital Found");
-            return Phosphorous.Xi[OrbitalSigmas[0]];
+            List<Orbital> L = new List<Orbital>();
+            foreach (BigInteger Sigma in GetSigmasByName(Name))
+                if (Phosphorous.Xi.ContainsKey(Sigma))
+                    L.Add(Phosphorous.Xi[Sigma]);
+                else
+                    continue; // Stub for Lithium
+            if (L.Count > 1) throw new Exception("More Than One Orbital Found");
+            return L[0];
         }
     }
 }
