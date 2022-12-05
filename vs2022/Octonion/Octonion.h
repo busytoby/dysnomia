@@ -30,5 +30,6 @@ namespace Dysnomia {
 
 		Octonion(Quaternion^, Polygamma^);
 		void Transit();
+		void IsoSpin(Polygamma^);
 	};
 }

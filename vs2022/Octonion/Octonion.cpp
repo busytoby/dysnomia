@@ -28,6 +28,7 @@ namespace Dysnomia {
 			gcnew Affinity(Q->Sigma->Rod, Octogamma->Value.Value->Sigma->Cone));
 
 		Transit();
+		IsoSpin(X);
 	}
 
 	void Octonion::Transit() {
@@ -54,5 +55,17 @@ namespace Dysnomia {
 				gcnew Affinity(Octogamma->Value.Value->Sigma->Rod, Sigma->Item1->Cone),
 				gcnew Affinity(Sigma->Item2->Rod, Octogamma->Value.Value->Sigma->Cone));
 		}
+	}
+
+	void Octonion::IsoSpin(Polygamma^ X) {
+		BigInteger Alpha = Math::ModPow(X->T->Last->Value.Key, X->T->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
+
+		Quaternion^ L = gcnew Quaternion();
+		L->Gamma = gcnew Affinity(Phi->Item1->Rod, X->T->Last->Value.Value->Sigma->Cone);
+		L->Nu = gcnew Affinity(Phi->Item2->Rod, Gamma->Item1->Cone);
+		L->Phi = gcnew Affinity(Rho->Item2->Rod, Phi->Item1->Cone);
+		L->Rho = gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone);
+
+		X->T->AddLast(KeyValuePair<BigInteger, Quaternion^>(Alpha, L));
 	}
 }
