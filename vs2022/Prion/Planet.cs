@@ -11,7 +11,7 @@ namespace Dysnomia
     public class Planet
     {
         public Orbital X;
-        public Zinc Q;
+        //public Zinc Q;
         public Mutex Lock = new Mutex();
 
         public Planet(Affinity D)

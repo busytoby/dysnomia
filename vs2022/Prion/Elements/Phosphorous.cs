@@ -10,7 +10,7 @@ namespace Prion.Elements
 {
     public class Phosphorous
     {
-        static private Dictionary<BigInteger, Mutex> Locks;
+        static public Dictionary<BigInteger, Mutex> Locks;
       
         static public Neon Xi;
         static public Dictionary<String, BigInteger> Sigmas;

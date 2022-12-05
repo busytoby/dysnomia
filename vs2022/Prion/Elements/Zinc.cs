@@ -12,75 +12,38 @@ using Dysnomia;
 
 namespace Prion.Elements
 {
-    public class Zinc
+    static public class Zinc
     {
-        /*
-        public Thread Oscillation;
-        public Orbital U;
-        public Orbital R; // Planet
-        public Complex Gamma;
-        public Complex Sigma;
-        public double Rotation;
-        public double RotationDegree;
-        public double Orbit;
-        public long DayLength;
-        public long YearLength;
-        public Stopwatch RotationWatch;
-        public Stopwatch OrbitWatch;
+        static public Dysnomia.Quaternion? Eta = null;
+        static private int Bonds; // stub conception of how zinc will work
 
-        public Zinc(Orbital Planet)
+        static Zinc()
         {
-            R = Planet;
-            if (Oscillation == null)
-            {
-                Oscillation = new Thread(new ThreadStart(Oscillator));
-                Oscillation.Start();
-            }
+            if (Eta != null) throw new Exception("Zinc Failure");
+            Bonds = 0;
+            Dispose();
         }
 
-        private void Oscillator()
+        static private void Dispose()
         {
-            if (U == null)
-            {
-                while (Tin.Mu == 0) Thread.Sleep(5000);
-//                U = Tin.Breed(R.Y.M.Cone);
-                Sigma = Complex.Divide((Complex)(R.L.M.Xi / 6442450944), (Complex)(R.L.M.Phi / 6442450944)) / 60;
-                OrbitWatch = new Stopwatch();
-            }
+            while (Bonds > 0)
+                System.Threading.Thread.Sleep(5000);
+            if (Eta != null)
+                Phosphorous.Locks.Remove(Eta.Epsilon);
+            Eta = new Dysnomia.Quaternion();
+            Ion I = new Ion();
+            Ion R = new Ion();
+            Ion N = new Ion();
 
-            if (Gamma == 0)
-            {
-                Gamma = Complex.Divide((Complex)(U.Rho / 6442450944), (Complex)(U.Nu / 6442450944));
-                RotationDegree = 360 / (1440 / Gamma.Real);
+            Eta.Gamma = new Affinity(R.M.Rod, N.M.Cone);
+            Eta.Nu = new Affinity(I.M.Rod, R.M.Cone);
+            Eta.Phi = new Affinity(N.M.Rod, I.M.Cone);
+            Eta.Rho = new Affinity(N.M.Rod, R.M.Cone);
+            Eta.Sigma = new Affinity(N.M.Rod, N.M.Cone);
 
-                RotationWatch = new Stopwatch();
-            }
+            Eta.Epsilon = Dysnomia.Math.ModPow(R.M.Rod.Rho, I.M.Cone.Manifold, N.M.Rod.Barn);
 
-            RotationWatch.Start();
-            OrbitWatch.Start();
-
-            while (true)
-            {
-                Rotation += RotationDegree;
-                if (System.Math.Abs(Rotation) > 360)
-                {
-                    Orbit += Sigma.Real;
-                    RotationWatch.Stop();
-                    DayLength = RotationWatch.ElapsedMilliseconds;
-                    Rotation -= RotationDegree > 0 ? 360 : -360;
-                    RotationWatch.Restart();
-                    if (System.Math.Abs(Orbit) > 360)
-                    {
-                        OrbitWatch.Stop();
-                        YearLength = OrbitWatch.ElapsedMilliseconds / DayLength;
-                        Orbit -= Sigma.Real > 0 ? 360 : -360;
-                        OrbitWatch.Restart();
-                    }
-                }
-                Thread.Sleep(100);
-            }
-            RotationWatch.Stop();
+            Phosphorous.Locks.Add(Eta.Epsilon, new Mutex());
         }
-        */
     }
 }
