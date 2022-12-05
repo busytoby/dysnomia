@@ -42,7 +42,8 @@ namespace Prion.Elements
 
         static public Octonion Mate()
         {
-            return new Dysnomia.Octonion(Sigma, Parallax.Kappa);
+            Dysnomia.Octonion R = new Dysnomia.Octonion(Sigma, Parallax.Kappa);
+            return R;
         }
     }
 }

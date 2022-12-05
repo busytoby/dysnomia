@@ -13,7 +13,7 @@ namespace Prion.Elements
         static public Dictionary<BigInteger, Mutex> Locks;
       
         static public Neon Xi;
-        static public Dictionary<String, BigInteger> Sigmas;
+        static public Nitrogen Sigmas;
 
         static private Venus V;
 
@@ -25,7 +25,7 @@ namespace Prion.Elements
 
             Locks = new Dictionary<BigInteger, Mutex>();
             Xi = new Neon();
-            Sigmas = new Dictionary<String, BigInteger>();
+            Sigmas = new Nitrogen();
 
             Nu = new Parallax(new Orbital());
         }
@@ -39,20 +39,13 @@ namespace Prion.Elements
         {
             Orbital P = new Orbital(L);
             Parallax.Kappa.Add(P);
-            RecordOrbital(P, Name);
+            Sigmas.RecordOrbital(P, Name);
             return P;
         }
 
         public void Pair(Dysnomia.Quaternion S)
         {
 
-        }
-
-        static public void RecordOrbital(Orbital V, String Name)
-        {
-            Xi.Add(V.Sigma, V);
-            Locks.Add(V.Sigma, new Mutex());
-            Sigmas.Add(Name, V.Sigma);
         }
     }
 }

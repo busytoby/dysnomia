@@ -8,7 +8,6 @@ using Prion.Elements;
 
 namespace Dysnomia
 {
-    // Probably Stubbing For Nitrogen + Sodium
     public class Parallax : Orbital
     {
         static public Tin Saturn;
