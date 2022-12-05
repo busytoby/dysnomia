@@ -40,9 +40,9 @@ namespace Prion.Elements
             }
         }
 
-        public Octonion Mate()
+        static public Octonion Mate()
         {
-
+            return new Dysnomia.Octonion(Sigma, Parallax.Kappa);
         }
     }
 }
