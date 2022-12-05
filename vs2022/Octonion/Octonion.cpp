@@ -26,6 +26,8 @@ namespace Dysnomia {
 		Sigma = gcnew Tuple<Affinity^, Affinity^>(
 			gcnew Affinity(Octogamma->Value.Value->Sigma->Rod, Q->Sigma->Cone),
 			gcnew Affinity(Q->Sigma->Rod, Octogamma->Value.Value->Sigma->Cone));
+
+		Transit();
 	}
 
 	void Octonion::Transit() {
