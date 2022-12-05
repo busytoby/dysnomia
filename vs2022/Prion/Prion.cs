@@ -44,17 +44,17 @@ namespace Dysnomia
             System.RecordOrbital(System.Nu.F, "Sun");
             System.RecordOrbital(System.Nu.P, "Uranus");
 
-            Venus V = new Venus(System.Nu.K.T.First.Value.Value.Rho.Rod, System.Nu.K.T.First.Value.Value.Gamma);
+            Venus V = new Venus(Parallax.Kappa.T.First.Value.Value.Rho.Rod, Parallax.Kappa.T.First.Value.Value.Gamma);
             System.RecordOrbital(V, "Venus");
 
             Parallax.Saturn = new Tin();
-            System.Generate(Tin.M.Sigma, "Saturn");
+            System.Generate(Tin.Sigma.Sigma, "Saturn"); // First Sigma Star Orbital
 
             Pluto P = new Pluto();
 
             Orbital S = System.Generate(P.Sigma, "Pluto");
 
-            Quaternion Nu = P.Mate(System.Nu.K.T.Last.Value.Value, S, System.Nu.K);
+            Quaternion Nu = P.Mate(Parallax.Kappa.T.Last.Value.Value, S, Parallax.Kappa);
             
             // Stub for Octonion
 

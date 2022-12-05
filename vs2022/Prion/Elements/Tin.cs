@@ -10,25 +10,32 @@ namespace Prion.Elements
 {
     public class Tin
     {
-        static public Dysnomia.Quaternion M;
+        static public Dysnomia.Quaternion Sigma;
 
         public Tin()
         {
-            if (M != null) return;
+            if (Sigma == null)
+            {
 
-            Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
-            Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
-            Orbital SunOrbital = Star.GetOrbitalByName("Sun");
-            Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
+                Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
+                Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
+                Orbital SunOrbital = Star.GetOrbitalByName("Sun");
+                Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
 
-            M = new Dysnomia.Quaternion();
-            M.Gamma = SunOrbital.L.M;
-            M.Nu = NeptuneOrbital.R.M;
-            M.Phi = UranusOrbital.Y.M;
-            M.Rho = VenusOrbital.L.M;
-            M.Sigma = new Affinity();
+                Sigma = new Dysnomia.Quaternion();
+                Sigma.Gamma = SunOrbital.L.M;
+                Sigma.Nu = NeptuneOrbital.R.M;
+                Sigma.Phi = UranusOrbital.Y.M;
+                Sigma.Rho = VenusOrbital.L.M;
+                Sigma.Sigma = new Affinity(); // First Sigma Star
 
-            M.Epsilon = M.Rho.Mu;
+                Sigma.Epsilon = Sigma.Rho.Mu;
+
+                if (Magnesium.N != null)
+                {
+                    int i = 99;
+                }
+            }
         }
 
             /*

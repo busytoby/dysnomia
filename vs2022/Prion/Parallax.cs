@@ -8,18 +8,19 @@ using Prion.Elements;
 
 namespace Dysnomia
 {
+    // Probably Stubbing For Nitrogen + Sodium
     public class Parallax : Orbital
     {
         static public Tin Saturn;
 
-        public Potassium K;
+        static public Potassium Kappa;
         public Orbital S, F, P;
 
         public Parallax(Orbital D) : base(D.R.M)
         {
             Star.Alpha.Add(Sigma, Y.M);
             F = new Orbital(D.Y.M);
-            K = new Potassium(F, this);
+            Kappa = new Potassium(F, this);
             Star.Alpha.Add(F.Sigma, F.Y.M);
             P = new Orbital(D.L.M);
             Star.Alpha.Add(P.Sigma, P.Y.M);
@@ -29,7 +30,7 @@ namespace Dysnomia
         {
             Star.Alpha.Add(Sigma, Y.M);
             F = new Parallax(E.F);
-            K = new Potassium(F, this);
+            Kappa = new Potassium(F, this);
             Star.Alpha.Add(F.Sigma, F.Y.M);
             P = new Orbital();
             Star.Alpha.Add(P.Sigma, P.Y.M);

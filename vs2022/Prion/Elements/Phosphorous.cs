@@ -13,7 +13,6 @@ namespace Prion.Elements
         static private Dictionary<BigInteger, Mutex> Locks;
       
         static public Neon Xi;
-        static public Lithium Phi;
         static public Dictionary<String, BigInteger> Sigmas;
 
         static private Venus V;
@@ -26,7 +25,6 @@ namespace Prion.Elements
 
             Locks = new Dictionary<BigInteger, Mutex>();
             Xi = new Neon();
-            Phi = new Lithium();
             Sigmas = new Dictionary<String, BigInteger>();
 
             Nu = new Parallax(new Orbital());
@@ -40,7 +38,7 @@ namespace Prion.Elements
         public Orbital Generate(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);
-            Nu.K.Add(P);
+            Parallax.Kappa.Add(P);
             RecordOrbital(P, Name);
             return P;
         }
