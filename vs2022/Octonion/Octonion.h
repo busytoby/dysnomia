@@ -29,5 +29,6 @@ namespace Dysnomia {
 		Tuple<Affinity^, Affinity^>^ Sigma;
 
 		Octonion(Quaternion^, Polygamma^);
+		void Transit();
 	};
 }

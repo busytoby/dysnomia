@@ -42,6 +42,7 @@ namespace Dysnomia
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
 
             Octonion M = new Dysnomia.Octonion(Q, X);
+            M.Transit();
 
             return Q;
         }
