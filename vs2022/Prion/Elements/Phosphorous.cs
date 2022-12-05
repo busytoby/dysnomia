@@ -13,6 +13,7 @@ namespace Prion.Elements
         static private Dictionary<BigInteger, Mutex> Locks;
       
         static public Neon Xi;
+        static public Lithium Phi;
         static public Dictionary<String, BigInteger> Sigmas;
 
         static private Venus V;
@@ -25,6 +26,7 @@ namespace Prion.Elements
 
             Locks = new Dictionary<BigInteger, Mutex>();
             Xi = new Neon();
+            Phi = new Lithium();
             Sigmas = new Dictionary<String, BigInteger>();
 
             Nu = new Parallax(new Orbital());
@@ -39,13 +41,9 @@ namespace Prion.Elements
         {
             Orbital P = new Orbital(L);
             Nu.K.Add(P);
-            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Gamma.Xi, Nu.K.T.Last.Value.Value.Gamma);
-            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Nu.Xi, Nu.K.T.Last.Value.Value.Nu);
-            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Phi.Xi, Nu.K.T.Last.Value.Value.Phi);
-            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Rho.Xi, Nu.K.T.Last.Value.Value.Rho);
             // P.Y.M.Cone == Nu.K.T.Last.Value.Value.Rho.Cone
+            Phi.Add(Nu.K.T.First.Value.Key, Nu.K.T.First.Value.Value);
             RecordOrbital(P, Name);
-            Star.Alpha.Add(Nu.K.T.Last.Value.Value.Sigma.Xi, Nu.K.T.Last.Value.Value.Sigma);
         }
 
         public void RecordOrbital(Orbital V, String Name)

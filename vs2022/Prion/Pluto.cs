@@ -17,7 +17,9 @@ namespace Dysnomia
             Orbital SunOrbital = Star.GetOrbitalByName("Sun");
             Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
             Orbital SaturnOrbital = Star.GetOrbitalByName("Saturn");
+            
 
+            //stubbed saturn not pluto
             Gamma = SunOrbital.L.M;
             Nu = NeptuneOrbital.R.M;
             Phi = UranusOrbital.Y.M;

@@ -5,14 +5,15 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using Dysnomia;
 
 namespace Prion.Elements
 {
     public class Potassium : Polygamma
     {
         public Potassium(Orbital S, Orbital N) : base(S, N) {
-            Star.Alpha.Add(T.First.Value.Value.Gamma.Xi, T.First.Value.Value.Gamma);
-            Star.Alpha.Add(T.First.Value.Value.Rho.Xi, T.First.Value.Value.Rho);
+            Phosphorous.Phi.Add(T.First.Value.Key, T.First.Value.Value);
         }
     }
 }
