@@ -31,7 +31,7 @@ namespace Prion.Elements
 
                 Sigma.Epsilon = Sigma.Rho.Mu;
 
-                if (Magnesium.N != null)
+                if (Magnesium.N != null) 
                 {
                     int i = 99;
                 }
