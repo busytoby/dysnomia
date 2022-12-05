@@ -16,19 +16,7 @@ namespace Prion.Elements
         {
             if (base.ContainsKey(Sigma) && base[Sigma] == U) return;
             base.Add(Sigma, U);
-            /*
-            Star.Alpha.Add(U.Gamma.Xi, U.Gamma);
-            Star.Alpha.Add(U.Nu.Xi, U.Nu);
-            Star.Alpha.Add(U.Phi.Xi, U.Phi);
-            Star.Alpha.Add(U.Rho.Xi, U.Rho);
-            Star.Alpha.Add(U.Sigma.Xi, U.Sigma);
-
-            Star.Eta.Add(U.Gamma.Cone, Sigma);
-            Star.Eta.Add(U.Nu.Cone, Sigma);
-            Star.Eta.Add(U.Phi.Cone, Sigma);
-            Star.Eta.Add(U.Rho.Cone, Sigma);
-            Star.Eta.Add(U.Sigma.Cone, Sigma);
-            */
+            Star.Eta.Add(U, Sigma);
         }
     }
 }

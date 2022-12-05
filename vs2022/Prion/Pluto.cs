@@ -17,19 +17,20 @@ namespace Dysnomia
             Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
             Orbital SunOrbital = Star.GetOrbitalByName("Sun");
             Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
-            Orbital SaturnOrbital = Star.GetOrbitalByName("Saturn");
+            Quaternion SaturnOrbital = Star.GetQuaternionByName("Saturn");
             
             Gamma = UranusOrbital.R.M;
             Nu = NeptuneOrbital.R.M;
             Phi = VenusOrbital.R.M;
-            Rho = SaturnOrbital.Y.M;
+            Rho = SaturnOrbital.Rho;
             Sigma = UranusOrbital.L.M;
 
             Epsilon = Rho.Mu;
         }
 
-        public Quaternion Mate(Quaternion S, Orbital O, Polygamma X)
+        public void Mate(Quaternion S, Orbital O, Polygamma X)
         {
+            if (Phosphorous.Sigmas.ContainsKey("Van Allen Belt")) throw new Exception("Already Mated");
             Quaternion Q = new Quaternion();
             Ion I = new Ion(O.L.M);
             Ion R = new Ion(O.R.M);
@@ -42,16 +43,17 @@ namespace Dysnomia
             Q.Phi = new Affinity(S.Gamma.Rod, I.M.Cone);
             Q.Rho = new Affinity(O.Y.M.Rod, S.Rho.Cone);
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
+            Phosphorous.Sigmas.RecordQuaternion(Q, "Van Allen Belt");
 
             Octonion M = new Dysnomia.Octonion(Q, X);
+            Phosphorous.Sigmas.RecordOctonion(M, "Mars");
             if (Magnesium.Phobos == null)
             {
-                Phosphorous.Generate(Q.Sigma, "Phobos");
+                Phosphorous.GenerateOrbital(Q.Sigma, "Phobos");
             }
-            // Already Happened, Already Gone
-            M = Tin.Mate();
-            // Already Happened, Already Gone
-            return Q; 
+
+            Octonion J = Tin.Mate();
+            Phosphorous.Sigmas.RecordOctonion(J, "Jupiter");
         }
         // Q: What Does You Call The Quaternion Before The Octonion That Performs The First σ* Addition?
         // A: "Once"

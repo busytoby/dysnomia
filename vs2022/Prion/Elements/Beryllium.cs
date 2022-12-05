@@ -11,6 +11,11 @@ namespace Prion.Elements
     {
         static public Lithium Phi;
 
+        static Beryllium()
+        {
+            Phi = new Lithium();
+        }
+
         public void Add(BigInteger Sigma, Dysnomia.Quaternion U)
         {
             if (Phi == null) Phi = new Lithium();

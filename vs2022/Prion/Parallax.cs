@@ -36,5 +36,9 @@ namespace Dysnomia
         }
 
         public Parallax(Affinity D) : base(D) { }
+
+        public Parallax(Quaternion D) { 
+            // ignore for now
+        }
     }
 }

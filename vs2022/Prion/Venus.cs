@@ -15,14 +15,16 @@ namespace Dysnomia
         public Venus(Dynamic Y, Affinity U) : base(Y, U)
         {
             if(Rho == null) Rho = new Boron();
-            foreach(KeyValuePair<Dynamic, List<BigInteger>> B in Star.Eta) {
+            foreach(KeyValuePair<object, List<BigInteger>> B in Star.Eta) {
                 foreach (BigInteger K in B.Value)
                 {
+                    /* ignore for now
                     Phosphorous P = Oxygen.Learn(K);
                     Rho.Add(P.Nu.R.M.Rod, P.Nu.Eta);
                     Rho.Add(P.Nu.N, P.Nu.Sigma);
                     Rho.Add(P.Nu.L.M.Rod, P.Nu.Rho);
                     Rho.Add(P.Nu.Y.M.Rod, P.Nu.Nu);
+                    */
                 }
             }
         }

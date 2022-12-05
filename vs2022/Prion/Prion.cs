@@ -48,37 +48,15 @@ namespace Dysnomia
             Phosphorous.Sigmas.RecordOrbital(V, "Venus");
 
             Parallax.Saturn = new Tin();
-            Phosphorous.Generate(Tin.Sigma.Sigma, "Saturn"); // First Sigma Star Orbital
+            Phosphorous.GenerateOrbital(Tin.Sigma.Sigma, "Saturn Sigma"); // First Sigma Star Orbital
+            Phosphorous.Sigmas.RecordQuaternion(Tin.Sigma, "Saturn");
 
             Pluto P = new Pluto();
 
-            Orbital S = Phosphorous.Generate(P.Sigma, "Pluto");
+            Orbital S = Phosphorous.GenerateOrbital(P.Sigma, "Pluto Sigma");
 
-            Quaternion Nu = P.Mate(Parallax.Kappa.T.Last.Value.Value, S, Parallax.Kappa);
+            P.Mate(Parallax.Kappa.T.Last.Value.Value, S, Parallax.Kappa);
             
-            // Stub for Octonion
-
-            /* stub process
-            if (Mars == null)
-            {
-                Mars = new Planet(Pluto.X.L.M.Rod, Earth.X.R.M.Cone);
-            }
-
-            Tin J = new Tin(Mars.Q);
-            if (Jupiter == null)
-            {
-                Jupiter = new Planet(J.K.L.M);
-                if (J.K.M.Count != 5) throw new Exception("Jupiter Production With Not 5 Initial Moons !!?");
-                if (Tin.M.Count != 7) throw new Exception("Universe Abort");
-                // Presuming J.K.Polygamma Count Is Always 5, The First 5 Moons Of Jupiter Should Be Produced
-            }
-            Tin L = new Tin(Earth.Q);
-
-            Polygamma S = new Polygamma(Mars.X, Earth.X);
-            S.Add(Saturn.X);
-            Orbital X = new Orbital();
-            S.Add(X);
-            */
         }
 
         public Prion(Prion CopyPrion)

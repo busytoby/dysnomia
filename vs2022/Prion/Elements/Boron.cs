@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Boron : Dictionary<Dynamic, List<BigInteger>> {
-        public void Add(Dynamic D, BigInteger B)
+    public class Boron : Dictionary<object, List<BigInteger>> {
+        public void Add(object D, BigInteger B)
         {
             if (base.ContainsKey(D) && base[D].Contains(B)) return;
             if (!base.ContainsKey(D))

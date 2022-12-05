@@ -35,7 +35,12 @@ namespace Prion.Elements
             Nu = new Parallax(L);
         }
 
-        static public Orbital Generate(Affinity L, String Name)
+        public Phosphorous(Dysnomia.Quaternion L)
+        {
+            Nu = new Parallax(L);
+        }
+
+        static public Orbital GenerateOrbital(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);
             Parallax.Kappa.Add(P);

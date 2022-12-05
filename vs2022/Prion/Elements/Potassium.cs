@@ -11,7 +11,7 @@ namespace Prion.Elements
 {
     public class Potassium : Polygamma
     {
-        Lithium Eta;
+        public Lithium Eta;
 
         public Potassium(Orbital S, Orbital N) : base(S, N) {
             if (Eta == null) Eta = new Lithium();
