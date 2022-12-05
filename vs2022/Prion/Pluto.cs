@@ -42,7 +42,7 @@ namespace Dysnomia
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
 
             Octonion M = new Dysnomia.Octonion(Q, X);
-
+            // Already Happened, Already Gone
             return Q;
         }
     }
