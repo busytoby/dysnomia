@@ -26,7 +26,7 @@ namespace Dysnomia
             Epsilon = Rho.Mu;
         }
 
-        public Quaternion Mate(Quaternion S, Orbital O)
+        public Quaternion Mate(Quaternion S, Orbital O, Polygamma X)
         {
             Quaternion Q = new Quaternion();
             Ion I = new Ion(O.L.M);
@@ -40,6 +40,8 @@ namespace Dysnomia
             Q.Phi = new Affinity(S.Gamma.Rod, I.M.Cone);
             Q.Rho = new Affinity(O.Y.M.Rod, S.Rho.Cone);
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
+
+            LinkedListNode<KeyValuePair<BigInteger, Quaternion>> L = X.T.First; 
 
             return Q;
         }
