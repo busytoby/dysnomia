@@ -29,7 +29,7 @@ namespace Dysnomia
             Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
             Phosphorous.Sigmas.Add("Archaea_0", Archaea.Epsilon);
             E.Add(Archaea.Epsilon, Archaea);
-            
+            E.Pulse();
         }
     }
 }
