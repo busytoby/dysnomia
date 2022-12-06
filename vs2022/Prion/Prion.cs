@@ -27,8 +27,8 @@ namespace Dysnomia
 
             Earth E = new Earth();
             Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
-            Phosphorous.Sigmas.Add("Archaea_0", Archaea.L.Epsilon);
-            E.Add(Archaea.L.Epsilon, Archaea);
+            Phosphorous.Sigmas.Add("Archaea_0", Archaea.Epsilon);
+            E.Add(Archaea.Epsilon, Archaea);
             
         }
     }
