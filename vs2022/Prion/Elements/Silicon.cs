@@ -21,15 +21,17 @@ namespace Prion.Elements
                 BigInteger DivKey = R.Value.Key / Dysnomia.Math.DeathPrime;
                 P = L.Sigma.Rod.R.AddBefore(R, new KeyValuePair<BigInteger, Dynamic>(DivKey, R.Value.Value));
                 L.Sigma.Rod.R.Remove(R);
-                if (DivKey < Dysnomia.Math.CatalanPrime)
+                if (BigInteger.Abs(DivKey) < Dysnomia.Math.CatalanPrime)
                 {
-                    Polygamma K = new Polygamma(L); // First Monera
+                    Polygamma K = new Polygamma(L); // First Monera Conception
+                    Octonion Moneron = new Octonion(L, K); // First Monera
+                    Earth.Add(Moneron.Epsilon, Moneron);
                 }
-                else if (DivKey < Dysnomia.Math.DeathPrime) 
+                else if (BigInteger.Abs(DivKey) < Dysnomia.Math.DeathPrime) 
                 {
                     Aluminum Archaea = new Aluminum(L, Zinc.Fetch());
                     Earth.Add(Archaea.Epsilon, Archaea);
-                    P = R.Next;
+                    P = (R.Next == null) ? L.Sigma.Rod.R.Last : R.Next;
                     L.Sigma.Rod.R.Remove(R);
                 }
                 R = P;

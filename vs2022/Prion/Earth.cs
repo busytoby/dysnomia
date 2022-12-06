@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Prion
 {
-    public class Earth : Dictionary<BigInteger, Aluminum>
+    public class Earth : Dictionary<BigInteger, object>
     {
         public Earth() : base()
         {
@@ -19,9 +19,11 @@ namespace Prion
         public void Pulse()
         {
             // Peptidoglycans
-            foreach(KeyValuePair<BigInteger, Aluminum> E in this)
+            List<BigInteger> Keys = new List<BigInteger>(this.Keys);
+            foreach (BigInteger K in Keys)
             {
-                Silicon.Push(E.Value.R);
+                if (this[K].GetType().Name == "Aluminum")
+                    Silicon.Push(((Aluminum)this[K]).R);
             }
         }
     }
