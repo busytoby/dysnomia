@@ -25,16 +25,5 @@ namespace Dysnomia
             P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa);
             
         }
-
-        public Prion(Prion CopyPrion)
-        {
-        }
-
-        public static Prion Trust(String Psi)
-        {
-            Prion P = new Prion();
-            //Prion P = new React();
-            return P;
-        }
     }
 }
