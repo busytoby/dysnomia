@@ -68,15 +68,22 @@ namespace Dysnomia {
         Ion^ R;
         Ion^ N;
 
-        if (S->Phi->Cone->Element < S->Nu->Cone->Element) {
-            I = gcnew Ion(S->Phi);
-            R = gcnew Ion(S->Nu);
-            N = gcnew Ion(S->Gamma);
+        if (S->Gamma->Cone->Nu < S->Gamma->Rod->Nu) { // Animal Masculine Or Feminine
+            if (S->Phi->Cone->Element < S->Nu->Cone->Element) {
+                I = gcnew Ion(S->Phi);
+                R = gcnew Ion(S->Nu);
+                N = gcnew Ion(S->Gamma);
+            }
+            else {
+                I = gcnew Ion(S->Nu);
+                R = gcnew Ion(S->Phi);
+                N = gcnew Ion(S->Sigma);
+            }
         }
         else {
             I = gcnew Ion(S->Nu);
             R = gcnew Ion(S->Phi);
-            N = gcnew Ion(S->Sigma);
+            N = gcnew Ion(S->Rho);
         }
 
         Quaternion^ V = gcnew Quaternion();
