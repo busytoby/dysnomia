@@ -37,7 +37,7 @@ namespace Dysnomia {
         V->Nu = gcnew Affinity(Q->Nu->Rod, R->M->Cone);
         V->Phi = gcnew Affinity(Q->Phi->Rod, N->M->Cone);
         V->Rho = Q->Rho;
-        V->Sigma = gcnew Affinity(R->M->Rod, Q->Sigma->Cone);
+        V->Sigma = gcnew Affinity(R->M->Rod, R->M->Cone);
 
         V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, Q->Nu->Cone->Barn, N->M->Rod->Barn);
 
