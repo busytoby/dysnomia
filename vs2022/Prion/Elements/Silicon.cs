@@ -13,26 +13,27 @@ namespace Prion.Elements
     {
         static public Earth Earth;
 
-        static public void Push(Dysnomia.Quaternion L)
+        static public void Baux(Dysnomia.Quaternion L)
         {
             LinkedListNode<KeyValuePair<BigInteger, Dynamic>> P;
-            for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = L.Sigma.Rod.R.Last; R != null; R = R.Previous)
+            for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = L.Sigma.Rod.R.First; R != null; R = R.Next)
             {
-                BigInteger DivKey = R.Value.Key / Dysnomia.Math.DeathPrime;
+                BigInteger DivKey = R.Value.Key / Dysnomia.Math.CatalanPrime;
                 P = L.Sigma.Rod.R.AddBefore(R, new KeyValuePair<BigInteger, Dynamic>(DivKey, R.Value.Value));
                 L.Sigma.Rod.R.Remove(R);
-                if (BigInteger.Abs(DivKey) < Dysnomia.Math.CatalanPrime)
-                {
-                    Polygamma K = new Polygamma(L); // First Monera Conception
-                    Octonion Moneron = new Octonion(L, K); // First Monera
-                    Earth.Add(Moneron.Epsilon, Moneron);
-                }
-                else if (BigInteger.Abs(DivKey) < Dysnomia.Math.DeathPrime) 
+                if (BigInteger.Abs(DivKey) < Dysnomia.Math.DeathPrime)
                 {
                     Aluminum Archaea = new Aluminum(L, Zinc.Fetch());
                     Earth.Add(Archaea.Epsilon, Archaea);
-                    P = (R.Next == null) ? L.Sigma.Rod.R.Last : R.Next;
-                    L.Sigma.Rod.R.Remove(R);
+                    R = P.Next;
+                    L.Sigma.Rod.R.Remove(P);
+                    P = R;
+                }
+                else if (BigInteger.Abs(DivKey) < Dysnomia.Math.CatalanPrime)
+                {
+                    Polygamma K = new Polygamma(L); // First Monera Conception
+                    Octonion Moneron = new Octonion(L, K); // First Monera
+                    return;
                 }
                 R = P;
             }
