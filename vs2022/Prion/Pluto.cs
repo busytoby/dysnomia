@@ -1,5 +1,4 @@
 ﻿using Dysnomia;
-using Prion;
 using Prion.Elements;
 using System;
 using System.Collections.Generic;
@@ -25,7 +24,10 @@ namespace Dysnomia
             Rho = SaturnOrbital.Rho;
             Sigma = UranusOrbital.L.M;
 
-            Epsilon = Rho.Mu;
+            Epsilon = Phi.Mu;
+
+            Phosphorous.GenerateOrbital(Sigma, "Pluto Sigma");
+            Phosphorous.Sigmas.RecordQuaternion(this, "Pluto");
         }
 
         public void Mate(Quaternion S, Orbital O, Polygamma X)

@@ -39,13 +39,20 @@ namespace Dysnomia
             return Star.Eta[GetConeByName(Name)];         
         }
 
-        static public Dysnomia.Quaternion GetQuaternionByName(String Name)
+        static public Dysnomia.Quaternion GetQuaternionBySigma(BigInteger Sigma)
         {
             List<Quaternion> L = new List<Quaternion>();
-            if (Beryllium.Phi.ContainsKey(Phosphorous.Sigmas[Name]))
-                L.Add(Beryllium.Phi[Phosphorous.Sigmas[Name]]);
+            if (Beryllium.Phi.ContainsKey(Sigma))
+                L.Add(Beryllium.Phi[Sigma]);
+            if (Parallax.Kappa.Eta.ContainsKey(Sigma))
+                L.Add(Parallax.Kappa.Eta[Sigma]);
             if (L.Count > 1) throw new Exception("More Than One Orbital Found");
             return L[0];
+        }
+        static public Dysnomia.Quaternion GetQuaternionByName(String Name)
+        {
+            BigInteger Sigma = Phosphorous.Sigmas[Name];
+            return GetQuaternionBySigma(Sigma);
         }
 
         static public Orbital GetOrbitalByName(String Name)

@@ -35,6 +35,11 @@ namespace Prion.Elements
             Nu = new Parallax(L);
         }
 
+        public Phosphorous(Orbital L)
+        {
+            Nu = new Parallax(L);
+        }
+
         public Phosphorous(Dysnomia.Quaternion L)
         {
             Nu = new Parallax(L);

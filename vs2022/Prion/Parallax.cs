@@ -14,6 +14,7 @@ namespace Dysnomia
 
         static public Potassium Kappa;
         public Orbital S, F, P;
+        public object B;
 
         public Parallax(Orbital D) : base(D.R.M)
         {
@@ -37,8 +38,10 @@ namespace Dysnomia
 
         public Parallax(Affinity D) : base(D) { }
 
-        public Parallax(Quaternion D) { 
-            // ignore for now
+        public Parallax(Quaternion D) {
+            S = new Orbital(D.Rho);
+            F = new Orbital(D.Phi);
+            P = new Orbital(D.Gamma);
         }
     }
 }
