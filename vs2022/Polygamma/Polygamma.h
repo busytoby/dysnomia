@@ -14,6 +14,8 @@ namespace Dysnomia {
 		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ T;
 
 		Polygamma(Orbital^, Orbital^);
+		Polygamma(Quaternion^);
 		void Add(Orbital^);
+		void Add(Quaternion^);
 	};
 }

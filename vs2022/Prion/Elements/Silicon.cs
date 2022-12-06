@@ -18,6 +18,14 @@ namespace Prion.Elements
                 BigInteger DivKey = R.Value.Key / Dysnomia.Math.DeathPrime;
                 P = L.Sigma.Rod.R.AddBefore(R, new KeyValuePair<BigInteger, Dynamic>(DivKey, R.Value.Value));
                 L.Sigma.Rod.R.Remove(R);
+                if (DivKey < Dysnomia.Math.CatalanPrime)
+                {
+                    // Make Water On Mars
+                } else
+                {
+                    //Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
+                    //Earth.Add(Archaea.Epsilon, Archaea);
+                }
                 R = P;
             }
         }
