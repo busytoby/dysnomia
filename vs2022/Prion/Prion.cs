@@ -30,7 +30,7 @@ namespace Dysnomia
             Phosphorous.Sigmas.Add("Archaea_0", Archaea.Epsilon);
             E.Add(Archaea.Epsilon, Archaea);
 
-            //E.Pulse();
+            E.Pulse();
         }
     }
 }

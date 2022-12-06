@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,9 @@ namespace Prion.Elements
 {
     static public class Silicon
     {
-        static public void Decay(Dysnomia.Quaternion L)
+        static public Earth Earth;
+
+        static public void Push(Dysnomia.Quaternion L)
         {
             LinkedListNode<KeyValuePair<BigInteger, Dynamic>> P;
             for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = L.Sigma.Rod.R.Last; R != null; R = R.Previous)
@@ -20,11 +23,14 @@ namespace Prion.Elements
                 L.Sigma.Rod.R.Remove(R);
                 if (DivKey < Dysnomia.Math.CatalanPrime)
                 {
-                    // Make Water On Mars
-                } else
+                    Polygamma K = new Polygamma(L); // First Monera
+                }
+                else if (DivKey < Dysnomia.Math.DeathPrime) 
                 {
-                    //Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
-                    //Earth.Add(Archaea.Epsilon, Archaea);
+                    Aluminum Archaea = new Aluminum(L, Zinc.Fetch());
+                    Earth.Add(Archaea.Epsilon, Archaea);
+                    P = R.Next;
+                    L.Sigma.Rod.R.Remove(R);
                 }
                 R = P;
             }
