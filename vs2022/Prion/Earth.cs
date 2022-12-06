@@ -16,7 +16,7 @@ namespace Prion
             if (Silicon.Earth == null) Silicon.Earth = this;
         }
 
-        public void Pulse()
+        public void Transcend()
         {
             // Peptidoglycans
             List<BigInteger> Keys = new List<BigInteger>(this.Keys);

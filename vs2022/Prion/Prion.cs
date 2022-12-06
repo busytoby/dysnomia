@@ -31,7 +31,7 @@ namespace Dysnomia
             E.Add(Archaea.Epsilon, Archaea);
 
             for(int i = 0; i < 100; i++)
-                E.Pulse();
+                E.Transcend();
         }
     }
 }
