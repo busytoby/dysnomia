@@ -11,10 +11,10 @@ namespace Prion.Elements
         public Dysnomia.Quaternion L, R, N;
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
-    {
+        {
             R = X;
             N = Y;
-            L = new Dysnomia.Quaternion();
+            L = Zinc.Fetch();
         }
     }
 }

@@ -26,9 +26,9 @@ namespace Prion.Elements
 
         public void RecordOctonion(Dysnomia.Octonion V, String Name)
         {
-            if(Tin.Mu.ContainsKey(V.Phi.Item1.Phi)) Tin.Mu.Add(V.Phi.Item1.Phi, V);
-            Phosphorous.Locks.Add(V.Phi.Item1.Phi, new Mutex());
-            base.Add(Name, V.Phi.Item1.Phi);
+            if(Tin.Mu.ContainsKey(V.Epsilon)) Tin.Mu.Add(V.Epsilon, V);
+            Phosphorous.Locks.Add(V.Epsilon, new Mutex());
+            base.Add(Name, V.Epsilon);
         }
     }
 }

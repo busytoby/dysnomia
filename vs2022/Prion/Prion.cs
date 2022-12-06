@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Prion;
 using Prion.Elements;
 
 namespace Dysnomia
@@ -23,6 +24,11 @@ namespace Dysnomia
             Pluto P = new Pluto();
 
             P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa);
+
+            Earth E = new Earth();
+            Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
+            Phosphorous.Sigmas.Add("Archaea_0", Archaea.L.Epsilon);
+            E.Add(Archaea.L.Epsilon, Archaea);
             
         }
     }

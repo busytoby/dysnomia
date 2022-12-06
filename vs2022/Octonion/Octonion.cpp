@@ -58,8 +58,6 @@ namespace Dysnomia {
 	}
 
 	void Octonion::IsoSpin(Polygamma^ X) {
-		BigInteger Alpha = Math::ModPow(X->T->Last->Value.Key, X->T->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
-
 		Quaternion^ L = gcnew Quaternion();
 		L->Gamma = gcnew Affinity(Phi->Item1->Rod, X->T->Last->Value.Value->Sigma->Cone);
 		L->Nu = gcnew Affinity(Phi->Item2->Rod, Gamma->Item1->Cone);
@@ -67,6 +65,8 @@ namespace Dysnomia {
 		L->Rho = gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone);
 		L->Sigma = gcnew Affinity(Sigma->Item2->Rod, X->T->Last->Value.Value->Sigma->Cone);
 
-		X->T->AddLast(KeyValuePair<BigInteger, Quaternion^>(Alpha, L));
+		L->Epsilon = Math::ModPow(X->T->Last->Value.Key, X->T->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
+
+		X->T->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
 	}
 }
