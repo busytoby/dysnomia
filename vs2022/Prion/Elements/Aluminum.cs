@@ -14,8 +14,8 @@ namespace Prion.Elements
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
-            R = X;
-            N = Y;
+            R = X; 
+            N = Y; 
             L = Zinc.Fetch();
 
             Epsilon = L.Epsilon;

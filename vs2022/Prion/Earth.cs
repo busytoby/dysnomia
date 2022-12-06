@@ -13,9 +13,10 @@ namespace Prion
     {
         public void Pulse()
         {
+            // Peptidoglycans
             foreach(KeyValuePair<BigInteger, Aluminum> E in this)
             {
-                Silicon.Decay(E.Value.R);
+                // Silicon.Decay(E.Value.R);
             }
         }
     }
