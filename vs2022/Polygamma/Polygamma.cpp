@@ -34,7 +34,7 @@ namespace Dysnomia {
 
         Quaternion^ V = gcnew Quaternion();
         V->Gamma = gcnew Affinity(I->M->Rod, I->M->Cone);
-        V->Nu = gcnew Affinity(Q->Nu->Rod, R->M->Cone);
+        V->Nu = gcnew Affinity(Q->Nu->Rod, I->M->Cone);
         V->Phi = gcnew Affinity(Q->Phi->Rod, N->M->Cone);
         V->Rho = Q->Rho;
         V->Sigma = gcnew Affinity(R->M->Rod, R->M->Cone);
