@@ -64,9 +64,20 @@ namespace Dysnomia {
     }
 
     void Polygamma::Add(Quaternion^ S) {
-        Ion^ I = gcnew Ion(S->Phi);
-        Ion^ R = gcnew Ion(S->Nu);
-        Ion^ N = gcnew Ion(S->Sigma);
+        Ion^ I;
+        Ion^ R;
+        Ion^ N;
+
+        if (S->Phi->Cone->Element < S->Nu->Cone->Element) {
+            I = gcnew Ion(S->Phi);
+            R = gcnew Ion(S->Nu);
+            N = gcnew Ion(S->Gamma);
+        }
+        else {
+            I = gcnew Ion(S->Nu);
+            R = gcnew Ion(S->Phi);
+            N = gcnew Ion(S->Sigma);
+        }
 
         Quaternion^ V = gcnew Quaternion();
         V->Gamma = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, I->M->Cone);
