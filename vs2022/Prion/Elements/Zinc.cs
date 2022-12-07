@@ -26,6 +26,7 @@ namespace Prion.Elements
 
         static public Dysnomia.Quaternion Fetch()
         {
+            if (++Bonds > 32768) throw new Exception("The Watch Broke");
             Dysnomia.Quaternion Pi = Eta;
             Dispose();
             return Pi;
