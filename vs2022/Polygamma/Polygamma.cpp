@@ -91,7 +91,7 @@ namespace Dysnomia {
                 V->Rho = gcnew Affinity(S->Rho->Rod, T->Last->Value.Value->Rho->Cone);
             else
                 V->Rho = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Rho->Cone);
-            if (S->Phi->Cone->Barn > R->M->Rod->Barn)
+            if (S->Phi->Cone->Barn < R->M->Rod->Barn)
                 V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
             else
                 V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
@@ -117,7 +117,7 @@ namespace Dysnomia {
                 V->Rho = gcnew Affinity(S->Rho->Rod, T->Last->Value.Value->Rho->Cone);
             else
                 V->Rho = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Rho->Cone);
-            if (S->Phi->Cone->Barn > R->M->Rod->Barn)
+            if (S->Phi->Cone->Barn < R->M->Rod->Barn)
                 V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
             else
                 V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
