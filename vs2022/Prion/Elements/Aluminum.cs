@@ -14,6 +14,7 @@ namespace Prion.Elements
         static public Dysnomia.Quaternion N;
         public Dysnomia.Quaternion L, R;
         public Manganese Magnesia;
+        public LinkedList<Aluminum> Xi;
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
@@ -26,6 +27,7 @@ namespace Prion.Elements
 
             if (!Phosphorous.Sigmas.ContainsKey("Io")) throw new Exception("No Moon Io Found");
 
+            Xi = new LinkedList<Aluminum>();
             Magnesia = new Manganese();
             R = X; 
             L = Zinc.Fetch();

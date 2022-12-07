@@ -25,6 +25,7 @@ namespace Prion.Elements
                 {
                     Aluminum Bauxite = new Aluminum(A.R, Zinc.Fetch());
                     Earth.Add(Bauxite.Epsilon, Bauxite);
+                    A.Xi.AddLast(Bauxite);
                     R = P.Next;
                     A.R.Sigma.Rod.R.Remove(P);
                     P = R;
