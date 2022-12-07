@@ -34,7 +34,7 @@ namespace Prion.Elements
                     if (A.Magnesia.Count == 5) continue; 
                     Polygamma K = new Polygamma(A.R); // First Monera Conception
                     Octonion Moneron = new Octonion(A.R, K); // First Monera
-                    A.Magnesia.AddLast(Moneron);
+                    A.Magnesia.Add(Moneron.Epsilon, Moneron);
                     return;
                 }
                 R = P;

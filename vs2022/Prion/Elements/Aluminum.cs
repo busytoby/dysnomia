@@ -12,11 +12,11 @@ namespace Prion.Elements
     {
         public BigInteger Epsilon;
         public Dysnomia.Quaternion L, R, N;
-        public LinkedList<Octonion> Magnesia;
+        public Manganese Magnesia;
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
-            Magnesia = new LinkedList<Octonion>();
+            Magnesia = new Manganese();
             R = X; 
             N = Y; 
             L = Zinc.Fetch();
