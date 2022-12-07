@@ -27,6 +27,7 @@ namespace Dysnomia
 
             Earth E = new Earth();
             Aluminum Bauxite = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
+
             Phosphorous.Sigmas.Add("Bauxite_0", Bauxite.Epsilon);
             E.Add(Bauxite.Epsilon, Bauxite);
 

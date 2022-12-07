@@ -16,6 +16,14 @@ namespace Prion.Elements
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
+            if (Tin.Mu.Count == 4)
+            {
+                Octonion A = new Dysnomia.Octonion(Y, Parallax.Kappa);
+                Phosphorous.Sigmas.RecordOctonion(A, "Io");
+            }
+
+            if (!Phosphorous.Sigmas.ContainsKey("Io")) throw new Exception("No Moon Io Found");
+
             Magnesia = new Manganese();
             R = X; 
             N = Y; 
