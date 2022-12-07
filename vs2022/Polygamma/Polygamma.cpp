@@ -79,33 +79,54 @@ namespace Dysnomia {
                 R = gcnew Ion(S->Phi);
                 N = gcnew Ion(S->Sigma);
             }
+
+            Quaternion^ V = gcnew Quaternion();
+            V->Gamma = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, I->M->Cone);
+            V->Nu = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Phi->Cone);
+            if (S->Gamma->Rod->Signal > T->Last->Value.Value->Gamma->Rod->Signal)
+                V->Phi = gcnew Affinity(S->Gamma->Rod, T->Last->Value.Value->Nu->Cone);
+            else
+                V->Phi = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, S->Nu->Cone);
+            if (S->Rho->Rod->Foundation > T->Last->Value.Value->Rho->Cone->Foundation)
+                V->Rho = gcnew Affinity(S->Rho->Rod, T->Last->Value.Value->Rho->Cone);
+            else
+                V->Rho = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Rho->Cone);
+            if (S->Phi->Cone->Barn > R->M->Rod->Barn)
+                V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
+            else
+                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
+
+            V->Epsilon = Math::ModPow(T->Last->Value.Key, T->Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
+
+            T->AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+            CapSpinor(I, R, N);
         }
-        else {
+        else { // Plant Hybrid Or Cultivar
             I = gcnew Ion(S->Nu);
             R = gcnew Ion(S->Phi);
             N = gcnew Ion(S->Rho);
-        }
 
-        Quaternion^ V = gcnew Quaternion();
-        V->Gamma = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, I->M->Cone);
-        V->Nu = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Phi->Cone);
-        if (S->Gamma->Rod->Signal > T->Last->Value.Value->Gamma->Rod->Signal)
+            Quaternion^ V = gcnew Quaternion();
+            if(S->Phi->Cone->Manifold < T->Last->Value.Value->Phi->Cone->Manifold)
+                V->Gamma = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, I->M->Cone);
+            else 
+                V->Gamma = gcnew Affinity(I->M->Rod, T->Last->Value.Value->Gamma->Cone);
+            V->Nu = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Phi->Cone);
             V->Phi = gcnew Affinity(S->Gamma->Rod, T->Last->Value.Value->Nu->Cone);
-        else
-            V->Phi = gcnew Affinity(T->Last->Value.Value->Gamma->Rod, S->Nu->Cone);
-        if(S->Rho->Rod->Foundation > T->Last->Value.Value->Rho->Cone->Foundation)
-            V->Rho = gcnew Affinity(S->Rho->Rod, T->Last->Value.Value->Rho->Cone);
-        else
-            V->Rho = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Rho->Cone);
-        if(S->Phi->Cone->Barn > R->M->Rod->Barn)
-            V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
-        else
-            V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
+            if (S->Rho->Rod->Foundation > T->Last->Value.Value->Rho->Cone->Foundation)
+                V->Rho = gcnew Affinity(S->Rho->Rod, T->Last->Value.Value->Rho->Cone);
+            else
+                V->Rho = gcnew Affinity(T->Last->Value.Value->Rho->Rod, S->Rho->Cone);
+            if (S->Phi->Cone->Barn > R->M->Rod->Barn)
+                V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
+            else
+                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
 
-        V->Epsilon = Math::ModPow(T->Last->Value.Key, T->Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
+            V->Epsilon = Math::ModPow(T->Last->Value.Key, T->Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
 
-        T->AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-        CapSpinor(I, R, N);
+            T->AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+            CapSpinor(I, R, N);
+        }
     }
 
     void Polygamma::CapSpinor(Ion^ I, Ion^ R, Ion^ N) {
