@@ -13,26 +13,28 @@ namespace Prion.Elements
     {
         static public Earth Earth;
 
-        static public void Baux(Dysnomia.Quaternion L)
+        static public void Baux(Aluminum A)
         {
             LinkedListNode<KeyValuePair<BigInteger, Dynamic>> P;
-            for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = L.Sigma.Rod.R.First; R != null; R = R.Next)
+            for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = A.R.Sigma.Rod.R.First; R != null; R = R.Next)
             {
                 BigInteger DivKey = R.Value.Key / Dysnomia.Math.CatalanPrime;
-                P = L.Sigma.Rod.R.AddBefore(R, new KeyValuePair<BigInteger, Dynamic>(DivKey, R.Value.Value));
-                L.Sigma.Rod.R.Remove(R);
+                P = A.R.Sigma.Rod.R.AddBefore(R, new KeyValuePair<BigInteger, Dynamic>(DivKey, R.Value.Value));
+                A.R.Sigma.Rod.R.Remove(R);
                 if (BigInteger.Abs(DivKey) < Dysnomia.Math.DeathPrime)
                 {
-                    Aluminum Archaea = new Aluminum(L, Zinc.Fetch());
+                    Aluminum Archaea = new Aluminum(A.R, Zinc.Fetch());
                     Earth.Add(Archaea.Epsilon, Archaea);
                     R = P.Next;
-                    L.Sigma.Rod.R.Remove(P);
+                    A.R.Sigma.Rod.R.Remove(P);
                     P = R;
                 }
                 else if (BigInteger.Abs(DivKey) < Dysnomia.Math.CatalanPrime)
                 {
-                    Polygamma K = new Polygamma(L); // First Monera Conception
-                    Octonion Moneron = new Octonion(L, K); // First Monera
+                    if (A.Magnesia.Count == 5) continue; 
+                    Polygamma K = new Polygamma(A.R); // First Monera Conception
+                    Octonion Moneron = new Octonion(A.R, K); // First Monera
+                    A.Magnesia.AddLast(Moneron);
                     return;
                 }
                 R = P;

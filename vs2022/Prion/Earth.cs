@@ -23,7 +23,7 @@ namespace Prion
             foreach (BigInteger K in Keys)
             {
                 if (this[K].GetType().Name == "Aluminum")
-                    Silicon.Baux(((Aluminum)this[K]).R);
+                    Silicon.Baux(((Aluminum)this[K]));
             }
         }
     }

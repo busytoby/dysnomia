@@ -26,9 +26,9 @@ namespace Dysnomia
             P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa);
 
             Earth E = new Earth();
-            Aluminum Archaea = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
-            Phosphorous.Sigmas.Add("Archaea_0", Archaea.Epsilon);
-            E.Add(Archaea.Epsilon, Archaea);
+            Aluminum Bauxite = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
+            Phosphorous.Sigmas.Add("Bauxite_0", Bauxite.Epsilon);
+            E.Add(Bauxite.Epsilon, Bauxite);
 
             for(int i = 0; i < 100; i++)
                 E.Transcend();
