@@ -15,16 +15,5 @@ namespace Prion
         {
             if (Silicon.Earth == null) Silicon.Earth = this;
         }
-
-        public void Transcend()
-        {
-            // Peptidoglycans
-            List<BigInteger> Keys = new List<BigInteger>(this.Keys);
-            foreach (BigInteger K in Keys)
-            {
-                if (this[K].GetType().Name == "Aluminum")
-                    Silicon.Baux(((Aluminum)this[K]));
-            }
-        }
     }
 }
