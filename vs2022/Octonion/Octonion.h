@@ -32,4 +32,13 @@ namespace Dysnomia {
 		void Transit();
 		void IsoSpin(Polygamma^);
 	};
+
+	public ref class Tensor {
+	public:
+		Quaternion^ Gamma;
+		Quaternion^ Nu;
+		Quaternion^ Phi;
+		Quaternion^ Rho;
+		Quaternion^ Sigma;
+	};
 }
