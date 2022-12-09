@@ -48,7 +48,7 @@ namespace Dysnomia
             Phosphorous.Sigmas.RecordQuaternion(Q, "Van Allen Belt");
 
             Spinor M = new Dysnomia.Spinor(Q, X);
-            Phosphorous.Sigmas.RecordSpinor(M, "Mars");
+            Phosphorous.Sigmas.RecordSpinor(M, "Mars"); // Pending Quark or Something
             if (Magnesium.Phobos == null)
             {
                 Phosphorous.GenerateOrbital(Q.Sigma, "Phobos");
