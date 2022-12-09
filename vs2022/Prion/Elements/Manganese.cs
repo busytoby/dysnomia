@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Manganese : Dictionary<BigInteger, Dysnomia.Octonion>
+    public class Manganese : Dictionary<BigInteger, Dysnomia.Spinor>
     {
-        public Dictionary<String, Dysnomia.Octonion> ByName;
+        public Dictionary<String, Dysnomia.Spinor> ByName;
 
         public Manganese() : base()
         {
-            ByName = new Dictionary<String, Octonion>();
+            ByName = new Dictionary<String, Spinor>();
         }
 
-        public void Add(BigInteger Sigma, Dysnomia.Octonion U)
+        public void Add(BigInteger Sigma, Dysnomia.Spinor U)
         {
             if (this.Count == 5) throw new Exception("Manganese Can Only Contain 5 Magnesia");
             if (base.ContainsKey(Sigma) && base[Sigma] == U) return;

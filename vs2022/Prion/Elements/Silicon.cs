@@ -33,8 +33,8 @@ namespace Prion.Elements
                 else if (BigInteger.Abs(DivKey) < Dysnomia.Math.CatalanPrime)
                 {
                     if (A.Magnesia.Count == 5) continue; 
-                    Polygamma K = new Polygamma(A.R); 
-                    Octonion Mg = new Octonion(A.R, K); 
+                    Polygamma K = new Polygamma(A.R);
+                    Spinor Mg = new Spinor(A.R, K); // Pending Octonion
                     A.Magnesia.Add(Mg.Epsilon, Mg);
                     return;
                 }

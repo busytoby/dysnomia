@@ -1,4 +1,5 @@
 #pragma once
+#include "Tensor.h"
 
 using namespace System;
 using namespace System::Numerics;
@@ -18,27 +19,9 @@ namespace Dysnomia {
 
 	public ref class Octonion {
 	public:
-		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma;
-
 		BigInteger Epsilon;
 
-		Tuple<Affinity^, Affinity^>^ Gamma;
-		Tuple<Affinity^, Affinity^>^ Nu;
-		Tuple<Affinity^, Affinity^>^ Phi;
-		Tuple<Affinity^, Affinity^>^ Rho;
-		Tuple<Affinity^, Affinity^>^ Sigma;
-
-		Octonion(Quaternion^, Polygamma^);
-		void Transit();
-		void IsoSpin(Polygamma^);
-	};
-
-	public ref class Tensor {
-	public:
-		Quaternion^ Gamma;
-		Quaternion^ Nu;
-		Quaternion^ Phi;
-		Quaternion^ Rho;
-		Quaternion^ Sigma;
+		Tensor H;
+		// Pending 3-Quaternion Quark Or Something
 	};
 }

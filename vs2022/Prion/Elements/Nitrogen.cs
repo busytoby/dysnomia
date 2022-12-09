@@ -24,10 +24,10 @@ namespace Prion.Elements
             base.Add(Name, V.Epsilon);
         }
 
-        public void RecordOctonion(Dysnomia.Octonion V, String Name)
+        public void RecordSpinor(Dysnomia.Spinor V, String Name)
         {
             if (!Tin.Mu.ContainsKey(V.Epsilon)) Tin.Mu.Add(V.Epsilon, V);
-            else throw new Exception("Must Not Add Octonion Twice");
+            else throw new Exception("Must Not Add Spinor Twice");
             Phosphorous.Locks.Add(V.Epsilon, new Mutex());
             base.Add(Name, V.Epsilon);
         }

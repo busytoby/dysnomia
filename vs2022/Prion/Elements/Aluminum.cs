@@ -20,8 +20,8 @@ namespace Prion.Elements
         {
             if (Tin.Mu.Count == 4)
             {
-                Octonion A = new Dysnomia.Octonion(Y, Parallax.Kappa);
-                Phosphorous.Sigmas.RecordOctonion(A, "Io");
+                Spinor A = new Dysnomia.Spinor(Y, Parallax.Kappa);
+                Phosphorous.Sigmas.RecordSpinor(A, "Io");
                 N = Y;
             }
 
@@ -33,6 +33,8 @@ namespace Prion.Elements
             L = Zinc.Fetch();
 
             Epsilon = L.Epsilon;
+
+            // Pending Octonion
         }
     }
 }
