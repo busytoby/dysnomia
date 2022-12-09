@@ -52,7 +52,7 @@ namespace Dysnomia {
 				gcnew Affinity(gcnew Dynamic(), Octogamma->Value.Value->Rho->Cone));
 
 			Sigma = gcnew Tuple<Affinity^, Affinity^>(
-				gcnew Affinity(Octogamma->Value.Value->Sigma->Rod, Sigma->Item1->Cone),
+				gcnew Affinity(gcnew Dynamic(), Sigma->Item1->Cone),
 				gcnew Affinity(Sigma->Item2->Rod, Octogamma->Value.Value->Sigma->Cone));
 		}
 	}
