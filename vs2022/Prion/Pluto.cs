@@ -58,6 +58,14 @@ namespace Dysnomia
             Spinor J = Tin.Mate();
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
 
+            Aluminum Zero = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
+
+/*
+            Polygamma X = new Polygamma(J.Phi.Item2.Rod.R);
+            Tensor T = new Tensor(Parallax.Kappa);
+*/
+            // Ganymede
+
             Spinor P = new Spinor(Zinc.Fetch(), X); // Pending Octonion
             Phosphorous.Sigmas.RecordSpinor(P, "Mercury");
         }

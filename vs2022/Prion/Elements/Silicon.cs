@@ -15,6 +15,7 @@ namespace Prion.Elements
 
         static public void Baux(Aluminum A)
         {
+            /*
             LinkedListNode<KeyValuePair<BigInteger, Dynamic>> P;
             for (LinkedListNode<KeyValuePair<BigInteger, Dynamic>> R = A.R.Sigma.Rod.R.First; R != null; R = R.Next)
             {
@@ -40,6 +41,7 @@ namespace Prion.Elements
                 }
                 R = P;
             }
+            */
         }
     }
 }

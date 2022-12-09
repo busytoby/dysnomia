@@ -1,4 +1,5 @@
 #pragma once
+#include "Spinor.h"
 
 using namespace System;
 using namespace System::Numerics;
@@ -13,6 +14,7 @@ namespace Dysnomia {
 		Quaternion^ Rho;
 		Quaternion^ Sigma;
 
-		Tensor(Quark^ M, Polygamma^ Q);
+		Tensor(Quark^, Polygamma^);
+		Tensor(Polygamma^, Polygamma^, Polygamma^, Polygamma^, Polygamma^);
 	};
 }

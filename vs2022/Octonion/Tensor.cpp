@@ -42,4 +42,11 @@ namespace Dysnomia {
 		Sigma->Rho = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, gcnew Dynamic());
 		Sigma->Sigma = gcnew Affinity(gcnew Dynamic(), gcnew Dynamic());
     }
+
+	Tensor::Tensor(Polygamma^ X, Polygamma^ Y, Polygamma^ Z, Polygamma^ R, Polygamma^ L) {
+		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma = X->T->Last;
+
+		int i = 99;
+
+	}
 }

@@ -12,13 +12,13 @@ namespace Prion.Elements
     {
         public BigInteger Epsilon;
         static public Dysnomia.Quaternion N;
-        public Dysnomia.Quaternion L, R;
-        public Manganese Magnesia;
+        static public Quark Q;
+        public Tensor T;
         public LinkedList<Aluminum> Xi;
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
-            if (Tin.Mu.Count == 3)
+            if (Tin.Mu.Count == 2)
             {
                 Spinor A = new Dysnomia.Spinor(Y, Parallax.Kappa);
                 Phosphorous.Sigmas.RecordSpinor(A, "Io");
@@ -28,11 +28,16 @@ namespace Prion.Elements
             if (!Phosphorous.Sigmas.ContainsKey("Io")) throw new Exception("No Moon Io Found");
 
             Xi = new LinkedList<Aluminum>();
-            Magnesia = new Manganese();
-            R = X; 
-            L = Zinc.Fetch();
 
-            Epsilon = L.Epsilon;
+            if (Q == null)
+            {
+                Q = new Quark(X, Y, N);
+                Phosphorous.Sigmas.RecordQuark(Q, "Thebe");
+            }
+
+            //T = new Tensor(Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R)
+
+            Epsilon = Q.L.Epsilon;
 
             // Pending Octonion
         }

@@ -28,10 +28,10 @@ namespace Prion.Elements
         private String NextEntry()
         {
             if (this.Count == 1) return "Gamma";
-            if (this.Count == 2) return "Nu";
-            if (this.Count == 3) return "Phi";
+            if (this.Count == 3) return "Nu";
+            if (this.Count == 5) return "Phi";
             if (this.Count == 4) return "Rho";
-            if (this.Count == 5) return "Sigma";
+            if (this.Count == 2) return "Sigma";
             return null;
         }
     }
