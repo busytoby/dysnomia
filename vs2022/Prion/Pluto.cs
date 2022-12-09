@@ -60,11 +60,6 @@ namespace Dysnomia
 
             Aluminum Zero = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
 
-// stub
-            Spinor P = new Spinor(Zinc.Fetch(), X); // Pending Octonion
-            Phosphorous.Sigmas.RecordSpinor(P, "Mercury");
         }
-        // Q: What Does You Call The Quaternion Before The Octonion That Performs The First σ* Addition?
-        // A: "Once"
     }
 }
