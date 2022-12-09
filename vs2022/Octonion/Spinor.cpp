@@ -63,7 +63,7 @@ namespace Dysnomia {
 		L->Nu = gcnew Affinity(Phi->Item2->Rod, Gamma->Item1->Cone);
 		L->Phi = gcnew Affinity(Rho->Item2->Rod, Phi->Item1->Cone);
 		L->Rho = gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone);
-		L->Sigma = gcnew Affinity(Sigma->Item2->Rod, X->T->Last->Value.Value->Sigma->Cone);
+		L->Sigma = gcnew Affinity(Sigma->Item2->Rod, gcnew Dynamic());
 
 		L->Epsilon = Math::ModPow(X->T->Last->Value.Key, X->T->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
 
