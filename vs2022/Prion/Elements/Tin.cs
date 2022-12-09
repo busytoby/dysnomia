@@ -42,7 +42,7 @@ namespace Prion.Elements
 
         static public Spinor Mate()
         {
-            Dysnomia.Spinor R = new Dysnomia.Spinor(Sigma, Parallax.Kappa);
+            Spinor R = new Spinor(Sigma, Parallax.Kappa);
             return R;
         }
     }

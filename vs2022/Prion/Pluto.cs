@@ -47,16 +47,12 @@ namespace Dysnomia
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
             Phosphorous.Sigmas.RecordQuaternion(Q, "Van Allen Belt");
 
-            Spinor M = new Dysnomia.Spinor(Q, X);
-            Phosphorous.Sigmas.RecordSpinor(M, "Mars"); // Pending Quark or Something
-            if (Magnesium.Phobos == null)
-            {
-                Phosphorous.GenerateOrbital(Q.Sigma, "Phobos");
-            }
+            Quark M = new Quark(S, Q, Zinc.Fetch());
+            Phosphorous.Sigmas.RecordQuark(M, "Mars");
 
             Spinor J = Tin.Mate();
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
-            Spinor P = new Dysnomia.Spinor(Zinc.Fetch(), X); // Pending Octonion
+            Spinor P = new Spinor(Zinc.Fetch(), X); // Pending Octonion
             Phosphorous.Sigmas.RecordSpinor(P, "Mercury");
         }
         // Q: What Does You Call The Quaternion Before The Octonion That Performs The First σ* Addition?

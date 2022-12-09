@@ -52,6 +52,7 @@ namespace Prion.Elements
             Eta.Epsilon = Dysnomia.Math.ModPow(R.M.Rod.Base, I.M.Cone.Manifold, N.M.Rod.Barn);
 
             Phosphorous.Locks.Add(Eta.Epsilon, new Mutex());
+            Bonds--;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Prion.Elements
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
-            if (Tin.Mu.Count == 4)
+            if (Tin.Mu.Count == 3)
             {
                 Spinor A = new Dysnomia.Spinor(Y, Parallax.Kappa);
                 Phosphorous.Sigmas.RecordSpinor(A, "Io");

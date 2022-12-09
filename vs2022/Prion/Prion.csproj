@@ -14,6 +14,7 @@
     <ProjectReference Include="..\Octonion\Octonion.vcxproj" />
     <ProjectReference Include="..\Orbital\Orbital.vcxproj" />
     <ProjectReference Include="..\Polygamma\Polygamma.vcxproj" />
+    <ProjectReference Include="..\Quark\Quark.vcxproj" />
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj" />
   </ItemGroup>
 

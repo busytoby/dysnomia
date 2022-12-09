@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Nitrogen : Dictionary<String, BigInteger>
+    public class Nitrogen : Dictionary<String, BigInteger> // Pending Refactor
     {
         public void RecordOrbital(Orbital V, String Name)
         {
@@ -20,6 +20,12 @@ namespace Prion.Elements
         public void RecordQuaternion(Dysnomia.Quaternion V, String Name)
         {
             Beryllium.Phi.Add(V.Epsilon, V);
+            Phosphorous.Locks.Add(V.Epsilon, new Mutex());
+            base.Add(Name, V.Epsilon);
+        }
+
+        public void RecordQuark(Quark V, String Name)
+        {
             Phosphorous.Locks.Add(V.Epsilon, new Mutex());
             base.Add(Name, V.Epsilon);
         }
