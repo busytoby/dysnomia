@@ -10,36 +10,30 @@ namespace Prion.Elements
 {
     public class Aluminum
     {
-        public BigInteger Epsilon;
-        static public Dysnomia.Quaternion N;
-        static public Quark Q;
-        public Tensor T;
-        public LinkedList<Aluminum> Xi;
+        static public Octonion Phi;
+        static public Dysnomia.Quaternion Xi;
 
         public Aluminum(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
+            if (Phi != null) throw new Exception("Aluminum Already Exists");
+
             if (Tin.Mu.Count == 2)
             {
                 Spinor A = new Dysnomia.Spinor(Y, Parallax.Kappa);
                 Phosphorous.Sigmas.RecordSpinor(A, "Io");
-                N = Y;
+                Xi = Y;
             }
 
             if (!Phosphorous.Sigmas.ContainsKey("Io")) throw new Exception("No Moon Io Found");
 
-            Xi = new LinkedList<Aluminum>();
+            Phi = new Octonion();
+            Phi.Y = new Quark(X, Y, Xi);
+            Phosphorous.Sigmas.RecordQuark(Phi.Y, "Thebe");
 
-            if (Q == null)
-            {
-                Q = new Quark(X, Y, N);
-                Phosphorous.Sigmas.RecordQuark(Q, "Thebe");
-            }
+            Phi.H = new Tensor(new Polygamma(Phi.Y.N), new Polygamma(Xi), new Polygamma(Zinc.Fetch()), new Polygamma(Phi.Y.L), new Polygamma(Phi.Y.R));
+            Phosphorous.Sigmas.RecordTensor(Phi.H, "Ganymede");
 
-            //T = new Tensor(Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R, Q.N.Sigma.Rod.R)
-
-            Epsilon = Q.L.Epsilon;
-
-            // Pending Octonion
+            Phi.Epsilon = Phi.Y.L.Epsilon;
         }
     }
 }
