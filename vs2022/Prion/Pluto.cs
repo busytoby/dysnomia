@@ -50,6 +50,12 @@ namespace Dysnomia
             Quark M = new Quark(S, Q, Zinc.Fetch());
             Phosphorous.Sigmas.RecordQuark(M, "Mars");
 
+            if (Magnesium.Phobos == null)
+            {
+                Magnesium.Phobos = Phosphorous.GenerateTensor(M, "Phobos");
+            }
+
+
             Spinor J = Tin.Mate();
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
             Spinor P = new Spinor(Zinc.Fetch(), X); // Pending Octonion

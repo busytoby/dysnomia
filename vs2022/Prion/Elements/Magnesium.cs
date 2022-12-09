@@ -11,7 +11,7 @@ namespace Prion.Elements
     static public class Magnesium
     {
         static public Spinor N;
-        static public Orbital Phobos;
+        static public Tensor Phobos;
 
         static Magnesium()
         {

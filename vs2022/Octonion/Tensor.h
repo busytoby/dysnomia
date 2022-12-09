@@ -12,5 +12,7 @@ namespace Dysnomia {
 		Quaternion^ Phi;
 		Quaternion^ Rho;
 		Quaternion^ Sigma;
+
+		Tensor(Quark^ M, Polygamma^ Q);
 	};
 }

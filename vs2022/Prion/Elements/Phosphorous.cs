@@ -53,6 +53,14 @@ namespace Prion.Elements
             return P;
         }
 
+        static public Tensor GenerateTensor(Quark M, String Name)
+        {
+            Tensor P = new Tensor(M, Parallax.Kappa);
+            //Parallax.Kappa.Add(P);
+            Sigmas.RecordTensor(P, Name);
+            return P;
+        }
+
         public void Pair(Dysnomia.Quaternion S)
         {
 

@@ -17,6 +17,12 @@ namespace Prion.Elements
             base.Add(Name, V.Sigma);
         }
 
+        public void RecordTensor(Tensor V, String Name)
+        {
+            Phosphorous.Locks.Add(V.Gamma.Epsilon, new Mutex());
+            base.Add(Name, V.Gamma.Epsilon);
+        }
+
         public void RecordQuaternion(Dysnomia.Quaternion V, String Name)
         {
             Beryllium.Phi.Add(V.Epsilon, V);
