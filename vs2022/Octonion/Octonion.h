@@ -21,7 +21,9 @@ namespace Dysnomia {
 	public:
 		BigInteger Epsilon;
 
-		Quark^ Y;
-		Tensor^ H;
+		Quark^ X;
+		Tensor^ L;
+
+		Octonion(Quark^, Tensor^);
 	};
 }

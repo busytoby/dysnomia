@@ -26,14 +26,13 @@ namespace Prion.Elements
 
             if (!Phosphorous.Sigmas.ContainsKey("Io")) throw new Exception("No Moon Io Found");
 
-            Phi = new Octonion();
-            Phi.Y = new Quark(X, Y, Xi);
-            Phosphorous.Sigmas.RecordQuark(Phi.Y, "Thebe");
+            Quark Thebe = new Quark(X, Y, Xi);
+            Phi = new Octonion(Thebe,
+                new Tensor(new Polygamma(Thebe.N), new Polygamma(Xi), new Polygamma(Zinc.Fetch()), new Polygamma(Thebe.L), new Polygamma(Thebe.R))
+                );
 
-            Phi.H = new Tensor(new Polygamma(Phi.Y.N), new Polygamma(Xi), new Polygamma(Zinc.Fetch()), new Polygamma(Phi.Y.L), new Polygamma(Phi.Y.R));
-            Phosphorous.Sigmas.RecordTensor(Phi.H, "Ganymede");
-
-            Phi.Epsilon = Phi.Y.L.Epsilon;
+            Phosphorous.Sigmas.RecordQuark(Thebe, "Thebe");
+            Phosphorous.Sigmas.RecordTensor(Phi.L, "Ganymede");
         }
     }
 }
