@@ -10,14 +10,14 @@ namespace Prion.Elements
 {
     static public class Magnesium
     {
-        static public Spinor N;
-        static public Tensor Phobos;
+        static public Spinor Nu;
+        static public Tensor Xi;
 
         static Magnesium()
         {
             if (Tin.Sigma != null && Tin.Mu.Count != 0) throw new Exception("Magnesium Must Only Be Set Up Once With Tin");
-            N = new Spinor(Tin.Sigma, Parallax.Kappa);
-            Tin.Mu.Add(N.Epsilon, N);
+            Nu = new Spinor(Tin.Sigma, Parallax.Kappa);
+            Tin.Mu.Add(Nu.Epsilon, Nu);
         }
     }
 }

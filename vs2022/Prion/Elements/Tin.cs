@@ -34,8 +34,8 @@ namespace Prion.Elements
 
                 if (Mu == null) Mu = new Manganese();
 
-                if (Magnesium.N.Sigma == null) throw new Exception("No Magnesium");
-                if (Mu.Count != 1) throw new Exception("Magnesium Octonion Not Found");
+                if (Magnesium.Nu.Sigma == null) throw new Exception("No Magnesium");
+                if (Mu.Count != 1) throw new Exception("Magnesium Spinor Not Found");
                 // First Sigma Star
             }
         }

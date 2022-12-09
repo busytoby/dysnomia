@@ -47,17 +47,17 @@ namespace Dysnomia
             Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
             Phosphorous.Sigmas.RecordQuaternion(Q, "Van Allen Belt");
 
-            Quark M = new Quark(S, Q, Zinc.Fetch());
+            Quark M = new Quark(Q, S, Zinc.Fetch());
             Phosphorous.Sigmas.RecordQuark(M, "Mars");
 
-            if (Magnesium.Phobos == null)
+            if (Magnesium.Xi == null)
             {
-                Magnesium.Phobos = Phosphorous.GenerateTensor(M, "Phobos");
+                Magnesium.Xi = Phosphorous.GenerateTensor(M, "Phobos");
             }
-
 
             Spinor J = Tin.Mate();
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
+
             Spinor P = new Spinor(Zinc.Fetch(), X); // Pending Octonion
             Phosphorous.Sigmas.RecordSpinor(P, "Mercury");
         }
