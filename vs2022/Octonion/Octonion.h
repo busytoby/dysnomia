@@ -21,7 +21,7 @@ namespace Dysnomia {
 	public:
 		BigInteger Epsilon;
 
-		Tensor H;
-		// Pending 3-Quaternion Quark Or Something
+		Quark^ Y;
+		Tensor^ H;
 	};
 }
