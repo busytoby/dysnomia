@@ -40,6 +40,7 @@ namespace Prion.Elements
         {
             if (!Tin.Mu.ContainsKey(V.Epsilon)) Tin.Mu.Add(V.Epsilon, V);
             else throw new Exception("Must Not Add Spinor Twice");
+            if (Tin.Mu.Count == 5) throw new Exception("Not Ready For More Than 5 Spinors");
             Phosphorous.Locks.Add(V.Epsilon, new Mutex());
             base.Add(Name, V.Epsilon);
         }

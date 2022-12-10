@@ -17,7 +17,7 @@ namespace Prion.Elements
         {
             if (Tin.Sigma != null && Tin.Mu.Count != 0) throw new Exception("Magnesium Must Only Be Set Up Once With Tin");
             Nu = new Spinor(Tin.Sigma, Parallax.Kappa);
-            Tin.Mu.Add(Nu.Epsilon, Nu);
+            Phosphorous.Sigmas.RecordSpinor(Nu, "Deimos");
         }
     }
 }
