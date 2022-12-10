@@ -40,13 +40,15 @@ namespace Prion.Elements
                 YPoly.Add(Ygamma.Value.Value);
                 Xgamma = Xgamma.Next;
                 Ygamma = Ygamma.Next;
-            }
+            } // First Carboxylates
 
             Tensor Xtensor = new Tensor(new Polygamma(XPoly[0]), new Polygamma(XPoly[1]), new Polygamma(XPoly[2]), new Polygamma(XPoly[3]), new Polygamma(XPoly[4]));
             Tensor Ytensor = new Tensor(new Polygamma(YPoly[0]), new Polygamma(YPoly[1]), new Polygamma(YPoly[2]), new Polygamma(YPoly[3]), new Polygamma(YPoly[4]));
 
             Octonion Egg = new Octonion(Aluminum.Phi.X, Xtensor);
             Octonion Chicken = new Octonion(Aluminum.Phi.X, Ytensor);
+
+            Spinor One = new Spinor(Chicken.L.Gamma, X);
         }
     }
 }
