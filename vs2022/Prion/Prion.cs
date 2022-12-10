@@ -23,14 +23,14 @@ namespace Dysnomia
 
             Pluto P = new Pluto();
 
-            P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa);
+            P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa); // Dione
 
             Earth E = new Earth();
 
-            Polygamma Glutamate = new Polygamma(Tin.Sigma);
+            Polygamma Glutamate = new Polygamma(Tin.Sigma); // Tethys
             Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Glutamate); // Himalia
             Glutamate.Add(Tin.Sigma); // First Kinase, First Dehydrogenase IsoSpin
-            // First N-Acetyl-L-Glutamate Phosphate
+            // Addition Product Is The First N-Acetyl-L-Glutamate Phosphate, Telesto
         }
     }
 }
