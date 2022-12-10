@@ -28,11 +28,11 @@ namespace Prion.Elements
             Chlorine<Dysnomia.Quaternion> CX = new Chlorine<Dysnomia.Quaternion>(X.T);
             Chlorine<Dysnomia.Quaternion> CY = new Chlorine<Dysnomia.Quaternion>(Y.T);
 
-            Tensor Xtensor = new Tensor(new Polygamma(CX[0]), new Polygamma(CX[1]), new Polygamma(CX[2]), new Polygamma(CX[3]),new Polygamma(CX[4]));
-            Tensor Ytensor = new Tensor(new Polygamma(CY[0]), new Polygamma(CY[1]), new Polygamma(CY[2]), new Polygamma(CY[3]), new Polygamma(CY[4]));
+            Calcium XC = new Calcium(CX);
+            Calcium YC = new Calcium(CY);
 
-            Octonion Egg = new Octonion(Aluminum.Phi.X, Xtensor);
-            Octonion Chicken = new Octonion(Aluminum.Phi.X, Ytensor);
+            Octonion Egg = new Octonion(Aluminum.Phi.X, XC);
+            Octonion Chicken = new Octonion(Aluminum.Phi.X, YC);
 
             Spinor One = new Spinor(Chicken.L.Gamma, X);
         }
