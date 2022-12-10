@@ -28,10 +28,11 @@ namespace Dysnomia {
 			gcnew Affinity(Q->Sigma->Rod, Octogamma->Value.Value->Sigma->Cone));
 
 		Transit();
-		IsoSpin(X);
+		IsoSpin();
 	}
 
 	void Spinor::Transit() {
+		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ L = Octogamma->List;
 		while (Octogamma = Octogamma->Next) {
 			Epsilon = Math::ModPow(Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, Octogamma->Value.Value->Nu->Rod->Barn);
 
@@ -55,18 +56,23 @@ namespace Dysnomia {
 				gcnew Affinity(gcnew Dynamic(), Sigma->Item1->Cone),
 				gcnew Affinity(Sigma->Item2->Rod, Octogamma->Value.Value->Sigma->Cone));
 		}
+		Octogamma = L->First;
 	}
 
-	void Spinor::IsoSpin(Polygamma^ X) {
+	void Spinor::IsoSpin() {
+		Quaternion^ L = Head();
+		Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
+	}
+
+	Quaternion^ Spinor::Head() {
 		Quaternion^ L = gcnew Quaternion();
-		L->Gamma = gcnew Affinity(Phi->Item1->Rod, X->T->Last->Value.Value->Sigma->Cone);
+		L->Gamma = gcnew Affinity(Phi->Item1->Rod, Octogamma->List->Last->Value.Value->Sigma->Cone);
 		L->Nu = gcnew Affinity(Phi->Item2->Rod, Gamma->Item1->Cone);
 		L->Phi = gcnew Affinity(Rho->Item2->Rod, Phi->Item1->Cone);
 		L->Rho = gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone);
 		L->Sigma = gcnew Affinity(Sigma->Item2->Rod, gcnew Dynamic());
 
-		L->Epsilon = Math::ModPow(X->T->Last->Value.Key, X->T->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
-
-		X->T->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
+		L->Epsilon = Math::ModPow(Octogamma->List->Last->Value.Key, Octogamma->List->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
+		return L;
 	}
 }

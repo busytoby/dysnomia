@@ -23,5 +23,16 @@ namespace Prion.Elements
 
             Mu = new Chlorine<Dysnomia.Quaternion>(Rho.T);
         }
+
+        public Scandium(Quaternion Nu)
+        {
+            Rho = new Polygamma(Tin.Sigma); // Tethys
+            Tau = new Spinor(Nu, Rho);
+            Rho.Add(Tin.Sigma);
+
+            if (!(Rho.T.Count == 5)) throw new Exception("Scandium Misanthropy");
+
+            Mu = new Chlorine<Dysnomia.Quaternion>(Rho.T);
+        }
     }
 }
