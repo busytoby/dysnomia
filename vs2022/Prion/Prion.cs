@@ -26,6 +26,8 @@ namespace Dysnomia
             P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa);
 
             Earth E = new Earth();
+
+            Polygamma Glutamate = new Polygamma(Tin.Sigma);
         }
     }
 }
