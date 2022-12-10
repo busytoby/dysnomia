@@ -14,23 +14,14 @@ namespace Prion.Elements
         public Scandium Nu;
         public Scandium Eta;
 
-        public Octonion Tau;
-        public Octonion Mu;
-
-        public Spinor Rho;
+        public Titanium Beta;
 
         public Sulfur()
         {
             Nu = new Scandium(); // Telesto
             Eta = new Scandium(); // Hyperion
 
-            Calcium Theta = new Calcium(Eta.Mu);
-            Calcium Alpha = new Calcium(Nu.Mu);
-
-            Mu = new Octonion(Aluminum.Phi.X, Theta);
-            Tau = new Octonion(Aluminum.Phi.X, Alpha);
-
-            Rho = new Spinor(Tau.L.Gamma, Eta.Rho);
+            Beta = new Titanium(Nu.Mu, Eta);
         }
     }
 }
