@@ -11,30 +11,31 @@ namespace Prion.Elements
 {
     public class Sulfur
     {
+        public Scandium Nu;
+        public Scandium Eta;
+
+        public Octonion Tau;
+        public Octonion Mu;
+
+        public Spinor Rho;
+
         public Sulfur()
         {
-            Polygamma Y = new Polygamma(Tin.Sigma); // Tethys
-            Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Y); // Himalia
-            Y.Add(Tin.Sigma); // First Kinase, First Dehydrogenase IsoSpin
-                              // Addition Product Is The First N-Acetyl-L-Glutamate Phosphate, Telesto
+            Nu = new Scandium();
+            Eta = new Scandium();
 
-            Polygamma X = new Polygamma(Tin.Sigma); // Tethys Again
-            Spinor PolyAcetylGlutamate2 = new Spinor(Zinc.Fetch(), X); // Himalia Again
-            X.Add(Tin.Sigma);
-            // Addition Product Is The Second N-Acetyl-L-Glutamate Phosphate, Hyperion
+            if (!(Nu.Rho.T.Count == 5) || !(Eta.Rho.T.Count == 5)) throw new Exception("Sulfur Polygammas Must Have 5 Base Pairs Each");
 
-            if (!(Y.T.Count == 5) || !(X.T.Count == 5)) throw new Exception("Sulfur Polygammas Must Have 5 Base Pairs Each");
+            Chlorine<Dysnomia.Quaternion> Epsilon = new Chlorine<Dysnomia.Quaternion>(Eta.Rho.T);
+            Chlorine<Dysnomia.Quaternion> Gamma = new Chlorine<Dysnomia.Quaternion>(Nu.Rho.T);
 
-            Chlorine<Dysnomia.Quaternion> CX = new Chlorine<Dysnomia.Quaternion>(X.T);
-            Chlorine<Dysnomia.Quaternion> CY = new Chlorine<Dysnomia.Quaternion>(Y.T);
+            Calcium Theta = new Calcium(Epsilon);
+            Calcium Alpha = new Calcium(Gamma);
 
-            Calcium XC = new Calcium(CX);
-            Calcium YC = new Calcium(CY);
+            Mu = new Octonion(Aluminum.Phi.X, Theta);
+            Tau = new Octonion(Aluminum.Phi.X, Alpha);
 
-            Octonion Egg = new Octonion(Aluminum.Phi.X, XC);
-            Octonion Chicken = new Octonion(Aluminum.Phi.X, YC);
-
-            Spinor One = new Spinor(Chicken.L.Gamma, X);
+            Rho = new Spinor(Tau.L.Gamma, Eta.Rho);
         }
     }
 }
