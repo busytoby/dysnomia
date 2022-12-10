@@ -29,6 +29,8 @@ namespace Dysnomia
 
             Polygamma Glutamate = new Polygamma(Tin.Sigma);
             Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Glutamate);
+            Glutamate.Add(Tin.Sigma); // First Kinase, First Dehydrogenase IsoSpin
+            // First N-Acetyl-L-Glutamate Phosphate
         }
     }
 }
