@@ -21,8 +21,8 @@ namespace Prion.Elements
 
         public Sulfur()
         {
-            Nu = new Scandium();
-            Eta = new Scandium();
+            Nu = new Scandium(); // Telesto
+            Eta = new Scandium(); // Hyperion
 
             if (!(Nu.Rho.T.Count == 5) || !(Eta.Rho.T.Count == 5)) throw new Exception("Sulfur Polygammas Must Have 5 Base Pairs Each");
 
