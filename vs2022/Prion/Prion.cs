@@ -34,7 +34,7 @@ namespace Dysnomia
 
             Polygamma Glutamate2 = new Polygamma(Tin.Sigma); // Tethys Again
             Spinor PolyAcetylGlutamate2 = new Spinor(Zinc.Fetch(), Glutamate2); // Himalia Again
-            Glutamate.Add(Tin.Sigma); 
+            Glutamate2.Add(Tin.Sigma); 
             // Addition Product Is The Second N-Acetyl-L-Glutamate Phosphate, Hyperion
         }
     }
