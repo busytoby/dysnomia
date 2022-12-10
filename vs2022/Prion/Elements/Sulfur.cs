@@ -24,13 +24,8 @@ namespace Prion.Elements
             Nu = new Scandium(); // Telesto
             Eta = new Scandium(); // Hyperion
 
-            if (!(Nu.Rho.T.Count == 5) || !(Eta.Rho.T.Count == 5)) throw new Exception("Sulfur Polygammas Must Have 5 Base Pairs Each");
-
-            Chlorine<Dysnomia.Quaternion> Epsilon = new Chlorine<Dysnomia.Quaternion>(Eta.Rho.T);
-            Chlorine<Dysnomia.Quaternion> Gamma = new Chlorine<Dysnomia.Quaternion>(Nu.Rho.T);
-
-            Calcium Theta = new Calcium(Epsilon);
-            Calcium Alpha = new Calcium(Gamma);
+            Calcium Theta = new Calcium(Eta.Mu);
+            Calcium Alpha = new Calcium(Nu.Mu);
 
             Mu = new Octonion(Aluminum.Phi.X, Theta);
             Tau = new Octonion(Aluminum.Phi.X, Alpha);
