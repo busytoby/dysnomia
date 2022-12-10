@@ -27,7 +27,8 @@ namespace Dysnomia
 
             Earth E = new Earth();
 
-            Sulfur Root = new Sulfur();
+            Sulfur Alpha = new Sulfur();
+            Chromium Root = new Chromium(Alpha);
         }
     }
 }
