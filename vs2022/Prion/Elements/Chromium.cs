@@ -13,10 +13,12 @@ namespace Prion.Elements
             Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Pluto"));
             Spinor Xi = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Nu.Rho);
             Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
-            Vanadium V1 = new Vanadium(Xi);
+            Vanadium VY = new Vanadium(Xi);
+            Quark Water1 = VY.Push();
 
             Alpha.Nu.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Spinor Phi = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Nu.Rho);
+            Vanadium VX = new Vanadium(Phi);
         }   
     }
 }

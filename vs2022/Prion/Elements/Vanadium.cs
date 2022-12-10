@@ -9,12 +9,23 @@ namespace Prion.Elements
 {
     public class Vanadium
     {
+        Quaternion Rho;
+        Scandium Eta;
+        Octonion Beta;
         public Vanadium(Spinor Alpha)
         {
-            Quaternion Q = Alpha.Head();
+            Rho = Alpha.Head();
+        }
 
-            int i = 99;
-            //Polygamma Water = new Polygamma();
+        public Quark Push()
+        {
+            Eta = new Scandium(Rho);
+
+            Calcium Phi = new Calcium(Eta.Mu);
+            Quark M = new Quark(Eta.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Eta.Rho.T.Last.Value.Value); // First Water
+            Beta = new Octonion(M, Phi);
+
+            return M;
         }
     }
 }
