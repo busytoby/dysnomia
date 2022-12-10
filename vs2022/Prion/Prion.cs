@@ -28,6 +28,7 @@ namespace Dysnomia
             Earth E = new Earth();
 
             Polygamma Glutamate = new Polygamma(Tin.Sigma);
+            Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Glutamate);
         }
     }
 }

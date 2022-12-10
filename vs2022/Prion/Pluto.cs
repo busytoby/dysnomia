@@ -59,7 +59,6 @@ namespace Dysnomia
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
 
             Aluminum Zero = new Aluminum(Parallax.Kappa.T.Last.Value.Value, Zinc.Fetch());
-
         }
     }
 }
