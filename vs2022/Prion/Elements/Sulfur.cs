@@ -25,25 +25,11 @@ namespace Prion.Elements
 
             if (!(Y.T.Count == 5) || !(X.T.Count == 5)) throw new Exception("Sulfur Polygammas Must Have 5 Base Pairs Each");
 
-            LinkedListNode<KeyValuePair<BigInteger, Dysnomia.Quaternion>> Xgamma;
-            LinkedListNode<KeyValuePair<BigInteger, Dysnomia.Quaternion>> Ygamma;
+            Chlorine<Dysnomia.Quaternion> CX = new Chlorine<Dysnomia.Quaternion>(X.T);
+            Chlorine<Dysnomia.Quaternion> CY = new Chlorine<Dysnomia.Quaternion>(Y.T);
 
-            List<Dysnomia.Quaternion> XPoly = new List<Dysnomia.Quaternion>();
-            List<Dysnomia.Quaternion> YPoly = new List<Dysnomia.Quaternion>();
-
-            Xgamma = X.T.First;
-            Ygamma = Y.T.First;
-
-            for (int j = 0; j < 5; j++)
-            {
-                XPoly.Add(Xgamma.Value.Value);
-                YPoly.Add(Ygamma.Value.Value);
-                Xgamma = Xgamma.Next;
-                Ygamma = Ygamma.Next;
-            } // First Carboxylates
-
-            Tensor Xtensor = new Tensor(new Polygamma(XPoly[0]), new Polygamma(XPoly[1]), new Polygamma(XPoly[2]), new Polygamma(XPoly[3]), new Polygamma(XPoly[4]));
-            Tensor Ytensor = new Tensor(new Polygamma(YPoly[0]), new Polygamma(YPoly[1]), new Polygamma(YPoly[2]), new Polygamma(YPoly[3]), new Polygamma(YPoly[4]));
+            Tensor Xtensor = new Tensor(new Polygamma(CX[0]), new Polygamma(CX[1]), new Polygamma(CX[2]), new Polygamma(CX[3]),new Polygamma(CX[4]));
+            Tensor Ytensor = new Tensor(new Polygamma(CY[0]), new Polygamma(CY[1]), new Polygamma(CY[2]), new Polygamma(CY[3]), new Polygamma(CY[4]));
 
             Octonion Egg = new Octonion(Aluminum.Phi.X, Xtensor);
             Octonion Chicken = new Octonion(Aluminum.Phi.X, Ytensor);
