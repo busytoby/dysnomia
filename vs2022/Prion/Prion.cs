@@ -23,19 +23,11 @@ namespace Dysnomia
 
             Pluto P = new Pluto();
 
-            P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma"), Parallax.Kappa); // Dione
+            P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
 
             Earth E = new Earth();
 
-            Polygamma Glutamate = new Polygamma(Tin.Sigma); // Tethys
-            Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Glutamate); // Himalia
-            Glutamate.Add(Tin.Sigma); // First Kinase, First Dehydrogenase IsoSpin
-            // Addition Product Is The First N-Acetyl-L-Glutamate Phosphate, Telesto
-
-            Polygamma Glutamate2 = new Polygamma(Tin.Sigma); // Tethys Again
-            Spinor PolyAcetylGlutamate2 = new Spinor(Zinc.Fetch(), Glutamate2); // Himalia Again
-            Glutamate2.Add(Tin.Sigma); 
-            // Addition Product Is The Second N-Acetyl-L-Glutamate Phosphate, Hyperion
+            Sulfur Root = new Sulfur();
         }
     }
 }

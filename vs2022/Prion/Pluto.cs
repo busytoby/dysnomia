@@ -30,7 +30,7 @@ namespace Dysnomia
             Phosphorous.Sigmas.RecordQuaternion(this, "Pluto");
         }
 
-        public void Mate(Quaternion S, Orbital O, Polygamma X)
+        public void Mate(Quaternion S, Orbital O)
         {
             if (Phosphorous.Sigmas.ContainsKey("Van Allen Belt")) throw new Exception("Already Mated");
             Quaternion Q = new Quaternion();

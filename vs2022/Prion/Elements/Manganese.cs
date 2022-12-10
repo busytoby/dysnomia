@@ -25,8 +25,7 @@ namespace Prion.Elements
             ByName.Add(NextEntry(), U);
         }
 
-        private String NextEntry()
-        {
+        private String NextEntry() {
             if (this.Count == 1) return "Gamma";
             if (this.Count == 3) return "Nu";
             if (this.Count == 5) return "Phi";
