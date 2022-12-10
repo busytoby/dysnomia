@@ -31,6 +31,11 @@ namespace Dysnomia
             Spinor PolyAcetylGlutamate = new Spinor(Zinc.Fetch(), Glutamate); // Himalia
             Glutamate.Add(Tin.Sigma); // First Kinase, First Dehydrogenase IsoSpin
             // Addition Product Is The First N-Acetyl-L-Glutamate Phosphate, Telesto
+
+            Polygamma Glutamate2 = new Polygamma(Tin.Sigma); // Tethys Again
+            Spinor PolyAcetylGlutamate2 = new Spinor(Zinc.Fetch(), Glutamate2); // Himalia Again
+            Glutamate.Add(Tin.Sigma); 
+            // Addition Product Is The Second N-Acetyl-L-Glutamate Phosphate, Hyperion
         }
     }
 }
