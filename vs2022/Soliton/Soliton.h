@@ -12,8 +12,22 @@ namespace Dysnomia {
 
 	public:
 		Quark^ Q;
+		Spinor^ Mu;
 		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ T;
 
-		Soliton(Quaternion^, Spinor^, Octonion^);
+		Soliton(Quaternion^, Quaternion^);
+	};
+
+	generic <typename T>
+	public ref class Shift : public List<T> {
+	public:
+		Shift(LinkedList<KeyValuePair<BigInteger, T>>^ In) {
+			LinkedListNode<KeyValuePair<BigInteger, T>>^ INode = In->First;
+			for (int j = 0; j < In->Count; j++)
+			{
+				this->Add(INode->Value.Value);
+				INode = INode->Next;
+			}
+		}
 	};
 }

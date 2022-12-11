@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Polygamma\Polygamma.vcxproj" />
     <ProjectReference Include="..\Quark\Quark.vcxproj" />
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj" />
+    <ProjectReference Include="..\Soliton\Soliton.vcxproj" />
   </ItemGroup>
 
 </Project>
