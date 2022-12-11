@@ -26,7 +26,7 @@ namespace Prion.Elements
             Polygamma E = new Polygamma(Korteweg.Iota.Phi);
             E.Add(Tin.Sigma);
             Spinor X = new Spinor(Korteweg.Alpha.Rho.T.Last.Value.Value, E);
-            Korteweg.Rho.Add(X);
+            Korteweg.Rho.Add(X); // Proof Of Law
         }   
     }
 }
