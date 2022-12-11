@@ -12,8 +12,13 @@ namespace Prion.Elements
         public Octonion Nu;
         public Quark Mu;
         public Copper Rho;
+        public Scandium Alpha;
+        public Calcium Iota;
 
         public Iron(Scandium Lambda, Calcium Eta) {
+            Alpha = Lambda;
+            Iota = Eta;
+
             Mu = new Quark(Lambda.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Lambda.Rho.T.Last.Value.Value); // Water
             Nu = new Octonion(Mu, Eta);
 

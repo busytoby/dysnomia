@@ -14,7 +14,7 @@ namespace Prion.Elements
             Spinor Xi = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Nu.Rho);
             Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(Xi);
-            Iron Korteweg = VY.Push();
+            Iron Korteweg = Vanadium.Push();
 
             Alpha.Nu.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Spinor Phi = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Nu.Rho);

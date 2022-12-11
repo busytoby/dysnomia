@@ -9,6 +9,13 @@ namespace Prion.Elements
 {
     public class Copper : Dysnomia.Soliton
     {
-        public Copper(Quaternion Rho, Quark Delta, Quaternion Nu) : base(Rho, Delta, Nu) { }
+        public Quaternion Rho;
+        public Quaternion Nu;
+        public Quark Delta;
+        public Copper(Quaternion Rho, Quark Delta, Quaternion Nu) : base(Rho, Delta, Nu) {
+            this.Rho = Rho;
+            this.Nu = Nu;
+            this.Delta = Delta;
+        }
     }
 }

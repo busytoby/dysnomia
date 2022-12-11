@@ -9,18 +9,17 @@ namespace Prion.Elements
 {
     public class Vanadium
     {
-        Quaternion Rho;
-        Scandium Eta;
-        Octonion Beta;
+        static Quaternion Rho;
+        static Octonion Beta;
 
         public Vanadium(Spinor Alpha)
         {
             Rho = Alpha.Head();
         }
 
-        public Iron Push()
+        static public Iron Push()
         {
-            Eta = new Scandium(Rho);
+            Scandium Eta = new Scandium(Rho);
             Calcium Phi = new Calcium(Eta.Mu);
 
             return new Iron(Eta, Phi);
