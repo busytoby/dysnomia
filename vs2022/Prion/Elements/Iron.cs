@@ -15,6 +15,8 @@ namespace Prion.Elements
         public Iron(Scandium Rho, Calcium Eta) {
             Mu = new Quark(Rho.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Rho.Rho.T.Last.Value.Value); // Water
             Nu = new Octonion(Mu, Eta);
+
+            Soliton S = new Soliton(Rho.Rho.T.Last.Previous.Value.Value, Mu, Rho.Rho.T.Last.Value.Value);
         }
     }
 }

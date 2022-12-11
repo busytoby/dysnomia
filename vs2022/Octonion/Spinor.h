@@ -30,6 +30,7 @@ namespace Dysnomia {
 
 		Spinor(Quaternion^, Polygamma^);
 		void Transit();
+		void Transit(LinkedList<KeyValuePair<BigInteger, Quaternion^>>^);
 		void IsoSpin();
 		Quaternion^ Head();
 	};

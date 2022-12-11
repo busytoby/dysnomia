@@ -13,7 +13,10 @@ namespace Dysnomia {
 	public:
 		Quark^ Q;
 		Spinor^ Mu;
-		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ T;
+		Octonion^ X;
+		Octonion^ Y;
+		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ XL;
+		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ YL;
 
 		Soliton(Quaternion^, Quark^, Quaternion^);
 	};
