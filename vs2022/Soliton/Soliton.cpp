@@ -12,7 +12,7 @@ namespace Dysnomia {
 		Xi->Add(Nu);
 		Xi->Add(Rho);
 
-		Shift<Octonion^>^ t = gcnew Shift<Octonion^>(T);
+		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Xi.T);
 
 	}
 }

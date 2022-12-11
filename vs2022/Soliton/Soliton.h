@@ -15,7 +15,7 @@ namespace Dysnomia {
 		Spinor^ Mu;
 		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ T;
 
-		Soliton(Quaternion^, Quaternion^);
+		Soliton(Quaternion^, Quark^, Quaternion^);
 	};
 
 	generic <typename T>
