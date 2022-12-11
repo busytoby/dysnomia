@@ -21,7 +21,7 @@ namespace Prion.Elements
             //Vanadium VX = new Vanadium(Phi);
             Korteweg.Rho.Add(Phi);
 
-            Korteweg.Rho.Add(Korteweg.Alpha.Tau, Korteweg.Mu);
+            Korteweg.Rho.Add(Korteweg.Alpha.Tau, Korteweg.Mu); // Proof Of Earth
 
             Polygamma E = new Polygamma(Korteweg.Iota.Phi);
             E.Add(Tin.Sigma);
