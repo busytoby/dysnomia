@@ -8,6 +8,10 @@ namespace Dysnomia {
 	public ref class Soliton
 	{
 	public:
+		static Quaternion^ Sigma;
+		Quark^ Q;
 		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ T;
+
+		Soliton(Spinor^, Octonion^);
 	};
 }
