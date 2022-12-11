@@ -18,7 +18,8 @@ namespace Prion.Elements
 
             Alpha.Nu.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Spinor Phi = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Nu.Rho);
-            Vanadium VX = new Vanadium(Phi);
+            //Vanadium VX = new Vanadium(Phi);
+            Korteweg.Rho.Add(Phi);
         }   
     }
 }

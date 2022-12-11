@@ -13,12 +13,14 @@ namespace Dysnomia {
 	public:
 		Quark^ Q;
 		Spinor^ Mu;
-		Octonion^ X;
-		Octonion^ Y;
+
 		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ XL;
 		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ YL;
 
+		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ V;
+
 		Soliton(Quaternion^, Quark^, Quaternion^);
+		void Add(Spinor^);
 	};
 
 	generic <typename T>

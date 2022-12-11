@@ -11,12 +11,13 @@ namespace Prion.Elements
     {
         public Octonion Nu;
         public Quark Mu;
+        public Copper Rho;
 
-        public Iron(Scandium Rho, Calcium Eta) {
-            Mu = new Quark(Rho.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Rho.Rho.T.Last.Value.Value); // Water
+        public Iron(Scandium Lambda, Calcium Eta) {
+            Mu = new Quark(Lambda.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Lambda.Rho.T.Last.Value.Value); // Water
             Nu = new Octonion(Mu, Eta);
 
-            Soliton S = new Soliton(Rho.Rho.T.Last.Previous.Value.Value, Mu, Rho.Rho.T.Last.Value.Value);
+            Rho = new Copper(Lambda.Rho.T.Last.Previous.Value.Value, Mu, Lambda.Rho.T.Last.Value.Value);
         }
     }
 }
