@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Octonion", "Octonion\Octoni
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quark", "Quark\Quark.vcxproj", "{1986499B-2B92-4E30-930F-36CFB1B019D9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Soliton", "Soliton\Soliton.vcxproj", "{152B6754-8032-4E19-A40A-D29F4E09B800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,18 @@ Global
 		{1986499B-2B92-4E30-930F-36CFB1B019D9}.Release|x64.Build.0 = Release|x64
 		{1986499B-2B92-4E30-930F-36CFB1B019D9}.Release|x86.ActiveCfg = Release|Win32
 		{1986499B-2B92-4E30-930F-36CFB1B019D9}.Release|x86.Build.0 = Release|Win32
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|Any CPU.Build.0 = Debug|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|x64.ActiveCfg = Debug|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|x64.Build.0 = Debug|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|x86.ActiveCfg = Debug|Win32
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Debug|x86.Build.0 = Debug|Win32
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|Any CPU.ActiveCfg = Release|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|Any CPU.Build.0 = Release|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|x64.ActiveCfg = Release|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|x64.Build.0 = Release|x64
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|x86.ActiveCfg = Release|Win32
+		{152B6754-8032-4E19-A40A-D29F4E09B800}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
