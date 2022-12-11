@@ -24,6 +24,9 @@ namespace Prion.Elements
             Korteweg.Rho.Add(Korteweg.Alpha.Tau, Korteweg.Mu);
 
             Polygamma E = new Polygamma(Korteweg.Iota.Phi);
+            E.Add(Tin.Sigma);
+            Spinor X = new Spinor(Korteweg.Alpha.Rho.T.Last.Value.Value, E);
+            Korteweg.Rho.Add(X);
         }   
     }
 }
