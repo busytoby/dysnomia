@@ -7,11 +7,13 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	public ref class Soliton
 	{
-	public:
+	private:
 		static Quaternion^ Sigma;
+
+	public:
 		Quark^ Q;
 		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ T;
 
-		Soliton(Spinor^, Octonion^);
+		Soliton(Quaternion^, Spinor^, Octonion^);
 	};
 }

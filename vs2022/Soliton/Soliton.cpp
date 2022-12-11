@@ -3,7 +3,7 @@
 #include "Soliton.h"
 
 namespace Dysnomia {
-	Soliton::Soliton(Spinor^ Mu, Octonion^ Ypsilon) {
-
+	Soliton::Soliton(Quaternion^ Rho, Spinor^ Mu, Octonion^ Ypsilon) {
+		if (Sigma == nullptr) Sigma = Rho;
 	}
 }
