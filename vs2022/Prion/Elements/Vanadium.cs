@@ -9,8 +9,8 @@ namespace Prion.Elements
 {
     public class Vanadium
     {
-        static Quaternion Rho;
-        static Octonion Beta;
+        static public Quaternion Rho;
+        static public Octonion Beta;
 
         public Vanadium(Spinor Alpha)
         {

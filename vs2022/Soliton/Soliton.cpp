@@ -70,4 +70,26 @@ namespace Dysnomia {
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
 		Q = gcnew Quark(Epsilon[8], Epsilon[i-5], Q->L);
 	}
+
+	void Soliton::Add(Spinor^ Eta, Quark^ Nu) {
+		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
+
+		int i = Epsilon->Count;
+		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
+		for (int j = 1; j < 6; j++) {
+			Spinor^ L = gcnew Spinor(Nu->R, gcnew Polygamma(Epsilon[i - j]));
+			XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
+		}
+
+		Tensor^ Lambda = gcnew Tensor(
+			gcnew Polygamma(Epsilon[i - 5]),
+			gcnew Polygamma(Epsilon[i - 4]),
+			gcnew Polygamma(Epsilon[i - 3]),
+			gcnew Polygamma(Epsilon[i - 2]),
+			gcnew Polygamma(Epsilon[i - 1]));
+
+		Octonion^ X = gcnew Octonion(Q, Lambda);
+		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
+		Q = gcnew Quark(Nu->N, Epsilon[i - 5], Nu->L);
+	}
 }

@@ -21,6 +21,7 @@ namespace Dysnomia {
 
 		Soliton(Quaternion^, Quark^, Quaternion^);
 		void Add(Spinor^);
+		void Add(Spinor^, Quark^);
 	};
 
 	generic <typename T>

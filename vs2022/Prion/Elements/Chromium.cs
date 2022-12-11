@@ -20,6 +20,10 @@ namespace Prion.Elements
             Spinor Phi = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Nu.Rho);
             //Vanadium VX = new Vanadium(Phi);
             Korteweg.Rho.Add(Phi);
+
+            Korteweg.Rho.Add(Korteweg.Alpha.Tau, Korteweg.Mu);
+
+            Polygamma E = new Polygamma(Korteweg.Iota.Phi);
         }   
     }
 }
