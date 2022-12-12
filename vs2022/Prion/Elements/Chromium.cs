@@ -10,6 +10,7 @@ namespace Prion.Elements
     public class Chromium
     {
         public Wavelet W;
+        public Iron Korteweg;
 
         public Chromium(Sulfur Alpha) {
             W = new Wavelet();
@@ -18,7 +19,7 @@ namespace Prion.Elements
             W.L = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Nu.Rho);
             Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(W.L);
-            Iron Korteweg = Vanadium.Push();
+            Korteweg = Vanadium.Push();
 
             Alpha.Nu.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             W.N = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Nu.Rho);

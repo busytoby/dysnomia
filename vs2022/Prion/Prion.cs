@@ -52,6 +52,11 @@ namespace Dysnomia
 
             Quark Q = new Quark(Alpha.Beta.Eta.L.Rho, Zinc.Fetch(), Delta.Beta.Nu.L.Gamma);
             // First Synchronicity Brain
+
+            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Q);
+            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Guest.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Q);
         }
     }
 }
