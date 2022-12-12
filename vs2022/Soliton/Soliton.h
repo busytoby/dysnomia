@@ -11,7 +11,7 @@ namespace Dysnomia {
 		static Quaternion^ Sigma;
 
 	public:
-		Wavelet^ Q;
+		Quark^ Q;
 		Spinor^ Mu;
 
 		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ XL;

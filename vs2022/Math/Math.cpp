@@ -16,10 +16,6 @@ namespace Dysnomia {
         if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->First != nullptr) {
             R = LicenseKeys->First->Value;
             LicenseKeys->RemoveFirst();
-            if (LicenseKeys != nullptr && LicenseKeys->Record) {
-                if (LicenseKeys->RecordKeys == nullptr) LicenseKeys->RecordKeys = gcnew LinkedList<BigInteger>();
-                LicenseKeys->RecordKeys->AddLast(R);
-            }
             return R;
         }
 
@@ -50,10 +46,6 @@ namespace Dysnomia {
         if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->First != nullptr) {
             BigInteger R = CacheKeys->First->Value;
             CacheKeys->RemoveFirst();
-            if (CacheKeys != nullptr && CacheKeys->Record) {
-                if (CacheKeys->RecordKeys == nullptr) CacheKeys->RecordKeys = gcnew LinkedList<BigInteger>();
-                CacheKeys->RecordKeys->AddLast(R);
-            }
             return R;
         }
 

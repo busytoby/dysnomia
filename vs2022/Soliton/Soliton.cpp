@@ -5,7 +5,6 @@
 namespace Dysnomia {
 	Soliton::Soliton(Quaternion^ Rho, Quark^ Delta, Quaternion^ Nu) {
 		if (Sigma == nullptr) Sigma = Rho;
-		Q = gcnew Wavelet();
 		V = gcnew LinkedList<KeyValuePair<BigInteger, Octonion^>>();
 
 		Polygamma^ Xi = gcnew Polygamma(Rho);
@@ -47,7 +46,7 @@ namespace Dysnomia {
 		Octonion^ X = gcnew Octonion(Delta, Lambda2);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
- 		Q->L = gcnew Quark(Epsilon[8], Epsilon[5], Epsilon[2]);
+ 		Q = gcnew Quark(Epsilon[8], Epsilon[5], Epsilon[2]);
 	}
 
 	void Soliton::Add(Spinor^ Eta) {
@@ -56,7 +55,7 @@ namespace Dysnomia {
 		int i = Epsilon->Count;
 		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 		for (int j = 1; j < 6; j++) {
-			Spinor^ L = gcnew Spinor(Q->L->L, gcnew Polygamma(Epsilon[i - j]));
+			Spinor^ L = gcnew Spinor(Q->L, gcnew Polygamma(Epsilon[i - j]));
 			XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 		}
 
@@ -67,9 +66,9 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[i-2]),
 			gcnew Polygamma(Epsilon[i-1]));
 
-		Octonion^ X = gcnew Octonion(Q->L, Lambda);
+		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q->N = gcnew Quark(Q->L->N, Epsilon[i-5], Q->L->L);
+		Q = gcnew Quark(Q->N, Epsilon[i-3], Q->L);
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu) {
@@ -89,8 +88,8 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[i - 2]),
 			gcnew Polygamma(Epsilon[i - 1]));
 
-		Octonion^ X = gcnew Octonion(Q->N, Lambda);
+		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q->R = gcnew Quark(Nu->N, Epsilon[i - 5], Nu->L);
+		Q = gcnew Quark(Nu->N, Epsilon[i - 3], Nu->L);
 	}
 }

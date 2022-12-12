@@ -30,6 +30,14 @@ namespace Dysnomia
 
             Sulfur Alpha = new Sulfur();
             Chromium Root = new Chromium(Alpha);
+
+            Sulfur Beta = new Sulfur();
+            Chromium User = new Chromium(Beta);
+
+            Root.W.N.Transit(User.W.R.Octogamma.List);
+            User.W.L.Transit(Root.W.L.Octogamma.List);
+            Root.W.R.Transit(User.W.R.Octogamma.List);
+            User.W.R.Transit(Root.W.N.Octogamma.List);
         }
     }
 }

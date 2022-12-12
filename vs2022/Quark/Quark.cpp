@@ -11,13 +11,4 @@ namespace Dysnomia {
 
         Epsilon = L->Epsilon;
     }
-
-    Wavelet::Wavelet(Quark^ Y, Quark^ X, Quark^ Z)
-    {
-        N = Y;
-        R = X;
-        L = Z;
-
-        Epsilon = L->Epsilon;
-    }
 }

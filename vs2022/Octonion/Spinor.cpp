@@ -79,4 +79,13 @@ namespace Dysnomia {
 		L->Epsilon = Math::ModPow(Octogamma->List->Last->Value.Key, Octogamma->List->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
 		return L;
 	}
+
+	Wavelet::Wavelet(Spinor^ Y, Spinor^ X, Spinor^ Z)
+	{
+		N = Y;
+		R = X;
+		L = Z;
+
+		Epsilon = L->Epsilon;
+	}
 }

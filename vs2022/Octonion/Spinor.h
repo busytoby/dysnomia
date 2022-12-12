@@ -34,4 +34,16 @@ namespace Dysnomia {
 		void IsoSpin();
 		Quaternion^ Head();
 	};
+
+	public ref class Wavelet {
+	public:
+		BigInteger Epsilon;
+
+		Spinor^ R;
+		Spinor^ N;
+		Spinor^ L;
+
+		Wavelet() {};
+		Wavelet(Spinor^, Spinor^, Spinor^);
+	};
 }
