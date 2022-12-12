@@ -52,6 +52,9 @@ namespace Dysnomia {
 		static String^ ByteArrayToHexString(array<Byte>^);
 		static BigInteger ModPow(BigInteger, BigInteger, BigInteger);
 
+		static Buffers::LinkedLicense^ LicenseKeys;
+		static Buffers::LinkedLicense^ CacheKeys;
+
 		// TODO: Add your methods for this class here.
 	};
 }

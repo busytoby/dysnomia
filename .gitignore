@@ -80,3 +80,7 @@
 /vs2022/Soliton/x64/Debug
 /vs2022/Soliton/Soliton.vcxproj.user
 /vs2022/Soliton/Soliton.vcxproj.filters
+/vs2022/Buffers/obj
+/vs2022/Buffers/x64/Debug
+/vs2022/Buffers/Buffers.vcxproj.user
+/vs2022/Buffers/Buffers.vcxproj.filters

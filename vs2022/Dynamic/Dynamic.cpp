@@ -41,7 +41,6 @@ namespace Dysnomia {
 
 	void Dynamic::Seed()
 	{
-	
 		Base = Math::Random();
 		if (BigInteger::IsNegative(Base)) Base = Base * -1;
 		Secret = Math::Random();

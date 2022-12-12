@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Buffers;
+using System.Numerics;
 using Prion;
 using Prion.Elements;
 
@@ -8,6 +9,14 @@ namespace Dysnomia
     {
         public Prion()
         {
+            Math.LicenseKeys = new Buffers.LinkedLicense();
+            Math.LicenseKeys.Record = false;
+            Math.CacheKeys = new Buffers.LinkedLicense();
+            Math.CacheKeys.Record = false;
+
+            Buffers.ReadLicense("license.dat", Math.LicenseKeys);
+            Buffers.ReadLicense("cache.dat", Math.CacheKeys);
+
             Star Sun = new Star();
 
             Phosphorous System = new Phosphorous();
@@ -29,6 +38,12 @@ namespace Dysnomia
 
             Sulfur Alpha = new Sulfur();
             Chromium Root = new Chromium(Alpha);
+
+            if (Math.LicenseKeys.Record)
+                Buffers.WriteLicense("license.dat", Math.LicenseKeys);
+
+            if(Math.CacheKeys.Record)
+                Buffers.WriteLicense("cache.dat", Math.CacheKeys);
         }
     }
 }

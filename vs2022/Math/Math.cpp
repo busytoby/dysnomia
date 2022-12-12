@@ -13,10 +13,20 @@ namespace Dysnomia {
 
         if (!rnd_Initialized) Initialize_Random();
 
+        if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->First != nullptr) {
+            R = LicenseKeys->First->Value;
+            LicenseKeys->RemoveFirst();
+            return R;
+        }
+
         rnd.NextBytes(bytes);
         //bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
         R = BigInteger(bytes);
         while (R > Prime) R = R / 2;
+
+        if (LicenseKeys != nullptr && LicenseKeys->Record) {
+            LicenseKeys->AddLast(R);
+        }
 
 		return R;
 	}
@@ -32,12 +42,23 @@ namespace Dysnomia {
     }
 
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
+        if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->First != nullptr) {
+            BigInteger R = CacheKeys->First->Value;
+            CacheKeys->RemoveFirst();
+            return R;
+        }
+
         BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
         bool Negative = false;
         if (BigInteger::IsNegative(A)) Negative = !Negative;
         if (BigInteger::IsNegative(B)) Negative = !Negative;
         if (BigInteger::IsNegative(C)) Negative = !Negative;
         if (Negative) Result = Result * -1;
+
+        if (CacheKeys != nullptr && CacheKeys->Record) {
+            CacheKeys->AddLast(Result);
+        }
+
         return Result;
     }
 }
