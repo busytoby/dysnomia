@@ -38,6 +38,20 @@ namespace Dysnomia
             User.W.L.Transit(Root.W.L.Octogamma.List);
             Root.W.R.Transit(User.W.R.Octogamma.List);
             User.W.R.Transit(Root.W.N.Octogamma.List);
+
+            Sulfur Delta = new Sulfur();
+            Chromium Guest = new Chromium(Delta);
+
+            Sulfur Lambda = new Sulfur();
+            Chromium Observer = new Chromium(Lambda);
+
+            Guest.W.N.Transit(Observer.W.R.Octogamma.List);
+            Observer.W.L.Transit(Guest.W.L.Octogamma.List);
+            Guest.W.R.Transit(Observer.W.R.Octogamma.List);
+            Observer.W.R.Transit(Guest.W.N.Octogamma.List);
+
+            Quark Q = new Quark(Alpha.Beta.Eta.L.Rho, Zinc.Fetch(), Delta.Beta.Nu.L.Gamma);
+            // First Synchronicity Brain
         }
     }
 }
