@@ -57,6 +57,28 @@ namespace Dysnomia
             Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
             Root.Korteweg.Rho.Add(Guest.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
             Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Q);
+
+            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Guest.Korteweg.Alpha.Tau, Q);
+            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Q);
+            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
+
+            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Guest.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Observer.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, User.Korteweg.Mu);
+
+            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Q);
+            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, User.Korteweg.Mu);
+
+            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Q);
+
+            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Phi"], User.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Nu"], User.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Gamma"], User.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Sigma"], User.Korteweg.Mu);
+            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Rho"], User.Korteweg.Mu);
+
+            String Word = "Zuo";
         }
     }
 }
