@@ -35,6 +35,7 @@ namespace Dysnomia {
 		Quark^ N;
 		Quark^ L;
 
+		Wavelet() {};
 		Wavelet(Quark^, Quark^, Quark^);
 	};
 
