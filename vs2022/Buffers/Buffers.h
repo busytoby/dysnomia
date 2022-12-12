@@ -12,6 +12,7 @@ namespace Dysnomia {
 		public:
 			bool Loaded = false;
 			bool Record = false;
+			LinkedList<BigInteger>^ RecordKeys;
 			LinkedListNode<BigInteger>^ KeyPtr;
 		};
 

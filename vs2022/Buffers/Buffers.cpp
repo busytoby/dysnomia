@@ -21,7 +21,7 @@ namespace Dysnomia {
         FILE* outfile = nullptr;
         fopen_s(&outfile, FileNamePtr, "wb");
        
-        LicenseData->KeyPtr = LicenseData->First;
+        LicenseData->KeyPtr = LicenseData->RecordKeys->First;
         do {
             size_t length;
             void* bytes;
