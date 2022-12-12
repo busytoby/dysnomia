@@ -26,4 +26,16 @@ namespace Dysnomia {
 
 		Quark(Quaternion^, Quaternion^, Quaternion^);
 	};
+
+	public ref class Wavelet {
+	public:
+		BigInteger Epsilon;
+
+		Quark^ R;
+		Quark^ N;
+		Quark^ L;
+
+		Wavelet(Quark^, Quark^, Quark^);
+	};
+
 }
