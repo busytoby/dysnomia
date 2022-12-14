@@ -88,6 +88,8 @@ namespace Dysnomia
             YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
+            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
+            YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
             Titanium WS = new Titanium(Y.Nu.Mu, Y.Nu);
         }
     }
