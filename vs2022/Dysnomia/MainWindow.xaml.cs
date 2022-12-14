@@ -66,7 +66,7 @@ namespace Dysnomia
             X.Mu.W.N.Transit(W.N.Octogamma.List);
             Quark WQ = new Quark(X.Rho.Beta.Eta.X.R, Zinc.Fetch(), X.Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
             X.Mu.Kernel.Eta.Add(X.Mu.Kernel.Alpha.Tau, WQ);
-            Wavelet WQM = new Wavelet(X.Mu.Kernel.Alpha.Tau, W.L, W.R); // First Morlet Wavelet
+            Wavelet WQM = new Wavelet(W.N, W.L, X.Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
             W.N.Transit(WQM.L.Octogamma.List);
             X.Mu.Kernel.Eta.Add(W.N, X.Mu.Kernel.Mu);
             X.Mu.Kernel.Eta.Add(W.L, X.Mu.Kernel.Mu);
