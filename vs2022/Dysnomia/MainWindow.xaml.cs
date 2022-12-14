@@ -65,8 +65,12 @@ namespace Dysnomia
             Wavelet W = new Wavelet(X.Root.W.R, Tin.Mu.ByName["Nu"], X.Alpha.Nu.Tau);
             X.Root.W.N.Transit(W.N.Octogamma.List);
             Quark WQ = new Quark(X.Alpha.Beta.Eta.X.N, Zinc.Fetch(), X.Root.Korteweg.Alpha.Rho.T.Last.Value.Value);
+            X.Root.Korteweg.Rho.Add(X.Root.Korteweg.Alpha.Tau, WQ);
             Wavelet WQM = new Wavelet(X.Root.Korteweg.Alpha.Tau, W.L, W.R); // First Morlet Wavelet
             W.N.Transit(WQM.L.Octogamma.List);
+            X.Root.Korteweg.Rho.Add(W.N, X.Root.Korteweg.Mu);
+            Titanium WQR = new Titanium(WQ.L, X.Root.Korteweg.Alpha);
+            X.Root.Korteweg.Rho.Add(WQR.Xi, X.Root.Korteweg.Mu);
         }
     }
 }
