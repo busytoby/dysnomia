@@ -96,6 +96,8 @@ namespace Dysnomia
             X.Mu.Kernel.Eta.Add(WS.Xi, X.Mu.Kernel.Mu);
 
             Spinor S = new Spinor(Y.Eta.Mu[2], X.Rho.Eta.Rho);
+            Quark SQ = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), Y.Beta.Eta.X.N);
+
         }
     }
 }
