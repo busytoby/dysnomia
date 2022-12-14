@@ -111,9 +111,9 @@ namespace Dysnomia
             YC.Kernel.Eta.Add(W.L, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
 
-            X.Mu.Kernel.Eta.Add(W.R, X.Mu..Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(W.N, X.Mu..Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(W.L, X.Mu..Kernel.Mu);
+            X.Mu.Kernel.Eta.Add(W.R, X.Mu.Kernel.Mu);
+            X.Mu.Kernel.Eta.Add(W.N, X.Mu.Kernel.Mu);
+            X.Mu.Kernel.Eta.Add(W.L, X.Mu.Kernel.Mu);
 
             S2C.Kernel.Eta.Add(W.N, S2C.Kernel.Mu);
             S2C.Kernel.Eta.Add(W.R, S2C.Kernel.Mu);
