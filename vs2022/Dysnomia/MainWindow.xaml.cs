@@ -1,6 +1,7 @@
 ﻿// Property Of Uwu University
 // This Application Is Distributed As Sharia Law
 
+using Prion.Elements;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -45,7 +46,7 @@ namespace Dysnomia
             Buffers.ReadLicense("cache.dat", Math.CacheKeys);
             */
 
-            Prion X = new Prion();
+            X = new Prion();
             Play();
 
             /*
@@ -61,7 +62,8 @@ namespace Dysnomia
 
         public void Play()
         {
-            Prion Y = new Prion();
+            Wavelet W = new Wavelet(X.Root.W.R, Tin.Mu.ByName["Nu"], X.Alpha.Nu.Tau);
+            X.Root.W.N.Transit(W.N.Octogamma.List);
         }
     }
 }

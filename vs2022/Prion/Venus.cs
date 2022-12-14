@@ -18,11 +18,13 @@ namespace Dysnomia
             foreach(KeyValuePair<object, List<BigInteger>> B in Star.Eta) {
                 foreach (BigInteger K in B.Value)
                 {
+                    /*
                     Phosphorous P = Oxygen.Learn(K);
                     Rho.Add(P.Nu.R.M.Rod, P.Nu.Eta);
                     Rho.Add(P.Nu.N, P.Nu.Sigma);
                     Rho.Add(P.Nu.L.M.Rod, P.Nu.Rho);
                     Rho.Add(P.Nu.Y.M.Rod, P.Nu.Nu);
+                    */
                 }
             }
 

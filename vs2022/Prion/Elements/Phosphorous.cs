@@ -17,11 +17,11 @@ namespace Prion.Elements
 
         static private Venus V;
 
-        public Parallax Nu;
+        static public Parallax Nu;
 
         public Phosphorous()
         {
-            if (Locks != null || Xi != null || V != null) return;
+            if (Locks != null || Xi != null || Sigmas != null || V != null || Nu != null) return;
 
             Locks = new Dictionary<BigInteger, Mutex>();
             Xi = new Neon();
