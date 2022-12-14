@@ -24,7 +24,7 @@ namespace Prion.Elements
             Beta = new Titanium(Nu.Mu, Eta);
         }
 
-        public Sulfur(Quaternion Y)
+        public Sulfur(Dysnomia.Quaternion Y)
         {
             Nu = new Scandium(Y);
             Eta = new Scandium();
@@ -32,7 +32,7 @@ namespace Prion.Elements
             Beta = new Titanium(Nu.Mu, Eta);
         }
 
-        public Sulfur(Quaternion Y, Quaternion X)
+        public Sulfur(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
             Nu = new Scandium(Y);
             Eta = new Scandium(X);

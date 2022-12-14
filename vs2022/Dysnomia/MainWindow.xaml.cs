@@ -81,7 +81,7 @@ namespace Dysnomia
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
 
-            Sulfur Y = new Sulfur(W.L.Octogamma.List.First.Value.Value.Nu);
+            Sulfur Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
             Chromium YC = new Chromium(Y);
             YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
         }
