@@ -62,7 +62,7 @@ namespace Dysnomia
 
         public void Play()
         {
-            Sulfur S = X.Reproduce();
+            Sulfur S = X.Replicate();
         }
     }
 }
