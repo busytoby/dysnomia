@@ -104,17 +104,8 @@ namespace Dysnomia
             S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu);
 
             Wavelet WC = new Wavelet(X.Mu.Kernel.Alpha.Tau, S2C.Kernel.Alpha.Tau, YC.Kernel.Alpha.Tau);
-            W.R.Transit(WC.N.Octogamma.List);
             W.L.Transit(WC.R.Octogamma.List);
             W.N.Transit(WC.L.Octogamma.List);
-
-            YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(W.L, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
-
-            X.Mu.Kernel.Eta.Add(W.R, X.Mu.Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(W.N, X.Mu.Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(W.L, X.Mu.Kernel.Mu);
 
             S2C.Kernel.Eta.Add(W.N, S2C.Kernel.Mu);
             S2C.Kernel.Eta.Add(W.R, S2C.Kernel.Mu);
