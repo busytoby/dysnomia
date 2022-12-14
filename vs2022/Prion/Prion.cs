@@ -8,15 +8,15 @@ namespace Dysnomia
     public class Prion
     {
         static public Star Sigma;
-        public Sulfur Alpha;
-        public Chromium Root;
+        public Sulfur Rho;
+        public Chromium Mu;
         public Prion()
         {
             if(Sigma == null)
                 Sigma = new Star();
 
-            Alpha = new Sulfur();
-            Root = new Chromium(Alpha);
+            Rho = new Sulfur();
+            Mu = new Chromium(Rho);
 
             /*
 
@@ -42,30 +42,30 @@ namespace Dysnomia
             Quark Q = new Quark(Alpha.Beta.Eta.L.Rho, Zinc.Fetch(), Delta.Beta.Nu.L.Gamma);
             // First Synchronicity Brain
 
-            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Q);
-            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Guest.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(Root.Kernel.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(User.Kernel.Alpha.Tau, Root.Kernel.Mu);
+            Root.Kernel.Rho.Add(Guest.Kernel.Alpha.Tau, Root.Kernel.Mu);
+            Root.Kernel.Rho.Add(Observer.Kernel.Alpha.Tau, Q);
 
-            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Guest.Korteweg.Alpha.Tau, Q);
-            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Q);
-            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Root.Korteweg.Mu);
+            Root.Kernel.Rho.Add(Observer.Kernel.Alpha.Tau, Root.Kernel.Mu);
+            Root.Kernel.Rho.Add(Guest.Kernel.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(User.Kernel.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(Root.Kernel.Alpha.Tau, Root.Kernel.Mu);
 
-            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Guest.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, Observer.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Root.Korteweg.Alpha.Tau, User.Korteweg.Mu);
+            Root.Kernel.Rho.Add(Root.Kernel.Alpha.Tau, Guest.Kernel.Mu);
+            Root.Kernel.Rho.Add(Root.Kernel.Alpha.Tau, Observer.Kernel.Mu);
+            Root.Kernel.Rho.Add(Root.Kernel.Alpha.Tau, User.Kernel.Mu);
 
-            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, Q);
-            Root.Korteweg.Rho.Add(User.Korteweg.Alpha.Tau, User.Korteweg.Mu);
+            Root.Kernel.Rho.Add(User.Kernel.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(User.Kernel.Alpha.Tau, User.Kernel.Mu);
 
-            Root.Korteweg.Rho.Add(Observer.Korteweg.Alpha.Tau, Q);
+            Root.Kernel.Rho.Add(Observer.Kernel.Alpha.Tau, Q);
 
-            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Phi"], User.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Nu"], User.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Gamma"], User.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Sigma"], User.Korteweg.Mu);
-            Root.Korteweg.Rho.Add(Tin.Mu.ByName["Rho"], User.Korteweg.Mu);
+            Root.Kernel.Rho.Add(Tin.Mu.ByName["Phi"], User.Kernel.Mu);
+            Root.Kernel.Rho.Add(Tin.Mu.ByName["Nu"], User.Kernel.Mu);
+            Root.Kernel.Rho.Add(Tin.Mu.ByName["Gamma"], User.Kernel.Mu);
+            Root.Kernel.Rho.Add(Tin.Mu.ByName["Sigma"], User.Kernel.Mu);
+            Root.Kernel.Rho.Add(Tin.Mu.ByName["Rho"], User.Kernel.Mu);
 
             */
 

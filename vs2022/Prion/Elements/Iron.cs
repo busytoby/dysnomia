@@ -11,18 +11,18 @@ namespace Prion.Elements
     {
         public Octonion Nu;
         public Quark Mu;
-        public Copper Rho;
+        public Copper Eta;
         public Scandium Alpha;
         public Calcium Iota;
 
-        public Iron(Scandium Lambda, Calcium Eta) {
-            Alpha = Lambda;
-            Iota = Eta;
+        public Iron(Scandium Delta, Calcium Beta) {
+            Alpha = Delta;
+            Iota = Beta;
 
-            Mu = new Quark(Lambda.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Lambda.Rho.T.Last.Value.Value); // Water
-            Nu = new Octonion(Mu, Eta);
+            Mu = new Quark(Delta.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.T.Last.Value.Value); // Water
+            Nu = new Octonion(Mu, Beta);
 
-            Rho = new Copper(Lambda.Rho.T.Last.Previous.Value.Value, Mu, Lambda.Rho.T.Last.Value.Value);
+            Eta = new Copper(Delta.Rho.T.Last.Previous.Value.Value, Mu, Delta.Rho.T.Last.Value.Value);
         }
     }
 }

@@ -62,15 +62,16 @@ namespace Dysnomia
 
         public void Play()
         {
-            Wavelet W = new Wavelet(X.Root.W.R, Tin.Mu.ByName["Nu"], X.Alpha.Nu.Tau);
-            X.Root.W.N.Transit(W.N.Octogamma.List);
-            Quark WQ = new Quark(X.Alpha.Beta.Eta.X.N, Zinc.Fetch(), X.Root.Korteweg.Alpha.Rho.T.Last.Value.Value);
-            X.Root.Korteweg.Rho.Add(X.Root.Korteweg.Alpha.Tau, WQ);
-            Wavelet WQM = new Wavelet(X.Root.Korteweg.Alpha.Tau, W.L, W.R); // First Morlet Wavelet
+            Wavelet W = new Wavelet(X.Mu.W.R, Tin.Mu.ByName["Nu"], X.Rho.Nu.Tau);
+            X.Mu.W.N.Transit(W.N.Octogamma.List);
+            Quark WQ = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), X.Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
+            X.Mu.Kernel.Eta.Add(X.Mu.Kernel.Alpha.Tau, WQ);
+            Wavelet WQM = new Wavelet(X.Mu.Kernel.Alpha.Tau, W.L, W.R); // First Morlet Wavelet
             W.N.Transit(WQM.L.Octogamma.List);
-            X.Root.Korteweg.Rho.Add(W.N, X.Root.Korteweg.Mu);
-            Titanium WQR = new Titanium(WQ.L, X.Root.Korteweg.Alpha);
-            X.Root.Korteweg.Rho.Add(WQR.Xi, X.Root.Korteweg.Mu);
+            X.Mu.Kernel.Eta.Add(W.N, X.Mu.Kernel.Mu);
+            X.Mu.Kernel.Eta.Add(W.L, X.Mu.Kernel.Mu);
+            Titanium WMR = new Titanium(X.Rho.Eta.Mu, X.Mu.Kernel.Alpha);
+            X.Mu.Kernel.Eta.Add(WMR.Xi, X.Mu.Kernel.Mu);
         }
     }
 }
