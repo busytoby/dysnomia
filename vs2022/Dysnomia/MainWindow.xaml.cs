@@ -76,6 +76,10 @@ namespace Dysnomia
             Titanium WL = new Titanium(X.Rho.Eta.Mu, X.Rho.Eta);
             X.Mu.Kernel.Eta.Add(X.Rho.Nu.Tau, X.Mu.Kernel.Mu);
             X.Mu.Kernel.Eta.Add(WL.Xi, WQ);
+
+            Wavelet WM = new Wavelet(WL.Xi, W.L, X.Mu.Kernel.Alpha.Tau);
+            W.L.Transit(WM.R.Octogamma.List);
+            W.L.Transit(WM.L.Octogamma.List);
         }
     }
 }
