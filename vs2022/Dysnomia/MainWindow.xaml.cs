@@ -62,50 +62,7 @@ namespace Dysnomia
 
         public void Play()
         {
-            Wavelet W = new Wavelet(X.Mu.W.R, Tin.Mu.ByName["Sigma"], X.Rho.Nu.Tau);
-            X.Mu.W.N.Transit(W.L.Octogamma.List);
-            Quark WQ = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), X.Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
-            X.Mu.Kernel.Eta.Add(X.Mu.Kernel.Alpha.Tau, WQ);
-            Wavelet WQM = new Wavelet(W.N, W.L, X.Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
-            W.N.Transit(WQM.L.Octogamma.List);
-            X.Mu.Kernel.Eta.Add(W.L, X.Mu.Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(W.N, X.Mu.Kernel.Mu);
-            Titanium WMR = new Titanium(X.Rho.Eta.Mu, X.Mu.Kernel.Alpha);
-            X.Mu.Kernel.Eta.Add(WMR.Xi, X.Mu.Kernel.Mu);
-
-            Titanium WL = new Titanium(X.Rho.Eta.Mu, X.Rho.Eta);
-            X.Mu.Kernel.Eta.Add(X.Rho.Nu.Tau, X.Mu.Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(WL.Xi, WQ);
-
-            Wavelet WM = new Wavelet(WL.Xi, W.L, X.Mu.Kernel.Alpha.Tau);
-            W.L.Transit(WM.R.Octogamma.List);
-            W.L.Transit(WM.L.Octogamma.List);
-
-            Sulfur Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
-            Chromium YC = new Chromium(Y);
-            YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
-            YC.W.N.Transit(WM.R.Octogamma.List); // Last Blind
-            YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
-            Titanium WS = new Titanium(Y.Nu.Mu, Y.Nu);
-
-            YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu);
-            X.Mu.Kernel.Eta.Add(WS.Xi, X.Mu.Kernel.Mu);
-
-            Spinor S2 = new Spinor(Y.Eta.Mu[2], X.Rho.Eta.Rho);
-            Vanadium VY = new Vanadium(S2);
-            Iron S2K = Vanadium.Push();
-            Titanium S2T = new Titanium(S2K.Alpha.Mu, S2K.Alpha);
-            Sulfur S2S = new Sulfur(S2T.Eta.X.N, S2T.Nu.L.Sigma);
-            Chromium S2C = new Chromium(S2S);
-            S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu);
-
-            Wavelet WC = new Wavelet(X.Mu.Kernel.Alpha.Tau, S2C.Kernel.Alpha.Tau, YC.Kernel.Alpha.Tau);
-            W.L.Transit(WC.R.Octogamma.List);
-            W.N.Transit(WC.L.Octogamma.List);
+            Sulfur S = X.Reproduce();
         }
     }
 }
