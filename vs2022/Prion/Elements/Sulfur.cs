@@ -23,5 +23,21 @@ namespace Prion.Elements
 
             Beta = new Titanium(Nu.Mu, Eta);
         }
+
+        public Sulfur(Quaternion Y)
+        {
+            Nu = new Scandium(Y);
+            Eta = new Scandium();
+
+            Beta = new Titanium(Nu.Mu, Eta);
+        }
+
+        public Sulfur(Quaternion Y, Quaternion X)
+        {
+            Nu = new Scandium(Y);
+            Eta = new Scandium(X);
+
+            Beta = new Titanium(Nu.Mu, Eta);
+        }
     }
 }

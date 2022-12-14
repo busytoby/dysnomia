@@ -80,6 +80,10 @@ namespace Dysnomia
             Wavelet WM = new Wavelet(WL.Xi, W.L, X.Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
+
+            Sulfur Y = new Sulfur(W.L.Octogamma.List.First.Value.Value.Nu);
+            Chromium YC = new Chromium(Y);
+            YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
         }
     }
 }
