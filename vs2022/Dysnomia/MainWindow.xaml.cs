@@ -28,6 +28,8 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Prion X;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace Dysnomia
             */
 
             Prion X = new Prion();
+            Play();
 
             /*
             if (Math.LicenseKeys.Record)
@@ -54,6 +57,11 @@ namespace Dysnomia
             */
 
             int a = 999; // Girls Planet
+        }
+
+        public void Play()
+        {
+            Prion Y = new Prion();
         }
     }
 }

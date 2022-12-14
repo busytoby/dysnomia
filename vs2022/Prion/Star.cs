@@ -12,11 +12,13 @@ namespace Dysnomia
     {
         static public Carbon Alpha;
         static public Boron Eta;
+        static public Phosphorous Gamma;
 
         public Star()
         {
             if (Alpha == null) Alpha = new Carbon();
             if (Eta == null) Eta = new Boron();
+            if (Gamma == null) Gamma = new Phosphorous();
         }
 
         static public Affinity GetAffinityByName(String Name)
