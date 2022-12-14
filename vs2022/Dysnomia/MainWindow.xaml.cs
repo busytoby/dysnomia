@@ -62,7 +62,7 @@ namespace Dysnomia
 
         public void Play()
         {
-            Wavelet W = new Wavelet(X.Mu.W.R, Tin.Mu.ByName["Nu"], X.Rho.Nu.Tau);
+            Wavelet W = new Wavelet(X.Mu.W.R, Tin.Mu.ByName["Sigma"], X.Rho.Nu.Tau);
             X.Mu.W.N.Transit(W.N.Octogamma.List);
             Quark WQ = new Quark(X.Rho.Beta.Eta.X.R, Zinc.Fetch(), X.Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
             X.Mu.Kernel.Eta.Add(X.Mu.Kernel.Alpha.Tau, WQ);
