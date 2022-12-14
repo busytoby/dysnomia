@@ -94,6 +94,8 @@ namespace Dysnomia
 
             YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu);
             X.Mu.Kernel.Eta.Add(WS.Xi, X.Mu.Kernel.Mu);
+
+            Spinor S = new Spinor(Y.Eta.Mu[2], X.Rho.Eta.Rho);
         }
     }
 }
