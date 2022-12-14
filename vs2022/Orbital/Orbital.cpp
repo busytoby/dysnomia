@@ -107,7 +107,7 @@ namespace Dysnomia {
 		Saturate(N->Foundation, N->Channel);
 		
 		Eta = Math::ModPow(N->Foundation, N->Signal, Math::Prime);
-		Rho = Math::ModPow(Eta, N->Channel, Math::CatalanPrime);
+		Rho = Math::ModPow(Eta, N->Channel, Math::Prime);
 		if (!Sigma.IsZero) throw gcnew OrbitalException(1, "Compounding Sigma");
 		Sigma = Rho;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {

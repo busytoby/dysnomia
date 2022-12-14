@@ -52,10 +52,10 @@ namespace Dysnomia {
 			for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
 				Xi = BigInteger::Add(Xi, G.Value->Manifold);
 			}
-			Xi = Xi % Math::CatalanPrime;
+			Xi = Xi % Math::Prime;
 		}
 		else
-			Xi = Math::ModPow(Cone->Signal, Rod->Channel, Math::AzimuthPrime);
+			Xi = Math::ModPow(Cone->Signal, Rod->Channel, Math::Prime);
 		OpenManifolds(Xi);
 	}
 

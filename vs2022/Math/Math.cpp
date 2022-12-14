@@ -8,6 +8,7 @@ namespace Dysnomia {
     }
 
 	BigInteger Math::Random() {
+        if (Prime.IsZero) throw gcnew Exception("Prime Undeclared");
         array<System::Byte>^ bytes = Prime.ToByteArray();
         BigInteger R;
 

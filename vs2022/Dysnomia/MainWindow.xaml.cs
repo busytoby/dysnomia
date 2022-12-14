@@ -32,21 +32,26 @@ namespace Dysnomia
         {
             InitializeComponent();
 
+            Math.Prime = Math.MotzkinPrime;
+            /*
             Math.LicenseKeys = new Buffers.LinkedLicense();
             Math.LicenseKeys.Record = true;
             Math.CacheKeys = new Buffers.LinkedLicense();
             Math.CacheKeys.Record = true;
-
+            
             Buffers.ReadLicense("license.dat", Math.LicenseKeys);
             Buffers.ReadLicense("cache.dat", Math.CacheKeys);
+            */
 
             Prion X = new Prion();
 
+            /*
             if (Math.LicenseKeys.Record)
                 Buffers.WriteLicense("license.dat", Math.LicenseKeys);
 
             if (Math.CacheKeys.Record)
                 Buffers.WriteLicense("cache.dat", Math.CacheKeys);
+            */
 
             int a = 999; // Girls Planet
         }
