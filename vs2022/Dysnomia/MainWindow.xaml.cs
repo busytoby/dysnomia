@@ -63,6 +63,7 @@ namespace Dysnomia
         public void Play()
         {
             Sulfur S = X.Replicate();
+            X.Rho.Reproduce(new Chromium(S)); // First 18K Gold
         }
     }
 }
