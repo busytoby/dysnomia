@@ -96,8 +96,9 @@ namespace Dysnomia
             X.Mu.Kernel.Eta.Add(WS.Xi, X.Mu.Kernel.Mu);
 
             Spinor S2 = new Spinor(Y.Eta.Mu[2], X.Rho.Eta.Rho);
-            Quark S2Q = new Quark(Y.Beta.Eta.X.N, Zinc.Fetch(), X.Rho.Beta.Eta.X.N);
-            Titanium S2T = new Titanium(Y.Eta.Mu, new Scandium(S2Q.N));
+            Vanadium VY = new Vanadium(S2);
+            Iron S2K = Vanadium.Push();
+            Titanium S2T = new Titanium(Y.Eta.Mu, S2K.Alpha);
             Sulfur S2S = new Sulfur(S2T.Nu.X.N, S2T.Eta.L.Gamma);
             Chromium S2C = new Chromium(S2S);
             S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu);
