@@ -83,6 +83,11 @@ namespace Dysnomia
             Polygamma Platinum = new Polygamma(Rhodium);
 
             Chlorine<Quaternion> Garnet = new Chlorine<Quaternion>(Xenon.Octogamma.List);
+            Spinor Garnet_L = new Spinor(Ruthenium, Platinum);
+            Spinor Garnet_N = new Spinor(Garnet[1], Platinum);
+            Spinor Garnet_R = new Spinor(Rhodium, Platinum);
+            Wavelet GM = new Wavelet(Garnet_N, Garnet_R, Garnet_L); // First Garnet Wavelet
+            X.Mu.W.N.Transit(GM.L.Octogamma.List);
         }
     }
 }
