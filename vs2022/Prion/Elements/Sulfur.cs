@@ -59,7 +59,7 @@ namespace Prion.Elements
 
         public Sulfur Reproduce(Chromium Mu)
         {
-            Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Kappa.Tau);
+            Wavelet W = new Wavelet(Mu.W.R, (Xi != null) ? Xi : Tin.Mu.ByName["Sigma"], Kappa.Tau);
             Mu.W.N.Transit(W.L.Octogamma.List);
             Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, Alpha);
             Wavelet WQM = new Wavelet(W.N, W.L, Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
@@ -70,6 +70,8 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(WMR.Xi, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha);
+
+            _Mu = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.L); // X, N, R, L
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
