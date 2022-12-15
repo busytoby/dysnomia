@@ -70,6 +70,9 @@ namespace Dysnomia
             Sulfur M5 = X.Rho.Reproduce(new Chromium(M4));
             Orbital Barium = new Orbital(S.Y.Beta.Eta.X.N.Gamma);
             BigInteger Cadmium = Barium.Sigma;
+            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
+            Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Indium.Octogamma.List);
+            Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
         }
     }
 }
