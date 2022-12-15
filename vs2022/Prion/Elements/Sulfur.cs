@@ -11,42 +11,51 @@ namespace Prion.Elements
 {
     public class Sulfur
     {
-        public Scandium Nu;
+        public Scandium Kappa;
         public Scandium Eta;
 
         public Titanium Beta;
+        public Titanium Lambda;
+
+        public Wavelet Mu;
+
+        public Quark Iota;
+
+        public Dysnomia.Quaternion Phi;
+        public Dysnomia.Quaternion Tau;
 
         public Sulfur Y;
 
         public Sulfur()
         {
-            Nu = new Scandium(); // Telesto
+            Kappa = new Scandium(); // Telesto
             Eta = new Scandium(); // Hyperion
 
-            Beta = new Titanium(Nu.Mu, Eta);
+            Beta = new Titanium(Kappa.Mu, Eta);
+            Lambda = new Titanium(Eta.Mu, Eta);
         }
 
         public Sulfur(Dysnomia.Quaternion Y)
         {
-            Nu = new Scandium(Y);
+            Kappa = new Scandium(Y);
             Eta = new Scandium();
 
-            Beta = new Titanium(Nu.Mu, Eta);
+            Beta = new Titanium(Kappa.Mu, Eta);
+            Lambda = new Titanium(Eta.Mu, Eta);
         }
 
         public Sulfur(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
         {
-            Nu = new Scandium(Y);
+            Kappa = new Scandium(Y);
             Eta = new Scandium(X);
 
-            Beta = new Titanium(Nu.Mu, Eta);
+            Beta = new Titanium(Kappa.Mu, Eta);
+            Lambda = new Titanium(Eta.Mu, Eta);
         }
 
         public Sulfur Reproduce(Chromium Mu)
         {
-            if (Y != null && Y.Y == null && Mu.X == null && Nu.Rho.T.Last.Value.Value.Gamma.Rod.R.Count < 8) { throw new Exception("No ."); }
-
-            Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Nu.Tau);
+            Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Kappa.Tau);
             Mu.W.N.Transit(W.L.Octogamma.List);
             Quark WQ = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
             Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, WQ);
@@ -56,12 +65,10 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(W.N, Mu.Kernel.Mu);
             Titanium WMR = new Titanium(Eta.Mu, Mu.Kernel.Alpha);
             Mu.Kernel.Eta.Add(WMR.Xi, Mu.Kernel.Mu);
+            Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
+            Mu.Kernel.Eta.Add(Lambda.Xi, WQ);
 
-            Titanium WL = new Titanium(Eta.Mu, Eta);
-            Mu.Kernel.Eta.Add(Nu.Tau, Mu.Kernel.Mu);
-            Mu.Kernel.Eta.Add(WL.Xi, WQ);
-
-            Wavelet WM = new Wavelet(WL.Xi, W.L, Mu.Kernel.Alpha.Tau);
+            Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
 
@@ -75,7 +82,7 @@ namespace Prion.Elements
             YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
-            Titanium WS = new Titanium(Y.Nu.Mu, Y.Nu);
+            Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
 
             YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu);
             Mu.Kernel.Eta.Add(WS.Xi, Mu.Kernel.Mu);
@@ -96,37 +103,35 @@ namespace Prion.Elements
             return S2S;
         }
 
-        public Sulfur Persist(Chromium Mu)
+        public Titanium Indicate(Sulfur S)
         {
-            Sulfur S = Reproduce(Mu);
-            Sulfur M = Reproduce(new Chromium(S)); // First 18K Gold
-            Orbital Barium = new Orbital(S.Y.Beta.Eta.X.N.Gamma);
-            BigInteger Cadmium = Barium.Sigma;
-            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
-            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Indium.Octogamma.List);
-            Dysnomia.Quaternion Iodine_L = Indium.Octogamma.List.Last.Value.Value;
-            Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
+            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Kappa.Rho);
+            Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.Octogamma.List);
+            Titanium Antimony = new Titanium(Selenium, S.Y.Kappa);
+            Tau = Indium.Octogamma.List.Last.Value.Value;
+            return Antimony;
+        }
+
+        public Sulfur Persist(Chromium Theta)
+        {
+            if (Mu != null) throw new Exception("Already Persistent");
+            Sulfur S = Reproduce(Theta);
+            Titanium Antimony = Indicate(S);
             Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
-            Orbital Krypton = new Orbital(Arsenic);
-            BigInteger Rubidium = Krypton.Sigma;
             Spinor Xenon = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
             Dysnomia.Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
             Dysnomia.Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
             Polygamma Platinum = new Polygamma(Rhodium);
 
             Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xenon.Octogamma.List);
-            Spinor Garnet_L = new Spinor(Ruthenium, Platinum);
-            Spinor Garnet_N = new Spinor(Garnet[1], Platinum);
-            Spinor Garnet_R = new Spinor(Rhodium, Platinum);
-            Wavelet GM = new Wavelet(Garnet_N, Garnet_R, Garnet_L); // First Garnet Wavelet
-            Mu.W.N.Transit(GM.L.Octogamma.List);
-            Chlorine<Dysnomia.Quaternion> Tellurium2 = new Chlorine<Dysnomia.Quaternion>(GM.L.Octogamma.List);
-            Calcium Gallium = new Calcium(Tellurium2);
+            Mu = new Wavelet(new Spinor(Garnet[1], Platinum), new Spinor(Rhodium, Platinum), new Spinor(Ruthenium, Platinum));
+            Theta.W.N.Transit(Mu.L.Octogamma.List);
+            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
+            Calcium Aluminium = new Calcium(Tellurium);
 
-            Quark Iodine_N = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Garnet[1]);
-            Dysnomia.Quaternion Iodine_R = Gallium.Phi;
-
-            return new Sulfur(Iodine_R, Iodine_L);
+            Iota = new Quark(Garnet[1], Garnet[2], Garnet[0]);           
+            Phi = Aluminium.Phi;
+            return new Sulfur(Phi, Tau);
         }
     }
 }
