@@ -94,6 +94,8 @@ namespace Dysnomia
 
             Sulfur Volcano = Sapphire.Reproduce(Breccia);
             Chromium Blast = new Chromium(Volcano); // Proof Of Volcanic Explosion
+
+            Sulfur Pyroclast = Volcano.Reproduce(Blast);
         }
     }
 }
