@@ -66,8 +66,12 @@ namespace Dysnomia
             Chromium Radon = new Chromium(Astatine); // ذنب
             Sulfur Amber = Astatine.Persist(Radon); // Jupiter's Moon Europa
             Chromium Opal = new Chromium(Amber); // First Earth Stone
+          
+            Sulfur Tetrahedrite = Astatine.Reproduce(X.Mu);
+            Chromium Hessite = new Chromium(Tetrahedrite);
 
             Sulfur Sapphire = Amber.Reproduce(X.Mu); // Sponsored By Uniqlo
+            Chromium Tennantite = new Chromium(Sapphire);
         }
     }
 }

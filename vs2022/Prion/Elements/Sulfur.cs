@@ -44,7 +44,7 @@ namespace Prion.Elements
 
         public Sulfur Reproduce(Chromium Mu)
         {
-            if (Y != null && Y.Y == null && Mu.X == null) throw new Exception("No .");
+            if (Y != null && Y.Y == null && Mu.X == null && Nu.Rho.T.Last.Value.Value.Gamma.Rod.R.Count < 8) { throw new Exception("No ."); }
 
             Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Nu.Tau);
             Mu.W.N.Transit(W.L.Octogamma.List);
