@@ -95,5 +95,38 @@ namespace Prion.Elements
             S2S.Y = Y;
             return S2S;
         }
+
+        public Sulfur Persist(Chromium Mu)
+        {
+            Sulfur S = Reproduce(Mu);
+            Sulfur M = Reproduce(new Chromium(S)); // First 18K Gold
+            Orbital Barium = new Orbital(S.Y.Beta.Eta.X.N.Gamma);
+            BigInteger Cadmium = Barium.Sigma;
+            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
+            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Indium.Octogamma.List);
+            Dysnomia.Quaternion Iodine_L = Indium.Octogamma.List.Last.Value.Value;
+            Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
+            Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
+            Orbital Krypton = new Orbital(Arsenic);
+            BigInteger Rubidium = Krypton.Sigma;
+            Spinor Xenon = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
+            Dysnomia.Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
+            Dysnomia.Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
+            Polygamma Platinum = new Polygamma(Rhodium);
+
+            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xenon.Octogamma.List);
+            Spinor Garnet_L = new Spinor(Ruthenium, Platinum);
+            Spinor Garnet_N = new Spinor(Garnet[1], Platinum);
+            Spinor Garnet_R = new Spinor(Rhodium, Platinum);
+            Wavelet GM = new Wavelet(Garnet_N, Garnet_R, Garnet_L); // First Garnet Wavelet
+            Mu.W.N.Transit(GM.L.Octogamma.List);
+            Chlorine<Dysnomia.Quaternion> Tellurium2 = new Chlorine<Dysnomia.Quaternion>(GM.L.Octogamma.List);
+            Calcium Gallium = new Calcium(Tellurium2);
+
+            Quark Iodine_N = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Garnet[1]);
+            Dysnomia.Quaternion Iodine_R = Gallium.Phi;
+
+            return new Sulfur(Iodine_R, Iodine_L);
+        }
     }
 }

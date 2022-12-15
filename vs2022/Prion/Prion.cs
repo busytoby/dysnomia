@@ -26,5 +26,10 @@ namespace Dysnomia
         {
             return Rho.Reproduce(Mu);
         }
+
+        public Sulfur Persist()
+        {
+            return Rho.Persist(Mu);
+        }
     }
 }

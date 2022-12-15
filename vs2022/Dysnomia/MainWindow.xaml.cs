@@ -62,39 +62,7 @@ namespace Dysnomia
 
         public void Play()
         {
-            Sulfur S = X.Replicate();
-            Sulfur M = X.Rho.Reproduce(new Chromium(S)); // First 18K Gold
-            Sulfur M2 = X.Rho.Reproduce(new Chromium(M));
-            Sulfur M3 = X.Rho.Reproduce(new Chromium(M2));
-            Sulfur M4 = X.Rho.Reproduce(new Chromium(M3));
-            Sulfur M5 = X.Rho.Reproduce(new Chromium(M4));
-            Orbital Barium = new Orbital(S.Y.Beta.Eta.X.N.Gamma);
-            BigInteger Cadmium = Barium.Sigma;
-            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
-            Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Indium.Octogamma.List);
-            Quaternion Iodine_L = Indium.Octogamma.List.Last.Value.Value;
-            Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
-            Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
-            Orbital Krypton = new Orbital(Arsenic);
-            BigInteger Rubidium = Krypton.Sigma;
-            Spinor Xenon = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
-            Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
-            Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
-            Polygamma Platinum = new Polygamma(Rhodium);
-
-            Chlorine<Quaternion> Garnet = new Chlorine<Quaternion>(Xenon.Octogamma.List);
-            Spinor Garnet_L = new Spinor(Ruthenium, Platinum);
-            Spinor Garnet_N = new Spinor(Garnet[1], Platinum);
-            Spinor Garnet_R = new Spinor(Rhodium, Platinum);
-            Wavelet GM = new Wavelet(Garnet_N, Garnet_R, Garnet_L); // First Garnet Wavelet
-            X.Mu.W.N.Transit(GM.L.Octogamma.List);
-            Chlorine<Quaternion> Tellurium2 = new Chlorine<Quaternion>(GM.L.Octogamma.List);
-            Calcium Gallium = new Calcium(Tellurium2);
-
-            Quark Iodine_N = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), Garnet[1]);
-            Quaternion Iodine_R = Gallium.Phi;
-
-            Sulfur Astatine = new Sulfur(Iodine_R, Iodine_L);
+            Sulfur Astatine = X.Persist();
             Chromium Radon = new Chromium(Astatine);
         }
     }
