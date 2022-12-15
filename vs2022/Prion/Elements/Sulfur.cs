@@ -19,6 +19,7 @@ namespace Prion.Elements
 
         public Wavelet Mu;
 
+        public Quark Alpha;
         public Quark Iota;
 
         public Dysnomia.Quaternion Phi;
@@ -57,8 +58,7 @@ namespace Prion.Elements
         {
             Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Kappa.Tau);
             Mu.W.N.Transit(W.L.Octogamma.List);
-            Quark WQ = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
-            Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, WQ);
+            Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, Alpha);
             Wavelet WQM = new Wavelet(W.N, W.L, Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
             W.N.Transit(WQM.L.Octogamma.List);
             Mu.Kernel.Eta.Add(W.L, Mu.Kernel.Mu);
@@ -66,7 +66,7 @@ namespace Prion.Elements
             Titanium WMR = new Titanium(Eta.Mu, Mu.Kernel.Alpha);
             Mu.Kernel.Eta.Add(WMR.Xi, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
-            Mu.Kernel.Eta.Add(Lambda.Xi, WQ);
+            Mu.Kernel.Eta.Add(Lambda.Xi, Alpha);
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
@@ -115,6 +115,9 @@ namespace Prion.Elements
         public Sulfur Persist(Chromium Theta)
         {
             if (Mu != null) throw new Exception("Already Persistent");
+            if(Alpha == null)
+                Alpha = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Theta.Kernel.Alpha.Rho.T.Last.Value.Value);
+
             Sulfur S = Reproduce(Theta);
             Titanium Antimony = Indicate(S);
             Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
