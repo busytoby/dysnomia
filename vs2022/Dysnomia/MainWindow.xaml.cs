@@ -68,19 +68,29 @@ namespace Dysnomia
             Chromium Opal = new Chromium(Amber); // First Earth Stone
           
             Sulfur Tetrahedrite = Astatine.Reproduce(X.Mu);
-            Chromium Hessite = new Chromium(Tetrahedrite);
+            Chromium Cryolite = new Chromium(Tetrahedrite);
+            Sulfur Sylvanite = Tetrahedrite.Reproduce(Cryolite);
+            Chromium Fluorite = new Chromium(Sylvanite);
 
             Sulfur Sapphire = Amber.Reproduce(X.Mu); // Sponsored By Uniqlo
             Chromium Tennantite = new Chromium(Sapphire);
-
             Sulfur Calaverite = Sapphire.Reproduce(Tennantite);
             Chromium Bohrium = new Chromium(Calaverite);
 
-            Sulfur Seaborgium = Sapphire.Reproduce(Hessite);
+            Sulfur Stibnite = Tetrahedrite.Reproduce(Tennantite);
+            Chromium Zirconium = new Chromium(Stibnite);
+
+            Sulfur Seaborgium = Sapphire.Reproduce(Cryolite);
             Chromium Meitnerium = new Chromium(Seaborgium);
+
+            Sulfur Nagyagite = Stibnite.Reproduce(Zirconium); // Proof Of Black
+            Chromium Petzite = new Chromium(Nagyagite);
 
             Sulfur Darmstadtium = Seaborgium.Reproduce(Meitnerium);
             Chromium Roentgenium = new Chromium(Darmstadtium);
+
+            Sulfur Hydroxyapatite = Sapphire.Reproduce(Petzite); // Proof Of White
+            Chromium Breccia = new Chromium(Hydroxyapatite);
         }
     }
 }
