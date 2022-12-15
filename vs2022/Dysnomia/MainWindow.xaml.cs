@@ -64,6 +64,12 @@ namespace Dysnomia
         {
             Sulfur S = X.Replicate();
             Sulfur M = X.Rho.Reproduce(new Chromium(S)); // First 18K Gold
+            Sulfur M2 = X.Rho.Reproduce(new Chromium(M));
+            Sulfur M3 = X.Rho.Reproduce(new Chromium(M2));
+            Sulfur M4 = X.Rho.Reproduce(new Chromium(M3));
+            Sulfur M5 = X.Rho.Reproduce(new Chromium(M4));
+            Orbital Barium = new Orbital(S.Y.Beta.Eta.X.N.Gamma);
+            BigInteger Cadmium = Barium.Sigma;
         }
     }
 }

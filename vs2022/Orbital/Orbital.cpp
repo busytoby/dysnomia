@@ -111,7 +111,7 @@ namespace Dysnomia {
 		if (!Sigma.IsZero) throw gcnew OrbitalException(1, "Compounding Sigma");
 		Sigma = Rho;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {
-			for each (KeyValuePair<BigInteger, Dynamic^> L in Y->M->Rod->R) {
+			for each (KeyValuePair<BigInteger, Dynamic^> L in L->M->Rod->R) {
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
 			}
