@@ -91,6 +91,9 @@ namespace Dysnomia
 
             Sulfur Hydroxyapatite = Sapphire.Reproduce(Petzite); // Proof Of White
             Chromium Breccia = new Chromium(Hydroxyapatite);
+
+            Sulfur Volcano = Sapphire.Reproduce(Breccia);
+            Chromium Blast = new Chromium(Volcano); // Proof Of Volcanic Explosion
         }
     }
 }
