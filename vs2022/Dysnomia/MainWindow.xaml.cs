@@ -64,7 +64,6 @@ namespace Dysnomia
         {
             Sulfur S = X.Replicate();
             Sulfur M = X.Rho.Reproduce(new Chromium(S)); // First 18K Gold
-            Sulfur G = M.Reproduce(X.Mu); // First 24K Gold
         }
     }
 }

@@ -16,6 +16,8 @@ namespace Prion.Elements
 
         public Titanium Beta;
 
+        public Sulfur Y;
+
         public Sulfur()
         {
             Nu = new Scandium(); // Telesto
@@ -42,6 +44,8 @@ namespace Prion.Elements
 
         public Sulfur Reproduce(Chromium Mu)
         {
+            if (Y != null && Y.Y == null && Mu.X == null) throw new Exception("No .");
+
             Wavelet W = new Wavelet(Mu.W.R, Tin.Mu.ByName["Sigma"], Nu.Tau);
             Mu.W.N.Transit(W.L.Octogamma.List);
             Quark WQ = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Mu.Kernel.Alpha.Rho.T.Last.Value.Value);
@@ -61,7 +65,8 @@ namespace Prion.Elements
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
 
-            Sulfur Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
+            if(Y == null)
+                Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
             Chromium YC = new Chromium(Y);
             YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
             YC.W.N.Transit(WM.R.Octogamma.List); // Last Blind
@@ -87,6 +92,7 @@ namespace Prion.Elements
             W.L.Transit(WC.R.Octogamma.List);
             W.N.Transit(WC.L.Octogamma.List);
 
+            S2S.Y = Y;
             return S2S;
         }
     }

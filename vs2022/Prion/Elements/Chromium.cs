@@ -11,6 +11,7 @@ namespace Prion.Elements
     {
         public Wavelet W;
         public Iron Kernel;
+        public Sulfur X;
 
         public Chromium(Sulfur Alpha) {
             W = new Wavelet();
@@ -31,6 +32,8 @@ namespace Prion.Elements
             E.Add(Tin.Sigma);
             W.R = new Spinor(Kernel.Alpha.Rho.T.Last.Value.Value, E);
             Kernel.Eta.Add(W.R); // Proof Of Law
+
+            X = Alpha.Y;
         }   
     }
 }
