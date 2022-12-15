@@ -72,7 +72,15 @@ namespace Dysnomia
             BigInteger Cadmium = Barium.Sigma;
             Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
             Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Indium.Octogamma.List);
+            Quaternion Iodine = Indium.Octogamma.List.Last.Value.Value;
             Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
+            Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
+            Orbital Krypton = new Orbital(Arsenic);
+            BigInteger Rubidium = Krypton.Sigma;
+            Spinor Xenon = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
+            Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
+            Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
+            Polygamma Platinum = new Polygamma(Rhodium);
         }
     }
 }
