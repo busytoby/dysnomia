@@ -81,6 +81,8 @@ namespace Dysnomia
             Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
             Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
             Polygamma Platinum = new Polygamma(Rhodium);
+
+            Chlorine<Quaternion> Garnet = new Chlorine<Quaternion>(Xenon.Octogamma.List);
         }
     }
 }
