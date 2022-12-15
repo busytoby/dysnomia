@@ -64,6 +64,7 @@ namespace Dysnomia
         {
             Sulfur Astatine = X.Persist(); // ♑︎ Denebola 
             Chromium Radon = new Chromium(Astatine); // ذنب
+            Sulfur Amber = Astatine.Persist(Radon); // Jupiter's Moon Europa
         }
     }
 }
