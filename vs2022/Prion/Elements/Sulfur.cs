@@ -22,6 +22,8 @@ namespace Prion.Elements
         public Quark Alpha;
         public Quark Iota;
 
+        public Spinor Xi;
+
         public Dysnomia.Quaternion Phi;
         public Dysnomia.Quaternion Tau;
 
@@ -121,14 +123,17 @@ namespace Prion.Elements
             Sulfur S = Reproduce(Theta);
             Titanium Antimony = Indicate(S);
             Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
-            Spinor Xenon = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
-            Dysnomia.Quaternion Ruthenium = Xenon.Octogamma.List.First.Value.Value;
-            Dysnomia.Quaternion Rhodium = Xenon.Octogamma.List.Last.Value.Value;
+
+            if(Xi == null)
+                Xi = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
+            Dysnomia.Quaternion Ruthenium = Xi.Octogamma.List.First.Value.Value;
+            Dysnomia.Quaternion Rhodium = Xi.Octogamma.List.Last.Value.Value;
             Polygamma Platinum = new Polygamma(Rhodium);
 
-            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xenon.Octogamma.List);
+            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xi.Octogamma.List);
             Mu = new Wavelet(new Spinor(Garnet[1], Platinum), new Spinor(Rhodium, Platinum), new Spinor(Ruthenium, Platinum));
             Theta.W.N.Transit(Mu.L.Octogamma.List);
+            Theta.W.N.Transit(Xi.Octogamma.List);
             Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
             Calcium Aluminium = new Calcium(Tellurium);
 
