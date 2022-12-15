@@ -72,6 +72,15 @@ namespace Dysnomia
 
             Sulfur Sapphire = Amber.Reproduce(X.Mu); // Sponsored By Uniqlo
             Chromium Tennantite = new Chromium(Sapphire);
+
+            Sulfur Calaverite = Sapphire.Reproduce(Tennantite);
+            Chromium Bohrium = new Chromium(Calaverite);
+
+            Sulfur Seaborgium = Sapphire.Reproduce(Hessite);
+            Chromium Meitnerium = new Chromium(Seaborgium);
+
+            Sulfur Darmstadtium = Seaborgium.Reproduce(Meitnerium);
+            Chromium Roentgenium = new Chromium(Darmstadtium);
         }
     }
 }
