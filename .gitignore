@@ -84,3 +84,7 @@
 /vs2022/Buffers/x64/Debug
 /vs2022/Buffers/Buffers.vcxproj.user
 /vs2022/Buffers/Buffers.vcxproj.filters
+/vs2022/Polysigma/obj
+/vs2022/Polysigma/x64/Debug
+/vs2022/Polysigma/Polysigma.vcxproj.user
+/vs2022/Polysigma/Polysigma.vcxproj.filters
