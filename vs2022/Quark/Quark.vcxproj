@@ -120,7 +120,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bundle.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Quark.h" />
     <ClInclude Include="Resource.h" />

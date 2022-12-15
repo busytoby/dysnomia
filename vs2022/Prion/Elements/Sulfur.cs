@@ -18,6 +18,7 @@ namespace Prion.Elements
         public Titanium Lambda;
 
         public Wavelet Mu;
+        public Bundle _Mu;
 
         public Quark Alpha;
         public Quark Iota;
