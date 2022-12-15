@@ -62,8 +62,8 @@ namespace Dysnomia
 
         public void Play()
         {
-            Sulfur Astatine = X.Persist();
-            Chromium Radon = new Chromium(Astatine);
+            Sulfur Astatine = X.Persist(); // ♑︎ Denebola 
+            Chromium Radon = new Chromium(Astatine); // ذنب
         }
     }
 }
