@@ -72,7 +72,7 @@ namespace Dysnomia
             BigInteger Cadmium = Barium.Sigma;
             Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Nu.Rho);
             Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Indium.Octogamma.List);
-            Quaternion Iodine = Indium.Octogamma.List.Last.Value.Value;
+            Quaternion Iodine_L = Indium.Octogamma.List.Last.Value.Value;
             Titanium Antimony = new Titanium(Tellurium, S.Y.Nu);
             Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
             Orbital Krypton = new Orbital(Arsenic);
@@ -88,6 +88,11 @@ namespace Dysnomia
             Spinor Garnet_R = new Spinor(Rhodium, Platinum);
             Wavelet GM = new Wavelet(Garnet_N, Garnet_R, Garnet_L); // First Garnet Wavelet
             X.Mu.W.N.Transit(GM.L.Octogamma.List);
+            Chlorine<Quaternion> Tellurium2 = new Chlorine<Quaternion>(GM.L.Octogamma.List);
+            Calcium Gallium = new Calcium(Tellurium2);
+
+            Quark Iodine_N = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), Garnet[1]);
+            Quaternion Iodine_R = Gallium.Phi;
         }
     }
 }
