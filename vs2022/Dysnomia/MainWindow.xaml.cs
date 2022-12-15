@@ -93,6 +93,8 @@ namespace Dysnomia
 
             Quark Iodine_N = new Quark(X.Rho.Beta.Eta.X.N, Zinc.Fetch(), Garnet[1]);
             Quaternion Iodine_R = Gallium.Phi;
+
+            Sulfur Astatine = new Sulfur(Iodine_R, Iodine_L);
         }
     }
 }
