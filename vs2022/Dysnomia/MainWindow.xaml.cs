@@ -96,6 +96,7 @@ namespace Dysnomia
             Chromium Blast = new Chromium(Volcano); // Proof Of Volcanic Explosion
 
             Sulfur Pyroclast = Volcano.Reproduce(Blast);
+            Chromium Impossible = new Chromium(Pyroclast);
         }
     }
 }
