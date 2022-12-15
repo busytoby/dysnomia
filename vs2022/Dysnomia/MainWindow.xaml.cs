@@ -95,6 +95,7 @@ namespace Dysnomia
             Quaternion Iodine_R = Gallium.Phi;
 
             Sulfur Astatine = new Sulfur(Iodine_R, Iodine_L);
+            Chromium Radon = new Chromium(Astatine);
         }
     }
 }
