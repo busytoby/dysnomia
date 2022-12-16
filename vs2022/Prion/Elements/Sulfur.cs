@@ -18,7 +18,7 @@ namespace Prion.Elements
         public Titanium Lambda;
 
         public Wavelet Mu;
-        public Bundle _Mu;
+        public Bundle Theta;
 
         public Quark Alpha;
         public Quark Iota;
@@ -71,7 +71,7 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha);
 
-            _Mu = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
+            Theta = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
@@ -117,13 +117,13 @@ namespace Prion.Elements
             return Antimony;
         }
 
-        public Sulfur Persist(Chromium Theta)
+        public Sulfur Persist(Chromium Omicron)
         {
             if (Mu != null) throw new Exception("Already Persistent");
             if(Alpha == null)
-                Alpha = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Theta.Kernel.Alpha.Rho.T.Last.Value.Value);
+                Alpha = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.T.Last.Value.Value);
 
-            Sulfur S = Reproduce(Theta);
+            Sulfur S = Reproduce(Omicron);
             Titanium Antimony = Indicate(S);
             Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
 
@@ -135,8 +135,8 @@ namespace Prion.Elements
 
             Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xi.Octogamma.List);
             Mu = new Wavelet(new Spinor(Garnet[1], Platinum), new Spinor(Rhodium, Platinum), new Spinor(Ruthenium, Platinum));
-            Theta.W.N.Transit(Mu.L.Octogamma.List);
-            Theta.W.N.Transit(Xi.Octogamma.List);
+            Omicron.W.N.Transit(Mu.L.Octogamma.List);
+            Omicron.W.N.Transit(Xi.Octogamma.List);
             Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
             Calcium Aluminium = new Calcium(Tellurium);
 
