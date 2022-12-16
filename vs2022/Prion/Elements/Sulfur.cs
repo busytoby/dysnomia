@@ -151,7 +151,7 @@ namespace Prion.Elements
 
             Phi = Aluminium.Phi;
             Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
-            Omicron.Kernel.Audit(Theta);
+            Omicron.Kernel.Audit(this);
             return new Sulfur(Phi, Tau);
         }
     }

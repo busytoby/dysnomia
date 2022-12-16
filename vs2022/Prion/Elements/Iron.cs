@@ -25,12 +25,22 @@ namespace Prion.Elements
             Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Last.Value.Value);
         }
 
-        public void Audit(Polysigma Theta)
+        public void Audit(Sulfur Thetan)
         {
-            Theta.Run(Eta);
-            Theta.Run(Eta, Eta.Rho);
-            Theta.Run(Eta, Nu.X.N);
-            Theta.Run(Eta.Delta);
+            Thetan.Theta.Run(Eta);
+            Thetan.Theta.Run(Eta, Eta.Rho);
+            Thetan.Theta.Run(Eta, Nu.X.N);
+            Thetan.Theta.Run(Eta.Delta);
+
+            Thetan.Theta.Run(Eta);
+            Thetan.Theta.Run(Eta, Eta.Nu);
+            Thetan.Theta.Run(Eta, Nu.X.R);
+            Thetan.Theta.Run(Mu);
+
+            Thetan.Theta.Run(Eta);
+            Thetan.Theta.Run(Eta, Thetan.Phi);
+            Thetan.Theta.Run(Eta, Nu.X.L);
+            Thetan.Theta.Run(Thetan.Alpha);
         }
     }
 }
