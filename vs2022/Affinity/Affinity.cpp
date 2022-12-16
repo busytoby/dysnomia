@@ -59,16 +59,20 @@ namespace Dysnomia {
 		OpenManifolds(Xi);
 	}
 
+	BigInteger Affinity::RunAlpha() {
+		Alpha = 0;
+		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
+			Alpha = BigInteger::Multiply(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
+		}
+		return Alpha;
+	}
+
 	void Affinity::ConductorGenerate(BigInteger Xi) {
 		Phi = Rod->Avail(Xi);
 		Cone->Tau = Cone->Avail(Xi);
 
 		Rod->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
-		Alpha = 0;
-		for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
-			Alpha = BigInteger::Multiply(Alpha, Math::ModPow(G.Value->Tau, Phi, G.Key));
-		}
-
+		
 		Rod->Form(Cone->Tau);
 		Cone->Form(Phi);
 

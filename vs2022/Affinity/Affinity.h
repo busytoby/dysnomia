@@ -40,5 +40,6 @@ namespace Dysnomia {
 		void Sustain(BigInteger, bool);
 		void React(BigInteger);
 		array<Affinity^>^ Denature();
+		BigInteger RunAlpha();
 	};
 }

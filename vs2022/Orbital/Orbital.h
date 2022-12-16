@@ -33,5 +33,6 @@ namespace Dysnomia {
 		void Bridge(BigInteger);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);
+		BigInteger RunSigma();
 	};
 }

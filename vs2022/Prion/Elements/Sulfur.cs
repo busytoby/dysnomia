@@ -82,9 +82,7 @@ namespace Prion.Elements
             Chromium YC = new Chromium(Y);
             YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
             YC.W.N.Transit(WM.R.Octogamma.List); // Last Blind
-            YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu);
-            YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);

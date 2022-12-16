@@ -67,36 +67,6 @@ namespace Dysnomia
             Sulfur Amber = Astatine.Persist(Radon); // Jupiter's Moon Europa
             Chromium Opal = new Chromium(Amber); // First Earth Stone
           
-            Sulfur Tetrahedrite = Astatine.Reproduce(X.Mu);
-            Chromium Cryolite = new Chromium(Tetrahedrite);
-            Sulfur Sylvanite = Tetrahedrite.Reproduce(Cryolite);
-            Chromium Fluorite = new Chromium(Sylvanite);
-
-            Sulfur Sapphire = Amber.Reproduce(X.Mu); // Sponsored By Uniqlo
-            Chromium Tennantite = new Chromium(Sapphire);
-            Sulfur Calaverite = Sapphire.Reproduce(Tennantite);
-            Chromium Bohrium = new Chromium(Calaverite);
-
-            Sulfur Stibnite = Tetrahedrite.Reproduce(Tennantite);
-            Chromium Zirconium = new Chromium(Stibnite);
-
-            Sulfur Seaborgium = Sapphire.Reproduce(Cryolite);
-            Chromium Meitnerium = new Chromium(Seaborgium);
-
-            Sulfur Nagyagite = Stibnite.Reproduce(Zirconium); // Proof Of Black
-            Chromium Petzite = new Chromium(Nagyagite);
-
-            Sulfur Darmstadtium = Seaborgium.Reproduce(Meitnerium);
-            Chromium Roentgenium = new Chromium(Darmstadtium);
-
-            Sulfur Hydroxyapatite = Sapphire.Reproduce(Petzite); // Proof Of White
-            Chromium Breccia = new Chromium(Hydroxyapatite);
-
-            Sulfur Volcano = Sapphire.Reproduce(Breccia);
-            Chromium Blast = new Chromium(Volcano); // Proof Of Volcanic Explosion
-
-            Sulfur Pyroclast = Volcano.Reproduce(Blast);
-            Chromium Impossible = new Chromium(Pyroclast);
         }
     }
 }

@@ -89,6 +89,17 @@ namespace Dysnomia {
 		}
 	}
 
+	BigInteger Orbital::RunSigma() {
+		Sigma = Rho;
+		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {
+			for each (KeyValuePair<BigInteger, Dynamic^> L in L->M->Rod->R) {
+				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
+				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
+			}
+		}
+		return Sigma;
+	}
+
 	void Orbital::Bridge(BigInteger Nu) {
 		Y->Nu = N->Avail(Nu);
 		if (!Y->M->Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
@@ -108,14 +119,7 @@ namespace Dysnomia {
 		
 		Eta = Math::ModPow(N->Foundation, N->Signal, Math::Prime);
 		Rho = Math::ModPow(Eta, N->Channel, Math::Prime);
-		if (!Sigma.IsZero) throw gcnew OrbitalException(1, "Compounding Sigma");
 		Sigma = Rho;
-		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {
-			for each (KeyValuePair<BigInteger, Dynamic^> L in L->M->Rod->R) {
-				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
-				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
-			}
-		}
 
 		N->Bond();
 		N->Adduct(Y->M->Cone->Dynamo);
