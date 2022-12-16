@@ -68,7 +68,7 @@ namespace Dysnomia
             Sulfur Amber = Astatine.Persist(Radon); // Jupiter's Moon Europa
             Chromium Opal = new Chromium(Amber); // First Earth Stone
             Opal.Kernel.Call(X.Rho.Theta);
-            Opal.Kernel.Call(Astatine.Theta);
+            Opal.Kernel.Call(Astatine.Theta); 
         }
     }
 }

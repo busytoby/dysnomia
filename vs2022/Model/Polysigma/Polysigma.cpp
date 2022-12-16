@@ -45,8 +45,8 @@ namespace Dysnomia {
 			W = gcnew Wavelet(N, R, X);
 		}
 		else if (Gluon == nullptr) {
-			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Nu));
-			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Phi));
+			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Gamma));
+			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Rho));
 			Spinor^ R = Iota->YL->First->Value.Value;
 			W = gcnew Wavelet(N, R, X);
 		}
