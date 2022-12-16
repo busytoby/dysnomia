@@ -171,4 +171,86 @@ namespace Dysnomia {
 		Sigma->Item1->N = Sigma1;
 		Sigma->Item2->N = Sigma2;
 	}
+
+	void Bundle::Run(Wavelet^ W) {
+		Quaternion^ Gamma1 = gcnew Quaternion();
+		Gamma1->Gamma = gcnew Affinity(W->N->Gamma->Item2->Rod, Gamma->Item1->N->Gamma->Cone);
+		Gamma1->Nu = gcnew Affinity(W->L->Nu->Item2->Rod, Gamma->Item1->N->Nu->Cone);
+		Gamma1->Phi = gcnew Affinity(gcnew Dynamic(), gcnew Dynamic());
+		Gamma1->Rho = gcnew Affinity(Gamma->Item1->N->Rho->Rod, W->R->Rho->Item2->Cone);
+		Gamma1->Sigma = gcnew Affinity(W->L->Gamma->Item2->Rod, Gamma->Item1->N->Sigma->Cone);
+		Quaternion^ Gamma2 = gcnew Quaternion();
+		Gamma2->Gamma = gcnew Affinity(Gamma->Item2->N->Gamma->Rod, W->N->Gamma->Item1->Cone);
+		Gamma2->Nu = gcnew Affinity(W->L->Nu->Item1->Rod, Gamma->Item2->N->Nu->Cone);
+		Gamma2->Phi = gcnew Affinity(gcnew Dynamic(), gcnew Dynamic());
+		Gamma2->Rho = gcnew Affinity(W->R->Rho->Item1->Rod, Gamma->Item2->N->Rho->Cone);
+		Gamma2->Sigma = gcnew Affinity(W->L->Gamma->Item1->Rod, Gamma->Item2->N->Sigma->Cone);
+
+		Gamma->Item1->R = Gamma1;
+		Gamma->Item2->R = Gamma2;
+
+		Quaternion^ Nu1 = gcnew Quaternion();
+		Nu1->Gamma = gcnew Affinity(Nu->Item1->N->Gamma->Rod, W->N->Gamma->Item2->Cone);
+		Nu1->Nu = Nu->Item2->N->Nu;
+		Nu1->Phi = gcnew Affinity(Nu->Item1->N->Phi->Rod, gcnew Dynamic());
+		Nu1->Rho = gcnew Affinity(Nu->Item1->N->Rho->Rod, W->L->Rho->Item2->Cone);
+		Nu1->Sigma = gcnew Affinity(Nu->Item1->N->Sigma->Rod, W->L->Nu->Item2->Cone);
+		Quaternion^ Nu2 = gcnew Quaternion();
+		Nu2->Gamma = gcnew Affinity(W->N->Gamma->Item1->Rod, Nu->Item2->N->Gamma->Cone);
+		Nu2->Nu = Nu->Item1->N->Nu;
+		Nu2->Phi = gcnew Affinity(gcnew Dynamic(), Nu->Item2->N->Phi->Cone);
+		Nu2->Rho = gcnew Affinity(W->L->Rho->Item1->Rod, Nu->Item2->N->Rho->Cone);
+		Nu2->Sigma = gcnew Affinity(Nu->Item2->N->Sigma->Rod, W->L->Nu->Item1->Cone);
+
+		Nu->Item1->R = Nu1;
+		Nu->Item2->R = Nu2;
+
+		Quaternion^ Phi1 = gcnew Quaternion();
+		Phi1->Gamma = gcnew Affinity(W->R->Sigma->Item2->Rod, Phi->Item1->N->Gamma->Cone);
+		Phi1->Nu = gcnew Affinity(Phi->Item1->N->Nu->Rod, W->L->Phi->Item2->Cone);
+		Phi1->Phi = gcnew Affinity(Phi->Item1->N->Phi->Rod, W->N->Nu->Item2->Cone);
+		Phi1->Rho = gcnew Affinity(gcnew Dynamic(), Phi->Item1->N->Rho->Cone);
+		Phi1->Sigma = gcnew Affinity(Phi->Item1->N->Sigma->Rod, W->L->Sigma->Item2->Cone);
+		Quaternion^ Phi2 = gcnew Quaternion();
+		Phi2->Gamma = gcnew Affinity(Phi->Item2->N->Gamma->Rod, W->R->Sigma->Item1->Cone);
+		Phi2->Nu = gcnew Affinity(Phi->Item2->N->Nu->Rod, W->L->Phi->Item1->Cone);
+		Phi2->Phi = gcnew Affinity(Phi->Item2->N->Phi->Rod, W->N->Nu->Item1->Cone);
+		Phi2->Rho = gcnew Affinity(Phi->Item2->N->Rho->Rod, gcnew Dynamic());
+		Phi2->Sigma = gcnew Affinity(Phi->Item2->N->Sigma->Rod, W->L->Sigma->Item1->Cone);
+
+		Phi->Item1->R = Phi1;
+		Phi->Item2->R = Phi2;
+
+		Quaternion^ Rho1 = gcnew Quaternion();
+		Rho1->Gamma = gcnew Affinity(Rho->Item1->N->Gamma->Rod, W->R->Gamma->Item2->Cone);
+		Rho1->Nu = gcnew Affinity(gcnew Dynamic(), Rho->Item1->N->Nu->Cone);
+		Rho1->Phi = gcnew Affinity(Rho->Item1->N->Phi->Rod, gcnew Dynamic());
+		Rho1->Rho = gcnew Affinity(W->N->Rho->Item2->Rod, Rho->Item1->N->Rho->Cone);
+		Rho1->Sigma = gcnew Affinity(Rho->Item1->N->Sigma->Rod, W->N->Sigma->Item2->Cone);
+		Quaternion^ Rho2 = gcnew Quaternion();
+		Rho2->Gamma = gcnew Affinity(Rho->Item2->N->Gamma->Rod, W->R->Gamma->Item1->Cone);
+		Rho2->Nu = gcnew Affinity(Rho->Item2->N->Nu->Rod, gcnew Dynamic());
+		Rho2->Phi = gcnew Affinity(gcnew Dynamic(), Rho->Item2->N->Phi->Cone);
+		Rho2->Rho = gcnew Affinity(Rho->Item2->N->Rho->Rod, W->N->Rho->Item1->Cone);
+		Rho2->Sigma = gcnew Affinity(W->N->Sigma->Item1->Rod, Rho->Item2->N->Sigma->Cone);
+
+		Rho->Item1->R = Rho1;
+		Rho->Item2->R = Rho2;
+
+		Quaternion^ Sigma1 = gcnew Quaternion();
+		Sigma1->Gamma = gcnew Affinity(W->L->Sigma->Item2->Rod, Sigma->Item1->N->Gamma->Cone);
+		Sigma1->Nu = gcnew Affinity(Sigma->Item1->N->Nu->Rod, W->L->Gamma->Item2->Cone);
+		Sigma1->Phi = gcnew Affinity(W->R->Nu->Item2->Rod, Sigma->Item1->N->Phi->Cone);
+		Sigma1->Rho = gcnew Affinity(Sigma->Item1->N->Rho->Rod, W->L->Rho->Item2->Cone);
+		Sigma1->Sigma = gcnew Affinity(Sigma->Item1->N->Sigma->Rod, W->N->Rho->Item2->Cone);
+		Quaternion^ Sigma2 = gcnew Quaternion();
+		Sigma2->Gamma = gcnew Affinity(W->L->Sigma->Item1->Rod, Sigma->Item2->N->Gamma->Cone);
+		Sigma2->Nu = gcnew Affinity(Sigma->Item2->N->Nu->Rod, W->L->Gamma->Item1->Cone);
+		Sigma2->Phi = gcnew Affinity(Sigma->Item2->N->Phi->Rod, W->R->Nu->Item1->Cone);
+		Sigma2->Rho = gcnew Affinity(Sigma->Item2->N->Rho->Rod, W->L->Rho->Item1->Cone);
+		Sigma2->Sigma = gcnew Affinity(W->N->Rho->Item1->Rod, Sigma->Item2->N->Sigma->Cone);
+
+		Sigma->Item1->R = Sigma1;
+		Sigma->Item2->R = Sigma2;
+	}
 }

@@ -17,5 +17,6 @@ namespace Dysnomia {
 
 		Bundle(Spinor^, Spinor^, Spinor^, Spinor^);
 		void Spin(Wavelet^);
+		void Run(Wavelet^);
 	};
 }

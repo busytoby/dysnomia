@@ -92,6 +92,8 @@ namespace Prion.Elements
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
 
+            Theta.Run(W);
+
             YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu);
             Mu.Kernel.Eta.Add(WS.Xi, Mu.Kernel.Mu);
 
