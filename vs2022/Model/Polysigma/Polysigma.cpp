@@ -32,21 +32,21 @@ namespace Dysnomia {
 		Spinor^ X = Iota->XL->First->Value.Value;
 		Spinor^ N = Iota->XL->Last->Value.Value;
 		Spinor^ R = Iota->Mu;
-		Spinor^ L = gcnew Spinor(Iota->V->First->Value.Value->X->L, gcnew Polygamma(Iota->V->First->Value.Value->L->Gamma));
+		Spinor^ L = gcnew Spinor(Iota->V->First->Value.Value->X->L, gcnew Polygamma(Iota->V->First->Value.Value->L->Sigma));
 		Add(X, N, R, L);
 	}
 
 	void Polysigma::Run(Soliton^ Iota, Quaternion^ Q) {
 		Wavelet^ W;
 		if (Muon == nullptr) {
-			Spinor^ X = gcnew Spinor(Iota->V->First->Value.Value->X->N, gcnew Polygamma(Iota->V->First->Value.Value->L->Gamma));
-			Spinor^ N = gcnew Spinor(Iota->V->First->Value.Value->X->R, gcnew Polygamma(Iota->V->First->Value.Value->L->Rho));
+			Spinor^ X = gcnew Spinor(Iota->V->First->Value.Value->X->N, gcnew Polygamma(Iota->V->First->Value.Value->L->Nu));
+			Spinor^ N = gcnew Spinor(Iota->V->First->Value.Value->X->R, gcnew Polygamma(Iota->V->First->Value.Value->L->Phi));
 			Spinor^ R = Iota->YL->Last->Value.Value;
 			W = gcnew Wavelet(N, R, X);
 		}
 		else if (Gluon == nullptr) {
-			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Nu));
-			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Phi));
+			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Gamma));
+			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Rho));
 			Spinor^ R = Iota->YL->First->Value.Value;
 			W = gcnew Wavelet(N, R, X);
 		}
