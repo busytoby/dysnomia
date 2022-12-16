@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
@@ -36,6 +35,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generics", "Util\Generics\Generics.vcxproj", "{9572F40A-6C73-4E4A-982F-021A478D4488}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spin", "Model\Spin\Spin.vcxproj", "{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polysigma", "Model\Polysigma\Polysigma.vcxproj", "{D61D5DA2-0227-4D4B-B822-6F56707EC016}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -227,6 +228,18 @@ Global
 		{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}.Release|x64.Build.0 = Release|x64
 		{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}.Release|x86.ActiveCfg = Release|Win32
 		{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}.Release|x86.Build.0 = Release|Win32
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|Any CPU.Build.0 = Debug|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|x64.ActiveCfg = Debug|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|x64.Build.0 = Debug|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|x86.ActiveCfg = Debug|Win32
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Debug|x86.Build.0 = Debug|Win32
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|Any CPU.ActiveCfg = Release|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|Any CPU.Build.0 = Release|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|x64.ActiveCfg = Release|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|x64.Build.0 = Release|x64
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|x86.ActiveCfg = Release|Win32
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -245,6 +258,7 @@ Global
 		{C1AA12E9-4D48-4FA9-9A1E-BF2BF3B7890F} = {13C489BD-77C8-49B8-AC7A-FFBE6226FDF6}
 		{9572F40A-6C73-4E4A-982F-021A478D4488} = {13C489BD-77C8-49B8-AC7A-FFBE6226FDF6}
 		{C9E94EF9-CA32-40FF-AB36-AC027EF7699B} = {FBB7B083-FDEC-4BEC-8A49-B6BB11F9A694}
+		{D61D5DA2-0227-4D4B-B822-6F56707EC016} = {FBB7B083-FDEC-4BEC-8A49-B6BB11F9A694}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79542A88-4140-4EB3-AE81-63D848ED7702}

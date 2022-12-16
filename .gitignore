@@ -149,3 +149,7 @@
 /vs2022/Util/Generics/Generics.vcxproj.filters
 /vs2022/Util/Math/Math.vcxproj.user
 /vs2022/Util/Math/Math.vcxproj.filters
+/vs2022/Model/Polysigma/x64/Debug
+/vs2022/Model/Polysigma/obj
+/vs2022/Model/Polysigma/Polysigma.vcxproj.user
+/vs2022/Model/Polysigma/Polysigma.vcxproj.filters
