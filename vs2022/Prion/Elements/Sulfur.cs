@@ -149,8 +149,9 @@ namespace Prion.Elements
             Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
             Calcium Aluminium = new Calcium(Tellurium);
 
-            Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
             Phi = Aluminium.Phi;
+            Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
+            Omicron.Kernel.Audit(Theta);
             return new Sulfur(Phi, Tau);
         }
     }
