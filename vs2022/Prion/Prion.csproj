@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Model\Octonion\Octonion.vcxproj" />
     <ProjectReference Include="..\Model\Orbital\Orbital.vcxproj" />
     <ProjectReference Include="..\Model\Polygamma\Polygamma.vcxproj" />
+    <ProjectReference Include="..\Model\Polysigma\Polysigma.vcxproj" />
     <ProjectReference Include="..\Model\Quark\Quark.vcxproj" />
     <ProjectReference Include="..\Model\Quaternion\Quaternion.vcxproj" />
     <ProjectReference Include="..\Model\Soliton\Soliton.vcxproj" />

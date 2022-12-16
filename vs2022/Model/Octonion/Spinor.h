@@ -16,7 +16,7 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Spinor : Spin<Tuple<Affinity^, Affinity^>^> {
+	public ref class Spinor : public Spin<Tuple<Affinity^, Affinity^>^> {
 	public:
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma;
 

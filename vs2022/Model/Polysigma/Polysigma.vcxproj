@@ -147,6 +147,9 @@
     <ProjectReference Include="..\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Spin\Spin.vcxproj">
+      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

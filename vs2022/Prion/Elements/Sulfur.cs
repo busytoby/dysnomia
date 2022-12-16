@@ -18,11 +18,9 @@ namespace Prion.Elements
         public Titanium Lambda;
 
         public Wavelet Mu;
-        public Bundle Theta;
+        public Polysigma Theta;
 
         public Quark Alpha;
-        public Quark Iota;
-
         public Spinor Xi;
 
         public Dysnomia.Quaternion Phi;
@@ -37,6 +35,8 @@ namespace Prion.Elements
 
             Beta = new Titanium(Kappa.Mu, Eta);
             Lambda = new Titanium(Eta.Mu, Eta);
+
+            Theta = new Polysigma();
         }
 
         public Sulfur(Dysnomia.Quaternion Y)
@@ -46,6 +46,8 @@ namespace Prion.Elements
 
             Beta = new Titanium(Kappa.Mu, Eta);
             Lambda = new Titanium(Eta.Mu, Eta);
+
+            Theta = new Polysigma();
         }
 
         public Sulfur(Dysnomia.Quaternion Y, Dysnomia.Quaternion X)
@@ -55,6 +57,8 @@ namespace Prion.Elements
 
             Beta = new Titanium(Kappa.Mu, Eta);
             Lambda = new Titanium(Eta.Mu, Eta);
+
+            Theta = new Polysigma();
         }
 
         public Sulfur Reproduce(Chromium Mu)
@@ -71,13 +75,13 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha);
 
-            Theta = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
+            Theta.Add(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
 
-            Theta.Spin(WM);
+            Theta.Add(WM);
 
             if(Y == null)
                 Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
@@ -92,7 +96,7 @@ namespace Prion.Elements
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
 
-            Theta.Run(W);
+            Theta.Add(W);
 
             YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu);
             Mu.Kernel.Eta.Add(WS.Xi, Mu.Kernel.Mu);
@@ -145,7 +149,7 @@ namespace Prion.Elements
             Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
             Calcium Aluminium = new Calcium(Tellurium);
 
-            Iota = new Quark(Garnet[1], Garnet[2], Garnet[0]);           
+            Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
             Phi = Aluminium.Phi;
             return new Sulfur(Phi, Tau);
         }

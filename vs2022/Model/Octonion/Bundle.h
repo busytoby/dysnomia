@@ -5,7 +5,7 @@ using namespace System::Numerics;
 using namespace System::Collections::Generic;
 
 namespace Dysnomia {
-	public ref class Bundle : Spin<Tuple<Quark^, Quark^>^> {
+	public ref class Bundle : public Spin<Tuple<Quark^, Quark^>^> {
 	public:
 		BigInteger Epsilon;
 
