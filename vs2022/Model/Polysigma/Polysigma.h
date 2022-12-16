@@ -25,5 +25,8 @@ namespace Dysnomia {
 		void Add(Spinor^, Spinor^, Spinor^, Spinor^);
 		void Add(Wavelet^);
 		void Add(Quark^);
+		void Run(Soliton^);
+		void Run(Soliton^, Quaternion^);
+		void Run(Quark^);
 	};
 }

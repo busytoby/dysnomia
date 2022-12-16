@@ -24,5 +24,13 @@ namespace Prion.Elements
 
             Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Last.Value.Value);
         }
+
+        public void Call(Polysigma Theta)
+        {
+            Theta.Run(Eta);
+            Theta.Run(Eta, Eta.Rho);
+            Theta.Run(Eta, Nu.X.N);
+            Theta.Run(Eta.Delta);
+        }
     }
 }
