@@ -80,9 +80,12 @@ namespace Prion.Elements
             if(Y == null)
                 Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
             Chromium YC = new Chromium(Y);
-            YC.W.N.Transit(WM.N.Octogamma.List); // First Law Of Attraction
-            YC.W.N.Transit(WM.R.Octogamma.List); // Last Blind
+            YC.W.R.Transit(W.R.Octogamma.List);
+            YC.W.N.Transit(WM.N.Octogamma.List); 
+            YC.W.N.Transit(WM.R.Octogamma.List); 
+            YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu);
+            YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
