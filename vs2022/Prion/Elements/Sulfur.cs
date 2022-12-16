@@ -71,7 +71,7 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha);
 
-            _Mu = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.L); // X, N, R, L
+            _Mu = new Bundle(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
             W.L.Transit(WM.R.Octogamma.List);
