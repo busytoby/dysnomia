@@ -30,7 +30,7 @@ namespace Prion.Elements
 
             Polygamma E = new Polygamma(Kernel.Iota.Phi);
             E.Add(Tin.Sigma);
-            W.R = new Spinor(Kernel.Alpha.Rho.T.Last.Value.Value, E);
+            W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, E);
             Kernel.Eta.Add(W.R); // Proof Of Law
 
             X = Alpha.Y;

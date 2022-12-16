@@ -33,7 +33,7 @@ namespace Prion.Elements
             Sigmas.RecordOrbital(Nu.F, "Sun");
             Sigmas.RecordOrbital(Nu.P, "Uranus");
 
-            V = new Venus(Parallax.Kappa.T.First.Value.Value.Rho.Rod, Parallax.Kappa.T.First.Value.Value.Gamma);
+            V = new Venus(Parallax.Kappa.First.Value.Value.Rho.Rod, Parallax.Kappa.First.Value.Value.Gamma);
 
             Parallax.Saturn = new Tin();
             Phosphorous.GenerateOrbital(Tin.Sigma.Sigma, "Saturn Sigma"); // First Sigma Star Orbital
@@ -41,7 +41,7 @@ namespace Prion.Elements
 
             Pluto P = new Pluto();
 
-            P.Mate(Parallax.Kappa.T.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
+            P.Mate(Parallax.Kappa.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
 
             Earth E = new Earth();
         }

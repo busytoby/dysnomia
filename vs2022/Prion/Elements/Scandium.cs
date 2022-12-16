@@ -19,9 +19,9 @@ namespace Prion.Elements
             Tau = new Spinor(Zinc.Fetch(), Rho); // Himalia
             Rho.Add(Tin.Sigma);
 
-            if (!(Rho.T.Count == 5)) throw new Exception("Scandium Misanthropy");
+            if (!(Rho.Count == 5)) throw new Exception("Scandium Misanthropy");
 
-            Mu = new Chlorine<Dysnomia.Quaternion>(Rho.T);
+            Mu = new Chlorine<Dysnomia.Quaternion>(Rho);
         }
 
         public Scandium(Quaternion Nu)
@@ -30,9 +30,9 @@ namespace Prion.Elements
             Tau = new Spinor(Nu, Rho);
             Rho.Add(Tin.Sigma);
 
-            if (!(Rho.T.Count == 5)) throw new Exception("Scandium Misanthropy");
+            if (!(Rho.Count == 5)) throw new Exception("Scandium Misanthropy");
 
-            Mu = new Chlorine<Dysnomia.Quaternion>(Rho.T);
+            Mu = new Chlorine<Dysnomia.Quaternion>(Rho);
         }
     }
 }

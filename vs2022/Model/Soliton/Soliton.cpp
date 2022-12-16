@@ -14,7 +14,7 @@ namespace Dysnomia {
 		Xi->Add(Nu);
 		Xi->Add(Sigma);
 
-		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Xi->T);
+		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Xi);
 
 		YL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 		for (int i = 0; i < 5; i++) {

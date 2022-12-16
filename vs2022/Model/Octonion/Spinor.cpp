@@ -4,7 +4,7 @@
 
 namespace Dysnomia {
 	Spinor::Spinor(Quaternion^ Q, Polygamma^ X) {
-		Octogamma = X->T->First;
+		Octogamma = X->First;
 		Epsilon = Math::ModPow(Octogamma->Value.Key, Octogamma->Value.Value->Nu->Cone->Manifold, Q->Nu->Rod->Barn);
 
 		Gamma = gcnew Tuple<Affinity^, Affinity^>(

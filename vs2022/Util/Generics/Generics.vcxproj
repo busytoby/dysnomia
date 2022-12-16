@@ -140,6 +140,14 @@
   <ItemGroup>
     <Image Include="app.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Polygamma\Polygamma.vcxproj">
+      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Quaternion\Quaternion.vcxproj">
+      <Project>{5a69282d-0356-4496-915f-72fd74276c6b}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

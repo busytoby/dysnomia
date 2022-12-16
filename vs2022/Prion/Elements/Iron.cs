@@ -19,10 +19,10 @@ namespace Prion.Elements
             Alpha = Delta;
             Iota = Beta;
 
-            Mu = new Quark(Delta.Rho.T.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.T.Last.Value.Value); // Water
+            Mu = new Quark(Delta.Rho.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.Last.Value.Value); // Water
             Nu = new Octonion(Mu, Beta);
 
-            Eta = new Copper(Delta.Rho.T.Last.Previous.Value.Value, Mu, Delta.Rho.T.Last.Value.Value);
+            Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Last.Value.Value);
         }
     }
 }
