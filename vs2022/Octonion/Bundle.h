@@ -16,5 +16,6 @@ namespace Dysnomia {
 		Tuple<Quark^, Quark^>^ Sigma;
 
 		Bundle(Spinor^, Spinor^, Spinor^, Spinor^);
+		void Spin(Wavelet^);
 	};
 }

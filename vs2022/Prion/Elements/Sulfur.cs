@@ -77,6 +77,8 @@ namespace Prion.Elements
             W.L.Transit(WM.R.Octogamma.List);
             W.L.Transit(WM.L.Octogamma.List);
 
+            Theta.Spin(WM);
+
             if(Y == null)
                 Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
             Chromium YC = new Chromium(Y);
