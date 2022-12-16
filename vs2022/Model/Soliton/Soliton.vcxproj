@@ -141,11 +141,11 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Util\Generics\Generics.vcxproj">
+      <Project>{9572f40a-6c73-4e4a-982f-021a478d4488}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Affinity\Affinity.vcxproj">
       <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Generics\Generics.vcxproj">
-      <Project>{9572f40a-6c73-4e4a-982f-021a478d4488}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Octonion\Octonion.vcxproj">
       <Project>{5cca240e-63b7-403b-b88b-0f4562c2f87c}</Project>

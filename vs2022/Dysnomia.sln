@@ -1,41 +1,41 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dynamic", "Dynamic\Dynamic.vcxproj", "{FA7E9BB1-725F-4B76-8E49-B700D773BAA5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dynamic", "Model\Dynamic\Dynamic.vcxproj", "{FA7E9BB1-725F-4B76-8E49-B700D773BAA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dysnomia", "Dysnomia\Dysnomia.csproj", "{01320D8B-6A8E-4FED-A3E0-D4B72C8D8631}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Affinity", "Affinity\Affinity.vcxproj", "{FF259607-B668-4674-8A67-9A01CA424F0B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Affinity", "Model\Affinity\Affinity.vcxproj", "{FF259607-B668-4674-8A67-9A01CA424F0B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Math", "Math\Math.vcxproj", "{8582C43D-1722-4D10-AB37-3DBE7B588957}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Math", "Util\Math\Math.vcxproj", "{8582C43D-1722-4D10-AB37-3DBE7B588957}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Orbital", "Orbital\Orbital.vcxproj", "{BA9618B0-2BB2-4F10-A4AA-B547878E1C24}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Orbital", "Model\Orbital\Orbital.vcxproj", "{BA9618B0-2BB2-4F10-A4AA-B547878E1C24}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ion", "Ion\Ion.vcxproj", "{9C11F74F-5142-42B1-880A-F6753831034E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ion", "Model\Ion\Ion.vcxproj", "{9C11F74F-5142-42B1-880A-F6753831034E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prion", "Prion\Prion.csproj", "{A23C082B-0028-43E4-8C29-D1AABFF82FC5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quaternion", "Quaternion\Quaternion.vcxproj", "{5A69282D-0356-4496-915F-72FD74276C6B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quaternion", "Model\Quaternion\Quaternion.vcxproj", "{5A69282D-0356-4496-915F-72FD74276C6B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygamma", "Polygamma\Polygamma.vcxproj", "{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polygamma", "Model\Polygamma\Polygamma.vcxproj", "{8CF4EF26-9860-4470-9BCB-BDEC2A0BCD26}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Octonion", "Octonion\Octonion.vcxproj", "{5CCA240E-63B7-403B-B88B-0F4562C2F87C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Octonion", "Model\Octonion\Octonion.vcxproj", "{5CCA240E-63B7-403B-B88B-0F4562C2F87C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quark", "Quark\Quark.vcxproj", "{1986499B-2B92-4E30-930F-36CFB1B019D9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quark", "Model\Quark\Quark.vcxproj", "{1986499B-2B92-4E30-930F-36CFB1B019D9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Soliton", "Soliton\Soliton.vcxproj", "{152B6754-8032-4E19-A40A-D29F4E09B800}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Soliton", "Model\Soliton\Soliton.vcxproj", "{152B6754-8032-4E19-A40A-D29F4E09B800}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{FBB7B083-FDEC-4BEC-8A49-B6BB11F9A694}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{13C489BD-77C8-49B8-AC7A-FFBE6226FDF6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Buffers", "Buffers\Buffers.vcxproj", "{C1AA12E9-4D48-4FA9-9A1E-BF2BF3B7890F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Buffers", "Util\Buffers\Buffers.vcxproj", "{C1AA12E9-4D48-4FA9-9A1E-BF2BF3B7890F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generics", "Generics\Generics.vcxproj", "{9572F40A-6C73-4E4A-982F-021A478D4488}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generics", "Util\Generics\Generics.vcxproj", "{9572F40A-6C73-4E4A-982F-021A478D4488}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spin", "Spin\Spin.vcxproj", "{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spin", "Model\Spin\Spin.vcxproj", "{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
