@@ -88,3 +88,12 @@
 /vs2022/Polysigma/x64/Debug
 /vs2022/Polysigma/Polysigma.vcxproj.user
 /vs2022/Polysigma/Polysigma.vcxproj.filters
+/vs2022/Generics/obj
+/vs2022/Generics/x64/Debug
+/vs2022/Generics/Generics.vcxproj.user
+/vs2022/Generics/Generics.vcxproj.filters
+/vs2022/Spin/obj
+/vs2022/Spin/x64/Debug/Spin.tlog
+/vs2022/Spin/x64/Debug
+/vs2022/Spin/Spin.vcxproj.user
+/vs2022/Spin/Spin.vcxproj.filters

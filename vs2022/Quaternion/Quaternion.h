@@ -15,15 +15,9 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Quaternion
+	public ref class Quaternion : Spin<Affinity^>
 	{
 	public:
 		BigInteger Epsilon;
-
-		Affinity^ Gamma;
-		Affinity^ Nu;
-		Affinity^ Phi;
-		Affinity^ Rho;
-		Affinity^ Sigma;
 	};
 }

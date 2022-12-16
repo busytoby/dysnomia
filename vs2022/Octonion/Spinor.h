@@ -16,17 +16,11 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Spinor {
+	public ref class Spinor : Spin<Tuple<Affinity^, Affinity^>^> {
 	public:
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma;
 
 		BigInteger Epsilon;
-
-		Tuple<Affinity^, Affinity^>^ Gamma;
-		Tuple<Affinity^, Affinity^>^ Nu;
-		Tuple<Affinity^, Affinity^>^ Phi;
-		Tuple<Affinity^, Affinity^>^ Rho;
-		Tuple<Affinity^, Affinity^>^ Sigma;
 
 		Spinor(Quaternion^, Polygamma^);
 		void Transit();

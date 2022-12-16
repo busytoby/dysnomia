@@ -144,6 +144,9 @@
     <ProjectReference Include="..\Affinity\Affinity.vcxproj">
       <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Spin\Spin.vcxproj">
+      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

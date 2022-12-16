@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Affinity\Affinity.vcxproj" />
     <ProjectReference Include="..\Dynamic\Dynamic.vcxproj" />
+    <ProjectReference Include="..\Generics\Generics.vcxproj" />
     <ProjectReference Include="..\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Math\Math.vcxproj" />
     <ProjectReference Include="..\Octonion\Octonion.vcxproj" />
@@ -17,6 +18,7 @@
     <ProjectReference Include="..\Quark\Quark.vcxproj" />
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj" />
     <ProjectReference Include="..\Soliton\Soliton.vcxproj" />
+    <ProjectReference Include="..\Spin\Spin.vcxproj" />
   </ItemGroup>
 
 </Project>

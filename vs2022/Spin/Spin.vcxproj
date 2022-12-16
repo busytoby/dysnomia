@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{B3D4C86E-0FBB-4813-B99E-395BDEBC377E}</ProjectGuid>
+    <ProjectGuid>{C9E94EF9-CA32-40FF-AB36-AC027EF7699B}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Polysigma</RootNamespace>
+    <RootNamespace>Spin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -121,8 +121,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Polysigma.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Spin.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -132,18 +132,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Polysigma.cpp" />
+    <ClCompile Include="Spin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Quark\Quark.vcxproj">
-      <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

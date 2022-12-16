@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{1986499B-2B92-4E30-930F-36CFB1B019D9}</ProjectGuid>
+    <ProjectGuid>{9572F40A-6C73-4E4A-982F-021A478D4488}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Quark</RootNamespace>
+    <RootNamespace>Generics</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -120,39 +120,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Generics.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Quark.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Generics.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Quark.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Affinity\Affinity.vcxproj">
-      <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
-      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Quaternion\Quaternion.vcxproj">
-      <Project>{5a69282d-0356-4496-915f-72fd74276c6b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Spin\Spin.vcxproj">
-      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
