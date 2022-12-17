@@ -12,6 +12,7 @@ namespace Prion.Elements
         public Wavelet W;
         public Iron Kernel;
         public Sulfur X;
+        public Polygamma Epsilon;
 
         public Chromium(Sulfur Alpha) {
             W = new Wavelet();
@@ -36,7 +37,6 @@ namespace Prion.Elements
 
             Kernel.Eta.Add(Kernel.Alpha.Tau, Kernel.Mu); // Proof Of Earth
 
-            Polygamma Epsilon;
             if (Alpha.Theta.Count == 0)
             {
                 Epsilon = new Polygamma(Kernel.Iota.Phi);
