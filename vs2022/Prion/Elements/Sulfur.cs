@@ -128,8 +128,6 @@ namespace Prion.Elements
         public Sulfur Persist(Chromium Omicron)
         {
             if (Mu != null) throw new Exception("Already Persistent");
-            if(Alpha == null)
-                Alpha = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
 
             Garnet Nu = new Garnet(Omicron, this);
 

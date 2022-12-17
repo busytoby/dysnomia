@@ -16,8 +16,10 @@ namespace Prion
         Calcium Aluminium;
         public Chlorine<Dysnomia.Quaternion> Eta;
 
+        public Garnet(Chromium Omicron, Sulfur Iota) {
+            if (Iota.Alpha == null)
+                Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
 
-        public Garnet(Chromium Omicron, Sulfur Iota) { 
             Alpha = Omicron;
             Upsilon = Iota.Reproduce(Alpha);
             Titanium Antimony = Iota.Indicate(Upsilon);
