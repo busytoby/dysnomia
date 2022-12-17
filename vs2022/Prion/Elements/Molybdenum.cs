@@ -18,7 +18,8 @@ namespace Prion.Elements
         public Molybdenum()
         {
             Rho = new Chromium(Astatine.Beta);
-            Theta = new Polysigma(Astatine.Beta.Theta);
+            Theta = new Polysigma();
+            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
         }
 
         public void Contrast()

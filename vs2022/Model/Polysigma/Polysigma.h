@@ -23,10 +23,11 @@ namespace Dysnomia {
 		Wavelet^ Gluon;
 
 		Polysigma::Polysigma() : LinkedList<KeyValuePair<Quark^, Bundle^>>() {};
-		Polysigma::Polysigma(Polysigma^);
+		
 		void Add(Spinor^, Spinor^, Spinor^, Spinor^);
 		void Add(Wavelet^);
 		void Add(Quark^);
+		void Add(Polygamma^, Polysigma^);
 		void Run(Soliton^);
 		void Run(Soliton^, Quaternion^);
 		void Run(Quark^);

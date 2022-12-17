@@ -3,7 +3,7 @@
 #include "Polysigma.h"
 
 namespace Dysnomia {
-	Polysigma::Polysigma(Polysigma^ Omicron) {
+	void Polysigma::Add(Polygamma^ Rho, Polysigma^ Omicron) {
 		int i = 99;
 	}
 
