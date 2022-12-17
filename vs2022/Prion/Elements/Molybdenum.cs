@@ -11,6 +11,7 @@ namespace Prion.Elements
     {
         public Chromium Rho;
         public Sulfur Eta;
+        public Chromium Nu;
         public Quark Alpha;
         public Polysigma Theta;
         public Polyrho Kappa;
@@ -27,7 +28,16 @@ namespace Prion.Elements
             Theta.Add(Alpha);
             Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
             Theta.Add(Eta.Alpha);
-            
+
+            Nu = new Chromium(Niobium.Ypsilon);
+            Niobium.Ypsilon.Persist(Nu);
+
+            Theta.Add(Rho.Epsilon, Theta);
+            Theta.Add(Niobium.Ypsilon.Alpha);
+            Theta.Add(Nu.W.N, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Beta.Xi);
+            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Phi);
+            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
+            Theta.Add(Niobium.Ypsilon.Alpha);
         }
 
         public void Contrast()

@@ -41,6 +41,7 @@ namespace Dysnomia {
 			Gluon = R;
 			J->Run(R);
 		}
+		else throw gcnew PolysigmaException(3, "Polysigma In Bad Poly State");
 	}
 
 	void Polysigma::Add(Quark^ L) {
@@ -73,6 +74,7 @@ namespace Dysnomia {
 			Spinor^ R = Iota->YL->First->Value.Value;
 			W = gcnew Wavelet(N, R, X);
 		}
+		else throw gcnew PolysigmaException(3, "Polysigma In Bad Poly State");
 		Add(W);
 	}
 

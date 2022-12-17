@@ -44,10 +44,15 @@ namespace Prion.Elements
             }
             else if (Alpha.Theta.Count == 1)
                 Epsilon = Alpha.Kappa.Rho;
-            else
+            else if (Alpha.Theta.Count == 3)
+                Epsilon = Alpha.Eta.Rho;
+            else if (Alpha.Theta.Count == 4)
             {
                 Epsilon = new Polygamma(Alpha.Phi);
                 Epsilon.Add(Tin.Sigma);
+            } else
+            {
+                throw new Exception("Unknown Theta Count");
             }
             W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, Epsilon);
             Kernel.Eta.Add(W.R); 
