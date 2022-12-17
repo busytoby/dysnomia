@@ -6,11 +6,25 @@ namespace Dysnomia {
 	void Polysigma::Add(Polygamma^ Rho, Polysigma^ Omicron) {
 		int i = 99;
 		J = gcnew Bundle(
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->L, Rho),
 			gcnew Spinor(Omicron->First->Value.Value->Gamma->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Rho->Item1->N, Rho)
+			gcnew Spinor(Omicron->First->Value.Value->Nu->Item1->R, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Rho->Item1->R, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Sigma->Item1->R, Rho)
 		);
+
+		Wavelet^ Alpha = gcnew Wavelet(
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->L, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->R, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->N, Rho)
+		);
+		Add(Alpha);
+
+		Wavelet^ Polyalpha = gcnew Wavelet(
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->L, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->R, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->N, Rho)
+		);
+		Add(Polyalpha);
 	}
 
 	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L) {

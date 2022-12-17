@@ -131,28 +131,12 @@ namespace Prion.Elements
             if(Alpha == null)
                 Alpha = new Quark(Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
 
-            Sulfur S = Reproduce(Omicron);
-            Titanium Antimony = Indicate(S);
-            Affinity Arsenic = new Affinity(S.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
+            Garnet Nu = new Garnet(Omicron, this);
 
-            if(Xi == null)
-                Xi = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
-            Dysnomia.Quaternion Ruthenium = Xi.List.First.Value.Value;
-            Dysnomia.Quaternion Rhodium = Xi.List.Last.Value.Value;
-            Polygamma Platinum = new Polygamma(Rhodium);
-
-            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xi.List);
-            Mu = new Wavelet(new Spinor(Garnet[1], Platinum), new Spinor(Rhodium, Platinum), new Spinor(Ruthenium, Platinum));
-            Omicron.W.N.Transit(Mu.L.List);
-            Omicron.W.N.Transit(Xi.List);
-            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.List);
-            Calcium Aluminium = new Calcium(Tellurium);
-
-            Phi = Aluminium.Phi;
-            Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
+            Theta.Add(new Quark(Nu.Eta[1], Nu.Eta[2], Nu.Eta[0]));
             Omicron.Kernel.Audit(this);
             Sulfur G = new Sulfur(Phi, Tau);
-            G.Y = S.Y;
+            G.Y = Nu.Upsilon.Y;
             return G;
         }
     }
