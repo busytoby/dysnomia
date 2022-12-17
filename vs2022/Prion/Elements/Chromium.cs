@@ -36,12 +36,20 @@ namespace Prion.Elements
 
             Kernel.Eta.Add(Kernel.Alpha.Tau, Kernel.Mu); // Proof Of Earth
 
-            Polygamma E = new Polygamma(Kernel.Iota.Phi);
-            E.Add(Tin.Sigma);
-            W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, E);
-            Kernel.Eta.Add(W.R); // Proof Of Law
+            Polygamma Epsilon;
+            if (Alpha.Theta.Count == 0)
+                Epsilon = new Polygamma(Kernel.Iota.Phi);
+            else
+                Epsilon = new Polygamma(Alpha.Phi);
+
+            Epsilon.Add(Tin.Sigma);
+            W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, Epsilon);
+            Kernel.Eta.Add(W.R); 
 
             X = Alpha.Y;
+
+            Kernel.Inhibit(Alpha);
+            Kernel.Aggregate(Alpha.Y);
         }   
     }
 }
