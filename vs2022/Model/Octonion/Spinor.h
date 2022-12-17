@@ -19,12 +19,13 @@ namespace Dysnomia {
 	public ref class Spinor : public Spin<Tuple<Affinity^, Affinity^>^> {
 	public:
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma;
+		property Polygamma^ List {Polygamma^ get() { return (Polygamma^)Octogamma->List; }};
 
 		BigInteger Epsilon;
 
 		Spinor(Quaternion^, Polygamma^);
 		void Transit();
-		void Transit(LinkedList<KeyValuePair<BigInteger, Quaternion^>>^);
+		void Transit(Polygamma^);
 		void IsoSpin();
 		Quaternion^ Head();
 	};

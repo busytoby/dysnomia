@@ -7,7 +7,7 @@ namespace Dysnomia {
 	public ref class Polyrho : LinkedList<KeyValuePair<Polygamma^, Soliton^>>
 	{
 	public:
-		Polyrho(Polysigma^);
+		Polyrho(Polysigma^, Polygamma^);
 		// TODO: Add your methods for this class here.
 	};
 }

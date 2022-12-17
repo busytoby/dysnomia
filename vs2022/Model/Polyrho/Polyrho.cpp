@@ -3,7 +3,7 @@
 #include "Polyrho.h"
 
 namespace Dysnomia {
-	Polyrho::Polyrho(Polysigma^ Omega) {
+	Polyrho::Polyrho(Polysigma^ Omega, Polygamma^ Gamma) {
 		int i = 99;
 	}
 }

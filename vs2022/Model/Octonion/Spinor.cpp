@@ -31,7 +31,7 @@ namespace Dysnomia {
 		IsoSpin();
 	}
 
-	void Spinor::Transit(LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ Zeta) {
+	void Spinor::Transit(Polygamma^ Zeta) {
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ L = Zeta->First;
 		while (L = L->Next) {
 			Epsilon = Math::ModPow(Epsilon, L->Value.Value->Nu->Cone->Manifold, L->Value.Value->Nu->Rod->Barn);
@@ -59,7 +59,7 @@ namespace Dysnomia {
 	}
 
 	void Spinor::Transit() {
-		LinkedList<KeyValuePair<BigInteger, Quaternion^>>^ L = Octogamma->List;
+		Polygamma^ L = (Polygamma^)Octogamma->List;
 		Transit(L);
 	}
 

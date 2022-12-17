@@ -23,7 +23,7 @@ namespace Prion.Elements
 
         public void Contrast()
         {
-            Kappa = new Polyrho(Theta);
+            Kappa = new Polyrho(Theta, (Polygamma) Rho.W.R.Octogamma.List);
         }
     }
 }

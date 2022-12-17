@@ -63,10 +63,10 @@ namespace Prion.Elements
         public Sulfur Reproduce(Chromium Mu)
         {
             Wavelet W = new Wavelet(Mu.W.R, (Xi != null) ? Xi : Tin.Mu.ByName["Sigma"], Kappa.Tau);
-            Mu.W.N.Transit(W.L.Octogamma.List);
+            Mu.W.N.Transit(W.L.List);
             Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, Alpha);
             Wavelet WQM = new Wavelet(W.N, W.L, Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
-            W.N.Transit(WQM.L.Octogamma.List);
+            W.N.Transit(WQM.L.List);
             Mu.Kernel.Eta.Add(W.L, Mu.Kernel.Mu);
             Mu.Kernel.Eta.Add(W.N, Mu.Kernel.Mu);
             Titanium WMR = new Titanium(Eta.Mu, Mu.Kernel.Alpha);
@@ -77,17 +77,17 @@ namespace Prion.Elements
             Theta.Add(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
             Wavelet WM = new Wavelet(Lambda.Xi, W.L, Mu.Kernel.Alpha.Tau);
-            W.L.Transit(WM.R.Octogamma.List);
-            W.L.Transit(WM.L.Octogamma.List);
+            W.L.Transit(WM.R.List);
+            W.L.Transit(WM.L.List);
 
             Theta.Add(WM);
 
             if(Y == null)
-                Y = new Sulfur(W.L.Octogamma.List.First.Value.Value);
+                Y = new Sulfur(W.L.List.First.Value.Value);
             Chromium YC = new Chromium(Y);
-            YC.W.R.Transit(W.R.Octogamma.List);
-            YC.W.N.Transit(WM.N.Octogamma.List); 
-            YC.W.N.Transit(WM.R.Octogamma.List); 
+            YC.W.R.Transit(W.R.List);
+            YC.W.N.Transit(WM.N.List); 
+            YC.W.N.Transit(WM.R.List); 
             YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu);
             YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu);
@@ -109,8 +109,8 @@ namespace Prion.Elements
             S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu);
 
             Wavelet WC = new Wavelet(Mu.Kernel.Alpha.Tau, S2C.Kernel.Alpha.Tau, YC.Kernel.Alpha.Tau);
-            W.L.Transit(WC.R.Octogamma.List);
-            W.N.Transit(WC.L.Octogamma.List);
+            W.L.Transit(WC.R.List);
+            W.N.Transit(WC.L.List);
 
             S2S.Y = Y;
             return S2S;
@@ -119,9 +119,9 @@ namespace Prion.Elements
         public Titanium Indicate(Sulfur S)
         {
             Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Kappa.Rho);
-            Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.Octogamma.List);
+            Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.List);
             Titanium Antimony = new Titanium(Selenium, S.Y.Kappa);
-            Tau = Indium.Octogamma.List.Last.Value.Value;
+            Tau = Indium.List.Last.Value.Value;
             return Antimony;
         }
 
@@ -137,15 +137,15 @@ namespace Prion.Elements
 
             if(Xi == null)
                 Xi = new Spinor(S.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
-            Dysnomia.Quaternion Ruthenium = Xi.Octogamma.List.First.Value.Value;
-            Dysnomia.Quaternion Rhodium = Xi.Octogamma.List.Last.Value.Value;
+            Dysnomia.Quaternion Ruthenium = Xi.List.First.Value.Value;
+            Dysnomia.Quaternion Rhodium = Xi.List.Last.Value.Value;
             Polygamma Platinum = new Polygamma(Rhodium);
 
-            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xi.Octogamma.List);
+            Chlorine<Dysnomia.Quaternion> Garnet = new Chlorine<Dysnomia.Quaternion>(Xi.List);
             Mu = new Wavelet(new Spinor(Garnet[1], Platinum), new Spinor(Rhodium, Platinum), new Spinor(Ruthenium, Platinum));
-            Omicron.W.N.Transit(Mu.L.Octogamma.List);
-            Omicron.W.N.Transit(Xi.Octogamma.List);
-            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.Octogamma.List);
+            Omicron.W.N.Transit(Mu.L.List);
+            Omicron.W.N.Transit(Xi.List);
+            Chlorine<Dysnomia.Quaternion> Tellurium = new Chlorine<Dysnomia.Quaternion>(Mu.L.List);
             Calcium Aluminium = new Calcium(Tellurium);
 
             Phi = Aluminium.Phi;
