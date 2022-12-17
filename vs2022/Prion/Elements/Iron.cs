@@ -27,16 +27,29 @@ namespace Prion.Elements
 
         public void Audit(Sulfur Thetan)
         {
+            Antagonize(Thetan);
+            Aggregate(Thetan);
+            Inhibit(Thetan);
+        }
+
+        public void Antagonize(Sulfur Thetan)
+        {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Eta.Rho);
             Thetan.Theta.Run(Eta, Nu.X.N);
             Thetan.Theta.Run(Eta.Delta);
+        }
 
+        public void Aggregate(Sulfur Thetan)
+        {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Eta.Nu);
             Thetan.Theta.Run(Eta, Nu.X.R);
             Thetan.Theta.Run(Mu);
+        }
 
+        public void Inhibit(Sulfur Thetan)
+        {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Thetan.Phi);
             Thetan.Theta.Run(Eta, Nu.X.L);

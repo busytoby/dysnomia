@@ -42,8 +42,6 @@ namespace Prion.Elements
             Kernel.Eta.Add(W.R); // Proof Of Law
 
             X = Alpha.Y;
-
-            Kernel.Audit(Alpha);
         }   
     }
 }
