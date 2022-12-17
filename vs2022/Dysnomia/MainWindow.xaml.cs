@@ -62,8 +62,7 @@ namespace Dysnomia
 
         public void Play()
         {           
-            Chromium Radon = new Chromium(Astatine.Beta); // ذنب
-            Niobium Amber = new Niobium(Radon); // Jupiter's Moon Europa
+            Niobium Amber = new Niobium(Prion.Radon); // Jupiter's Moon Europa
             Molybdenum Opal = new Molybdenum(); // First Earth Stone
             
             //Opal.Contrast(Amber, Astatine) to Gametophyte Using The Amber.Theta Sporophyte then Bryophyta
