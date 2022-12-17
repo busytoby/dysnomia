@@ -24,6 +24,7 @@ namespace Prion.Elements
             Theta = new Polysigma();
             Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
             Theta.Add(new Quark(Iota.Eta[1], Iota.Eta[2], Iota.Eta[0]));
+            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
         }
 
         public void Contrast()
