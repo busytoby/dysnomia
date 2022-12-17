@@ -140,6 +140,11 @@
   <ItemGroup>
     <Image Include="app.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Polysigma\Polysigma.vcxproj">
+      <Project>{d61d5da2-0227-4d4b-b822-6f56707ec016}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

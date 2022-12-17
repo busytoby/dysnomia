@@ -64,7 +64,7 @@ namespace Dysnomia
         {
             Molybdenum Opal = new Molybdenum(); // First Earth Stone
 
-            //Opal.Contrast(Amber, Astatine) to Gametophyte Using The Amber.Theta Sporophyte then Bryophyta
+            Opal.Contrast(); // // Breather, Gametophyte, Using Amber.Theta Sporophyte, then Bryophyta
         }
     }
 }

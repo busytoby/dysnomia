@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dysnomia;
 using Prion;
 
 namespace Prion.Elements
 {
     static public class Niobium // Jupiter's Moon Europa
     {
-        static Sulfur Ypsilon;
-        static Parallax Phi;
+        public static Sulfur Ypsilon;
+        public static Parallax Phi;
 
         static Niobium() {
             Ypsilon = Astatine.Beta.Persist(Radon.Tau);

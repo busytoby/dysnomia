@@ -5,7 +5,6 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using Dysnomia;
 
 namespace Prion.Elements
 {
@@ -152,7 +151,9 @@ namespace Prion.Elements
             Phi = Aluminium.Phi;
             Theta.Add(new Quark(Garnet[1], Garnet[2], Garnet[0]));
             Omicron.Kernel.Audit(this);
-            return new Sulfur(Phi, Tau);
+            Sulfur G = new Sulfur(Phi, Tau);
+            G.Y = S.Y;
+            return G;
         }
     }
 }

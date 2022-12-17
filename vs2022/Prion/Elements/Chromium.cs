@@ -38,11 +38,17 @@ namespace Prion.Elements
 
             Polygamma Epsilon;
             if (Alpha.Theta.Count == 0)
+            {
                 Epsilon = new Polygamma(Kernel.Iota.Phi);
+                Epsilon.Add(Tin.Sigma);
+            }
+            else if (Alpha.Theta.Count == 1)
+                Epsilon = Alpha.Kappa.Rho;
             else
+            {
                 Epsilon = new Polygamma(Alpha.Phi);
-
-            Epsilon.Add(Tin.Sigma);
+                Epsilon.Add(Tin.Sigma);
+            }
             W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, Epsilon);
             Kernel.Eta.Add(W.R); 
 

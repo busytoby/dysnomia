@@ -2,9 +2,11 @@
 
 using namespace System;
 
-namespace Polyrho {
-	public ref class Class1
+namespace Dysnomia {
+	public ref class Polyrho
 	{
+	public:
+		Polyrho(Polysigma^);
 		// TODO: Add your methods for this class here.
 	};
 }

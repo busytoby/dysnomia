@@ -3,6 +3,10 @@
 #include "Polysigma.h"
 
 namespace Dysnomia {
+	Polysigma::Polysigma(Polysigma^ Omicron) {
+		int i = 99;
+	}
+
 	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L) {
 		if (Gluon != nullptr || Muon != nullptr || J != nullptr) throw gcnew PolysigmaException(1, "Polysigma Not In Ready State");
 

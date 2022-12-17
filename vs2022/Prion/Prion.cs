@@ -8,6 +8,7 @@ namespace Dysnomia
     public class Prion
     {
         static public Star Sigma;
+        static public Quark Gamma;
         public Sulfur Rho;
         public Chromium Mu;
         public String Word;
@@ -21,6 +22,8 @@ namespace Dysnomia
 
             Astatine.Beta = Rho.Persist(Mu);
             Radon.Tau = new Chromium(Astatine.Beta);
+            if (Niobium.Ypsilon == null) throw new Exception("Static Construction Failure");
+            Gamma = Niobium.Ypsilon.Alpha;
 
             Word = "Zuo";
         }

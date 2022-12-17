@@ -10,7 +10,7 @@ namespace Prion.Elements
 {
     public class Neon : Dictionary<BigInteger, Orbital>
     {
-        public void Add(BigInteger Sigma, Orbital V)
+        public new void Add(BigInteger Sigma, Orbital V)
         {
             base.Add(Sigma, V);
             if (!Star.Alpha.ContainsKey(Sigma))

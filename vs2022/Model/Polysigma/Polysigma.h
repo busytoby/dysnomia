@@ -22,6 +22,8 @@ namespace Dysnomia {
 		Wavelet^ Muon;
 		Wavelet^ Gluon;
 
+		Polysigma::Polysigma() : LinkedList<KeyValuePair<Quark^, Bundle^>>() {};
+		Polysigma::Polysigma(Polysigma^);
 		void Add(Spinor^, Spinor^, Spinor^, Spinor^);
 		void Add(Wavelet^);
 		void Add(Quark^);

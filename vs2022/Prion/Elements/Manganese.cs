@@ -17,7 +17,7 @@ namespace Prion.Elements
             ByName = new Dictionary<String, Spinor>();
         }
 
-        public void Add(BigInteger Sigma, Dysnomia.Spinor U)
+        public new void Add(BigInteger Sigma, Dysnomia.Spinor U)
         {
             if (this.Count == 5) throw new Exception("Manganese Can Only Contain 5 Magnesia");
             if (base.ContainsKey(Sigma) && base[Sigma] == U) return;

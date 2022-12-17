@@ -18,7 +18,7 @@ namespace Prion.Elements
             Eta.Add(First.Value.Key, First.Value.Value);
         }
 
-        public void Add(Orbital R)
+        public new void Add(Orbital R)
         {
             base.Add(R);
         }

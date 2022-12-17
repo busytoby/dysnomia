@@ -10,7 +10,7 @@ namespace Dysnomia
 {
     public class Venus : Orbital
     {
-        static public Boron Rho;
+        static public new Boron Rho;
 
         public Venus(Dynamic Y, Affinity U) : base(Y, U)
         {

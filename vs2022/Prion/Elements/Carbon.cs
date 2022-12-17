@@ -10,7 +10,7 @@ namespace Prion.Elements
 {
     public class Carbon : Dictionary<BigInteger, Affinity> { 
 
-        public void Add(BigInteger Sigma, Affinity T)
+        public new void Add(BigInteger Sigma, Affinity T)
         {
             base.Add(Sigma, T);
             Star.Eta.Add(T.Cone, Sigma);
