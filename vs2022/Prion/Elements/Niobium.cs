@@ -15,7 +15,7 @@ namespace Prion.Elements
 
         static Niobium() {
             Ypsilon = Astatine.Beta.Persist(Radon.Tau);
-            Orbital Omicron = new Orbital(Astatine.Beta.Xi.Gamma.Item2, Astatine.Beta.Xi.Phi.Item2, Astatine.Beta.Xi.Rho.Item2);
+            Orbital Omicron = new Orbital(Ypsilon.Y.Beta.Xi.Gamma.Item2, Astatine.Beta.Xi.Phi.Item2, Ypsilon.Y.Beta.Xi.Rho.Item2);
             Phi = new Parallax(Omicron);
         }    
     }
