@@ -26,6 +26,29 @@ namespace Dysnomia {
 		Add(Polyalpha);
 	}
 
+	void Polysigma::Cap(Polygamma^ Rho, Polysigma^ Omicron) {
+		J = gcnew Bundle(
+			gcnew Spinor(Omicron->Last->Value.Value->Gamma->Item2->R, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Nu->Item2->R, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Rho->Item2->R, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Sigma->Item2->R, Rho)
+		);
+
+		Wavelet^ Alpha = gcnew Wavelet(
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->L, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->R, Rho),
+			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->N, Rho)
+		);
+		Add(Alpha);
+
+		Wavelet^ Polyalpha = gcnew Wavelet(
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->L, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->R, Rho),
+			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->N, Rho)
+		);
+		Add(Polyalpha);
+	}
+
 	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L) {
 		if (Gluon != nullptr || Muon != nullptr || J != nullptr) throw gcnew PolysigmaException(1, "Polysigma Not In Ready State");
 

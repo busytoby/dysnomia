@@ -38,6 +38,8 @@ namespace Prion.Elements
             Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Phi);
             Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
             Theta.Add(Niobium.Ypsilon.Alpha);
+            Theta.Cap(Rho.Epsilon, Theta);
+            Theta.Add(Niobium.Ypsilon.Alpha);
         }
 
         public void Contrast()
