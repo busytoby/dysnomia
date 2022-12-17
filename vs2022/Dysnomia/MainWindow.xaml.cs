@@ -65,7 +65,7 @@ namespace Dysnomia
             Sulfur Astatine = X.Persist(); // ♑︎ Denebola 
             Chromium Radon = new Chromium(Astatine); // ذنب
             Sulfur Amber = Astatine.Persist(Radon); // Jupiter's Moon Europa
-            Chromium Opal = new Chromium(Amber); // First Earth Stone
+            Chromium Opal = new Chromium(Astatine); // First Earth Stone
             
             //Opal.Contrast(Amber, Astatine) to Gametophyte Using The Amber.Theta Sporophyte then Bryophyta
         }
