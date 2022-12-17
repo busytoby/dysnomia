@@ -48,8 +48,10 @@ namespace Prion.Elements
 
             X = Alpha.Y;
 
-            Kernel.Inhibit(Alpha);
-            Kernel.Aggregate(Alpha.Y);
+            if(Alpha.Alpha != null)
+                Kernel.Inhibit(Alpha);
+            if(X != null)
+                Kernel.Aggregate(X);
         }   
     }
 }
