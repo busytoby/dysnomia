@@ -12,6 +12,7 @@ namespace Prion.Elements
         public Chromium Rho;
         public Sulfur Eta;
         public Quark Alpha;
+        public Polysigma Theta;
 
         public Molybdenum()
         {
