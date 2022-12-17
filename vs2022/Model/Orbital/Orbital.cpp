@@ -89,6 +89,33 @@ namespace Dysnomia {
 		}
 	}
 
+	Orbital::Orbital(Affinity^ X, Affinity^ C, Affinity^ D) {
+		bool Failed = true;
+		while (Failed) {
+			try {
+				N = gcnew Dynamic();
+				R = gcnew Ion(C);
+				Y = gcnew Ion(X);
+				L = gcnew Ion(D);
+
+				Nu = L->M->Rod->Element;
+				BigInteger Ligate = L->M->Cone->Barn;
+
+				Bridge(Nu);
+
+				Nu = L->M->Cone->Signal;
+				Failed = false;
+			}
+			catch (DynamicException^ E) {
+				if (E->Code == 1) continue;
+				if (E->Code == 4) continue;
+				if (E->Code == 6) continue;
+				if (E->Code == 7) continue;
+				else throw;
+			}
+		}
+	}
+
 	BigInteger Orbital::RunSigma() {
 		Sigma = Rho;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {

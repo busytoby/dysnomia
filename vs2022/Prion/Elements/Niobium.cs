@@ -1,17 +1,23 @@
-﻿using System;
+﻿using Dysnomia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dysnomia;
+using Prion;
 
 namespace Prion.Elements
 {
-    public class Niobium
+    static public class Niobium // Jupiter's Moon Europa
     {
-        Sulfur Ypsilon;
+        static Sulfur Ypsilon;
+        static Parallax Phi;
 
-        public Niobium(Chromium Rho) {
-            Ypsilon = Astatine.Beta.Persist(Rho);
+        static Niobium() {
+            Ypsilon = Astatine.Beta.Persist(Radon.Tau);
+            Orbital Omicron = new Orbital(Astatine.Beta.Xi.Gamma.Item2, Astatine.Beta.Xi.Phi.Item2, Astatine.Beta.Xi.Rho.Item2);
+            Phi = new Parallax(Omicron);
         }    
     }
 }

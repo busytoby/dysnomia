@@ -8,7 +8,6 @@ namespace Dysnomia
     public class Prion
     {
         static public Star Sigma;
-        static public Chromium Radon; // ذنب
         public Sulfur Rho;
         public Chromium Mu;
         public String Word;
@@ -21,7 +20,7 @@ namespace Dysnomia
             Mu = new Chromium(Rho);
 
             Astatine.Beta = Rho.Persist(Mu);
-            Radon = new Chromium(Astatine.Beta);
+            Radon.Tau = new Chromium(Astatine.Beta);
 
             Word = "Zuo";
         }
