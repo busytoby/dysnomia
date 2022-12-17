@@ -19,17 +19,14 @@ namespace Dysnomia
             Rho = new Sulfur();
             Mu = new Chromium(Rho);
 
+            Astatine.Beta = Rho.Persist(Mu);
+
             Word = "Zuo";
         }
 
         public Sulfur Replicate()
         {
             return Rho.Reproduce(Mu);
-        }
-
-        public Sulfur Persist()
-        {
-            return Rho.Persist(Mu);
         }
     }
 }

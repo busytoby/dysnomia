@@ -13,9 +13,9 @@ namespace Prion.Elements
         public Sulfur Eta;
         public Quark Alpha;
 
-        public Molybdenum(Sulfur Mu)
+        public Molybdenum()
         {
-            Rho = new Chromium(Mu);
+            Rho = new Chromium(Astatine.Beta);
         }
     }
 }
