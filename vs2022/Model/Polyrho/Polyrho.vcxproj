@@ -141,8 +141,14 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
+      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Polysigma\Polysigma.vcxproj">
       <Project>{d61d5da2-0227-4d4b-b822-6f56707ec016}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Soliton\Soliton.vcxproj">
+      <Project>{152b6754-8032-4e19-a40a-d29f4e09b800}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
