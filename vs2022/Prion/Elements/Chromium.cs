@@ -16,13 +16,21 @@ namespace Prion.Elements
         public Chromium(Sulfur Alpha) {
             W = new Wavelet();
 
-            Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Pluto"));
+            if(Alpha.Theta.Count == 0)
+                Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Pluto"));
+            else
+                Alpha.Eta.Rho.Add(Alpha.Theta.First.Value.Key.L);
+
             W.L = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Kappa.Rho);
             Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(W.L);
             Kernel = Vanadium.Push();
 
-            Alpha.Kappa.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
+            if (Alpha.Theta.Count == 0)
+                Alpha.Kappa.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
+            else
+                Alpha.Kappa.Rho.Add(Alpha.Theta.Last.Value.Key.L);
+
             W.N = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Kappa.Rho);
             Kernel.Eta.Add(W.N);
 
