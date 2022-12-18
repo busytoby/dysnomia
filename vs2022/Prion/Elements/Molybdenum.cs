@@ -11,6 +11,7 @@ namespace Prion.Elements
     {
         public Chromium Rho;
         public Sulfur Eta;
+        public Sulfur Mu;
         public Chromium Nu;
         public Quark Alpha;
         public Polysigma Theta;
@@ -60,6 +61,19 @@ namespace Prion.Elements
             Theta.Add(Eta.Alpha);
             Theta.Cap(Rho.Epsilon, Theta);
             Theta.Add(Eta.Alpha);
+        }
+
+        public Lanthanum Persist()
+        {
+            if (Eta.Mu != null) throw new Exception("Already Persistent");
+
+            Lanthanum Beta = new Lanthanum(Eta);
+            Theta.Add(Beta.Alpha.W.N, Beta.Mu.N, Beta.Mu.R, Beta.Mu.L);
+            Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Upsilon.Tau);
+            Theta.Add(new Quark(Beta.Eta[1], Beta.Eta[2], Beta.Eta[0]));
+            Rho.Kernel.Aggregate(Beta.Upsilon);
+            Rho.Kernel.Inhibit(Beta.Upsilon);
+            return Beta;
         }
     }
 }

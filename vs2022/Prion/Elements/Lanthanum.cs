@@ -15,15 +15,38 @@ namespace Prion.Elements
         Calcium Aluminium;
         public Chlorine<Quaternion> Eta;
 
+        public Lanthanum(Sulfur Gamma)
+        {
+            if (Gamma.Y.Alpha == null)
+                Gamma.Y.Alpha = new Quark(Gamma.Beta.Eta.X.L, Zinc.Fetch(), Gamma.Tau);
+            else throw new Exception("Already Active");
+
+            Alpha = new Chromium(Gamma.Y);
+            Upsilon = Gamma.Y.Reproduce(Alpha);
+            Titanium Antimony = Gamma.Indicate(Upsilon);
+
+            if (Gamma.Y.Xi == null)
+                Gamma.Y.Xi = new Spinor(Upsilon.Beta.Nu.X.N, new Polygamma(Antimony.Eta.X.R));
+            else throw new Exception("Already Active");
+
+            Eta = Form(Antimony, Gamma.Y.Xi);
+
+            Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Mu.L.List);
+            Aluminium = new Calcium(Tellurium);
+
+            Gamma.Y.Phi = Aluminium.Phi;
+        }
+
         public Lanthanum(Chromium Omicron, Sulfur Iota)
         {
             if (Iota.Alpha == null)
                 Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
+            else throw new Exception("Already Active");
 
             Alpha = Omicron;
             Upsilon = Iota.Reproduce(Alpha);
             Titanium Antimony = Iota.Indicate(Upsilon);
-            Affinity Arsenic = new Affinity(Upsilon.Y.Beta.Nu.L.Nu.Nu.Rod, Antimony.Nu.L.Nu.Nu.Cone);
+
             if (Iota.Xi == null)
                 Iota.Xi = new Spinor(Upsilon.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
             Eta = Form(Antimony, Iota.Xi);

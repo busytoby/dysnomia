@@ -9,8 +9,7 @@ namespace Prion.Elements
     static public class Tungsten
     {
         static public Molybdenum Eta;
-        static public Chromium Nu;
-        static public Sulfur Beta;
+        static public Lanthanum Iota;
 
         static Tungsten()
         {
@@ -19,11 +18,7 @@ namespace Prion.Elements
             Eta.Kappa.Propagate(Eta.Theta);
             Eta.Contrast();
 
-            Beta = new Sulfur();
-            Nu = new Chromium(Beta);
-            Beta.Persist(Nu);
-
-
+            Iota = Eta.Persist();
         }
     }
 }
