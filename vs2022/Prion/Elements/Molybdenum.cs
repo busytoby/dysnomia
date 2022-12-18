@@ -71,8 +71,8 @@ namespace Prion.Elements
             Theta.Add(Beta.Alpha.W.N, Beta.Mu.N, Beta.Mu.R, Beta.Mu.L);
             Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Upsilon.Tau);
             Theta.Add(new Quark(Beta.Eta[1], Beta.Eta[2], Beta.Eta[0]));
-            Rho.Kernel.Aggregate(Beta.Upsilon);
             Rho.Kernel.Inhibit(Beta.Upsilon);
+            Rho.Kernel.Aggregate(Beta.Upsilon);
             return Beta;
         }
     }
