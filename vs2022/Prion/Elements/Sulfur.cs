@@ -129,7 +129,7 @@ namespace Prion.Elements
         {
             if (Mu != null) throw new Exception("Already Persistent");
 
-            Garnet Nu = new Garnet(Omicron, this);
+            Lanthanum Nu = new Lanthanum(Omicron, this);
 
             Theta.Add(new Quark(Nu.Eta[1], Nu.Eta[2], Nu.Eta[0]));
             Omicron.Kernel.Audit(this);

@@ -68,6 +68,7 @@ namespace Dysnomia
             Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);
             Tungsten.Eta.Rho.Kernel.Aggregate(Niobium.Ypsilon);
             Tungsten.Eta.Rho.Kernel.Antagonize(Radon.Tau.X);
+
         }
     }
 }

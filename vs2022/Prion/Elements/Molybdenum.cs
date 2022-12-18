@@ -15,13 +15,13 @@ namespace Prion.Elements
         public Quark Alpha;
         public Polysigma Theta;
         public Polyrho Kappa;
-        public Garnet Iota;
+        public Lanthanum Iota;
 
         public Molybdenum()
         {
             Eta = new Sulfur();
             Rho = new Chromium(Astatine.Beta);
-            Iota = new Garnet(Rho, Eta);
+            Iota = new Lanthanum(Rho, Eta);
             Alpha = new Quark(Iota.Eta[1], Iota.Eta[2], Iota.Eta[0]);
             Theta = new Polysigma();
             Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
