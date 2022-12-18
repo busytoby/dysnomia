@@ -68,6 +68,8 @@ namespace Dysnomia
             Opal.Kappa.Propagate(Opal.Theta);
             Opal.Contrast();
             Opal.Rho.Kernel.Inhibit(X.Rho);
+            Opal.Rho.Kernel.Aggregate(Niobium.Ypsilon);
+            Opal.Rho.Kernel.Antagonize(Radon.Tau.X);
         }
     }
 }
