@@ -44,10 +44,18 @@ namespace Prion.Elements
 
         public void Contrast()
         {
-            Kappa = new Polyrho(Theta, Rho.W.R.List);
-            Kappa.Cap(Radon.Tau.W.N.List);
-            Theta.Add(Nu.W.R, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Beta.Xi);
-            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
+            if (Kappa == null)
+            {
+                Kappa = new Polyrho(Theta, Rho.W.R.List);
+                Kappa.Cap(Radon.Tau.W.N.List);
+                Theta.Add(Nu.W.R, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Beta.Xi);
+                Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
+            }
+            else
+            {
+                Theta.Add(Nu.W.L, Eta.Xi, Eta.Lambda.Xi, Eta.Beta.Xi);
+                Theta.Run(Rho.Kernel.Eta, Eta.Tau);
+            }
             Theta.Run(Rho.Kernel.Eta, Eta.Phi);
             Theta.Add(Eta.Alpha);
             Theta.Cap(Rho.Epsilon, Theta);
