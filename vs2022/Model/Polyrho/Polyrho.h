@@ -10,5 +10,6 @@ namespace Dysnomia {
 	public:
 		Polyrho(Polysigma^, Polygamma^);
 		void Cap(Polygamma^);
+		void Propagate(Polysigma^);
 	};
 }

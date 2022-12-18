@@ -41,7 +41,7 @@ namespace Dysnomia {
 
 	void Polyrho::Cap(Polygamma^ Gamma) {
 		Shift<Quaternion^>^ GammaShift = gcnew Shift<Quaternion^>(Gamma);
-		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = this->First;
+		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;
 
 		int i = 0;
 		do {
@@ -67,6 +67,17 @@ namespace Dysnomia {
 
 			O->Value.Key->Add(GammaShift[i + 11]);
 			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X);
+		} while (O = O->Next);
+	}
+
+	void Polyrho::Propagate(Polysigma^ Nu) {
+		LeftShift<Quark^, Bundle^>^ QuarkShift = gcnew LeftShift<Quark^, Bundle^>((LinkedList<KeyValuePair<Quark^, Bundle^>>^)Nu);
+		RightShift<Quark^, Bundle^>^ BundleShift = gcnew RightShift<Quark^, Bundle^>((LinkedList<KeyValuePair<Quark^, Bundle^>>^)Nu);
+
+		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;
+
+		int i = 0;
+		do {
 		} while (O = O->Next);
 	}
 }
