@@ -106,4 +106,8 @@ namespace Dysnomia {
 			}
 		}	
 	}
+
+	void Polyrho::Select(Polysigma^ Sigma, Polygamma^ Alpha) {
+
+	}
 }

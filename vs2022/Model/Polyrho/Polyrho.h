@@ -11,5 +11,6 @@ namespace Dysnomia {
 		Polyrho(Polysigma^, Polygamma^);
 		void Cap(Polygamma^);
 		void Propagate(Polysigma^);
+		void Select(Polysigma^, Polygamma^);
 	};
 }
