@@ -110,6 +110,8 @@ namespace Dysnomia {
 		do {
 			Select(Nu, O->Value.Key, O);
 		} while (O = O->Next);
+
+		BackPropagate();
 	}
 
 	void Polyrho::Select(Polysigma^ Sigma, Polygamma^ Alpha, LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O) {
@@ -143,4 +145,11 @@ namespace Dysnomia {
 			O->Value.Value->Add(O->Value.Value->Mu);
 		}
 	}
+
+	void Polyrho::BackPropagate() {
+		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = Last;
+
+		do {
+
+		} while (O = O->Previous);
 }
