@@ -7,5 +7,7 @@ namespace Dysnomia {
 		X = Y;
 		L = T;
 		Epsilon = X->L->Epsilon;
+		if (Epsilon.IsZero)
+			throw gcnew Exception("Zero Epsilon");
 	}
 }

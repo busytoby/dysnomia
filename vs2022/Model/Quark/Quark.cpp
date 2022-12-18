@@ -9,6 +9,12 @@ namespace Dysnomia {
         R = X;
         L = Z;
 
-        Epsilon = L->Epsilon;
+        if (!L->Epsilon.IsZero)
+            Epsilon = L->Epsilon;
+        else if (!N->Epsilon.IsZero)
+            Epsilon = N->Epsilon;
+        else if (!R->Epsilon.IsZero)
+            Epsilon = R->Epsilon;
+        else throw gcnew Exception("Zero Epsilons");
     }
 }

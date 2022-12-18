@@ -76,8 +76,34 @@ namespace Dysnomia {
 
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;
 
-		int i = 0;
-		do {
-		} while (O = O->Next);
+		for (int i = 0; i < BundleShift->Count; i++) {
+			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->YL->First->Value.Value, O->Value.Value->Mu, O->Value.Value->YL->Last->Value.Value));
+
+			O->Value.Key->Add(QuarkShift[i]->N);
+			O->Value.Value->Add(O->Value.Value->Mu, QuarkShift[i]);
+			O = O->Next;
+
+			if (BundleShift->Count > i + 2) {
+				O->Value.Key->Add(QuarkShift[i]->L);
+				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 2]);
+				O = O->Next;
+			}
+
+			if (BundleShift->Count > i + 5) {
+				O->Value.Key->Add(QuarkShift[i]->R);
+				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5]);
+				O = O->Next;
+			}
+
+			if (BundleShift->Count > i + 7) {
+				O->Value.Key->Add(QuarkShift[i]->N);
+				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
+
+				AddLast(KeyValuePair<Polygamma^, Soliton^>(
+					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Phi),
+					O->Value.Value)); // Proof Of Sickness
+				O = O->Next;
+			}
+		}	
 	}
 }

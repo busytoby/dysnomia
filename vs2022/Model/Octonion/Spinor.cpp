@@ -6,6 +6,10 @@ namespace Dysnomia {
 	Spinor::Spinor(Quaternion^ Q, Polygamma^ X) {
 		Octogamma = X->First;
 		Epsilon = Math::ModPow(Octogamma->Value.Key, Octogamma->Value.Value->Nu->Cone->Manifold, Q->Nu->Rod->Barn);
+		if (Octogamma->Value.Key.IsZero)
+			throw gcnew Exception("Zero Octogamma Key");
+		if (Epsilon.IsZero)
+			throw gcnew Exception("Zero Epsilon");
 
 		Gamma = gcnew Tuple<Affinity^, Affinity^>(
 			gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, Q->Gamma->Cone),
@@ -35,6 +39,8 @@ namespace Dysnomia {
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ L = Zeta->First;
 		while (L = L->Next) {
 			Epsilon = Math::ModPow(Epsilon, L->Value.Value->Nu->Cone->Manifold, L->Value.Value->Nu->Rod->Barn);
+			if (Epsilon.IsZero)
+				throw gcnew Exception("Zero Epsilon");
 
 			Gamma = gcnew Tuple<Affinity^, Affinity^>(
 				gcnew Affinity(L->Value.Value->Gamma->Rod, Gamma->Item1->Cone),

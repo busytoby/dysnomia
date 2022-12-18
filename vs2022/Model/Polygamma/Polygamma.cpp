@@ -17,7 +17,9 @@ namespace Dysnomia {
         V->Rho = gcnew Affinity(Q->Y->M->Rod, S->L->M->Cone);
         V->Sigma = gcnew Affinity(R->M->Rod, Q->R->M->Cone);
 
-        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, V->Nu->Cone->Barn, N->M->Rod->Barn);
+        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, V->Nu->Cone->Barn, N->M->Rod->Manifold);
+        if (V->Epsilon.IsZero)
+            throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         CapSpinor(I, R, N);
@@ -35,7 +37,9 @@ namespace Dysnomia {
         V->Rho = Q->Rho;
         V->Sigma = gcnew Affinity(R->M->Rod, R->M->Cone);
 
-        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, Q->Nu->Cone->Barn, N->M->Rod->Barn);
+        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, Q->Nu->Cone->Barn, N->M->Rod->Manifold);
+        if (V->Epsilon.IsZero)
+            throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         CapSpinor(I, R, N);
@@ -54,6 +58,8 @@ namespace Dysnomia {
         V->Sigma = gcnew Affinity(R->M->Rod, S->R->M->Cone);
 
         V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->R->M->Rod->Barn);
+        if (V->Epsilon.IsZero)
+            throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         CapSpinor(I, R, N);
@@ -94,6 +100,9 @@ namespace Dysnomia {
 
             V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
 
+            if (V->Epsilon.IsZero)
+                throw gcnew Exception("Zero Epsilon");
+
             AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
             CapSpinor(I, R, N);
         }
@@ -120,6 +129,9 @@ namespace Dysnomia {
 
             V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
 
+            if (V->Epsilon.IsZero)
+                throw gcnew Exception("Zero Epsilon");
+
             AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
             CapSpinor(I, R, N);
         }
@@ -134,6 +146,9 @@ namespace Dysnomia {
         L->Sigma = gcnew Affinity(N->M->Rod, N->M->Cone);
 
         L->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Rho->Cone->Manifold, N->M->Rod->Barn);
+
+        if (L->Epsilon.IsZero)
+            throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
     }

@@ -50,6 +50,8 @@ namespace Dysnomia {
 	}
 
 	void Soliton::Add(Spinor^ Eta) {
+		if (Eta->Octogamma->List->Count < 5) 
+			return;
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
 
 		int i = Epsilon->Count;
@@ -72,6 +74,8 @@ namespace Dysnomia {
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu) {
+		if (Eta->Octogamma->List->Count < 5) 
+			return;
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
 
 		int i = Epsilon->Count;
