@@ -7,10 +7,12 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	public ref class Polyrho : LinkedList<KeyValuePair<Polygamma^, Soliton^>>
 	{
+	private:
+		void Select(Polysigma^, Polygamma^);
+
 	public:
 		Polyrho(Polysigma^, Polygamma^);
 		void Cap(Polygamma^);
 		void Propagate(Polysigma^);
-		void Select(Polysigma^, Polygamma^);
 	};
 }

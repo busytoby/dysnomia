@@ -79,18 +79,18 @@ namespace Dysnomia {
 		for (int i = 0; i < BundleShift->Count; i++) {
 			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->YL->First->Value.Value, O->Value.Value->Mu, O->Value.Value->YL->Last->Value.Value));
 
-			O->Value.Key->Add(QuarkShift[i]->N);
+			O->Value.Key->Add(QuarkShift[i]->R);
 			O->Value.Value->Add(O->Value.Value->Mu, QuarkShift[i]);
 			O = O->Next;
 
 			if (BundleShift->Count > i + 2) {
-				O->Value.Key->Add(QuarkShift[i]->L);
+				O->Value.Key->Add(QuarkShift[i]->N);
 				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 2]);
 				O = O->Next;
 			}
 
 			if (BundleShift->Count > i + 5) {
-				O->Value.Key->Add(QuarkShift[i]->R);
+				O->Value.Key->Add(QuarkShift[i]->L);
 				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5]);
 				O = O->Next;
 			}
@@ -104,10 +104,17 @@ namespace Dysnomia {
 					O->Value.Value)); // Proof Of Sickness
 				O = O->Next;
 			}
-		}	
+		}
+
+		if (O == nullptr) return;
+		do {
+			Select(Nu, O->Value.Key);
+		} while (O = O->Next);
 	}
 
 	void Polyrho::Select(Polysigma^ Sigma, Polygamma^ Alpha) {
-
+		LeftShift<Quark^, Bundle^>^ QuarkShift = gcnew LeftShift<Quark^, Bundle^>((LinkedList<KeyValuePair<Quark^, Bundle^>>^)Sigma);
+		RightShift<Quark^, Bundle^>^ BundleShift = gcnew RightShift<Quark^, Bundle^>((LinkedList<KeyValuePair<Quark^, Bundle^>>^)Sigma);
+		RightShift<BigInteger, Quaternion^>^ AlphaShift = gcnew RightShift<BigInteger, Quaternion^>(Alpha);
 	}
 }
