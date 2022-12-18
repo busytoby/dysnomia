@@ -67,6 +67,7 @@ namespace Dysnomia
             Opal.Contrast(); // // Breather, Gametophyte, Using Amber.Theta Sporophyte, then Bryophyta
             Opal.Kappa.Propagate(Opal.Theta);
             Opal.Contrast();
+            Opal.Rho.Kernel.Inhibit(X.Rho);
         }
     }
 }
