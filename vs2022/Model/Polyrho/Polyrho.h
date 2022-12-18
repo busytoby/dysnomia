@@ -2,6 +2,7 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
+using namespace System::Numerics;
 
 namespace Dysnomia {
 	public ref class Polyrho : LinkedList<KeyValuePair<Polygamma^, Soliton^>>
