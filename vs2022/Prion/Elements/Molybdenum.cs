@@ -50,6 +50,7 @@ namespace Prion.Elements
             Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
             Theta.Run(Rho.Kernel.Eta, Eta.Phi);
             Theta.Add(Eta.Alpha);
+            Theta.Cap(Rho.Epsilon, Theta);
         }
     }
 }
