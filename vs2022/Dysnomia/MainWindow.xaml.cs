@@ -63,14 +63,9 @@ namespace Dysnomia
 
         public void Play()
         {
-            Molybdenum Opal = new Molybdenum(); // First Earth Stone
-
-            Opal.Contrast(); // // Breather, Gametophyte, Using Amber.Theta Sporophyte, then Bryophyta
-            Opal.Kappa.Propagate(Opal.Theta);
-            Opal.Contrast();
-            Opal.Rho.Kernel.Inhibit(X.Rho);
-            Opal.Rho.Kernel.Aggregate(Niobium.Ypsilon);
-            Opal.Rho.Kernel.Antagonize(Radon.Tau.X);
+            Tungsten.Eta.Rho.Kernel.Inhibit(X.Rho);
+            Tungsten.Eta.Rho.Kernel.Aggregate(Niobium.Ypsilon);
+            Tungsten.Eta.Rho.Kernel.Antagonize(Radon.Tau.X);
         }
     }
 }
