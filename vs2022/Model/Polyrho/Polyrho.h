@@ -9,6 +9,6 @@ namespace Dysnomia {
 	{
 	public:
 		Polyrho(Polysigma^, Polygamma^);
-		// TODO: Add your methods for this class here.
+		void Cap(Polygamma^);
 	};
 }
