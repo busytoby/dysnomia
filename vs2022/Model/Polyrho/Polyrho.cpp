@@ -150,6 +150,7 @@ namespace Dysnomia {
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = Last;
 
 		do {
-
+			O->Value.Value->Mu->Transit(O->Value.Key);
 		} while (O = O->Previous);
+	}
 }
