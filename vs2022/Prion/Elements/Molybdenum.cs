@@ -46,6 +46,10 @@ namespace Prion.Elements
         {
             Kappa = new Polyrho(Theta, Rho.W.R.List);
             Kappa.Cap(Radon.Tau.W.N.List);
+            Theta.Add(Nu.W.R, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Beta.Xi);
+            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
+            Theta.Run(Rho.Kernel.Eta, Eta.Phi);
+            Theta.Add(Eta.Alpha);
         }
     }
 }
