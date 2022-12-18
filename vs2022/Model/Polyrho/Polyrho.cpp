@@ -96,12 +96,12 @@ namespace Dysnomia {
 			}
 
 			if (BundleShift->Count > i + 7) {
-				O->Value.Key->Add(QuarkShift[i]->N);
+				O->Value.Key->Add(QuarkShift[i]->R);
 				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
 
 				AddLast(KeyValuePair<Polygamma^, Soliton^>(
-					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Phi),
-					O->Value.Value)); // Proof Of Sickness
+					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Nu),
+					O->Value.Value));
 				O = O->Next;
 			}
 		}
