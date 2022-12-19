@@ -8,7 +8,7 @@ namespace Dysnomia {
 	public ref class Polygamma : LinkedList<KeyValuePair<BigInteger, Quaternion^>>
 	{
 	private:
-		void CapSpinor(Ion^, Ion^, Ion^);
+		void Kappa(Ion^, Ion^, Ion^);
 
 	public:
 		Polygamma(Orbital^, Orbital^);

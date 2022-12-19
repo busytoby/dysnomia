@@ -22,7 +22,7 @@ namespace Dysnomia {
             throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-        CapSpinor(I, R, N);
+        Kappa(I, R, N);
 	}
 
     Polygamma::Polygamma(Quaternion^ Q) {
@@ -42,7 +42,7 @@ namespace Dysnomia {
             throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-        CapSpinor(I, R, N);
+        Kappa(I, R, N);
     }
 
     void Polygamma::Add(Orbital^ S) {
@@ -62,7 +62,7 @@ namespace Dysnomia {
             throw gcnew Exception("Zero Epsilon");
 
         AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-        CapSpinor(I, R, N);
+        Kappa(I, R, N);
     }
 
     void Polygamma::Add(Quaternion^ S) {
@@ -104,7 +104,7 @@ namespace Dysnomia {
                 throw gcnew Exception("Zero Epsilon");
 
             AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-            CapSpinor(I, R, N);
+            Kappa(I, R, N);
         }
         else { // Plant Hybrid Or Cultivar
             I = gcnew Ion(S->Nu);
@@ -133,11 +133,11 @@ namespace Dysnomia {
                 throw gcnew Exception("Zero Epsilon");
 
             AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
-            CapSpinor(I, R, N);
+            Kappa(I, R, N);
         }
     }
 
-    void Polygamma::CapSpinor(Ion^ I, Ion^ R, Ion^ N) {
+    void Polygamma::Kappa(Ion^ I, Ion^ R, Ion^ N) {
         Quaternion^ L = gcnew Quaternion();
         L->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, Last->Value.Value->Sigma->Cone);
         L->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, R->M->Cone);

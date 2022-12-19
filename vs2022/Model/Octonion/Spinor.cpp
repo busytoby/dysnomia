@@ -32,7 +32,7 @@ namespace Dysnomia {
 			gcnew Affinity(Q->Sigma->Rod, Octogamma->Value.Value->Sigma->Cone));
 
 		Transit();
-		IsoSpin();
+		Delta();
 	}
 
 	void Spinor::Transit(Polygamma^ Zeta) {
@@ -69,7 +69,7 @@ namespace Dysnomia {
 		Transit(L);
 	}
 
-	void Spinor::IsoSpin() {
+	void Spinor::Delta() {
 		Quaternion^ L = Head();
 		Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
 	}

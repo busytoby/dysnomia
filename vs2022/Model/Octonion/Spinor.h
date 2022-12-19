@@ -26,7 +26,7 @@ namespace Dysnomia {
 		Spinor(Quaternion^, Polygamma^);
 		void Transit();
 		void Transit(Polygamma^);
-		void IsoSpin();
+		void Delta();
 		Quaternion^ Head();
 	};
 
