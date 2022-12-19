@@ -64,10 +64,10 @@ namespace Dysnomia
         public void Play()
         {
             Tungsten.Eta.Nu.Kernel.Inhibit(Niobium.Ypsilon.Y);
-            Tungsten.Eta.Rho.Kernel.Inhibit(X.Rho);
+            Molybdenum.Rho.Kernel.Inhibit(X.Rho);
             Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);
-            Tungsten.Eta.Rho.Kernel.Aggregate(Niobium.Ypsilon);
-            Tungsten.Eta.Rho.Kernel.Antagonize(Radon.Tau.X);
+            Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
+            Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
         }
     }
 }

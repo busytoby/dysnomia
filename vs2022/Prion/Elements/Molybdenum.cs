@@ -9,8 +9,8 @@ namespace Prion.Elements
 {
     public class Molybdenum
     {
-        public Chromium Rho;
-        public Sulfur Eta;
+        static public Chromium Rho;
+        static public Sulfur Eta;
         public Sulfur Mu;
         public Chromium Nu;
         public Quark Alpha;
@@ -23,34 +23,52 @@ namespace Prion.Elements
             Eta = new Sulfur();
             Rho = new Chromium(Astatine.Beta);
             Iota = new Lanthanum(Rho, Eta);
-            Alpha = new Quark(Iota.Eta[1], Iota.Eta[2], Iota.Eta[0]);
             Theta = new Polysigma();
-            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
-            Theta.Add(Alpha);
-            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
-            Theta.Add(Eta.Alpha);
-
             Nu = new Chromium(Niobium.Ypsilon);
             Niobium.Ypsilon.Persist(Nu);
 
-            Theta.Add(Rho.Epsilon, Theta);
-            Theta.Add(Niobium.Ypsilon.Alpha);
-            Theta.Add(Nu.W.N, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Beta.Xi);
-            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Phi);
-            Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
-            Theta.Add(Niobium.Ypsilon.Alpha);
-            Theta.Cap(Rho.Epsilon, Theta);
-            Theta.Add(Niobium.Ypsilon.Alpha);
+            Alpha = new Quark(Iota.Eta[1], Iota.Eta[2], Iota.Eta[0]);
+            Delta(Astatine.Beta.Theta, Niobium.Ypsilon);
         }
 
-        public void Contrast()
+        public Molybdenum(Lanthanum Beta, Polysigma MuTheta)
+        {
+            if (Eta == null || Rho == null) throw new Exception("Molybdenum Incomplete");
+            Mu = new Sulfur();
+            Iota = Beta;
+            Theta = new Polysigma();
+            Nu = new Chromium(Mu);
+            Mu.Persist(Nu);
+
+            Alpha = new Quark(Iota.Alpha.Kernel.Alpha.Mu[2], Iota.Alpha.Kernel.Alpha.Mu[4], Iota.Alpha.Kernel.Alpha.Mu[0]);
+            Delta(MuTheta, Mu);
+        }
+
+        public void Delta(Polysigma NuTheta, Sulfur Ypsilon)
+        {
+            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
+            Theta.Add(Alpha);
+            Theta.Add(Rho.Epsilon, NuTheta);
+            Theta.Add(Eta.Alpha);
+
+            Theta.Add(Rho.Epsilon, Theta);
+            Theta.Add(Ypsilon.Alpha);
+            Theta.Add(Nu.W.N, Ypsilon.Lambda.Xi, Ypsilon.Xi, Ypsilon.Beta.Xi);
+            Theta.Run(Rho.Kernel.Eta, Ypsilon.Phi);
+            Theta.Run(Rho.Kernel.Eta, Ypsilon.Tau);
+            Theta.Add(Ypsilon.Alpha);
+            Theta.Cap(Rho.Epsilon, Theta);
+            Theta.Add(Ypsilon.Alpha);
+        }
+
+        public void Contrast(Sulfur Ypsilon, Chromium Tau)
         {
             if (Kappa == null)
             {
                 Kappa = new Polyrho(Theta, Rho.W.R.List);
-                Kappa.Cap(Radon.Tau.W.N.List);
-                Theta.Add(Nu.W.R, Niobium.Ypsilon.Xi, Niobium.Ypsilon.Lambda.Xi, Niobium.Ypsilon.Beta.Xi);
-                Theta.Run(Rho.Kernel.Eta, Niobium.Ypsilon.Tau);
+                Kappa.Cap(Tau.W.N.List);
+                Theta.Add(Nu.W.R, Ypsilon.Xi, Ypsilon.Lambda.Xi, Ypsilon.Beta.Xi);
+                Theta.Run(Rho.Kernel.Eta, Ypsilon.Tau);
             }
             else
             {
@@ -63,7 +81,7 @@ namespace Prion.Elements
             Theta.Add(Eta.Alpha);
         }
 
-        public Lanthanum Persist()
+        public Lanthanum Persist(Sulfur Ypsilon, Chromium Tau)
         {
             if (Eta.Mu != null) throw new Exception("Already Persistent");
 
@@ -73,7 +91,7 @@ namespace Prion.Elements
             Theta.Add(new Quark(Beta.Eta[1], Beta.Eta[2], Beta.Eta[0]));
             Rho.Kernel.Inhibit(Beta.Upsilon);
             Rho.Kernel.Aggregate(Beta.Upsilon);
-            Contrast();
+            Contrast(Ypsilon, Tau);
             return Beta;
         }
     }
