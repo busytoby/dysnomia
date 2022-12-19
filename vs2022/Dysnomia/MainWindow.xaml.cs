@@ -66,9 +66,10 @@ namespace Dysnomia
         {
             Tungsten.Eta.Nu.Kernel.Inhibit(Niobium.Ypsilon.Y);
             Molybdenum.Rho.Kernel.Inhibit(X.Rho);
-            Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);
+            Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);          
             Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
             Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
+            Tungsten.Rho.Nu.Kernel.Antagonize(Tungsten.Eta.Nu.X);
         }
     }
 }

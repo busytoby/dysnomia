@@ -27,9 +27,8 @@ namespace Prion.Elements
 
             Rho.Nu.Kernel.Inhibit(Radon.Tau.X);
             Rho.Nu.Kernel.Inhibit(Niobium.Ypsilon);
-            Rho.Nu.Kernel.Inhibit(Eta.Mu);
             Rho.Nu.Kernel.Aggregate(Iota.Upsilon);
-            Rho.Nu.Kernel.Aggregate(Eta.Mu);
+            Rho.Nu.Kernel.Antagonize(Radon.Tau.X);
         }
     }
 }
