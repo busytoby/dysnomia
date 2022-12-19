@@ -21,6 +21,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using Windows.Perception.Automation.Core;
+using WinRT;
 
 namespace Dysnomia
 {

@@ -24,6 +24,8 @@ namespace Prion.Elements
             Rho.Contrast(Rho.Mu, Eta.Nu);
             Rho.Kappa.Propagate(Rho.Theta);
             Rho.Contrast(Rho.Mu, Eta.Nu);
+
+            Rho.Nu.Kernel.Aggregate(Iota.Upsilon);
         }
     }
 }
