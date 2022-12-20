@@ -40,8 +40,10 @@ namespace Dysnomia
       
             Math.LicenseKeys = new Buffers.LinkedLicense();
             Math.CacheKeys = new Buffers.LinkedLicense();           
-            Buffers.ReadLicense("private.key", Math.LicenseKeys);
-            Buffers.ReadLicense("public.key", Math.CacheKeys);
+            //Buffers.ReadLicense("private.key", Math.LicenseKeys);
+            Buffers.WriteLicense("private.key", Math.LicenseKeys);
+            Buffers.WriteLicense("public.key", Math.CacheKeys);
+            //Buffers.ReadLicense("public.key", Math.CacheKeys);
 
 
             X = new Prion();

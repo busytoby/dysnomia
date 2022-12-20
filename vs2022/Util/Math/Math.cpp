@@ -17,10 +17,12 @@ namespace Dysnomia {
         if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
         else {
-            LicenseKeys->Loaded = false;
-            LicenseKeys->reader->Close();
-            LicenseKeys->file->Close();
-            Buffers::WriteLicense("private.key", LicenseKeys);
+            if (LicenseKeys->Loaded) {
+                LicenseKeys->Loaded = false;
+                LicenseKeys->reader->Close();
+                LicenseKeys->file->Close();
+                Buffers::WriteLicense("private.key", LicenseKeys);
+            }
         }
 
         rnd.NextBytes(bytes);
@@ -48,10 +50,12 @@ namespace Dysnomia {
         if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(CacheKeys->reader);
         else {
-            CacheKeys->Loaded = false;
-            CacheKeys->reader->Close();
-            CacheKeys->file->Close();
-            Buffers::WriteLicense("public.key", CacheKeys);
+            if (CacheKeys->Loaded) {
+                CacheKeys->Loaded = false;
+                CacheKeys->reader->Close();
+                CacheKeys->file->Close();
+                Buffers::WriteLicense("public.key", CacheKeys);
+            }
         }
 
 

@@ -29,7 +29,13 @@ namespace Dysnomia {
     }
 
     void Buffers::ReadLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
-        LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Open);
+        try {
+            LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Open);
+        }
+        catch(Exception^ e) { 
+            LicenseData->Loaded = false;
+            return; 
+        }
         LicenseData->reader = gcnew BinaryReader(LicenseData->file);
         LicenseData->Loaded = true;
     }

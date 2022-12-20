@@ -19,6 +19,11 @@ namespace Prion.Elements
             Polynu = new LinkedList<KeyValuePair<Soliton, Tuple<Tensor, Tensor>>>();
             Nu.S = Phi.P;
 
+            Soliton NuTau = new Soliton(
+                Tungsten.Eta.Kappa.Last.Value.Key.First.Value.Value, 
+                Tungsten.Eta.Alpha, 
+                Tungsten.Rho.Kappa.First.Value.Key.First.Value.Value);
+
             Tensor Left = new Tensor();
             Left.Gamma = new Dysnomia.Quaternion();
             Left.Gamma.Gamma = Phi.S.L.M;
@@ -112,6 +117,8 @@ namespace Prion.Elements
             Right.Sigma.Epsilon = Phi.F.Sigma;
 
             Epsilon = Phi.S.Sigma;
+
+            NuTau.Add(Niobium.Ypsilon.Xi);
 
             /*
             Octonion O = new Octonion(new Calcium(T.N, Left.Gamma, Right.Phi, T.L, T.R));
