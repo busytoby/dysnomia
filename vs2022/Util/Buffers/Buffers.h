@@ -3,6 +3,7 @@
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
+using namespace System::IO;
 
 namespace Dysnomia {
 	public ref class Buffers
@@ -12,6 +13,9 @@ namespace Dysnomia {
 		public:
 			bool Loaded = false;
 			bool Record = false;
+			FileStream^ infile;
+			BinaryReader^ indata;
+			size_t offset;
 			LinkedList<BigInteger>^ RecordKeys;
 			LinkedListNode<BigInteger>^ KeyPtr;
 		};
@@ -19,5 +23,6 @@ namespace Dysnomia {
 		static void CopyToPtr(BigInteger^, void**, size_t*);
 		static void WriteLicense(String^, LinkedLicense^);
 		static void ReadLicense(String^, LinkedLicense^);
+		static BigInteger ReadNextLicenseKey(BinaryReader^);
 	};
 }

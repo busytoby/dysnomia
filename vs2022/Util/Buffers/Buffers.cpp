@@ -39,20 +39,20 @@ namespace Dysnomia {
     }
 
     void Buffers::ReadLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
+        LicenseData->infile = gcnew FileStream(LicenseFile, FileMode::Open);
+        LicenseData->indata = gcnew BinaryReader(LicenseData->infile);
+        LicenseData->offset = 0;
+        /*
         using namespace Runtime::InteropServices;
         const char* FileNamePtr = (const char*)(Marshal::StringToHGlobalAnsi(LicenseFile)).ToPointer();
-        void* Bytes = nullptr;
-        size_t Length;
+        void* Bytes = nullptr;       
         size_t offset = 0;
         size_t KeyLength;
-        FILE* infile = nullptr;
 
         if (_access(FileNamePtr, 0) != 0) return;
         fopen_s(&infile, FileNamePtr, "rb");
-
-        fseek(infile, 0, SEEK_END);
-        Length = ftell(infile);
-        rewind(infile);
+        LicenseData->infile = infile;
+        LicenseData->offset = offset;
 
         while (offset < Length) {
             fread(&KeyLength, sizeof(size_t), 1, infile);
@@ -68,7 +68,38 @@ namespace Dysnomia {
             free(Bytes);           
         }
         fclose(infile);
+        */
         LicenseData->Loaded = true;
     }
 
+    BigInteger Buffers::ReadNextLicenseKey(BinaryReader^ indata) {
+        int keyLength = indata->ReadInt64();
+        array<Byte>^ Key = indata->ReadBytes(keyLength);
+        return BigInteger(Key);
+
+        /*
+        fseek(infile, 0, SEEK_END);
+        size_t Length = ftell(infile);
+        fseek(infile, offset, SEEK_END);
+        size_t KeyLength;
+        void* Bytes = nullptr;
+        BigInteger^ R;
+
+        if (offset < Length) {
+            fread(&KeyLength, sizeof(size_t), 1, infile);
+            Bytes = (unsigned char*)malloc(KeyLength * sizeof(unsigned char));
+            fread(Bytes, KeyLength, 1, infile);
+            offset += KeyLength + sizeof(size_t);
+
+            array<Byte>^ byteArray = gcnew array<Byte>(KeyLength);
+            pin_ptr<Byte> p = &byteArray[0];
+            unsigned char* pch = reinterpret_cast<unsigned char*>((unsigned char*)p);
+            memcpy(pch, Bytes, KeyLength);
+            R = BigInteger(byteArray);
+            free(Bytes);
+        } else
+            fclose(infile);
+            */
+        //return gcnew BigInteger();
+    }
 }

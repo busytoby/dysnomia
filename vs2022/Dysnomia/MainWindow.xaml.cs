@@ -37,27 +37,23 @@ namespace Dysnomia
             InitializeComponent();
 
             Math.Prime = Math.MotzkinPrime;
-
-            /*            
+      
             Math.LicenseKeys = new Buffers.LinkedLicense();
-            Math.LicenseKeys.Record = true;
+            Math.LicenseKeys.Record = false;
             Math.CacheKeys = new Buffers.LinkedLicense();
-            Math.CacheKeys.Record = true;
+            Math.CacheKeys.Record = false;
             
             Buffers.ReadLicense("private.key", Math.LicenseKeys);
             Buffers.ReadLicense("public.key", Math.CacheKeys);
-            */
 
             X = new Prion();
             Play();
 
-            /*
             if (Math.LicenseKeys.Record)
                 Buffers.WriteLicense("private.key", Math.LicenseKeys);
 
             if (Math.CacheKeys.Record)
                 Buffers.WriteLicense("public.key", Math.CacheKeys);
-            */
 
             int a = 999; // Girls Planet
         }

@@ -26,6 +26,15 @@ namespace Prion.Elements
 
             Left.Gamma.Epsilon = Phi.F.Sigma;
 
+            Left.Nu = new Dysnomia.Quaternion();
+            Left.Nu.Gamma = Phi.F.Y.M;
+            Left.Nu.Nu = Nu.P.R.M;
+            Left.Nu.Phi = Phi.S.Y.M;
+            Left.Nu.Rho = Nu.F.Y.M;
+            Left.Nu.Sigma = Phi.P.L.M;
+
+            Left.Nu.Epsilon = Nu.P.Sigma;
+
             /*
                 if (Mu == null) Mu = new Manganese();
 
