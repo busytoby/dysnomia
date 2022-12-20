@@ -69,6 +69,8 @@ namespace Dysnomia
             Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);          
             Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
             Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
+
+            Lead Pb = new Lead(Tungsten.Phi, Niobium.Nu);
         }
     }
 }

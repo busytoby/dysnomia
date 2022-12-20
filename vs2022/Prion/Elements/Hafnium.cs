@@ -14,7 +14,7 @@ namespace Prion.Elements
 
         static public Potassium Kappa;
         public Orbital S, F, P;
-        public object B;
+        //public object B;
 
         public Hafnium(Orbital D) : base(D.R.M)
         {
