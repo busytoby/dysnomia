@@ -26,16 +26,6 @@ namespace Prion.Elements
             Star.Alpha.Add(P.Sigma, P.Y.M);
         }
 
-        public Hafnium(Hafnium E) : base(E.F.L.M)
-        {
-            Star.Alpha.Add(Sigma, Y.M);
-            F = new Hafnium(E.F);
-            Kappa = new Potassium(F, this);
-            Star.Alpha.Add(F.Sigma, F.Y.M);
-            P = new Orbital();
-            Star.Alpha.Add(P.Sigma, P.Y.M);
-        }
-
         public Hafnium(Affinity D) : base(D) { }
 
         public Hafnium(Dysnomia.Quaternion D)

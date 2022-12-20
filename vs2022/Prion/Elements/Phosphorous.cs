@@ -46,21 +46,6 @@ namespace Prion.Elements
             Earth E = new Earth();
         }
 
-        public Phosphorous(Affinity L)
-        {
-            Nu = new Hafnium(L);
-        }
-
-        public Phosphorous(Orbital L)
-        {
-            Nu = new Hafnium(L);
-        }
-
-        public Phosphorous(Dysnomia.Quaternion L)
-        {
-            Nu = new Hafnium(L);
-        }
-
         static public Orbital GenerateOrbital(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);

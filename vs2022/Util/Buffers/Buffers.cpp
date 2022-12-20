@@ -19,6 +19,7 @@ namespace Dysnomia {
     void Buffers::WriteLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
         LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Append);
         LicenseData->writer = gcnew BinaryWriter(LicenseData->file);
+        LicenseData->Record = true;
     }
 
     void Buffers::WriteNextLicenseKey(BinaryWriter^ outdata, BigInteger Key) {

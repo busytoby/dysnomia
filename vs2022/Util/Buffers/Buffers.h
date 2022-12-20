@@ -16,8 +16,6 @@ namespace Dysnomia {
 			FileStream^ file;
 			BinaryReader^ reader;
 			BinaryWriter^ writer;
-			LinkedList<BigInteger>^ RecordKeys;
-			LinkedListNode<BigInteger>^ KeyPtr;
 		};
 
 		static void CopyToPtr(BigInteger^, void**, size_t*);

@@ -14,8 +14,14 @@ namespace Dysnomia {
 
         if (!rnd_Initialized) Initialize_Random();
 
-        if (LicenseKeys != nullptr && LicenseKeys->Loaded)
+        if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
+        else {
+            LicenseKeys->Loaded = false;
+            LicenseKeys->reader->Close();
+            LicenseKeys->file->Close();
+            Buffers::WriteLicense("private.key", LicenseKeys);
+        }
 
         rnd.NextBytes(bytes);
         //bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
@@ -39,9 +45,15 @@ namespace Dysnomia {
     }
 
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
-        if (CacheKeys != nullptr && CacheKeys->Loaded) {
+        if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(CacheKeys->reader);
+        else {
+            CacheKeys->Loaded = false;
+            CacheKeys->reader->Close();
+            CacheKeys->file->Close();
+            Buffers::WriteLicense("public.key", CacheKeys);
         }
+
 
         BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
         bool Negative = false;
