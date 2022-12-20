@@ -13,9 +13,9 @@ namespace Dysnomia {
 		public:
 			bool Loaded = false;
 			bool Record = false;
-			FileStream^ infile;
-			BinaryReader^ indata;
-			size_t offset;
+			FileStream^ file;
+			BinaryReader^ reader;
+			BinaryWriter^ writer;
 			LinkedList<BigInteger>^ RecordKeys;
 			LinkedListNode<BigInteger>^ KeyPtr;
 		};
@@ -24,5 +24,6 @@ namespace Dysnomia {
 		static void WriteLicense(String^, LinkedLicense^);
 		static void ReadLicense(String^, LinkedLicense^);
 		static BigInteger ReadNextLicenseKey(BinaryReader^);
+		static void WriteNextLicenseKey(BinaryWriter^, BigInteger);
 	};
 }

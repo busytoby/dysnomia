@@ -14,19 +14,16 @@ namespace Dysnomia {
 
         if (!rnd_Initialized) Initialize_Random();
 
-        if (LicenseKeys != nullptr && LicenseKeys->Loaded) {
-            return Buffers::ReadNextLicenseKey(LicenseKeys->indata);
-        }
+        if (LicenseKeys != nullptr && LicenseKeys->Loaded)
+            return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
 
         rnd.NextBytes(bytes);
         //bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
         R = BigInteger(bytes);
         while (R > Prime) R = R / 2;
 
-        if (LicenseKeys != nullptr && LicenseKeys->Record) {
-            if (LicenseKeys->RecordKeys == nullptr) LicenseKeys->RecordKeys = gcnew LinkedList<BigInteger>();
-            LicenseKeys->RecordKeys->AddLast(R);
-        }
+        if (LicenseKeys->Record)
+            Buffers::WriteNextLicenseKey(LicenseKeys->writer, R);
 
 		return R;
 	}
@@ -43,7 +40,7 @@ namespace Dysnomia {
 
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
         if (CacheKeys != nullptr && CacheKeys->Loaded) {
-            return Buffers::ReadNextLicenseKey(CacheKeys->indata);
+            return Buffers::ReadNextLicenseKey(CacheKeys->reader);
         }
 
         BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
@@ -53,10 +50,8 @@ namespace Dysnomia {
         if (BigInteger::IsNegative(C)) Negative = !Negative;
         if (Negative) Result = Result * -1;
 
-        if (CacheKeys != nullptr && CacheKeys->Record) {
-            if (CacheKeys->RecordKeys == nullptr) CacheKeys->RecordKeys = gcnew LinkedList<BigInteger>();
-            CacheKeys->RecordKeys->AddLast(Result);
-        }
+        if (CacheKeys->Record) 
+            Buffers::WriteNextLicenseKey(CacheKeys->writer, Result);
 
         return Result;
     }

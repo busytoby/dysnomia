@@ -17,58 +17,19 @@ namespace Dysnomia {
     }
 
     void Buffers::WriteLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
-        using namespace Runtime::InteropServices;
-        const char* FileNamePtr = (const char*)(Marshal::StringToHGlobalAnsi(LicenseFile)).ToPointer();
-        FILE* outfile = nullptr;
+        LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Append);
+        LicenseData->writer = gcnew BinaryWriter(LicenseData->file);
+    }
 
-        if (LicenseData->RecordKeys == nullptr || LicenseData->RecordKeys->Count == 0) return;
-
-        fopen_s(&outfile, FileNamePtr, "ab+");
-        LicenseData->KeyPtr = LicenseData->RecordKeys->First;
-        do {
-            size_t length;
-            void* bytes;
-
-            CopyToPtr(LicenseData->KeyPtr->Value, &bytes, &length);
-            size_t l = length;
-            fwrite(&l, sizeof(size_t), 1, outfile);
-            fwrite(bytes, length, 1, outfile);
-        } while (LicenseData->KeyPtr = LicenseData->KeyPtr->Next);
-        fclose(outfile);
-        Marshal::FreeHGlobal(IntPtr((void*)FileNamePtr));
+    void Buffers::WriteNextLicenseKey(BinaryWriter^ outdata, BigInteger Key) {
+        array<Byte>^ KeyBytes = Key.ToByteArray();
+        outdata->Write((Int64) KeyBytes->Length);
+        outdata->Write(KeyBytes);
     }
 
     void Buffers::ReadLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
-        LicenseData->infile = gcnew FileStream(LicenseFile, FileMode::Open);
-        LicenseData->indata = gcnew BinaryReader(LicenseData->infile);
-        LicenseData->offset = 0;
-        /*
-        using namespace Runtime::InteropServices;
-        const char* FileNamePtr = (const char*)(Marshal::StringToHGlobalAnsi(LicenseFile)).ToPointer();
-        void* Bytes = nullptr;       
-        size_t offset = 0;
-        size_t KeyLength;
-
-        if (_access(FileNamePtr, 0) != 0) return;
-        fopen_s(&infile, FileNamePtr, "rb");
-        LicenseData->infile = infile;
-        LicenseData->offset = offset;
-
-        while (offset < Length) {
-            fread(&KeyLength, sizeof(size_t), 1, infile);
-            Bytes = (unsigned char*)malloc(KeyLength * sizeof(unsigned char));
-            fread(Bytes, KeyLength, 1, infile);
-            offset += KeyLength + sizeof(size_t);
-
-            array<Byte>^ byteArray = gcnew array<Byte>(KeyLength);
-            pin_ptr<Byte> p = &byteArray[0];
-            unsigned char* pch = reinterpret_cast<unsigned char*>((unsigned char*)p);
-            memcpy(pch, Bytes, KeyLength);
-            LicenseData->AddLast(BigInteger(byteArray));
-            free(Bytes);           
-        }
-        fclose(infile);
-        */
+        LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Open);
+        LicenseData->reader = gcnew BinaryReader(LicenseData->file);
         LicenseData->Loaded = true;
     }
 
@@ -76,30 +37,5 @@ namespace Dysnomia {
         int keyLength = indata->ReadInt64();
         array<Byte>^ Key = indata->ReadBytes(keyLength);
         return BigInteger(Key);
-
-        /*
-        fseek(infile, 0, SEEK_END);
-        size_t Length = ftell(infile);
-        fseek(infile, offset, SEEK_END);
-        size_t KeyLength;
-        void* Bytes = nullptr;
-        BigInteger^ R;
-
-        if (offset < Length) {
-            fread(&KeyLength, sizeof(size_t), 1, infile);
-            Bytes = (unsigned char*)malloc(KeyLength * sizeof(unsigned char));
-            fread(Bytes, KeyLength, 1, infile);
-            offset += KeyLength + sizeof(size_t);
-
-            array<Byte>^ byteArray = gcnew array<Byte>(KeyLength);
-            pin_ptr<Byte> p = &byteArray[0];
-            unsigned char* pch = reinterpret_cast<unsigned char*>((unsigned char*)p);
-            memcpy(pch, Bytes, KeyLength);
-            R = BigInteger(byteArray);
-            free(Bytes);
-        } else
-            fclose(infile);
-            */
-        //return gcnew BigInteger();
     }
 }
