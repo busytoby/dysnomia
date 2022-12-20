@@ -1,5 +1,4 @@
-﻿using Dysnomia;
-using Prion.Elements;
+﻿using Prion.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +57,7 @@ namespace Dysnomia
             Spinor J = Tin.Mate();
             Phosphorous.Sigmas.RecordSpinor(J, "Jupiter");
 
-            Aluminum Zero = new Aluminum(Parallax.Kappa.Last.Value.Value, Zinc.Fetch());
+            Aluminum Zero = new Aluminum(Hafnium.Kappa.Last.Value.Value, Zinc.Fetch());
         }
     }
 }

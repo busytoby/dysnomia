@@ -4,11 +4,11 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using Prion.Elements;
+using Dysnomia;
 
-namespace Dysnomia
+namespace Prion.Elements
 {
-    public class Parallax : Orbital
+    public class Hafnium : Orbital
     {
         static public Tin Saturn;
 
@@ -16,7 +16,7 @@ namespace Dysnomia
         public Orbital S, F, P;
         public object B;
 
-        public Parallax(Orbital D) : base(D.R.M)
+        public Hafnium(Orbital D) : base(D.R.M)
         {
             Star.Alpha.Add(Sigma, Y.M);
             F = new Orbital(D.Y.M);
@@ -26,19 +26,20 @@ namespace Dysnomia
             Star.Alpha.Add(P.Sigma, P.Y.M);
         }
 
-        public Parallax(Parallax E) : base(E.F.L.M)
+        public Hafnium(Hafnium E) : base(E.F.L.M)
         {
             Star.Alpha.Add(Sigma, Y.M);
-            F = new Parallax(E.F);
+            F = new Hafnium(E.F);
             Kappa = new Potassium(F, this);
             Star.Alpha.Add(F.Sigma, F.Y.M);
             P = new Orbital();
             Star.Alpha.Add(P.Sigma, P.Y.M);
         }
 
-        public Parallax(Affinity D) : base(D) { }
+        public Hafnium(Affinity D) : base(D) { }
 
-        public Parallax(Quaternion D) {
+        public Hafnium(Dysnomia.Quaternion D)
+        {
             S = new Orbital(D.Rho);
             F = new Orbital(D.Phi);
             P = new Orbital(D.Gamma);

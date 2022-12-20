@@ -20,17 +20,17 @@ namespace Prion.Elements
 
             if (Tin.Mu.Count != 2) throw new Exception("Io Already Exists");
 
-            Spinor A = new Dysnomia.Spinor(Y, Parallax.Kappa);
+            Spinor A = new Dysnomia.Spinor(Y, Hafnium.Kappa);
             Phosphorous.Sigmas.RecordSpinor(A, "Io");
             Xi = Y;
             
-            Spinor B = new Dysnomia.Spinor(X, Parallax.Kappa);
+            Spinor B = new Dysnomia.Spinor(X, Hafnium.Kappa);
             Phosphorous.Sigmas.RecordSpinor(B, "Amalthea");
 
             Quark Thebe = new Quark(X, Y, Xi);
             Phi = new Octonion(Thebe, new Calcium(Thebe.N, Xi, Zinc.Fetch(), Thebe.L, Thebe.R));
 
-            Rho = new Spinor(Phi.X.N, Parallax.Kappa);
+            Rho = new Spinor(Phi.X.N, Hafnium.Kappa);
             Phosphorous.Sigmas.RecordSpinor(Rho, "Valetudo");
 
             Phosphorous.Sigmas.RecordQuark(Thebe, "Thebe");

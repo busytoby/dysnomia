@@ -46,8 +46,8 @@ namespace Dysnomia
             List<Quaternion> L = new List<Quaternion>();
             if (Beryllium.Phi.ContainsKey(Sigma))
                 L.Add(Beryllium.Phi[Sigma]);
-            if (Parallax.Kappa.Eta.ContainsKey(Sigma))
-                L.Add(Parallax.Kappa.Eta[Sigma]);
+            if (Hafnium.Kappa.Eta.ContainsKey(Sigma))
+                L.Add(Hafnium.Kappa.Eta[Sigma]);
             if (L.Count > 1) throw new Exception("More Than One Orbital Found");
             return L[0];
         }

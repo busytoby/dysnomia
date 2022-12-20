@@ -42,7 +42,7 @@ namespace Prion.Elements
 
         static public Spinor Mate()
         {
-            Spinor R = new Spinor(Sigma, Parallax.Kappa);
+            Spinor R = new Spinor(Sigma, Hafnium.Kappa);
             return R;
         }
     }

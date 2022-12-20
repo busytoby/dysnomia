@@ -17,7 +17,7 @@ namespace Prion.Elements
 
         static private Venus V;
 
-        static public Parallax Nu;
+        static public Hafnium Nu;
 
         public Phosphorous()
         {
@@ -27,51 +27,51 @@ namespace Prion.Elements
             Xi = new Neon();
             Sigmas = new Nitrogen();
 
-            Nu = new Parallax(new Orbital());
+            Nu = new Hafnium(new Orbital());
 
             Sigmas.RecordOrbital(Nu, "Neptune");
             Sigmas.RecordOrbital(Nu.F, "Sun");
             Sigmas.RecordOrbital(Nu.P, "Uranus");
 
-            V = new Venus(Parallax.Kappa.First.Value.Value.Rho.Rod, Parallax.Kappa.First.Value.Value.Gamma);
+            V = new Venus(Hafnium.Kappa.First.Value.Value.Rho.Rod, Hafnium.Kappa.First.Value.Value.Gamma);
 
-            Parallax.Saturn = new Tin();
+            Hafnium.Saturn = new Tin();
             Phosphorous.GenerateOrbital(Tin.Sigma.Sigma, "Saturn Sigma"); // First Sigma Star Orbital
             Phosphorous.Sigmas.RecordQuaternion(Tin.Sigma, "Saturn");
 
             Pluto P = new Pluto();
 
-            P.Mate(Parallax.Kappa.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
+            P.Mate(Hafnium.Kappa.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
 
             Earth E = new Earth();
         }
 
         public Phosphorous(Affinity L)
         {
-            Nu = new Parallax(L);
+            Nu = new Hafnium(L);
         }
 
         public Phosphorous(Orbital L)
         {
-            Nu = new Parallax(L);
+            Nu = new Hafnium(L);
         }
 
         public Phosphorous(Dysnomia.Quaternion L)
         {
-            Nu = new Parallax(L);
+            Nu = new Hafnium(L);
         }
 
         static public Orbital GenerateOrbital(Affinity L, String Name)
         {
             Orbital P = new Orbital(L);
-            Parallax.Kappa.Add(P);
+            Hafnium.Kappa.Add(P);
             Sigmas.RecordOrbital(P, Name);
             return P;
         }
 
         static public Tensor GenerateTensor(Quark M, String Name)
         {
-            Tensor P = new Tensor(M, Parallax.Kappa);
+            Tensor P = new Tensor(M, Hafnium.Kappa);
             //Parallax.Kappa.Add(P);
             Sigmas.RecordTensor(P, Name);
             return P;

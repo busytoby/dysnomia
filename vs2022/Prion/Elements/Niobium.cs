@@ -11,12 +11,12 @@ namespace Prion.Elements
     static public class Niobium // Jupiter's Moon Europa
     {
         public static Sulfur Ypsilon;
-        public static Parallax Phi;
+        public static Hafnium Nu;
 
         static Niobium() {
             Ypsilon = Astatine.Beta.Persist(Radon.Tau);
-            Orbital Omicron = new Orbital(Ypsilon.Y.Beta.Xi.Gamma.Item2, Astatine.Beta.Xi.Phi.Item2, Ypsilon.Y.Beta.Xi.Rho.Item2);
-            Phi = new Parallax(Omicron);
+            Orbital Omicron = new Orbital(Ypsilon.Y.Beta.Xi.Gamma.Item2, Astatine.Beta.Xi.Phi.Item1, Ypsilon.Y.Beta.Xi.Rho.Item2);
+            Nu = new Hafnium(Omicron);
         }    
     }
 }
