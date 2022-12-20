@@ -11,6 +11,7 @@ namespace Prion.Elements
         static public Molybdenum Eta;
         static public Molybdenum Rho;
         static public Lanthanum Iota;
+        static public Hafnium Phi;
 
         static Tungsten()
         {
@@ -61,6 +62,8 @@ namespace Prion.Elements
             Eta.Theta.Run(Rho.Nu.Kernel.Eta, Rho.Iota.Upsilon.Phi);
             Eta.Theta.Run(Rho.Nu.Kernel.Eta, Eta.Iota.Upsilon.Tau);
             Eta.Theta.Add(Molybdenum.Rho.Kernel.Nu.X);
+
+            Phi = new Hafnium(Rho.Mu.Tau);
         }
     }
 }
