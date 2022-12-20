@@ -10,13 +10,13 @@ namespace Prion.Elements
 {
     public class Lead
     {
-        public LinkedList<KeyValuePair<Tensor, Tensor>> Polynu;
+        public LinkedList<KeyValuePair<Soliton, Tuple<Tensor, Tensor>>> Polynu;
         public Manganese Mu;
         public BigInteger Epsilon;
 
         public Lead(Hafnium Phi, Hafnium Nu)
         {
-            Polynu = new LinkedList<KeyValuePair<Tensor, Tensor>>();
+            Polynu = new LinkedList<KeyValuePair<Soliton, Tuple<Tensor, Tensor>>>();
             Nu.S = Phi.P;
 
             Tensor Left = new Tensor();
@@ -113,7 +113,13 @@ namespace Prion.Elements
 
             Epsilon = Phi.S.Sigma;
 
+            /*
+            Octonion O = new Octonion(new Calcium(T.N, Left.Gamma, Right.Phi, T.L, T.R));
+            Quark T = new Quark(X, Y, Xi);           
+            Spinor P = new Spinor(O.X.N, new Polygamma(Right.Sigma));
+
             Polynu.AddLast(KeyValuePair.Create(Left, Right));
+            */
 
             /*
                 if (Mu == null) Mu = new Manganese();
