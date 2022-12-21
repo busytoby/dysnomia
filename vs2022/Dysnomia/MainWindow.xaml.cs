@@ -30,7 +30,7 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Prion X;
+        private Actinium X;
 
         public MainWindow()
         {
@@ -38,7 +38,7 @@ namespace Dysnomia
 
             Math.Prime = Math.MotzkinPrime;
 
-            X = new Prion();
+            X = new Actinium();
             Play();
             int a = 999; // Girls Planet
         }

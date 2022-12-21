@@ -1,20 +1,20 @@
 ﻿using System.Buffers;
 using System.Numerics;
+using Dysnomia;
 using Prion;
-using Prion.Elements;
 
-namespace Dysnomia
+namespace Prion.Elements
 {
-    public class Prion
+    public class Actinium
     {
         static public Star Sigma;
         static public Quark Gamma;
         public Sulfur Rho;
         public Chromium Mu;
-        public String Word;
-        public Prion()
+        public string Word;
+        public Actinium()
         {
-            if(Sigma == null)
+            if (Sigma == null)
                 Sigma = new Star();
 
             Rho = new Sulfur();
