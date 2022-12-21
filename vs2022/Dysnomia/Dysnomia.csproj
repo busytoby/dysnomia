@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Prion\Prion.csproj" />
-    <ProjectReference Include="..\Util\Buffers\Buffers.vcxproj" />
   </ItemGroup>
 
 </Project>

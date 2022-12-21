@@ -140,11 +140,6 @@
   <ItemGroup>
     <Image Include="app.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Buffers\Buffers.vcxproj">
-      <Project>{c1aa12e9-4d48-4fa9-9a1e-bf2bf3b7890f}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

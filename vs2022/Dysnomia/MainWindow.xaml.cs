@@ -38,13 +38,6 @@ namespace Dysnomia
 
             Math.Prime = Math.MotzkinPrime;
 
-            /*
-            Math.LicenseKeys = new Buffers.LinkedLicense();
-            Math.CacheKeys = new Buffers.LinkedLicense();           
-            Buffers.ReadLicense("private.key", Math.LicenseKeys);
-            Buffers.ReadLicense("public.key", Math.CacheKeys);
-            */
-
             X = new Prion();
             Play();
             int a = 999; // Girls Planet

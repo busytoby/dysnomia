@@ -28,7 +28,6 @@ namespace Dysnomia {
 
 		static BigInteger MotzkinPrime = BigInteger::Parse("03632C8EB5AF3B", NumberStyles::AllowHexSpecifier);
 
-
 		// Second Prime In Catalan's Constant
 		static BigInteger CatalanPrime = BigInteger::Parse(
 			"01A74B82867AB14262C6E0153A32170696AB92141212C6C478D195A94DE8FACB8AD0" \
@@ -60,10 +59,5 @@ namespace Dysnomia {
 		static BigInteger Random();
 		static String^ ByteArrayToHexString(array<Byte>^);
 		static BigInteger ModPow(BigInteger, BigInteger, BigInteger);
-
-		static Buffers::LinkedLicense^ LicenseKeys;
-		static Buffers::LinkedLicense^ CacheKeys;
-
-		// TODO: Add your methods for this class here.
 	};
 }
