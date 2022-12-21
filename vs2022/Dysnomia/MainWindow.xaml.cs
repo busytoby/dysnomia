@@ -52,6 +52,8 @@ namespace Dysnomia
             Rhenium Beta = new Rhenium(Nu.Value.Value);
             Nu = Nu.Next;
             Osmium Eta = new Osmium(Nu.Value.Value);
+            Nu = Nu.Next;
+            Cerium StarSigma = new Cerium(Nu.Value.Value);
 
 
             /*

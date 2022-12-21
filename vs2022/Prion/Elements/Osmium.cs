@@ -26,10 +26,10 @@ namespace Prion.Elements
 
             Zeta = new Quark(Lambda.X.R, Lambda.X.L, Lambda.X.N);
 
-            Gamma = new Lead(Tantalum.Beta, Mu);
-            Nu = new Lead(Psi, Tantalum.Beta);
-            Phi = new Lead(Psi, Tantalum.Alpha);
-            Rho = new Lead(Mu, Tantalum.Alpha);
+            Gamma = new Lead(Rhenium.Psi, Mu);
+            Nu = new Lead(Psi, Rhenium.Psi);
+            Phi = new Lead(Psi, Rhenium.Mu);
+            Rho = new Lead(Mu, Rhenium.Mu);
             Sigma = new Lead(Psi, Mu);
 
             Rhenium.Pi.Add(new Spinor(Gamma.Alpha.Rho, Tungsten.Rho.Nu.Epsilon));

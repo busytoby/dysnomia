@@ -10,8 +10,8 @@ namespace Prion.Elements
     public class Rhenium : Spin<Lead>
     {
         static public Soliton Pi;
-        public Hafnium Psi;
-        public Hafnium Mu;
+        static public Hafnium Psi;
+        static public Hafnium Mu;
 
         public Rhenium(Octonion Lambda)
         {
