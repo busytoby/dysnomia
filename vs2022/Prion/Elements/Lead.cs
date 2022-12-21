@@ -10,7 +10,6 @@ namespace Prion.Elements
 {
     public class Lead
     {
-        public Soliton Gamma;
         public Tensor Alpha;
         public Tensor Rho;
         public BigInteger Epsilon;
@@ -18,11 +17,6 @@ namespace Prion.Elements
         public Lead(Hafnium Phi, Hafnium Nu)
         {
             Nu.S = Phi.P;
-
-            Gamma = new Soliton(
-                Tungsten.Eta.Kappa.Last.Value.Key.First.Value.Value, 
-                Tungsten.Eta.Alpha, 
-                Tungsten.Rho.Kappa.First.Value.Key.First.Value.Value);
 
             Alpha = new Tensor();
             Alpha.Gamma = new Dysnomia.Quaternion();
@@ -117,8 +111,6 @@ namespace Prion.Elements
             Rho.Sigma.Epsilon = Phi.F.Sigma;
 
             Epsilon = Phi.S.Sigma;
-
-            Gamma.Add(Niobium.Ypsilon.Xi);
         }
     }
 }

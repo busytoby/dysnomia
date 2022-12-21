@@ -14,15 +14,19 @@ namespace Dysnomia {
 
         if (!rnd_Initialized) Initialize_Random();
 
-        if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length)
-            return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
-        else {
-            if (LicenseKeys != nullptr && LicenseKeys->Loaded) {
-                LicenseKeys->Loaded = false;
-                LicenseKeys->reader->Close();
-                LicenseKeys->file->Close();
-                Buffers::WriteLicense("private.key", LicenseKeys);
-            } else if(LicenseKeys != nullptr)
+        if (LicenseKeys != nullptr) {
+            if (LicenseKeys->Loaded) {
+                if (LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length) {
+                    return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
+                }
+                if (LicenseKeys->Record == false) {
+                    LicenseKeys->Loaded = false;
+                    LicenseKeys->reader->Close();
+                    LicenseKeys->file->Close();
+                    Buffers::WriteLicense("private.key", LicenseKeys);
+                }
+            }
+            else if (LicenseKeys->Record == false)
                 Buffers::WriteLicense("private.key", LicenseKeys);
         }
 
@@ -48,19 +52,21 @@ namespace Dysnomia {
     }
 
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
-        if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length)
-            return Buffers::ReadNextLicenseKey(CacheKeys->reader);
-        else {
-            if (CacheKeys != nullptr && CacheKeys->Loaded) {
-                CacheKeys->Loaded = false;
-                CacheKeys->reader->Close();
-                CacheKeys->file->Close();
-                Buffers::WriteLicense("public.key", CacheKeys);
+        if (CacheKeys != nullptr) {
+            if (CacheKeys->Loaded) {
+                if (CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length) {
+                    return Buffers::ReadNextLicenseKey(CacheKeys->reader);
+                }
+                if (CacheKeys->Record == false) {
+                    CacheKeys->Loaded = false;
+                    CacheKeys->reader->Close();
+                    CacheKeys->file->Close();
+                    Buffers::WriteLicense("public.key", CacheKeys);
+                }
             }
-            else if (CacheKeys != nullptr)
+            else if (CacheKeys->Record == false)
                 Buffers::WriteLicense("public.key", CacheKeys);
         }
-
 
         BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
         bool Negative = false;

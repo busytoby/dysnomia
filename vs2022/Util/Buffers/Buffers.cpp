@@ -17,7 +17,15 @@ namespace Dysnomia {
     }
 
     void Buffers::WriteLicense(String^ LicenseFile, LinkedLicense^ LicenseData) {
-        LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Append);
+        try {
+            if(File::Exists(LicenseFile))
+                LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Append);
+            else
+                LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Create);
+        }
+        catch (Exception^ e) {
+            int i = 99;
+        }
         LicenseData->writer = gcnew BinaryWriter(LicenseData->file);
         LicenseData->Record = true;
     }
@@ -33,6 +41,7 @@ namespace Dysnomia {
             LicenseData->file = gcnew FileStream(LicenseFile, FileMode::Open);
         }
         catch(Exception^ e) { 
+            System::Threading::Thread::Sleep(1000);
             LicenseData->Loaded = false;
             return; 
         }
