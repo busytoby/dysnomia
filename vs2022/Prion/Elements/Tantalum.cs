@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Prion.Elements
 {
     public class Tantalum : Spin<Lead> {
         static public Hafnium Alpha;
         static public Hafnium Beta;
-        static public Soliton Pi;
+        public Soliton Pi;
+        public Hafnium Psi;
+        public Hafnium Mu;
+
         public Tantalum()
         {
             if (Alpha == null) Alpha = new Hafnium(Hafnium.Kappa.First.Value.Value);
@@ -54,6 +58,41 @@ namespace Prion.Elements
             Tungsten.Eta.Theta.Add(Tungsten.Rho.Nu.Kernel.Nu.X);
             Tungsten.Eta.Theta.Cap(Tungsten.Rho.Nu.Epsilon, Tungsten.Eta.Theta);
             Tungsten.Eta.Theta.Add(Niobium.Ypsilon.Alpha);
+        }
+
+        public Tantalum(Octonion Lambda)
+        {
+            if (Vanadium.Beta == null) Vanadium.Beta = Lambda;
+
+            Psi = new Hafnium(Lambda.X.N);
+            Mu = new Hafnium(Lambda.L.Phi);
+
+            Pi = new Soliton(
+                 Vanadium.Beta.L.Gamma,
+                 Vanadium.Beta.X,
+                 Vanadium.Beta.L.Phi
+                 );
+
+            Gamma = new Lead(Beta, Mu);
+            Nu = new Lead(Psi, Beta);
+            Phi = new Lead(Psi, Alpha);
+            Rho = new Lead(Mu, Alpha);
+            Sigma = new Lead(Psi, Mu);
+
+            Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon));
+            Pi.Add(new Spinor(Gamma.Alpha.Nu, Tungsten.Rho.Nu.Epsilon));
+            Pi.Add(Niobium.Ypsilon.Kappa.Tau);
+            Pi.Add(Molybdenum.Eta.Xi, Lambda.X);
+
+            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.YL.First.Value.Value, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
+            Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
+            Tungsten.Rho.Theta.Run(Pi, Nu.Rho.Gamma);
+            Tungsten.Rho.Theta.Add(Pi.Q);
+
+            Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.YL.Last.Value.Value, Pi.YL.First.Value.Value);
+            Tungsten.Eta.Theta.Run(Pi, Gamma.Rho.Gamma);
+            Tungsten.Eta.Theta.Run(Pi, Nu.Alpha.Phi);
+            Tungsten.Eta.Theta.Add(Pi.Q);
         }
     }
 }
