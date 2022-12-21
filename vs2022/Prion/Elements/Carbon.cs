@@ -13,7 +13,7 @@ namespace Prion.Elements
         public new void Add(BigInteger Sigma, Affinity T)
         {
             base.Add(Sigma, T);
-            Cerium.Eta.Add(T.Cone, Sigma);
+            Cerium.Tau.Add(T.Cone, Sigma);
         }
     }
 }

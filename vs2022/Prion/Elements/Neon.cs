@@ -17,8 +17,8 @@ namespace Prion.Elements
                 Cerium.Alpha.Add(Sigma, V.Y.M);
             else if (Cerium.Alpha[Sigma] != V.Y.M) throw new Exception("Carbonic Failure");
 
-            if (!Cerium.Eta.ContainsKey(V.Y.M.Cone))
-                Cerium.Eta.Add(V.Y.M.Cone, Sigma);           
+            if (!Cerium.Tau.ContainsKey(V.Y.M.Cone))
+                Cerium.Tau.Add(V.Y.M.Cone, Sigma);           
         }
     }
 }

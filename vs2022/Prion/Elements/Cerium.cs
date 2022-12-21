@@ -8,17 +8,25 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Cerium
+    public class Cerium : Spin<Lead>
     {
+        public Hafnium Psi;
+        public Hafnium Mu;
+
+        static public Quark Zeta;
+        static public Vanadium Eta;
+        public Soliton Pi;
+        public Spinor Delta;
+
         static public Carbon Alpha;
-        static public Boron Eta;
-        static public Phosphorous Gamma;
+        static public Boron Tau;
+        static public Phosphorous Chi;
 
         public Cerium()
         {
             if (Alpha == null) Alpha = new Carbon();
-            if (Eta == null) Eta = new Boron();
-            if (Gamma == null) Gamma = new Phosphorous();
+            if (Tau == null) Tau = new Boron();
+            if (Chi == null) Chi = new Phosphorous();
         }
 
         static public Affinity GetAffinityByName(string Name)
@@ -38,7 +46,7 @@ namespace Prion.Elements
 
         static public List<BigInteger> GetSigmasByName(string Name)
         {
-            return Eta[GetConeByName(Name)];
+            return Tau[GetConeByName(Name)];
         }
 
         static public Dysnomia.Quaternion GetQuaternionBySigma(BigInteger Sigma)

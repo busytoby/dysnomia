@@ -14,7 +14,7 @@ namespace Prion.Elements
         {
             if (base.ContainsKey(Sigma) && base[Sigma] == U) return;
             base.Add(Sigma, U);
-            Cerium.Eta.Add(U, Sigma);
+            Cerium.Tau.Add(U, Sigma);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Dysnomia
         public Venus(Dynamic Y, Affinity U) : base(Y, U)
         {
             if(Rho == null) Rho = new Boron();
-            foreach(KeyValuePair<object, List<BigInteger>> B in Cerium.Eta) {
+            foreach(KeyValuePair<object, List<BigInteger>> B in Cerium.Tau) {
                 foreach (BigInteger K in B.Value)
                 {
                     /*
