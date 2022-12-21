@@ -32,6 +32,9 @@ namespace Prion.Elements
             Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
 
             Tantalum StarAlpha = new Tantalum();
+
+            Molybdenum.Rho.Kernel.Inhibit(Molybdenum.Rho.X);
+
             LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = StarAlpha.Pi.V.First;
             Tantalum StarGamma = new Tantalum(Nu.Value.Value);
             Nu = Nu.Next;
