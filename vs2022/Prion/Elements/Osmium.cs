@@ -14,8 +14,7 @@ namespace Prion.Elements
 
         static public Quark Zeta;
         static public Vanadium Eta;
-        public Soliton Chi;
-        public Spinor Delta;
+        static public Spinor Delta;
 
         public Osmium(Octonion Lambda)
         {
