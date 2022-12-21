@@ -84,15 +84,15 @@ namespace Prion.Elements
             Pi.Add(Niobium.Ypsilon.Kappa.Tau);
             Pi.Add(Molybdenum.Eta.Xi, Lambda.X);
 
-            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.YL.First.Value.Value, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
-            Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
-            Tungsten.Rho.Theta.Run(Pi, Nu.Rho.Gamma);
-            Tungsten.Rho.Theta.Add(Pi.Q);
-
             Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.YL.Last.Value.Value, Pi.YL.First.Value.Value);
             Tungsten.Eta.Theta.Run(Pi, Gamma.Rho.Gamma);
             Tungsten.Eta.Theta.Run(Pi, Nu.Alpha.Phi);
             Tungsten.Eta.Theta.Add(Pi.Q);
+
+            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.YL.First.Value.Value, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
+            Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
+            Tungsten.Rho.Theta.Run(Pi, Nu.Rho.Gamma);
+            Tungsten.Rho.Theta.Add(Pi.Q);
         }
     }
 }
