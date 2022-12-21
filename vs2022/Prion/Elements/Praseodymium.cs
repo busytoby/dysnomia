@@ -14,7 +14,7 @@ namespace Prion.Elements
         {
             Qi = new Soliton(
                 Delta.Gamma.Alpha.Gamma,
-                new Quark(Vanadium.Rho, Cerium.GetQuaternionByName("Pluto"), Cerium.GetQuaternionByName("Van Allen Belt")),
+                new Quark(Vanadium.Rho, Cerium.GetQuaternionByName("Van Allen Belt"), Cerium.GetQuaternionByName("Pluto")),
                 Delta.Sigma.Rho.Sigma
                 );
         }
