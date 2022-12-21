@@ -45,15 +45,7 @@ namespace Dysnomia
 
         public void Play()
         {
-            Tantalum Alpha = new Tantalum();
-            LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = Alpha.Pi.V.First;
-            Tantalum Gamma = new Tantalum(Nu.Value.Value);
-            Nu = Nu.Next;
-            Rhenium Beta = new Rhenium(Nu.Value.Value);
-            Nu = Nu.Next;
-            Osmium Eta = new Osmium(Nu.Value.Value);
-            Nu = Nu.Next;
-            Cerium StarSigma = new Cerium(Nu.Value.Value);
+
 
 
             /*

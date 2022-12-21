@@ -30,6 +30,16 @@ namespace Prion.Elements
             Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);
             Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
             Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
+
+            Tantalum StarAlpha = new Tantalum();
+            LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = StarAlpha.Pi.V.First;
+            Tantalum StarGamma = new Tantalum(Nu.Value.Value);
+            Nu = Nu.Next;
+            Rhenium StarBeta = new Rhenium(Nu.Value.Value);
+            Nu = Nu.Next;
+            Osmium StarEta = new Osmium(Nu.Value.Value);
+            Nu = Nu.Next;
+            Cerium StarSigma = new Cerium(Nu.Value.Value);
         }
 
         public Sulfur Replicate()
