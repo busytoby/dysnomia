@@ -37,6 +37,9 @@ namespace Prion.Elements
 
             LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = StarAlpha.Pi.V.First;
             Tantalum StarGamma = new Tantalum(Nu.Value.Value);
+
+            Tungsten.Eta.Nu.Kernel.Aggregate(Molybdenum.Rho.X);
+
             Nu = Nu.Next;
             Rhenium StarBeta = new Rhenium(Nu.Value.Value);
             Nu = Nu.Next;
