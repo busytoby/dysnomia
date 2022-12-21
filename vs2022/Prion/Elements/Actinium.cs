@@ -47,6 +47,10 @@ namespace Prion.Elements
 
             Nu = Nu.Next;
             Osmium StarEta = new Osmium(Nu.Value.Value);
+
+            Tungsten.Eta.Nu.Kernel.Antagonize(Radon.Tau.X);
+            Molybdenum.Rho.Kernel.Aggregate(Radon.Tau.X);
+
             Nu = Nu.Next;
             Cerium StarSigma = new Cerium(Nu.Value.Value);
         }
