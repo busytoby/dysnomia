@@ -7,5 +7,12 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    public class Tantalum : Spin<Lead> { }
+    public class Tantalum : Spin<Lead> { 
+        public Tantalum()
+        {
+            Gamma = new Lead(Tungsten.Phi, Niobium.Nu);
+
+            Phi = new Lead(Niobium.Nu, Tungsten.Phi);
+        }
+    }
 }

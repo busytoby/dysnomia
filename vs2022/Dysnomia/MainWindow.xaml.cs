@@ -53,7 +53,6 @@ namespace Dysnomia
         public void Play()
         {
             Tantalum Alpha = new Tantalum();
-            Alpha.Gamma = new Lead(Tungsten.Phi, Niobium.Nu);
         }
     }
 }
