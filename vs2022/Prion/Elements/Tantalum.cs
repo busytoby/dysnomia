@@ -29,6 +29,7 @@ namespace Prion.Elements
             Sigma = new Lead(Alpha, Beta);
 
             Pi.Add(Niobium.Ypsilon.Xi);
+            Pi.Add(Niobium.Ypsilon.Y.Lambda.Xi);
         }
     }
 }

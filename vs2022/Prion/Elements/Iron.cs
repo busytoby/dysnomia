@@ -53,6 +53,7 @@ namespace Prion.Elements
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Thetan.Phi);
             Thetan.Theta.Run(Eta, Nu.X.L);
+            if (Thetan.Alpha == null) Thetan.Alpha = Eta.Delta;
             Thetan.Theta.Run(Thetan.Alpha);
         }
     }
