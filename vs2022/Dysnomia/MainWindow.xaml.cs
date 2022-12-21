@@ -37,14 +37,13 @@ namespace Dysnomia
             InitializeComponent();
 
             Math.Prime = Math.MotzkinPrime;
-      
-            Math.LicenseKeys = new Buffers.LinkedLicense();
-            Math.CacheKeys = new Buffers.LinkedLicense();           
-            //Buffers.ReadLicense("private.key", Math.LicenseKeys);
-            Buffers.WriteLicense("private.key", Math.LicenseKeys);
-            Buffers.WriteLicense("public.key", Math.CacheKeys);
-            //Buffers.ReadLicense("public.key", Math.CacheKeys);
 
+            //Math.LicenseKeys = new Buffers.LinkedLicense();
+            //Math.CacheKeys = new Buffers.LinkedLicense();           
+            //Buffers.ReadLicense("private.key", Math.LicenseKeys);
+            //Buffers.ReadLicense("public.key", Math.CacheKeys);
+            //Buffers.WriteLicense("private.key", Math.LicenseKeys);
+            //Buffers.WriteLicense("public.key", Math.CacheKeys);
 
             X = new Prion();
             Play();
@@ -53,13 +52,8 @@ namespace Dysnomia
 
         public void Play()
         {
-            Tungsten.Eta.Nu.Kernel.Inhibit(Niobium.Ypsilon.Y);
-            Molybdenum.Rho.Kernel.Inhibit(X.Rho);
-            Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);          
-            Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
-            Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
-
-            Lead Pb = new Lead(Tungsten.Phi, Niobium.Nu);
+            Tantalum Alpha = new Tantalum();
+            Alpha.Gamma = new Lead(Tungsten.Phi, Niobium.Nu);
         }
     }
 }

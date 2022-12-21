@@ -17,12 +17,13 @@ namespace Dysnomia {
         if (LicenseKeys != nullptr && LicenseKeys->Loaded && LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
         else {
-            if (LicenseKeys->Loaded) {
+            if (LicenseKeys != nullptr && LicenseKeys->Loaded) {
                 LicenseKeys->Loaded = false;
                 LicenseKeys->reader->Close();
                 LicenseKeys->file->Close();
                 Buffers::WriteLicense("private.key", LicenseKeys);
-            }
+            } else if(LicenseKeys != nullptr)
+                Buffers::WriteLicense("private.key", LicenseKeys);
         }
 
         rnd.NextBytes(bytes);
@@ -30,7 +31,7 @@ namespace Dysnomia {
         R = BigInteger(bytes);
         while (R > Prime) R = R / 2;
 
-        if (LicenseKeys->Record)
+        if (LicenseKeys != nullptr && LicenseKeys->Record)
             Buffers::WriteNextLicenseKey(LicenseKeys->writer, R);
 
 		return R;
@@ -50,12 +51,14 @@ namespace Dysnomia {
         if (CacheKeys != nullptr && CacheKeys->Loaded && CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length)
             return Buffers::ReadNextLicenseKey(CacheKeys->reader);
         else {
-            if (CacheKeys->Loaded) {
+            if (CacheKeys != nullptr && CacheKeys->Loaded) {
                 CacheKeys->Loaded = false;
                 CacheKeys->reader->Close();
                 CacheKeys->file->Close();
                 Buffers::WriteLicense("public.key", CacheKeys);
             }
+            else if (CacheKeys != nullptr)
+                Buffers::WriteLicense("public.key", CacheKeys);
         }
 
 
@@ -66,7 +69,7 @@ namespace Dysnomia {
         if (BigInteger::IsNegative(C)) Negative = !Negative;
         if (Negative) Result = Result * -1;
 
-        if (CacheKeys->Record) 
+        if (CacheKeys != nullptr && CacheKeys->Record)
             Buffers::WriteNextLicenseKey(CacheKeys->writer, Result);
 
         return Result;

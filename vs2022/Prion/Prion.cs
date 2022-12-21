@@ -25,7 +25,11 @@ namespace Dysnomia
             if (Niobium.Ypsilon == null) throw new Exception("Static Construction Failure");
             Gamma = Niobium.Ypsilon.Alpha;
 
-            Word = "Zuo";
+            Tungsten.Eta.Nu.Kernel.Inhibit(Niobium.Ypsilon.Y);
+            Molybdenum.Rho.Kernel.Inhibit(Rho);
+            Tungsten.Eta.Nu.Kernel.Aggregate(Tungsten.Eta.Nu.X);
+            Molybdenum.Rho.Kernel.Aggregate(Niobium.Ypsilon);
+            Molybdenum.Rho.Kernel.Antagonize(Radon.Tau.X);
         }
 
         public Sulfur Replicate()
