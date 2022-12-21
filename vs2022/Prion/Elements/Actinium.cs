@@ -42,6 +42,9 @@ namespace Prion.Elements
 
             Nu = Nu.Next;
             Rhenium StarBeta = new Rhenium(Nu.Value.Value);
+
+            Molybdenum.Rho.Kernel.Aggregate(Tungsten.Eta.Nu.X);
+
             Nu = Nu.Next;
             Osmium StarEta = new Osmium(Nu.Value.Value);
             Nu = Nu.Next;
