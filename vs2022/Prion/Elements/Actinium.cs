@@ -11,7 +11,7 @@ namespace Prion.Elements
         static public Quark Gamma;
         public Sulfur Rho;
         public Chromium Mu;
-        public string Word;
+
         public Actinium()
         {
             if (Sigma == null)
