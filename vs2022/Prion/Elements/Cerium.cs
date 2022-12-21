@@ -43,20 +43,20 @@ namespace Prion.Elements
             Tungsten.Eta.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.YL.First.Value.Value, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Nu.Rho.Rho);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Gamma.Rho.Nu);
-            Tungsten.Eta.Theta.Add(Lambda.X);
+            Tungsten.Eta.Theta.Add(Osmium.Zeta);
             Tungsten.Eta.Theta.Add(Osmium.Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.YL.Last.Value.Value, Rhenium.Pi.YL.First.Value.Value);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Phi.Alpha.Nu);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Sigma.Rho.Gamma);
-            Tungsten.Eta.Theta.Add(Lambda.X);
+            Tungsten.Eta.Theta.Add(Osmium.Zeta);
 
             Tungsten.Rho.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.YL.First.Value.Value, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Phi.Rho.Nu);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Sigma.Alpha.Sigma);
-            Tungsten.Rho.Theta.Add(Lambda.X);
+            Tungsten.Rho.Theta.Add(Osmium.Zeta);
             Tungsten.Rho.Theta.Add(Osmium.Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.YL.Last.Value.Value, Rhenium.Pi.YL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Gamma.Rho.Nu);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Sigma.Alpha.Gamma);
-            Tungsten.Rho.Theta.Add(Lambda.X);
+            Tungsten.Rho.Theta.Add(Osmium.Zeta);
         }
 
         static public Affinity GetAffinityByName(string Name)
