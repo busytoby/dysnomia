@@ -31,7 +31,7 @@ namespace Prion.Elements
             Pi.Add(Niobium.Ypsilon.Xi);
             Pi.Add(Niobium.Ypsilon.Y.Lambda.Xi);
             Pi.Add(Radon.Tau.W.L);
-            Pi.Add(Molybdenum.Eta.Xi);
+            Pi.Add(Molybdenum.Eta.Xi, Tungsten.Eta.Alpha);
         }
     }
 }
