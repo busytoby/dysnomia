@@ -9,6 +9,11 @@ namespace Prion.Elements
 {
     public class Rhenium : Tantalum
     {
+        public Rhenium()
+        {
+            throw new Exception("No Such Thing");
+        }
+
         public Rhenium(Octonion Lambda)
         {
             if (Vanadium.Beta == null) Vanadium.Beta = Lambda;
