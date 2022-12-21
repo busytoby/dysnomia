@@ -16,7 +16,7 @@ namespace Dysnomia {
 
         if (LicenseKeys != nullptr) {
             if (LicenseKeys->Loaded) {
-                if (LicenseKeys->reader->BaseStream->Position < LicenseKeys->reader->BaseStream->Length) {
+                if (LicenseKeys->reader->BaseStream->Position <= LicenseKeys->reader->BaseStream->Length) {
                     return Buffers::ReadNextLicenseKey(LicenseKeys->reader);
                 }
                 if (LicenseKeys->Record == false) {
@@ -54,7 +54,7 @@ namespace Dysnomia {
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
         if (CacheKeys != nullptr) {
             if (CacheKeys->Loaded) {
-                if (CacheKeys->reader->BaseStream->Position < CacheKeys->reader->BaseStream->Length) {
+                if (CacheKeys->reader->BaseStream->Position <= CacheKeys->reader->BaseStream->Length) {
                     return Buffers::ReadNextLicenseKey(CacheKeys->reader);
                 }
                 if (CacheKeys->Record == false) {
