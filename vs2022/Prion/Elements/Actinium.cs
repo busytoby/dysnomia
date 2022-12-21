@@ -7,7 +7,7 @@ namespace Prion.Elements
 {
     public class Actinium
     {
-        static public Star Sigma;
+        static public Cerium Sigma;
         static public Quark Gamma;
         public Sulfur Rho;
         public Chromium Mu;
@@ -15,7 +15,7 @@ namespace Prion.Elements
         public Actinium()
         {
             if (Sigma == null)
-                Sigma = new Star();
+                Sigma = new Cerium();
 
             Rho = new Sulfur();
             Mu = new Chromium(Rho);

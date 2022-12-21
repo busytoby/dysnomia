@@ -1,5 +1,4 @@
-﻿using Dysnomia;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +14,7 @@ namespace Prion.Elements
         {
             if (base.ContainsKey(Sigma) && base[Sigma] == U) return;
             base.Add(Sigma, U);
-            Star.Eta.Add(U, Sigma);
+            Cerium.Eta.Add(U, Sigma);
         }
     }
 }

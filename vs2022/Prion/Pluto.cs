@@ -11,11 +11,11 @@ namespace Dysnomia
     public class Pluto : Quaternion
     {
         public Pluto() {
-            Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
-            Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
-            Orbital SunOrbital = Star.GetOrbitalByName("Sun");
-            Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
-            Quaternion SaturnOrbital = Star.GetQuaternionByName("Saturn");
+            Orbital UranusOrbital = Cerium.GetOrbitalByName("Uranus");
+            Orbital NeptuneOrbital = Cerium.GetOrbitalByName("Neptune");
+            Orbital SunOrbital = Cerium.GetOrbitalByName("Sun");
+            Orbital VenusOrbital = Cerium.GetOrbitalByName("Venus");
+            Quaternion SaturnOrbital = Cerium.GetQuaternionByName("Saturn");
             
             Gamma = UranusOrbital.R.M;
             Nu = NeptuneOrbital.R.M;

@@ -18,10 +18,10 @@ namespace Prion.Elements
             if (Sigma == null)
             {
 
-                Orbital UranusOrbital = Star.GetOrbitalByName("Uranus");
-                Orbital NeptuneOrbital = Star.GetOrbitalByName("Neptune");
-                Orbital SunOrbital = Star.GetOrbitalByName("Sun");
-                Orbital VenusOrbital = Star.GetOrbitalByName("Venus");
+                Orbital UranusOrbital = Cerium.GetOrbitalByName("Uranus");
+                Orbital NeptuneOrbital = Cerium.GetOrbitalByName("Neptune");
+                Orbital SunOrbital = Cerium.GetOrbitalByName("Sun");
+                Orbital VenusOrbital = Cerium.GetOrbitalByName("Venus");
 
                 Sigma = new Dysnomia.Quaternion();
                 Sigma.Gamma = SunOrbital.L.M;

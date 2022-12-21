@@ -18,17 +18,17 @@ namespace Prion.Elements
             W = new Wavelet();
 
             if(Alpha.Theta.Count == 0)
-                Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Pluto"));
+                Alpha.Eta.Rho.Add(Cerium.GetQuaternionByName("Pluto"));
             else
                 Alpha.Eta.Rho.Add(Alpha.Theta.First.Value.Key.L);
 
             W.L = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Kappa.Rho);
-            Alpha.Eta.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
+            Alpha.Eta.Rho.Add(Cerium.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(W.L);
             Kernel = Vanadium.Push();
 
             if (Alpha.Theta.Count == 0)
-                Alpha.Kappa.Rho.Add(Star.GetQuaternionByName("Van Allen Belt"));
+                Alpha.Kappa.Rho.Add(Cerium.GetQuaternionByName("Van Allen Belt"));
             else
                 Alpha.Kappa.Rho.Add(Alpha.Theta.Last.Value.Key.L);
 

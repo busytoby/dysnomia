@@ -41,7 +41,7 @@ namespace Prion.Elements
 
             Pluto P = new Pluto();
 
-            P.Mate(Hafnium.Kappa.Last.Value.Value, Star.GetOrbitalByName("Pluto Sigma")); // Dione
+            P.Mate(Hafnium.Kappa.Last.Value.Value, Cerium.GetOrbitalByName("Pluto Sigma")); // Dione
 
             Earth E = new Earth();
         }
