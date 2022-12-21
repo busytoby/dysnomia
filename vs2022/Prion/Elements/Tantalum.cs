@@ -64,7 +64,7 @@ namespace Prion.Elements
         {
             if (Vanadium.Beta == null) Vanadium.Beta = Lambda;
 
-            Psi = new Hafnium(Lambda.X.N);
+            Psi = new Hafnium(Lambda.X.R);
             Mu = new Hafnium(Lambda.L.Phi);
 
             Pi = new Soliton(
