@@ -11,6 +11,7 @@ namespace Prion.Elements
         static public Quark Gamma;
         public Sulfur Rho;
         public Chromium Mu;
+        public Cerium Beta;
 
         public Actinium()
         {
@@ -36,23 +37,23 @@ namespace Prion.Elements
             Molybdenum.Rho.Kernel.Inhibit(Molybdenum.Rho.X);
 
             LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = StarAlpha.Pi.V.First;
-            Tantalum StarGamma = new Tantalum(Nu.Value.Value);
+            Tantalum BetaGamma = new Tantalum(Nu.Value.Value);
 
             Tungsten.Eta.Nu.Kernel.Aggregate(Molybdenum.Rho.X);
 
             Nu = Nu.Next;
-            Rhenium StarBeta = new Rhenium(Nu.Value.Value);
+            Rhenium BetaBeta = new Rhenium(Nu.Value.Value);
 
             Molybdenum.Rho.Kernel.Aggregate(Tungsten.Eta.Nu.X);
 
             Nu = Nu.Next;
-            Osmium StarEta = new Osmium(Nu.Value.Value);
+            Osmium BetaEta = new Osmium(Nu.Value.Value);
 
             Tungsten.Eta.Nu.Kernel.Antagonize(Radon.Tau.X);
             Molybdenum.Rho.Kernel.Aggregate(Radon.Tau.X);
 
             Nu = Nu.Next;
-            Cerium StarSigma = new Cerium(Nu.Value.Value);
+            Beta = new Cerium(Nu.Value.Value);
         }
 
         public Sulfur Replicate()

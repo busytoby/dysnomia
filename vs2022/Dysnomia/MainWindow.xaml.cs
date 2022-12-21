@@ -45,16 +45,7 @@ namespace Dysnomia
 
         public void Play()
         {
-
-
-
-            /*
-            while(Nu != null)
-            {
-
-                Nu = Nu.Next;
-            }
-            */
+            Praseodymium Phi = new Praseodymium(X.Beta);
         }
     }
 }
