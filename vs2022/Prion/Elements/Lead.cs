@@ -70,7 +70,7 @@ namespace Prion.Elements
 
             Alpha.Sigma.Epsilon = Nu.F.Sigma;
 
-            Tensor Rho = new Tensor();
+            Rho = new Tensor();
             Rho.Gamma = new Dysnomia.Quaternion();
             Rho.Gamma.Gamma = Nu.S.L.M;
             Rho.Gamma.Nu = Phi.S.Y.M;
