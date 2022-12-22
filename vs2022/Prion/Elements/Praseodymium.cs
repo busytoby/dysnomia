@@ -12,6 +12,8 @@ namespace Prion.Elements
         public Soliton Qi;
         public Praseodymium(Cerium Delta)
         {
+            Neodymium Eta = new Neodymium(Delta.Nu);
+
             Qi = new Soliton(
                 Delta.Gamma.Rho.Gamma,
                 new Quark(Vanadium.Rho, Cerium.GetQuaternionByName("Van Allen Belt"), Cerium.GetQuaternionByName("Pluto")),
