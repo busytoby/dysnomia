@@ -1,6 +1,7 @@
 ﻿using Dysnomia;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,10 @@ namespace Prion.Elements
     {
         static public Soliton Qi;
         static public Spinor Xi;
-        public Polysigma Chi;
+        public Quark Psi;
+        public Molybdenum Gamma;
+        public Molybdenum Sigma;
+        public Lanthanum Iota;
 
         public Praseodymium(Cerium Delta)
         {
@@ -29,34 +33,47 @@ namespace Prion.Elements
                 Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau);
             }
 
+            Gamma = new Molybdenum(Tungsten.Iota, Tungsten.Eta.Theta);
+            Gamma.Contrast(Gamma.Mu, Tungsten.Eta.Nu);
+
+            Iota = Gamma.Persist(Tungsten.Eta.Mu, Gamma.Nu);
+            Sigma = new Molybdenum(Iota, Gamma.Theta);
+            Psi = new Quark(Gamma.Mu.Beta.Eta.X.N, Zinc.Fetch(), Sigma.Mu.Beta.Eta.X.R);
+
+            Gamma.Kappa.Propagate(Gamma.Theta);
+            Gamma.Contrast(Sigma.Mu, Sigma.Nu);
+
+            Sigma.Contrast(Gamma.Mu, Gamma.Nu);
+            Sigma.Kappa.Propagate(Sigma.Theta);
+            Sigma.Contrast(Gamma.Mu, Gamma.Nu);
+
             Qi = new Soliton(
                 Delta.Gamma.Rho.Gamma,
-                new Quark(Vanadium.Rho, Cerium.GetQuaternionByName("Van Allen Belt"), Cerium.GetQuaternionByName("Pluto")),
+                Psi,
                 Delta.Sigma.Alpha.Sigma
                 );
 
-            Chi = new Polysigma();
-            Chi.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
-            Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Nu);
-            Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Rho);
-            Chi.Add(Qi.Q);
-            Chi.Add(Tungsten.Rho.Iota.Alpha.W.L, Tungsten.Rho.Iota.Alpha.W.N, Tungsten.Rho.Iota.Alpha.W.R, Qi.Mu);
-            Chi.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Eta.Iota.Upsilon.Tau);
-            Chi.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Iota.Alpha.X.Phi);
-            Chi.Add(Osmium.Zeta);
-            Chi.Cap(new Polygamma(Tungsten.Eta.Mu.Tau), Tungsten.Eta.Iota.Alpha.X.Theta);
-            Chi.Add(Niobium.Ypsilon.Alpha);
+            Gamma.Theta.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
+            Gamma.Theta.Run(Qi, Neodymium.Chi.Rho.Rho.Nu);
+            Gamma.Theta.Run(Qi, Neodymium.Chi.Rho.Rho.Rho);
+            Gamma.Theta.Add(Qi.Q);
+            Gamma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
+            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
+            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
+            Gamma.Theta.Add(Osmium.Zeta);
+            Gamma.Theta.Cap(new Polygamma(Sigma.Mu.Tau), Sigma.Theta);
+            Gamma.Theta.Add(Psi);
 
-            Chi.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
-            Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
-            Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Nu);
-            Chi.Add(Qi.Q);
-            Chi.Add(Tungsten.Eta.Iota.Alpha.W.R, Tungsten.Eta.Iota.Alpha.W.N, Tungsten.Eta.Iota.Alpha.W.L, Qi.Mu);
-            Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Rho.Iota.Upsilon.Tau);
-            Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Eta.Iota.Alpha.X.Phi);
-            Chi.Add(Osmium.Zeta);
-            Chi.Cap(new Polygamma(Tungsten.Rho.Mu.Tau), Tungsten.Rho.Iota.Alpha.X.Theta);
-            Chi.Add(Qi.Q);
+            Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
+            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
+            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Nu);
+            Sigma.Theta.Add(Qi.Q);
+            Sigma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
+            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
+            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
+            Sigma.Theta.Add(Osmium.Zeta);
+            Sigma.Theta.Cap(new Polygamma(Gamma.Mu.Tau), Gamma.Theta);
+            Sigma.Theta.Add(Qi.Q);
         }
     }
 }

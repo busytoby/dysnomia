@@ -41,7 +41,6 @@ namespace Prion.Elements
         {
             if (Iota.Alpha == null)
                 Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
-            else throw new Exception("Already Active");
 
             Alpha = Omicron;
             Upsilon = Iota.Reproduce(Alpha);

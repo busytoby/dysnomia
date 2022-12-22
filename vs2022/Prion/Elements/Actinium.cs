@@ -9,7 +9,6 @@ namespace Prion.Elements
     {
         static public Cerium Sigma;
         static public Quark Gamma;
-        static public Neodymium Xi;
         public Sulfur Rho;
         public Chromium Mu;
         public Cerium Beta;
@@ -56,7 +55,7 @@ namespace Prion.Elements
             Nu = Nu.Next;
             Beta = new Cerium(Nu.Value.Value);
 
-            Xi = new Neodymium(Beta.Nu, BetaEta.Phi, BetaBeta.Rho, BetaGamma.Sigma);
+            Neodymium Xi = new Neodymium(Beta.Nu, BetaEta.Phi, BetaBeta.Rho, BetaGamma.Sigma);
         }
 
         public Sulfur Replicate()

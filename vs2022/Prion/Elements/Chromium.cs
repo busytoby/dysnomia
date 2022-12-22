@@ -50,6 +50,15 @@ namespace Prion.Elements
             {
                 Epsilon = new Polygamma(Alpha.Phi);
                 Epsilon.Add(Tin.Sigma);
+            } else if (Alpha.Theta.Count == 5)
+            {
+                Epsilon = new Polygamma(Alpha.Phi);
+                Epsilon.Add(Neodymium.Chi.Gamma.Alpha.Rho);
+            } else if (Alpha.Theta.Count >= 6)
+            {
+                Epsilon = new Polygamma(Neodymium.Chi.Rho.Rho.Rho);
+                Epsilon.Add(Tin.Sigma);
+                Epsilon.Add(Neodymium.Chi.Sigma.Rho.Rho);
             } else
             {
                 throw new Exception("Unknown Theta Count");
