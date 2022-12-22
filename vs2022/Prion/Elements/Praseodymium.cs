@@ -40,23 +40,23 @@ namespace Prion.Elements
             Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Nu);
             Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Rho);
             Chi.Add(Qi.Q);
-            Chi.Add(Tungsten.Rho.Nu.W.L, Tungsten.Rho.Nu.W.N, Tungsten.Rho.Nu.W.R, Qi.Mu);
+            Chi.Add(Tungsten.Rho.Iota.Alpha.W.L, Tungsten.Rho.Iota.Alpha.W.N, Tungsten.Rho.Iota.Alpha.W.R, Qi.Mu);
             Chi.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Eta.Iota.Upsilon.Tau);
-            Chi.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Iota.Upsilon.Phi);
+            Chi.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Iota.Alpha.X.Phi);
             Chi.Add(Osmium.Zeta);
-            Chi.Cap(Tungsten.Rho.Nu.Epsilon, Tungsten.Eta.Theta);
+            Chi.Cap(new Polygamma(Tungsten.Eta.Mu.Tau), Tungsten.Eta.Iota.Alpha.X.Theta);
             Chi.Add(Niobium.Ypsilon.Alpha);
 
             Chi.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
             Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
             Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Nu);
             Chi.Add(Qi.Q);
-            Chi.Add(Tungsten.Eta.Nu.W.R, Tungsten.Eta.Nu.W.N, Tungsten.Eta.Nu.W.L, Qi.Mu);
+            Chi.Add(Tungsten.Eta.Iota.Alpha.W.R, Tungsten.Eta.Iota.Alpha.W.N, Tungsten.Eta.Iota.Alpha.W.L, Qi.Mu);
             Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Rho.Iota.Upsilon.Tau);
-            Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Eta.Iota.Upsilon.Phi);
+            Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Eta.Iota.Alpha.X.Phi);
             Chi.Add(Osmium.Zeta);
-            Chi.Cap(Tungsten.Eta.Nu.Epsilon, Tungsten.Rho.Theta);
-            Chi.Add(Niobium.Ypsilon.Alpha);
+            Chi.Cap(new Polygamma(Tungsten.Rho.Mu.Tau), Tungsten.Rho.Iota.Alpha.X.Theta);
+//            Chi.Add(Niobium.Ypsilon.Alpha);
         }
     }
 }
