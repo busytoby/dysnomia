@@ -28,7 +28,7 @@ namespace Prion.Elements
 
         public void Hatch(Praseodymium Worm)
         {
-
+            // Uranium.Incubate()
         }
     }
 }
