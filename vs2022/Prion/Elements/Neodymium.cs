@@ -11,19 +11,19 @@ namespace Prion.Elements
     {
         static public Spin<Lead> Chi;
 
-        public Neodymium(Lead Gamma, Lead Nu, Lead Phi, Lead Rho)
+        public Neodymium(Lead Nu, Lead Phi, Lead Rho, Lead Sigma)
         {
             if (Chi != null) throw new Exception("Neodymium Already Constructed");
             Chi = new Spin<Lead>();
-            Chi.Gamma = Gamma;
             Chi.Nu = Nu;
             Chi.Phi = Phi;
             Chi.Rho = Rho;
+            Chi.Sigma = Sigma;
         }
 
-        public Neodymium(Lead Sigma)
+        public Neodymium(Lead Gamma)
         {
-            Chi.Sigma = Sigma;
+            Chi.Gamma = Gamma;
         }
 
         public void Hatch(Praseodymium Worm)

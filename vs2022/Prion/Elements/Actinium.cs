@@ -56,7 +56,7 @@ namespace Prion.Elements
             Nu = Nu.Next;
             Beta = new Cerium(Nu.Value.Value);
 
-            Xi = new Neodymium(BetaGamma.Sigma, BetaBeta.Nu, BetaEta.Phi, Beta.Rho);
+            Xi = new Neodymium(Beta.Nu, BetaEta.Phi, BetaBeta.Rho, BetaGamma.Sigma);
         }
 
         public Sulfur Replicate()
