@@ -72,6 +72,10 @@ namespace Prion.Elements
             Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Sigma);
             Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
             Sigma.Theta.Add(Osmium.Zeta);
+            Sigma.Theta.Add(Qi.Mu, Sigma.Nu.W.N, Sigma.Nu.W.L, Sigma.Nu.W.R);
+            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Sigma);
+            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Sigma.Alpha.Gamma);
+            Sigma.Theta.Add(Osmium.Zeta);
             Sigma.Theta.Cap(Sigma.Nu.Epsilon, Gamma.Theta);
             Sigma.Theta.Add(Qi.Q);
         }
