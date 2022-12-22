@@ -36,7 +36,7 @@ namespace Prion.Elements
                 );
 
             Chi = new Polysigma();
-            Chi.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.First.Value.Value, Qi.XL.Last.Value.Value);
+            Chi.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
             Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Nu);
             Chi.Run(Qi, Neodymium.Chi.Rho.Rho.Rho);
             Chi.Add(Qi.Q);
@@ -47,7 +47,7 @@ namespace Prion.Elements
             Chi.Cap(Tungsten.Rho.Nu.Epsilon, Tungsten.Eta.Theta);
             Chi.Add(Niobium.Ypsilon.Alpha);
 
-            Chi.Add(Qi.Mu, Qi.XL.First.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
+            Chi.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
             Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
             Chi.Run(Qi, Neodymium.Chi.Rho.Alpha.Nu);
             Chi.Add(Qi.Q);
