@@ -11,7 +11,7 @@ namespace Prion.Elements
     {
         static public Soliton Qi;
         static public Spinor Xi;
-        static public Polysigma Chi;
+        public Polysigma Chi;
 
         public Praseodymium(Cerium Delta)
         {
@@ -56,7 +56,7 @@ namespace Prion.Elements
             Chi.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Eta.Iota.Alpha.X.Phi);
             Chi.Add(Osmium.Zeta);
             Chi.Cap(new Polygamma(Tungsten.Rho.Mu.Tau), Tungsten.Rho.Iota.Alpha.X.Theta);
-//            Chi.Add(Niobium.Ypsilon.Alpha);
+            Chi.Add(Qi.Q);
         }
     }
 }
