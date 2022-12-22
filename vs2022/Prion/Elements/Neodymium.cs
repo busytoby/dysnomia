@@ -25,5 +25,10 @@ namespace Prion.Elements
         {
             Chi.Sigma = Sigma;
         }
+
+        public void Hatch(Praseodymium Worm)
+        {
+
+        }
     }
 }
