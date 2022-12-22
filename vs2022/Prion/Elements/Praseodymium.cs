@@ -54,22 +54,22 @@ namespace Prion.Elements
                 );
 
             Gamma.Theta.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
-            Gamma.Theta.Run(Qi, Neodymium.Chi.Rho.Rho.Nu);
-            Gamma.Theta.Run(Qi, Neodymium.Chi.Rho.Rho.Rho);
+            Gamma.Theta.Run(Qi, Neodymium.Chi.Nu.Rho.Nu);
+            Gamma.Theta.Run(Qi, Neodymium.Chi.Gamma.Rho.Rho);
             Gamma.Theta.Add(Qi.Q);
             Gamma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
-            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
+            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Sigma);
             Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
             Gamma.Theta.Add(Osmium.Zeta);
             Gamma.Theta.Cap(Gamma.Nu.Epsilon, Sigma.Theta);
             Gamma.Theta.Add(Psi);
 
             Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
+            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Phi);
             Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
-            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Nu);
             Sigma.Theta.Add(Qi.Q);
             Sigma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
-            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
+            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Sigma);
             Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
             Sigma.Theta.Add(Osmium.Zeta);
             Sigma.Theta.Cap(Sigma.Nu.Epsilon, Gamma.Theta);
