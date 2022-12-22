@@ -61,7 +61,7 @@ namespace Prion.Elements
             Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
             Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
             Gamma.Theta.Add(Osmium.Zeta);
-            Gamma.Theta.Cap(new Polygamma(Sigma.Mu.Tau), Sigma.Theta);
+            Gamma.Theta.Cap(Gamma.Nu.Epsilon, Sigma.Theta);
             Gamma.Theta.Add(Psi);
 
             Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
@@ -72,7 +72,7 @@ namespace Prion.Elements
             Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
             Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
             Sigma.Theta.Add(Osmium.Zeta);
-            Sigma.Theta.Cap(new Polygamma(Gamma.Mu.Tau), Gamma.Theta);
+            Sigma.Theta.Cap(Sigma.Nu.Epsilon, Gamma.Theta);
             Sigma.Theta.Add(Qi.Q);
         }
     }
