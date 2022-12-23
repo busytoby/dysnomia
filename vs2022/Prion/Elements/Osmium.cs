@@ -15,10 +15,12 @@ namespace Prion.Elements
         static public Quark Zeta;
         static public Vanadium Eta;
         static public Spinor Delta;
+        static public Polygamma Xi;
 
         public Osmium(Octonion Lambda)
         {
-            Delta = new Spinor(Lambda.L.Phi, new Polygamma(Vanadium.Beta.X.R));
+            if (Xi == null) Xi = new Polygamma(Vanadium.Beta.X.R);
+            Delta = new Spinor(Lambda.L.Phi, Xi);
             if (Eta == null) Eta = new Vanadium(Delta);
 
             Psi = new Hafnium(Lambda.X.N);
@@ -32,10 +34,10 @@ namespace Prion.Elements
             Rho = new Lead(Mu, Rhenium.Mu);
             Sigma = new Lead(Psi, Mu);
 
-            Rhenium.Pi.Add(new Spinor(Gamma.Alpha.Rho, Tungsten.Rho.Nu.Epsilon), Niobium.Ypsilon.Kappa.Rho);
-            Rhenium.Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Hafnium.Kappa);
-            Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
-            Rhenium.Pi.Add(Tungsten.Rho.Nu.W.N, Zeta, Hafnium.Kappa);
+            Rhenium.Pi.Add(new Spinor(Gamma.Alpha.Gamma, Tungsten.Rho.Nu.Epsilon), Xi);
+            Rhenium.Pi.Add(new Spinor(Nu.Rho.Rho, Tungsten.Eta.Nu.Epsilon), Xi);
+            Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Xi);
+            Rhenium.Pi.Add(Tungsten.Rho.Nu.W.N, Zeta, Xi);
 
             Tungsten.Eta.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.Qi.Phi.Gamma, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Nu.Rho.Rho);
