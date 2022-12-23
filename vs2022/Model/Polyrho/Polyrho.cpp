@@ -31,7 +31,7 @@ namespace Dysnomia {
 				gcnew Soliton(GammaShift[i + 1], O->Value.Value->Gamma->Item2, GammaShift[i + 3])));
 			AddLast(KeyValuePair<Polygamma^, Soliton^>(
 				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 2], O->Value.Value->Phi->Item2, GammaShift[i + 4])));
+				gcnew Soliton(GammaShift[i + 3], O->Value.Value->Phi->Item2, GammaShift[i + 4])));
 			AddLast(KeyValuePair<Polygamma^, Soliton^>(
 				gcnew Polygamma(GammaShift[2]),
 				gcnew Soliton(GammaShift[i + 4], O->Value.Value->Nu->Item2, GammaShift[i + 1])));
