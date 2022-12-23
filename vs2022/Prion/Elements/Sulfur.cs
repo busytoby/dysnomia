@@ -89,15 +89,15 @@ namespace Prion.Elements
             YC.W.N.Transit(WM.N.List); 
             YC.W.N.Transit(WM.R.List); 
             YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu, YC.Epsilon);
-            YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu, YC.Epsilon);
+            YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu, Mu.Epsilon);
             YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu, YC.Epsilon);
-            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu, YC.Epsilon);
+            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu, Mu.Epsilon);
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu, YC.Epsilon);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
 
             Theta.Add(W);
 
-            YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu, Mu.Epsilon);
+            YC.Kernel.Eta.Add(WMR.Xi, YC.Kernel.Mu, YC.Epsilon);
             Mu.Kernel.Eta.Add(WS.Xi, Mu.Kernel.Mu, YC.Epsilon);
 
             Spinor S2 = new Spinor(Y.Eta.Mu[2], Eta.Rho);
@@ -106,7 +106,7 @@ namespace Prion.Elements
             Titanium S2T = new Titanium(S2K.Alpha.Mu, S2K.Alpha);
             Sulfur S2S = new Sulfur(S2T.Eta.X.N, S2T.Nu.L.Sigma);
             Chromium S2C = new Chromium(S2S);
-            S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, Mu.Epsilon);
+            S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, YC.Epsilon);
 
             Wavelet WC = new Wavelet(Mu.Kernel.Alpha.Tau, S2C.Kernel.Alpha.Tau, YC.Kernel.Alpha.Tau);
             W.L.Transit(WC.R.List);
