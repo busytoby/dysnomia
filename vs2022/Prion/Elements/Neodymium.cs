@@ -25,10 +25,5 @@ namespace Prion.Elements
         {
             Chi.Gamma = Gamma;
         }
-
-        public void Hatch(Praseodymium Worm)
-        {
-            // Uranium.Incubate()
-        }
     }
 }
