@@ -50,11 +50,11 @@ namespace Dysnomia {
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 2]);
-			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X);
+			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X);
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 5]);
-			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 2], O->Value.Key), O->Value.Value->Q);
+			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q);
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 7]);
@@ -63,13 +63,13 @@ namespace Dysnomia {
 
 			if (O != nullptr && GammaShift->Count > i + 9) {
 				O->Value.Key->Add(GammaShift[i + 9]);
-				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 2], O->Value.Key), O->Value.Value->Q);
+				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 7], O->Value.Key), O->Value.Value->Q);
 				O = O->Next;
 			}
 
 			if (O != nullptr && GammaShift->Count > i + 11) {
 				O->Value.Key->Add(GammaShift[i + 11]);
-				O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X);
+				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X);
 			}
 		} while (O != nullptr && (O = O->Next));
 	}
