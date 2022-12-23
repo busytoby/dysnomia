@@ -70,6 +70,13 @@ namespace Dysnomia {
 			if (O != nullptr && GammaShift->Count > i + 11) {
 				O->Value.Key->Add(GammaShift[i + 11]);
 				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X);
+
+				O->Value.Value->YL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
+				for (int i = 5; i > 0; i++) {
+					Spinor^ L = gcnew Spinor(GammaShift[GammaShift->Count - i], Gamma);
+					O->Value.Value->YL->AddLast(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
+				}
+
 			}
 		} while (O != nullptr && (O = O->Next));
 	}
