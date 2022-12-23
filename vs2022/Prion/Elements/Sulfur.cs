@@ -21,6 +21,7 @@ namespace Prion.Elements
 
         public Quark Alpha;
         public Spinor Xi;
+        public Polygamma Epsilon;
 
         public Dysnomia.Quaternion Phi;
         public Dysnomia.Quaternion Tau;
@@ -67,12 +68,15 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Mu.Kernel.Alpha.Tau, Alpha, Mu.Epsilon);
             Wavelet WQM = new Wavelet(W.N, W.L, Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
             W.N.Transit(WQM.L.List);
-            Mu.Kernel.Eta.Add(W.L, Mu.Kernel.Mu, Mu.Epsilon);
-            Mu.Kernel.Eta.Add(W.N, Mu.Kernel.Mu, Mu.Epsilon);
+
+            Epsilon = ((Xi != null) ? new Polygamma(Xi.Octogamma.Value.Value) : Mu.Epsilon);
+
+            Mu.Kernel.Eta.Add(W.L, Mu.Kernel.Mu, Epsilon);
+            Mu.Kernel.Eta.Add(W.N, Mu.Kernel.Mu, Epsilon);
             Titanium WMR = new Titanium(Eta.Mu, Mu.Kernel.Alpha);
-            Mu.Kernel.Eta.Add(WMR.Xi, Mu.Kernel.Mu, Mu.Epsilon);
-            Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu, Mu.Epsilon);
-            Mu.Kernel.Eta.Add(Lambda.Xi, Alpha, Mu.Epsilon);
+            Mu.Kernel.Eta.Add(WMR.Xi, Mu.Kernel.Mu, Epsilon);
+            Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu, Epsilon);
+            Mu.Kernel.Eta.Add(Lambda.Xi, Alpha, Epsilon);
 
             Theta.Add(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
@@ -89,9 +93,9 @@ namespace Prion.Elements
             YC.W.N.Transit(WM.N.List); 
             YC.W.N.Transit(WM.R.List); 
             YC.Kernel.Eta.Add(WM.R, YC.Kernel.Mu, YC.Epsilon);
-            YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu, Mu.Epsilon);
+            YC.Kernel.Eta.Add(WM.N, YC.Kernel.Mu, Epsilon);
             YC.Kernel.Eta.Add(WM.L, YC.Kernel.Mu, YC.Epsilon);
-            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu, Mu.Epsilon);
+            YC.Kernel.Eta.Add(W.N, YC.Kernel.Mu, Epsilon);
             YC.Kernel.Eta.Add(W.R, YC.Kernel.Mu, YC.Epsilon);
             Titanium WS = new Titanium(Y.Kappa.Mu, Y.Kappa);
 
@@ -106,7 +110,7 @@ namespace Prion.Elements
             Titanium S2T = new Titanium(S2K.Alpha.Mu, S2K.Alpha);
             Sulfur S2S = new Sulfur(S2T.Eta.X.N, S2T.Nu.L.Sigma);
             Chromium S2C = new Chromium(S2S);
-            S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, YC.Epsilon);
+            S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, (Xi != null) ? Epsilon : YC.Epsilon);
 
             Wavelet WC = new Wavelet(Mu.Kernel.Alpha.Tau, S2C.Kernel.Alpha.Tau, YC.Kernel.Alpha.Tau);
             W.L.Transit(WC.R.List);
