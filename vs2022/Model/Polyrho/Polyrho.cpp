@@ -91,7 +91,7 @@ namespace Dysnomia {
 			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->YL->First->Value.Value, O->Value.Value->Mu, O->Value.Value->YL->Last->Value.Value));
 
 			O->Value.Key->Add(QuarkShift[i]->R);
-			O->Value.Value->Add(O->Value.Value->Mu, QuarkShift[i]);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, QuarkShift[i]);
 			O = O->Next;
 
 			if (BundleShift->Count > i + 2) {
@@ -107,11 +107,18 @@ namespace Dysnomia {
 			}
 
 			if (BundleShift->Count > i + 7) {
-				O->Value.Key->Add(QuarkShift[i]->R);
+				Quaternion^ Alpha = gcnew Quaternion();
+				Alpha->Gamma = O->Value.Value->YL->Last->Value.Value->Gamma->Item2;
+				Alpha->Nu = O->Value.Value->YL->Last->Value.Value->Nu->Item2;
+				Alpha->Phi = O->Value.Value->YL->Last->Value.Value->Phi->Item2;
+				Alpha->Rho = O->Value.Value->YL->Last->Value.Value->Rho->Item2;
+				Alpha->Sigma = O->Value.Value->YL->Last->Value.Value->Sigma->Item2;
+
+				O->Value.Key->Add(Alpha);
 				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
 
 				AddLast(KeyValuePair<Polygamma^, Soliton^>(
-					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Nu),
+					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Sigma),
 					O->Value.Value));
 				O = O->Next;
 			}
