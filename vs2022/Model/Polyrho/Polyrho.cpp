@@ -58,7 +58,7 @@ namespace Dysnomia {
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 7]);
-			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->Q);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->Value.Value->Q);
 			O = O->Next;
 
 			if (O != nullptr && GammaShift->Count > i + 9) {
