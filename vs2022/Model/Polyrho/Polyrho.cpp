@@ -46,30 +46,30 @@ namespace Dysnomia {
 		int i = 0;
 		do {
 			O->Value.Key->Add(GammaShift[i + 0]);
-			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 2], O->Value.Key), O->Value.Value->Q);
+			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 2], O->Value.Key), O->Value.Value->Q, Gamma);
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 2]);
-			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X);
+			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X, Gamma);
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 5]);
-			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q);
+			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q, Gamma);
 			O = O->Next;
 
 			O->Value.Key->Add(GammaShift[i + 7]);
-			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->Value.Value->Q);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->Value.Value->Q, Gamma);
 			O = O->Next;
 
 			if (O != nullptr && GammaShift->Count > i + 9) {
 				O->Value.Key->Add(GammaShift[i + 9]);
-				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 7], O->Value.Key), O->Value.Value->Q);
+				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 7], O->Value.Key), O->Value.Value->Q, Gamma);
 				O = O->Next;
 			}
 
 			if (O != nullptr && GammaShift->Count > i + 11) {
 				O->Value.Key->Add(GammaShift[i + 11]);
-				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X);
+				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X, Gamma);
 
 				for (int i = 5; i > 1; i--) {
 					Spinor^ L = gcnew Spinor(GammaShift[GammaShift->Count - i], Gamma);
@@ -90,18 +90,18 @@ namespace Dysnomia {
 			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->Qi->Phi->Nu, O->Value.Value->Mu, O->Value.Value->Qi->Phi->Sigma));
 
 			O->Value.Key->Add(QuarkShift[i]->R);
-			O->Value.Value->Add(O->List->First->Value.Value->Mu, QuarkShift[i]);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, QuarkShift[i], O->Value.Key);
 			O = O->Next;
 
 			if (BundleShift->Count > i + 2) {
 				O->Value.Key->Add(QuarkShift[i]->N);
-				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 2]);
+				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 2], O->Value.Key);
 				O = O->Next;
 			}
 
 			if (BundleShift->Count > i + 5) {
 				O->Value.Key->Add(QuarkShift[i]->L);
-				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5]);
+				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5], O->Value.Key);
 				O = O->Next;
 			}
 
@@ -118,7 +118,7 @@ namespace Dysnomia {
 				O->Value.Value->Qi->Alpha(Chi);
 
 				O->Value.Key->Add(O->Value.Value->V->Last->Value.Value->L->Phi);
-				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 7]);
+				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 7], O->Value.Key);
 
 				AddLast(KeyValuePair<Polygamma^, Soliton^>(
 					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Sigma),
@@ -146,25 +146,25 @@ namespace Dysnomia {
 
 			if (BundleShift->Count > i + 7) {
 				O->Value.Key->Add(QuarkShift[i]->N);
-				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 2]);
+				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 2], Alpha);
 			}
 
 			if (BundleShift->Count > i + 5) {
 				O->Value.Key->Add(QuarkShift[i]->R);
-				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 3]);
+				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 3], Alpha);
 			}
 
 			if (BundleShift->Count > i + 5) {
 				O->Value.Key->Add(QuarkShift[i + 3]->L);
-				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5]);
+				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5], Alpha);
 			}
 
 			if (BundleShift->Count > i + 7) {
 				O->Value.Key->Add(QuarkShift[i]->N);
-				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 7]);
+				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 7], Alpha);
 			}
 
-			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->Value.Key);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->List->First->Value.Key);
 		}
 	}
 

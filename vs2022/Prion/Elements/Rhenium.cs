@@ -35,7 +35,7 @@ namespace Prion.Elements
             Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Tungsten.Eta.Nu.Epsilon);
             Pi.Add(new Spinor(Gamma.Rho.Nu, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
             Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
-            Pi.Add(Tungsten.Rho.Nu.W.N, Lambda.X);
+            Pi.Add(Tungsten.Rho.Nu.W.N, Lambda.X, Tungsten.Rho.Nu.Epsilon);
 
             Tungsten.Rho.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Rho, Pi.Qi.Phi.Phi);
             Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);

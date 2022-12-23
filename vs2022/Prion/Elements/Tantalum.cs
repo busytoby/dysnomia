@@ -35,7 +35,7 @@ namespace Prion.Elements
             Pi.Add(Niobium.Ypsilon.Xi, Niobium.Ypsilon.Kappa.Rho);
             Pi.Add(Niobium.Ypsilon.Y.Lambda.Xi, Niobium.Ypsilon.Kappa.Rho);
             Pi.Add(Radon.Tau.W.L, Radon.Tau.Epsilon);
-            Pi.Add(Molybdenum.Eta.Xi, Tungsten.Eta.Alpha);
+            Pi.Add(Molybdenum.Eta.Xi, Tungsten.Eta.Alpha, Tungsten.Eta.Nu.Epsilon);
 
             Tungsten.Rho.Theta.Add(Pi.Mu, Pi.Qi.Phi.Nu, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
@@ -82,7 +82,7 @@ namespace Prion.Elements
             Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Tungsten.Eta.Nu.Epsilon);
             Pi.Add(new Spinor(Gamma.Alpha.Nu, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
             Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
-            Pi.Add(Molybdenum.Eta.Xi, Lambda.X);
+            Pi.Add(Molybdenum.Eta.Xi, Lambda.X, Molybdenum.Eta.Kappa.Rho);
 
             Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Nu, Pi.Qi.Phi.Rho);
             Tungsten.Eta.Theta.Run(Pi, Gamma.Rho.Gamma);

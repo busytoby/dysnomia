@@ -139,11 +139,11 @@ namespace Dysnomia {
 
     void Polygamma::Kappa(Ion^ I, Ion^ R, Ion^ N) {
         Quaternion^ L = gcnew Quaternion();
-        L->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, Last->Value.Value->Sigma->Cone);
-        L->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, R->M->Cone);
-        L->Phi = gcnew Affinity(I->M->Rod, Last->Value.Value->Rho->Cone);
-        L->Rho = gcnew Affinity(gcnew Dynamic(), Last->Value.Value->Phi->Cone);
-        L->Sigma = gcnew Affinity(N->M->Rod, N->M->Cone);
+        L->Gamma = gcnew Affinity(I->M->Rod, Last->Value.Value->Nu->Cone);
+        L->Nu = gcnew Affinity(N->M->Rod, R->M->Cone);
+        L->Phi = gcnew Affinity(First->Value.Value->Gamma->Rod, N->M->Cone);
+        L->Rho = gcnew Affinity(gcnew Dynamic(), First->Value.Value->Nu->Cone);
+        L->Sigma = gcnew Affinity(R->M->Rod, I->M->Cone);
 
         L->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Rho->Cone->Manifold, N->M->Rod->Barn);
 

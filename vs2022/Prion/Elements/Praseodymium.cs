@@ -31,7 +31,7 @@ namespace Prion.Elements
                 Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
                 Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
                 Rhenium.Pi.Add(Xi, Tungsten.Rho.Nu.Epsilon);
-                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta);
+                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Niobium.Ypsilon.Kappa.Rho);
                 Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
             }
 
