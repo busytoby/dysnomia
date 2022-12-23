@@ -47,8 +47,8 @@ namespace Dysnomia {
 			if (Epsilon.IsZero)
 				throw gcnew Exception("Zero Epsilon");
 
-			L->Value.Value->Gamma->Rod->Adduct(Gamma->Item2->Rod->Dynamo); L->Value.Value->Gamma->Rod->Open();
-			L->Value.Value->Gamma->Cone->Adduct(Gamma->Item1->Cone->Dynamo); L->Value.Value->Gamma->Cone->Open();
+			L->Value.Value->Gamma->Rod->Adduct(Rho->Item2->Rod->Dynamo); L->Value.Value->Gamma->Rod->Open();
+			L->Value.Value->Gamma->Cone->Adduct(Sigma->Item1->Cone->Dynamo); L->Value.Value->Gamma->Cone->Open();
 		}
 	}
 
