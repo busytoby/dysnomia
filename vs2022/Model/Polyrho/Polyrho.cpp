@@ -142,17 +142,17 @@ namespace Dysnomia {
 			BundleShift[i]->Spin(gcnew Wavelet(O->Value.Value->XL->First->Value.Value, O->Value.Value->Mu, O->Value.Value->XL->Last->Value.Value));
 
 			if (BundleShift->Count > i + 7) {
-				O->Value.Key->Add(QuarkShift[i]->R);
+				O->Value.Key->Add(QuarkShift[i]->N);
 				O->Value.Value->Add(O->Value.Value->YL->First->Value.Value, QuarkShift[i + 2]);
 			}
 
 			if (BundleShift->Count > i + 5) {
-				O->Value.Key->Add(QuarkShift[i]->L);
+				O->Value.Key->Add(QuarkShift[i]->R);
 				O->Value.Value->Add(O->Value.Value->XL->First->Value.Value, QuarkShift[i + 3]);
 			}
 
 			if (BundleShift->Count > i + 5) {
-				O->Value.Key->Add(QuarkShift[i + 3]->N);
+				O->Value.Key->Add(QuarkShift[i + 3]->L);
 				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 5]);
 			}
 
@@ -161,7 +161,7 @@ namespace Dysnomia {
 				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
 			}
 
-			O->Value.Value->Add(O->Value.Value->Mu);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu);
 		}
 	}
 
