@@ -32,12 +32,12 @@ namespace Prion.Elements
             Rho = new Lead(Beta, Niobium.Nu);
             Sigma = new Lead(Alpha, Beta);
 
-            Pi.Add(Niobium.Ypsilon.Xi);
-            Pi.Add(Niobium.Ypsilon.Y.Lambda.Xi);
-            Pi.Add(Radon.Tau.W.L);
+            Pi.Add(Niobium.Ypsilon.Xi, Niobium.Ypsilon.Kappa.Rho);
+            Pi.Add(Niobium.Ypsilon.Y.Lambda.Xi, Niobium.Ypsilon.Kappa.Rho);
+            Pi.Add(Radon.Tau.W.L, Radon.Tau.Epsilon);
             Pi.Add(Molybdenum.Eta.Xi, Tungsten.Eta.Alpha);
 
-            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.YL.First.Value.Value, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
+            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.Qi.Phi.Nu, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
             Tungsten.Rho.Theta.Run(Pi, Nu.Rho.Gamma);
             Tungsten.Rho.Theta.Add(Pi.Q);
@@ -48,7 +48,7 @@ namespace Prion.Elements
             Tungsten.Rho.Theta.Cap(Tungsten.Eta.Nu.Epsilon, Tungsten.Rho.Theta);
             Tungsten.Rho.Theta.Add(Niobium.Ypsilon.Alpha);
 
-            Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.YL.Last.Value.Value, Pi.YL.First.Value.Value);
+            Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Sigma, Pi.Qi.Phi.Rho);
             Tungsten.Eta.Theta.Run(Pi, Gamma.Rho.Gamma);
             Tungsten.Eta.Theta.Run(Pi, Nu.Alpha.Phi);
             Tungsten.Eta.Theta.Add(Pi.Q);
@@ -79,17 +79,17 @@ namespace Prion.Elements
             Rho = new Lead(Mu, Alpha);
             Sigma = new Lead(Psi, Mu);
 
-            Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon));
-            Pi.Add(new Spinor(Gamma.Alpha.Nu, Tungsten.Rho.Nu.Epsilon));
-            Pi.Add(Niobium.Ypsilon.Kappa.Tau);
+            Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Tungsten.Eta.Nu.Epsilon);
+            Pi.Add(new Spinor(Gamma.Alpha.Nu, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
+            Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
             Pi.Add(Molybdenum.Eta.Xi, Lambda.X);
 
-            Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.YL.Last.Value.Value, Pi.YL.First.Value.Value);
+            Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Nu, Pi.Qi.Phi.Rho);
             Tungsten.Eta.Theta.Run(Pi, Gamma.Rho.Gamma);
             Tungsten.Eta.Theta.Run(Pi, Nu.Alpha.Phi);
             Tungsten.Eta.Theta.Add(Pi.Q);
 
-            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.YL.First.Value.Value, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
+            Tungsten.Rho.Theta.Add(Pi.Mu, Pi.Qi.Phi.Gamma, Pi.XL.Last.Value.Value, Pi.XL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);
             Tungsten.Rho.Theta.Run(Pi, Nu.Rho.Gamma);
             Tungsten.Rho.Theta.Add(Pi.Q);

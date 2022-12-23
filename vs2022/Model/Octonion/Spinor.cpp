@@ -42,25 +42,8 @@ namespace Dysnomia {
 			if (Epsilon.IsZero)
 				throw gcnew Exception("Zero Epsilon");
 
-			Gamma = gcnew Tuple<Affinity^, Affinity^>(
-				gcnew Affinity(L->Value.Value->Gamma->Rod, Gamma->Item1->Cone),
-				gcnew Affinity(Gamma->Item2->Rod, L->Value.Value->Gamma->Cone));
-
-			Nu = gcnew Tuple<Affinity^, Affinity^>(
-				gcnew Affinity(L->Value.Value->Nu->Rod, Nu->Item1->Cone),
-				gcnew Affinity(Nu->Item2->Rod, L->Value.Value->Nu->Cone));
-
-
-			// Phi Is Unmodified
-
-
-			Rho = gcnew Tuple<Affinity^, Affinity^>(
-				gcnew Affinity(gcnew Dynamic(), Rho->Item1->Cone),
-				gcnew Affinity(gcnew Dynamic(), L->Value.Value->Rho->Cone));
-
-			Sigma = gcnew Tuple<Affinity^, Affinity^>(
-				gcnew Affinity(gcnew Dynamic(), Sigma->Item1->Cone),
-				gcnew Affinity(Sigma->Item2->Rod, L->Value.Value->Sigma->Cone));
+			L->Value.Value->Gamma->Rod->Adduct(Gamma->Item2->Rod->Dynamo); L->Value.Value->Gamma->Rod->Open();
+			L->Value.Value->Gamma->Cone->Adduct(Gamma->Item1->Cone->Dynamo); L->Value.Value->Gamma->Cone->Open();
 		}
 	}
 

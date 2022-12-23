@@ -7,6 +7,8 @@ namespace Dysnomia {
 		if (Sigma == nullptr) Sigma = Rho;
 		V = gcnew LinkedList<KeyValuePair<BigInteger, Octonion^>>();
 
+		Qi = gcnew Polynu();
+
 		Polygamma^ Xi = gcnew Polygamma(Rho);
 		Mu = gcnew Spinor(Nu, Xi);
 		Xi->Add(Sigma);
@@ -15,12 +17,11 @@ namespace Dysnomia {
 		Xi->Add(Sigma);
 
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Xi);
-
-		YL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 		for (int i = 0; i < 5; i++) {
 			Spinor^ L = gcnew Spinor(Rho, gcnew Polygamma(Epsilon[i]));
-			YL->AddLast(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
+			Qi->Alpha(L);
 		}
+		Qi->Eta();
 
 		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 		for (int i = 6; i < 11; i++) {
@@ -49,7 +50,7 @@ namespace Dysnomia {
  		Q = gcnew Quark(Epsilon[8], Epsilon[5], Epsilon[2]);
 	}
 
-	void Soliton::Add(Spinor^ Eta) {
+	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {
 		if (Eta->Octogamma->List->Count < 5) 
 			return;
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
@@ -57,7 +58,7 @@ namespace Dysnomia {
 		int i = Epsilon->Count;
 		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 		for (int j = 1; j < 6; j++) {
-			Spinor^ L = gcnew Spinor(Q->L, gcnew Polygamma(Epsilon[i - j]));
+			Spinor^ L = gcnew Spinor(Q->L, Phi);
 			XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 		}
 

@@ -30,22 +30,14 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Actinium X;
-
         public MainWindow()
         {
             InitializeComponent();
 
             Math.Prime = Math.MotzkinPrime;
 
-            X = new Actinium();
-            Play();
+            Praseodymium Phi = new Praseodymium();
             int a = 999; // Girls Planet
-        }
-
-        public void Play()
-        {
-            Praseodymium Phi = new Praseodymium(X.Beta);
         }
     }
 }

@@ -41,5 +41,6 @@ namespace Dysnomia {
 		void React(BigInteger);
 		array<Affinity^>^ Denature();
 		BigInteger RunAlpha();
+		BigInteger RunXi();
 	};
 }

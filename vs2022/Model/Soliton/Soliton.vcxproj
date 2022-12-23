@@ -156,6 +156,9 @@
     <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
       <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Polynu\Polynu.vcxproj">
+      <Project>{a111571a-cfbb-4e07-aa6f-13fce8547ee7}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
     </ProjectReference>

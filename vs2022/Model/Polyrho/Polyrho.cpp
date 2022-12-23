@@ -71,10 +71,9 @@ namespace Dysnomia {
 				O->Value.Key->Add(GammaShift[i + 11]);
 				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X);
 
-				O->Value.Value->YL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
 				for (int i = 5; i > 1; i--) {
 					Spinor^ L = gcnew Spinor(GammaShift[GammaShift->Count - i], Gamma);
-					O->Value.Value->YL->AddLast(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
+					O->Value.Value->Qi->Alpha(L);
 				}
 
 			}
@@ -88,7 +87,7 @@ namespace Dysnomia {
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;	
 
 		for (int i = 0; i < BundleShift->Count; i++) {
-			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->YL->First->Value.Value, O->Value.Value->Mu, O->Value.Value->YL->Last->Value.Value));
+			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->Qi->Phi->Nu, O->Value.Value->Mu, O->Value.Value->Qi->Phi->Sigma));
 
 			O->Value.Key->Add(QuarkShift[i]->R);
 			O->Value.Value->Add(O->List->First->Value.Value->Mu, QuarkShift[i]);
@@ -107,15 +106,19 @@ namespace Dysnomia {
 			}
 
 			if (BundleShift->Count > i + 7) {
-				Quaternion^ Alpha = gcnew Quaternion();
-				Alpha->Gamma = O->Value.Value->YL->Last->Value.Value->Gamma->Item2;
-				Alpha->Nu = O->Value.Value->YL->Last->Value.Value->Nu->Item2;
-				Alpha->Phi = O->Value.Value->YL->Last->Value.Value->Phi->Item2;
-				Alpha->Rho = O->Value.Value->YL->Last->Value.Value->Rho->Item2;
-				Alpha->Sigma = O->Value.Value->YL->Last->Value.Value->Sigma->Item2;
+				Spinor^ Chi = gcnew Spinor(O->Value.Value->V->Last->Value.Value->L->Gamma, O->Value.Key);
+				O->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(O->Value.Value->V->Last->Value.Value->L->Nu, O->Value.Key);
+				O->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(O->Value.Value->V->Last->Value.Value->L->Phi, O->Value.Key);
+				O->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(O->Value.Value->V->Last->Value.Value->L->Rho, O->Value.Key);
+				O->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(O->Value.Value->V->Last->Value.Value->L->Sigma, O->Value.Key);
+				O->Value.Value->Qi->Alpha(Chi);
 
-				O->Value.Key->Add(Alpha);
-				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
+				O->Value.Key->Add(O->Value.Value->V->Last->Value.Value->L->Phi);
+				O->Value.Value->Add(O->Value.Value->XL->Last->Value.Value, QuarkShift[i + 7]);
 
 				AddLast(KeyValuePair<Polygamma^, Soliton^>(
 					gcnew Polygamma(O->Value.Value->V->First->Value.Value->L->Sigma),
@@ -130,7 +133,7 @@ namespace Dysnomia {
 			} while (O = O->Next);
 		}
 
-		BackPropagate();
+		Delta();
 	}
 
 	void Polyrho::Select(Polysigma^ Sigma, Polygamma^ Alpha, LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O) {
@@ -143,7 +146,7 @@ namespace Dysnomia {
 
 			if (BundleShift->Count > i + 7) {
 				O->Value.Key->Add(QuarkShift[i]->N);
-				O->Value.Value->Add(O->Value.Value->YL->First->Value.Value, QuarkShift[i + 2]);
+				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 2]);
 			}
 
 			if (BundleShift->Count > i + 5) {
@@ -158,18 +161,20 @@ namespace Dysnomia {
 
 			if (BundleShift->Count > i + 7) {
 				O->Value.Key->Add(QuarkShift[i]->N);
-				O->Value.Value->Add(O->Value.Value->YL->Last->Value.Value, QuarkShift[i + 7]);
+				O->Value.Value->Add(O->Value.Value->Qi->Phi->Rho, QuarkShift[i + 7]);
 			}
 
-			O->Value.Value->Add(O->List->First->Value.Value->Mu);
+			O->Value.Value->Add(O->List->First->Value.Value->Mu, O->Value.Key);
 		}
 	}
 
-	void Polyrho::BackPropagate() {
+	void Polyrho::Delta() {
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = Last;
 
 		do {
 			O->List->Last->Value.Value->Mu->Transit(O->Value.Key);
+			if (O->Value.Value->Qi->Nu == nullptr) return; // Not This Period
+			int i = 99;
 		} while (O = O->Previous);
 	}
 }

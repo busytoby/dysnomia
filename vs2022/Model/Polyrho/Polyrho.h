@@ -9,7 +9,7 @@ namespace Dysnomia {
 	{
 	private:
 		void Select(Polysigma^, Polygamma^, LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^);
-		void BackPropagate();
+		void Delta();
 
 	public:
 		Polyrho(Polysigma^, Polygamma^);

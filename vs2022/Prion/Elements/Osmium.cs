@@ -32,25 +32,25 @@ namespace Prion.Elements
             Rho = new Lead(Mu, Rhenium.Mu);
             Sigma = new Lead(Psi, Mu);
 
-            Rhenium.Pi.Add(new Spinor(Gamma.Alpha.Rho, Tungsten.Rho.Nu.Epsilon));
-            Rhenium.Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon));
-            Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau);
+            Rhenium.Pi.Add(new Spinor(Gamma.Alpha.Rho, Tungsten.Rho.Nu.Epsilon), Niobium.Ypsilon.Kappa.Rho);
+            Rhenium.Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Hafnium.Kappa);
+            Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
             Rhenium.Pi.Add(Tungsten.Rho.Nu.W.N, Zeta);
 
-            Tungsten.Eta.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.YL.First.Value.Value, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
+            Tungsten.Eta.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.Qi.Phi.Gamma, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Nu.Rho.Rho);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Gamma.Rho.Nu);
             Tungsten.Eta.Theta.Add(Lambda.X);
-            Tungsten.Eta.Theta.Add(Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.YL.Last.Value.Value, Rhenium.Pi.YL.First.Value.Value);
+            Tungsten.Eta.Theta.Add(Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.Qi.Phi.Nu, Rhenium.Pi.Qi.Phi.Rho);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Phi.Alpha.Nu);
             Tungsten.Eta.Theta.Run(Rhenium.Pi, Sigma.Rho.Gamma);
             Tungsten.Eta.Theta.Add(Lambda.X);
 
-            Tungsten.Rho.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.YL.First.Value.Value, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
+            Tungsten.Rho.Theta.Add(Rhenium.Pi.Mu, Rhenium.Pi.Qi.Phi.Rho, Rhenium.Pi.XL.Last.Value.Value, Rhenium.Pi.XL.First.Value.Value);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Phi.Rho.Nu);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Sigma.Alpha.Sigma);
             Tungsten.Rho.Theta.Add(Lambda.X);
-            Tungsten.Rho.Theta.Add(Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.YL.Last.Value.Value, Rhenium.Pi.YL.First.Value.Value);
+            Tungsten.Rho.Theta.Add(Delta, Rhenium.Pi.XL.First.Value.Value, Rhenium.Pi.Qi.Phi.Gamma, Rhenium.Pi.Qi.Phi.Nu);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Gamma.Rho.Nu);
             Tungsten.Rho.Theta.Run(Rhenium.Pi, Sigma.Alpha.Gamma);
             Tungsten.Rho.Theta.Add(Lambda.X);

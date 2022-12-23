@@ -33,7 +33,7 @@ namespace Prion.Elements
                 Alpha.Kappa.Rho.Add(Alpha.Theta.Last.Value.Key.L);
 
             W.N = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Kappa.Rho);
-            Kernel.Eta.Add(W.N);
+            Kernel.Eta.Add(W.N, Alpha.Kappa.Rho);
 
             Kernel.Eta.Add(Kernel.Alpha.Tau, Kernel.Mu); // Proof Of Earth
 
@@ -64,7 +64,7 @@ namespace Prion.Elements
                 throw new Exception("Unknown Theta Count");
             }
             W.R = new Spinor(Kernel.Alpha.Rho.Last.Value.Value, Epsilon);
-            Kernel.Eta.Add(W.R); 
+            Kernel.Eta.Add(W.R, Epsilon); 
 
             X = Alpha.Y;
 

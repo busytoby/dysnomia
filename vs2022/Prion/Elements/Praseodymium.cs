@@ -10,6 +10,7 @@ namespace Prion.Elements
 {
     public class Praseodymium
     {
+        Actinium Alpha;
         static public Soliton Qi;
         static public Spinor Xi;
         public Quark Psi;
@@ -17,20 +18,21 @@ namespace Prion.Elements
         public Molybdenum Sigma;
         public Lanthanum Iota;
 
-        public Praseodymium(Cerium Delta)
+        public Praseodymium()
         {
-            Neodymium Eta = new Neodymium(Delta.Nu);
+            Alpha = new Actinium();
+            Neodymium Eta = new Neodymium(Alpha.Beta.Nu);
 
             if(Qi == null)
             {
                 if (Xi != null) throw new Exception("Weird");
-                Xi = new Spinor(Delta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
+                Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
 
-                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon));
-                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon));
-                Rhenium.Pi.Add(Xi);
+                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
+                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
+                Rhenium.Pi.Add(Xi, Tungsten.Rho.Nu.Epsilon);
                 Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta);
-                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau);
+                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
             }
 
             Gamma = new Molybdenum(Tungsten.Iota, Tungsten.Eta.Theta);
@@ -48,12 +50,12 @@ namespace Prion.Elements
             Sigma.Contrast(Gamma.Mu, Gamma.Nu);
 
             Qi = new Soliton(
-                Delta.Gamma.Rho.Gamma,
+                Alpha.Beta.Gamma.Rho.Gamma,
                 Psi,
-                Delta.Sigma.Alpha.Sigma
+                Alpha.Beta.Sigma.Alpha.Sigma
                 );
 
-            Gamma.Theta.Add(Qi.Mu, Qi.YL.First.Value.Value, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
+            Gamma.Theta.Add(Qi.Mu, Qi.Qi.Phi.Nu, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
             Gamma.Theta.Run(Qi, Neodymium.Chi.Nu.Rho.Nu);
             Gamma.Theta.Run(Qi, Neodymium.Chi.Gamma.Rho.Rho);
             Gamma.Theta.Add(Qi.Q);
@@ -64,7 +66,7 @@ namespace Prion.Elements
             Gamma.Theta.Cap(Gamma.Nu.Epsilon, Sigma.Theta);
             Gamma.Theta.Add(Psi);
 
-            Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.YL.First.Value.Value, Qi.YL.Last.Value.Value);
+            Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.Qi.Phi.Rho, Qi.Qi.Phi.Phi);
             Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Phi);
             Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
             Sigma.Theta.Add(Qi.Q);

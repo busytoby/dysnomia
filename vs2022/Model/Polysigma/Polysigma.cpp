@@ -88,13 +88,13 @@ namespace Dysnomia {
 		if (Muon == nullptr) {
 			Spinor^ X = gcnew Spinor(Iota->V->First->Value.Value->X->N, gcnew Polygamma(Iota->V->First->Value.Value->L->Nu));
 			Spinor^ N = gcnew Spinor(Iota->V->First->Value.Value->X->R, gcnew Polygamma(Iota->V->First->Value.Value->L->Phi));
-			Spinor^ R = Iota->YL->Last->Value.Value;
+			Spinor^ R = Iota->Qi->Phi->Gamma;
 			W = gcnew Wavelet(N, R, X);
 		}
 		else if (Gluon == nullptr) {
 			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Gamma));
 			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Rho));
-			Spinor^ R = Iota->YL->First->Value.Value;
+			Spinor^ R = Iota->Qi->Phi->Phi;
 			W = gcnew Wavelet(N, R, X);
 		}
 		else throw gcnew PolysigmaException(3, "Polysigma In Bad Poly State");

@@ -15,12 +15,12 @@ namespace Dysnomia {
 		Spinor^ Mu;
 
 		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ XL;
-		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ YL;
+		Polynu^ Qi;
 
 		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ V;
 
 		Soliton(Quaternion^, Quark^, Quaternion^);
-		void Add(Spinor^);
+		void Add(Spinor^, Polygamma^);
 		void Add(Spinor^, Quark^);
 	};
 }
