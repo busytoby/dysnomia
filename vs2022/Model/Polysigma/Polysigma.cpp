@@ -3,6 +3,14 @@
 #include "Polysigma.h"
 
 namespace Dysnomia {
+	Polysigma::Polysigma(Polysigma ^ Theta) {
+		LinkedListNode<KeyValuePair<Quark^, Bundle^>>^ Q = Theta->Last;
+		while (Q != nullptr) {
+			AddLast(Q->Value);
+			Q = Q->Previous;
+		}
+	}
+
 	void Polysigma::Add(Polygamma^ Rho, Polysigma^ Omicron) {
 		J = gcnew Bundle(
 			gcnew Spinor(Omicron->First->Value.Value->Gamma->Item1->R, Rho),

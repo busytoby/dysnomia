@@ -11,7 +11,6 @@ namespace Prion.Elements
     public class Praseodymium
     {
         Actinium Alpha;
-        static public Soliton Qi;
         static public Spinor Xi;
         public Quark Psi;
         public Molybdenum Gamma;
@@ -23,77 +22,17 @@ namespace Prion.Elements
             Alpha = new Actinium();
             Neodymium Eta = new Neodymium(Alpha.Beta.Nu);
 
-            if (Qi == null)
-            {
-                if (Xi != null || Tungsten.Iota.Upsilon.Xi != null || Niobium.Ypsilon.Y.Xi != null) throw new Exception("Weird");
+            if (Xi != null || Tungsten.Iota.Upsilon.Xi != null || Niobium.Ypsilon.Y.Xi != null) throw new Exception("Weird");
 
-                Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
-                Tungsten.Iota.Upsilon.Xi = new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon);
-                Tungsten.Iota.Upsilon.Epsilon = new Polygamma(Neodymium.Chi.Rho.Alpha.Phi);
-                Niobium.Ypsilon.Y.Xi = new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
-                Niobium.Ypsilon.Y.Epsilon = new Polygamma(Neodymium.Chi.Nu.Rho.Phi);
-                Rhenium.Pi.Add(Tungsten.Iota.Upsilon.Xi, Tungsten.Iota.Upsilon.Epsilon);
-                Rhenium.Pi.Add(Niobium.Ypsilon.Y.Xi, Niobium.Ypsilon.Y.Epsilon);
-                Rhenium.Pi.Add(Xi, Niobium.Ypsilon.Y.Epsilon);
-                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Tungsten.Iota.Upsilon.Epsilon);
-                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Epsilon);
-            }
+            Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
 
-            /*
+            Tungsten.Iota.Upsilon.Xi = new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon);
+            Tungsten.Iota.Upsilon.Epsilon = new Polygamma(Neodymium.Chi.Rho.Alpha.Phi);
 
-            Gamma = new Molybdenum(Tungsten.Iota, Tungsten.Eta.Theta);
-            Gamma.Contrast(Gamma.Mu, Tungsten.Eta.Nu);
+            Niobium.Ypsilon.Y.Xi = new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
+            Niobium.Ypsilon.Y.Epsilon = new Polygamma(Neodymium.Chi.Nu.Rho.Phi);
 
-            Iota = Gamma.Persist(Tungsten.Eta.Mu, Gamma.Nu);
-            Sigma = new Molybdenum(Iota, Gamma.Theta);
-            Psi = new Quark(Gamma.Mu.Beta.Eta.X.N, Zinc.Fetch(), Sigma.Mu.Beta.Eta.X.R);
-
-            Gamma.Kappa.Propagate(Gamma.Theta);
-            Gamma.Contrast(Sigma.Mu, Sigma.Nu);
-
-            Sigma.Contrast(Gamma.Mu, Gamma.Nu);
-            Sigma.Kappa.Propagate(Sigma.Theta);
-            Sigma.Contrast(Gamma.Mu, Gamma.Nu);
-
-            Qi = new Soliton(
-                Alpha.Beta.Gamma.Rho.Gamma,
-                Psi,
-                Alpha.Beta.Sigma.Alpha.Sigma
-                );
-
-            Gamma.Theta.Add(Qi.Mu, Qi.Qi.Phi.Nu, Qi.XL.Last.Value.Value, Qi.XL.First.Value.Value);
-            Gamma.Theta.Run(Qi, Neodymium.Chi.Nu.Rho.Nu);
-            Gamma.Theta.Run(Qi, Neodymium.Chi.Gamma.Rho.Rho);
-            Gamma.Theta.Add(Qi.Q);
-            Gamma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
-            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Sigma);
-            Gamma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
-            Gamma.Theta.Add(Osmium.Zeta);
-            Gamma.Theta.Cap(Gamma.Nu.Epsilon, Sigma.Theta);
-            Gamma.Theta.Add(Psi);
-
-            Sigma.Theta.Add(Qi.Mu, Qi.XL.Last.Value.Value, Qi.Qi.Phi.Rho, Qi.Qi.Phi.Phi);
-            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Phi);
-            Sigma.Theta.Run(Qi, Neodymium.Chi.Rho.Alpha.Rho);
-            Sigma.Theta.Add(Qi.Q);
-            Sigma.Theta.Add(Qi.Mu, Iota.Alpha.W.N, Iota.Alpha.W.L, Iota.Alpha.W.R);
-            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Sigma);
-            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
-            Sigma.Theta.Add(Osmium.Zeta);
-            Sigma.Theta.Add(Qi.Mu, Sigma.Nu.W.N, Sigma.Nu.W.L, Sigma.Nu.W.R);
-            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Sigma);
-            Sigma.Theta.Run(Sigma.Nu.Kernel.Eta, Neodymium.Chi.Sigma.Alpha.Gamma);
-            Sigma.Theta.Add(Osmium.Zeta);
-            Sigma.Theta.Add(Qi.Mu, Gamma.Nu.W.N, Gamma.Nu.W.L, Gamma.Nu.W.R);
-            Sigma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Phi);
-            Sigma.Theta.Run(Gamma.Nu.Kernel.Eta, Neodymium.Chi.Sigma.Alpha.Phi);
-            Sigma.Theta.Add(Osmium.Zeta);
-            Sigma.Theta.Cap(Sigma.Nu.Epsilon, Gamma.Theta);
-            Sigma.Theta.Add(Qi.Q);
-            Sigma.Theta.Cap(Gamma.Nu.Epsilon, Sigma.Theta);
-            Sigma.Theta.Add(Psi);
-
-            */
+            if (Didymium.Eta == null || Didymium.Nu == null) throw new Exception("RNA Transcription Failure");
         }
     }
 }
