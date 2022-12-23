@@ -28,11 +28,11 @@ namespace Prion.Elements
                 if (Xi != null) throw new Exception("Weird");
                 Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
 
-                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
-                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
-                Rhenium.Pi.Add(Xi, Tungsten.Rho.Nu.Epsilon);
-                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Niobium.Ypsilon.Kappa.Rho);
-                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
+                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon), Osmium.Xi);
+                Rhenium.Pi.Add(new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon), Osmium.Xi);
+                Rhenium.Pi.Add(Xi, Molybdenum.Eta.Kappa.Rho);
+                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Osmium.Xi);
+                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Osmium.Xi);
             }
 
             Gamma = new Molybdenum(Tungsten.Iota, Tungsten.Eta.Theta);
