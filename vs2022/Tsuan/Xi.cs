@@ -16,10 +16,12 @@ namespace Tsuan
         public Polysigma Seo;
         public Soliton On;
         public Polygamma Po;
+        bool Xia = false;
 
         public Xi() { }
         public Xi(Illinium Xibe)
         {
+            Xia = true;
             Si = Xibe;
             LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = Si.Tsi.Nu.First;
             Po = new Polygamma(Si.First.Value.Value.Sigma.Item1.N);
@@ -73,13 +75,16 @@ namespace Tsuan
             Ka = new Polyrho(Seo, Po);
             Ka.Cap(Op);
 
-            Seo.Add(On.Mu, On.Qi.Phi.Rho, On.XL.Last.Value.Value, On.XL.First.Value.Value);
-            Seo.Run(On, Seo.First.Value.Value.Phi.Item1.N);
-            Seo.Run(On, Seo.Last.Value.Value.Phi.Item2.L);
-            Seo.Add(On.Q);
+            if (Xia)
+            {
+                Seo.Add(On.Mu, On.Qi.Phi.Rho, On.XL.Last.Value.Value, On.XL.First.Value.Value);
+                Seo.Run(On, Seo.First.Value.Value.Phi.Item1.N);
+                Seo.Run(On, Seo.Last.Value.Value.Phi.Item2.L);
+                Seo.Add(On.Q);
 
-            Seo.Add(Po, Seo);
-            Seo.Add(Seo.First.Value.Key);
+                Seo.Add(Po, Seo);
+                Seo.Add(Seo.First.Value.Key);
+            }
         }
 
         public void Propagate()

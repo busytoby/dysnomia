@@ -10,16 +10,17 @@ namespace Tsuan
 {
     public class Xo : LinkedList<Xi>
     {
-        public Xo(Xi Csa)
+        public Xo(Xi Csa, int Max = 0)
         {
-            Xn(Csa);
+            Xn(Csa, Max);
         }
 
-        public void Xn(Xi Ca)
+        public void Xn(Xi Ca, int Max = 0)
         {
-            LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = Ca.Ka.Last.Value.Value.Qi.Nu.First;
+            if (Max == 0) Max = Ca.Ka.Last.Value.Value.Qi.Nu.Count + Count;
+            LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = SelectByKey(Ca);
 
-            while (Sio != null)
+            while (Sio != null && Count < Max)
             {
                 Xi Csi = new Xi();
                 Csi.Si = Ca.Si;
@@ -43,11 +44,26 @@ namespace Tsuan
                 Csi.Seo.Add(Ca.Seo.First.Value.Value.Nu.Item2);
                 Csi.Seo.Add(Csi.Po, Csi.Seo);
                 Csi.Seo.Add(Ca.Seo.First.Value.Value.Gamma.Item1);
-                Ca.Ka.Last.Value.Value.Qi.Nu.RemoveFirst();
+                Ca.Ka.Last.Value.Value.Qi.Nu.Remove(Sio);
                 Csi.Persist();
                 AddLast(Csi);
-                Sio = Ca.Ka.Last.Value.Value.Qi.Nu.First;
+                Sio = SelectByKey(Ca);
             }
+        }
+
+        public LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> SelectByKey(Xi Ca)
+        {
+            LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = Ca.Ka.Last.Value.Value.Qi.Nu.First;
+            LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sie = null;
+
+            while (Sio != null)
+            {
+                if (Sie == null || Sio.Value.Key.Phi.Epsilon > Sie.Value.Key.Phi.Epsilon)
+                    Sie = Sio;
+
+                Sio = Sio.Next;
+            }
+            return Sie;
         }
     }
 }
