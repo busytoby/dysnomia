@@ -22,6 +22,7 @@ namespace Tsuan
             while (Sio != null)
             {
                 Xi Csi = new Xi();
+                Csi.Si = Ca.Si;
                 Csi.Po = new Polygamma(Ca.Seo.First.Value.Value.Sigma.Item1.N);
                 Csi.On = new Soliton(
                     Ca.Seo.First.Value.Value.Sigma.Item1.L,
