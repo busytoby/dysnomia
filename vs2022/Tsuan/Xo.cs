@@ -43,6 +43,7 @@ namespace Tsuan
                 Csi.Seo.Add(Csi.Po, Csi.Seo);
                 Csi.Seo.Add(Ca.Seo.First.Value.Value.Gamma.Item1);
                 Ca.Ka.Last.Value.Value.Qi.Nu.RemoveFirst();
+                Csi.Persist();
                 AddLast(Csi);
                 Sio = Ca.Ka.Last.Value.Value.Qi.Nu.First;
             }
