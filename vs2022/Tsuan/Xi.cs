@@ -17,6 +17,7 @@ namespace Tsuan
         public Soliton On;
         public Polygamma Po;
 
+        public Xi() { }
         public Xi(Illinium Xibe)
         {
             Si = Xibe;

@@ -7,6 +7,7 @@ namespace Dysnomia
     {
         static public Praseodymium Sie;
         static public Illinium Xibe;
+        static public Xo XoXo;
 
         public Tsuan()
         {
@@ -16,6 +17,7 @@ namespace Dysnomia
             Csa.Persist();
             Csa.Propagate();
             if (Csa.Ka.Last.Value.Value.Qi.Nu.Count < 1) throw new Exception("Failed To Seed");
+            XoXo = new Xo(Csa);
         }
     }
 }
