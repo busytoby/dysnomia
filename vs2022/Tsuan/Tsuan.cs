@@ -4,11 +4,13 @@ namespace Dysnomia
 {
     public class Tsuan
     {
-        public Praseodymium Gamma;
+        public Praseodymium Sie;
+        public Illinium Xibe;
         
         public Tsuan()
         {
-            Gamma = new Praseodymium();
+            Sie = new Praseodymium();
+            Xibe = new Illinium(Tungsten.Rho);
         }
     }
 }

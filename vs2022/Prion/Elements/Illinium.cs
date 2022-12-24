@@ -17,10 +17,13 @@ namespace Prion.Elements
             Tsi.Sigma(Eta.Kappa.Last.Value.Value.Qi.Nu);
             Eta.Kappa.Last.Value.Value.Qi.Nu.Clear();
 
-            Add(Eta.Nu.W.R, Eta.Iota.Alpha.X.Xi, Eta.Iota.Alpha.X.Lambda.Xi, Eta.Iota.Alpha.X.Beta.Xi);
-            Run(Eta.Nu.Kernel.Eta, Eta.Iota.Alpha.X.Tau);
-            Run(Eta.Nu.Kernel.Eta, Eta.Iota.Alpha.X.Phi);
-            Add(Eta.Iota.Alpha.X.Alpha);
+            Sulfur Xi;
+            if (Eta.Mu == null) Xi = Eta.Iota.Alpha.X;
+            else Xi = Eta.Mu;
+            Add(Eta.Nu.W.R, Xi.Xi, Xi.Lambda.Xi, Xi.Beta.Xi);
+            Run(Eta.Nu.Kernel.Eta, Xi.Tau);
+            Run(Eta.Nu.Kernel.Eta, Xi.Phi);
+            Add(Xi.Alpha);
             Cap(Eta.Nu.Epsilon, this);
             Add(Eta.Alpha);
         }
