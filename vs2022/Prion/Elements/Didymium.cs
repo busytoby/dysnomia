@@ -9,7 +9,6 @@ namespace Prion.Elements
 {
     public class Didymium
     {
-        public Polyrho Tsuan;
         public Illinium Eta;
         public Illinium Nu;
         public Quark Psi;

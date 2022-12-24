@@ -34,10 +34,9 @@ namespace Dysnomia
         {
             InitializeComponent();
 
-            Math.Prime = Math.MotzkinPrime;
+            //Praseodymium Gamma = new Praseodymium();
+            Tsuan Tso = new Tsuan();
 
-            Praseodymium Gamma = new Praseodymium();
-            Praseodymium Sigma = new Praseodymium(Gamma);
             int a = 999; // Girls Planet
         }
     }

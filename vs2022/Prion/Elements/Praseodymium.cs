@@ -18,6 +18,8 @@ namespace Prion.Elements
 
         public Praseodymium()
         {
+            Dysnomia.Math.Prime = Dysnomia.Math.MotzkinPrime;
+
             if (Alpha == null)
             {
                 Alpha = new Actinium();
@@ -45,11 +47,6 @@ namespace Prion.Elements
             }
 
             Zeta = new Didymium();
-        }
-
-        public Praseodymium(Praseodymium Gamma)
-        {
-            int i = 99;
         }
     }
 }

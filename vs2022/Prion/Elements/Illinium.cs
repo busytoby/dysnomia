@@ -10,6 +10,7 @@ namespace Prion.Elements
     public class Illinium : Polysigma
     {
         public Polynu Tsi;
+        public Polyrho Tsuan;
 
         public Illinium(Molybdenum Eta) : base(Eta.Theta) {
             Tsi = new Polynu();

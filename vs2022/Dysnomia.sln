@@ -40,6 +40,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polyrho", "Model\Polyrho\Po
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polynu", "Model\Polynu\Polynu.vcxproj", "{A111571A-CFBB-4E07-AA6F-13FCE8547EE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsuan", "Tsuan\Tsuan.csproj", "{0B7F1868-1981-4C31-898B-B68D5EC6A060}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -254,6 +256,18 @@ Global
 		{A111571A-CFBB-4E07-AA6F-13FCE8547EE7}.Release|x64.Build.0 = Release|x64
 		{A111571A-CFBB-4E07-AA6F-13FCE8547EE7}.Release|x86.ActiveCfg = Release|Win32
 		{A111571A-CFBB-4E07-AA6F-13FCE8547EE7}.Release|x86.Build.0 = Release|Win32
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|x64.Build.0 = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|x64.ActiveCfg = Release|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|x64.Build.0 = Release|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B7F1868-1981-4C31-898B-B68D5EC6A060}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
