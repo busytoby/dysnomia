@@ -89,8 +89,10 @@ namespace Prion.Elements
             Lanthanum Beta;
             if (Eta.Y.Alpha == null)
                 Beta = new Lanthanum(Eta);
-            else
+            else if (Eta.Y.Y == null)
                 Beta = new Lanthanum(Mu);
+            else
+                Beta = new Lanthanum(Tau, Ypsilon);
             Theta.Add(Beta.Alpha.W.N, Beta.Mu.N, Beta.Mu.R, Beta.Mu.L);
             Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Upsilon.Tau);
             Theta.Add(new Quark(Beta.Eta[1], Beta.Eta[2], Beta.Eta[0]));

@@ -10,12 +10,9 @@ namespace Prion.Elements
 {
     public class Praseodymium
     {
-        Actinium Alpha;
+        static public Actinium Alpha;
         static public Spinor Xi;
-        public Quark Psi;
-        public Molybdenum Gamma;
-        public Molybdenum Sigma;
-        public Lanthanum Iota;
+        static public Lanthanum Iota;
 
         public Praseodymium()
         {
@@ -31,6 +28,8 @@ namespace Prion.Elements
 
             Niobium.Ypsilon.Y.Xi = new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
             Niobium.Ypsilon.Y.Epsilon = new Polygamma(Neodymium.Chi.Nu.Rho.Phi);
+
+            Iota = Tungsten.Eta.Persist(Niobium.Ypsilon.Y, Tungsten.Rho.Nu);
 
             if (Didymium.Eta == null || Didymium.Nu == null) throw new Exception("RNA Transcription Failure");
         }
