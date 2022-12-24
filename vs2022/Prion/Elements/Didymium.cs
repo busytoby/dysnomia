@@ -9,8 +9,9 @@ namespace Prion.Elements
 {
     public class Didymium
     {
+        public Polyrho Tsu;
         public Illinium Eta;
-        public Illinium Nu;
+        public Polysigma Nu;
         public Quark Psi;
         public Soliton Xi;       
 
@@ -25,11 +26,15 @@ namespace Prion.Elements
                 );
 
             Eta = new Illinium(Tungsten.Eta);
-            Nu = new Illinium(Tungsten.Rho);
+            Tsu = new Polyrho(Eta, Tungsten.Eta.Iota.Alpha.Epsilon);
+            Tsu.Cap(Tungsten.Eta.Nu.Epsilon);
 
-            Eta.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
-            Eta.Add(Psi);
+            Eta.Add(Tungsten.Rho.Nu.W.R, Tungsten.Rho.Mu.Xi, Tungsten.Rho.Mu.Lambda.Xi, Tungsten.Rho.Mu.Beta.Xi);
+            Eta.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Mu.Tau);
+            Eta.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Mu.Phi);
+            Eta.Add(Tungsten.Rho.Mu.Alpha);
 
+            Nu = new Polysigma(Tungsten.Eta.Theta);
             Nu.Add(Xi.Mu, Xi.XL.Last.Value.Value, Xi.Qi.Phi.Sigma, Xi.Qi.Phi.Rho);
             Nu.Run(Xi, Neodymium.Chi.Rho.Alpha.Phi);
             Nu.Run(Xi, Neodymium.Chi.Rho.Alpha.Sigma);
@@ -42,6 +47,9 @@ namespace Prion.Elements
             Nu.Add(Xi.Q);
             Nu.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
             Nu.Add(Psi);
+
+            Eta.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
+            Eta.Add(Psi);
         }
     }
 }

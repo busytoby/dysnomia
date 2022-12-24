@@ -59,7 +59,7 @@ namespace Dysnomia {
 
 	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L) {
 		if (Gluon != nullptr || Muon != nullptr || J != nullptr) throw gcnew PolysigmaException(1, "Polysigma Not In Ready State");
-
+		if (X == nullptr || N == nullptr || R == nullptr || L == nullptr) throw gcnew PolysigmaException(2, "Null Values In Add");
 		J = gcnew Bundle(X, N, R, L);
 	}
 
@@ -84,6 +84,7 @@ namespace Dysnomia {
 
 	void Polysigma::Run(Soliton^ Iota) {
 		if (Gluon != nullptr || Muon != nullptr || J != nullptr) return;
+		if (Iota->XL->First->Value.Value == nullptr || Iota->XL->Last->Value.Value == nullptr || Iota->Mu == nullptr) throw gcnew Exception("Null Values On Soliton");
 		Spinor^ X = Iota->XL->First->Value.Value;
 		Spinor^ N = Iota->XL->Last->Value.Value;
 		Spinor^ R = Iota->Mu;
@@ -110,6 +111,7 @@ namespace Dysnomia {
 	}
 
 	void Polysigma::Run(Quark^ Q) {
+		if (Q == nullptr) throw gcnew PolysigmaException(3, "Null Quark");
 		Add(Q);
 	}
 }

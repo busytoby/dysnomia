@@ -14,7 +14,6 @@ namespace Prion.Elements
         static public Spinor Xi;
         static public Lanthanum Iota;
         public Didymium Zeta;
-        public Polyrho Rho;
 
         public Praseodymium()
         {

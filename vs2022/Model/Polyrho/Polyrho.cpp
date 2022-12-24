@@ -22,7 +22,7 @@ namespace Dysnomia {
 				gcnew Polygamma(GammaShift[2]),
 				gcnew Soliton(GammaShift[i + 1], O->Value.Value->Nu->Item1, GammaShift[i + 4])));
 			i += 5;
-			if (i >= Gamma->Count) break;
+			if (i + 5 >= Gamma->Count) break;
 			AddLast(KeyValuePair<Polygamma^, Soliton^>(
 				gcnew Polygamma(GammaShift[2]),
 				gcnew Soliton(GammaShift[i + 0], O->Value.Value->Rho->Item2, GammaShift[i + 0])));
@@ -36,6 +36,7 @@ namespace Dysnomia {
 				gcnew Polygamma(GammaShift[2]),
 				gcnew Soliton(GammaShift[i + 4], O->Value.Value->Nu->Item2, GammaShift[i + 1])));
 			i += 5;
+			if (i + 5 >= Gamma->Count) break;
 		} while (O = O->Next);
 	}
 

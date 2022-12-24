@@ -30,14 +30,13 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
+        Tsuan Tsa;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            //Praseodymium Gamma = new Praseodymium();
-            Tsuan Tso = new Tsuan();
-
-            int a = 999; // Girls Planet
+            Tsa = new Tsuan();
         }
     }
 }
