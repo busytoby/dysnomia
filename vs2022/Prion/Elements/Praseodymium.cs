@@ -13,7 +13,8 @@ namespace Prion.Elements
         static public Actinium Alpha;
         static public Spinor Xi;
         static public Lanthanum Iota;
-        Didymium Zeta;
+        public Didymium Zeta;
+        public Polyrho Rho;
 
         public Praseodymium()
         {
@@ -44,6 +45,11 @@ namespace Prion.Elements
             }
 
             Zeta = new Didymium();
+        }
+
+        public Praseodymium(Praseodymium Gamma)
+        {
+            int i = 99;
         }
     }
 }

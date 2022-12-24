@@ -9,6 +9,12 @@ namespace Prion.Elements
 {
     public class Illinium : Polysigma
     {
-        public Illinium(Polysigma Theta) : base(Theta) { }
+        public Polynu Tsi;
+
+        public Illinium(Molybdenum Eta) : base(Eta.Theta) {
+            Tsi = new Polynu();
+            Tsi.Sigma(Eta.Kappa.Last.Value.Value.Qi.Nu);
+            Eta.Kappa.Last.Value.Value.Qi.Nu.Clear();
+        }
     }
 }

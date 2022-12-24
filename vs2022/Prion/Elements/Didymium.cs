@@ -12,7 +12,7 @@ namespace Prion.Elements
         public Illinium Eta;
         public Illinium Nu;
         public Quark Psi;
-        public Soliton Xi;
+        public Soliton Xi;       
 
         public Didymium()
         {
@@ -24,8 +24,8 @@ namespace Prion.Elements
                 Praseodymium.Alpha.Beta.Sigma.Alpha.Sigma
                 );
 
-            Eta = new Illinium(Tungsten.Eta.Theta);
-            Nu = new Illinium(Tungsten.Rho.Theta);
+            Eta = new Illinium(Tungsten.Eta);
+            Nu = new Illinium(Tungsten.Rho);
 
             Eta.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
             Eta.Add(Psi);

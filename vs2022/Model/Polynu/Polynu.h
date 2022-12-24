@@ -18,5 +18,6 @@ namespace Dysnomia {
 		void Alpha(Spinor^);
 		void Eta();
 		void Delta(Spin<Spinor^>^);
+		void Sigma(LinkedList<KeyValuePair<Spin<Spinor^>^, Spin<Spinor^>^>>^);
 	};
 }

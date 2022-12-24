@@ -37,7 +37,7 @@ namespace Dysnomia
             Math.Prime = Math.MotzkinPrime;
 
             Praseodymium Gamma = new Praseodymium();
-            Praseodymium Sigma = new Praseodymium();
+            Praseodymium Sigma = new Praseodymium(Gamma);
             int a = 999; // Girls Planet
         }
     }

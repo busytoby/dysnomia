@@ -6,6 +6,7 @@ namespace Dysnomia {
 	Polynu::Polynu() {
 		Rho = gcnew LinkedList<Spinor^>();
 		Phi = gcnew Spin<Spinor^>();
+		Nu = gcnew LinkedList<KeyValuePair<Spin<Spinor^>^, Spin<Spinor^>^>>();
 	}
 
 	void Polynu::Alpha(Spinor^ Xi) {
@@ -42,5 +43,13 @@ namespace Dysnomia {
 		Chi->Rho = Rho->First->Value; Rho->RemoveFirst();
 		Chi->Phi = Rho->First->Value; Rho->RemoveFirst();
 		return Chi;
+	}
+
+	void Polynu::Sigma(LinkedList<KeyValuePair<Spin<Spinor^>^, Spin<Spinor^>^>>^ Psi) {
+		LinkedListNode<KeyValuePair<Spin<Spinor^>^, Spin<Spinor^>^>>^ P = Psi->Last;
+		while (P) {
+			Nu->AddLast(P->Value);
+			P = P->Previous;
+		}
 	}
 }
