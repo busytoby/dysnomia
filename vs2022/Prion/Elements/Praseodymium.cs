@@ -13,25 +13,37 @@ namespace Prion.Elements
         static public Actinium Alpha;
         static public Spinor Xi;
         static public Lanthanum Iota;
+        Didymium Zeta;
 
         public Praseodymium()
         {
-            Alpha = new Actinium();
-            Neodymium Eta = new Neodymium(Alpha.Beta.Nu);
+            if (Alpha == null)
+            {
+                Alpha = new Actinium();
+                Neodymium Eta = new Neodymium(Alpha.Beta.Nu);
 
-            if (Xi != null || Tungsten.Iota.Upsilon.Xi != null || Niobium.Ypsilon.Y.Xi != null) throw new Exception("Weird");
+                if (Xi != null || Tungsten.Iota.Upsilon.Xi != null || Niobium.Ypsilon.Y.Xi != null) throw new Exception("Weird");
+                Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
 
-            Xi = new Spinor(Alpha.Beta.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
+                Tungsten.Iota.Upsilon.Xi = new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon);
+                Tungsten.Iota.Upsilon.Epsilon = new Polygamma(Neodymium.Chi.Rho.Alpha.Phi);
 
-            Tungsten.Iota.Upsilon.Xi = new Spinor(Neodymium.Chi.Rho.Alpha.Phi, Tungsten.Eta.Nu.Epsilon);
-            Tungsten.Iota.Upsilon.Epsilon = new Polygamma(Neodymium.Chi.Rho.Alpha.Phi);
+                Niobium.Ypsilon.Y.Xi = new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
+                Niobium.Ypsilon.Y.Epsilon = new Polygamma(Neodymium.Chi.Nu.Rho.Phi);
 
-            Niobium.Ypsilon.Y.Xi = new Spinor(Neodymium.Chi.Nu.Rho.Phi, Tungsten.Rho.Nu.Epsilon);
-            Niobium.Ypsilon.Y.Epsilon = new Polygamma(Neodymium.Chi.Nu.Rho.Phi);
+                Iota = Tungsten.Eta.Persist(Niobium.Ypsilon.Y, Tungsten.Rho.Nu);
+                Iota.Upsilon.Xi = new Spinor(Neodymium.Chi.Phi.Alpha.Gamma, Niobium.Ypsilon.Y.Epsilon);
+                Iota.Upsilon.Epsilon = new Polygamma(Neodymium.Chi.Phi.Alpha.Gamma);
 
-            Iota = Tungsten.Eta.Persist(Niobium.Ypsilon.Y, Tungsten.Rho.Nu);
+                Rhenium.Pi.Add(Tungsten.Iota.Upsilon.Xi, Tungsten.Iota.Upsilon.Epsilon);
+                Rhenium.Pi.Add(Niobium.Ypsilon.Y.Xi, Niobium.Ypsilon.Y.Epsilon);
+                Rhenium.Pi.Add(Praseodymium.Xi, Niobium.Ypsilon.Y.Epsilon);
+                Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Tungsten.Iota.Upsilon.Epsilon);
+                Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Epsilon);
+                Rhenium.Pi.Add(Iota.Upsilon.Xi, Iota.Upsilon.Epsilon);
+            }
 
-            if (Didymium.Eta == null || Didymium.Nu == null) throw new Exception("RNA Transcription Failure");
+            Zeta = new Didymium();
         }
     }
 }

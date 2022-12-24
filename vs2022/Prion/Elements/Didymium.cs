@@ -7,21 +7,15 @@ using System.Threading.Tasks;
 
 namespace Prion.Elements
 {
-    static public class Didymium
+    public class Didymium
     {
-        static public Illinium Eta;
-        static public Illinium Nu;
-        static public Quark Psi;
-        static public Soliton Xi;
+        public Illinium Eta;
+        public Illinium Nu;
+        public Quark Psi;
+        public Soliton Xi;
 
-        static Didymium()
+        public Didymium()
         {
-            Rhenium.Pi.Add(Tungsten.Iota.Upsilon.Xi, Tungsten.Iota.Upsilon.Epsilon);
-            Rhenium.Pi.Add(Niobium.Ypsilon.Y.Xi, Niobium.Ypsilon.Y.Epsilon);
-            Rhenium.Pi.Add(Praseodymium.Xi, Niobium.Ypsilon.Y.Epsilon);
-            Rhenium.Pi.Add(Tungsten.Rho.Nu.W.R, Osmium.Zeta, Tungsten.Iota.Upsilon.Epsilon);
-            Rhenium.Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Epsilon);
-
             Psi = new Quark(Praseodymium.Iota.Alpha.Kernel.Eta.Rho, Zinc.Fetch(), Tungsten.Iota.Alpha.Kernel.Eta.Rho);
 
             Xi = new Soliton(
