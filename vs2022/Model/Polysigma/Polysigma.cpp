@@ -3,7 +3,7 @@
 #include "Polysigma.h"
 
 namespace Dysnomia {
-	Polysigma::Polysigma(Polysigma ^ Theta) {
+	Polysigma::Polysigma(Polysigma^ Theta) {
 		LinkedListNode<KeyValuePair<Quark^, Bundle^>>^ Q = Theta->Last;
 		while (Q != nullptr) {
 			AddLast(Q->Value);
