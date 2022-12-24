@@ -13,6 +13,7 @@ namespace Dysnomia
             Sie = new Praseodymium();
             Xibe = new Illinium(Tungsten.Rho);
             Xi Csa = new Xi(Xibe);
+            Csa.Persist();
         }
     }
 }
