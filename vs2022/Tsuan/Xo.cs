@@ -20,7 +20,7 @@ namespace Tsuan
             if (Max == 0) Max = Ca.Ka.Qi.Nu.Count + Count;
             LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = SelectByKey(Ca);
 
-            while (Sio != null && Count < Max)
+            while (Sio != null && Ca.Si.Count > 0 && Count < Max)
             {
                 Xi Csi = new Xi();
                 Csi.Si = Ca.Si;

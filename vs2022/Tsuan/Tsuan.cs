@@ -21,12 +21,12 @@ namespace Dysnomia
             Csa.Persist();
             Csa.Propagate();
             if (Csa.Ka.Qi.Nu.Count < 1) throw new Exception("Failed To Seed");
-            XoXo = new Xo(Csa, 10);
+            XoXo = new Xo(Csa);
 
             Sie = new Xi(Xa.Zeta.Eta);
             Sie.Persist();
             Sie.Propagate();
-            Xe = new Xo(Sie, 5);
+            Xe = new Xo(Sie);
 
             Tso();
         }
