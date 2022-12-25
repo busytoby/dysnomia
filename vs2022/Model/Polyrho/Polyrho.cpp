@@ -54,21 +54,69 @@ namespace Dysnomia {
 			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X, Gamma);
 			O = O->Next;
 
-			O->Value.Key->Add(GammaShift[i + 5]);
-			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q, Gamma);
-			O = O->Next;
+			if (O != nullptr && GammaShift->Count > i + 5) {
+				Spinor^ Chi = gcnew Spinor(GammaShift[i], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 1], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 2], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 3], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
 
-			O->Value.Key->Add(GammaShift[i + 7]);
-			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->Q, Gamma);
-			O = O->Next;
+				O->Value.Key->Add(GammaShift[i + 5]);
+				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q, Gamma);
+				O = O->Next;
+			}
+
+			if (O != nullptr && GammaShift->Count > i + 7) {
+				O->Value.Key->Add(GammaShift[i + 7]);
+				O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->Q, Gamma);
+				O = O->Next;
+			}
 
 			if (O != nullptr && GammaShift->Count > i + 9) {
+				Spinor^ Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 5], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 6], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 7], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 8], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+
 				O->Value.Key->Add(GammaShift[i + 9]);
 				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 7], O->Value.Key), O->Value.Value->Q, Gamma);
 				O = O->Next;
 			}
 
 			if (O != nullptr && GammaShift->Count > i + 11) {
+				Spinor^ Chi = gcnew Spinor(GammaShift[i], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 1], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 2], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 3], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+
+				Chi = gcnew Spinor(GammaShift[i + 6], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 7], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 8], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 9], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+				Chi = gcnew Spinor(GammaShift[i + 10], Gamma);
+				O->List->Last->Value.Value->Qi->Alpha(Chi);
+
 				O->Value.Key->Add(GammaShift[i + 11]);
 				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X, Gamma);
 
@@ -76,7 +124,6 @@ namespace Dysnomia {
 					Spinor^ L = gcnew Spinor(GammaShift[GammaShift->Count - i], Gamma);
 					O->List->Last->Value.Value->Qi->Alpha(L);
 				}
-
 			}
 			i++;
 		} while (O != nullptr && (O = O->Next));
@@ -88,7 +135,7 @@ namespace Dysnomia {
 
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;	
 
-		for (int i = 0; i < BundleShift->Count; i++) {
+		for (int i = 0; i < BundleShift->Count && O != nullptr; i++) {
 			BundleShift[i]->Run(gcnew Wavelet(O->Value.Value->Qi->Phi->Nu, O->Value.Value->Mu, O->Value.Value->Qi->Phi->Sigma));
 
 			O->Value.Key->Add(QuarkShift[i]->R);

@@ -21,19 +21,19 @@ namespace Dysnomia
             Csa.Persist();
             Csa.Propagate();
             if (Csa.Ka.Last.Value.Value.Qi.Nu.Count < 1) throw new Exception("Failed To Seed");
-            XoXo = new Xo(Csa, 4);
+            XoXo = new Xo(Csa, 10);
 
             Sie = new Xi(Xa.Zeta.Eta);
             Sie.Persist();
             Sie.Propagate();
-            Xe = new Xo(Sie, 4);
+            Xe = new Xo(Sie, 5);
 
             Tso();
         }
     
         public void Tso()
         {
-             LinkedListNode<Xi> Xan = Xe.First;
+            LinkedListNode<Xi> Xan = Xe.First;
             while (Xan != null)
             {
                 Xi Sie = Xan.Value;

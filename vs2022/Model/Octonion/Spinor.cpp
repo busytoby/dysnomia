@@ -11,67 +11,49 @@ namespace Dysnomia {
 		if (Epsilon.IsZero)
 			throw gcnew Exception("Zero Epsilon");
 
-		Gamma = gcnew Tuple<Affinity^, Affinity^>(
-			gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, Q->Gamma->Cone),
-			gcnew Affinity(Q->Gamma->Rod, Octogamma->Value.Value->Gamma->Cone));
-
-		Nu = gcnew Tuple<Affinity^, Affinity^>(
-			gcnew Affinity(Octogamma->Value.Value->Nu->Rod, Q->Nu->Cone),
-			gcnew Affinity(Q->Nu->Rod, Octogamma->Value.Value->Nu->Cone));
-
-		Phi = gcnew Tuple<Affinity^, Affinity^>(
-			gcnew Affinity(gcnew Dynamic(), Q->Phi->Cone),
-			gcnew Affinity(Q->Phi->Rod, gcnew Dynamic()));
-
-		Rho = gcnew Tuple<Affinity^, Affinity^>(
-			gcnew Affinity(gcnew Dynamic(), Q->Rho->Cone),
-			gcnew Affinity(gcnew Dynamic(), Octogamma->Value.Value->Rho->Cone));
-
-		Sigma = gcnew Tuple<Affinity^, Affinity^>(
-			gcnew Affinity(Octogamma->Value.Value->Sigma->Rod, Q->Sigma->Cone),
-			gcnew Affinity(Q->Sigma->Rod, Octogamma->Value.Value->Sigma->Cone));
-
-		Transit();
-		Delta();
+		Gamma = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Gamma, Q->Gamma);
+		Nu = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Nu, Q->Nu);
+		Phi = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Phi, Q->Phi);
+		Rho = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Rho, Q->Rho);
+		Sigma = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Sigma, Q->Sigma);
 	}
 
 	void Spinor::Transit(Polygamma^ Zeta) {
+		if (Zeta == List) {
+			Next();
+			return;
+		}
+
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ L = Zeta->First;
 		int Last12Only = 0;
-		while (Zeta->Count - Last12Only > 12) {
-			L = L->Next;
-			Last12Only++;
+		if (Zeta->Count > 12) {
+			while (Zeta->Count - Last12Only > 12) {
+				L = L->Next;
+				Last12Only++;
+			}
 		}
 		while (L = L->Next) {
-			Epsilon = Math::ModPow(Epsilon, L->Value.Value->Nu->Cone->Manifold, L->Value.Value->Nu->Rod->Barn);
-			if (Epsilon.IsZero)
-				throw gcnew Exception("Zero Epsilon");
-
-			L->Value.Value->Gamma->Rod->Adduct(Rho->Item2->Rod->Dynamo); L->Value.Value->Gamma->Rod->Open();
-			L->Value.Value->Gamma->Cone->Adduct(Sigma->Item1->Cone->Dynamo); L->Value.Value->Gamma->Cone->Open();
+			Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Value.Value->Epsilon, L->Value.Value));
 		}
 	}
 
-	void Spinor::Transit() {
-		Polygamma^ L = (Polygamma^)Octogamma->List;
-		Transit(L);
+	void Spinor::Next() {
+		Octogamma = Octogamma->Next;
+		Head();
 	}
 
-	void Spinor::Delta() {
-		Quaternion^ L = Head();
-		Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Epsilon, L));
-	}
+	void Spinor::Head() {
+		Epsilon = Math::ModPow(Octogamma->Value.Key, Octogamma->Value.Value->Nu->Cone->Manifold, Nu->Item2->Rod->Barn);
+		if (Octogamma->Value.Key.IsZero)
+			throw gcnew Exception("Zero Octogamma Key");
+		if (Epsilon.IsZero)
+			throw gcnew Exception("Zero Epsilon");
 
-	Quaternion^ Spinor::Head() {
-		Quaternion^ L = gcnew Quaternion();
-		L->Gamma = gcnew Affinity(Sigma->Item1->Rod, Octogamma->List->Last->Value.Value->Nu->Cone);
-		L->Nu = gcnew Affinity(Phi->Item2->Rod, Rho->Item1->Cone);
-		L->Phi = gcnew Affinity(Gamma->Item2->Rod, Phi->Item1->Cone);
-		L->Rho = gcnew Affinity(gcnew Dynamic(), Nu->Item2->Cone);
-		L->Sigma = gcnew Affinity(Rho->Item2->Rod, gcnew Dynamic());
-
-		L->Epsilon = Math::ModPow(Octogamma->List->Last->Value.Key, Octogamma->List->Last->Value.Value->Rho->Cone->Manifold, Nu->Item2->Rod->Barn);
-		return L;
+		Gamma = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Gamma, Gamma->Item2);
+		Nu = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Nu, Nu->Item2);
+		Phi = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Phi, Phi->Item2);
+		Rho = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Rho, Rho->Item2);
+		Sigma = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Sigma, Sigma->Item2);
 	}
 
 	Wavelet::Wavelet(Spinor^ Y, Spinor^ X, Spinor^ Z)

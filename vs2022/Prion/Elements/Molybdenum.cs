@@ -28,7 +28,7 @@ namespace Prion.Elements
             Nu = new Chromium(Niobium.Ypsilon);
             Niobium.Ypsilon.Persist(Nu);
 
-            Alpha = new Quark(Iota.Eta[1], Iota.Eta[2], Iota.Eta[0]);
+            Alpha = new Quark(Iota.Mu.N.List.Last.Value.Value, Iota.Mu.R.List.Last.Value.Value, Iota.Mu.L.List.Last.Value.Value);
             Delta(Astatine.Beta.Theta, Niobium.Ypsilon);
         }
 
@@ -96,7 +96,7 @@ namespace Prion.Elements
             Theta.Add(Beta.Alpha.W.N, Beta.Mu.N, Beta.Mu.R, Beta.Mu.L);
             Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Alpha.Kernel.Iota.Nu);
             Theta.Run(Beta.Alpha.Kernel.Eta, Ypsilon.Tau);
-            Theta.Add(new Quark(Beta.Eta[1], Beta.Eta[2], Beta.Eta[0]));
+            Theta.Add(new Quark(Beta.Mu.N.List.First.Value.Value, Beta.Mu.R.List.First.Value.Value, Beta.Mu.L.List.First.Value.Value));
             Rho.Kernel.Inhibit(Beta.Upsilon);
             Rho.Kernel.Aggregate(Beta.Upsilon);
             Contrast(Ypsilon, Tau);

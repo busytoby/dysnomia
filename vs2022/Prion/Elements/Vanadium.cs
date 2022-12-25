@@ -14,7 +14,7 @@ namespace Prion.Elements
 
         public Vanadium(Spinor Alpha)
         {
-            Rho = Alpha.Head();
+            Rho = Alpha.Octogamma.Value.Value;
         }
 
         static public Iron Push()

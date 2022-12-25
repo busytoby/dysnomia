@@ -24,10 +24,9 @@ namespace Dysnomia {
 		BigInteger Epsilon;
 
 		Spinor(Quaternion^, Polygamma^);
-		void Transit();
+		void Next();
 		void Transit(Polygamma^);
-		void Delta();
-		Quaternion^ Head();
+		void Head();
 	};
 
 	public ref class Wavelet {

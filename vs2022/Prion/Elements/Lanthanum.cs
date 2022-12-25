@@ -12,7 +12,6 @@ namespace Prion.Elements
         public Sulfur Upsilon;
         public Chromium Alpha;
         public Wavelet Mu;
-        Calcium Aluminium;
         public Chlorine<Quaternion> Eta;
 
         public Lanthanum(Sulfur Gamma)
@@ -31,10 +30,7 @@ namespace Prion.Elements
 
             Eta = Form(Antimony, Gamma.Y.Xi);
 
-            Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Mu.L.List);
-            Aluminium = new Calcium(Tellurium);
-
-            Gamma.Y.Phi = Aluminium.Phi;
+            Gamma.Y.Phi = Mu.L.List.First.Value.Value;
         }
 
         public Lanthanum(Chromium Omicron, Sulfur Iota)
@@ -50,10 +46,7 @@ namespace Prion.Elements
                 Iota.Xi = new Spinor(Upsilon.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
             Eta = Form(Antimony, Iota.Xi);
 
-            Chlorine<Quaternion> Tellurium = new Chlorine<Quaternion>(Mu.L.List);
-            Aluminium = new Calcium(Tellurium);
-
-            Iota.Phi = Aluminium.Phi;
+            Iota.Phi = Mu.L.List.Last.Value.Value;
         }
         public Chlorine<Quaternion> Form(Titanium Antimony, Spinor Xi)
         {
