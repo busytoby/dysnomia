@@ -30,13 +30,13 @@ namespace Prion.Elements
 
             Eta = Form(Antimony, Gamma.Y.Xi);
 
-            Gamma.Y.Phi = Mu.L.List.First.Value.Value;
+            Gamma.Y.Phi = Mu.L.Current;
         }
 
         public Lanthanum(Chromium Omicron, Sulfur Iota)
         {
             if (Iota.Alpha == null)
-                Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Last.Value.Value);
+                Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Head);
 
             Alpha = Omicron;
             Upsilon = Iota.Reproduce(Alpha);
@@ -46,12 +46,12 @@ namespace Prion.Elements
                 Iota.Xi = new Spinor(Upsilon.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
             Eta = Form(Antimony, Iota.Xi);
 
-            Iota.Phi = Mu.L.List.Last.Value.Value;
+            Iota.Phi = Mu.R.Current;
         }
         public Chlorine<Quaternion> Form(Titanium Antimony, Spinor Xi)
         {
-            Quaternion Ruthenium = Xi.List.First.Value.Value;
-            Quaternion Rhodium = Xi.List.Last.Value.Value;
+            Quaternion Ruthenium = Xi.First;
+            Quaternion Rhodium = Xi.Last;
             Polygamma Platinum = new Polygamma(Rhodium);
 
             Chlorine<Quaternion> Garnet = new Chlorine<Quaternion>(Xi.List);

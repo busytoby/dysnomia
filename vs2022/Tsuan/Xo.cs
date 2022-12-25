@@ -24,27 +24,27 @@ namespace Tsuan
             {
                 Xi Csi = new Xi();
                 Csi.Si = Ca.Si;
-                Csi.Po = new Polygamma(Ca.Seo.First.Value.Value.Sigma.Item1.N);
+                Csi.Po = new Polygamma(Ca.Seo.TailBundle.Sigma.Item1.N);
                 Csi.XiPoly(Csi.Po);
                 Csi.On = new Soliton(
-                    Ca.Seo.First.Value.Value.Sigma.Item1.L,
-                    Ca.Seo.First.Value.Key,
-                    Ca.Seo.First.Value.Value.Sigma.Item1.R);
-                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.First.Value.Value.Gamma.Item2, Csi.Po);
-                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.First.Value.Value.Sigma.Item1, Csi.Po);
-                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.First.Value.Value.Nu.Item2, Csi.Po);
-                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.First.Value.Value.Phi.Item1, Csi.Po);
+                    Ca.Seo.TailBundle.Sigma.Item1.L,
+                    Ca.Seo.TailQuark,
+                    Ca.Seo.TailBundle.Sigma.Item1.R);
+                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Gamma.Item2, Csi.Po);
+                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Sigma.Item1, Csi.Po);
+                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Nu.Item2, Csi.Po);
+                Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Phi.Item1, Csi.Po);
                 Csi.Seo = new Polysigma();
                 Csi.Seo.Add(Sio.Value.Value.Rho, Sio.Value.Value.Phi, Sio.Value.Value.Gamma, Sio.Value.Value.Sigma);
-                Csi.Seo.Run(Csi.On, Ca.Seo.First.Value.Value.Phi.Item1.R);
-                Csi.Seo.Run(Csi.On, Ca.Seo.First.Value.Value.Phi.Item2.N);
-                Csi.Seo.Add(Ca.Seo.First.Value.Value.Nu.Item1);
+                Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Phi.Item1.R);
+                Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Phi.Item2.N);
+                Csi.Seo.Add(Ca.Seo.TailBundle.Nu.Item1);
                 Csi.Seo.Run(Csi.On);
-                Csi.Seo.Run(Csi.On, Ca.Seo.First.Value.Value.Rho.Item1.L);
-                Csi.Seo.Run(Csi.On, Ca.Seo.First.Value.Value.Sigma.Item2.N);
-                Csi.Seo.Add(Ca.Seo.First.Value.Value.Nu.Item2);
+                Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Rho.Item1.L);
+                Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Sigma.Item2.N);
+                Csi.Seo.Add(Ca.Seo.TailBundle.Nu.Item2);
                 Csi.Seo.Add(Csi.Po, Csi.Seo);
-                Csi.Seo.Add(Ca.Seo.First.Value.Value.Gamma.Item1);
+                Csi.Seo.Add(Ca.Seo.TailBundle.Gamma.Item1);
                 Ca.Ka.Last.Value.Value.Qi.Nu.Remove(Sio);
                 Csi.Persist();
                 AddLast(Csi);

@@ -99,7 +99,7 @@ namespace Prion.Elements
             Theta.Add(WM);
 
             if(Y == null)
-                Y = new Sulfur(W.L.List.First.Value.Value);
+                Y = new Sulfur(W.L.First);
             Chromium YC = new Chromium(Y);
             YC.W.R.Transit(W.R.List);
             YC.W.N.Transit(WM.N.List); 
@@ -137,7 +137,7 @@ namespace Prion.Elements
             Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Kappa.Rho);
             Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.List);
             Titanium Antimony = new Titanium(Selenium, S.Y.Kappa);
-            Tau = Indium.List.Last.Value.Value;
+            Tau = Indium.Last;
             return Antimony;
         }
 

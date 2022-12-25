@@ -44,8 +44,8 @@ namespace Dysnomia
                     if (Sie.Po.First.Value.Key < Sa.Po.First.Value.Key)
                     {
                         Sa.Seo.Run(Sie.On);
-                        Sa.Seo.Run(Sie.On, Sa.Po.First.Value.Value);
-                        Sa.Seo.Run(Sie.On, Sa.Po.Last.Value.Value);
+                        Sa.Seo.Run(Sie.On, Sa.Po.Tail);
+                        Sa.Seo.Run(Sie.On, Sa.Po.Head);
                         Sa.Seo.Add(Sie.Seo.First.Value.Key);
                     }
                     San = San.Next;

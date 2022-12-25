@@ -33,7 +33,7 @@ namespace Prion.Elements
             Sigmas.RecordOrbital(Nu.F, "Sun");
             Sigmas.RecordOrbital(Nu.P, "Uranus");
 
-            V = new Venus(Hafnium.Kappa.First.Value.Value.Rho.Rod, Hafnium.Kappa.First.Value.Value.Gamma);
+            V = new Venus(Hafnium.Kappa.Tail.Rho.Rod, Hafnium.Kappa.Tail.Gamma);
 
             Hafnium.Saturn = new Tin();
             Phosphorous.GenerateOrbital(Tin.Sigma.Sigma, "Saturn Sigma"); // First Sigma Star Orbital
@@ -41,7 +41,7 @@ namespace Prion.Elements
 
             Pluto P = new Pluto();
 
-            P.Mate(Hafnium.Kappa.Last.Value.Value, Cerium.GetOrbitalByName("Pluto Sigma")); // Dione
+            P.Mate(Hafnium.Kappa.Head, Cerium.GetOrbitalByName("Pluto Sigma")); // Dione
 
             Earth E = new Earth();
         }

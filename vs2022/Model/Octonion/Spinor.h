@@ -34,6 +34,7 @@ namespace Dysnomia {
 
 	public ref class Wavelet {
 	public:
+		property Quark^ Q {Quark^ get() { return gcnew Quark(N->Current, R->Current, L->Current); }};
 		BigInteger Epsilon;
 
 		Spinor^ R;

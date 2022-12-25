@@ -19,10 +19,10 @@ namespace Prion.Elements
             Alpha = Delta;
             Iota = Beta;
 
-            Mu = new Quark(Delta.Rho.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.Last.Value.Value); // Water
+            Mu = new Quark(Delta.Rho.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.Head); // Water
             Nu = new Octonion(Mu, Beta);
 
-            Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Last.Value.Value);
+            Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Head);
         }
 
         public void Audit(Sulfur Thetan)

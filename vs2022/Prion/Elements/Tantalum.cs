@@ -17,13 +17,13 @@ namespace Prion.Elements
 
         public Tantalum()
         {
-            if (Alpha == null) Alpha = new Hafnium(Hafnium.Kappa.First.Value.Value);
-            if (Beta == null) Beta = new Hafnium(Hafnium.Kappa.Last.Value.Value);
+            if (Alpha == null) Alpha = new Hafnium(Hafnium.Kappa.Tail);
+            if (Beta == null) Beta = new Hafnium(Hafnium.Kappa.Head);
 
             Pi = new Soliton(
-                Tungsten.Rho.Kappa.First.Value.Key.First.Value.Value,
+                Tungsten.Rho.Kappa.First.Value.Key.Tail,
                 Tungsten.Eta.Alpha,
-                Tungsten.Eta.Kappa.Last.Value.Key.First.Value.Value
+                Tungsten.Eta.Kappa.Last.Value.Key.Tail
                 );
 
             Gamma = new Lead(Tungsten.Phi, Niobium.Nu);

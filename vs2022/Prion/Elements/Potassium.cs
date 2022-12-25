@@ -15,7 +15,7 @@ namespace Prion.Elements
 
         public Potassium(Orbital S, Orbital N) : base(S, N) {
             if (Eta == null) Eta = new Lithium();
-            Eta.Add(First.Value.Key, First.Value.Value);
+            Eta.Add(First.Value.Key, Tail);
         }
 
         public new void Add(Orbital R)
