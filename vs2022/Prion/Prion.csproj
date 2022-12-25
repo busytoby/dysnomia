@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Model\Affinity\Affinity.vcxproj" />
+    <ProjectReference Include="..\Model\Bundle\Bundle.vcxproj" />
     <ProjectReference Include="..\Model\Dynamic\Dynamic.vcxproj" />
     <ProjectReference Include="..\Model\Ion\Ion.vcxproj" />
     <ProjectReference Include="..\Model\Octonion\Octonion.vcxproj" />

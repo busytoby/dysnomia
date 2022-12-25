@@ -163,3 +163,7 @@
 /vs2022/Model/Polynu/obj
 /vs2022/Tsuan/bin/Debug/net7.0
 /vs2022/Tsuan/obj
+/vs2022/Model/Bundle/x64/Debug
+/vs2022/Model/Bundle/obj
+/vs2022/Model/Bundle/Bundle.vcxproj.user
+/vs2022/Model/Bundle/Bundle.vcxproj.filters

@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{D61D5DA2-0227-4D4B-B822-6F56707EC016}</ProjectGuid>
+    <ProjectGuid>{3347F898-6843-431F-AF04-A167A2B4D62B}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Polysigma</RootNamespace>
+    <RootNamespace>Bundle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -120,19 +120,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bundle.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Polysigma.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Bundle.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Polysigma.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -141,20 +141,17 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
+      <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Affinity\Affinity.vcxproj">
       <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Bundle\Bundle.vcxproj">
-      <Project>{3347f898-6843-431f-af04-a167a2b4d62b}</Project>
+    <ProjectReference Include="..\Dynamic\Dynamic.vcxproj">
+      <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Octonion\Octonion.vcxproj">
       <Project>{5cca240e-63b7-403b-b88b-0f4562c2f87c}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
-      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Polynu\Polynu.vcxproj">
-      <Project>{a111571a-cfbb-4e07-aa6f-13fce8547ee7}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
