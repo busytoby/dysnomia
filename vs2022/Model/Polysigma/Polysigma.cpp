@@ -57,10 +57,30 @@ namespace Dysnomia {
 		Add(Polyalpha);
 	}
 
-	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L) {
+	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L, Soliton^ Iota) {
+		Add(X, N, R, L);
+		Add(Iota);
+	}
+	
+	void Polysigma::Add(Spinor ^ X, Spinor ^ N, Spinor ^ R, Spinor ^ L) {
 		if (Gluon != nullptr || Muon != nullptr || J != nullptr) throw gcnew PolysigmaException(1, "Polysigma Not In Ready State");
 		if (X == nullptr || N == nullptr || R == nullptr || L == nullptr) throw gcnew PolysigmaException(2, "Null Values In Add");
 		J = gcnew Bundle(X, N, R, L);
+	}
+
+	void Polysigma::Add(Soliton^ Iota) {
+		if (J->Eta == nullptr)
+			J->Eta = Iota;
+		else if (J->Eta != Iota)
+			throw gcnew PolysigmaException(5, "Bad Bundle Soliton Configuration");
+		else
+			J->Eta = Iota;
+	}
+
+
+	void Polysigma::Add(Wavelet^ R, Soliton^ Iota) {
+		Add(Iota);
+		Add(R);
 	}
 
 	void Polysigma::Add(Wavelet^ R) {
@@ -89,7 +109,7 @@ namespace Dysnomia {
 		Spinor^ N = Iota->XL->Last->Value.Value;
 		Spinor^ R = Iota->Mu;
 		Spinor^ L = gcnew Spinor(Iota->V->First->Value.Value->X->L, gcnew Polygamma(Iota->V->First->Value.Value->L->Sigma));
-		Add(X, N, R, L);
+		Add(X, N, R, L, Iota);
 	}
 
 	void Polysigma::Run(Soliton^ Iota, Quaternion^ Q) {
@@ -107,7 +127,7 @@ namespace Dysnomia {
 			W = gcnew Wavelet(N, R, X);
 		}
 		else throw gcnew PolysigmaException(3, "Polysigma In Bad Poly State");
-		Add(W);
+		Add(W, Iota);
 	}
 
 	void Polysigma::Run(Quark^ Q) {

@@ -30,7 +30,10 @@ namespace Dysnomia {
 		Polysigma::Polysigma() : LinkedList<KeyValuePair<Quark^, Bundle^>>() {};
 		Polysigma(Polysigma^);
 		
+		void Add(Spinor^, Spinor^, Spinor^, Spinor^, Soliton^);
 		void Add(Spinor^, Spinor^, Spinor^, Spinor^);
+		void Add(Soliton^);
+		void Add(Wavelet^, Soliton^);
 		void Add(Wavelet^);
 		void Add(Quark^);
 		void Add(Polygamma^, Polysigma^);

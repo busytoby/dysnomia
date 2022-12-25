@@ -40,7 +40,7 @@ namespace Prion.Elements
             Nu.Run(Xi, Neodymium.Chi.Rho.Alpha.Sigma);
             Nu.Add(Xi.Q);
             Nu.Add(Xi.Mu, Praseodymium.Iota.Alpha.W.N, Praseodymium.Iota.Alpha.W.L, Praseodymium.Iota.Alpha.W.R);
-            Nu.Run(Tungsten.Iota.Alpha.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Gamma);
+            Nu.Run(Praseodymium.Iota.Alpha.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Gamma);
             Nu.Run(Praseodymium.Iota.Alpha.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
             Nu.Add(Osmium.Zeta);
             Nu.Cap(Tungsten.Iota.Alpha.Epsilon, Eta);
