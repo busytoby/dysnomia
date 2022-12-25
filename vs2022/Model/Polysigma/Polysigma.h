@@ -22,6 +22,11 @@ namespace Dysnomia {
 		Wavelet^ Muon;
 		Wavelet^ Gluon;
 
+		property Quark^ TailQuark {Quark^ get() { return First->Value.Key; }};
+		property Quark^ HeadQuark {Quark^ get() { return Last->Value.Key; }};
+		property Bundle^ TailBundle {Bundle^ get() { return First->Value.Value; }};
+		property Bundle^ HeadBundle {Bundle^ get() { return Last->Value.Value; }};
+
 		Polysigma::Polysigma() : LinkedList<KeyValuePair<Quark^, Bundle^>>() {};
 		Polysigma(Polysigma^);
 		

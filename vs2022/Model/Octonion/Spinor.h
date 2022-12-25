@@ -20,6 +20,9 @@ namespace Dysnomia {
 	public:
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma;
 		property Polygamma^ List {Polygamma^ get() { return (Polygamma^)Octogamma->List; }};
+		property Quaternion^ Current {Quaternion^ get() { return (Quaternion^)Octogamma->Value.Value; }};
+		property Quaternion^ Last {Quaternion^ get() { return (Quaternion^)Octogamma->List->Last->Value.Value; }};
+		property Quaternion^ First {Quaternion^ get() { return (Quaternion^)Octogamma->List->First->Value.Value; }};
 
 		BigInteger Epsilon;
 

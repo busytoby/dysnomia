@@ -11,6 +11,9 @@ namespace Dysnomia {
 		void Kappa(Ion^, Ion^, Ion^);
 
 	public:
+		property Quaternion^ Tail {Quaternion^ get() { return First->Value.Value; }};
+		property Quaternion^ Head {Quaternion^ get() { return Last->Value.Value; }};
+
 		Polygamma(Orbital^, Orbital^);
 		Polygamma(Quaternion^);
 		void Add(Orbital^);

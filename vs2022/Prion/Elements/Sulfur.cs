@@ -69,7 +69,7 @@ namespace Prion.Elements
             Wavelet WQM = new Wavelet(W.N, W.L, Mu.Kernel.Alpha.Tau); // First Morlet Wavelet
             W.N.Transit(WQM.L.List);
 
-            Epsilon = ((Xi != null) ? new Polygamma(Xi.Octogamma.Value.Value) : Mu.Epsilon);
+            Epsilon = ((Xi != null) ? new Polygamma(Xi.Current) : Mu.Epsilon);
 
             Mu.Kernel.Eta.Add(W.L, Mu.Kernel.Mu, Epsilon);
             Mu.Kernel.Eta.Add(W.N, Mu.Kernel.Mu, Epsilon);
@@ -86,9 +86,9 @@ namespace Prion.Elements
             Epsilon.Add(WMR.Nu.L.Phi);
             Epsilon.Add(WMR.Nu.L.Rho);
             Epsilon.Add(WMR.Nu.L.Sigma);
-            Epsilon.Add(WMR.Xi.Octogamma.List.First.Value.Value);
-            Epsilon.Add(WMR.Xi.Octogamma.List.Last.Value.Value);
-            Epsilon.Add(WMR.Xi.Octogamma.Value.Value);
+            Epsilon.Add(WMR.Xi.First);
+            Epsilon.Add(WMR.Xi.Last);
+            Epsilon.Add(WMR.Xi.Current);
 
             Theta.Add(Mu.W.L, Mu.W.R, Kappa.Tau, W.N); // X, N, R, L
 
@@ -147,7 +147,7 @@ namespace Prion.Elements
 
             Lanthanum Nu = new Lanthanum(Omicron, this);
 
-            Theta.Add(new Quark(Nu.Mu.N.List.First.Value.Value, Nu.Mu.R.List.First.Value.Value, Nu.Mu.L.List.First.Value.Value));
+            Theta.Add(new Quark(Nu.Mu.N.First, Nu.Mu.R.First, Nu.Mu.L.First));
             Omicron.Kernel.Audit(this);
             Sulfur G = new Sulfur(Phi, Tau);
             G.Y = Nu.Upsilon.Y;

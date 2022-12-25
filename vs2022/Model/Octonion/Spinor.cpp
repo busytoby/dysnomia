@@ -25,13 +25,6 @@ namespace Dysnomia {
 		}
 
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ L = Zeta->First;
-		int Last12Only = 0;
-		if (Zeta->Count > 12) {
-			while (Zeta->Count - Last12Only > 12) {
-				L = L->Next;
-				Last12Only++;
-			}
-		}
 		while (L = L->Next) {
 			Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Value.Value->Epsilon, L->Value.Value));
 		}

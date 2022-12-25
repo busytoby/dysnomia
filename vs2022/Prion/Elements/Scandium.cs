@@ -17,7 +17,7 @@ namespace Prion.Elements
         {
             Rho = new Polygamma(Tin.Sigma); // Tethys
             Tau = new Spinor(Zinc.Fetch(), Rho); // Himalia
-            Rho.Add(Hafnium.Kappa.First.Value.Value);
+            Rho.Add(Hafnium.Kappa.Tail);
             Rho.Add(Tin.Sigma);
 
             if (!(Rho.Count == 6)) throw new Exception("Scandium Misanthropy");
@@ -29,7 +29,7 @@ namespace Prion.Elements
         {
             Rho = new Polygamma(Tin.Sigma); // Tethys
             Tau = new Spinor(Nu, Rho);
-            Rho.Add(Hafnium.Kappa.First.Value.Value);
+            Rho.Add(Hafnium.Kappa.Tail);
             Rho.Add(Tin.Sigma);
 
             if (!(Rho.Count == 6)) throw new Exception("Scandium Misanthropy");
