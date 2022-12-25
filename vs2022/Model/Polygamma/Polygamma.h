@@ -5,7 +5,7 @@ using namespace System::Numerics;
 using namespace System::Collections::Generic;
 
 namespace Dysnomia {
-	public ref class Polygamma : LinkedList<KeyValuePair<BigInteger, Quaternion^>>
+	public ref class Polygamma : public LinkedList<KeyValuePair<BigInteger, Quaternion^>>
 	{
 	private:
 		void Kappa(Ion^, Ion^, Ion^);

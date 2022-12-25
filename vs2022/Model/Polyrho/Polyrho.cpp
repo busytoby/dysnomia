@@ -4,129 +4,76 @@
 
 namespace Dysnomia {
 	Polyrho::Polyrho(Polysigma^ Omega, Polygamma^ Gamma) {
-		Shift<Quaternion^>^ GammaShift = gcnew Shift<Quaternion^>(Gamma);
-		LinkedListNode<KeyValuePair<Quark^, Bundle^>>^ O = Omega->First;
+		LinkedListNode<KeyValuePair<Quark^, Bundle^>>^ O = Omega->Last;
 
-		int i = 0;
+		if (O == nullptr) throw gcnew Exception("Null Polysigma");
+
+		Polygamma^ Rho = gcnew Polygamma(O->Value.Key->N);
 		do {
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 0], O->Value.Value->Rho->Item1, GammaShift[i + 0])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 3], O->Value.Value->Gamma->Item1, GammaShift[i + 1])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 4], O->Value.Value->Phi->Item1, GammaShift[i + 2])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 1], O->Value.Value->Nu->Item1, GammaShift[i + 4])));
-			i += 5;
-			if (i + 5 >= Gamma->Count) break;
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 0], O->Value.Value->Rho->Item2, GammaShift[i + 0])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 1], O->Value.Value->Gamma->Item2, GammaShift[i + 3])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 3], O->Value.Value->Phi->Item2, GammaShift[i + 4])));
-			AddLast(KeyValuePair<Polygamma^, Soliton^>(
-				gcnew Polygamma(GammaShift[2]),
-				gcnew Soliton(GammaShift[i + 4], O->Value.Value->Nu->Item2, GammaShift[i + 1])));
-			i += 5;
-			if (i + 5 >= Gamma->Count) break;
-		} while (O = O->Next);
+			for (int i = 0; i < 5 && Gamma->Count > 0; i++) {
+				Rho->Add(Gamma->Head);
+				Gamma->RemoveLast();
+			}
+			if (O != nullptr && O->Value.Value->Eta != nullptr) {
+				Rho->Add(O->Value.Value->Gamma->Item1->N);
+				Rho->Add(O->Value.Value->Nu->Item1->N);
+				Rho->Add(O->Value.Value->Rho->Item1->N);
+				Rho->Add(O->Value.Value->Nu->Item2->N);
+				Rho->Add(O->Value.Value->Phi->Item2->N);
+				Rho->Add(O->Value.Value->Rho->Item2->N);
+				Rho->Add(O->Value.Value->Sigma->Item2->N);
+				AddLast(KeyValuePair<Polygamma^, Soliton^>(Rho, O->Value.Value->Eta));
+			}
+			O = O->Next;
+			if (O == nullptr) break;
+			Rho = gcnew Polygamma(O->Value.Key->N);
+		} while (O = O->Previous);
+
+		AddLast(KeyValuePair<Polygamma^, Soliton^>(
+			Rho,
+			gcnew Soliton(Rho->Tail, Omega->TailQuark, Rho->Head)));
 	}
 
 	void Polyrho::Cap(Polygamma^ Gamma) {
-		Shift<Quaternion^>^ GammaShift = gcnew Shift<Quaternion^>(Gamma);
 		LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ O = First;
 
-		int i = 0;
+		if (O->Value.Key->Count == 0) throw gcnew Exception("Bad Polygamma Cap");
+		Polygamma^ Rho = gcnew Polygamma(O->Value.Key->Head);
+		O->Value.Key->RemoveLast();
+
 		do {
-			O->Value.Key->Add(GammaShift[i + 0]);
-			O->Value.Value->Add(gcnew Spinor(GammaShift[i + 2], O->Value.Key), O->Value.Value->Q, Gamma);
+			for (int i = 0; i < 4 && Gamma->Count > 0; i++) {
+				Rho->Add(Gamma->Head);
+				Gamma->RemoveLast();
+			}
+
+			if (O->Value.Key->Count >= 0) {
+				Rho->Add(O->Value.Key->Head);
+				O->Value.Key->RemoveLast();
+			}
+
+			if (Gamma->Count == 0) break;
+			O->Value.Key->Add(Rho->Head);
+			O->Value.Value->Add(O->Value.Value->Mu, gcnew Quark(O->Value.Key->Head, Rho->Head, O->Value.Key->Tail), Rho);
+			Rho->Add(O->Value.Value->Q->N);
+			AddFirst(KeyValuePair<Polygamma^, Soliton^>(Rho, O->Value.Value));
+
+			if (Gamma->Count == 0) break;
+			for (int i = 0; i < 7 && Gamma->Count > 0; i++) {
+				O->List->Last->Value.Value->Qi->Alpha(gcnew Spinor(Gamma->Tail, Rho));
+				Gamma->RemoveFirst();
+			}
+
+			Rho = nullptr;
 			O = O->Next;
-
-			O->Value.Key->Add(GammaShift[i + 2]);
-			O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->V->Last->Value.Value->X, Gamma);
-			O = O->Next;
-
-			if (O != nullptr && GammaShift->Count > i + 5) {
-				Spinor^ Chi = gcnew Spinor(GammaShift[i], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 1], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 2], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 3], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-
-				O->Value.Key->Add(GammaShift[i + 5]);
-				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 5], O->Value.Key), O->Value.Value->Q, Gamma);
-				O = O->Next;
-			}
-
-			if (O != nullptr && GammaShift->Count > i + 7) {
-				O->Value.Key->Add(GammaShift[i + 7]);
-				O->Value.Value->Add(O->Value.Value->Mu, O->Value.Value->Q, Gamma);
-				O = O->Next;
-			}
-
-			if (O != nullptr && GammaShift->Count > i + 9) {
-				Spinor^ Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 5], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 6], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 7], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 8], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-
-				O->Value.Key->Add(GammaShift[i + 9]);
-				O->Value.Value->Add(gcnew Spinor(GammaShift[i + 7], O->Value.Key), O->Value.Value->Q, Gamma);
-				O = O->Next;
-			}
-
-			if (O != nullptr && GammaShift->Count > i + 11) {
-				Spinor^ Chi = gcnew Spinor(GammaShift[i], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 1], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 2], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 3], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 4], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-
-				Chi = gcnew Spinor(GammaShift[i + 6], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 7], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 8], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 9], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-				Chi = gcnew Spinor(GammaShift[i + 10], Gamma);
-				O->List->Last->Value.Value->Qi->Alpha(Chi);
-
-				O->Value.Key->Add(GammaShift[i + 11]);
-				O->Value.Value->Add(O->List->Last->Value.Value->Mu, O->Value.Value->V->First->Value.Value->X, Gamma);
-
-				for (int i = 5; i > 1; i--) {
-					Spinor^ L = gcnew Spinor(GammaShift[GammaShift->Count - i], Gamma);
-					O->List->Last->Value.Value->Qi->Alpha(L);
-				}
-			}
-			i++;
-		} while (O != nullptr && (O = O->Next));
+			if (O == nullptr) break;
+			Rho = gcnew Polygamma(O->Value.Key->Head);
+			O->Value.Key->RemoveLast();
+		} while (Gamma->Count > 0);
+		if(Rho != nullptr)
+			AddFirst(KeyValuePair<Polygamma^, Soliton^>(
+				Rho,
+				gcnew Soliton(Rho->Tail, Last->Value.Value->Q, Rho->Head)));
 	}
 
 	void Polyrho::Propagate(Polysigma^ Nu) {
