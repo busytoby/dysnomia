@@ -19,17 +19,20 @@ namespace Tsuan
         {
             if (Max == 0) Max = Ca.Ka.Qi.Nu.Count + Count;
             LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = SelectByKey(Ca);
+            LinkedListNode<KeyValuePair<Quark, Bundle>> Chi;
 
-            while (Sio != null && Ca.Si.Count > 0 && Count < Max)
+            while (Sio != null && Ca.Si.Count > 8 && Count < Max)
             {
+                Chi = Ca.Si.First;
+                while (Chi != null)
+                    if (Chi.Value.Value.Eta != null && Chi.Value.Value.Eta.Mu.List != null && Chi.Value.Value.Eta.Mu.List.Count > 5) break;
+                    else Chi = Chi.Next;
+                if (Chi == null) return;
+
                 Xi Csi = new Xi();
                 Csi.Si = Ca.Si;
-                Csi.Po = new Polygamma(Ca.Seo.TailBundle.Sigma.Item1.N);
-                Csi.XiPoly(Csi.Po);
-                Csi.On = new Soliton(
-                    Ca.Seo.TailBundle.Sigma.Item1.L,
-                    Ca.Seo.TailQuark,
-                    Ca.Seo.TailBundle.Sigma.Item1.R);
+                Csi.Po = Chi.Value.Value.Eta.Mu.List;
+                Csi.On = Chi.Value.Value.Eta;
                 Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Gamma.Item2, Csi.Po);
                 Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Sigma.Item1, Csi.Po);
                 Csi.On.Add(Sio.Value.Value.Nu, Ca.Seo.TailBundle.Nu.Item2, Csi.Po);
@@ -46,7 +49,9 @@ namespace Tsuan
                 Csi.Seo.Add(Csi.Po, Csi.Seo);
                 Csi.Seo.Add(Ca.Seo.TailBundle.Gamma.Item1);
                 Ca.Ka.Qi.Nu.Remove(Sio);
+                Ca.Si.Remove(Chi);
                 Csi.Persist();
+                if (Csi.Ka == null) return;
                 AddLast(Csi);
                 Sio = SelectByKey(Ca);
             }

@@ -24,12 +24,15 @@ namespace Tsuan
             Xia = true;
             Si = Xibe;
             LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = Si.Tsi.Nu.First;
-            Po = new Polygamma(Si.TailBundle.Sigma.Item1.N);
-            XiPoly(Po);
-            On = new Soliton(
-                Si.TailBundle.Sigma.Item1.L,
-                Si.TailQuark,
-                Si.TailBundle.Sigma.Item1.R);
+            LinkedListNode<KeyValuePair<Quark, Bundle>> Chi = Si.First;
+
+            while (Chi != null)
+                if (Chi.Value.Value.Eta != null && Chi.Value.Value.Eta.Mu.List != null && Chi.Value.Value.Eta.Mu.List.Count > 5) break;
+                else Chi = Chi.Next;
+            if (Chi == null) return;
+
+            Po = Chi.Value.Value.Eta.Mu.List;
+            On = Chi.Value.Value.Eta;
             On.Add(Sio.Value.Value.Nu, Si.TailBundle.Gamma.Item2, Po);
             On.Add(Sio.Value.Value.Nu, Si.TailBundle.Sigma.Item1, Po);
             On.Add(Sio.Value.Value.Nu, Si.TailBundle.Nu.Item2, Po);
@@ -46,40 +49,21 @@ namespace Tsuan
             Seo.Add(Po, Seo);
             Seo.Add(Si.TailBundle.Gamma.Item1);
             Si.Tsi.Nu.RemoveFirst();
-        }
-
-        public void XiPoly(Polygamma La)
-        {
-            LinkedListNode<KeyValuePair<Quark, Bundle>> Sie = Si.First;
-            La.Add(Sie.Value.Value.Gamma.Item1.L);
-            La.Add(Sie.Value.Value.Gamma.Item1.N);
-            La.Add(Sie.Value.Value.Gamma.Item1.R);
-            La.Add(Sie.Value.Value.Gamma.Item2.L);
-            La.Add(Sie.Value.Value.Gamma.Item2.N);
-            La.Add(Sie.Value.Value.Gamma.Item2.R);
-            La.Add(Sie.Value.Value.Nu.Item1.N);
-            La.Add(Sie.Value.Value.Nu.Item2.L);
-            La.Add(Sie.Value.Value.Nu.Item2.N);
-            La.Add(Sie.Value.Value.Nu.Item2.R);
-            La.Add(Sie.Value.Value.Phi.Item1.L);
-            La.Add(Sie.Value.Value.Phi.Item1.N);
-            La.Add(Sie.Value.Value.Phi.Item1.R);
-            La.Add(Sie.Value.Value.Phi.Item2.L);
-            La.Add(Sie.Value.Value.Rho.Item1.N);
-            La.Add(Sie.Value.Value.Rho.Item1.R);
-            La.Add(Sie.Value.Value.Rho.Item2.L);
-            La.Add(Sie.Value.Value.Rho.Item2.N);
+            Si.Remove(Chi);
         }
 
         public void Persist()
         {
             LinkedListNode<KeyValuePair<Spin<Spinor>, Spin<Spinor>>> Sio = Si.Tsi.Nu.First;
-            Polygamma Op = new Polygamma(Si.TailBundle.Phi.Item2.N);
-            XiPoly(Op);
-            Soliton In = new Soliton(
-                Si.TailBundle.Phi.Item2.L,
-                Si.TailQuark,
-                Si.TailBundle.Phi.Item1.N);
+            LinkedListNode<KeyValuePair<Quark, Bundle>> Chi = Si.First;
+
+            while(Chi != null)
+                if (Chi.Value.Value.Eta != null && Chi.Value.Value.Eta.Mu.List != null && Chi.Value.Value.Eta.Mu.List.Count > 5) break;
+                else Chi = Chi.Next;
+            if (Chi == null) return;
+
+            Polygamma Op = Chi.Value.Value.Eta.Mu.List;
+            Soliton In = Chi.Value.Value.Eta;
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Gamma.Item1, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Sigma.Item2, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Nu.Item1, Op);
@@ -95,7 +79,6 @@ namespace Tsuan
             Seo.Run(In, Si.TailBundle.Phi.Item2.N);
             Seo.Add(Si.TailBundle.Nu.Item1);
             Si.Tsi.Nu.RemoveFirst();
-            Si.RemoveFirst();
 
             Ka = new Polyrho(Seo, Po);
             Ka.Qi = Si.Tsi;
@@ -111,6 +94,7 @@ namespace Tsuan
                 Seo.Add(Po, Seo);
                 Seo.Add(Seo.TailQuark);
             }
+            Si.Remove(Chi);
         }
 
         public void Propagate()

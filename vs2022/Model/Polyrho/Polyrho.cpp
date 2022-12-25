@@ -69,7 +69,7 @@ namespace Dysnomia {
 			Qi->Phi = O->Value.Value->Qi->Phi;
 			Rho = gcnew Polygamma(O->Value.Key->Head);
 		} while (G != nullptr);
-		if (Rho != nullptr) {
+		if (Rho != nullptr && G != nullptr) {
 			LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ R = Rho->First;
 			for (int i = 0; i < Rho->Count && R != nullptr; i++) {
 				Qi->Alpha(gcnew Spinor(G->Value.Value, Rho));
