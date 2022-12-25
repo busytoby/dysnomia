@@ -7,6 +7,8 @@ namespace Dysnomia {
 	public ref class Bundle : public Spin<Tuple<Quark^, Quark^>^> {
 	public:
 		Soliton^ Eta;
+		Wavelet^ Muon;
+		Wavelet^ Gluon;
 
 		Bundle(Spinor^, Spinor^, Spinor^, Spinor^);
 		void Spin(Wavelet^);

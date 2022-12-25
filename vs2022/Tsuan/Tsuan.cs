@@ -20,7 +20,7 @@ namespace Dysnomia
             Xi Csa = new Xi(Xibe);
             Csa.Persist();
             Csa.Propagate();
-            if (Csa.Ka.Last.Value.Value.Qi.Nu.Count < 1) throw new Exception("Failed To Seed");
+            if (Csa.Ka.Qi.Nu.Count < 1) throw new Exception("Failed To Seed");
             XoXo = new Xo(Csa, 10);
 
             Sie = new Xi(Xa.Zeta.Eta);

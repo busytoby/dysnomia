@@ -98,6 +98,7 @@ namespace Tsuan
             Si.RemoveFirst();
 
             Ka = new Polyrho(Seo, Po);
+            Ka.Qi = Si.Tsi;
             Ka.Cap(Op);
 
             if (Xia)

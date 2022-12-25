@@ -15,12 +15,10 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Polysigma : LinkedList<KeyValuePair<Quark^, Bundle^>>
+	public ref class Polysigma : public LinkedList<KeyValuePair<Quark^, Bundle^>>
 	{
 	public:
 		Bundle^ J;
-		Wavelet^ Muon;
-		Wavelet^ Gluon;
 
 		property Quark^ TailQuark {Quark^ get() { return First->Value.Key; }};
 		property Quark^ HeadQuark {Quark^ get() { return Last->Value.Key; }};

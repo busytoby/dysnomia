@@ -8,10 +8,11 @@ namespace Dysnomia {
 	public ref class Polyrho : LinkedList<KeyValuePair<Polygamma^, Soliton^>>
 	{
 	private:
-		void Select(Polysigma^, Polygamma^, LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^);
 		void Delta();
 
 	public:
+		Polynu^ Qi;
+
 		Polyrho(Polysigma^, Polygamma^);
 		void Cap(Polygamma^);
 		void Propagate(Polysigma^);

@@ -13,9 +13,7 @@ namespace Prion.Elements
 
         public Illinium(Molybdenum Eta) : base(Eta.Theta)
         {
-            Tsi = new Polynu();
-            Tsi.Sigma(Eta.Kappa.Last.Value.Value.Qi.Nu);
-            Eta.Kappa.Last.Value.Value.Qi.Nu.Clear();
+            Tsi = Eta.Kappa.Qi;
 
             Sulfur Xi;
             if (Eta.Mu == null) Xi = Eta.Iota.Alpha.X;
