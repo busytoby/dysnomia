@@ -22,7 +22,7 @@ namespace Prion.Elements
             Run(Eta.Nu.Kernel.Eta, Xi.Tau);
             Run(Eta.Nu.Kernel.Eta, Xi.Phi);
             Add(Xi.Alpha);
-            Cap(Eta.Nu.Epsilon, this);
+            Cap(this);
             Add(Eta.Alpha);
         }
     }

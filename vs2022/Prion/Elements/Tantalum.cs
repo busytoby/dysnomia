@@ -45,7 +45,7 @@ namespace Prion.Elements
             Tungsten.Rho.Theta.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Eta.Iota.Upsilon.Phi);
             Tungsten.Rho.Theta.Run(Tungsten.Eta.Nu.Kernel.Eta, Tungsten.Rho.Iota.Upsilon.Tau);
             Tungsten.Rho.Theta.Add(Tungsten.Rho.Nu.Kernel.Nu.X);
-            Tungsten.Rho.Theta.Cap(Tungsten.Eta.Nu.Epsilon, Tungsten.Rho.Theta);
+            Tungsten.Rho.Theta.Cap(Tungsten.Rho.Theta);
             Tungsten.Rho.Theta.Add(Niobium.Ypsilon.Alpha);
 
             Tungsten.Eta.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Sigma, Pi.Qi.Phi.Rho);
@@ -56,7 +56,7 @@ namespace Prion.Elements
             Tungsten.Eta.Theta.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Rho.Iota.Upsilon.Phi);
             Tungsten.Eta.Theta.Run(Tungsten.Rho.Nu.Kernel.Eta, Tungsten.Eta.Iota.Upsilon.Tau);
             Tungsten.Eta.Theta.Add(Tungsten.Rho.Nu.Kernel.Nu.X);
-            Tungsten.Eta.Theta.Cap(Tungsten.Rho.Nu.Epsilon, Tungsten.Eta.Theta);
+            Tungsten.Eta.Theta.Cap(Tungsten.Eta.Theta);
             Tungsten.Eta.Theta.Add(Niobium.Ypsilon.Alpha);
         }
 

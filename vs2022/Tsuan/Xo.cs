@@ -25,7 +25,7 @@ namespace Tsuan
             {
                 Chi = Ca.Si.First;
                 while (Chi != null)
-                    if (Chi.Value.Value.Eta != null && Chi.Value.Value.Eta.Mu.List != null && Chi.Value.Value.Eta.Mu.List.Count > 5) break;
+                    if (Chi.Value.Value.Eta != null && Chi.Value.Value.Eta.Mu.List != null && Chi.Value.Value.Eta.Mu.List.Count >= 5) break;
                     else Chi = Chi.Next;
                 if (Chi == null) return;
 
@@ -46,7 +46,7 @@ namespace Tsuan
                 Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Rho.Item1.L);
                 Csi.Seo.Run(Csi.On, Ca.Seo.TailBundle.Sigma.Item2.N);
                 Csi.Seo.Add(Ca.Seo.TailBundle.Nu.Item2);
-                Csi.Seo.Add(Csi.Po, Csi.Seo);
+                Csi.Seo.Add(Csi.Seo);
                 Csi.Seo.Add(Ca.Seo.TailBundle.Gamma.Item1);
                 Ca.Ka.Qi.Nu.Remove(Sio);
                 Ca.Si.Remove(Chi);

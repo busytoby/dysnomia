@@ -25,6 +25,7 @@ namespace Dysnomia {
 		property Quaternion^ First {Quaternion^ get() { return (Quaternion^)Octogamma->List->First->Value.Value; }};
 
 		BigInteger Epsilon;
+		Polygamma^ Lambda;
 
 		Spinor(Quaternion^, Polygamma^);
 		void Next();

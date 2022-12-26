@@ -47,18 +47,18 @@ namespace Prion.Elements
 
         public void Delta(Polysigma NuTheta, Sulfur Ypsilon)
         {
-            Theta.Add(Rho.Epsilon, Astatine.Beta.Theta);
+            Theta.Add(Astatine.Beta.Theta);
             Theta.Add(Alpha);
-            Theta.Add(Rho.Epsilon, NuTheta);
+            Theta.Add(NuTheta);
             Theta.Add(Eta.Alpha);
 
-            Theta.Add(Rho.Epsilon, Theta);
+            Theta.Add(Theta);
             Theta.Add(Ypsilon.Alpha);
             Theta.Add(Nu.W.N, Ypsilon.Lambda.Xi, Ypsilon.Xi, Ypsilon.Beta.Xi);
             Theta.Run(Rho.Kernel.Eta, Ypsilon.Phi);
             Theta.Run(Rho.Kernel.Eta, Ypsilon.Tau);
             Theta.Add(Ypsilon.Alpha);
-            Theta.Cap(Rho.Epsilon, Theta);
+            Theta.Cap(Theta);
             Theta.Add(Ypsilon.Alpha);
         }
 
@@ -78,7 +78,7 @@ namespace Prion.Elements
             }
             Theta.Run(Rho.Kernel.Eta, Eta.Phi);
             Theta.Add(Eta.Alpha);
-            Theta.Cap(Rho.Epsilon, Theta);
+            Theta.Cap(Theta);
             Theta.Add(Eta.Alpha);
         }
 

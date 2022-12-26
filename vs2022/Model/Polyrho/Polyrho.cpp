@@ -108,8 +108,15 @@ namespace Dysnomia {
 
 		while (O != nullptr) {
 			Qi->Phi = O->Value.Value->Qi->Phi;
-			if (O->Value.Key->Count > 0)
+			if (O->Value.Key->Count > 0) {
+				while (O->Value.Value->Mu->Lambda->Count == 0) {
+					LinkedListNode<KeyValuePair<Polygamma^, Soliton^>>^ D = O->Previous;
+					Remove(O);
+					if (D == nullptr) return;
+					O = D;
+				}
 				O->Value.Value->Mu->Transit(O->Value.Key);
+			}
 			O = O->Previous;
 		}
 	}

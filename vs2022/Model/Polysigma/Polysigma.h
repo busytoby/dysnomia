@@ -34,8 +34,8 @@ namespace Dysnomia {
 		void Add(Wavelet^, Soliton^);
 		void Add(Wavelet^);
 		void Add(Quark^);
-		void Add(Polygamma^, Polysigma^);
-		void Cap(Polygamma^, Polysigma^);
+		void Add(Polysigma^);
+		void Cap(Polysigma^);
 		void Run(Soliton^);
 		void Run(Soliton^, Quaternion^);
 		void Run(Quark^);

@@ -36,7 +36,7 @@ namespace Prion.Elements
             Rho.Nu.Kernel.Aggregate(Iota.Upsilon);
             Rho.Nu.Kernel.Aggregate(Eta.Nu.X);
 
-            Eta.Theta.Cap(Eta.Nu.Epsilon, Eta.Theta);
+            Eta.Theta.Cap(Eta.Theta);
             Eta.Theta.Add(Rho.Alpha);
 
             Eta.Theta.Add(Rho.Nu.W.L, Rho.Nu.W.N, Rho.Nu.W.R, Eta.Iota.Upsilon.Lambda.Xi);
@@ -44,10 +44,10 @@ namespace Prion.Elements
             Eta.Theta.Run(Rho.Nu.Kernel.Eta, Eta.Iota.Upsilon.Tau);
             Eta.Theta.Add(Eta.Nu.Kernel.Nu.X);
 
-            Eta.Theta.Cap(Molybdenum.Rho.Epsilon, Eta.Theta);
+            Eta.Theta.Cap(Eta.Theta);
             Eta.Theta.Add(Rho.Nu.Kernel.Nu.X);
 
-            Rho.Theta.Cap(Rho.Nu.Epsilon, Eta.Theta);
+            Rho.Theta.Cap(Eta.Theta);
             Rho.Theta.Add(Rho.Alpha);
 
             Rho.Theta.Add(Eta.Nu.W.R, Eta.Nu.W.N, Eta.Nu.W.L, Rho.Iota.Upsilon.Lambda.Xi);
@@ -55,7 +55,7 @@ namespace Prion.Elements
             Rho.Theta.Run(Eta.Nu.Kernel.Eta, Rho.Iota.Upsilon.Tau);
             Rho.Theta.Add(Eta.Nu.Kernel.Nu.X);
 
-            Rho.Theta.Cap(Molybdenum.Rho.Epsilon, Eta.Theta);
+            Rho.Theta.Cap(Eta.Theta);
             Rho.Theta.Add(Eta.Alpha);
 
             Eta.Theta.Add(Rho.Nu.W.R, Eta.Nu.W.N, Eta.Nu.W.L, Rho.Iota.Upsilon.Beta.Xi);

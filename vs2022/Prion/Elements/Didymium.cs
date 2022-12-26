@@ -43,12 +43,12 @@ namespace Prion.Elements
             Nu.Run(Praseodymium.Iota.Alpha.Kernel.Eta, Neodymium.Chi.Gamma.Alpha.Gamma);
             Nu.Run(Praseodymium.Iota.Alpha.Kernel.Eta, Neodymium.Chi.Nu.Alpha.Rho);
             Nu.Add(Osmium.Zeta);
-            Nu.Cap(Tungsten.Iota.Alpha.Epsilon, Eta);
+            Nu.Cap(Eta);
             Nu.Add(Xi.Q);
-            Nu.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
+            Nu.Cap(Nu);
             Nu.Add(Psi);
 
-            Eta.Cap(Praseodymium.Iota.Alpha.Epsilon, Nu);
+            Eta.Cap(Nu);
             Eta.Add(Psi);
         }
     }

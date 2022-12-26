@@ -46,7 +46,7 @@ namespace Tsuan
             Seo.Run(On, Si.TailBundle.Rho.Item1.L);
             Seo.Run(On, Si.TailBundle.Sigma.Item2.N);
             Seo.Add(Si.TailBundle.Nu.Item2);
-            Seo.Add(Po, Seo);
+            Seo.Add(Seo);
             Seo.Add(Si.TailBundle.Gamma.Item1);
             Si.Tsi.Nu.RemoveFirst();
             Si.Remove(Chi);
@@ -68,7 +68,7 @@ namespace Tsuan
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Sigma.Item2, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Nu.Item1, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Rho.Item2, Op);
-            Seo.Add(Op, Seo);
+            Seo.Add(Seo);
             Seo.Add(Si.TailBundle.Rho.Item1);
             Seo.Run(In);
             Seo.Run(In, Si.TailBundle.Rho.Item2.N);
@@ -81,7 +81,7 @@ namespace Tsuan
             Si.Tsi.Nu.RemoveFirst();
 
             Ka = new Polyrho(Seo, Po);
-            Ka.Qi = Si.Tsi;
+            Ka.Qi = Ka.First.Value.Value.Qi;
             Ka.Cap(Op);
 
             if (Xia)
@@ -91,7 +91,7 @@ namespace Tsuan
                 Seo.Run(On, Seo.HeadBundle.Phi.Item2.L);
                 Seo.Add(On.Q);
 
-                Seo.Add(Po, Seo);
+                Seo.Add(Seo);
                 Seo.Add(Seo.TailQuark);
             }
             Si.Remove(Chi);

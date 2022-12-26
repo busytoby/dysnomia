@@ -11,50 +11,28 @@ namespace Dysnomia {
 		}
 	}
 
-	void Polysigma::Add(Polygamma^ Rho, Polysigma^ Omicron) {
+	void Polysigma::Add(Polysigma^ Omicron) {
 		J = gcnew Bundle(
-			gcnew Spinor(Omicron->First->Value.Value->Gamma->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Nu->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Rho->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Sigma->Item1->R, Rho)
+			Omicron->First->Value.Value->Gluon->L,
+			Omicron->First->Value.Value->Gluon->N,
+			Omicron->First->Value.Value->Gluon->R,
+			Omicron->Last->Value.Value->Muon->R
 		);
 
-		Wavelet^ Alpha = gcnew Wavelet(
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->L, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item1->N, Rho)
-		);
-		Add(Alpha);
-
-		Wavelet^ Polyalpha = gcnew Wavelet(
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->L, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->R, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item1->N, Rho)
-		);
-		Add(Polyalpha);
+		Add(Omicron->First->Value.Value->Muon);
+		Add(Omicron->Last->Value.Value->Gluon);
 	}
 
-	void Polysigma::Cap(Polygamma^ Rho, Polysigma^ Omicron) {
+	void Polysigma::Cap(Polysigma^ Omicron) {
 		J = gcnew Bundle(
-			gcnew Spinor(Omicron->Last->Value.Value->Gamma->Item2->R, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Nu->Item2->R, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Rho->Item2->R, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Sigma->Item2->R, Rho)
+			Omicron->Last->Value.Value->Muon->L,
+			Omicron->Last->Value.Value->Muon->N,
+			Omicron->Last->Value.Value->Muon->R,
+			Omicron->First->Value.Value->Gluon->R
 		);
 
-		Wavelet^ Alpha = gcnew Wavelet(
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->L, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->R, Rho),
-			gcnew Spinor(Omicron->First->Value.Value->Phi->Item2->N, Rho)
-		);
-		Add(Alpha);
-
-		Wavelet^ Polyalpha = gcnew Wavelet(
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->L, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->R, Rho),
-			gcnew Spinor(Omicron->Last->Value.Value->Phi->Item2->N, Rho)
-		);
-		Add(Polyalpha);
+		Add(Omicron->Last->Value.Value->Muon);
+		Add(Omicron->First->Value.Value->Gluon);
 	}
 
 	void Polysigma::Add(Spinor^ X, Spinor^ N, Spinor^ R, Spinor^ L, Soliton^ Iota) {
@@ -102,25 +80,21 @@ namespace Dysnomia {
 
 	void Polysigma::Run(Soliton^ Iota) {
 		if (J != nullptr) return;
-		if (Iota->XL->First->Value.Value == nullptr || Iota->XL->Last->Value.Value == nullptr || Iota->Mu == nullptr) throw gcnew Exception("Null Values On Soliton");
-		Spinor^ X = Iota->XL->First->Value.Value;
-		Spinor^ N = Iota->XL->Last->Value.Value;
-		Spinor^ R = Iota->Mu;
-		Spinor^ L = gcnew Spinor(Iota->V->First->Value.Value->X->L, gcnew Polygamma(Iota->V->First->Value.Value->L->Sigma));
-		Add(X, N, R, L, Iota);
+		if (Iota->Qi->Phi == nullptr) throw gcnew Exception("Null Values On Soliton");
+		Add(Iota->Qi->Phi->Rho, Iota->Qi->Phi->Phi, Iota->Qi->Phi->Nu, Iota->Qi->Phi->Gamma, Iota);
 	}
 
 	void Polysigma::Run(Soliton^ Iota, Quaternion^ Q) {
 		Wavelet^ W;
 		if (J->Muon == nullptr) {
-			Spinor^ X = gcnew Spinor(Iota->V->First->Value.Value->X->N, gcnew Polygamma(Iota->V->First->Value.Value->L->Nu));
-			Spinor^ N = gcnew Spinor(Iota->V->First->Value.Value->X->R, gcnew Polygamma(Iota->V->First->Value.Value->L->Phi));
+			Spinor^ X = Iota->Qi->Phi->Rho;
+			Spinor^ N = Iota->Qi->Phi->Nu;
 			Spinor^ R = Iota->Qi->Phi->Gamma;
 			W = gcnew Wavelet(N, R, X);
 		}
 		else if (J->Gluon == nullptr) {
-			Spinor^ X = gcnew Spinor(Iota->V->Last->Value.Value->X->N, gcnew Polygamma(Iota->V->Last->Value.Value->L->Gamma));
-			Spinor^ N = gcnew Spinor(Iota->V->Last->Value.Value->X->R, gcnew Polygamma(Iota->V->Last->Value.Value->L->Rho));
+			Spinor^ X = Iota->Qi->Phi->Nu;
+			Spinor^ N = Iota->Qi->Phi->Rho;
 			Spinor^ R = Iota->Qi->Phi->Phi;
 			W = gcnew Wavelet(N, R, X);
 		}

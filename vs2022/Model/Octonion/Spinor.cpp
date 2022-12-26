@@ -11,6 +11,8 @@ namespace Dysnomia {
 		if (Epsilon.IsZero)
 			throw gcnew Exception("Zero Epsilon");
 
+		Lambda = X;
+
 		Gamma = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Gamma, Q->Gamma);
 		Nu = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Nu, Q->Nu);
 		Phi = gcnew Tuple<Affinity^, Affinity^>(Octogamma->Value.Value->Phi, Q->Phi);
@@ -24,6 +26,9 @@ namespace Dysnomia {
 			return;
 		}
 
+		if (Octogamma->List == nullptr)
+			Octogamma = Lambda->First;
+
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ L = Zeta->First;
 		while (L = L->Next) {
 			Octogamma->List->AddLast(KeyValuePair<BigInteger, Quaternion^>(L->Value.Value->Epsilon, L->Value.Value));
@@ -32,6 +37,13 @@ namespace Dysnomia {
 
 	void Spinor::Next() {
 		Octogamma = Octogamma->Next;
+		if (Octogamma == nullptr) { // Proof Of Rot
+			if (Gamma == Nu) Sigma = Gamma;
+			if (Phi == Rho) Gamma = Nu;
+			if (Rho == Nu) Phi = Rho;
+			else Rho = Nu;
+			Octogamma = Lambda->Last;
+		}
 		Head();
 	}
 
