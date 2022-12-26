@@ -42,6 +42,7 @@ namespace Dysnomia
                 {
                     LinkedListNode<Xi> Xon = Xan.Next;
                     Xe.Remove(Xan);
+                    XoXo.AddLast(Xan);
                     if (Xon == null) return;
                     Xan = Xon;
                 }
