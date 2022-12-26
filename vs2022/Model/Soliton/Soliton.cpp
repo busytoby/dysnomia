@@ -46,7 +46,7 @@ namespace Dysnomia {
 	}
 
 	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {
-		if (Eta->Octogamma->List->Count < 5) 
+		if (Eta->Lambda->Count < 5)
 			return;
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
@@ -55,7 +55,7 @@ namespace Dysnomia {
 		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
-			gcnew Polygamma(Epsilon[i-3]),
+			Phi,
 			gcnew Polygamma(Epsilon[i-2]),
 			gcnew Polygamma(Epsilon[i-4]),
 			gcnew Polygamma(Epsilon[i-1]),
@@ -67,7 +67,7 @@ namespace Dysnomia {
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu, Polygamma^ Phi) {
-		if (Eta->Octogamma->List->Count < 5) 
+		if (Eta->Lambda->Count < 5) 
 			return;
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
@@ -80,9 +80,9 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[i-1]),
 			gcnew Polygamma(Epsilon[i-4]),
 			gcnew Polygamma(Epsilon[i-2]),
-			gcnew Polygamma(Epsilon[i-3]));
+			Phi);
 
-		Octonion^ X = gcnew Octonion(Nu, Lambda);
+		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
 		Q = Nu;
 	}
