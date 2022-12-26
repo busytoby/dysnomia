@@ -29,25 +29,20 @@ namespace Dysnomia {
 			XL->AddLast(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 		}
 
-		Tensor^ Lambda1 = gcnew Tensor(
-			gcnew Polygamma(Epsilon[0]),
-			gcnew Polygamma(Epsilon[1]),
-			gcnew Polygamma(Epsilon[2]),
-			gcnew Polygamma(Epsilon[3]),
-			gcnew Polygamma(Epsilon[4]));
+		Tensor^ Lambda1 = gcnew Tensor(Delta, Xi);
 
 		Tensor^ Lambda2 = gcnew Tensor(
 			gcnew Polygamma(Epsilon[5]),
+			gcnew Polygamma(Epsilon[9]),
 			gcnew Polygamma(Epsilon[6]),
-			gcnew Polygamma(Epsilon[7]),
 			gcnew Polygamma(Epsilon[8]),
-			gcnew Polygamma(Epsilon[9]));
+			gcnew Polygamma(Epsilon[7]));
 
 		Octonion^ Y = gcnew Octonion(Delta, Lambda1);
 		Octonion^ X = gcnew Octonion(Delta, Lambda2);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q = gcnew Quark(Epsilon[7], Delta->N, Epsilon[2]);
+		Q = gcnew Quark(Epsilon[2], Delta->N, Epsilon[7]);
 	}
 
 	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {

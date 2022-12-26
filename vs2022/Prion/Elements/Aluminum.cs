@@ -28,7 +28,7 @@ namespace Prion.Elements
             Phosphorous.Sigmas.RecordSpinor(B, "Amalthea");
 
             Quark Thebe = new Quark(X, Y, Xi);
-            Phi = new Octonion(Thebe, new Calcium(Thebe.N, Xi, Zinc.Fetch(), Thebe.L, Thebe.R));
+            Phi = new Octonion(Thebe, new Calcium(Thebe.N, Tin.Sigma, Zinc.Fetch(), Thebe.L, Thebe.R));
 
             Rho = new Spinor(Phi.X.N, Hafnium.Kappa);
             Phosphorous.Sigmas.RecordSpinor(Rho, "Valetudo");

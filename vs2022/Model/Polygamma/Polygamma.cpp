@@ -21,7 +21,7 @@ namespace Dysnomia {
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
-        AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+        AddFirst(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         Kappa(I, R, N);
 	}
 
@@ -41,7 +41,7 @@ namespace Dysnomia {
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
-        AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+        AddFirst(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         Kappa(I, R, N);
     }
 
@@ -61,7 +61,7 @@ namespace Dysnomia {
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
-        AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+        AddFirst(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
         Kappa(I, R, N);
     }
 
@@ -103,7 +103,7 @@ namespace Dysnomia {
             if (V->Epsilon.IsZero)
                 throw gcnew Exception("Zero Epsilon");
 
-            AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+            AddFirst(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
             Kappa(I, R, N);
         }
         else { // Plant Hybrid Or Cultivar
@@ -132,7 +132,7 @@ namespace Dysnomia {
             if (V->Epsilon.IsZero)
                 throw gcnew Exception("Zero Epsilon");
 
-            AddLast(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
+            AddFirst(KeyValuePair<BigInteger, Quaternion^>(V->Epsilon, V));
             Kappa(I, R, N);
         }
     }
