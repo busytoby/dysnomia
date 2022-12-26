@@ -48,21 +48,18 @@ namespace Dysnomia {
 	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {
 		if (Eta->Octogamma->List->Count < 5) 
 			return;
-		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
+		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
 		int i = Epsilon->Count;
-		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
-		for (int j = 1; j < 6; j++) {
-			Spinor^ L = gcnew Spinor(Q->L, Phi);
-			XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
-		}
+		Spinor^ L = gcnew Spinor(Q->L, Phi);
+		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
-			gcnew Polygamma(Epsilon[i-5]),
-			gcnew Polygamma(Epsilon[i-4]),
 			gcnew Polygamma(Epsilon[i-3]),
 			gcnew Polygamma(Epsilon[i-2]),
-			gcnew Polygamma(Epsilon[i-1]));
+			gcnew Polygamma(Epsilon[i-4]),
+			gcnew Polygamma(Epsilon[i-1]),
+			gcnew Polygamma(Epsilon[i-5]));
 
 		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
@@ -72,24 +69,21 @@ namespace Dysnomia {
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu, Polygamma^ Phi) {
 		if (Eta->Octogamma->List->Count < 5) 
 			return;
-		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Octogamma->List);
+		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
 		int i = Epsilon->Count;
-		XL = gcnew LinkedList<KeyValuePair<BigInteger, Spinor^>>();
-		for (int j = 1; j < 6; j++) {
-			Spinor^ L = gcnew Spinor(Nu->R, Phi);
-			XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
-		}
+		Spinor^ L = gcnew Spinor(Nu->R, Phi);
+		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
-			gcnew Polygamma(Epsilon[i - 5]),
-			gcnew Polygamma(Epsilon[i - 4]),
-			gcnew Polygamma(Epsilon[i - 3]),
-			gcnew Polygamma(Epsilon[i - 2]),
-			gcnew Polygamma(Epsilon[i - 1]));
+			gcnew Polygamma(Epsilon[i-5]),
+			gcnew Polygamma(Epsilon[i-1]),
+			gcnew Polygamma(Epsilon[i-4]),
+			gcnew Polygamma(Epsilon[i-2]),
+			gcnew Polygamma(Epsilon[i-3]));
 
-		Octonion^ X = gcnew Octonion(Q, Lambda);
+		Octonion^ X = gcnew Octonion(Nu, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q = gcnew Quark(Nu->N, Epsilon[i - 3], Nu->L);
+		Q = Nu;
 	}
 }
