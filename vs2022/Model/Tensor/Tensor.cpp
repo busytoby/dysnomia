@@ -25,9 +25,9 @@ namespace Dysnomia {
 
 		Phi = gcnew Quaternion();
 		Phi->Gamma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->R->Gamma->Cone);
-		Phi->Nu = gcnew Affinity(M->L->Nu->Cone, Octogamma->Value.Value->Phi->Rod);
-		Phi->Phi = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->N->Phi->Cone);
-		Phi->Rho = gcnew Affinity(M->L->Rho->Cone, Octogamma->Value.Value->Phi->Rod);
+		Phi->Nu = gcnew Affinity(M->L->Nu->Rod, Octogamma->Value.Value->Phi->Cone);
+		Phi->Phi = gcnew Affinity(M->N->Phi->Rod, Octogamma->Value.Value->Phi->Cone);
+		Phi->Rho = gcnew Affinity(M->L->Rho->Rod, Octogamma->Value.Value->Phi->Cone);
 		Phi->Sigma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->R->Sigma->Cone);
 		Phi->Epsilon = Math::ModPow(Nu->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
