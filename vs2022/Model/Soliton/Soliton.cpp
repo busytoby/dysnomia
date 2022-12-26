@@ -62,7 +62,7 @@ namespace Dysnomia {
 
 		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q = gcnew Quark(Q->N, Epsilon[i-3], Q->L);
+		Q = gcnew Quark(Q->N, Epsilon[2], Q->L);
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu, Polygamma^ Phi) {
