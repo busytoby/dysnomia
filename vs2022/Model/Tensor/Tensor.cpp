@@ -9,34 +9,34 @@ namespace Dysnomia {
 
 		Gamma = gcnew Quaternion();
 		Gamma->Gamma = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->L->Gamma->Cone);
-		Gamma->Nu = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->L->Nu->Cone);
+		Gamma->Nu = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->R->Nu->Cone);
 		Gamma->Phi = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->L->Phi->Cone);
-		Gamma->Rho = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->L->Rho->Cone);
+		Gamma->Rho = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, M->R->Rho->Cone);
 		Gamma->Sigma = gcnew Affinity(Octogamma->Value.Value->Gamma->Rod, gcnew Dynamic());
 		Gamma->Epsilon = Math::ModPow(Octogamma->Value.Key, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
 		Nu = gcnew Quaternion();
 		Nu->Gamma = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Gamma->Cone);
-		Nu->Nu = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Nu->Cone);
+		Nu->Nu = gcnew Affinity(M->N->Nu->Rod, Octogamma->Value.Value->Nu->Cone);
 		Nu->Phi = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Phi->Cone);
-		Nu->Rho = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Rho->Cone);
+		Nu->Rho = gcnew Affinity(M->N->Rho->Rod, Octogamma->Value.Value->Nu->Rod);
 		Nu->Sigma = gcnew Affinity(gcnew Dynamic(), M->R->Sigma->Cone);
 		Nu->Epsilon = Math::ModPow(Gamma->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
 		Phi = gcnew Quaternion();
-		Phi->Gamma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->R->Gamma->Cone);
+		Phi->Gamma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->N->Gamma->Cone);
 		Phi->Nu = gcnew Affinity(M->L->Nu->Rod, Octogamma->Value.Value->Phi->Cone);
-		Phi->Phi = gcnew Affinity(M->N->Phi->Rod, Octogamma->Value.Value->Phi->Cone);
+		Phi->Phi = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->N->Phi->Cone);
 		Phi->Rho = gcnew Affinity(M->L->Rho->Rod, Octogamma->Value.Value->Phi->Cone);
-		Phi->Sigma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->R->Sigma->Cone);
+		Phi->Sigma = gcnew Affinity(Octogamma->Value.Value->Phi->Rod, M->N->Sigma->Cone);
 		Phi->Epsilon = Math::ModPow(Nu->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
 		Rho = gcnew Quaternion();
-		Rho->Gamma = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->R->Gamma->Cone);
-		Rho->Nu = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->R->Nu->Cone);
-		Rho->Phi = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->R->Phi->Cone);
+		Rho->Gamma = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->N->Gamma->Cone);
+		Rho->Nu = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->L->Nu->Cone);
+		Rho->Phi = gcnew Affinity(M->N->Phi->Rod, Octogamma->Value.Value->Rho->Cone);
 		Rho->Rho = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->R->Rho->Cone);
-		Rho->Sigma = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->R->Sigma->Cone);
+		Rho->Sigma = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, M->N->Sigma->Cone);
 		Rho->Epsilon = Math::ModPow(Phi->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
 		Sigma = gcnew Quaternion();
