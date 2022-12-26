@@ -3,8 +3,8 @@
 #include "Tensor.h"
 
 namespace Dysnomia {
-    Tensor::Tensor(Quark^ M, Polygamma^ Q)
-    {
+	Tensor::Tensor(Quark^ M, Polygamma^ Q)
+	{
 		LinkedListNode<KeyValuePair<BigInteger, Quaternion^>>^ Octogamma = Q->Last;
 
 		Gamma = gcnew Quaternion();
@@ -46,7 +46,7 @@ namespace Dysnomia {
 		Sigma->Rho = gcnew Affinity(Octogamma->Value.Value->Rho->Rod, gcnew Dynamic());
 		Sigma->Sigma = gcnew Affinity(gcnew Dynamic(), gcnew Dynamic());
 		Sigma->Epsilon = Math::ModPow(Rho->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
-    }
+	}
 
 	Tensor::Tensor(Polygamma^ X, Polygamma^ Y, Polygamma^ Z, Polygamma^ R, Polygamma^ L) {
 		Gamma = gcnew Quaternion();

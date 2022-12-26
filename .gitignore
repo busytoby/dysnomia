@@ -167,3 +167,7 @@
 /vs2022/Model/Bundle/obj
 /vs2022/Model/Bundle/Bundle.vcxproj.user
 /vs2022/Model/Bundle/Bundle.vcxproj.filters
+/vs2022/Model/Tensor/x64/Debug
+/vs2022/Model/Tensor/obj
+/vs2022/Model/Tensor/Tensor.vcxproj.user
+/vs2022/Model/Tensor/Tensor.vcxproj.filters

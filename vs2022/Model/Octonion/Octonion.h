@@ -1,5 +1,4 @@
 #pragma once
-#include "Tensor.h"
 
 using namespace System;
 using namespace System::Numerics;
