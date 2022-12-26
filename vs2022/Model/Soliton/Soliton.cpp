@@ -38,10 +38,10 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[8]),
 			gcnew Polygamma(Epsilon[7]));
 
-		Octonion^ Y = gcnew Octonion(Delta, Lambda1);
-		Octonion^ X = gcnew Octonion(Delta, Lambda2);
-		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
+		Octonion^ X = gcnew Octonion(Delta, Lambda1);
+		Octonion^ Y = gcnew Octonion(Delta, Lambda2);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
+		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
 		Q = gcnew Quark(Epsilon[2], Delta->N, Epsilon[7]);
 	}
 
