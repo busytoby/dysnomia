@@ -19,7 +19,7 @@ namespace Dysnomia {
 		Nu->Gamma = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Gamma->Cone);
 		Nu->Nu = gcnew Affinity(M->N->Nu->Rod, Octogamma->Value.Value->Nu->Cone);
 		Nu->Phi = gcnew Affinity(Octogamma->Value.Value->Nu->Rod, M->R->Phi->Cone);
-		Nu->Rho = gcnew Affinity(M->N->Rho->Rod, Octogamma->Value.Value->Nu->Rod);
+		Nu->Rho = gcnew Affinity(M->N->Rho->Rod, Octogamma->Value.Value->Nu->Cone);
 		Nu->Sigma = gcnew Affinity(gcnew Dynamic(), M->R->Sigma->Cone);
 		Nu->Epsilon = Math::ModPow(Gamma->Epsilon, Octogamma->Value.Value->Nu->Cone->Manifold, M->L->Nu->Rod->Barn);
 
