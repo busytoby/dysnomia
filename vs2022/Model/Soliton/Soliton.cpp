@@ -51,7 +51,7 @@ namespace Dysnomia {
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
 		int i = Epsilon->Count;
-		Spinor^ L = gcnew Spinor(Q->L, Phi);
+		Spinor^ L = gcnew Spinor(Q->R, Phi);
 		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
@@ -72,7 +72,7 @@ namespace Dysnomia {
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
 		int i = Epsilon->Count;
-		Spinor^ L = gcnew Spinor(Nu->R, Phi);
+		Spinor^ L = gcnew Spinor(Nu->L, Phi);
 		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
