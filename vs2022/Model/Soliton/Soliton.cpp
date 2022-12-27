@@ -42,12 +42,14 @@ namespace Dysnomia {
 		Octonion^ Y = gcnew Octonion(Delta, Lambda2);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
-		Q = Delta;
+		Q = gcnew Quark(Delta->N, Delta->R, Epsilon[2]);
+		Delta->Attach(Q);
 	}
 
 	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {
 		if (Eta->Lambda->Count < 5)
 			return;
+		Eta->Transit(Phi);
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
 		Spinor^ L = gcnew Spinor(Q->L, Phi);
@@ -62,15 +64,18 @@ namespace Dysnomia {
 
 		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q = gcnew Quark(Q->N, Q->R, Epsilon[2]);
+		Quark^ _Q = gcnew Quark(Q->N, Q->R, Epsilon[2]);
+		Q->Attach(_Q);
+		Q = _Q;
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu, Polygamma^ Phi) {
 		if (Eta->Lambda->Count < 5) 
 			return;
+		Eta->Transit(Phi);
 		Shift<Quaternion^>^ Epsilon = gcnew Shift<Quaternion^>(Eta->Lambda);
 
-		Spinor^ L = gcnew Spinor(Nu->L, Phi);
+		Spinor^ L = gcnew Spinor(Nu->N, Phi);
 		XL->AddFirst(KeyValuePair<BigInteger, Spinor^>(L->Epsilon, L));
 
 		Tensor^ Lambda = gcnew Tensor(
@@ -82,6 +87,7 @@ namespace Dysnomia {
 
 		Octonion^ X = gcnew Octonion(Q, Lambda);
 		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Q = gcnew Quark(Nu->N, Nu->R, Epsilon[2]);
+		Q = gcnew Quark(Nu->L, Nu->R, Epsilon[2]);
+		Nu->Attach(Q);
 	}
 }

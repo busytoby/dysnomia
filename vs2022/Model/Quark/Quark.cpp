@@ -17,4 +17,15 @@ namespace Dysnomia {
             Epsilon = R->Epsilon;
         else throw gcnew Exception("Zero Epsilons");
     }
+
+    void Quark::Attach(Quark^ R) {
+        RAQ = gcnew Quark::AntiQuark(R, this);
+    }
+
+    Quark::AntiQuark::AntiQuark(Quark^ _R, Quark^ _L) {
+        R = _R;
+        L = _L;
+        R->LAQ = this;
+    }
+
 }

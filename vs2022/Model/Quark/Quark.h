@@ -15,15 +15,30 @@ namespace Dysnomia {
 		}
 	};
 
+
+
+
 	public ref class Quark
 	{
 	public:
+		ref class AntiQuark
+		{
+		public:
+			Quark^ R;
+			Quark^ L;
+
+			AntiQuark(Quark^, Quark^);
+		};
+
 		BigInteger Epsilon;
 
+		AntiQuark^ RAQ;
 		Quaternion^ R;
 		Quaternion^ N;
 		Quaternion^ L;
+		AntiQuark^ LAQ;
 
 		Quark(Quaternion^, Quaternion^, Quaternion^);
+		void Attach(Quark^);
 	};
 }
