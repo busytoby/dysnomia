@@ -64,6 +64,7 @@ namespace Tsuan
 
             Polygamma Op = Chi.Value.Value.Eta.Mu.List;
             Soliton In = Chi.Value.Value.Eta;
+            On.Q.Attach(In.Q);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Gamma.Item1, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Sigma.Item2, Op);
             In.Add(Sio.Value.Value.Rho, Si.TailBundle.Nu.Item1, Op);
