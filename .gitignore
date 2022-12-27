@@ -171,3 +171,7 @@
 /vs2022/Model/Tensor/obj
 /vs2022/Model/Tensor/Tensor.vcxproj.user
 /vs2022/Model/Tensor/Tensor.vcxproj.filters
+/vs2022/Model/Polyphi/x64/Debug
+/vs2022/Model/Polyphi/Polyphi.vcxproj.user
+/vs2022/Model/Polyphi/Polyphi.vcxproj.filters
+/vs2022/Model/Polyphi/obj
