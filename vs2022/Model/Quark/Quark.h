@@ -2,6 +2,7 @@
 
 using namespace System;
 using namespace System::Numerics;
+using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	public ref class QuarkException : public Exception {
@@ -30,16 +31,13 @@ namespace Dysnomia {
 			AntiQuark(Quark^, Quark^);
 		};
 
-		property Quark^ RR {Quark^ get() { return (RAQ != nullptr) ? RAQ->R : nullptr; }};
-		property Quark^ LL {Quark^ get() { return (LAQ != nullptr) ? LAQ->L : nullptr; }};
-
 		BigInteger Epsilon;
 
-		AntiQuark^ RAQ;
+		LinkedList<AntiQuark^>^ RAQ;
 		Quaternion^ R;
 		Quaternion^ N;
 		Quaternion^ L;
-		AntiQuark^ LAQ;
+		LinkedList<AntiQuark^>^ LAQ;
 
 		Quark(Quaternion^, Quaternion^, Quaternion^);
 		void Attach(Quark^);

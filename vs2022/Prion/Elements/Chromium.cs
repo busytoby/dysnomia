@@ -35,7 +35,9 @@ namespace Prion.Elements
             W.N = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Kappa.Rho);
             Kernel.Eta.Add(W.N, Alpha.Kappa.Rho);
 
-            Kernel.Eta.Add(Kernel.Alpha.Tau, Kernel.Mu, Alpha.Kappa.Rho); // Proof Of Earth
+            Quark Epimetheus = new Quark(Kernel.Mu.L, Kernel.Mu.R, Zinc.Fetch());
+
+            Kernel.Eta.Add(Kernel.Alpha.Tau, Epimetheus, Alpha.Kappa.Rho); // Proof Of Earth
 
             if (Alpha.Theta.Count == 0)
             {
