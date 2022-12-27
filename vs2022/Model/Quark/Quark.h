@@ -30,6 +30,9 @@ namespace Dysnomia {
 			AntiQuark(Quark^, Quark^);
 		};
 
+		property Quark^ RR {Quark^ get() { return RAQ->R; }};
+		property Quark^ LL {Quark^ get() { return LAQ->L; }};
+
 		BigInteger Epsilon;
 
 		AntiQuark^ RAQ;
