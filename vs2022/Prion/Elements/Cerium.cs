@@ -26,8 +26,8 @@ namespace Prion.Elements
 
         public Cerium(Octonion Lambda)
         {
-            Psi = new Hafnium(Lambda.X.L);
-            Mu = new Hafnium(Lambda.L.Phi);
+            Psi = new Hafnium(Titanium.Chi.HeadTensor.Phi);
+            Mu = new Hafnium(Titanium.Chi.TailTensor.Phi);
 
             Gamma = new Lead(Mu, Rhenium.Psi);
             Nu = new Lead(Rhenium.Psi, Psi);

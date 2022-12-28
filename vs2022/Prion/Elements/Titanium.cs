@@ -9,19 +9,26 @@ namespace Prion.Elements
 {
     public class Titanium
     {
+        static public Polyphi Chi;
         public Octonion Eta;
         public Octonion Nu;
 
         public Spinor Xi;
 
         public Titanium(Chlorine<Dysnomia.Quaternion> Tau, Scandium Beta) {
+            if(Chi == null)
+                Chi = new Polyphi();
+
             Calcium Rho = new Calcium(Beta.Mu);
             Calcium Phi = new Calcium(Tau);
 
-            Eta = new Octonion(Aluminum.Phi.X, Rho);
-            Nu = new Octonion(Aluminum.Phi.X, Phi);
+            Eta = new Octonion(Beta.Rho.Tail.Sigma, Beta.Rho.Tail.Phi);
+            Chi.AddLast(Rho, Eta);
 
-            Xi = new Spinor(Nu.L.Gamma, Beta.Rho);
+            Nu = new Octonion(Beta.Rho.Head.Sigma, Beta.Rho.Tail.Gamma);
+            Chi.AddLast(Phi, Nu);
+
+            Xi = new Spinor(Phi.Nu, Beta.Rho);
         }
     }
 }

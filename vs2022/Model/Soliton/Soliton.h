@@ -17,7 +17,7 @@ namespace Dysnomia {
 		LinkedList<KeyValuePair<BigInteger, Spinor^>>^ XL;
 		Polynu^ Qi;
 
-		LinkedList<KeyValuePair<BigInteger, Octonion^>>^ V;
+		Polyphi^ Tsi;
 
 		Soliton(Quaternion^, Quark^, Quaternion^);
 		void Add(Spinor^, Polygamma^);

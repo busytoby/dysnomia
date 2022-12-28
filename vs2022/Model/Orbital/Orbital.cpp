@@ -89,13 +89,13 @@ namespace Dysnomia {
 		}
 	}
 
-	Orbital::Orbital(Affinity^ X, Affinity^ C, Affinity^ D) {
+	Orbital::Orbital(Affinity^ C, Affinity^ D) {
 		bool Failed = true;
 		while (Failed) {
 			try {
 				N = gcnew Dynamic();
 				R = gcnew Ion(C);
-				Y = gcnew Ion(X);
+				Y = gcnew Ion();
 				L = gcnew Ion(D);
 
 				Nu = L->M->Rod->Element;

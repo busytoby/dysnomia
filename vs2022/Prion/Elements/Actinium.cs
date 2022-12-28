@@ -36,7 +36,7 @@ namespace Prion.Elements
 
             Molybdenum.Rho.Kernel.Inhibit(Molybdenum.Rho.X);
 
-            LinkedListNode<KeyValuePair<BigInteger, Octonion>> Nu = StarAlpha.Pi.V.First;
+            LinkedListNode<KeyValuePair<Tensor, Octonion>> Nu = StarAlpha.Pi.Tsi.First;
             Tantalum BetaGamma = new Tantalum(Nu.Value.Value);
 
             Tungsten.Eta.Nu.Kernel.Aggregate(Molybdenum.Rho.X);

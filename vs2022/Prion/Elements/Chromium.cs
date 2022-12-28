@@ -22,7 +22,7 @@ namespace Prion.Elements
             else
                 Alpha.Eta.Rho.Add(Alpha.Theta.TailQuark.L);
 
-            W.L = new Spinor(Alpha.Beta.Eta.L.Gamma, Alpha.Kappa.Rho);
+            W.L = new Spinor(Titanium.Chi.TailTensor.Sigma, Alpha.Kappa.Rho);
             Alpha.Eta.Rho.Add(Cerium.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(W.L);
             Kernel = Vanadium.Push();
@@ -32,12 +32,13 @@ namespace Prion.Elements
             else
                 Alpha.Kappa.Rho.Add(Alpha.Theta.HeadQuark.L);
 
-            W.N = new Spinor(Alpha.Beta.Nu.L.Rho, Alpha.Kappa.Rho);
+            W.N = new Spinor(Titanium.Chi.HeadTensor.Rho, Alpha.Kappa.Rho);
             Kernel.Eta.Add(W.N, Alpha.Kappa.Rho);
 
-            Quark Epimetheus = new Quark(Kernel.Mu.L, Kernel.Mu.R, Zinc.Fetch());
+            if(Titanium.Chi.Tail.Psi == null)
+                Titanium.Chi.Tail.Xi(new Quark(Titanium.Chi.TailTensor.Sigma, Zinc.Fetch(), Zinc.Fetch()));
 
-            Kernel.Eta.Add(Kernel.Alpha.Tau, Epimetheus, Alpha.Kappa.Rho); // Proof Of Earth
+            Kernel.Eta.Add(Kernel.Alpha.Tau, Titanium.Chi.Tail.Psi, Alpha.Kappa.Rho); // Proof Of Earth
 
             if (Alpha.Theta.Count == 0)
             {
@@ -48,15 +49,15 @@ namespace Prion.Elements
                 Epsilon = Alpha.Kappa.Rho;
             else if (Alpha.Theta.Count == 3)
                 Epsilon = Alpha.Eta.Rho;
-            else if (Alpha.Theta.Count == 4)
+            else if (Alpha.Theta.Count == 5)
             {
                 Epsilon = new Polygamma(Alpha.Phi);
                 Epsilon.Add(Tin.Sigma);
-            } else if (Alpha.Theta.Count == 5)
+            } else if (Alpha.Theta.Count == 6)
             {
                 Epsilon = new Polygamma(Alpha.Phi);
                 Epsilon.Add(Neodymium.Chi.Gamma.Alpha.Rho);
-            } else if (Alpha.Theta.Count >= 6)
+            } else if (Alpha.Theta.Count >= 7)
             {
                 Epsilon = new Polygamma(Neodymium.Chi.Rho.Rho.Rho);
                 Epsilon.Add(Tin.Sigma);

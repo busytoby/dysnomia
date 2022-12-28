@@ -24,7 +24,7 @@ namespace Dysnomia {
     void Quark::Attach(Quark^ R) {
         LinkedListNode<AntiQuark^>^ P = RAQ->First;
         while (P != nullptr)
-            if (P->Value->R->Epsilon == R->Epsilon) return;
+            if (P->Value->R != nullptr && P->Value->R->Epsilon == R->Epsilon) return;
             else P = P->Next;
         RAQ->AddFirst(gcnew Quark::AntiQuark(R, this));
     }
@@ -32,7 +32,7 @@ namespace Dysnomia {
     Quark::AntiQuark::AntiQuark(Quark^ _R, Quark^ _L) {
         LinkedListNode<AntiQuark^>^ P = _R->LAQ->First;
         while (P != nullptr)
-            if (P->Value->L->Epsilon == _L->Epsilon) return;
+            if (P->Value->L != nullptr && P->Value->L->Epsilon == _L->Epsilon) return;
             else P = P->Next;
         R = _R;
         L = _L;

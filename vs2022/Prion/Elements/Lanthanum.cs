@@ -17,7 +17,10 @@ namespace Prion.Elements
         public Lanthanum(Sulfur Gamma)
         {
             if (Gamma.Y.Alpha == null)
-                Gamma.Y.Alpha = new Quark(Gamma.Beta.Eta.X.L, Zinc.Fetch(), Gamma.Tau);
+            {
+                Gamma.Y.Alpha = new Quark(Molybdenum.Rho.Kernel.Eta.Tsi.First.Value.Key.Nu, Zinc.Fetch(), Gamma.Tau);
+                Titanium.Chi.Head.Xi(Gamma.Y.Alpha);
+            }
             else throw new Exception("Already Active");
 
             Alpha = new Chromium(Gamma.Y);
@@ -25,7 +28,7 @@ namespace Prion.Elements
             Titanium Antimony = Gamma.Indicate(Upsilon);
 
             if (Gamma.Y.Xi == null)
-                Gamma.Y.Xi = new Spinor(Upsilon.Beta.Nu.X.N, new Polygamma(Antimony.Eta.X.R));
+                Gamma.Y.Xi = Alpha.Kernel.Eta.XL.First.Value.Value;
             else throw new Exception("Already Active");
 
             Eta = Form(Antimony, Gamma.Y.Xi);
@@ -36,14 +39,18 @@ namespace Prion.Elements
         public Lanthanum(Chromium Omicron, Sulfur Iota)
         {
             if (Iota.Alpha == null)
-                Iota.Alpha = new Quark(Iota.Beta.Eta.X.N, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Head);
+            {
+                Iota.Alpha = new Quark(Omicron.Kernel.Eta.Tsi.HeadTensor.Nu, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Head);
+                Titanium.Chi.Head.Xi(Iota.Alpha);
+            }
+
 
             Alpha = Omicron;
             Upsilon = Iota.Reproduce(Alpha);
             Titanium Antimony = Iota.Indicate(Upsilon);
 
             if (Iota.Xi == null)
-                Iota.Xi = new Spinor(Upsilon.Y.Beta.Nu.X.R, new Polygamma(Antimony.Eta.X.L));
+                Iota.Xi = new Spinor(Titanium.Chi.Tail.Psi.R, new Polygamma(Titanium.Chi.Tail.Psi.N));
             Eta = Form(Antimony, Iota.Xi);
 
             Iota.Phi = Mu.R.Current;

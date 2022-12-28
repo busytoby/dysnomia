@@ -140,6 +140,14 @@
   <ItemGroup>
     <Image Include="app.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Octonion\Octonion.vcxproj">
+      <Project>{5cca240e-63b7-403b-b88b-0f4562c2f87c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Tensor\Tensor.vcxproj">
+      <Project>{716e7530-0089-4c2f-990d-7309dca9f81d}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

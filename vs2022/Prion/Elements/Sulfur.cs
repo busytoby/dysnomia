@@ -78,14 +78,16 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu, Epsilon);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha, Epsilon);
 
-            Epsilon.Add(WMR.Nu.X.N);
-            Epsilon.Add(WMR.Nu.X.R);
-            Epsilon.Add(WMR.Nu.X.L);
-            Epsilon.Add(WMR.Nu.L.Gamma);
-            Epsilon.Add(WMR.Nu.L.Nu);
-            Epsilon.Add(WMR.Nu.L.Phi);
-            Epsilon.Add(WMR.Nu.L.Rho);
-            Epsilon.Add(WMR.Nu.L.Sigma);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Gamma);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Nu);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Phi);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Rho);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Sigma);
+            Epsilon.Add(Titanium.Chi.TailTensor.Gamma);
+            Epsilon.Add(Titanium.Chi.TailTensor.Nu);
+            Epsilon.Add(Titanium.Chi.TailTensor.Phi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Rho);
+            Epsilon.Add(Titanium.Chi.TailTensor.Sigma);
             Epsilon.Add(WMR.Xi.First);
             Epsilon.Add(WMR.Xi.Last);
             Epsilon.Add(WMR.Xi.Current);
@@ -120,7 +122,7 @@ namespace Prion.Elements
             Vanadium VY = new Vanadium(S2);
             Iron S2K = Vanadium.Push();
             Titanium S2T = new Titanium(S2K.Alpha.Mu, S2K.Alpha);
-            Sulfur S2S = new Sulfur(S2T.Eta.X.N, S2T.Nu.L.Sigma);
+            Sulfur S2S = new Sulfur(Titanium.Chi.HeadTensor.Nu, Titanium.Chi.TailTensor.Sigma);
             Chromium S2C = new Chromium(S2S);
             S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, (Xi != null) ? Epsilon : YC.Epsilon);
 
@@ -134,7 +136,7 @@ namespace Prion.Elements
 
         public Titanium Indicate(Sulfur S)
         {
-            Spinor Indium = new Spinor(S.Y.Beta.Eta.L.Sigma, S.Y.Kappa.Rho);
+            Spinor Indium = new Spinor(Titanium.Chi.TailTensor.Nu, S.Y.Kappa.Rho);
             Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.List);
             Titanium Antimony = new Titanium(Selenium, S.Y.Kappa);
             Tau = Indium.Last;
@@ -147,7 +149,9 @@ namespace Prion.Elements
 
             Lanthanum Nu = new Lanthanum(Omicron, this);
 
-            Theta.Add(new Quark(Nu.Mu.N.First, Nu.Mu.R.First, Nu.Mu.L.First));
+            Titanium.Chi.Head.Xi(new Quark(Nu.Mu.N.First, Nu.Mu.R.First, Nu.Mu.L.First));
+            Theta.Add(Nu.Alpha.Kernel.Nu.Psi);
+            Theta.Add(Titanium.Chi.Head.Psi);
             Omicron.Kernel.Audit(this);
             Sulfur G = new Sulfur(Phi, Tau);
             G.Y = Nu.Upsilon.Y;

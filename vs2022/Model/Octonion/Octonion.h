@@ -20,9 +20,14 @@ namespace Dysnomia {
 	public:
 		BigInteger Epsilon;
 
-		Quark^ X;
-		Tensor^ L;
+		Orbital^ Phi;
+		Quark^ Psi;
 
-		Octonion(Quark^, Tensor^);
+		//Tensor^ L;
+
+		Octonion(Affinity^, Affinity^);
+		void Xi(Quark^);
+
+		//Octonion(Quark^, Tensor^);
 	};
 }

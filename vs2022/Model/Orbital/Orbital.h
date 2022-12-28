@@ -30,7 +30,7 @@ namespace Dysnomia {
 		Orbital();
 		Orbital(Affinity^);
 		Orbital(Dynamic^, Affinity^);
-		Orbital(Affinity^, Affinity^, Affinity^);
+		Orbital(Affinity^, Affinity^);
 		void Bridge(BigInteger);
 		BigInteger Conjugate(BigInteger%);
 		void Saturate(BigInteger, BigInteger);

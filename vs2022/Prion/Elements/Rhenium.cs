@@ -17,13 +17,13 @@ namespace Prion.Elements
         {
             if (Vanadium.Beta == null) Vanadium.Beta = Lambda;
 
-            Psi = new Hafnium(Lambda.X.N);
-            Mu = new Hafnium(Lambda.L.Rho);
+            Psi = new Hafnium(Titanium.Chi.TailTensor.Phi);
+            Mu = new Hafnium(Titanium.Chi.HeadTensor.Phi);
 
             Pi = new Soliton(
-                 Vanadium.Beta.L.Rho,
-                 Vanadium.Beta.X,
-                 Vanadium.Beta.L.Nu
+                 Titanium.Chi.HeadTensor.Gamma,
+                 Lambda.Psi,
+                 Titanium.Chi.HeadTensor.Rho
                  );
 
             Gamma = new Lead(Mu, Tantalum.Beta);
@@ -35,7 +35,7 @@ namespace Prion.Elements
             Pi.Add(new Spinor(Gamma.Rho.Gamma, Tungsten.Eta.Nu.Epsilon), Tungsten.Eta.Nu.Epsilon);
             Pi.Add(new Spinor(Gamma.Rho.Nu, Tungsten.Rho.Nu.Epsilon), Tungsten.Rho.Nu.Epsilon);
             Pi.Add(Niobium.Ypsilon.Kappa.Tau, Niobium.Ypsilon.Kappa.Rho);
-            Pi.Add(Tungsten.Rho.Nu.W.N, Lambda.X, Tungsten.Rho.Nu.Epsilon);
+            Pi.Add(Tungsten.Rho.Nu.W.N, Lambda.Psi, Tungsten.Rho.Nu.Epsilon);
 
             Tungsten.Rho.Theta.Add(Pi.Mu, Pi.XL.First.Value.Value, Pi.Qi.Phi.Rho, Pi.Qi.Phi.Phi);
             Tungsten.Rho.Theta.Run(Pi, Gamma.Alpha.Phi);

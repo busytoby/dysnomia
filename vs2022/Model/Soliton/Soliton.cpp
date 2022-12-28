@@ -5,9 +5,9 @@
 namespace Dysnomia {
 	Soliton::Soliton(Quaternion^ Rho, Quark^ Delta, Quaternion^ Nu) {
 		if (Sigma == nullptr) Sigma = Rho;
-		V = gcnew LinkedList<KeyValuePair<BigInteger, Octonion^>>();
 
 		Qi = gcnew Polynu();
+		Tsi = gcnew Polyphi();
 
 		Polygamma^ Xi = gcnew Polygamma(Rho);
 		Mu = gcnew Spinor(Nu, Xi);
@@ -38,12 +38,14 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			gcnew Polygamma(Epsilon[2]));
 
-		Octonion^ X = gcnew Octonion(Delta, Lambda1);
-		Octonion^ Y = gcnew Octonion(Delta, Lambda2);
-		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		V->AddLast(KeyValuePair<BigInteger, Octonion^>(Y->Epsilon, Y));
+		Octonion^ X = gcnew Octonion(Delta->N->Rho, Lambda1->Nu->Nu);
+		X->Xi(Delta);
+		Octonion^ Y = gcnew Octonion(Delta->N->Gamma, Lambda2->Phi->Nu);
 		Q = gcnew Quark(Delta->N, Delta->R, Epsilon[2]);
-		Delta->Attach(Q);
+		Y->Xi(Q);
+		X->Psi->Attach(Y->Psi);
+		Tsi->AddLast(KeyValuePair<Tensor^, Octonion^>(Lambda1, X));
+		Tsi->AddLast(KeyValuePair<Tensor^, Octonion^>(Lambda2, Y));
 	}
 
 	void Soliton::Add(Spinor^ Eta, Polygamma^ Phi) {
@@ -62,11 +64,11 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			gcnew Polygamma(Epsilon[2]));
 
-		Octonion^ X = gcnew Octonion(Q, Lambda);
-		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
-		Quark^ _Q = gcnew Quark(Q->N, Q->R, Epsilon[2]);
-		Q->Attach(_Q);
-		Q = _Q;
+		Octonion^ X = gcnew Octonion(Q->N->Rho, Lambda->Phi->Rho);
+		X->Xi(Q);
+		Q = gcnew Quark(Q->N, Q->R, Epsilon[2]);
+		X->Psi->Attach(Q);
+		Tsi->AddLast(KeyValuePair<Tensor^, Octonion^>(Lambda, X));
 	}
 
 	void Soliton::Add(Spinor^ Eta, Quark^ Nu, Polygamma^ Phi) {
@@ -85,9 +87,11 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			Phi);
 
-		Octonion^ X = gcnew Octonion(Q, Lambda);
-		V->AddLast(KeyValuePair<BigInteger, Octonion^>(X->Epsilon, X));
+		Octonion^ X = gcnew Octonion(Q->N->Phi, Lambda->Sigma->Phi);
+		X->Xi(Q);
+		X->Psi->Attach(Nu);
 		Q = gcnew Quark(Nu->L, Nu->R, Epsilon[2]);
-		Nu->Attach(Q);
+		X->Psi->Attach(Q);
+		Tsi->AddLast(KeyValuePair<Tensor^, Octonion^>(Lambda, X));
 	}
 }
