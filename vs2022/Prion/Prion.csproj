@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Model\Quark\Quark.vcxproj" />
     <ProjectReference Include="..\Model\Quaternion\Quaternion.vcxproj" />
     <ProjectReference Include="..\Model\Soliton\Soliton.vcxproj" />
+    <ProjectReference Include="..\Model\Spinor\Spinor.vcxproj" />
     <ProjectReference Include="..\Model\Spin\Spin.vcxproj" />
     <ProjectReference Include="..\Model\Tensor\Tensor.vcxproj" />
     <ProjectReference Include="..\Util\Generics\Generics.vcxproj" />

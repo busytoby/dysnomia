@@ -162,6 +162,9 @@
     <ProjectReference Include="..\Soliton\Soliton.vcxproj">
       <Project>{152b6754-8032-4e19-a40a-d29f4e09b800}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Spinor\Spinor.vcxproj">
+      <Project>{892ba136-fac3-40d0-b4d5-a0839573d0b3}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Spin\Spin.vcxproj">
       <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
     </ProjectReference>

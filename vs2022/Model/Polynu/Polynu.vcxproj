@@ -150,6 +150,9 @@
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj">
       <Project>{5a69282d-0356-4496-915f-72fd74276c6b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Spinor\Spinor.vcxproj">
+      <Project>{892ba136-fac3-40d0-b4d5-a0839573d0b3}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Spin\Spin.vcxproj">
       <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
     </ProjectReference>

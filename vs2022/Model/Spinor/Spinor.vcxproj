@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{D61D5DA2-0227-4D4B-B822-6F56707EC016}</ProjectGuid>
+    <ProjectGuid>{892BA136-FAC3-40D0-B4D5-A0839573D0B3}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Polysigma</RootNamespace>
+    <RootNamespace>Spinor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -121,8 +121,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Polysigma.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Spinor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -132,7 +132,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Polysigma.cpp" />
+    <ClCompile Include="Spinor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -141,17 +141,17 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
+      <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Affinity\Affinity.vcxproj">
       <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Bundle\Bundle.vcxproj">
-      <Project>{3347f898-6843-431f-af04-a167a2b4d62b}</Project>
+    <ProjectReference Include="..\Dynamic\Dynamic.vcxproj">
+      <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Octonion\Octonion.vcxproj">
-      <Project>{5cca240e-63b7-403b-b88b-0f4562c2f87c}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Polynu\Polynu.vcxproj">
-      <Project>{a111571a-cfbb-4e07-aa6f-13fce8547ee7}</Project>
+    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
+      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
@@ -159,14 +159,11 @@
     <ProjectReference Include="..\Quaternion\Quaternion.vcxproj">
       <Project>{5a69282d-0356-4496-915f-72fd74276c6b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Soliton\Soliton.vcxproj">
-      <Project>{152b6754-8032-4e19-a40a-d29f4e09b800}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Spinor\Spinor.vcxproj">
-      <Project>{892ba136-fac3-40d0-b4d5-a0839573d0b3}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Spin\Spin.vcxproj">
       <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Tensor\Tensor.vcxproj">
+      <Project>{716e7530-0089-4c2f-990d-7309dca9f81d}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

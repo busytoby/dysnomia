@@ -23,11 +23,7 @@ namespace Dysnomia {
 		Orbital^ Phi;
 		Quark^ Psi;
 
-		//Tensor^ L;
-
 		Octonion(Affinity^, Affinity^);
 		void Xi(Quark^);
-
-		//Octonion(Quark^, Tensor^);
 	};
 }

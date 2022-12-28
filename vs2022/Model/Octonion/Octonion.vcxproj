@@ -123,7 +123,6 @@
     <ClInclude Include="Octonion.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Spinor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -134,7 +133,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Spinor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -143,9 +141,6 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
-      <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Affinity\Affinity.vcxproj">
       <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
     </ProjectReference>
@@ -155,20 +150,8 @@
     <ProjectReference Include="..\Orbital\Orbital.vcxproj">
       <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
-      <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Quaternion\Quaternion.vcxproj">
-      <Project>{5a69282d-0356-4496-915f-72fd74276c6b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Spin\Spin.vcxproj">
-      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Tensor\Tensor.vcxproj">
-      <Project>{716e7530-0089-4c2f-990d-7309dca9f81d}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
