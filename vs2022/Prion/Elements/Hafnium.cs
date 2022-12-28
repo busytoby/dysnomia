@@ -16,14 +16,14 @@ namespace Prion.Elements
         public Orbital S, F, P;
         //public object B;
 
-        public Hafnium(Orbital D) : base(D.R.M)
+        public Hafnium(Orbital D) : base(D.R)
         {
-            Cerium.Alpha.Add(Sigma, Y.M);
-            F = new Orbital(D.Y.M);
+            Cerium.Alpha.Add(Sigma, Y);
+            F = new Orbital(D.Y);
             Kappa = new Potassium(F, this);
-            Cerium.Alpha.Add(F.Sigma, F.Y.M);
-            P = new Orbital(D.L.M);
-            Cerium.Alpha.Add(P.Sigma, P.Y.M);
+            Cerium.Alpha.Add(F.Sigma, F.Y);
+            P = new Orbital(D.L);
+            Cerium.Alpha.Add(P.Sigma, P.Y);
         }
 
         public Hafnium(Affinity D) : base(D) { }

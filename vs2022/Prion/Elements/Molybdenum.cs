@@ -94,7 +94,7 @@ namespace Prion.Elements
             else
                 Beta = new Lanthanum(Tau, Ypsilon);
             Theta.Add(Beta.Alpha.W.N, Beta.Mu.N, Beta.Mu.R, Beta.Mu.L);
-            Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Alpha.Kernel.Iota.Nu);
+            Theta.Run(Beta.Alpha.Kernel.Eta, Beta.Alpha.Kernel.Iota.Nu.Xi);
             Theta.Run(Beta.Alpha.Kernel.Eta, Ypsilon.Tau);
             Theta.Add(Beta.Mu.Q);
             Rho.Kernel.Inhibit(Beta.Upsilon);

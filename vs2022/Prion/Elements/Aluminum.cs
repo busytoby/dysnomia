@@ -32,7 +32,7 @@ namespace Prion.Elements
             Phi = new Octonion(Thebe.N.Rho, Y.Gamma);
             Phi.Xi(Thebe);
 
-            Rho = new Spinor(Eta.Nu, Hafnium.Kappa);
+            Rho = new Spinor(Eta.Nu.Xi, Hafnium.Kappa);
             Phosphorous.Sigmas.RecordSpinor(Rho, "Valetudo");
 
             Phosphorous.Sigmas.RecordQuark(Thebe, "Thebe");

@@ -17,13 +17,13 @@ namespace Prion.Elements
         {
             if (Vanadium.Beta == null) Vanadium.Beta = Lambda;
 
-            Psi = new Hafnium(Titanium.Chi.TailTensor.Phi);
-            Mu = new Hafnium(Titanium.Chi.HeadTensor.Phi);
+            Psi = new Hafnium(Titanium.Chi.TailTensor.Phi.Xi);
+            Mu = new Hafnium(Titanium.Chi.HeadTensor.Phi.Xi);
 
             Pi = new Soliton(
-                 Titanium.Chi.HeadTensor.Gamma,
+                 Titanium.Chi.HeadTensor.Gamma.Xi,
                  Lambda.Psi,
-                 Titanium.Chi.HeadTensor.Rho
+                 Titanium.Chi.HeadTensor.Rho.Xi
                  );
 
             Gamma = new Lead(Mu, Tantalum.Beta);

@@ -15,12 +15,12 @@ namespace Dysnomia {
 				Y = gcnew Ion();
 				L = gcnew Ion(E);
 
-				Nu = L->M->Rod->Element;
-				BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->Rod->Element;
+				BigInteger Ligate = L->Cone->Barn;
 
 				Bridge(Nu);
 
-				Nu = L->M->Cone->Signal;
+				Nu = L->Cone->Signal;
 				Failed = false;
 			}
 			catch (DynamicException^ E) {
@@ -44,12 +44,12 @@ namespace Dysnomia {
 				Y = gcnew Ion();
 				L = gcnew Ion();
 
-				Nu = L->M->Rod->Element;
-				BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->Rod->Element;
+				BigInteger Ligate = L->Cone->Barn;
 
 				Bridge(Nu);
 
-				Nu = L->M->Cone->Signal;
+				Nu = L->Cone->Signal;
 				Failed = false;
 			}
 			catch (DynamicException^ E) {
@@ -71,12 +71,12 @@ namespace Dysnomia {
 				Y = gcnew Ion();
 				L = gcnew Ion(A);
 
-				Nu = L->M->Rod->Element;
-				BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->Rod->Element;
+				BigInteger Ligate = L->Cone->Barn;
 
 				Bridge(Nu);
 
-				Nu = L->M->Cone->Signal;
+				Nu = L->Cone->Signal;
 				Failed = false;
 			}
 			catch (DynamicException^ E) {
@@ -98,12 +98,12 @@ namespace Dysnomia {
 				Y = gcnew Ion();
 				L = gcnew Ion(D);
 
-				Nu = L->M->Rod->Element;
-				BigInteger Ligate = L->M->Cone->Barn;
+				Nu = L->Rod->Element;
+				BigInteger Ligate = L->Cone->Barn;
 
 				Bridge(Nu);
 
-				Nu = L->M->Cone->Signal;
+				Nu = L->Cone->Signal;
 				Failed = false;
 			}
 			catch (DynamicException^ E) {
@@ -119,7 +119,7 @@ namespace Dysnomia {
 	BigInteger Orbital::RunSigma() {
 		Sigma = Rho;
 		for each (KeyValuePair<BigInteger, Dynamic^> G in N->R) {
-			for each (KeyValuePair<BigInteger, Dynamic^> L in L->M->Rod->R) {
+			for each (KeyValuePair<BigInteger, Dynamic^> L in L->Rod->R) {
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(G.Value->Channel, Rho, G.Key));
 				Sigma = BigInteger::Multiply(Sigma, Math::ModPow(Eta, L.Value->Signal, L.Key));
 			}
@@ -129,19 +129,19 @@ namespace Dysnomia {
 
 	void Orbital::Bridge(BigInteger Nu) {
 		Y->Nu = N->Avail(Nu);
-		if (!Y->M->Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
-		Y->M->Alpha = Y->M->Cone->Avail(Nu);
-		N->Form(Y->M->Alpha);
-		if (Y->M->Cone->Tau == (long long)1) Y->M->Cone->Tau = N->Channel;
+		if (!Y->Alpha.IsZero) throw gcnew AffinityException(4, "Alpha Chromosome Error");
+		Y->Alpha = Y->Cone->Avail(Nu);
+		N->Form(Y->Alpha);
+		if (Y->Cone->Tau == (long long)1) Y->Cone->Tau = N->Channel;
 		else throw gcnew DynamicException(10, "Cone Tau Exception");
 
-		N->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Y->M->Cone->Tau, Y->M->Cone));
+		N->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Y->Cone->Tau, Y->Cone));
 
 		N->Polarize();
 		BigInteger Focus = Y->Form();
 		N->Conjugate(Focus);
 		Rho = Conjugate(N->Pole);
-		N->Saturate(Rho, Y->M->Cone->Channel);
+		N->Saturate(Rho, Y->Cone->Channel);
 		Saturate(N->Foundation, N->Channel);
 		
 		Eta = Math::ModPow(N->Foundation, N->Signal, Math::Prime);
@@ -149,22 +149,22 @@ namespace Dysnomia {
 		Sigma = Rho;
 
 		N->Bond();
-		N->Adduct(Y->M->Cone->Dynamo);
+		N->Adduct(Y->Cone->Dynamo);
 		N->Open();
 		Y->Adduct(N->Dynamo);
 
-		if (!Y->M->Cone->ManifoldCompare(N)) throw gcnew Exception("Never Failed The Boson Before");
+		if (!Y->Cone->ManifoldCompare(N)) throw gcnew Exception("Never Failed The Boson Before");
 	}
 
 	BigInteger Orbital::Conjugate(BigInteger% Rho) {
-		Y->M->Cone->Conjugate(Rho);
-		Y->M->Cone->Conify();
+		Y->Cone->Conjugate(Rho);
+		Y->Cone->Conify();
 
-		return Y->M->Cone->Foundation;
+		return Y->Cone->Foundation;
 	}
 
 	void Orbital::Saturate(BigInteger Rho, BigInteger Theta) {
-		Y->M->Cone->Saturate(Rho, Theta);
-		Y->M->Cone->Bond();
+		Y->Cone->Saturate(Rho, Theta);
+		Y->Cone->Bond();
 	}
 }

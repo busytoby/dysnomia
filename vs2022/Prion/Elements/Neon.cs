@@ -14,11 +14,11 @@ namespace Prion.Elements
         {
             base.Add(Sigma, V);
             if (!Cerium.Alpha.ContainsKey(Sigma))
-                Cerium.Alpha.Add(Sigma, V.Y.M);
-            else if (Cerium.Alpha[Sigma] != V.Y.M) throw new Exception("Carbonic Failure");
+                Cerium.Alpha.Add(Sigma, V.Y);
+            else if (Cerium.Alpha[Sigma] != V.Y) throw new Exception("Carbonic Failure");
 
-            if (!Cerium.Tau.ContainsKey(V.Y.M.Cone))
-                Cerium.Tau.Add(V.Y.M.Cone, Sigma);           
+            if (!Cerium.Tau.ContainsKey(V.Y.Cone))
+                Cerium.Tau.Add(V.Y.Cone, Sigma);           
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Prion.Elements
             Iota = Beta;
 
             Mu = new Quark(Delta.Rho.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.Head); // Water
-            Nu = new Octonion(Beta.Phi.Gamma, Beta.Rho.Nu);
+            Nu = new Octonion(Beta.Phi.Gamma.Phi.Y, Beta.Rho.Nu.Phi.R);
             Nu.Xi(Mu);
 
             Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Head);
@@ -38,7 +38,7 @@ namespace Prion.Elements
         {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Eta.Rho);
-            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Rho);
+            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Rho.Xi);
             Thetan.Theta.Run(Eta.Delta);
         }
 
@@ -46,7 +46,7 @@ namespace Prion.Elements
         {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Eta.Nu);
-            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Nu);
+            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Nu.Xi);
             Thetan.Theta.Run(Mu);
         }
 
@@ -54,7 +54,7 @@ namespace Prion.Elements
         {
             Thetan.Theta.Run(Eta);
             Thetan.Theta.Run(Eta, Thetan.Phi);
-            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Phi);
+            Thetan.Theta.Run(Eta, Eta.Tsi.HeadTensor.Phi.Xi);
             if (Thetan.Alpha == null) Thetan.Alpha = Eta.Delta;
             Thetan.Theta.Run(Thetan.Alpha);
         }

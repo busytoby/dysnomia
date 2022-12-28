@@ -8,6 +8,11 @@ namespace Dysnomia {
 		Phi = gcnew Orbital(R, L);
 	}
 
+	Octonion::Octonion(Affinity^ L) {
+		if (Phi != nullptr) throw gcnew OctonionException(1, "Phi Already");
+		Phi = gcnew Orbital(L);
+	}
+
 	void Octonion::Xi(Quark^ Qi) {
 		if (Psi != nullptr) throw gcnew OctonionException(1, "Psi Already");
 		Psi = Qi;

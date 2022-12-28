@@ -150,6 +150,15 @@
     <ProjectReference Include="..\Dynamic\Dynamic.vcxproj">
       <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Ion\Ion.vcxproj">
+      <Project>{9c11f74f-5142-42b1-880a-f6753831034e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Octonion\Octonion.vcxproj">
+      <Project>{5cca240e-63b7-403b-b88b-0f4562c2f87c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Orbital\Orbital.vcxproj">
+      <Project>{ba9618b0-2bb2-4f10-a4aa-b547878e1c24}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Polygamma\Polygamma.vcxproj">
       <Project>{8cf4ef26-9860-4470-9bcb-bdec2a0bcd26}</Project>
     </ProjectReference>

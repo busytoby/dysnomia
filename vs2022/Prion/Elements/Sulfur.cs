@@ -78,16 +78,16 @@ namespace Prion.Elements
             Mu.Kernel.Eta.Add(Kappa.Tau, Mu.Kernel.Mu, Epsilon);
             Mu.Kernel.Eta.Add(Lambda.Xi, Alpha, Epsilon);
 
-            Epsilon.Add(Titanium.Chi.HeadTensor.Gamma);
-            Epsilon.Add(Titanium.Chi.HeadTensor.Nu);
-            Epsilon.Add(Titanium.Chi.HeadTensor.Phi);
-            Epsilon.Add(Titanium.Chi.HeadTensor.Rho);
-            Epsilon.Add(Titanium.Chi.HeadTensor.Sigma);
-            Epsilon.Add(Titanium.Chi.TailTensor.Gamma);
-            Epsilon.Add(Titanium.Chi.TailTensor.Nu);
-            Epsilon.Add(Titanium.Chi.TailTensor.Phi);
-            Epsilon.Add(Titanium.Chi.TailTensor.Rho);
-            Epsilon.Add(Titanium.Chi.TailTensor.Sigma);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Gamma.Xi);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Nu.Xi);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Phi.Xi);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Rho.Xi);
+            Epsilon.Add(Titanium.Chi.HeadTensor.Sigma.Xi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Gamma.Xi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Nu.Xi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Phi.Xi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Rho.Xi);
+            Epsilon.Add(Titanium.Chi.TailTensor.Sigma.Xi);
             Epsilon.Add(WMR.Xi.First);
             Epsilon.Add(WMR.Xi.Last);
             Epsilon.Add(WMR.Xi.Current);
@@ -122,7 +122,7 @@ namespace Prion.Elements
             Vanadium VY = new Vanadium(S2);
             Iron S2K = Vanadium.Push();
             Titanium S2T = new Titanium(S2K.Alpha.Mu, S2K.Alpha);
-            Sulfur S2S = new Sulfur(Titanium.Chi.HeadTensor.Nu, Titanium.Chi.TailTensor.Sigma);
+            Sulfur S2S = new Sulfur(Titanium.Chi.HeadTensor.Nu.Xi, Titanium.Chi.TailTensor.Sigma.Xi);
             Chromium S2C = new Chromium(S2S);
             S2C.Kernel.Eta.Add(S2T.Xi, S2C.Kernel.Mu, (Xi != null) ? Epsilon : YC.Epsilon);
 
@@ -136,7 +136,7 @@ namespace Prion.Elements
 
         public Titanium Indicate(Sulfur S)
         {
-            Spinor Indium = new Spinor(Titanium.Chi.TailTensor.Nu, S.Y.Kappa.Rho);
+            Spinor Indium = new Spinor(Titanium.Chi.TailTensor.Nu.Xi, S.Y.Kappa.Rho);
             Chlorine<Dysnomia.Quaternion> Selenium = new Chlorine<Dysnomia.Quaternion>(Indium.List);
             Titanium Antimony = new Titanium(Selenium, S.Y.Kappa);
             Tau = Indium.Last;

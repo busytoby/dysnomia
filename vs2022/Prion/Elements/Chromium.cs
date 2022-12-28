@@ -22,7 +22,7 @@ namespace Prion.Elements
             else
                 Alpha.Eta.Rho.Add(Alpha.Theta.TailQuark.L);
 
-            W.L = new Spinor(Titanium.Chi.TailTensor.Sigma, Alpha.Kappa.Rho);
+            W.L = new Spinor(Titanium.Chi.TailTensor.Sigma.Xi, Alpha.Kappa.Rho);
             Alpha.Eta.Rho.Add(Cerium.GetQuaternionByName("Van Allen Belt"));
             Vanadium VY = new Vanadium(W.L);
             Kernel = Vanadium.Push();
@@ -32,17 +32,17 @@ namespace Prion.Elements
             else
                 Alpha.Kappa.Rho.Add(Alpha.Theta.HeadQuark.L);
 
-            W.N = new Spinor(Titanium.Chi.HeadTensor.Rho, Alpha.Kappa.Rho);
+            W.N = new Spinor(Titanium.Chi.HeadTensor.Rho.Xi, Alpha.Kappa.Rho);
             Kernel.Eta.Add(W.N, Alpha.Kappa.Rho);
 
             if(Titanium.Chi.Tail.Psi == null)
-                Titanium.Chi.Tail.Xi(new Quark(Titanium.Chi.TailTensor.Sigma, Zinc.Fetch(), Zinc.Fetch()));
+                Titanium.Chi.Tail.Xi(new Quark(Titanium.Chi.TailTensor.Sigma.Xi, Zinc.Fetch(), Zinc.Fetch()));
 
             Kernel.Eta.Add(Kernel.Alpha.Tau, Titanium.Chi.Tail.Psi, Alpha.Kappa.Rho); // Proof Of Earth
 
             if (Alpha.Theta.Count == 0)
             {
-                Epsilon = new Polygamma(Kernel.Iota.Phi);
+                Epsilon = new Polygamma(Kernel.Iota.Phi.Rho.Phi, Kernel.Iota.Phi.Gamma.Phi);
                 Epsilon.Add(Tin.Sigma);
             }
             else if (Alpha.Theta.Count == 1)

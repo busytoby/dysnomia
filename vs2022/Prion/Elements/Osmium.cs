@@ -19,14 +19,14 @@ namespace Prion.Elements
 
         public Osmium(Octonion Lambda)
         {
-            if (Xi == null) Xi = new Polygamma(Titanium.Chi.HeadTensor.Phi);
-            Delta = new Spinor(Titanium.Chi.HeadTensor.Gamma, Xi);
+            if (Xi == null) Xi = new Polygamma(Titanium.Chi.HeadTensor.Phi.Xi);
+            Delta = new Spinor(Titanium.Chi.HeadTensor.Gamma.Xi, Xi);
             if (Eta == null) Eta = new Vanadium(Delta);
 
-            Psi = new Hafnium(Titanium.Chi.TailTensor.Nu);
-            Mu = new Hafnium(Titanium.Chi.HeadTensor.Sigma);
+            Psi = new Hafnium(Titanium.Chi.TailTensor.Nu.Xi);
+            Mu = new Hafnium(Titanium.Chi.HeadTensor.Sigma.Xi);
 
-            Zeta = new Quark(Titanium.Chi.TailTensor.Phi, Zinc.Fetch(), Titanium.Chi.HeadTensor.Rho);
+            Zeta = new Quark(Titanium.Chi.TailTensor.Phi.Xi, Zinc.Fetch(), Titanium.Chi.HeadTensor.Rho.Xi);
             Titanium.Chi.Head.Xi(Zeta);
 
             Gamma = new Lead(Rhenium.Psi, Mu);

@@ -17,11 +17,11 @@ namespace Dysnomia
             Orbital VenusOrbital = Cerium.GetOrbitalByName("Venus");
             Quaternion SaturnOrbital = Cerium.GetQuaternionByName("Saturn");
             
-            Gamma = UranusOrbital.R.M;
-            Nu = NeptuneOrbital.R.M;
-            Phi = VenusOrbital.R.M;
+            Gamma = UranusOrbital.R;
+            Nu = NeptuneOrbital.R;
+            Phi = VenusOrbital.R;
             Rho = SaturnOrbital.Rho;
-            Sigma = UranusOrbital.L.M;
+            Sigma = UranusOrbital.L;
 
             Epsilon = Phi.Mu;
 
@@ -33,17 +33,17 @@ namespace Dysnomia
         {
             if (Phosphorous.Sigmas.ContainsKey("Van Allen Belt")) throw new Exception("Already Mated");
             Quaternion Q = new Quaternion();
-            Ion I = new Ion(O.L.M);
-            Ion R = new Ion(O.R.M);
-            Ion N = new Ion(O.Y.M);
+            Ion I = new Ion(O.L);
+            Ion R = new Ion(O.R);
+            Ion N = new Ion(O.Y);
 
-            Q.Epsilon = Math.ModPow(R.M.Rod.Base, I.M.Cone.Manifold, N.M.Rod.Barn);
+            Q.Epsilon = Math.ModPow(R.Rod.Base, I.Cone.Manifold, N.Rod.Barn);
 
-            Q.Gamma = new Affinity(S.Gamma.Rod, I.M.Cone);
-            Q.Nu = new Affinity(S.Rho.Rod, O.R.M.Cone);
-            Q.Phi = new Affinity(S.Gamma.Rod, I.M.Cone);
-            Q.Rho = new Affinity(O.Y.M.Rod, S.Rho.Cone);
-            Q.Sigma = new Affinity(R.M.Rod, O.R.M.Cone);
+            Q.Gamma = new Affinity(S.Gamma.Rod, I.Cone);
+            Q.Nu = new Affinity(S.Rho.Rod, O.R.Cone);
+            Q.Phi = new Affinity(S.Gamma.Rod, I.Cone);
+            Q.Rho = new Affinity(O.Y.Rod, S.Rho.Cone);
+            Q.Sigma = new Affinity(R.Rod, O.R.Cone);
             Phosphorous.Sigmas.RecordQuaternion(Q, "Van Allen Belt");
 
             Quark M = new Quark(Q, S, Zinc.Fetch());

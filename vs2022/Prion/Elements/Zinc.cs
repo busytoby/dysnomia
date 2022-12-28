@@ -43,13 +43,13 @@ namespace Prion.Elements
             Ion R = new Ion();
             Ion N = new Ion();
 
-            Eta.Gamma = new Affinity(R.M.Rod, N.M.Cone);
-            Eta.Nu = new Affinity(I.M.Rod, R.M.Cone);
-            Eta.Phi = new Affinity(N.M.Rod, I.M.Cone);
-            Eta.Rho = new Affinity(N.M.Rod, R.M.Cone);
-            Eta.Sigma = new Affinity(N.M.Rod, N.M.Cone);
+            Eta.Gamma = new Affinity(R.Rod, N.Cone);
+            Eta.Nu = new Affinity(I.Rod, R.Cone);
+            Eta.Phi = new Affinity(N.Rod, I.Cone);
+            Eta.Rho = new Affinity(N.Rod, R.Cone);
+            Eta.Sigma = new Affinity(N.Rod, N.Cone);
 
-            Eta.Epsilon = Dysnomia.Math.ModPow(R.M.Rod.Base, I.M.Cone.Manifold, N.M.Rod.Barn);
+            Eta.Epsilon = Dysnomia.Math.ModPow(R.Rod.Base, I.Cone.Manifold, N.Rod.Barn);
 
             Phosphorous.Locks.Add(Eta.Epsilon, new Mutex());
             Bonds--;

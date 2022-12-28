@@ -11,13 +11,13 @@ namespace Dysnomia {
         Ion^ N = gcnew Ion();
        
         Quaternion^ V = gcnew Quaternion();
-        V->Gamma = gcnew Affinity(S->Y->M->Rod, I->M->Cone);
-        V->Nu = gcnew Affinity(S->L->M->Rod, Q->Y->M->Cone);
-        V->Phi = gcnew Affinity(S->Y->M->Rod, Q->Y->M->Cone);
-        V->Rho = gcnew Affinity(Q->Y->M->Rod, S->L->M->Cone);
-        V->Sigma = gcnew Affinity(R->M->Rod, Q->R->M->Cone);
+        V->Gamma = gcnew Affinity(S->Y->Rod, I->Cone);
+        V->Nu = gcnew Affinity(S->L->Rod, Q->Y->Cone);
+        V->Phi = gcnew Affinity(S->Y->Rod, Q->Y->Cone);
+        V->Rho = gcnew Affinity(Q->Y->Rod, S->L->Cone);
+        V->Sigma = gcnew Affinity(R->Rod, Q->R->Cone);
 
-        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, V->Nu->Cone->Barn, N->M->Rod->Manifold);
+        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, V->Nu->Cone->Barn, N->Rod->Manifold);
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
@@ -31,13 +31,13 @@ namespace Dysnomia {
         Ion^ N = gcnew Ion(Q->Sigma);
 
         Quaternion^ V = gcnew Quaternion();
-        V->Gamma = gcnew Affinity(I->M->Rod, I->M->Cone);
-        V->Nu = gcnew Affinity(Q->Nu->Rod, I->M->Cone);
-        V->Phi = gcnew Affinity(Q->Phi->Rod, N->M->Cone);
+        V->Gamma = gcnew Affinity(I->Rod, I->Cone);
+        V->Nu = gcnew Affinity(Q->Nu->Rod, I->Cone);
+        V->Phi = gcnew Affinity(Q->Phi->Rod, N->Cone);
         V->Rho = Q->Rho;
-        V->Sigma = gcnew Affinity(R->M->Rod, R->M->Cone);
+        V->Sigma = gcnew Affinity(R->Rod, R->Cone);
 
-        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, Q->Nu->Cone->Barn, N->M->Rod->Manifold);
+        V->Epsilon = Math::ModPow(V->Gamma->Cone->Barn, Q->Nu->Cone->Barn, N->Rod->Manifold);
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
@@ -51,13 +51,13 @@ namespace Dysnomia {
         Ion^ N = gcnew Ion();
 
         Quaternion^ V = gcnew Quaternion();
-        V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->M->Cone);
-        V->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Y->M->Cone);
-        V->Phi = gcnew Affinity(Last->Value.Value->Gamma->Rod, S->Y->M->Cone);
-        V->Rho = gcnew Affinity(S->Y->M->Rod, Last->Value.Value->Rho->Cone);
-        V->Sigma = gcnew Affinity(R->M->Rod, S->R->M->Cone);
+        V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->Cone);
+        V->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Y->Cone);
+        V->Phi = gcnew Affinity(Last->Value.Value->Gamma->Rod, S->Y->Cone);
+        V->Rho = gcnew Affinity(S->Y->Rod, Last->Value.Value->Rho->Cone);
+        V->Sigma = gcnew Affinity(R->Rod, S->R->Cone);
 
-        V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->R->M->Rod->Barn);
+        V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->R->Rod->Barn);
         if (V->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");
 
@@ -83,7 +83,7 @@ namespace Dysnomia {
             }
 
             Quaternion^ V = gcnew Quaternion();
-            V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->M->Cone);
+            V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->Cone);
             V->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Phi->Cone);
             if (S->Gamma->Rod->Signal > Last->Value.Value->Gamma->Rod->Signal)
                 V->Phi = gcnew Affinity(S->Gamma->Rod, Last->Value.Value->Nu->Cone);
@@ -93,10 +93,10 @@ namespace Dysnomia {
                 V->Rho = gcnew Affinity(S->Rho->Rod, Last->Value.Value->Rho->Cone);
             else
                 V->Rho = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Rho->Cone);
-            if (S->Phi->Cone->Barn < R->M->Rod->Barn)
-                V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
+            if (S->Phi->Cone->Barn < R->Rod->Barn)
+                V->Sigma = gcnew Affinity(R->Rod, S->Sigma->Cone);
             else
-                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
+                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->Cone);
 
             V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
 
@@ -113,19 +113,19 @@ namespace Dysnomia {
 
             Quaternion^ V = gcnew Quaternion();
             if(S->Phi->Cone->Manifold < Last->Value.Value->Phi->Cone->Manifold)
-                V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->M->Cone);
+                V->Gamma = gcnew Affinity(Last->Value.Value->Gamma->Rod, I->Cone);
             else 
-                V->Gamma = gcnew Affinity(I->M->Rod, Last->Value.Value->Gamma->Cone);
+                V->Gamma = gcnew Affinity(I->Rod, Last->Value.Value->Gamma->Cone);
             V->Nu = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Phi->Cone);
             V->Phi = gcnew Affinity(S->Gamma->Rod, Last->Value.Value->Nu->Cone);
             if (S->Rho->Rod->Foundation > Last->Value.Value->Rho->Cone->Foundation)
                 V->Rho = gcnew Affinity(S->Rho->Rod, Last->Value.Value->Rho->Cone);
             else
                 V->Rho = gcnew Affinity(Last->Value.Value->Rho->Rod, S->Rho->Cone);
-            if (S->Phi->Cone->Barn < R->M->Rod->Barn)
-                V->Sigma = gcnew Affinity(R->M->Rod, S->Sigma->Cone);
+            if (S->Phi->Cone->Barn < R->Rod->Barn)
+                V->Sigma = gcnew Affinity(R->Rod, S->Sigma->Cone);
             else
-                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->M->Cone);
+                V->Sigma = gcnew Affinity(S->Sigma->Rod, R->Cone);
 
             V->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Nu->Cone->Manifold, S->Sigma->Rod->Barn);
 
@@ -139,13 +139,13 @@ namespace Dysnomia {
 
     void Polygamma::Kappa(Ion^ I, Ion^ R, Ion^ N) {
         Quaternion^ L = gcnew Quaternion();
-        L->Gamma = gcnew Affinity(I->M->Rod, Last->Value.Value->Nu->Cone);
-        L->Nu = gcnew Affinity(N->M->Rod, R->M->Cone);
-        L->Phi = gcnew Affinity(First->Value.Value->Gamma->Rod, N->M->Cone);
+        L->Gamma = gcnew Affinity(I->Rod, Last->Value.Value->Nu->Cone);
+        L->Nu = gcnew Affinity(N->Rod, R->Cone);
+        L->Phi = gcnew Affinity(First->Value.Value->Gamma->Rod, N->Cone);
         L->Rho = gcnew Affinity(gcnew Dynamic(), First->Value.Value->Nu->Cone);
-        L->Sigma = gcnew Affinity(R->M->Rod, I->M->Cone);
+        L->Sigma = gcnew Affinity(R->Rod, I->Cone);
 
-        L->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Rho->Cone->Manifold, N->M->Rod->Barn);
+        L->Epsilon = Math::ModPow(Last->Value.Key, Last->Value.Value->Rho->Cone->Manifold, N->Rod->Barn);
 
         if (L->Epsilon.IsZero)
             throw gcnew Exception("Zero Epsilon");

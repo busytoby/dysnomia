@@ -19,8 +19,8 @@ namespace Prion.Elements
 
         public void RecordTensor(Tensor V, String Name)
         {
-            Phosphorous.Locks.Add(V.Gamma.Epsilon, new Mutex());
-            base.Add(Name, V.Gamma.Epsilon);
+            Phosphorous.Locks.Add(V.Gamma.Rho.Phi.Eta, new Mutex());
+            base.Add(Name, V.Gamma.Rho.Phi.Eta);
         }
 
         public void RecordQuaternion(Dysnomia.Quaternion V, String Name)

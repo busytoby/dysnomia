@@ -38,9 +38,9 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			gcnew Polygamma(Epsilon[2]));
 
-		Octonion^ X = gcnew Octonion(Delta->N->Rho, Lambda1->Nu->Nu);
+		Octonion^ X = gcnew Octonion(Delta->N->Rho, Lambda1->Nu->Nu->Phi->L);
 		X->Xi(Delta);
-		Octonion^ Y = gcnew Octonion(Delta->N->Gamma, Lambda2->Phi->Nu);
+		Octonion^ Y = gcnew Octonion(Delta->N->Gamma, Lambda2->Phi->Nu->Phi->Y);
 		Q = gcnew Quark(Delta->N, Delta->R, Epsilon[2]);
 		Y->Xi(Q);
 		X->Psi->Attach(Y->Psi);
@@ -64,7 +64,7 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			gcnew Polygamma(Epsilon[2]));
 
-		Octonion^ X = gcnew Octonion(Q->N->Rho, Lambda->Phi->Rho);
+		Octonion^ X = gcnew Octonion(Q->N->Rho, Lambda->Phi->Rho->Phi->L);
 		X->Xi(Q);
 		Q = gcnew Quark(Q->N, Q->R, Epsilon[2]);
 		X->Psi->Attach(Q);
@@ -87,7 +87,7 @@ namespace Dysnomia {
 			gcnew Polygamma(Epsilon[3]),
 			Phi);
 
-		Octonion^ X = gcnew Octonion(Q->N->Phi, Lambda->Sigma->Phi);
+		Octonion^ X = gcnew Octonion(Q->N->Phi, Lambda->Sigma->Phi->Phi->R);
 		X->Xi(Q);
 		X->Psi->Attach(Nu);
 		Q = gcnew Quark(Nu->L, Nu->R, Epsilon[2]);

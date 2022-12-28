@@ -18,7 +18,7 @@ namespace Prion.Elements
         {
             if (Gamma.Y.Alpha == null)
             {
-                Gamma.Y.Alpha = new Quark(Molybdenum.Rho.Kernel.Eta.Tsi.First.Value.Key.Nu, Zinc.Fetch(), Gamma.Tau);
+                Gamma.Y.Alpha = new Quark(Molybdenum.Rho.Kernel.Eta.Tsi.First.Value.Key.Nu.Xi, Zinc.Fetch(), Gamma.Tau);
                 Titanium.Chi.Head.Xi(Gamma.Y.Alpha);
             }
             else throw new Exception("Already Active");
@@ -40,7 +40,7 @@ namespace Prion.Elements
         {
             if (Iota.Alpha == null)
             {
-                Iota.Alpha = new Quark(Omicron.Kernel.Eta.Tsi.HeadTensor.Nu, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Head);
+                Iota.Alpha = new Quark(Omicron.Kernel.Eta.Tsi.HeadTensor.Nu.Xi, Zinc.Fetch(), Omicron.Kernel.Alpha.Rho.Head);
                 Titanium.Chi.Head.Xi(Iota.Alpha);
             }
 

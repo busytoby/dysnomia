@@ -28,7 +28,7 @@ namespace Prion.Elements
             Nu = new Octonion(Beta.Rho.Head.Sigma, Beta.Rho.Tail.Gamma);
             Chi.AddLast(Phi, Nu);
 
-            Xi = new Spinor(Phi.Nu, Beta.Rho);
+            Xi = new Spinor(Phi.Nu.Xi, Beta.Rho);
         }
     }
 }

@@ -24,10 +24,10 @@ namespace Prion.Elements
                 Orbital VenusOrbital = Cerium.GetOrbitalByName("Venus");
 
                 Sigma = new Dysnomia.Quaternion();
-                Sigma.Gamma = SunOrbital.L.M;
-                Sigma.Nu = NeptuneOrbital.R.M;
-                Sigma.Phi = UranusOrbital.Y.M;
-                Sigma.Rho = VenusOrbital.L.M;
+                Sigma.Gamma = SunOrbital.L;
+                Sigma.Nu = NeptuneOrbital.R;
+                Sigma.Phi = UranusOrbital.Y;
+                Sigma.Rho = VenusOrbital.L;
                 Sigma.Sigma = new Affinity();
 
                 Sigma.Epsilon = Sigma.Rho.Mu;
