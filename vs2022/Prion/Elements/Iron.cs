@@ -20,7 +20,7 @@ namespace Prion.Elements
             Iota = Beta;
 
             Mu = new Quark(Delta.Rho.Last.Previous.Value.Value, Zinc.Fetch(), Delta.Rho.Head); // Water
-            Nu = new Octonion(Beta.Phi.Gamma.Phi.Y, Beta.Rho.Nu.Phi.R);
+            Nu = new Octonion(Beta.Phi.Gamma.L, Beta.Rho.Nu.R);
             Nu.Xi(Mu);
 
             Eta = new Copper(Delta.Rho.Last.Previous.Value.Value, Mu, Delta.Rho.Head);

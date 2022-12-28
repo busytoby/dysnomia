@@ -16,11 +16,14 @@ namespace Dysnomia {
 		}
 	};
 
+	public ref class Prion : public Spin<BigInteger> {
+	};
+
 	public ref class Octonion {
 	public:
-		BigInteger Epsilon;
-
-		Orbital^ Phi;
+		Ion^ L;
+		Ion^ R;
+		Prion^ Omega;
 		Quark^ Psi;
 
 		Octonion(Affinity^);

@@ -42,7 +42,7 @@ namespace Prion.Elements
 
             if (Alpha.Theta.Count == 0)
             {
-                Epsilon = new Polygamma(Kernel.Iota.Phi.Rho.Phi, Kernel.Iota.Phi.Gamma.Phi);
+                Epsilon = new Polygamma(Kernel.Iota.Phi.Xi);
                 Epsilon.Add(Tin.Sigma);
             }
             else if (Alpha.Theta.Count == 1)

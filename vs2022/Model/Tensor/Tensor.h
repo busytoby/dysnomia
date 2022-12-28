@@ -9,11 +9,11 @@ namespace Dysnomia {
 	public:
 		property Quaternion^ Xi { Quaternion^ get() {
 			Quaternion^ Chi = gcnew Quaternion();
-			Chi->Gamma = Gamma->Phi->Y;
-			Chi->Nu = Nu->Phi->Y;
-			Chi->Phi = Phi->Phi->Y;
-			Chi->Rho = Rho->Phi->Y;
-			Chi->Sigma = Sigma->Phi->Y;
+			Chi->Gamma = Gamma->R;
+			Chi->Nu = Nu->R;
+			Chi->Phi = Phi->R;
+			Chi->Rho = Rho->R;
+			Chi->Sigma = Sigma->R;
 			return Chi;
 		}};
 	};
