@@ -18,7 +18,7 @@ namespace Dysnomia {
 		L->Sustain(L->Ohm, true);
 		L->React(L->Pi);
 
-		R->Charge(L->Mu);
+		R->Charge(R->Mu);
 		R->Induce(R->Sigma);
 		R->Torque(R->Rho);
 		R->Amplify(R->Upsilon, true);
