@@ -28,6 +28,7 @@ namespace Dysnomia {
 
 		Octonion(Affinity^);
 		Octonion(Affinity^, Affinity^);
+		void Omicron();
 		void Xi(Quark^);
 	};
 }

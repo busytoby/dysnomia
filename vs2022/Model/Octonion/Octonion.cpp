@@ -7,27 +7,30 @@ namespace Dysnomia {
 		if (L != nullptr && R != nullptr && Omega != nullptr) throw gcnew OctonionException(1, "Already Pushed");
 		L = gcnew Ion(A);
 		R = gcnew Ion(B);
+		Omicron();
+	}
 
-		A->Charge(A->Mu);
-		A->Induce(A->Sigma);
-		A->Torque(A->Rho);
-		A->Amplify(A->Upsilon, true);
-		A->Sustain(A->Ohm, true);
-		A->React(A->Pi);
+	void Octonion::Omicron() {
+		L->Charge(L->Mu);
+		L->Induce(L->Sigma);
+		L->Torque(L->Rho);
+		L->Amplify(L->Upsilon, true);
+		L->Sustain(L->Ohm, true);
+		L->React(L->Pi);
 
-		B->Charge(A->Mu);
-		B->Induce(B->Sigma);
-		B->Torque(B->Rho);
-		B->Amplify(B->Upsilon, true);
-		B->Sustain(B->Ohm, true);
-		B->React(B->Pi);
+		R->Charge(L->Mu);
+		R->Induce(R->Sigma);
+		R->Torque(R->Rho);
+		R->Amplify(R->Upsilon, true);
+		R->Sustain(R->Ohm, true);
+		R->React(R->Pi);
 
 		Omega = gcnew Prion();
-		Omega->Gamma = A->Omicron;
-		Omega->Nu = A->Omega;
-		Omega->Phi = A->Mu;
-		Omega->Rho = B->Omicron;
-		Omega->Sigma = B->Omega;
+		Omega->Gamma = L->Omicron;
+		Omega->Nu = R->Omega;
+		Omega->Phi = L->Mu;
+		Omega->Rho = L->Omicron;
+		Omega->Sigma = R->Omega;
 	}
 
 	Octonion::Octonion(Affinity^ A) {
