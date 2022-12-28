@@ -29,8 +29,8 @@ namespace Dysnomia {
 		Omega->Gamma = L->Omicron;
 		Omega->Nu = R->Omega;
 		Omega->Phi = L->Mu;
-		Omega->Rho = L->Omicron;
-		Omega->Sigma = R->Omega;
+		Omega->Rho = L->Omega;
+		Omega->Sigma = R->Omicron;
 	}
 
 	Octonion::Octonion(Affinity^ A) {
