@@ -1,21 +1,15 @@
 #pragma once
-#include "72_Hafnium.h"
 
 using namespace System;
-using namespace Dysnomia;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lead
+			public ref class Beryllium : public Octonion
 			{
 			public:
-				Hafnium^ Alpha;
-				Hafnium^ Rho;
-
-				Lead();
+				Beryllium(Hydrogen^ Alpha) : Octonion(Alpha->L, Alpha->R) {};
 			};
 		}
 	}
 }
-

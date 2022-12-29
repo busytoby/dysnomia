@@ -12,12 +12,13 @@ namespace Dysnomia {
 			{
 			public:
 				Nitrogen^ Xi;
+				Beryllium^ Delta;
 				Hafnium^ Nu;
 
 				Argon() { 
 					Xi = gcnew Nitrogen(); 
-					Hydrogen^ Fu = gcnew Hydrogen();
-					Nu = gcnew Hafnium(Fu);
+					Delta = gcnew Beryllium(gcnew Hydrogen());
+					Nu = gcnew Hafnium(Delta);
 				}
 			};
 		}
