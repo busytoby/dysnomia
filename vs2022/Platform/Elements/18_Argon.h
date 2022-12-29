@@ -11,14 +11,14 @@ namespace Dysnomia {
 			public ref class Argon
 			{
 			public:
-				Nitrogen^ Xi;
-				Beryllium^ Delta;
-				Sodium^ Nu;
+				Nitrogen^ Gamma;
+				Beryllium^ Phi;
+				Sodium^ Sigma;
 
 				Argon() { 
-					Xi = gcnew Nitrogen(); 
-					Delta = gcnew Beryllium(gcnew Hydrogen());
-					Nu = gcnew Sodium(Delta);
+					Gamma = gcnew Nitrogen(); 
+					Phi = gcnew Beryllium(gcnew Hydrogen());
+					Sigma = gcnew Sodium(Phi);
 				}
 			};
 		}
