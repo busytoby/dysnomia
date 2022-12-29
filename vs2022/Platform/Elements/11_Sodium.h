@@ -1,6 +1,6 @@
 #pragma once
 #include "01_Hydrogen.h"
-#include "11_Sodium.h"
+#include "04_Beryllium.h"
 
 using namespace Dysnomia::Platform::Elements;
 using namespace System;
@@ -8,10 +8,10 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Hafnium : Tensor
+			public ref class Sodium : Bath
 			{
 			public:
-				Hafnium(Sodium^ Beta) { 
+				Sodium(Beryllium^ Beta) {
 					Gamma = Beta;
 				};
 			};
