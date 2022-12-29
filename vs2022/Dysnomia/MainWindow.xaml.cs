@@ -1,7 +1,7 @@
 ﻿// Property Of Uwu University
 // This Application Is Distributed As Sharia Law
 
-using Prion.Elements;
+using Dysnomia.Platform.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,13 +30,17 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
-        Tsuan Tsa;
+        private Wou Xibe;
 
         public MainWindow()
         {
             InitializeComponent();
+            ReadyPlatform();
+        }
 
-            Tsa = new Tsuan();
+        private void ReadyPlatform()
+        {
+            Xibe = new Wou();
         }
     }
 }
