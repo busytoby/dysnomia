@@ -11,6 +11,7 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Fluorine^ F = gcnew Fluorine();
+				Neon^ N = gcnew Neon(F);
 			}
 		}
 	}
