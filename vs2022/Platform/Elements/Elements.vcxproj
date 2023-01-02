@@ -127,6 +127,7 @@
     <ClInclude Include="05_Boron.h" />
     <ClInclude Include="06_Carbon.h" />
     <ClInclude Include="07_Nitrogen.h" />
+    <ClInclude Include="08_Oxygen.h" />
     <ClInclude Include="09_Fluorine.h" />
     <ClInclude Include="10_Neon.h" />
     <ClInclude Include="11_Sodium.h" />
@@ -144,9 +145,6 @@
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="05_Boron.cpp" />
-    <ClCompile Include="06_Carbon.cpp" />
-    <ClCompile Include="07_Nitrogen.cpp" />
     <ClCompile Include="09_Fluorine.cpp" />
     <ClCompile Include="10_Neon.cpp" />
     <ClCompile Include="15_Phosphorous.cpp" />

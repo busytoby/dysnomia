@@ -19,22 +19,10 @@ namespace Dysnomia {
 	generic <typename T> where T : Epsilon
 		public ref class Quark : Epsilon {
 	public:
-		ref class AntiQuark
-		{
-		public:
-			Quark^ R;
-			Quark^ L;
-
-			AntiQuark(Quark^, Quark^);
-		};
-
-		LinkedList<AntiQuark^>^ RAQ;
 		T R;
 		T N;
 		T L;
-		LinkedList<AntiQuark^>^ LAQ;
 
 		Quark(T, T, T);
-		void Attach(Quark^);
 	};
 }
