@@ -1,8 +1,4 @@
 #pragma once
-#include "10_Neon.h"
-#include "19_Potassium.h"
-#include "58_Cerium.h"
-#include "89_Actinium.h"
 
 using namespace Dysnomia::Platform::Elements;
 using namespace System;
