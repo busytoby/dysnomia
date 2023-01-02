@@ -28,7 +28,7 @@ namespace Dysnomia {
 					Rho = gcnew Carbon(); // Contains First Pion
 
 					Sigma = gcnew Oxygen();
-					Nitrogen^ N = gcnew Nitrogen(Rho->Xi, Rho->Alpha, (Dynamic^)Sigma->L); // First Muon
+					Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, (Dynamic^)Sigma->L); // First Muon
 
 					Delta = gcnew Beryllium((Dynamic^)Sigma->R, Epsilon->Item1);
 				} 
