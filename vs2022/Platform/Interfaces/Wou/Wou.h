@@ -9,7 +9,7 @@ namespace Dysnomia {
 			public ref class Wou
 			{
 			private:
-				static Helium^ Xi;
+				static Beryllium^ Xi;
 				void Alpha();
 			public:
 				//static Praseodymium^ Xa;

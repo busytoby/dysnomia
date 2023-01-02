@@ -8,7 +8,8 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
-				Xi = gcnew Helium();
+				Xi = gcnew Beryllium();
+				BigInteger ProofOfTemperature = Xi->RunXi();
 				Alpha();		
 			}
 

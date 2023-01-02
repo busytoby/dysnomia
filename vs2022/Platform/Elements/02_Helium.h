@@ -11,18 +11,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Helium
-			{
-			public:
-				/*
-				static Neon^ Neon;
-				static Potassium^ Potassium;
-				static Cerium^ Cerium;
-				static Actinium^ Actinium;
-
-				Helium();
-				*/
-			};
+			public ref class Helium : public Tuple<Dynamic^, Dynamic^> { };
 		}
 	}
 }

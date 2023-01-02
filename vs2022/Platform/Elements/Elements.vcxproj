@@ -144,9 +144,6 @@
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_Hydrogen.cpp" />
-    <ClCompile Include="02_Helium.cpp" />
-    <ClCompile Include="03_Lithium.cpp" />
     <ClCompile Include="05_Boron.cpp" />
     <ClCompile Include="06_Carbon.cpp" />
     <ClCompile Include="07_Nitrogen.cpp" />

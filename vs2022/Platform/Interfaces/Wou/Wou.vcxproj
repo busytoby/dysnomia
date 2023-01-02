@@ -141,6 +141,12 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\Affinity\Affinity.vcxproj">
+      <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Dynamic\Dynamic.vcxproj">
+      <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Util\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
     </ProjectReference>
