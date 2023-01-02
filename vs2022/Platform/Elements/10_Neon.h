@@ -8,6 +8,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			static public ref class Neon : public Dictionary<BigInteger, Object^>
 			{
 			private:
@@ -26,6 +27,7 @@ namespace Dysnomia {
 					Boron->Add(T, Sigma);
 				}
 			};
+			*/
 		}
 	}
 }

@@ -16,7 +16,7 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Affinity
+	public ref class Affinity : Epsilon
 	{
 	private:
 		void ConductorGenerate(BigInteger);

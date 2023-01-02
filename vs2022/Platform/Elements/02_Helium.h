@@ -14,12 +14,14 @@ namespace Dysnomia {
 			public ref class Helium
 			{
 			public:
+				/*
 				static Neon^ Neon;
 				static Potassium^ Potassium;
 				static Cerium^ Cerium;
 				static Actinium^ Actinium;
 
 				Helium();
+				*/
 			};
 		}
 	}

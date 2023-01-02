@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Hydrogen : public Orbital {};
+			public ref class Hydrogen : public Dynamic {};
 		}
 	}
 }

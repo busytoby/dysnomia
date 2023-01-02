@@ -20,7 +20,12 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Dynamic
+	public ref class Epsilon {
+	public:
+		BigInteger Epsilon;
+	};
+
+	public ref class Dynamic : Epsilon
 	{
 	private:
 		BigInteger Secret, Ring;

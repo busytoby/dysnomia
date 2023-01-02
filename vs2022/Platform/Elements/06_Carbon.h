@@ -7,7 +7,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon : public Affinity {};
+			//public ref class Carbon : public Affinity {};
 		}
 	}
 }

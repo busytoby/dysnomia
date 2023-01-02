@@ -5,10 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lithium : public Object
-			{
-			public:
-			};
+			public ref class Lithium : public Tuple<Dynamic^, Dynamic^, Dynamic^> { };
 		}
 	}
 }

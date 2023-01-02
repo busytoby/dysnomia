@@ -9,9 +9,9 @@ namespace Dysnomia {
 			public ref class Nitrogen
 			{
 			public:
-				Fluorine^ Fluorine;
+				//Fluorine^ Fluorine;
 
-				Nitrogen() { Fluorine = gcnew Dysnomia::Platform::Elements::Fluorine(); }
+				//Nitrogen() { Fluorine = gcnew Dysnomia::Platform::Elements::Fluorine(); }
 			};
 		}
 	}

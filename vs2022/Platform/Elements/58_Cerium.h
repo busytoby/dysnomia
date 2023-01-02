@@ -7,11 +7,13 @@ using namespace Dysnomia;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			static public ref class Cerium : Spin<Lead^>
 			{
 			public:
 				Cerium();
 			};
+			*/
 		}
 	}
 }

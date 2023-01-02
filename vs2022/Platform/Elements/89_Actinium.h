@@ -10,10 +10,10 @@ namespace Dysnomia {
 			public ref class Actinium
 			{
 			public:
-				static Argon^ Phi;
-				static Tin^ Tin;
+				//static Argon^ Phi;
+				//static Tin^ Tin;
 
-				Actinium();
+				//Actinium();
 			};
 		}
 	}

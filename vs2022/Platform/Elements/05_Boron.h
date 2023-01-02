@@ -7,6 +7,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Boron : public Dictionary<Object^, List<BigInteger>^>
 			{
 			public:
@@ -25,6 +26,7 @@ namespace Dysnomia {
 					else Epsilons->Add(B);
 				}
 			};
+			*/
 		}
 	}
 }

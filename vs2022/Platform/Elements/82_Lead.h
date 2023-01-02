@@ -10,10 +10,10 @@ namespace Dysnomia {
 			public ref class Lead
 			{
 			public:
-				Hafnium^ Alpha;
-				Hafnium^ Rho;
+				//Hafnium^ Alpha;
+				//Hafnium^ Rho;
 
-				Lead();
+				//Lead();
 			};
 		}
 	}

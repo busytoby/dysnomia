@@ -5,10 +5,12 @@
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			Lead::Lead()
 			{
 				
 			}
+			*/
 		}
 	}
 }

@@ -16,11 +16,8 @@ namespace Dysnomia {
 		}
 	};
 
-
-
-
-	public ref class Quark
-	{
+	generic <typename T> where T : Epsilon
+		public ref class Quark : Epsilon {
 	public:
 		ref class AntiQuark
 		{
@@ -31,15 +28,13 @@ namespace Dysnomia {
 			AntiQuark(Quark^, Quark^);
 		};
 
-		BigInteger Epsilon;
-
 		LinkedList<AntiQuark^>^ RAQ;
-		Quaternion^ R;
-		Quaternion^ N;
-		Quaternion^ L;
+		T R;
+		T N;
+		T L;
 		LinkedList<AntiQuark^>^ LAQ;
 
-		Quark(Quaternion^, Quaternion^, Quaternion^);
+		Quark(T, T, T);
 		void Attach(Quark^);
 	};
 }

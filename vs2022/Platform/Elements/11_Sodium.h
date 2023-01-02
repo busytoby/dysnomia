@@ -8,6 +8,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Sodium : Bath
 			{
 			public:
@@ -15,6 +16,7 @@ namespace Dysnomia {
 					Gamma = Beta;
 				};
 			};
+			*/
 		}
 	}
 }

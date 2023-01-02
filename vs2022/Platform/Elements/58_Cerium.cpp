@@ -5,10 +5,12 @@
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			Cerium::Cerium() : Spin<Lead^>()
 			{
 				//if (Chi == null) Chi = gcnew Phosphorous();
 			}
+			*/
 		}
 	}
 }

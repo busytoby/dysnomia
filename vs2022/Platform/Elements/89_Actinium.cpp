@@ -5,9 +5,11 @@
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			Actinium::Actinium() {
 				Phi = gcnew Argon();
 			}
+			*/
 		}
 	}
 }

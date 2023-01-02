@@ -3,7 +3,9 @@
 #include "Quark.h"
 
 namespace Dysnomia {
-    Quark::Quark(Quaternion^ Y, Quaternion^ X, Quaternion^ Z)
+    generic <typename T> 
+    where T : Epsilon
+    Quark<T>::Quark(T Y, T X, T Z)
     {
         N = Y;
         R = X;
@@ -13,15 +15,17 @@ namespace Dysnomia {
         RAQ = gcnew LinkedList<AntiQuark^>();
 
         if (!L->Epsilon.IsZero)
-            Epsilon = L->Epsilon;
+            this->Epsilon = L->Epsilon;
         else if (!N->Epsilon.IsZero)
-            Epsilon = N->Epsilon;
+            this->Epsilon = N->Epsilon;
         else if (!R->Epsilon.IsZero)
-            Epsilon = R->Epsilon;
+            this->Epsilon = R->Epsilon;
         else throw gcnew Exception("Zero Epsilons");
     }
 
-    void Quark::Attach(Quark^ R) {
+    generic <typename T> 
+    where T : Epsilon
+    void Quark<T>::Attach(Quark^ R) {
         LinkedListNode<AntiQuark^>^ P = RAQ->First;
         while (P != nullptr)
             if (P->Value->R != nullptr && P->Value->R->Epsilon == R->Epsilon) return;
@@ -29,7 +33,9 @@ namespace Dysnomia {
         RAQ->AddFirst(gcnew Quark::AntiQuark(R, this));
     }
 
-    Quark::AntiQuark::AntiQuark(Quark^ _R, Quark^ _L) {
+    generic <typename T> 
+    where T : Epsilon
+    Quark<T>::AntiQuark::AntiQuark(Quark^ _R, Quark^ _L) {
         LinkedListNode<AntiQuark^>^ P = _R->LAQ->First;
         while (P != nullptr)
             if (P->Value->L != nullptr && P->Value->L->Epsilon == _L->Epsilon) return;
