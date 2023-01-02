@@ -11,6 +11,9 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Carbon^ C = gcnew Carbon();
+
+				Hydrogen^ HelloCone = gcnew Hydrogen();
+				Nitrogen^ N = gcnew Nitrogen(C->Xi, C->Pi->N, HelloCone);
 			}
 		}
 	}

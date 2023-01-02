@@ -6,12 +6,10 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Nitrogen
+			public ref class Nitrogen : public Quark<Epsilon^>
 			{
 			public:
-				//Fluorine^ Fluorine;
-
-				//Nitrogen() { Fluorine = gcnew Dysnomia::Platform::Elements::Fluorine(); }
+				Nitrogen(Affinity^ C, Dynamic^ Y, Dynamic^ X) : Quark(gcnew Affinity(Y, X), C->Cone, C->Rod) { };
 			};
 		}
 	}
