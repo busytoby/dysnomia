@@ -3,6 +3,7 @@
 #include "04_Beryllium.h"
 #include "01_Hydrogen.h"
 #include <cassert>
+#include "03_Lithium.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -16,6 +17,7 @@ namespace Dysnomia {
 				Hydrogen^ Alpha;
 				Beryllium^ Xi;
 				Boron^ Pi;
+				Lithium^ Zeta;
 
 				Carbon() {
 					Alpha = gcnew Hydrogen();
@@ -26,6 +28,8 @@ namespace Dysnomia {
 					assert(ProofOfTemperature.Equals(Xi->Epsilon));
 
 					Pi = gcnew Boron(Alpha, Xi->Cone, Xi->Rod);
+
+					Zeta = gcnew Lithium(Alpha, Xi->Rod, Xi->Cone);
 				}
 			};
 		}
