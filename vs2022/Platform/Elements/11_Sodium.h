@@ -1,22 +1,28 @@
 #pragma once
-#include "01_Hydrogen.h"
-#include "04_Beryllium.h"
+#include "08_Oxygen.h"
+#include "09_Fluorine.h"
+#include "03_Lithium.h"
 
-using namespace Dysnomia::Platform::Elements;
 using namespace System;
+using namespace System::Collections::Generic;
+using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			/*
-			public ref class Sodium : Bath
+			public ref class Sodium
 			{
 			public:
-				Sodium(Beryllium^ Beta) {
-					Gamma = Beta;
-				};
+				Beryllium^ Beta;
+				Lithium^ Gamma;
+				Oxygen^ Rho;
+
+				Sodium(Fluorine^ F) {
+					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
+					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
+					Beta = gcnew Beryllium((Dynamic^)Rho->L, (Dynamic^)Rho->R);
+				}
 			};
-			*/
 		}
 	}
 }
