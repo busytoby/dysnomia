@@ -22,6 +22,8 @@ namespace Dysnomia {
 				Helium^ Epsilon;
 				Beryllium^ Delta;
 
+				Lithium^ Zeta;
+
 				Fluorine() {
 					Epsilon = gcnew Helium();
 
@@ -29,6 +31,8 @@ namespace Dysnomia {
 
 					Sigma = gcnew Oxygen();
 					Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, (Dynamic^)Sigma->L); // First Muon
+
+					Zeta = gcnew Lithium((Dynamic^)Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
 
 					Delta = gcnew Beryllium((Dynamic^)Sigma->R, Epsilon->Item1);
 				} 

@@ -12,7 +12,11 @@ namespace Dysnomia {
 			public ref class Neon : Oxygen
 			{
 			public:
-				Neon(Fluorine^ F) : Oxygen(F->Delta, gcnew Hydrogen(), F->Epsilon->Item2) {};			
+				Lithium^ Zeta;
+
+				Neon(Fluorine^ F) : Oxygen(F->Delta, gcnew Hydrogen(), F->Epsilon->Item2) {
+					Zeta = gcnew Lithium(F->Zeta->Item2, ((Affinity^)F->Sigma->N)->Rod, (Dynamic^)R);
+				};			
 			};
 		}
 	}
