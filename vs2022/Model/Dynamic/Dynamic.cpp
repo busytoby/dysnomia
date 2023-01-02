@@ -9,6 +9,7 @@ namespace Dysnomia {
 		Initialize();
 		Seed();
 		Tune();
+		this->Epsilon = Secret;
 	}
 
 	Dynamic::Dynamic(const Dynamic% Copier) {
@@ -26,6 +27,7 @@ namespace Dysnomia {
 		Ring = Copier.Ring;
 		Barn = Copier.Barn;
 		R = Copier.R;
+		this->Epsilon = Secret;
 	}
 
 

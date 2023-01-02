@@ -7,26 +7,10 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			/*
-			public ref class Boron : public Dictionary<Object^, List<BigInteger>^>
-			{
+			public ref class Boron : public Quark<Dynamic^>	{ 
 			public:
-				Boron() : Dictionary<Object^, List<BigInteger>^>() {};
-
-				void Add(Object^ Eta, BigInteger B)
-				{
-					List<BigInteger>^ Epsilons;
-					if (ContainsKey(Eta) && TryGetValue(Eta, Epsilons))
-						if(Epsilons->Contains(B)) return;
-					if (!ContainsKey(Eta)) {
-						Add(Eta, gcnew List<BigInteger>());
-						this[Eta]->Add(B);
-						return;
-					}
-					else Epsilons->Add(B);
-				}
+				Boron(Dynamic^ N, Dynamic^ R, Dynamic^ L) : Quark<Dynamic^>(N, R, L) {};
 			};
-			*/
 		}
 	}
 }

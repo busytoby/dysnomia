@@ -1,6 +1,7 @@
 #include "pch.h"
 
 #include "Wou.h"
+#include <assert.h>
 using namespace System::Numerics;
 
 namespace Dysnomia {
@@ -8,13 +9,14 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
-				Xi = gcnew Beryllium();
+				Hydrogen^ Hi = gcnew Hydrogen();
+
+				Beryllium^ Xi = gcnew Beryllium();			
 				BigInteger ProofOfTemperature = Xi->RunXi();
-				Alpha();		
-			}
+				assert(!ProofOfTemperature.IsZero);
+				assert(ProofOfTemperature.Equals(Xi->Epsilon));
 
-			void Wou::Alpha() {
-
+				Boron^ Qi = gcnew Boron(Hi, Xi->Cone, Xi->Rod);
 			}
 		}
 	}

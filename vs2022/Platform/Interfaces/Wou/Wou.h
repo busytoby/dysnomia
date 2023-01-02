@@ -9,11 +9,8 @@ namespace Dysnomia {
 			public ref class Wou
 			{
 			private:
-				static Beryllium^ Xi;
-				void Alpha();
-			public:
-				//static Praseodymium^ Xa;
 
+			public:
 				Wou();
 			};
 		}
