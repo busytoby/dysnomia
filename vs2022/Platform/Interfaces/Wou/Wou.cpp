@@ -10,14 +10,7 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
-				Carbon^ C = gcnew Carbon(); // Contains First Pion
-
-				Hydrogen^ HelloCone = gcnew Hydrogen(); // Entropically First Lepton
-				Nitrogen^ N = gcnew Nitrogen(C->Xi, C->Pi->N, HelloCone); // First Muon
-
-				Oxygen^ SeaQuark = gcnew Oxygen();
-
-				Affinity^ Gauge = gcnew Affinity(C->Alpha, ((Affinity^)SeaQuark->N)->Cone);
+				Fluorine^ F = gcnew Fluorine();
 			}
 		}
 	}
