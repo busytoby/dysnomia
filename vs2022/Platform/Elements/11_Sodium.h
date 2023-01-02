@@ -20,7 +20,7 @@ namespace Dysnomia {
 				Sodium(Fluorine^ F) {
 					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
 					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
-					Beta = gcnew Beryllium((Dynamic^)Rho->R, (Dynamic^)Rho->L);
+					Beta = gcnew Beryllium((Dynamic^)Rho->L, (Dynamic^)Rho->R);
 				}
 			};
 		}
