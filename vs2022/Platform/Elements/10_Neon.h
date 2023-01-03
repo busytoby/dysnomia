@@ -19,8 +19,8 @@ namespace Dysnomia {
 				Complex Shape;
 
 				Neon(Fluorine^ F) : Oxygen(F->Delta, gcnew Hydrogen(), F->Epsilon->Item2) {
-					Zeta = gcnew Lithium(F->Zeta->Item2, ((Affinity^)F->Sigma->N)->Rod, (Dynamic^)R);
-					Shape = (Complex)Zeta->Item1->Manifold / F->Shape;
+					Zeta = gcnew Lithium(F->Zeta->Item2, ((Affinity^)F->Xi->N)->Rod, (Dynamic^)R);
+					Shape = (Complex)Zeta->Item1->Barn / F->Shape;
 				};			
 			};
 		}
