@@ -4,6 +4,7 @@
 #include "03_Lithium.h"
 
 using namespace System;
+using namespace System::Drawing;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
 
@@ -17,10 +18,14 @@ namespace Dysnomia {
 				Lithium^ Gamma;
 				Oxygen^ Rho;
 
+				Color Shade;
+
 				Sodium(Fluorine^ F) {
 					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
 					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
 					Beta = gcnew Beryllium((Dynamic^)Rho->L, (Dynamic^)Rho->R);
+
+					Shade = Color::FromArgb((Int32) (((Dynamic^)Rho->L)->Manifold % Int32::MaxValue));
 				}
 			};
 		}
