@@ -7,7 +7,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Aluminium : public Quark<Affinity^> {
 			public:
-				Oxygen^ Rho;
+				Nitrogen^ Rho;
 				Lithium^ Phi;
 
 				property BigInteger Momentum { BigInteger get() { return N->Rod->Dynamo * N->Cone->Foundation; }}
@@ -15,9 +15,9 @@ namespace Dysnomia {
 				property Complex Mass { Complex get() { return ((Complex)(Momentum % R->Rod->Manifold) / (Complex)L->Rod->Ring); }}
 				property Complex Wight { Complex get() { return (Complex)((Affinity^)N)->Rod->Signal / (Complex)((Affinity^)R)->Cone->Manifold; }};
 
-				Aluminium(Affinity^ N, Affinity^ R, Affinity^ L) : Quark(N, R, L) {
-					Rho = gcnew Oxygen(gcnew Affinity(), gcnew Dynamic(), gcnew Dynamic());
-					Phi = gcnew Lithium(((Affinity^)Rho->N)->Rod, N->Cone, L->Rod);
+				Aluminium(Affinity^ N, Magnesium^ M, Affinity^ L) : Quark(N, (Affinity^)M->Upsilon->N, L) {
+					Rho = gcnew Nitrogen(((Affinity^)M->Rho->N), gcnew Dynamic(), (Dynamic^)M->Rho->R);
+					Phi = gcnew Lithium(((Affinity^)M->Rho->N)->Rod, N->Cone, L->Rod);
 				};
 			};
 		}
