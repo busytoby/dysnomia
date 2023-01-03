@@ -3,6 +3,7 @@
 #include "09_Fluorine.h"
 
 using namespace System;
+using namespace System::Drawing;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
 
@@ -14,8 +15,12 @@ namespace Dysnomia {
 			public:
 				Lithium^ Zeta;
 
+				property Color Hue {Color get() { return Color::FromArgb((Int32)(((Dynamic^)R)->Manifold % Int32::MaxValue)); }};
+				Complex Shape;
+
 				Neon(Fluorine^ F) : Oxygen(F->Delta, gcnew Hydrogen(), F->Epsilon->Item2) {
 					Zeta = gcnew Lithium(F->Zeta->Item2, ((Affinity^)F->Sigma->N)->Rod, (Dynamic^)R);
+					Shape = (Complex)Zeta->Item1->Manifold / F->Shape;
 				};			
 			};
 		}
