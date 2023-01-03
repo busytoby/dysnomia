@@ -26,9 +26,6 @@ namespace Dysnomia {
 
 					Nu = gcnew Lithium(Upsilon->N->Rod, Upsilon->N->Cone, Upsilon->R);
 					Rho = gcnew Oxygen(gcnew Beryllium(gcnew Hydrogen(), N->R), gcnew Hydrogen(), N->L);
-
-					N->Sigma->Phi = gcnew Silicon(S->Sigma->Xi, S->Rho, S->Sigma->Rho->Pi);
-					S->Sigma->Phi = gcnew Silicon(N->Sigma->Xi, N, N->Sigma->Rho->Pi);
 				}
 			};
 		}
