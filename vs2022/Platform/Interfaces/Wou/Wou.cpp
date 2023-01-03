@@ -12,8 +12,9 @@ namespace Dysnomia {
 
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
+				assert(N->Hue.GetBrightness() == 0.0);
 				Magnesium^ M = gcnew Magnesium(N, S);
-
+				assert(N->Hue.GetBrightness() > 0.0);
 				Aluminium^ A = gcnew Aluminium((Affinity^)N->N, (Affinity^)M->Rho->N, (Affinity^)S->Rho->N);
 				int i = 0;
 			}
