@@ -8,6 +8,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Helium : public Tuple<Dynamic^, Dynamic^> { 
 			public:
+				Helium(Dynamic^ A, Dynamic^ B) : Tuple(A, B) {};
 				Helium() : Tuple(gcnew Dynamic(), gcnew Dynamic()) {};
 			};
 		}
