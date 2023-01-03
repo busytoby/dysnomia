@@ -15,7 +15,7 @@ namespace Dysnomia {
         if (!rnd_Initialized) Initialize_Random();
 
         rnd.NextBytes(bytes);
-        //bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
+        bytes[bytes->Length - 1] &= (System::Byte)0x7F; //force sign bit to positive
         R = BigInteger(bytes);
         while (R > Prime) R = R / 2;
 
