@@ -15,6 +15,9 @@ namespace Dysnomia {
 			public:
 				Lithium^ Zeta;
 
+				property BigInteger Momentum { BigInteger get() { return ((Affinity^)N)->Rod->Dynamo * ((Affinity^)N)->Cone->Foundation; }}
+				property Complex Procession { Complex get() { return (Complex)Momentum / (Complex)((Dynamic^)R)->Manifold; }}
+				property Complex Mass { Complex get() { return ((Complex)(Momentum % ((Dynamic^)R)->Manifold) / (Complex)((Dynamic^)L)->Ring) * Procession; }}
 				property Complex Weight { Complex get() { return (Complex)((Dynamic^)R)->Foundation / (Complex)((Affinity^)N)->Rod->Element; }};
 				property Color Hue {Color get() { return Color::FromArgb((Int32)(((Dynamic^)R)->Manifold % Int32::MaxValue)); }};
 				Complex Shape;
