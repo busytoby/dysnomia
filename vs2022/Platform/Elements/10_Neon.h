@@ -15,7 +15,7 @@ namespace Dysnomia {
 			public:
 				Lithium^ Zeta;
 
-				property Complex Weight { Complex get() { return (Complex)((Affinity^)N)->Cone->Base / (Complex)((Affinity^)N)->Rod->Element; }};
+				property Complex Weight { Complex get() { return (Complex)((Affinity^)N)->Cone->Foundation / (Complex)((Affinity^)N)->Rod->Element; }};
 				property Color Hue {Color get() { return Color::FromArgb((Int32)(((Dynamic^)R)->Manifold % Int32::MaxValue)); }};
 				Complex Shape;
 
