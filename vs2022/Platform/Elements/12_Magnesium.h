@@ -22,7 +22,7 @@ namespace Dysnomia {
 					Xi = gcnew Helium((Dynamic^)N->L, (Dynamic^)N->R);
 
 					Upsilon = gcnew Nitrogen(gcnew Beryllium(), (Dynamic^)N->L, gcnew Hydrogen());
-					Nu = gcnew Lithium(((Affinity^)Upsilon->N)->Rod, (Dynamic^)Upsilon->R, ((Affinity^)Upsilon->N)->Cone);
+					Nu = gcnew Lithium(((Affinity^)Upsilon->N)->Rod, ((Affinity^)Upsilon->N)->Cone, (Dynamic^)Upsilon->R);
 				}
 			};
 		}
