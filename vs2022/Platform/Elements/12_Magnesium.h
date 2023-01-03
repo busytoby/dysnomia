@@ -10,7 +10,7 @@ namespace Dysnomia {
 			public ref class Magnesium : public Quark<Epsilon^>
 			{
 			public:
-				Magnesium(Neon^ N, Sodium^ S) : Quark(S->Gamma->Item1, N->Zeta->Item3, N->N) {
+				Magnesium(Neon^ N, Sodium^ S) : Quark(S->Beta->Rod, N->R, N->N) {
 
 				}
 			};
