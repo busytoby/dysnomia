@@ -10,6 +10,7 @@ namespace Dysnomia {
 				Oxygen^ Rho;
 				Lithium^ Phi;
 
+				property Complex Mass { Complex get() { return (Complex)(N->Rod->Dynamo * N->Cone->Foundation % R->Rod->Manifold) / (Complex)L->Rod->Ring; }}
 				property Complex Wight { Complex get() { return (Complex)((Affinity^)N)->Rod->Signal / (Complex)((Affinity^)R)->Cone->Manifold; }};
 
 				Aluminium(Affinity^ N, Affinity^ R, Affinity^ L) : Quark(N, R, L) {
