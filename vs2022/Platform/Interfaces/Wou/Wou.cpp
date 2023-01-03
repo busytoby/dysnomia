@@ -20,10 +20,11 @@ namespace Dysnomia {
 
 				Aluminium^ A = gcnew Aluminium(N->N, M, S->Rho->N);
 
-				Silicon^ DN = gcnew Silicon(N->Sigma->Xi, N, N->Sigma->Rho->Pi);
-				Silicon^ ND = gcnew Silicon(S->Sigma->Xi, S->Rho, S->Sigma->Rho->Pi);
-				DN->Pair(ND);
-				DN->R->Spin();
+				Phosphorous^ P = gcnew Phosphorous(
+					gcnew Silicon(N->Sigma->Xi, N, N->Sigma->Rho->Pi),
+					gcnew Silicon(S->Sigma->Xi, S->Rho, S->Sigma->Rho->Pi)
+				);
+				P->Item1->R->Spin();
 
 				int i = 0;
 			}
