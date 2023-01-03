@@ -10,9 +10,10 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
-				Fluorine^ F = gcnew Fluorine();
-				Neon^ N = gcnew Neon(F);
+				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
+
+				Magnesium^ M = gcnew Magnesium(N, S);
 			}
 		}
 	}
