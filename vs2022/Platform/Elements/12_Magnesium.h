@@ -25,7 +25,7 @@ namespace Dysnomia {
 					Upsilon = gcnew Nitrogen(gcnew Beryllium(), (Dynamic^)N->L, gcnew Hydrogen());
 
 					Nu = gcnew Lithium(((Affinity^)Upsilon->N)->Rod, ((Affinity^)Upsilon->N)->Cone, (Dynamic^)Upsilon->R);
-					Rho = gcnew Oxygen(gcnew Affinity(gcnew Dynamic(), (Dynamic^)N->R), gcnew Dynamic(), gcnew Dynamic());
+					Rho = gcnew Oxygen(gcnew Affinity(gcnew Dynamic(), (Dynamic^)N->R), gcnew Dynamic(), (Dynamic^)N->L);
 				}
 			};
 		}
