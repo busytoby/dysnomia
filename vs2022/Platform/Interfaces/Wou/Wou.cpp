@@ -14,6 +14,8 @@ namespace Dysnomia {
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
 
 				Magnesium^ M = gcnew Magnesium(N, S);
+
+				assert(N->Weight != S->Rho->Weight);
 			}
 		}
 	}
