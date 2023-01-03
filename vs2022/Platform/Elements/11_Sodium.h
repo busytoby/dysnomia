@@ -17,17 +17,19 @@ namespace Dysnomia {
 				Beryllium^ Beta;
 				Lithium^ Gamma;
 				Oxygen^ Rho;
+				Fluorine^ Sigma;
 
 				Color Hue;
 				Complex Hardness;
 				Complex Shape;
 
 				Sodium(Fluorine^ F) {
+					Sigma = F;
 					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
 					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
-					Beta = gcnew Beryllium((Dynamic^)Rho->L, (Dynamic^)Rho->R);
+					Beta = gcnew Beryllium(Rho->L, Rho->R);
 
-					Hue = Color::FromArgb((Int32)(((Dynamic^)Rho->L)->Manifold % Int32::MaxValue));
+					Hue = Color::FromArgb((Int32)(Rho->L->Manifold % Int32::MaxValue));
 					Hardness = (Complex)Gamma->Item1->Coordinate / (Complex)Gamma->Item1->Foundation;
 					Shape = (Complex)Gamma->Item1->Manifold / Hardness;
 				}

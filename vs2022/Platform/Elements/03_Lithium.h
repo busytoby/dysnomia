@@ -5,9 +5,9 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lithium : public Tuple<Dynamic^, Dynamic^, Dynamic^> { 
+			public ref class Lithium : public Tuple<Hydrogen^, Hydrogen^, Hydrogen^> {
 			public:
-				Lithium(Dynamic^ A, Dynamic^ B, Dynamic^ C) : Tuple(A, B, C) {};
+				Lithium(Hydrogen^ A, Hydrogen^ B, Hydrogen^ C) : Tuple(A, B, C) {};
 			};
 		}
 	}

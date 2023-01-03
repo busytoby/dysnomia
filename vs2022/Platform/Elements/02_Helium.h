@@ -6,10 +6,10 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Helium : public Tuple<Dynamic^, Dynamic^> { 
+			public ref class Helium : public Tuple<Hydrogen^, Hydrogen^> {
 			public:
-				Helium(Dynamic^ A, Dynamic^ B) : Tuple(A, B) {};
-				Helium() : Tuple(gcnew Dynamic(), gcnew Dynamic()) {};
+				Helium(Hydrogen^ A, Hydrogen^ B) : Tuple(A, B) {};
+				Helium() : Tuple(gcnew Hydrogen(), gcnew Hydrogen()) {};
 			};
 		}
 	}

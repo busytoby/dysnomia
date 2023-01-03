@@ -18,7 +18,7 @@ namespace Dysnomia {
 
 				Complex T = (Complex)N->Momentum * ((Complex)N->Mass + (Complex)N->Weight);
 
-				Aluminium^ A = gcnew Aluminium((Affinity^)N->N, M, (Affinity^)S->Rho->N);
+				Aluminium^ A = gcnew Aluminium(N->N, M, S->Rho->N);
 				int i = 0;
 			}
 		}

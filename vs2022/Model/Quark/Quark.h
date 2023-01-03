@@ -16,13 +16,16 @@ namespace Dysnomia {
 		}
 	};
 
-	generic <typename T> where T : Epsilon
+	generic <typename T1, typename T2, typename T3> 
+	where T1 : Epsilon 
+	where T2 : Epsilon 
+	where T3 : Epsilon
 		public ref class Quark : Epsilon {
 	public:
-		T R;
-		T N;
-		T L;
+		T1 N;
+		T2 R;
+		T3 L;
 
-		Quark(T, T, T);
+		Quark(T1, T2, T3);
 	};
 }

@@ -1,14 +1,15 @@
 #pragma once
+#include "04_Beryllium.h"
 
 using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Nitrogen : public Quark<Epsilon^>
+			public ref class Nitrogen : public Quark<Beryllium^, Hydrogen^, Hydrogen^>
 			{
 			public:
-				Nitrogen(Affinity^ C, Dynamic^ Y, Dynamic^ X) : Quark(gcnew Affinity(Y, X), C->Cone, C->Rod) { };
+				Nitrogen(Beryllium^ C, Hydrogen^ Y, Hydrogen^ X) : Quark(gcnew Beryllium(Y, X), C->Cone, C->Rod) { };
 			};
 		}
 	}

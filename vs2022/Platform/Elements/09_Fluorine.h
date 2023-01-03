@@ -4,6 +4,7 @@
 #include "06_Carbon.h"
 #include "07_Nitrogen.h"
 #include "08_Oxygen.h"
+#include "14_Silicon.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -24,6 +25,8 @@ namespace Dysnomia {
 
 				Lithium^ Zeta;
 
+				Silicon^ Phi;
+
 				Complex Hardness;
 				Complex Shape;
 
@@ -33,11 +36,11 @@ namespace Dysnomia {
 					Rho = gcnew Carbon(); // Contains First Pion
 
 					Sigma = gcnew Oxygen();
-					Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, (Dynamic^)Sigma->L); // First Muon
+					Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, Sigma->L); // First Muon
 
-					Zeta = gcnew Lithium((Dynamic^)Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
+					Zeta = gcnew Lithium(Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
 
-					Delta = gcnew Beryllium((Dynamic^)Sigma->R, Epsilon->Item1);
+					Delta = gcnew Beryllium(Sigma->R, Epsilon->Item1);
 
 					Rho->Hardness = (Complex)Rho->Zeta->Item3->Coordinate / (Complex)Rho->Zeta->Item1->Foundation;
 					Hardness = Rho->Hardness;

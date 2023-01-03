@@ -18,21 +18,23 @@ namespace Dysnomia {
 
 			public:
 				Lithium^ Zeta;
+				Fluorine^ Sigma;
 
 				property BigInteger Momentum { BigInteger get() {
 					if (_Momentum.IsZero) {
-						_Momentum = ((Affinity^)N)->Rod->Dynamo * ((Affinity^)N)->Cone->Foundation;
+						_Momentum = N->Rod->Dynamo * N->Cone->Foundation;
 					}
 					return _Momentum;
 				}}
-				property Complex Procession { Complex get() { return (Complex)Momentum / (Complex)((Dynamic^)R)->Manifold; }}
-				property Complex Mass { Complex get() { return ((Complex)(Momentum % ((Dynamic^)R)->Manifold) / (Complex)((Dynamic^)L)->Ring) * Procession; }}
-				property Complex Weight { Complex get() { return (Complex)((Dynamic^)R)->Foundation / (Complex)((Affinity^)N)->Rod->Element; }};
-				property Color Hue {Color get() { return Color::FromArgb((Int32)(((Dynamic^)R)->Manifold % Int32::MaxValue)); }};
+				property Complex Procession { Complex get() { return (Complex)Momentum / (Complex)R->Manifold; }}
+				property Complex Mass { Complex get() { return ((Complex)(Momentum % R->Manifold) / (Complex)L->Ring) * Procession; }}
+				property Complex Weight { Complex get() { return (Complex)R->Foundation / (Complex)N->Rod->Element; }};
+				property Color Hue {Color get() { return Color::FromArgb((Int32)(R->Manifold % Int32::MaxValue)); }};
 				Complex Shape;
 
 				Neon(Fluorine^ F) : Oxygen(F->Delta, gcnew Hydrogen(), F->Epsilon->Item2) {
-					Zeta = gcnew Lithium(F->Zeta->Item2, ((Affinity^)F->Xi->N)->Rod, (Dynamic^)R);
+					Sigma = F;
+					Zeta = gcnew Lithium(F->Zeta->Item2, F->Xi->N->Rod, R);
 					Shape = (Complex)Zeta->Item1->Barn / F->Shape;
 				};			
 			};

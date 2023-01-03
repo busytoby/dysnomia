@@ -7,7 +7,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Magnesium : public Quark<Epsilon^>
+			public ref class Magnesium : public Quark<Hydrogen^, Hydrogen^, Beryllium^>
 			{
 			public:
 				Sodium^ Mu;
@@ -20,12 +20,14 @@ namespace Dysnomia {
 					assert(N->Weight != S->Rho->Weight);
 
 					Mu = S;
-					Xi = gcnew Helium((Dynamic^)N->L, (Dynamic^)N->R);
+					Xi = gcnew Helium(N->L, N->R);
 
-					Upsilon = gcnew Nitrogen(gcnew Beryllium(), (Dynamic^)N->L, gcnew Hydrogen());
+					Upsilon = gcnew Nitrogen(gcnew Beryllium(), N->L, gcnew Hydrogen());
 
-					Nu = gcnew Lithium(((Affinity^)Upsilon->N)->Rod, ((Affinity^)Upsilon->N)->Cone, (Dynamic^)Upsilon->R);
-					Rho = gcnew Oxygen(gcnew Affinity(gcnew Dynamic(), (Dynamic^)N->R), gcnew Dynamic(), (Dynamic^)N->L);
+					Nu = gcnew Lithium(Upsilon->N->Rod, Upsilon->N->Cone, Upsilon->R);
+					Rho = gcnew Oxygen(gcnew Beryllium(gcnew Hydrogen(), N->R), gcnew Hydrogen(), N->L);
+
+					N->Sigma->Phi = gcnew Silicon(S->Sigma->Xi, S->Rho, S->Sigma->Rho->Pi);
 				}
 			};
 		}

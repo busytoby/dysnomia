@@ -132,6 +132,7 @@
     <ClInclude Include="10_Neon.h" />
     <ClInclude Include="11_Sodium.h" />
     <ClInclude Include="12_Magnesium.h" />
+    <ClInclude Include="14_Silicon.h" />
     <ClInclude Include="15_Phosphorous.h" />
     <ClInclude Include="18_Argon.h" />
     <ClInclude Include="19_Potassium.h" />
@@ -147,17 +148,6 @@
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="09_Fluorine.cpp" />
-    <ClCompile Include="10_Neon.cpp" />
-    <ClCompile Include="15_Phosphorous.cpp" />
-    <ClCompile Include="18_Argon.cpp" />
-    <ClCompile Include="19_Potassium.cpp" />
-    <ClCompile Include="50_Tin.cpp" />
-    <ClCompile Include="58_Cerium.cpp" />
-    <ClCompile Include="59_Praseodymium.cpp" />
-    <ClCompile Include="72_Hafnium.cpp" />
-    <ClCompile Include="82_Lead.cpp" />
-    <ClCompile Include="89_Actinium.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Elements.cpp" />
     <ClCompile Include="pch.cpp">
