@@ -19,6 +19,9 @@ namespace Dysnomia {
 				Boron^ Pi;
 				Lithium^ Zeta;
 
+				Complex Hardness;
+				Complex Shape;
+
 				Carbon() {
 					Alpha = gcnew Hydrogen();
 					Xi = gcnew Beryllium();

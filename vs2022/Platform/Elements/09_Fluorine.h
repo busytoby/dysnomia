@@ -24,6 +24,9 @@ namespace Dysnomia {
 
 				Lithium^ Zeta;
 
+				Complex Hardness;
+				Complex Shape;
+
 				Fluorine() {
 					Epsilon = gcnew Helium();
 
@@ -35,6 +38,12 @@ namespace Dysnomia {
 					Zeta = gcnew Lithium((Dynamic^)Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
 
 					Delta = gcnew Beryllium((Dynamic^)Sigma->R, Epsilon->Item1);
+
+					Rho->Hardness = (Complex)Rho->Zeta->Item3->Coordinate / (Complex)Rho->Zeta->Item1->Foundation;
+					Hardness = Rho->Hardness;
+					Rho->Shape = (Complex)Rho->Zeta->Item2->Manifold / Hardness;
+					Shape = (Complex)Zeta->Item1->Manifold / Hardness;
+					assert(Rho->Shape == Shape);
 				} 
 			};
 		}
