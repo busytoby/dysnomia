@@ -15,6 +15,7 @@ namespace Dysnomia {
 				Magnesium^ M = gcnew Magnesium(N, S);
 
 				Aluminium^ A = gcnew Aluminium((Affinity^)N->N, (Affinity^)M->Rho->N, (Affinity^)S->Rho->N);
+				int i = 0;
 			}
 		}
 	}
