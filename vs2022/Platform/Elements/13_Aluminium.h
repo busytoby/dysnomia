@@ -17,9 +17,6 @@ namespace Dysnomia {
 						_Temperature = (Complex)Rho->L->Dynamo * (Complex)Rho->R->Dynamo;
 					return _Temperature;
 				}}
-				property BigInteger Momentum { BigInteger get() { return N->Rod->Dynamo * N->Cone->Foundation; }}
-				property Complex Procession { Complex get() { return (Complex)Momentum / (Complex)R->Rod->Manifold; }}
-				property Complex Mass { Complex get() { return ((Complex)(Momentum % R->Rod->Manifold) / (Complex)L->Rod->Ring); }}
 				property Complex Wight { Complex get() { return (Complex)N->Rod->Signal / (Complex)R->Cone->Manifold; }};
 
 				Aluminium(Beryllium^ N, Magnesium^ M, Beryllium^ L) : Quark(N, M->Upsilon->N, L) {
