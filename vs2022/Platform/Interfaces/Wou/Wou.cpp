@@ -15,6 +15,9 @@ namespace Dysnomia {
 				assert(N->Hue.GetBrightness() == 0.0);
 				Magnesium^ M = gcnew Magnesium(N, S);
 				assert(N->Hue.GetBrightness() > 0.0);
+
+				Complex T = (Complex)N->Momentum * ((Complex)N->Mass + (Complex)N->Weight);
+
 				Aluminium^ A = gcnew Aluminium((Affinity^)N->N, M, (Affinity^)S->Rho->N);
 				int i = 0;
 			}

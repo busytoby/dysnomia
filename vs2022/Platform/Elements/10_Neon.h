@@ -12,10 +12,19 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Neon : Oxygen
 			{
+			private:
+				BigInteger _Momentum;
+				Complex _Position;
+
 			public:
 				Lithium^ Zeta;
 
-				property BigInteger Momentum { BigInteger get() { return ((Affinity^)N)->Rod->Dynamo * ((Affinity^)N)->Cone->Foundation; }}
+				property BigInteger Momentum { BigInteger get() {
+					if (_Momentum.IsZero) {
+						_Momentum = ((Affinity^)N)->Rod->Dynamo * ((Affinity^)N)->Cone->Foundation;
+					}
+					return _Momentum;
+				}}
 				property Complex Procession { Complex get() { return (Complex)Momentum / (Complex)((Dynamic^)R)->Manifold; }}
 				property Complex Mass { Complex get() { return ((Complex)(Momentum % ((Dynamic^)R)->Manifold) / (Complex)((Dynamic^)L)->Ring) * Procession; }}
 				property Complex Weight { Complex get() { return (Complex)((Dynamic^)R)->Foundation / (Complex)((Affinity^)N)->Rod->Element; }};
