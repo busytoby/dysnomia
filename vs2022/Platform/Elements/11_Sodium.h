@@ -20,6 +20,7 @@ namespace Dysnomia {
 
 				Color Hue;
 				Complex Hardness;
+				Complex Shape;
 
 				Sodium(Fluorine^ F) {
 					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
@@ -28,6 +29,7 @@ namespace Dysnomia {
 
 					Hue = Color::FromArgb((Int32)(((Dynamic^)Rho->L)->Manifold % Int32::MaxValue));
 					Hardness = (Complex)Gamma->Item1->Coordinate / (Complex)Gamma->Item1->Foundation;
+					Shape = (Complex)Gamma->Item1->Manifold / Hardness;
 				}
 			};
 		}
