@@ -19,13 +19,15 @@ namespace Dysnomia {
 				Oxygen^ Rho;
 
 				Color Hue;
+				double Hardness;
 
 				Sodium(Fluorine^ F) {
 					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
 					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
 					Beta = gcnew Beryllium((Dynamic^)Rho->L, (Dynamic^)Rho->R);
 
-					Hue = Color::FromArgb((Int32) (((Dynamic^)Rho->L)->Manifold % Int32::MaxValue));
+					Hue = Color::FromArgb((Int32)(((Dynamic^)Rho->L)->Manifold % Int32::MaxValue));
+					Hardness = (double)(Gamma->Item1->Coordinate % Int32::MaxValue) / (double)(Gamma->Item1->Foundation % Int32::MaxValue);
 				}
 			};
 		}
