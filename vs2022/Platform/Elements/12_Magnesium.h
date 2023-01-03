@@ -26,7 +26,6 @@ namespace Dysnomia {
 
 					Nu = gcnew Lithium(((Affinity^)Upsilon->N)->Rod, ((Affinity^)Upsilon->N)->Cone, (Dynamic^)Upsilon->R);
 					Rho = gcnew Oxygen(gcnew Affinity(gcnew Dynamic(), (Dynamic^)N->R), gcnew Dynamic(), gcnew Dynamic());
-
 				}
 			};
 		}

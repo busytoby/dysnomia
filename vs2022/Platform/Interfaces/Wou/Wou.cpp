@@ -12,8 +12,9 @@ namespace Dysnomia {
 
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
-
 				Magnesium^ M = gcnew Magnesium(N, S);
+
+				Aluminium^ A = gcnew Aluminium((Affinity^)N->N, (Affinity^)M->Rho->N, (Affinity^)S->Rho->N);
 			}
 		}
 	}

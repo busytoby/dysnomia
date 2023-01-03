@@ -141,6 +141,7 @@
     <ClInclude Include="72_Hafnium.h" />
     <ClInclude Include="82_Lead.h" />
     <ClInclude Include="89_Actinium.h" />
+    <ClInclude Include="13_Aluminium.h" />
     <ClInclude Include="Elements.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />

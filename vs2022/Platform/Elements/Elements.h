@@ -2,6 +2,7 @@
 #include "06_Carbon.h"
 #include "08_Oxygen.h"
 #include "12_Magnesium.h"
+#include "13_Aluminium.h"
 
 using namespace System;
 
