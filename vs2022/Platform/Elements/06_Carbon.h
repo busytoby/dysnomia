@@ -44,7 +44,7 @@ namespace Dysnomia {
 					Add(Alpha, Omicron);
 
 					int C = Omicron->Count;
-					for(int i = C - 6; i > 0; i -= 12) {
+					for(int i = C - 8; i > 0; i -= 14) {
 						Alpha = gcnew Beryllium();
 						R = gcnew Affinity(gcnew Hydrogen(), Alpha->Beta);
 						Pi = gcnew Boron(R, Alpha, Alpha->Beta);
