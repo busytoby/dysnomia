@@ -10,6 +10,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Neon : public Oxygen
 			{
 
@@ -30,6 +31,7 @@ namespace Dysnomia {
 					Shape = (Complex)Zeta->Item1->Barn / F->Shape;
 				};
 			};
+			*/
 		}
 	}
 }

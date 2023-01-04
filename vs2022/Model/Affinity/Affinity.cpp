@@ -21,7 +21,6 @@ namespace Dysnomia {
 				else throw;
 			}
 		}
-		this->Epsilon = RunXi();
 	}
 
 	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
@@ -36,7 +35,6 @@ namespace Dysnomia {
 			if (E->Code == 7) throw gcnew AffinityException(3, "Neutron Exception");
 			if (E->Code != 11) throw;
 		}
-		this->Epsilon = RunXi();
 	}
 
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
@@ -45,19 +43,6 @@ namespace Dysnomia {
 		Cone->Fuse(Rho, Upsilon, Ohm);
 		Cone->Tune();
 		OpenManifolds(Xi);
-		this->Epsilon = RunXi();
-	}
-
-	BigInteger Affinity::RunXi() {
-		BigInteger Xi = 0;
-		if (Rod->R->Count > 0) {
-			Xi = Rod->Manifold;
-			for each (KeyValuePair<BigInteger, Dynamic^> G in Rod->R) {
-				Xi = BigInteger::Add(Xi, G.Value->Barn);
-			}
-			// Xi = Xi % Math::Prime;
-		}
-		return Xi;
 	}
 
 	void Affinity::OpenManifolds() {
@@ -68,8 +53,6 @@ namespace Dysnomia {
 	void Affinity::ConductorGenerate(BigInteger Xi) {
 		Phi = Rod->Avail(Xi);
 		Cone->Tau = Cone->Avail(Xi);
-
-		Rod->R->AddLast(KeyValuePair<BigInteger, Dynamic^>(Cone->Tau, Cone));
 		
 		Rod->Form(Cone->Tau);
 		Cone->Form(Phi);
@@ -135,6 +118,7 @@ namespace Dysnomia {
 		return Hash;
 	}
 
+	/*
 	void Affinity::Charge(BigInteger Signal) {
 		if (Signal.IsZero) Signal = Rod->Signal;
 		Sigma = Cone->Charge(Signal, true);
@@ -171,4 +155,5 @@ namespace Dysnomia {
 		D[1] = gcnew Affinity(Rho, Upsilon, Ohm, Omega);
 		return D;
 	}
+	*/
 }

@@ -10,6 +10,9 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
+				Carbon^ C = gcnew Carbon();
+
+				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
 				assert(N->Hue.GetBrightness() == 0.0);
@@ -25,8 +28,8 @@ namespace Dysnomia {
 					gcnew Silicon(S->Sigma->Xi, S->Rho, S->Sigma->Rho->Pi)
 				);
 				P->Item1->R->Spin();
-
-				int i = 0;
+				*/
+				
 			}
 		}
 	}

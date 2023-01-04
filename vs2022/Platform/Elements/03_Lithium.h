@@ -1,13 +1,17 @@
 #pragma once
 
+using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
+using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lithium : public Tuple<Hydrogen^, Hydrogen^, Hydrogen^> {
+			public ref class Lithium : public Poly<Epsilon^, Epsilon^> {
 			public:
-				Lithium(Hydrogen^ A, Hydrogen^ B, Hydrogen^ C) : Tuple(A, B, C) {};
+				Lithium() : Poly<Dysnomia::Epsilon^, Dysnomia::Epsilon^>() {};
+				void Zeta(Dysnomia::Epsilon^ S, Dysnomia::Epsilon^ G) { Add(KeyValuePair<Dysnomia::Epsilon^, Dysnomia::Epsilon^>(S, G)); }
+				void Zeta(KeyValuePair<Dysnomia::Epsilon^, Dysnomia::Epsilon^> M) {	Add(M);	}
 			};
 		}
 	}

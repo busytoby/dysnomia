@@ -6,6 +6,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Phosphorous : Tuple<Silicon^, Silicon^>
 			{
 			public:
@@ -14,6 +15,7 @@ namespace Dysnomia {
 				Phosphorous(Silicon^ A, Silicon^ B) : Tuple(A, B) {
 				}
 			};
+			*/
 		}
 	}
 }

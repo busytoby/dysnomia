@@ -4,7 +4,6 @@
 
 namespace Dysnomia {
 	Dynamic::Dynamic() {
-		R = gcnew LinkedList<KeyValuePair<BigInteger, Dynamic^>>();
 		Tau = 0;
 		Initialize();
 		Seed();
@@ -26,7 +25,6 @@ namespace Dysnomia {
 		Manifold = Copier.Manifold;
 		Ring = Copier.Ring;
 		Barn = Copier.Barn;
-		R = Copier.R;
 		this->Epsilon = Secret;
 	}
 

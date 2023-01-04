@@ -5,6 +5,7 @@
 #include <cassert>
 #include "03_Lithium.h"
 
+using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
@@ -12,27 +13,32 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon {
+			public ref class Carbon : Poly<Beryllium^, Helium^> {
 			public:
-				Hydrogen^ Alpha;
-				Beryllium^ Xi;
+				Hydrogen^ Beta;
+				Lithium^ Xi;
+				Helium^ Omicron;
 				Boron^ Pi;
-				Lithium^ Zeta;
 
 				Complex Hardness;
 				Complex Shape;
 
 				Carbon() {
-					Alpha = gcnew Hydrogen();
-					Xi = gcnew Beryllium();
+					Xi = gcnew Lithium();
+					Omicron = gcnew Helium();
 
-					BigInteger ProofOfTemperature = Xi->RunXi();
-					assert(!ProofOfTemperature.IsZero);
-					assert(ProofOfTemperature.Equals(Xi->Epsilon));
+					Grow();
+				}
 
-					Pi = gcnew Boron(Alpha, Xi->Cone, Xi->Rod);
+				void Grow() {
+					Beta = gcnew Hydrogen();
+					Beryllium^ Alpha = gcnew Beryllium();
+					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
+					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					Xi->Zeta(Beta, Pi);
 
-					Zeta = gcnew Lithium(Alpha, Xi->Rod, Xi->Cone);
+					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
+					Add(Alpha, Omicron);
 				}
 			};
 		}

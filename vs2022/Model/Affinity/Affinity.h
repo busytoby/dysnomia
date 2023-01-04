@@ -26,13 +26,14 @@ namespace Dysnomia {
 	public:
 		Dynamic^ Rod;
 		Dynamic^ Cone;
-		BigInteger Phi, Eta, Mu, Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Xi, Omega;
+		BigInteger Phi, Eta, Mu, /* Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega */ Xi;
 
 		Affinity();
 		Affinity::Affinity(Dynamic^, Dynamic^);
 		Affinity::Affinity(BigInteger, BigInteger, BigInteger, BigInteger);
 		void OpenManifolds(BigInteger);
 		BigInteger WaveFunction(String^);
+		/*
 		void Charge(BigInteger);
 		void Induce(BigInteger);
 		void Torque(BigInteger);
@@ -40,6 +41,6 @@ namespace Dysnomia {
 		void Sustain(BigInteger, bool);
 		void React(BigInteger);
 		array<Affinity^>^ Denature();
-		BigInteger RunXi();
+		*/
 	};
 }

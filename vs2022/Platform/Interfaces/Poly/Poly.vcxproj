@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
-    <ProjectGuid>{8EB3B263-33AA-40CB-8552-2AD6109C4B78}</ProjectGuid>
+    <ProjectGuid>{99047AF3-4C5A-484A-BC30-06594BE6FF4E}</ProjectGuid>
     <Keyword>NetCoreCProj</Keyword>
-    <RootNamespace>Elements</RootNamespace>
+    <RootNamespace>Poly</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
@@ -120,42 +120,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="01_Hydrogen.h" />
-    <ClInclude Include="02_Helium.h" />
-    <ClInclude Include="03_Lithium.h" />
-    <ClInclude Include="04_Beryllium.h" />
-    <ClInclude Include="05_Boron.h" />
-    <ClInclude Include="06_Carbon.h" />
-    <ClInclude Include="07_Nitrogen.h" />
-    <ClInclude Include="08_Oxygen.h" />
-    <ClInclude Include="09_Fluorine.h" />
-    <ClInclude Include="10_Neon.h" />
-    <ClInclude Include="11_Sodium.h" />
-    <ClInclude Include="12_Magnesium.h" />
-    <ClInclude Include="14_Silicon.h" />
-    <ClInclude Include="15_Phosphorous.h" />
-    <ClInclude Include="18_Argon.h" />
-    <ClInclude Include="19_Potassium.h" />
-    <ClInclude Include="50_Tin.h" />
-    <ClInclude Include="58_Cerium.h" />
-    <ClInclude Include="59_Praseodymium.h" />
-    <ClInclude Include="72_Hafnium.h" />
-    <ClInclude Include="82_Lead.h" />
-    <ClInclude Include="89_Actinium.h" />
-    <ClInclude Include="13_Aluminium.h" />
-    <ClInclude Include="Elements.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Poly.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Elements.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Poly.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -164,20 +141,8 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\Affinity\Affinity.vcxproj">
-      <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Model\Dynamic\Dynamic.vcxproj">
+    <ProjectReference Include="..\..\..\Model\Dynamic\Dynamic.vcxproj">
       <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Model\Quark\Quark.vcxproj">
-      <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Model\Spin\Spin.vcxproj">
-      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Poly\Poly.vcxproj">
-      <Project>{99047af3-4c5a-484a-bc30-06594be6ff4e}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

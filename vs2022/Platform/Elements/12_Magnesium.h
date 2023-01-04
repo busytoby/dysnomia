@@ -7,6 +7,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Magnesium : public Quark<Hydrogen^, Hydrogen^, Beryllium^>
 			{
 			public:
@@ -28,6 +29,7 @@ namespace Dysnomia {
 					Rho = gcnew Oxygen(gcnew Beryllium(gcnew Hydrogen(), N->R), gcnew Hydrogen(), N->L);
 				}
 			};
+			*/
 		}
 	}
 }

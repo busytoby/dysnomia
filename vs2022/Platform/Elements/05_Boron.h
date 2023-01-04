@@ -6,9 +6,9 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Boron : public Quark<Hydrogen^, Hydrogen^, Hydrogen^>	{
+			public ref class Boron : public Quark<Affinity^, Affinity^, Hydrogen^>	{
 			public:
-				Boron(Hydrogen^ N, Hydrogen^ R, Hydrogen^ L) : Quark(N, R, L) {};
+				Boron(Affinity^ N, Affinity^ R, Hydrogen^ L) : Quark(N, R, L) {};
 			};
 		}
 	}

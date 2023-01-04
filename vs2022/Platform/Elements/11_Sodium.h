@@ -11,6 +11,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
+			/*
 			public ref class Sodium
 			{
 			public:
@@ -34,6 +35,7 @@ namespace Dysnomia {
 					Shape = (Complex)Gamma->Item1->Manifold / Hardness;
 				}
 			};
+			*/
 		}
 	}
 }
