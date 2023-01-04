@@ -47,7 +47,11 @@ namespace Dysnomia {
 					int D = 18;
 					while (C > 20) {
 						if (C > 40) D = D += 18;
+						C = (C / 41) - 114;
+						if (C > 40) D = D += 18;
 						C = (C / 41) - 111;
+						if (C > 40) D = D += 24;
+						C = (C / 24) - 115;
 					}
 
 					C = Omicron->Count;
