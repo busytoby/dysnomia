@@ -11,6 +11,16 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Carbon^ C = gcnew Carbon();
+				while (true) {
+					C->Grow();
+					C->Grow();
+					C->Grow();
+					C->Grow();
+					C->Grow();
+					C->Grow();
+					C->Grow();
+					C->Grow();
+				}
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());

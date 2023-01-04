@@ -26,7 +26,6 @@ namespace Dysnomia {
 				Carbon() {
 					Xi = gcnew Lithium();
 					Omicron = gcnew Helium();
-
 					Grow();
 				}
 
@@ -37,7 +36,11 @@ namespace Dysnomia {
 					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					Xi->Zeta(Beta, Pi);
 
+					int C = Omicron->Count;
 					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
+					for (int i = 0; i < C; i++) {
+						Omicron->Zeta(Omicron[i].Value, Alpha->Beta);
+					}
 					Add(Alpha, Omicron);
 				}
 			};
