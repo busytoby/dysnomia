@@ -42,6 +42,14 @@ namespace Dysnomia {
 						Omicron->Zeta(Omicron[i].Value, Alpha->Beta);
 					}
 					Add(Alpha, Omicron);
+
+					for(int i = Omicron->Count - 6; i > 0; i -= 12) {
+						Alpha = gcnew Beryllium();
+						R = gcnew Affinity(gcnew Hydrogen(), Alpha->Beta);
+						Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+						Xi->Zeta(R->Rod, Pi);
+						Add(Alpha, Omicron);
+					}
 				}
 			};
 		}
