@@ -25,8 +25,6 @@ namespace Dysnomia {
 					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					Xi->Zeta(Beta, Pi);
 					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
-
-					Grow();
 				}
 
 				void Grow() {
