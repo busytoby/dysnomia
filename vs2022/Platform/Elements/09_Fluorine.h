@@ -12,6 +12,7 @@ namespace Dysnomia {
 			public:
 				Hydrogen^ Beta;
 				Lithium^ Xi;
+				Boron^ Pi;
 
 				Fluorine(Carbon^ that) {
 					Xi = gcnew Lithium();
@@ -19,7 +20,7 @@ namespace Dysnomia {
 
 					Beryllium^ Alpha = gcnew Beryllium();
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					that->Xi->Zeta(Pi, this);
 					Xi->Zeta(Pi, that);
 					Xi->Zeta(Beta, Pi);				
