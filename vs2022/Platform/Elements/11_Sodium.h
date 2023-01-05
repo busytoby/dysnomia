@@ -21,7 +21,7 @@ namespace Dysnomia {
 				Sodium(Fluorine^ F) {
 					Pi = gcnew Neon(F);
 					Chi = gcnew Carbon();
-					Boron^ Lambda = Pi->N->Add(Chi);				
+					Boron^ Lambda = F->Add(Chi);				
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Chi->Add(Alpha, Chi->Omicron);
@@ -33,6 +33,7 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Boron^ Iota = gcnew Boron(R, Alpha, Alpha->Beta);
 					F->Xi->Zeta(Pi, Iota);
+					F->Add(F[0].Key);
 				}
 			};
 		}
