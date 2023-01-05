@@ -24,6 +24,7 @@ namespace Dysnomia {
 					F->Xi->Zeta(Pi, Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
 					Kappa = gcnew Oxygen(Pi, Pi->Beta, Alpha->Rod);
+					F->Xi->Zeta(Kappa, Pi);
 					F->Add(Chi, Alpha);
 					F->Xi->Zeta(Alpha, Kappa);
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
