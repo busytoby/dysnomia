@@ -22,7 +22,7 @@ namespace Dysnomia {
 					Pi = gcnew Neon(F);
 					Chi = gcnew Carbon();
 					Beryllium^ Alpha = gcnew Beryllium();
-					Kappa = gcnew Oxygen(Alpha, Alpha->Rod, Pi->Beta);
+					Kappa = gcnew Oxygen(Pi, Pi->Beta, Alpha->Rod);
 					F->Add(Chi, Alpha);
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Boron^ Iota = gcnew Boron(R, Alpha, Alpha->Beta);
