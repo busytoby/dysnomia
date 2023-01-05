@@ -13,44 +13,54 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			/*
-			public ref class Fluorine
+			public ref class Fluorine : Poly<Carbon^, Beryllium^>
 			{
 			public:
-				Carbon^ Rho;
-				Nitrogen^ Xi;
-				Oxygen^ Sigma;
-
-				Helium^ Epsilon;
-				Beryllium^ Delta;
-
-				Lithium^ Zeta;
-
-				Silicon^ Phi;
-
-				Complex Hardness;
-				Complex Shape;
+				Hydrogen^ Beta;
+				Lithium^ Xi;
+				Helium^ Omicron;
 
 				Fluorine() {
-					Epsilon = gcnew Helium();
+					Xi = gcnew Lithium();
+					Omicron = gcnew Helium();
+					Beta = gcnew Hydrogen();
 
-					Rho = gcnew Carbon(); // Contains First Pion
+				}
+				/*
+						Carbon^ Rho;
+						Nitrogen^ Xi;
+						Oxygen^ Sigma;
 
-					Sigma = gcnew Oxygen();
-					Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, Sigma->L); // First Muon
+						Helium^ Epsilon;
+						Beryllium^ Delta;
 
-					Zeta = gcnew Lithium(Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
+						Lithium^ Zeta;
 
-					Delta = gcnew Beryllium(Sigma->R, Epsilon->Item1);
+						Silicon^ Phi;
 
-					Rho->Hardness = (Complex)Rho->Zeta->Item3->Coordinate / (Complex)Rho->Zeta->Item1->Foundation;
-					Hardness = Rho->Hardness;
-					Rho->Shape = (Complex)Rho->Zeta->Item2->Manifold / Hardness;
-					Shape = (Complex)Zeta->Item1->Manifold / Hardness;
-					assert(Rho->Shape == Shape);
-				} 
+						Complex Hardness;
+						Complex Shape;
+
+						Fluorine() {
+							Epsilon = gcnew Helium();
+
+							Rho = gcnew Carbon(); // Contains First Pion
+
+							Sigma = gcnew Oxygen();
+							Xi = gcnew Nitrogen(Rho->Xi, Rho->Alpha, Sigma->L); // First Muon
+
+							Zeta = gcnew Lithium(Xi->R, Epsilon->Item2, Rho->Zeta->Item3);
+
+							Delta = gcnew Beryllium(Sigma->R, Epsilon->Item1);
+
+							Rho->Hardness = (Complex)Rho->Zeta->Item3->Coordinate / (Complex)Rho->Zeta->Item1->Foundation;
+							Hardness = Rho->Hardness;
+							Rho->Shape = (Complex)Rho->Zeta->Item2->Manifold / Hardness;
+							Shape = (Complex)Zeta->Item1->Manifold / Hardness;
+							assert(Rho->Shape == Shape);
+						}
+				*/
 			};
-			*/
 		}
 	}
 }
