@@ -1,8 +1,6 @@
 #pragma once
-#include "01_Hydrogen.h"
-#include "02_Helium.h"
-#include "03_Lithium.h"
 
+using namespace Dysnomia::Platform::Elements;
 using namespace System;
 using namespace System::Collections::Generic;
 
@@ -18,7 +16,7 @@ namespace Dysnomia {
 					Beta = gcnew Hydrogen();
 					Xi = gcnew Lithium();
 					Xi->Zeta(Rod, Cone);
-				};
+				}
 			};
 		}
 	}

@@ -1,9 +1,4 @@
 #pragma once
-#include "05_Boron.h"
-#include "04_Beryllium.h"
-#include "01_Hydrogen.h"
-#include <cassert>
-#include "03_Lithium.h"
 
 using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
@@ -19,9 +14,6 @@ namespace Dysnomia {
 				Lithium^ Xi;
 				Helium^ Omicron;
 				Boron^ Pi;
-
-				Complex Hardness;
-				Complex Shape;
 
 				Carbon() {
 					Xi = gcnew Lithium();

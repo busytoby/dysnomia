@@ -11,15 +11,8 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Carbon^ C = gcnew Carbon();
-				Fluorine^ F = gcnew Fluorine();
+				Fluorine^ F = gcnew Fluorine(C);
 
-				Beryllium^ Alpha = gcnew Beryllium();
-				Affinity^ R = gcnew Affinity(F->Beta, Alpha->Beta);
-				Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-
-				F->Xi->Zeta(F->Beta, Pi);
-				F->Xi->Zeta(Pi, C);
-				C->Xi->Zeta(Pi, F);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());

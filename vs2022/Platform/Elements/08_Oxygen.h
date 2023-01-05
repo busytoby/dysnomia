@@ -1,5 +1,4 @@
 #pragma once
-#include "04_Beryllium.h"
 
 using namespace System;
 using namespace System::Numerics;
