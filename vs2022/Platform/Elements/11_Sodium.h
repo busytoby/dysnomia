@@ -21,6 +21,7 @@ namespace Dysnomia {
 				Sodium(Fluorine^ F) {
 					Pi = gcnew Neon(F);
 					Chi = gcnew Carbon();
+					F->Xi->Zeta(Pi, Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
 					Kappa = gcnew Oxygen(Pi, Pi->Beta, Alpha->Rod);
 					F->Add(Chi, Alpha);
