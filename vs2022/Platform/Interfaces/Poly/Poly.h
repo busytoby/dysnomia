@@ -32,6 +32,7 @@ namespace Dysnomia {
 				property KeyValuePair<T1, T2> Upsilon { KeyValuePair<T1, T2> get() { return Alpha[6]; } }
 				property KeyValuePair<T1, T2> Tau { KeyValuePair<T1, T2> get() { return Alpha[7]; } }
 				property KeyValuePair<T1, T2> Theta { KeyValuePair<T1, T2> get() { return Alpha[8]; } }
+				property KeyValuePair<T1, T2> Last { KeyValuePair<T1, T2> get() { return Alpha[Alpha->Count - 1]; } }
 			};
 		}
 	}
