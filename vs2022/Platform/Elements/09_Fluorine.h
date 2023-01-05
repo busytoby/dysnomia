@@ -21,6 +21,7 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					Xi->Zeta(Beta, Pi);
+					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
 					Xi->Zeta(Pi, that);
 					that->Xi->Zeta(Pi, this);
 					Add(that, Alpha);
