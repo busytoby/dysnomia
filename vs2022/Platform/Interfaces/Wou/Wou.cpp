@@ -3,6 +3,7 @@
 #include "Wou.h"
 #include <assert.h>
 using namespace System::Numerics;
+using namespace Dysnomia::Platform::Elements;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -12,7 +13,7 @@ namespace Dysnomia {
 
 				Carbon^ C = gcnew Carbon();
 				Fluorine^ F = gcnew Fluorine(C);
-
+				Neon^ N = gcnew Neon(F);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
