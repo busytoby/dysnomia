@@ -22,6 +22,8 @@ namespace Dysnomia {
 				}
 
 				void Grow() {
+					if (Xi->Count > 0 && Xi[Xi->Count - 1].Value->GetType()->Name->Equals("Fluorine"))
+						throw gcnew Exception("Linked Cannot Grow");
 					Beta = gcnew Hydrogen();
 					Beryllium^ Alpha = gcnew Beryllium();
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
