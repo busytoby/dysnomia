@@ -13,7 +13,18 @@ namespace Dysnomia {
 			public ref class Neon : public Oxygen
 			{
 			public:
-				property Color Hue { Color get() { return Color::FromArgb((Int32) (((Fluorine^)N)->Last.Key->Omicron[0].Key->Manifold % Int32::MaxValue)); }};
+				property Color Hue { Color get() { 
+					BigInteger Sum = 0;
+					int count = 0;
+					for (int i = 0; i < ((Fluorine^)N)->Count; i++) {
+						for (int j = 0; j < ((Fluorine^)N)[i].Key->Omicron->Count; j++) {
+							Sum = BigInteger::Add(Sum, ((Fluorine^)N)[i].Key->Omicron[j].Key->Manifold % Int32::MaxValue);
+							count++;
+						}
+					}
+
+					return Color::FromArgb((Int32) (BigInteger::Divide(Sum, count)));
+				}};
 
 				Neon(Fluorine^ F) : Oxygen(F, F[F->Count - 1].Key->Omicron[0].Value, F[F->Count - 1].Key->Omicron[0].Key) {
 				};

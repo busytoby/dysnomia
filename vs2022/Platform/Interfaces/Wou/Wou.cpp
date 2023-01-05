@@ -16,10 +16,10 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Neon^ N = gcnew Neon(F);
 
-				Color^ A = N->Hue;
-				F->Add(gcnew Carbon());
-				Color^ B = N->Hue;
-
+				for (int i = 0; i < 100; i++) {
+					Color^ A = N->Hue;
+					F->Add(gcnew Carbon());
+				}
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
