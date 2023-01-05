@@ -11,31 +11,24 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			/*
 			public ref class Sodium
 			{
 			public:
-				Beryllium^ Beta;
-				Lithium^ Gamma;
-				Oxygen^ Rho;
-				Fluorine^ Sigma;
-
-				Color Hue;
-				Complex Hardness;
-				Complex Shape;
+				Hydrogen^ Beta;
+				Oxygen^ Kappa;
+				Carbon^ Chi;
 
 				Sodium(Fluorine^ F) {
-					Sigma = F;
-					Gamma = gcnew Lithium(F->Delta->Rod, F->Epsilon->Item2, F->Delta->Cone);
-					Rho = gcnew Oxygen(F->Delta, gcnew Hydrogen(), Gamma->Item2);
-					Beta = gcnew Beryllium(Rho->L, Rho->R);
-
-					Hue = Color::FromArgb((Int32)(Rho->L->Manifold % Int32::MaxValue));
-					Hardness = (Complex)Gamma->Item1->Coordinate / (Complex)Gamma->Item1->Foundation;
-					Shape = (Complex)Gamma->Item1->Manifold / Hardness;
+					Beta = gcnew Hydrogen();
+					Chi = gcnew Carbon();
+					Beryllium^ Alpha = gcnew Beryllium();
+					Kappa = gcnew Oxygen(Alpha, Alpha->Rod, Beta);
+					F->Add(Chi, Alpha);
+					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
+					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					F->Xi->Zeta(Beta, Pi);
 				}
 			};
-			*/
 		}
 	}
 }
