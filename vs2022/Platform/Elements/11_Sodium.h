@@ -14,17 +14,17 @@ namespace Dysnomia {
 			public ref class Sodium
 			{
 			public:
-				Hydrogen^ Beta;
+				Neon^ Beta;
 				Oxygen^ Kappa;
 				Carbon^ Chi;
 
 				Sodium(Fluorine^ F) {
-					Beta = gcnew Hydrogen();
+					Beta = gcnew Neon(F);
 					Chi = gcnew Carbon();
 					Beryllium^ Alpha = gcnew Beryllium();
-					Kappa = gcnew Oxygen(Alpha, Alpha->Rod, Beta);
+					Kappa = gcnew Oxygen(Alpha, Alpha->Rod, Beta->Beta);
 					F->Add(Chi, Alpha);
-					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
+					Affinity^ R = gcnew Affinity(Beta->Beta, Alpha->Beta);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					F->Xi->Zeta(Beta, Pi);
 				}

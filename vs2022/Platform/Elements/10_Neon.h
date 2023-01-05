@@ -13,6 +13,8 @@ namespace Dysnomia {
 			public ref class Neon : public Quark<Fluorine^, Hydrogen^, Hydrogen^>
 			{
 			public:
+				Hydrogen^ Beta;
+
 				property Color Hue { Color get() { 
 					BigInteger Sum = 0;
 					int count = 0;
