@@ -19,7 +19,6 @@ namespace Dysnomia {
 
 				Neon(Fluorine^ F) : Oxygen(F, F[F->Count - 1].Key->Omicron[0].Value, F[F->Count - 1].Key->Omicron[0].Key) {
 					Beta = F;
-					Color V = Hue;
 				};
 			};
 		}
