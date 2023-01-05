@@ -18,24 +18,26 @@ namespace Dysnomia {
 				Carbon() {
 					Xi = gcnew Lithium();
 					Omicron = gcnew Helium();
+
+					Beta = gcnew Hydrogen();
+					Beryllium^ Alpha = gcnew Beryllium();
+					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
+					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					Xi->Zeta(Beta, Pi);
+					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
+
 					Grow();
 				}
 
 				void Grow() {
 					if (Xi->Count > 0 && Xi[Xi->Count - 1].Value->GetType()->Name->Equals("Fluorine"))
 						throw gcnew Exception("Linked Cannot Grow");
-					Beta = gcnew Hydrogen();
-					Beryllium^ Alpha = gcnew Beryllium();
-					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-					Xi->Zeta(Beta, Pi);
 
 					int C = Omicron->Count;
-					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
 					for (int i = 0; i < C; i++) {
-						Omicron->Zeta(Omicron[i].Value, Alpha->Beta);
+						Omicron->Zeta(Omicron[i].Value, Omicron[0].Value);
 					}
-					Add(Alpha, Omicron);
+					Add((Beryllium^)((Boron^)Xi[0].Value)->R, Omicron);
 
 					C = Omicron->Count;
 					int D = 18;
@@ -50,8 +52,8 @@ namespace Dysnomia {
 
 					C = Omicron->Count;
 					for(int i = C - 11; i > 0; i -= D) {
-						Alpha = gcnew Beryllium();
-						R = gcnew Affinity(gcnew Hydrogen(), Alpha->Beta);
+						Beryllium^ Alpha = gcnew Beryllium();
+						Affinity^ R = gcnew Affinity(gcnew Hydrogen(), Alpha->Beta);
 						Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 						Xi->Zeta(R->Rod, Pi);
 						Add(Alpha, Omicron);
