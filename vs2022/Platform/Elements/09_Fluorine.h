@@ -24,8 +24,8 @@ namespace Dysnomia {
 					Xi->Zeta(Pi, that);
 					Xi->Zeta(Beta, Pi);
 					Add(that, Alpha);
-					that->Xi->Zeta(Pi, this);
 					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
+					that->Xi->Zeta(Pi, this);
 				}
 			};
 		}
