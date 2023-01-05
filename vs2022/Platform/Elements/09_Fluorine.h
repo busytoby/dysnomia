@@ -10,22 +10,20 @@ namespace Dysnomia {
 			public ref class Fluorine : Poly<Carbon^, Beryllium^>
 			{
 			public:
-				Hydrogen^ Beta;
 				Lithium^ Xi;
-				Boron^ Pi;
 
 				Fluorine(Carbon^ that) {
+					Hydrogen^ Beta = gcnew Hydrogen();
 					Xi = gcnew Lithium();
-					Beta = gcnew Hydrogen();
 
 					Beryllium^ Alpha = gcnew Beryllium();
+					Add(that, Alpha);
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
+					that->Omicron->Zeta(Alpha->Beta, Alpha->Cone);
+					that->Xi->Zeta(Pi, this);
 					Xi->Zeta(Beta, Pi);
 					Xi->Zeta(Pi, that);
-					Add(that, Alpha);
-					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
-					that->Xi->Zeta(Pi, this);
 				}
 			};
 		}
