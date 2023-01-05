@@ -29,6 +29,7 @@ namespace Dysnomia {
 				}};
 
 				Neon(Fluorine^ F) : Quark(F, F[F->Count - 1].Key->Omicron[0].Value, F[F->Count - 1].Key->Omicron[0].Key) {
+					Beta = gcnew Hydrogen();
 				};
 			};
 		}
