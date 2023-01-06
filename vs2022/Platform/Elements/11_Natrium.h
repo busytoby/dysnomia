@@ -29,6 +29,7 @@ namespace Dysnomia {
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 
 					Chi->Add(Alpha, Chi->Omicron);
+					Chi->Add(Xi, Chi->Omicron);
 					Phi->Xi->Zeta(Kappa, Chi);
 					Add(Kappa, Chi);
 				}
