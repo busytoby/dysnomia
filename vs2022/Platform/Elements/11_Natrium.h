@@ -27,10 +27,6 @@ namespace Dysnomia {
 					Chi->Add(Alpha, Chi->Omicron);
 					F->Xi->Zeta(Kappa, Pi);
 					F->Xi->Zeta(Pi, Chi);
-					F->Xi->Zeta(Alpha, Kappa);
-					Boron^ Iota = gcnew Boron(R, Alpha, Alpha->Beta);
-					F->Xi->Zeta(Pi, Iota);
-					F->Add(F[0].Key);
 					Add(Kappa, Chi);
 				}
 
