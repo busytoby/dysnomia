@@ -31,7 +31,7 @@ namespace Dysnomia {
 					Add(that, Alpha);
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-					that->Omicron->Zeta(Alpha->Beta, Alpha->Cone);
+					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
 					Xi->Zeta(Beta, Pi);
 					_Ring = BigInteger::Add(_Ring, R->Cone->Ring);
 					return Pi;

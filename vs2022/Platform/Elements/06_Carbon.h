@@ -33,7 +33,7 @@ namespace Dysnomia {
 
 					int C = Omicron->Count;
 					for (int i = 0; i < C; i++) {
-						Omicron->Zeta(Omicron[i].Value, Omicron[0].Value);
+						Omicron->Zeta(Omicron[0].Value, Omicron[i].Value);
 					}
 					Add((Beryllium^)((Boron^)Xi[0].Value)->R, Omicron);
 
