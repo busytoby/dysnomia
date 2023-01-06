@@ -18,8 +18,11 @@ namespace Dysnomia {
 					Barn = R->Rod->Barn;
 					_Credit = ((Affinity^)N)->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
-					BigInteger _Evidence = BigInteger::ModPow(_Credit, _Charge, Barn);
 				};
+
+				BigInteger PresentEvidence() {
+					return BigInteger::ModPow(_Credit, _Charge, Barn);
+				}
 			};
 		}
 	}

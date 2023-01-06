@@ -16,6 +16,16 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
 
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
+				S->Mu.Key->PresentEvidence();
 
 
 				/*
