@@ -20,7 +20,7 @@ namespace Dysnomia {
 					int count = 0;
 					for (int i = 0; i < N->Count; i++) {
 						for (int j = 0; j < N[i].Key->Omicron->Count; j++) {
-							Sum = BigInteger::Add(Sum, L->Foundation % Int32::MaxValue);
+							Sum = BigInteger::Add(Sum, BigInteger::Subtract(L->Foundation, R->Foundation) % Int32::MaxValue);
 							count++;
 						}
 					}
