@@ -21,7 +21,7 @@ namespace Dysnomia {
 					for (int i = 0; i < N->Count; i++) {
 						for (int j = 0; j < N[i].Key->Omicron->Count; j++) {
 							Sum = BigInteger::Add(Sum, 
-								BigInteger::Multiply(((Carbon^)N->Xi->Last.Key)->Pi->L->Dynamo, 
+								BigInteger::Multiply(((Carbon^)N->Xi->Last.Key)->Pi->N->Rod->Dynamo, 
 									BigInteger::Subtract(R->Foundation, L->Foundation) % Int32::MaxValue));
 							count++;
 						}
