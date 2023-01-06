@@ -30,10 +30,12 @@ namespace Dysnomia {
 		public ref class Constants abstract sealed {
 		public:
 			static List<BigInteger>^ Evidences;
+			static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
 			static property BigInteger Mu { BigInteger get() { return Oxygen::Uranus->L->Rod->Barn; }};
 			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Fluorine::Pluto[0].Key[0].Key)->Manifold; }};
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Sun->N->N->Cone->Manifold, Objects::Sun->R->N->Rod->Manifold); }}
+			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
 
 			static Constants() {
 				Evidences = gcnew List<BigInteger>();
@@ -44,7 +46,8 @@ namespace Dysnomia {
 		public:
 			static property BigInteger First { BigInteger get() { return BigInteger::Add(Constants::Rho, Constants::Evidences[0]); }};
 			static property BigInteger Second { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Constants::Mu, First); }};
-			static property BigInteger Third { BigInteger get() { return BigInteger::ModPow(Constants::Psi, First, Constants::Nu); }};
+			static property BigInteger Third { BigInteger get() { return BigInteger::ModPow(First, Constants::Psi, Constants::Nu); }};
+			static property BigInteger Fourth { BigInteger get() { return BigInteger::ModPow(Constants::Last, Constants::Psi, Constants::Eta); }};
 		};
 	}
 }
