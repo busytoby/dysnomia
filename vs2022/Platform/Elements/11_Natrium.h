@@ -22,13 +22,13 @@ namespace Dysnomia {
 					Boron^ Lambda = F->Add(Chi);				
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
+					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
+					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
 					Chi->Add(Alpha, Chi->Omicron);
-					Oxygen^ Kappa = gcnew Oxygen(Pi, Pi->Beta, Alpha->Rod);
 					F->Xi->Zeta(Kappa, Pi);
 					F->Add(Chi, Alpha);
 					F->Xi->Zeta(Pi, Chi);
 					F->Xi->Zeta(Alpha, Kappa);
-					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Boron^ Iota = gcnew Boron(R, Alpha, Alpha->Beta);
 					F->Xi->Zeta(Pi, Iota);
 					F->Add(F[0].Key);

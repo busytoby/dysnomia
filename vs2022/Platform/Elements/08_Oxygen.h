@@ -8,7 +8,12 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Oxygen : public Quark<Epsilon^, Hydrogen^, Hydrogen^> {
 			public:
-				Oxygen(Dysnomia::Epsilon^ N, Hydrogen^ R, Hydrogen^ L) : Quark(N, R, L) { };
+				BigInteger Barn;
+
+				Oxygen(Dysnomia::Epsilon^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) { 
+					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
+					Barn = R->Rod->Barn;
+				};
 			};
 		}
 	}
