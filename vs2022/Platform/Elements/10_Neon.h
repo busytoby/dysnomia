@@ -20,12 +20,14 @@ namespace Dysnomia {
 					int count = 0;
 					for (int i = 0; i < N->Count; i++) {
 						for (int j = 0; j < N[i].Key->Omicron->Count; j++) {
-							Sum = BigInteger::Add(Sum, BigInteger::Subtract(L->Foundation, R->Foundation) % Int32::MaxValue);
+							Sum = BigInteger::Add(Sum, 
+								BigInteger::Multiply(((Carbon^)N->Xi->Last.Value)->Pi->L->Dynamo, 
+									BigInteger::Subtract(L->Foundation, R->Foundation) % Int32::MaxValue));
 							count++;
 						}
 					}
 
-					return Color::FromArgb((Int32) (BigInteger::Divide(Sum, count)));
+					return Color::FromArgb((Int32) (BigInteger::Divide(Sum, count) % Int32::MaxValue));
 				}};
 
 				Neon(Fluorine^ Phi) : Quark(Phi, Phi->Last.Key->Omicron->Last.Value, Phi->Last.Key->Omicron->Last.Key) {

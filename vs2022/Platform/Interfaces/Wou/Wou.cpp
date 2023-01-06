@@ -16,6 +16,8 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
 
+
+
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());

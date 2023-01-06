@@ -17,6 +17,8 @@ namespace Dysnomia {
 				Beryllium^ Xi;
 				Neon^ Pi;
 
+				Color Hue;
+
 				Natrium(Fluorine^ Phi) {
 					Pi = gcnew Neon(Phi);
 					Carbon^ Chi = gcnew Carbon();
@@ -32,6 +34,8 @@ namespace Dysnomia {
 					Chi->Add(Xi, Chi->Omicron);
 					Phi->Xi->Zeta(Kappa, Chi);
 					Add(Kappa, Chi);
+
+					Hue = Pi->Hue;
 				}
 
 				BigInteger Grow() {
