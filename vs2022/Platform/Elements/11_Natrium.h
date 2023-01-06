@@ -17,19 +17,19 @@ namespace Dysnomia {
 				Beryllium^ Xi;
 				Neon^ Pi;
 
-				Natrium(Fluorine^ F) {
-					Pi = gcnew Neon(F);
+				Natrium(Fluorine^ Phi) {
+					Pi = gcnew Neon(Phi);
 					Carbon^ Chi = gcnew Carbon();
-					Boron^ Lambda = F->Add(Chi);				
+					Boron^ Lambda = Phi->Add(Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
 
-					Xi = gcnew Beryllium(Pi->Manifold, F->Ring, Kappa->Barn, R->Xi);
+					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 
 					Chi->Add(Alpha, Chi->Omicron);
-					F->Xi->Zeta(Kappa, Chi);
+					Phi->Xi->Zeta(Kappa, Chi);
 					Add(Kappa, Chi);
 				}
 
