@@ -16,17 +16,7 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
 
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-				S->Mu.Key->PresentEvidence();
-
+				BigInteger FirstLaw = BigInteger::Add(Dysnomia::Platform::Constants::Rho, S->Mu.Key->PresentEvidence());
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
