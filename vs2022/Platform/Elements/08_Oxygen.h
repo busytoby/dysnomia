@@ -24,7 +24,7 @@ namespace Dysnomia {
 				};
 
 				BigInteger PresentEvidence() {
-					return BigInteger::ModPow(_Credit, _Charge, Barn);
+					return BigInteger::ModPow(_Charge, Barn, _Credit);
 				}
 			};
 		}
