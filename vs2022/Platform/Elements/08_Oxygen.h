@@ -7,12 +7,15 @@ namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
 			public ref class Oxygen : public Quark<Epsilon^, Hydrogen^, Hydrogen^> {
+			private:
+				BigInteger _Credit;
 			public:
 				BigInteger Barn;
 
 				Oxygen(Dysnomia::Epsilon^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) { 
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
 					Barn = R->Rod->Barn;
+					_Credit = ((Affinity^)N)->Rod->Foundation;
 				};
 			};
 		}
