@@ -18,7 +18,10 @@ using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
-		namespace Elements {
-		}
+		public ref class Objects abstract sealed
+		{
+		public:
+			static property Quark<Boron^, Boron^, Fluorine^>^ Sun { Quark<Boron^, Boron^, Fluorine^>^ get() { return Elements::Neon::Sun; }};
+		};
 	}
 }
