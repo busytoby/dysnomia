@@ -10,9 +10,11 @@ namespace Dysnomia {
 			public ref class Fluorine : Poly<Carbon^, Beryllium^>
 			{
 			public:
+				BigInteger Ring;
 				Lithium^ Xi;
 
 				Fluorine(Carbon^ that) {
+					Ring = 0;
 					Xi = gcnew Lithium();
 
 					Boron^ Pi = Add(that);
@@ -28,6 +30,7 @@ namespace Dysnomia {
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					that->Omicron->Zeta(Alpha->Beta, Alpha->Cone);
 					Xi->Zeta(Beta, Pi);
+					Ring = BigInteger::Add(Ring, R->Cone->Ring);
 					return Pi;
 				}
 			};

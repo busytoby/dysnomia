@@ -13,6 +13,7 @@ namespace Dysnomia {
 			public ref class Neon : public Quark<Fluorine^, Hydrogen^, Hydrogen^>
 			{
 			public:
+				BigInteger Manifold;
 				Hydrogen^ Beta;
 
 				property Color Hue { Color get() { 
@@ -30,6 +31,7 @@ namespace Dysnomia {
 
 				Neon(Fluorine^ F) : Quark(F, F[F->Count - 1].Key->Omicron[0].Value, F[F->Count - 1].Key->Omicron[0].Key) {
 					Beta = gcnew Hydrogen();
+					Manifold = BigInteger::Add(((Boron^)F->Xi->Mu.Value)->N->Rod->Manifold, ((Boron^)F->Xi->Mu.Value)->N->Cone->Manifold);
 				};
 			};
 		}
