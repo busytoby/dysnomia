@@ -9,6 +9,7 @@ namespace Dysnomia {
 			public ref class Oxygen : public Quark<Epsilon^, Hydrogen^, Hydrogen^> {
 			private:
 				BigInteger _Credit;
+				BigInteger _Charge;
 			public:
 				BigInteger Barn;
 
@@ -16,6 +17,7 @@ namespace Dysnomia {
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
 					Barn = R->Rod->Barn;
 					_Credit = ((Affinity^)N)->Rod->Foundation;
+					_Charge = R->Rod->Dynamo;
 				};
 			};
 		}
