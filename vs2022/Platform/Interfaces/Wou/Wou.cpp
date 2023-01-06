@@ -17,6 +17,7 @@ namespace Dysnomia {
 				Natrium^ S = gcnew Natrium(F);
 
 				BigInteger FirstLaw = BigInteger::Add(Dysnomia::Platform::Constants::Rho, S->Mu.Key->PresentEvidence());
+				BigInteger SecondLaw = BigInteger::ModPow(Dysnomia::Platform::Constants::Rho, Dysnomia::Platform::Constants::Mu, FirstLaw);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());

@@ -20,6 +20,7 @@ namespace Dysnomia {
 	namespace Platform {
 		public ref class Constants abstract sealed {
 		public:
+			static property BigInteger Mu { BigInteger get() { return Elements::Oxygen::Uranus->L->Rod->Barn; }}
 			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Fluorine::Pluto[0].Key[0].Key)->Manifold; }};
 		};
 
