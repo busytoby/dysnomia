@@ -39,7 +39,7 @@ namespace Dysnomia {
 					Add(Last.Key, Last.Value);
 					BigInteger T = 0;
 					for (int i = 0; i < Count; i++) {
-						T = BigInteger::Add(T, Last.Value->Beta->Barn);
+						T = BigInteger::Add(T, this[i].Value->Beta->Barn);
 					}
 					return T;
 				}
