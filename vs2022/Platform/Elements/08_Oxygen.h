@@ -18,9 +18,9 @@ namespace Dysnomia {
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
 					Barn = R->Rod->Barn;
+					if (Uranus == nullptr) Uranus = gcnew Quark<Hydrogen^, Hydrogen^, Beryllium^>(this->L, this->R, N);
 					_Credit = N->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
-					if (Uranus == nullptr) Uranus = gcnew Quark<Hydrogen^, Hydrogen^, Beryllium^>(this->L, this->R, N);
 				};
 
 				BigInteger PresentEvidence() {
