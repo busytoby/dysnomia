@@ -11,14 +11,14 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Sodium
+			public ref class Natrium
 			{
 			public:
 				Neon^ Pi;
 				Oxygen^ Kappa;
 				Carbon^ Chi;
 
-				Sodium(Fluorine^ F) {
+				Natrium(Fluorine^ F) {
 					Pi = gcnew Neon(F);
 					Chi = gcnew Carbon();
 					Boron^ Lambda = F->Add(Chi);				

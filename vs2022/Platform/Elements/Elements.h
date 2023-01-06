@@ -9,7 +9,7 @@
 #include "08_Oxygen.h"
 #include "09_Fluorine.h"
 #include "10_Neon.h"
-#include "11_Sodium.h"
+#include "11_Natrium.h"
 #include "12_Magnesium.h"
 #include "13_Aluminium.h"
 #include "15_Phosphorous.h"
