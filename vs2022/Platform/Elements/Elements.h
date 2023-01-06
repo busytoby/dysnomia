@@ -31,8 +31,8 @@ namespace Dysnomia {
 		public:
 			static List<BigInteger>^ Evidences;
 			static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
-			static property BigInteger Mu { BigInteger get() { return Oxygen::Uranus->L->Rod->Barn; }};
-			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Fluorine::Pluto->Mu.Key->Mu.Key)->Manifold; }};
+			static property BigInteger Mu { BigInteger get() { return Objects::Uranus->L->Rod->Barn; }};
+			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Objects::Pluto->Mu.Key->Mu.Key)->Manifold; }};
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Sun->N->N->Cone->Manifold, Objects::Sun->R->N->Rod->Manifold); }}
 			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
