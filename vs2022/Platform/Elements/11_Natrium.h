@@ -23,8 +23,8 @@ namespace Dysnomia {
 					Boron^ Lambda = Phi->Add(Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
-					Affinity^ R = gcnew Affinity(Alpha->Beta, Pi->Beta);
-					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
+					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
+					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 
