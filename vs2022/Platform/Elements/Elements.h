@@ -44,11 +44,7 @@ namespace Dysnomia {
 		public:
 			static property BigInteger First { BigInteger get() { return BigInteger::Add(Constants::Rho, Constants::Evidences[0]); }};
 			static property BigInteger Second { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Constants::Mu, First); }};
-			static property BigInteger Third { BigInteger get() { 
-				BigInteger LawSum = BigInteger::Add(Second, First); 
-				assert(Constants::Psi > LawSum); 
-				assert(Constants::Nu > LawSum);
-				return BigInteger::Subtract(Constants::Nu, LawSum); }};
+			static property BigInteger Third { BigInteger get() { return BigInteger::ModPow(Constants::Psi, First, Constants::Nu); }};
 		};
 	}
 }
