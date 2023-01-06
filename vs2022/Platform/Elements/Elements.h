@@ -18,8 +18,12 @@ using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
-		public ref class Objects abstract sealed
-		{
+		public ref class Constants abstract sealed {
+		public:
+			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Fluorine::Pluto[0].Key[0].Key)->Manifold; }};
+		};
+
+		public ref class Objects abstract sealed {
 		public:
 			static property Quark<Boron^, Boron^, Fluorine^>^ Sun { Quark<Boron^, Boron^, Fluorine^>^ get() { return Elements::Neon::Sun; }};
 			static property Quark<Hydrogen^, Hydrogen^, Beryllium^>^ Uranus { Quark<Hydrogen^, Hydrogen^, Beryllium^>^ get() { return Elements::Oxygen::Uranus; }};
