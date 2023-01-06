@@ -14,6 +14,7 @@ namespace Dysnomia {
 			public ref class Natrium : Poly<Oxygen^, Carbon^>
 			{
 			public:
+				Beryllium^ Xi;
 				Neon^ Pi;
 
 				Natrium(Fluorine^ F) {
@@ -24,6 +25,9 @@ namespace Dysnomia {
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
+
+					Xi = gcnew Beryllium(Pi->Manifold, F->Ring, Kappa->Barn, R->Xi);
+
 					Chi->Add(Alpha, Chi->Omicron);
 					F->Xi->Zeta(Kappa, Chi);
 					Add(Kappa, Chi);

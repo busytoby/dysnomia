@@ -17,6 +17,12 @@ namespace Dysnomia {
 					Xi = gcnew Lithium();
 					Xi->Zeta(Rod, Cone);
 				}
+				
+				Beryllium(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) : Affinity(Rho, Upsilon, Ohm, Xi) {
+					Beta = gcnew Hydrogen();
+					this->Xi = gcnew Lithium();
+					this->Xi->Zeta(Rod, Cone);
+				}
 			};
 		}
 	}
