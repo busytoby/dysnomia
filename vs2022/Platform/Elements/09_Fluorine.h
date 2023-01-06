@@ -12,6 +12,8 @@ namespace Dysnomia {
 			private:
 				BigInteger _Ring;
 			public:
+				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
+
 				Lithium^ Xi;
 
 				property BigInteger Ring { BigInteger get() { return BigInteger::Divide(_Ring, Count); }};
@@ -21,6 +23,7 @@ namespace Dysnomia {
 					Xi = gcnew Lithium();
 
 					Boron^ Pi = Add(that);
+					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
 					that->Xi->Zeta(this, Pi);
 					Xi->Zeta(that, Pi);
 				}
