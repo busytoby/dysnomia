@@ -25,8 +25,7 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Pi->Beta, Alpha->Beta);
 					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
 					Chi->Add(Alpha, Chi->Omicron);
-					F->Xi->Zeta(Kappa, Pi);
-					F->Xi->Zeta(Pi, Chi);
+					F->Xi->Zeta(Kappa, Chi);
 					Add(Kappa, Chi);
 				}
 
