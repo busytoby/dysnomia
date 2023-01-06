@@ -4,6 +4,7 @@
 #include <assert.h>
 using namespace System::Numerics;
 using namespace System::Drawing;
+using namespace Dysnomia::Platform;
 using namespace Dysnomia::Platform::Elements;
 
 namespace Dysnomia {
@@ -16,8 +17,8 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
 
-				BigInteger FirstLaw = BigInteger::Add(Dysnomia::Platform::Constants::Rho, S->Mu.Key->PresentEvidence());
-				BigInteger SecondLaw = BigInteger::ModPow(Dysnomia::Platform::Constants::Rho, Dysnomia::Platform::Constants::Mu, FirstLaw);
+				BigInteger FirstLaw = BigInteger::Add(Constants::Rho, S->Mu.Key->PresentEvidence());
+				BigInteger SecondLaw = BigInteger::ModPow(Constants::Rho, Constants::Mu, FirstLaw);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
