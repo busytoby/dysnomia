@@ -26,7 +26,6 @@ namespace Dysnomia {
 					Oxygen^ Kappa = gcnew Oxygen(Pi, R);
 					Chi->Add(Alpha, Chi->Omicron);
 					F->Xi->Zeta(Kappa, Pi);
-					F->Add(Chi, Alpha);
 					F->Xi->Zeta(Pi, Chi);
 					F->Xi->Zeta(Alpha, Kappa);
 					Boron^ Iota = gcnew Boron(R, Alpha, Alpha->Beta);
