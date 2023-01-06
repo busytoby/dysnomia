@@ -16,9 +16,7 @@ namespace Dysnomia {
 				Carbon^ C = gcnew Carbon();
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
-
-				BigInteger FirstLaw = BigInteger::Add(Constants::Rho, S->Mu.Key->PresentEvidence());
-				BigInteger SecondLaw = BigInteger::ModPow(Constants::Rho, Constants::Mu, FirstLaw);
+				Constants::Evidences->Add(S->Mu.Key->PresentEvidence());
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());

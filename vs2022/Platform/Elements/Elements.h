@@ -20,8 +20,18 @@ namespace Dysnomia {
 	namespace Platform {
 		public ref class Constants abstract sealed {
 		public:
-			static property BigInteger Mu { BigInteger get() { return Elements::Oxygen::Uranus->L->Rod->Barn; }}
+			static List<BigInteger>^ Evidences;
+			static property BigInteger Mu { BigInteger get() { return Elements::Oxygen::Uranus->L->Rod->Barn; }};
 			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Fluorine::Pluto[0].Key[0].Key)->Manifold; }};
+
+			static Constants() {
+				Evidences = gcnew List<BigInteger>();
+			}
+		};
+
+		public ref class Laws abstract sealed {
+			static property BigInteger First { BigInteger get() { return BigInteger::Add(Constants::Rho, Constants::Evidences[0]); }};
+			static property BigInteger Second { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Constants::Mu, First); }};
 		};
 
 		public ref class Objects abstract sealed {
