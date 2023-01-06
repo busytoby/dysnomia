@@ -36,7 +36,7 @@ namespace Dysnomia {
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Sun->N->N->Cone->Manifold, Objects::Sun->R->N->Rod->Manifold); }}
 			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
-			static property BigInteger Sigma { BigInteger get() { return Objects::Sun->R->L->Manifold; }}
+			static property BigInteger Sigma { BigInteger get() { return Objects::Sun->L->Mu.Key->Pi->N->Rod->Base; }}
 
 			static Constants() {
 				Evidences = gcnew List<BigInteger>();
