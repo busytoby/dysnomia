@@ -21,6 +21,7 @@ namespace Dysnomia {
 				else throw;
 			}
 		}
+		this->Epsilon = Math::ModPow(Cone->Signal, Rod->Channel, Math::Prime);
 	}
 
 	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
@@ -35,6 +36,7 @@ namespace Dysnomia {
 			if (E->Code == 7) throw gcnew AffinityException(3, "Neutron Exception");
 			if (E->Code != 11) throw;
 		}
+		this->Epsilon = Math::ModPow(Cone->Signal, Rod->Channel, Math::Prime);
 	}
 
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
@@ -43,6 +45,7 @@ namespace Dysnomia {
 		Cone->Fuse(Rho, Upsilon, Ohm);
 		Cone->Tune();
 		OpenManifolds(Xi);
+		this->Epsilon = Math::ModPow(Cone->Signal, Rod->Channel, Math::Prime);
 	}
 
 	void Affinity::OpenManifolds() {
