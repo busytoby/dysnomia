@@ -17,6 +17,7 @@ namespace Dysnomia {
 
 				Lithium^ Xi;
 
+				property BigInteger Psi { BigInteger get() { return _Ring; }};
 				property BigInteger Ring { BigInteger get() { return BigInteger::Divide(_Ring, Count); }};
 
 				Fluorine(Carbon^ that) {

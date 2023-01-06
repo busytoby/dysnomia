@@ -17,6 +17,7 @@ namespace Dysnomia {
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
 				Constants::Evidences->Add(S->Mu.Key->PresentEvidence());
+				Constants::Evidences->Add(Laws::Third);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
