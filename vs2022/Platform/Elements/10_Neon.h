@@ -1,6 +1,4 @@
 #pragma once
-#include "08_Oxygen.h"
-#include "09_Fluorine.h"
 
 using namespace System;
 using namespace System::Drawing;
@@ -13,6 +11,8 @@ namespace Dysnomia {
 			public ref class Neon : public Quark<Fluorine^, Hydrogen^, Hydrogen^>
 			{
 			public:
+				static Quark<Boron^, Boron^, Fluorine^>^ Sun;
+
 				BigInteger Manifold;
 
 				property Color Hue { Color get() { 
@@ -21,7 +21,7 @@ namespace Dysnomia {
 					for (int i = 0; i < N->Count; i++) {
 						for (int j = 0; j < N[i].Key->Omicron->Count; j++) {
 							Sum = BigInteger::Add(Sum, 
-								BigInteger::Multiply(((Carbon^)N->Xi->Last.Value)->Pi->L->Dynamo, 
+								BigInteger::Multiply(((Carbon^)N->Xi->Last.Key)->Pi->L->Dynamo, 
 									BigInteger::Subtract(L->Foundation, R->Foundation) % Int32::MaxValue));
 							count++;
 						}
@@ -31,6 +31,7 @@ namespace Dysnomia {
 				}};
 
 				Neon(Fluorine^ Phi) : Quark(Phi, Phi->Last.Key->Omicron->Last.Value, Phi->Last.Key->Omicron->Last.Key) {
+					if (Sun == nullptr) Sun = gcnew Quark<Boron^, Boron^, Fluorine^>((Boron^)N->Xi[0].Value, (Boron^)N->Xi[1].Value, Phi);
 					Manifold = ((Boron^)N->Xi->Mu.Value)->N->Rod->Manifold;
 				};
 			};

@@ -21,8 +21,8 @@ namespace Dysnomia {
 					Xi = gcnew Lithium();
 
 					Boron^ Pi = Add(that);
-					that->Xi->Zeta(Pi, this);
-					Xi->Zeta(Pi, that);
+					that->Xi->Zeta(this, Pi);
+					Xi->Zeta(that, Pi);
 				}
 
 				Boron^ Add(Carbon^ that) {

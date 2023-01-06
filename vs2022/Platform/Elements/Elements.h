@@ -18,7 +18,7 @@ using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
-		namespace Elements {	
+		namespace Elements {
 		}
 	}
 }

@@ -32,7 +32,7 @@ namespace Dysnomia {
 
 					Chi->Add(Alpha, Chi->Omicron);
 					Chi->Add(Xi, Chi->Omicron);
-					Phi->Xi->Zeta(Kappa, Chi);
+					Phi->Xi->Zeta(Chi, Kappa);
 					Add(Kappa, Chi);
 
 					Hue = Pi->Hue;
