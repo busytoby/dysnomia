@@ -11,7 +11,7 @@ namespace Dysnomia {
 				BigInteger _Credit;
 				BigInteger _Charge;
 			public:
-				static Quark<Beryllium^, Hydrogen^, Hydrogen^>^ Uranus;
+				static Quark<Hydrogen^, Hydrogen^, Beryllium^>^ Uranus;
 
 				BigInteger Barn;
 
@@ -20,7 +20,7 @@ namespace Dysnomia {
 					Barn = R->Rod->Barn;
 					_Credit = N->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
-					if (Uranus == nullptr) Uranus = this;
+					if (Uranus == nullptr) Uranus = gcnew Quark<Hydrogen^, Hydrogen^, Beryllium^>(this->L, this->R, N);
 				};
 
 				BigInteger PresentEvidence() {
