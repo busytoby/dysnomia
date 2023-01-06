@@ -13,7 +13,7 @@ namespace Dysnomia {
 				BigInteger _Ring;
 			public:
 				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
-				static Poly<Fluorine^, Lithium^>^ Pluto;
+				static Poly<Lithium^, Fluorine^>^ Pluto;
 
 				Lithium^ Xi;
 
@@ -22,7 +22,7 @@ namespace Dysnomia {
 				Fluorine(Carbon^ that) {
 					_Ring = 0;
 					Xi = gcnew Lithium();
-					Pluto = gcnew Poly<Fluorine^, Lithium^>();
+					if(Pluto == nullptr) Pluto = gcnew Poly<Lithium^, Fluorine^>();
 
 					Boron^ Pi = Add(that);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
@@ -37,7 +37,7 @@ namespace Dysnomia {
 					Add(that, Alpha);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
-					Pluto->Add(this, Xi);
+					Pluto->Add(Xi, this);
 					Xi->Zeta(Beta, Pi);
 					_Ring = BigInteger::Add(_Ring, R->Cone->Ring);
 					return Pi;
