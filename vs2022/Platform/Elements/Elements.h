@@ -24,7 +24,7 @@ namespace Dysnomia {
 			static property Quark<Boron^, Boron^, Fluorine^>^ Star { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Star; }};
 			static property Quark<Beryllium^, Carbon^, Boron^>^ Uranus { Quark<Beryllium^, Carbon^, Boron^>^ get() { return Oxygen::Uranus; }};
 			static property Quark<Fluorine^, Boron^, Carbon^>^ Neptune { Quark<Fluorine^, Boron^, Carbon^>^ get() { return Fluorine::Neptune; }};
-			static property Poly<Lithium^, Fluorine^>^ Pluto { Poly<Lithium^, Fluorine^>^ get() { return Fluorine::Pluto; }};
+			static property Poly<Lithium^, Fluorine^>^ Telesto { Poly<Lithium^, Fluorine^>^ get() { return Fluorine::Telesto; }};
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Hyperion { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Hyperion; }};
 			static property Quark<Aluminium^, Carbon^, Helium^>^ Deimos { Quark<Aluminium^, Carbon^, Helium^>^ get() { return Aluminium::Deimos; }};
 		};
@@ -34,7 +34,7 @@ namespace Dysnomia {
 			static List<BigInteger>^ Evidences;
 			static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
 			static property BigInteger Mu { BigInteger get() { return Objects::Uranus->N->Rod->Barn; }};
-			static property BigInteger Rho { BigInteger get() {	return Objects::Pluto->Mu.Value->Mu.Value->Beta->Manifold; }};
+			static property BigInteger Rho { BigInteger get() {	return Objects::Telesto->Mu.Value->Mu.Value->Beta->Manifold; }};
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
 			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
