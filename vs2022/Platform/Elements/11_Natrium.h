@@ -40,6 +40,7 @@ namespace Dysnomia {
 						Oxygen::Uranus->R->Add(Xi, Oxygen::Uranus->R->Omicron);
 						Phi->Xi->Zeta(Oxygen::Uranus->R, Kappa);
 						Add(Kappa, Oxygen::Uranus->R);
+						Oxygen::Uranus->N->Xi->Zeta(Phi, Chi);
 					} else 
 						Chi->Add(Xi, Chi->Omicron);
 
