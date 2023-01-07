@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Constants.h"
+#include "Laws.h"
 #include "Jong.h"
 
 using namespace Dysnomia::Platform::Elements;
@@ -21,6 +22,7 @@ namespace Dysnomia {
 					Dysnomia::Platform::Wou::Constants::Sigma);
 				Constants::Evidences->Add(Rho->Evidence);
 				Constants::Evidences->Add(Constants::Psi);
+				Constants::Evidences->Add(Laws::Fifth);
 			}
 		}
 	}
