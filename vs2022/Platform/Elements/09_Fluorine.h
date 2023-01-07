@@ -32,10 +32,14 @@ namespace Dysnomia {
 				}
 
 				Boron^ Add(Carbon^ that) {
-					Hydrogen^ Beta = gcnew Hydrogen();
 					Beryllium^ Alpha = gcnew Beryllium();
+					return Add(that, Alpha);
+				}
+
+				Boron^ Add(Carbon^ that, Beryllium^ Alpha) {
+					Hydrogen^ Beta = gcnew Hydrogen();
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-					Add(that, Alpha);
+					Poly<Carbon^, Beryllium^>::Add(that, Alpha);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
 					Pluto->Add(Xi, this);
