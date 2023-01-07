@@ -1,4 +1,5 @@
 #pragma once
+#include "07_Nitrogen.h"
 
 using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
@@ -14,6 +15,19 @@ namespace Dysnomia {
 				Lithium^ Xi;
 				Helium^ Omicron;
 				Boron^ Pi;
+
+				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Phi) {
+					Xi = gcnew Lithium();
+					Omicron = gcnew Helium();
+
+					Beta = gcnew Hydrogen();
+					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Phi);
+					Nitrogen^ Gamma = gcnew Nitrogen(Alpha, Alpha->Beta, Beta);
+					Pi = gcnew Boron(Gamma->N, Gamma, Alpha->Beta);
+					Xi->Zeta(Beta, Alpha);
+					Xi->Zeta(Gamma, Pi);
+					Omicron->Zeta(Gamma->N->Cone, Alpha->Beta);
+				}
 
 				Carbon() {
 					Xi = gcnew Lithium();

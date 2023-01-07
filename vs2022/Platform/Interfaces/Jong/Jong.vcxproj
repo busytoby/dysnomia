@@ -143,8 +143,20 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\Affinity\Affinity.vcxproj">
+      <Project>{ff259607-b668-4674-8a67-9a01ca424f0b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Dynamic\Dynamic.vcxproj">
+      <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Model\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Elements\Elements.vcxproj">
+      <Project>{8eb3b263-33aa-40cb-8552-2ad6109c4b78}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Dai\Dai.vcxproj">
+      <Project>{aa973657-2e6a-46a3-91c7-894e7b6eee21}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Wou\Wou.vcxproj">
       <Project>{d2baa4da-ce56-43a1-83a5-ea0bf77f47d8}</Project>
