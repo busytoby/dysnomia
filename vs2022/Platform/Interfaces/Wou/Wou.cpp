@@ -21,11 +21,11 @@ namespace Dysnomia {
 				Constants::Evidences->Add(S->Mu.Key->PresentEvidence());
 				Constants::Evidences->Add(Laws::Third);
 
-				Hydrogen^ Beta = gcnew Hydrogen();
-				Beryllium^ Alpha = gcnew Beryllium();
-				Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-				Objects::Neptune->L->Add(Alpha, Objects::Neptune->L->Omicron);
-
+				Carbon^ Beta = gcnew Carbon();
+				Fluorine^ Alpha = gcnew Fluorine(C);
+				Objects::Neptune->L->Add(Alpha->Mu.Value, Beta->Omicron);
+				Objects::Neptune->L->Add((Beryllium^)Beta->Pi->R, Objects::Neptune->L->Omicron);
+				int i = 99;
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
