@@ -20,6 +20,7 @@ namespace Dysnomia {
 					Dysnomia::Platform::Wou::Laws::Fourth,
 					Dysnomia::Platform::Wou::Constants::Sigma);
 				Constants::Evidences->Add(Rho->Evidence);
+				Constants::Evidences->Add(Constants::Psi);
 			}
 		}
 	}
