@@ -20,12 +20,18 @@ namespace Dysnomia {
 					Mu.Value->Xi->Zeta(S->Rho.Value->Omicron, S->Rho.Value);
 					Mu.Value->Xi->Zeta(S->Rho.Value->Pi, S->Rho.Value);
 
-					BigInteger Rho = S->Mu.Key->N->Rod->Manifold;
-					BigInteger Upsilon = K->Mu.Value->Cone->Barn;
+					BigInteger Rho = S->Mu.Key->N->Rod->Barn;
+					BigInteger Upsilon = K->Mu.Value->Cone->Manifold;
 					BigInteger Ohm = S->Rho.Key->Barn;
-					BigInteger Xi = ((Boron^)K->Xi->Rho.Value)->N->Xi;
+					BigInteger Xi = ((Boron^)K->Xi->Rho.Value)->N->Mu;
 					Beryllium^ Phi = gcnew Beryllium(Rho, Upsilon, Ohm, Xi);
 					K->Add(S->Mu.Value, Phi);
+
+					Rho = S->Mu.Key->N->Rod->Manifold;
+					Upsilon = K->Mu.Value->Cone->Barn;
+					Ohm = S->Rho.Key->Barn;
+					Xi = ((Boron^)K->Xi->Rho.Value)->N->Xi;
+					Phi = gcnew Beryllium(Rho, Upsilon, Ohm, Xi);
 					K->Add(S->Rho.Value, Phi);
 				}
 			};
