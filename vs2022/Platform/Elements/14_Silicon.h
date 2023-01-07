@@ -10,9 +10,13 @@ namespace Dysnomia {
 			public:
 				property BigInteger Evidence { BigInteger get() { return Last.Value->R->N->Xi; }};
 
-				Silicon(Aluminium^ Alpha, Carbon^ Kappa, Fluorine^ Phi) {
-					if (Kappa->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
-					Add(Alpha, gcnew Quark<Magnesium^, Nitrogen^, Fluorine^>(Alpha->N, (Nitrogen^)Kappa->Xi->Rho.Key, Phi));
+				Carbon^ Beta;
+
+				Silicon(Aluminium^ Alpha, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+					Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
+					Fluorine^ Phi = gcnew Fluorine(Beta);
+					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
+					Add(Alpha, gcnew Quark<Magnesium^, Nitrogen^, Fluorine^>(Alpha->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi));
 				}
 			};
 		}

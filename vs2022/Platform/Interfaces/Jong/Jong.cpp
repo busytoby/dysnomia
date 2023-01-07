@@ -13,15 +13,13 @@ namespace Dysnomia {
 				Mu = gcnew Wou();
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
 
-				Carbon^ Rho = gcnew Carbon(
+				Silicon^ Rho = gcnew Silicon(
+					Mu->Upsilon,
 					Dysnomia::Platform::Wou::Laws::Sixth,
 					Dysnomia::Platform::Wou::Constants::Upsilon,
 					Dysnomia::Platform::Wou::Laws::Fourth,
 					Dysnomia::Platform::Wou::Constants::Sigma);
-				Fluorine^ Psi = gcnew Fluorine(Rho);
-
-				Silicon^ Nu = gcnew Silicon(Mu->Upsilon, Rho, Psi);
-				Constants::Evidences->Add(Nu->Evidence);
+				Constants::Evidences->Add(Rho->Evidence);
 			}
 		}
 	}
