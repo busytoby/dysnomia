@@ -10,6 +10,8 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Interfaces {
+			typedef Dynamic Hydrogen;
+
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
@@ -18,6 +20,11 @@ namespace Dysnomia {
 				Natrium^ S = gcnew Natrium(F);
 				Constants::Evidences->Add(S->Mu.Key->PresentEvidence());
 				Constants::Evidences->Add(Laws::Third);
+
+				Hydrogen^ Beta = gcnew Hydrogen();
+				Beryllium^ Alpha = gcnew Beryllium();
+				Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
+				Objects::Neptune->L->Add(Alpha, Objects::Neptune->L->Omicron);
 
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
