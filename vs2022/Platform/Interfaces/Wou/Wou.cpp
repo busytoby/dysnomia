@@ -30,6 +30,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Laws::Eighth);
 
 				Magnesium^ N = gcnew Magnesium(S, Alpha);
+				Aluminium^ A = gcnew Aluminium(N);
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
