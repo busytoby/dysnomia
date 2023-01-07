@@ -25,7 +25,7 @@ namespace Dysnomia {
 				Fluorine^ Alpha = gcnew Fluorine(C);
 				Objects::Neptune->L->Add(Alpha->Mu.Value, Beta->Omicron);
 				Objects::Neptune->L->Add((Beryllium^)Beta->Pi->R, Objects::Neptune->L->Omicron);
-				int i = 99;
+				Constants::Evidences->Add(Constants::Upsilon);
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());

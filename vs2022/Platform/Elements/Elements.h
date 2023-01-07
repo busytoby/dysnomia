@@ -50,6 +50,7 @@ namespace Dysnomia {
 			static property BigInteger Second { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Constants::Mu, First); }};
 			static property BigInteger Third { BigInteger get() { return BigInteger::ModPow(First, Constants::Psi, Constants::Nu); }};
 			static property BigInteger Fourth { BigInteger get() { return BigInteger::ModPow(Constants::Last, Constants::Psi, Constants::Eta); }};
+			static property BigInteger Fifth { BigInteger get() { return BigInteger::Add(Constants::Upsilon, Constants::Rho); }};
 		};
 	}
 }
