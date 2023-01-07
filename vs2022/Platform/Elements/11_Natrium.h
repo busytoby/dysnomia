@@ -27,18 +27,20 @@ namespace Dysnomia {
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
+					Chi->Add(Alpha, Chi->Omicron);
+					Phi->Xi->Zeta(Chi, Kappa);
+					Add(Kappa, Chi);
 
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
 						Phi->Add(Oxygen::Uranus->R);
 						Chi->Omicron->Zeta(Oxygen::Uranus->N->Cone, Xi->Cone);
 						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);
-						Oxygen::Uranus->R->Add(Xi, Chi->Omicron);
-					}
-
-					Chi->Add(Alpha, Chi->Omicron);
-					Phi->Xi->Zeta(Chi, Kappa);
-					Add(Kappa, Chi);
+						Oxygen::Uranus->R->Add(Xi, Oxygen::Uranus->R->Omicron);
+						Phi->Xi->Zeta(Oxygen::Uranus->R, Kappa);
+						Add(Kappa, Oxygen::Uranus->R);
+					} else 
+						Chi->Add(Xi, Chi->Omicron);
 
 					Hue = Pi->Hue;
 				}
