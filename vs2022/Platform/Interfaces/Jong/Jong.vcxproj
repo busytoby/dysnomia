@@ -143,6 +143,9 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\Quark\Quark.vcxproj">
+      <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Wou\Wou.vcxproj">
       <Project>{d2baa4da-ce56-43a1-83a5-ea0bf77f47d8}</Project>
     </ProjectReference>
