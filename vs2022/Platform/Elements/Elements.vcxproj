@@ -179,8 +179,8 @@
     <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Poly\Poly.vcxproj">
-      <Project>{99047af3-4c5a-484a-bc30-06594be6ff4e}</Project>
+    <ProjectReference Include="..\Interfaces\Dai\Dai.vcxproj">
+      <Project>{aa973657-2e6a-46a3-91c7-894e7b6eee21}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

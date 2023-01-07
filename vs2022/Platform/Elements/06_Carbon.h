@@ -8,7 +8,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon : Poly<Beryllium^, Helium^> {
+			public ref class Carbon : Dai<Beryllium^, Helium^> {
 			public:
 				Hydrogen^ Beta;
 				Lithium^ Xi;

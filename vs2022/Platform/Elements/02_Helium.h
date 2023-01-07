@@ -8,9 +8,9 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Helium : public Poly<Hydrogen^, Hydrogen^> {
+			public ref class Helium : public Dai<Hydrogen^, Hydrogen^> {
 			public:
-				Helium() : Poly<Hydrogen^, Hydrogen^>() {
+				Helium() : Dai<Hydrogen^, Hydrogen^>() {
 				};
 				Hydrogen^ Zeta(Hydrogen^ S, Hydrogen^ G) {
 					if (!S->Tau.IsZero && !G->Tau.IsZero)

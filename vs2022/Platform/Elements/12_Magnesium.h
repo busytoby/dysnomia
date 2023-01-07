@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Magnesium : public Poly<Carbon^, Fluorine^>
+			public ref class Magnesium : public Dai<Carbon^, Fluorine^>
 			{
 			public:
 				static Quark<Magnesium^, Fluorine^, Natrium^>^ Hyperion;

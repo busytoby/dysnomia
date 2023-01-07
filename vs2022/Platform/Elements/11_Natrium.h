@@ -12,7 +12,7 @@ using namespace Dysnomia::Platform;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Natrium : Poly<Oxygen^, Carbon^>
+			public ref class Natrium : Dai<Oxygen^, Carbon^>
 			{
 			public:
 				Beryllium^ Xi;

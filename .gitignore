@@ -205,3 +205,7 @@
 /vs2022/Platform/Interfaces/Poly/obj
 /vs2022/Platform/Interfaces/Poly/Poly.vcxproj.user
 /vs2022/Platform/Interfaces/Poly/Poly.vcxproj.filters
+/vs2022/Platform/Interfaces/Dai/x64/Debug
+/vs2022/Platform/Interfaces/Dai/obj
+/vs2022/Platform/Interfaces/Dai/Dai.vcxproj.user
+/vs2022/Platform/Interfaces/Dai/Dai.vcxproj.filters

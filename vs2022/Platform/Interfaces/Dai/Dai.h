@@ -9,12 +9,12 @@ namespace Dysnomia {
 			generic <typename T1, typename T2>
 			where T1 : Epsilon
 			where T2 : Epsilon
-			public ref class Poly : public Epsilon
+			public ref class Dai : public Epsilon
 			{
 			private:
 				List<KeyValuePair<T1, T2>>^ Alpha;
 			public:
-				Poly() {
+				Dai() {
 					Alpha = gcnew List<KeyValuePair<T1, T2>>();
 				}
 
