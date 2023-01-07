@@ -7,6 +7,7 @@ using namespace System;
 using namespace System::Drawing;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
+using namespace Dysnomia::Platform;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -50,9 +51,6 @@ namespace Dysnomia {
 
 					Add(Kappa, Chi);
 					Hue = Pi->Hue;
-
-					Constants::Evidences->Add(Mu.Key->PresentEvidence());
-					Constants::Evidences->Add(Laws::Third);
 				}
 
 				BigInteger Grow() {

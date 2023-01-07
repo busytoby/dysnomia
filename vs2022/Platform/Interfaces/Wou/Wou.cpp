@@ -18,6 +18,8 @@ namespace Dysnomia {
 				Carbon^ C = gcnew Carbon();
 				Fluorine^ F = gcnew Fluorine(C);
 				Natrium^ S = gcnew Natrium(F);
+				Constants::Evidences->Add(S->Mu.Key->PresentEvidence());
+				Constants::Evidences->Add(Laws::Third);
 
 				Carbon^ Beta = gcnew Carbon();
 				Fluorine^ Alpha = gcnew Fluorine(C);
