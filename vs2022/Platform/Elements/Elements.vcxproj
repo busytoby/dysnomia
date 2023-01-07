@@ -176,6 +176,9 @@
     <ProjectReference Include="..\..\Model\Spin\Spin.vcxproj">
       <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
+      <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Interfaces\Poly\Poly.vcxproj">
       <Project>{99047af3-4c5a-484a-bc30-06594be6ff4e}</Project>
     </ProjectReference>
