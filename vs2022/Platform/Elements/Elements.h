@@ -34,12 +34,13 @@ namespace Dysnomia {
 			static List<BigInteger>^ Evidences;
 			static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
 			static property BigInteger Mu { BigInteger get() { return Objects::Uranus->N->Rod->Barn; }};
-			static property BigInteger Rho { BigInteger get() {	return ((Hydrogen^)Objects::Pluto->Mu.Key->Mu.Key)->Manifold; }};
+			static property BigInteger Rho { BigInteger get() {	return Objects::Pluto->Mu.Value->Mu.Value->Beta->Manifold; }};
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Sun->N->N->Cone->Manifold, Objects::Sun->R->N->Rod->Manifold); }}
 			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
 			static property BigInteger Sigma { BigInteger get() { return Objects::Sun->L->Mu.Key->Pi->N->Rod->Base; }}
 			static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Rho.Key->Cone->Signal; }}
+			static property BigInteger Tau { BigInteger get() { return Objects::Mars->L->Mu.Value->Manifold; }}
 
 			static Constants() {
 				Evidences = gcnew List<BigInteger>();
