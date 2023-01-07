@@ -26,6 +26,7 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
+					((Beryllium^)Fluorine::Neptune->R->R)->Xi->Zeta(Xi, Lambda);
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Chi->Add(Alpha, Chi->Omicron);
 					Phi->Xi->Zeta(Chi, Kappa);
@@ -33,7 +34,7 @@ namespace Dysnomia {
 
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
-						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);
+						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);					
 						Oxygen::Uranus->R->Omicron->Zeta(Oxygen::Uranus->N->Cone, Xi->Cone);
 						Phi->Add(Oxygen::Uranus->R);
 						Phi->Xi->Zeta(Oxygen::Uranus->R, Kappa);
@@ -43,6 +44,7 @@ namespace Dysnomia {
 						Oxygen::Uranus->R->Add(Xi, Oxygen::Uranus->R->Omicron);
 						Oxygen::Uranus->R->Add(Alpha, Chi->Omicron);
 						Oxygen::Uranus->R->Add(Phi->Mu.Value, Phi->Mu.Key->Omicron);
+						Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
 					} else 
 						Chi->Add(Xi, Chi->Omicron);
 
