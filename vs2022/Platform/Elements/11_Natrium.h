@@ -29,7 +29,7 @@ namespace Dysnomia {
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Chi->Add(Alpha, Chi->Omicron);
 					Phi->Xi->Zeta(Chi, Kappa);
-					Add(Kappa, Chi);
+
 
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
@@ -46,6 +46,7 @@ namespace Dysnomia {
 					} else 
 						Chi->Add(Xi, Chi->Omicron);
 
+					Add(Kappa, Chi);
 					Hue = Pi->Hue;
 				}
 
