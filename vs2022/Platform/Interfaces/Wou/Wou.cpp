@@ -26,6 +26,7 @@ namespace Dysnomia {
 				Objects::Neptune->L->Add(Alpha->Mu.Value, Beta->Omicron);
 				Objects::Neptune->L->Add((Beryllium^)Beta->Pi->R, Objects::Neptune->L->Omicron);
 				Constants::Evidences->Add(Constants::Upsilon);
+				Constants::Evidences->Add(Laws::Sixth);
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
