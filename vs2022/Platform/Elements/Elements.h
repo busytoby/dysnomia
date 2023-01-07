@@ -41,6 +41,7 @@ namespace Dysnomia {
 			static property BigInteger Sigma { BigInteger get() { return Objects::Star->L->Mu.Key->Pi->N->Rod->Base; }}
 			static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Rho.Key->Cone->Signal; }}
 			static property BigInteger Tau { BigInteger get() { return Objects::Deimos->L->Mu.Value->Manifold; }}
+			static property BigInteger Theta { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }}
 
 			static Constants() {
 				Evidences = gcnew List<BigInteger>();
@@ -58,6 +59,7 @@ namespace Dysnomia {
 			static property BigInteger Seventh { BigInteger get() { return BigInteger::ModPow(Sixth, Constants::Nu, Constants::Upsilon); }};
 			static property BigInteger Eighth { BigInteger get() { return BigInteger::ModPow(Constants::Sigma, Seventh, Constants::Last); }};
 			static property BigInteger Ninth { BigInteger get() { return BigInteger::ModPow(Constants::Eta, Constants::Last, Constants::Tau); }};
+			static property BigInteger Tenth { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }};
 		};
 	}
 }
