@@ -17,6 +17,7 @@ namespace Dysnomia {
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
 					Add(Alpha, gcnew Quark<Magnesium^, Nitrogen^, Fluorine^>(Alpha->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi));
+					Aluminium::Deimos->R->Zeta(Beta->Omicron->Rho);
 				}
 			};
 		}
