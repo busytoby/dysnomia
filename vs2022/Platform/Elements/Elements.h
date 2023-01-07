@@ -53,6 +53,7 @@ namespace Dysnomia {
 			static property BigInteger Fifth { BigInteger get() { return BigInteger::Add(Constants::Upsilon, Constants::Rho); }};
 			static property BigInteger Sixth { BigInteger get() { return BigInteger::ModPow(Constants::Upsilon, Constants::Sigma, Third); }};
 			static property BigInteger Seventh { BigInteger get() { return BigInteger::ModPow(Sixth, Constants::Eta, Constants::Upsilon); }};
+			static property BigInteger Eighth { BigInteger get() { return BigInteger::ModPow(Constants::Sigma, Seventh, Constants::Last); }};
 		};
 	}
 }
