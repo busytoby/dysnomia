@@ -21,6 +21,7 @@ namespace Dysnomia {
 				Fluorine^ Psi = gcnew Fluorine(Rho);
 
 				Silicon^ Nu = gcnew Silicon(Mu->Upsilon, Rho, Psi);
+				Constants::Evidences->Add(Nu->Evidence);
 			}
 		}
 	}
