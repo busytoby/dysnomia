@@ -25,6 +25,7 @@ namespace Dysnomia {
 					BigInteger Ohm = S->Rho.Key->Barn;
 					BigInteger Xi = ((Boron^)K->Xi->Rho.Value)->N->Xi;
 					Beryllium^ Phi = gcnew Beryllium(Rho, Upsilon, Ohm, Xi);
+					K->Add(S->Mu.Value, Phi);
 					K->Add(S->Rho.Value, Phi);
 				}
 			};
