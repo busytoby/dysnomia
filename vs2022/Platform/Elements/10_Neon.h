@@ -11,7 +11,7 @@ namespace Dysnomia {
 			public ref class Neon : public Quark<Fluorine^, Hydrogen^, Hydrogen^>
 			{
 			public:
-				static Quark<Boron^, Boron^, Fluorine^>^ Sun;
+				static Quark<Boron^, Boron^, Fluorine^>^ Star;
 
 				BigInteger Manifold;
 
@@ -31,7 +31,7 @@ namespace Dysnomia {
 				}};
 
 				Neon(Fluorine^ Phi) : Quark(Phi, Phi->Last.Key->Omicron->Last.Value, Phi->Last.Key->Omicron->Last.Key) {
-					if (Sun == nullptr) Sun = gcnew Quark<Boron^, Boron^, Fluorine^>((Boron^)N->Xi[0].Value, (Boron^)N->Xi[1].Value, Phi);
+					if (Star == nullptr) Star = gcnew Quark<Boron^, Boron^, Fluorine^>((Boron^)N->Xi[0].Value, (Boron^)N->Xi[1].Value, Phi);
 					Manifold = BigInteger::Add(((Boron^)N->Xi->Mu.Value)->N->Cone->Manifold, ((Boron^)N->Xi->Rho.Value)->N->Rod->Manifold);
 				};
 			};

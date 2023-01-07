@@ -21,7 +21,7 @@ namespace Dysnomia {
 	namespace Platform {
 		public ref class Objects abstract sealed {
 		public:
-			static property Quark<Boron^, Boron^, Fluorine^>^ Sun { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Sun; }};
+			static property Quark<Boron^, Boron^, Fluorine^>^ Star { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Star; }};
 			static property Quark<Beryllium^, Carbon^, Boron^>^ Uranus { Quark<Beryllium^, Carbon^, Boron^>^ get() { return Oxygen::Uranus; }};
 			static property Quark<Fluorine^, Boron^, Carbon^>^ Neptune { Quark<Fluorine^, Boron^, Carbon^>^ get() { return Fluorine::Neptune; }};
 			static property Poly<Lithium^, Fluorine^>^ Pluto { Poly<Lithium^, Fluorine^>^ get() { return Fluorine::Pluto; }};
@@ -36,9 +36,9 @@ namespace Dysnomia {
 			static property BigInteger Mu { BigInteger get() { return Objects::Uranus->N->Rod->Barn; }};
 			static property BigInteger Rho { BigInteger get() {	return Objects::Pluto->Mu.Value->Mu.Value->Beta->Manifold; }};
 			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
-			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Sun->N->N->Cone->Manifold, Objects::Sun->R->N->Rod->Manifold); }}
+			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
 			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
-			static property BigInteger Sigma { BigInteger get() { return Objects::Sun->L->Mu.Key->Pi->N->Rod->Base; }}
+			static property BigInteger Sigma { BigInteger get() { return Objects::Star->L->Mu.Key->Pi->N->Rod->Base; }}
 			static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Rho.Key->Cone->Signal; }}
 			static property BigInteger Tau { BigInteger get() { return Objects::Mars->L->Mu.Value->Manifold; }}
 
