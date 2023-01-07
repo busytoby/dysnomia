@@ -28,25 +28,17 @@ namespace Dysnomia {
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
-					Chi->Add(Alpha, Chi->Omicron);
-					Phi->Xi->Zeta(Chi, Kappa);
-
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 					((Beryllium^)Fluorine::Neptune->R->R)->Xi->Zeta(Xi, Lambda);
+					Chi->Add(Alpha, Chi->Omicron);
+					Phi->Xi->Zeta(Chi, Kappa);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);					
-						Oxygen::Uranus->R->Omicron->Zeta(Oxygen::Uranus->N->Cone, Xi->Cone);
 						Phi->Add(Oxygen::Uranus->R);
-						Phi->Xi->Zeta(Oxygen::Uranus->R, Kappa);
-						Chi->Omicron->Zeta(Oxygen::Uranus->N->Cone, Xi->Cone);
 						Add(Kappa, Oxygen::Uranus->R);
-						Oxygen::Uranus->N->Xi->Zeta(Phi, Chi);
-						Oxygen::Uranus->R->Add(Xi, Oxygen::Uranus->R->Omicron);
-						Oxygen::Uranus->R->Add(Alpha, Chi->Omicron);
-						Oxygen::Uranus->R->Add(Phi->Mu.Value, Phi->Mu.Key->Omicron);
 						Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
-					} else 
-						Chi->Add(Xi, Chi->Omicron);
+					}
+					Chi->Add(Xi, Chi->Omicron);
 
 					Add(Kappa, Chi);
 					Hue = Pi->Hue;
