@@ -15,6 +15,10 @@ namespace Dysnomia {
 						Mars->R->Omicron->Zeta(R->Mu.Value, N->Mu.Value->Last.Key->Pi->L);
 					}
 				}
+
+				BigInteger PresentEvidence() {
+					return BigInteger::ModPow(L->Beta->Identity, N->Last.Value->Last.Key->Beta->Ring, R->Mu.Key->Barn);
+				}
 			};
 		}
 	}

@@ -35,9 +35,9 @@ namespace Dysnomia {
 						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);					
 						Phi->Add(Oxygen::Uranus->R);
 						Add(Kappa, Oxygen::Uranus->R);
-						Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
 					}
 
+					Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
 					Add(Kappa, Chi);
 					Hue = Pi->Hue;
 				}
