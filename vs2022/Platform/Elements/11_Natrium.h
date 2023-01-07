@@ -50,6 +50,9 @@ namespace Dysnomia {
 
 					Add(Kappa, Chi);
 					Hue = Pi->Hue;
+
+					Constants::Evidences->Add(Mu.Key->PresentEvidence());
+					Constants::Evidences->Add(Laws::Third);
 				}
 
 				BigInteger Grow() {
