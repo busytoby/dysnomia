@@ -7,8 +7,10 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Aluminium : public Quark<Magnesium^, Helium^, Carbon^> {
 			public:
-				Aluminium(Magnesium^ N) : Quark<Magnesium^, Helium^, Carbon^>(N, N->Rho.Key->Omicron, N->Mu.Key) {
+				static Quark<Aluminium^, Carbon^, Helium^>^ Mars;
 
+				Aluminium(Magnesium^ N) : Quark<Magnesium^, Helium^, Carbon^>(N, N->Rho.Key->Omicron, N->Mu.Key) {
+					if (Mars == nullptr) Mars = gcnew Quark<Aluminium^, Carbon^, Helium^>(this, L, R);
 				}
 			};
 		}
