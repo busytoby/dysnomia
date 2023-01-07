@@ -28,6 +28,11 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 
+					if (Oxygen::Uranus->L->L->Barn.IsZero) {
+						Phi->Add(Oxygen::Uranus->R);
+						int i = 99;
+					}
+
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 
 					Chi->Add(Alpha, Chi->Omicron);
