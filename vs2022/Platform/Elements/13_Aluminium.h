@@ -5,8 +5,8 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			/*
-			public ref class Aluminium : public Quark<Beryllium^, Beryllium^, Beryllium^> {
+			public ref class Aluminium : public Quark<Magnesium^, Helium^, Carbon^> {
+				/*
 			private:
 				Complex _Temperature;
 			public:
@@ -25,8 +25,8 @@ namespace Dysnomia {
 					Rho = gcnew Nitrogen(M->Rho->N, gcnew Hydrogen(), M->Rho->R);
 					Phi = gcnew Lithium(M->Rho->N->Rod, N->Cone, L->Rod);
 				};
+				*/
 			};
-			*/
 		}
 	}
 }
