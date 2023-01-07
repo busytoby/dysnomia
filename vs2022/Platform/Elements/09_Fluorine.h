@@ -27,8 +27,8 @@ namespace Dysnomia {
 
 					Boron^ Pi = Add(that);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
-					that->Xi->Zeta(this, Pi);
 					Xi->Zeta(that, Pi);
+					that->Xi->Zeta(this, Pi);
 				}
 
 				Boron^ Add(Carbon^ that) {
