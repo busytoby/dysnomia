@@ -26,6 +26,7 @@ namespace Dysnomia {
 
 	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
 		try {
+			if(!Rod->Barn.IsZero || !Cone->Barn.IsZero) throw gcnew AffinityException(4, "Affinity Already Paired");
 			this->Rod = Rod;
 			this->Cone = Cone;
 			OpenManifolds();

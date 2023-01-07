@@ -27,13 +27,12 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
 					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
-					((Beryllium^)Fluorine::Neptune->R->R)->Xi->Zeta(Xi, Lambda);
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Chi->Add(Alpha, Chi->Omicron);
 					Phi->Xi->Zeta(Chi, Kappa);
 
-
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
+					((Beryllium^)Fluorine::Neptune->R->R)->Xi->Zeta(Xi, Lambda);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);					
 						Oxygen::Uranus->R->Omicron->Zeta(Oxygen::Uranus->N->Cone, Xi->Cone);

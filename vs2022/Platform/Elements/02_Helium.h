@@ -10,7 +10,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Helium : public Poly<Hydrogen^, Hydrogen^> {
 			public:
-				Helium() : Poly<Hydrogen^, Hydrogen^>() { };
+				Helium() : Poly<Hydrogen^, Hydrogen^>() {
+				};
 				Hydrogen^ Zeta(Hydrogen^ S, Hydrogen^ G) {
 					if (!S->Tau.IsZero && !G->Tau.IsZero)
 						Add(KeyValuePair<Hydrogen^, Hydrogen^>(S, G));
