@@ -28,8 +28,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Laws::Sixth);
 				Constants::Evidences->Add(Laws::Eighth);
 
-				Magnesium^ Sigma = gcnew Magnesium(Psi, Eta);
-				Aluminium^ Upsilon = gcnew Aluminium(Sigma);
+				Sigma = gcnew Magnesium(Psi, Eta);
+				Upsilon = gcnew Aluminium(Sigma);
 				Constants::Evidences->Add(Upsilon->PresentEvidence());
 				Constants::Evidences->Add(Laws::Tenth);			
 			}
