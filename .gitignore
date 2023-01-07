@@ -209,3 +209,7 @@
 /vs2022/Platform/Interfaces/Dai/obj
 /vs2022/Platform/Interfaces/Dai/Dai.vcxproj.user
 /vs2022/Platform/Interfaces/Dai/Dai.vcxproj.filters
+/vs2022/Platform/Interfaces/Jong/x64/Debug
+/vs2022/Platform/Interfaces/Jong/obj
+/vs2022/Platform/Interfaces/Jong/Jong.vcxproj.user
+/vs2022/Platform/Interfaces/Jong/Jong.vcxproj.filters

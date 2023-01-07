@@ -5,7 +5,7 @@
 #include <assert.h>
 using namespace System::Numerics;
 using namespace System::Drawing;
-using namespace Dysnomia::Platform;
+using namespace Dysnomia::Platform::Wou;
 using namespace Dysnomia::Platform::Elements;
 
 namespace Dysnomia {
