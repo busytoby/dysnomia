@@ -9,8 +9,9 @@ namespace Dysnomia {
 			{
 			public:
 
-				Magnesium(Fluorine^ F, Natrium^ S, Fluorine^ K) {
-
+				Magnesium(Natrium^ S, Fluorine^ K) {
+					Add(S->Mu.Value, S->Pi->N);
+					Add(S->Rho.Value, K);
 				}
 				/*
 								Sodium^ Mu;

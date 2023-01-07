@@ -28,6 +28,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Upsilon);
 				Constants::Evidences->Add(Laws::Sixth);
 				Constants::Evidences->Add(Laws::Eighth);
+
+				Magnesium^ N = gcnew Magnesium(S, Alpha);
 				/*
 				Neon^ N = gcnew Neon(gcnew Fluorine());
 				Sodium^ S = gcnew Sodium(gcnew Fluorine());
