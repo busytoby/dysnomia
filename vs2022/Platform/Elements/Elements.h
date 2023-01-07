@@ -28,38 +28,5 @@ namespace Dysnomia {
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Hyperion { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Hyperion; }};
 			static property Quark<Aluminium^, Carbon^, Helium^>^ Deimos { Quark<Aluminium^, Carbon^, Helium^>^ get() { return Aluminium::Deimos; }};
 		};
-
-		public ref class Constants abstract sealed {
-		public:
-			static List<BigInteger>^ Evidences;
-			static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
-			static property BigInteger Mu { BigInteger get() { return Objects::Uranus->N->Rod->Barn; }};
-			static property BigInteger Rho { BigInteger get() {	return Objects::Telesto->Mu.Value->Mu.Value->Beta->Manifold; }};
-			static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
-			static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
-			static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
-			static property BigInteger Sigma { BigInteger get() { return Objects::Star->L->Mu.Key->Pi->N->Rod->Base; }}
-			static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Rho.Key->Cone->Signal; }}
-			static property BigInteger Tau { BigInteger get() { return Objects::Deimos->L->Mu.Value->Manifold; }}
-			static property BigInteger Theta { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }}
-
-			static Constants() {
-				Evidences = gcnew List<BigInteger>();
-			}
-		};
-
-		public ref class Laws abstract sealed {
-		public:
-			static property BigInteger First { BigInteger get() { return BigInteger::Add(Constants::Rho, Constants::Evidences[0]); }};
-			static property BigInteger Second { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Constants::Mu, First); }};
-			static property BigInteger Third { BigInteger get() { return BigInteger::ModPow(First, Constants::Psi, Constants::Nu); }};
-			static property BigInteger Fourth { BigInteger get() { return BigInteger::ModPow(Constants::Last, Constants::Psi, Constants::Eta); }};
-			static property BigInteger Fifth { BigInteger get() { return BigInteger::Add(Constants::Upsilon, Constants::Rho); }};
-			static property BigInteger Sixth { BigInteger get() { return BigInteger::ModPow(Constants::Upsilon, Constants::Sigma, Third); }};
-			static property BigInteger Seventh { BigInteger get() { return BigInteger::ModPow(Sixth, Constants::Nu, Constants::Upsilon); }};
-			static property BigInteger Eighth { BigInteger get() { return BigInteger::ModPow(Constants::Sigma, Seventh, Constants::Last); }};
-			static property BigInteger Ninth { BigInteger get() { return BigInteger::ModPow(Constants::Eta, Constants::Last, Constants::Tau); }};
-			static property BigInteger Tenth { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }};
-		};
 	}
 }
