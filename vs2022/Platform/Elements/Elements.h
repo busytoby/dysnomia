@@ -25,7 +25,7 @@ namespace Dysnomia {
 			static property Quark<Beryllium^, Carbon^, Boron^>^ Uranus { Quark<Beryllium^, Carbon^, Boron^>^ get() { return Oxygen::Uranus; }};
 			static property Quark<Fluorine^, Boron^, Carbon^>^ Neptune { Quark<Fluorine^, Boron^, Carbon^>^ get() { return Fluorine::Neptune; }};
 			static property Poly<Lithium^, Fluorine^>^ Pluto { Poly<Lithium^, Fluorine^>^ get() { return Fluorine::Pluto; }};
-			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Saturn { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Saturn; }};
+			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Hyperion { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Hyperion; }};
 			static property Quark<Aluminium^, Carbon^, Helium^>^ Deimos { Quark<Aluminium^, Carbon^, Helium^>^ get() { return Aluminium::Deimos; }};
 		};
 
