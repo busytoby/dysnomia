@@ -5,19 +5,29 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Silicon : public Dai<Aluminium^, Coronium^>
+			public ref class Silicon : public Dai<Carbon^, Coronium^>
 			{
 			public:
 				property BigInteger Evidence { BigInteger get() { return Last.Value->R->N->Xi; }};
 
-				Carbon^ Beta;
+				Aluminium^ Zeta;
 
 				Silicon(Aluminium^ Alpha, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
-					Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
+					Zeta = Alpha;
+					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
-					Add(Alpha, gcnew Coronium(Alpha->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi));
+					Add(Beta, gcnew Coronium(Alpha->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi));
 					Aluminium::Deimos->R->Zeta(Beta->Omicron->Rho);
+				}
+
+				Coronium^ Consider(BigInteger Epsilon) {
+					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Beta->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
+					Fluorine^ Phi = gcnew Fluorine(Beta);
+					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
+					Coronium^ Kappa = gcnew Coronium(Zeta->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi);
+					Add(Beta, Kappa);
+					return Kappa;
 				}
 			};
 		}

@@ -12,13 +12,9 @@ namespace Dysnomia {
 				Phosphorous(Aluminium^ Mu, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
 					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
 					Add(Alpha->Mu.Value, Alpha);
+					Coronium^ Iota = Alpha->Consider(Qi);
+					Add(Iota, Alpha);
 				}
-				/*
-				property BigInteger Span { BigInteger get() { return (this->Item1->N->L->Manifold + this->Item2->R->R->Manifold) * this->Item1->N->R->Mu * 2; }}
-
-				Phosphorous(Silicon^ A, Silicon^ B) : Tuple(A, B) {
-				}
-				*/
 			};
 		}
 	}
