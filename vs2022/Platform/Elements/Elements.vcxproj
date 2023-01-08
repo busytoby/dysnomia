@@ -132,6 +132,7 @@
     <ClInclude Include="10_Neon.h" />
     <ClInclude Include="11_Natrium.h" />
     <ClInclude Include="12_Magnesium.h" />
+    <ClInclude Include="13a_Coronium.h" />
     <ClInclude Include="14_Silicon.h" />
     <ClInclude Include="15_Phosphorous.h" />
     <ClInclude Include="18_Argon.h" />

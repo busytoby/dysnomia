@@ -6,7 +6,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Phosphorous : Dai<Silicon^, Silicon^>
+			public ref class Phosphorous : Dai<Coronium^, Silicon^>
 			{
 			public:
 				/*

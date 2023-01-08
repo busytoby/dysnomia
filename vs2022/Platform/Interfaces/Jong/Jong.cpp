@@ -24,6 +24,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Psi);
 				Constants::Evidences->Add(Laws::Fifth);
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Constants::Last));
+
+				//Phosphorous^ Psi = gcnew Phosphorous();
 			}
 		}
 	}
