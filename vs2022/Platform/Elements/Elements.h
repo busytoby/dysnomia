@@ -34,7 +34,7 @@ namespace Dysnomia {
 			static property Quark<Aluminium^, Helium^, Carbon^>^ Phobos { Quark<Aluminium^, Helium^, Carbon^>^ get() { return Aluminium::Phobos; }};
 			static property Dai<Carbon^, Coronium^>^ Enceladus { Dai<Carbon^, Coronium^>^ get() { return Silicon::Enceladus; }};
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
-			static property Quark<Magnesium^, Aether^, Sulfur^>^ Pluto { Quark<Magnesium^, Aether^, Sulfur^>^ get() { return Argon::Pluto; }};
+			static property Quark<Magnesium^, Aether^, Sulfur^>^ Telesto { Quark<Magnesium^, Aether^, Sulfur^>^ get() { return Argon::Telesto; }};
 			static property Dai<Phosphorous^, Sulfur^>^ Titan { Dai<Phosphorous^, Sulfur^>^ get() { return Sulfur::Titan; }};
 		};
 	}
