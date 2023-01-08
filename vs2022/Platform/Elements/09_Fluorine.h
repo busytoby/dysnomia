@@ -42,7 +42,6 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
 					Dai<Carbon^, Beryllium^>::Add(that, Alpha);
 					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-					that->Omicron->Zeta(Alpha->Cone, Alpha->Beta);
 					Telesto->Add(Xi, this);
 					Xi->Zeta(Beta, Pi);
 					_Ring = BigInteger::Add(_Ring, R->Cone->Ring);

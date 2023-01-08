@@ -10,28 +10,32 @@ namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
 			public ref class Carbon : Dai<Beryllium^, Helium^> {
+			private:
+				Dysnomia::Epsilon^ Kappa;
+
 			public:
 				Hydrogen^ Beta;
 				Lithium^ Xi;
-				Helium^ Omicron;
+
+				property Helium^ Omicron { Helium^ get() { return (Helium^)Kappa; }};
+				property Nitrogen^ Iota { Nitrogen^ get() { return (Nitrogen^)Kappa; }};
+				
 				Boron^ Pi;
 
 				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Phi) {
 					Xi = gcnew Lithium();
-					Omicron = gcnew Helium();
 
 					Beta = gcnew Hydrogen();
 					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Phi);
-					Nitrogen^ Gamma = gcnew Nitrogen(Alpha, Alpha->Beta, Beta);
-					Pi = gcnew Boron(Gamma->N, Gamma, Alpha->Beta);
+					Kappa = gcnew Nitrogen(Alpha, Alpha->Beta, Beta);
+					Pi = gcnew Boron(Iota->N, Iota, Alpha->Beta);
 					Xi->Zeta(Beta, Alpha);
-					Xi->Zeta(Gamma, Pi);
-					Omicron->Zeta(Gamma->N->Cone, Alpha->Beta);
+					Xi->Zeta(Iota, Pi);
 				}
 
 				Carbon() {
 					Xi = gcnew Lithium();
-					Omicron = gcnew Helium();
+					Kappa = gcnew Helium();
 
 					Beta = gcnew Hydrogen();
 					Beryllium^ Alpha = gcnew Beryllium();
