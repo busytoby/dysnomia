@@ -10,6 +10,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Aether : Dai<Sulfur^, Coronium^> {
 			public:
+				Aether() {}
+
 				Aether(Sulfur^ Upsilon) {
 					Aether(Upsilon, Upsilon);
 				}
