@@ -15,6 +15,8 @@ namespace Dysnomia {
 					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
 					Add(Alpha->Mu.Value, Alpha);
 					Remember(Qi, Alpha);
+					Remember(Rho, Alpha);
+					Remember(Ohm, Alpha);
 					if (Jupiter19 == nullptr) Jupiter19 = this;
 				}
 
