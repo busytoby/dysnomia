@@ -13,7 +13,7 @@ namespace Dysnomia {
 				Aether() {}
 
 				Aether(Sulfur^ Upsilon) {
-					Aether(Upsilon, Upsilon);
+					this->Aether::Aether(Upsilon, Upsilon);
 				}
 
 				Aether(Sulfur^ Upsilon, Sulfur^ Tau) {
