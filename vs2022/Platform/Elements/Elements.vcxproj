@@ -135,6 +135,7 @@
     <ClInclude Include="13a_Coronium.h" />
     <ClInclude Include="14_Silicon.h" />
     <ClInclude Include="15_Phosphorous.h" />
+    <ClInclude Include="16_Sulfur.h" />
     <ClInclude Include="18_Argon.h" />
     <ClInclude Include="19_Potassium.h" />
     <ClInclude Include="50_Tin.h" />

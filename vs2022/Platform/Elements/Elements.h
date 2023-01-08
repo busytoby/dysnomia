@@ -15,6 +15,7 @@
 #include "13a_Coronium.h"
 #include "14_Silicon.h"
 #include "15_Phosphorous.h"
+#include "16_Sulfur.h"
 #include <cassert>
 
 using namespace System;
