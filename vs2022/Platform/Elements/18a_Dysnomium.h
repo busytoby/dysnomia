@@ -12,8 +12,8 @@ namespace Dysnomia {
 					this->Epsilon = Math::Random();
 				}
 
-				void Kappa(Dai<Dysnomia::Epsilon^, Dysnomia::Epsilon^>^ Alpha) {
-					Alpha->Remove(Alpha->Last);
+				void Kappa(Dai<Dysnomia::Epsilon^, Dysnomia::Epsilon^>^ Tau) {
+					Tau->Remove(Tau->Last);
 				}
 			};
 		}
