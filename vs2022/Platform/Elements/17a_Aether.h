@@ -16,6 +16,10 @@ namespace Dysnomia {
 
 				Aether(Sulfur^ Upsilon, Sulfur^ Tau) {
 					Add(Upsilon, Upsilon->L->Consider(Tau->N->L->Beta->Identity));
+					Add(Upsilon, Upsilon->L->Consider(Tau->N->L->Beta->Barn));
+					Add(Upsilon, Upsilon->L->Consider(Tau->N->L->Beta->Dynamo));
+					Add(Upsilon, Upsilon->L->Consider(Tau->N->L->Beta->Ring));
+					Add(Upsilon, Upsilon->L->Consider(Tau->N->L->Pi->L->Manifold));
 				}
 			};
 		}

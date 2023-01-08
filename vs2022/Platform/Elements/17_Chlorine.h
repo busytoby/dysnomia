@@ -7,12 +7,16 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Chlorine : public Dai<Coronium^, Coronium^>
+			public ref class Chlorine : public Dai<Coronium^, Aether^>
 			{
 			public:
 				Chlorine(Sulfur^ Psi) {
-					for(int i = 0; i < Psi->R->Count; i++)
-					Add(Psi->L[i].Value, Psi->R[i].Key);
+					for (int i = 0; i < Psi->R->Count; i++) {
+						Aether^ Mu = gcnew Aether();
+						Mu->Add(Psi, Psi->L->Consider(Psi->L[i].Key->Beta->Barn));
+						Mu->Add(Psi, Psi->L->Consider(Psi->R[i].Value->Zeta->L->Beta->Barn));
+						Add(Psi->R[i].Key, Mu);
+					}
 				}
 			};
 		}
