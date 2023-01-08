@@ -12,7 +12,7 @@ namespace Dysnomia {
 					this->Epsilon = Math::Random();
 				}
 
-				void Kappa(Dai<Dysnomia::Epsilon^, Dysnomia::Epsilon^>^ Tau) {
+				void Kappa(Phosphorous^ Tau) {
 					this->Epsilon = Tau->Last.Key->Epsilon;
 					Tau->Remove(Tau->Last);
 				}
