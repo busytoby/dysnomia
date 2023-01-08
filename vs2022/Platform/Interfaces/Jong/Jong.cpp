@@ -34,6 +34,7 @@ namespace Dysnomia {
 				Argon^ Sigma = gcnew Argon(Psi, Nu, Eta);
 
 				Constants::Evidences->Add(Laws::Eighth);
+				Constants::Evidences->Add(Laws::Tenth);
 			}
 		}
 	}
