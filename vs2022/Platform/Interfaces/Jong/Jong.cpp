@@ -25,6 +25,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Laws::Fifth);
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Constants::Last));
 				Constants::Evidences->Add(Rho->Rho.Key->R->R->Secret);
+				Constants::Evidences->Add(Mu->Upsilon->Testify(Rho->Rho.Key->R->R->Secret));
 			}
 		}
 	}
