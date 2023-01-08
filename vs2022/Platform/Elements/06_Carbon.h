@@ -9,7 +9,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon : Dai<Beryllium^, Helium^> {
+			public ref class Carbon : Dai<Beryllium^, Epsilon^> {
 			private:
 				Dysnomia::Epsilon^ Kappa;
 
@@ -31,6 +31,7 @@ namespace Dysnomia {
 					Pi = gcnew Boron(Iota->N, Iota, Alpha->Beta);
 					Xi->Zeta(Beta, Alpha);
 					Xi->Zeta(Iota, Pi);
+					Add(Alpha, Iota);
 				}
 
 				Carbon() {
@@ -43,6 +44,7 @@ namespace Dysnomia {
 					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
 					Xi->Zeta(Beta, Pi);
 					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
+					Grow();
 				}
 
 				void Grow() {

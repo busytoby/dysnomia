@@ -12,7 +12,7 @@ namespace Dysnomia {
 				static List<BigInteger>^ Evidences;
 				static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
 				static property BigInteger Mu { BigInteger get() { return Objects::Uranus->N->Rod->Barn; }};
-				static property BigInteger Rho { BigInteger get() { return Objects::Telesto->Mu.Value->Mu.Value->Beta->Manifold; }};
+				static property BigInteger Rho { BigInteger get() { return Objects::Tethys->Mu.Value->Mu.Value->Beta->Manifold; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 				static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
 				static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}

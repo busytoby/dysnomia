@@ -2,6 +2,7 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
+using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -18,8 +19,16 @@ namespace Dysnomia {
 					Alpha = gcnew List<KeyValuePair<T1, T2>>();
 				}
 
-				void Add(T1 A, T2 B) { Alpha->Add(KeyValuePair<T1, T2>(A, B)); }
-				void Add(KeyValuePair<T1, T2> M) { Alpha->Add(M); }
+				void Add(T1 A, T2 B) { 
+					Alpha->Add(KeyValuePair<T1, T2>(A, B)); 
+					if (A->Epsilon.IsZero || B->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
+					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(A->Epsilon, B->Epsilon)); 
+				}
+				void Add(KeyValuePair<T1, T2> M) { 
+					Alpha->Add(M); 
+					if (M.Key->Epsilon.IsZero || M.Value->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
+					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(M.Key->Epsilon, M.Value->Epsilon)); 
+				}
 
 				property int Count { int get() { return Alpha->Count; }}
 				property KeyValuePair<T1, T2> default[int] { KeyValuePair<T1, T2> get(int i) { return Alpha[i]; } }
