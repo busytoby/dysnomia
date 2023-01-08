@@ -30,6 +30,7 @@ namespace Dysnomia {
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Hyperion { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Hyperion; }};
 			static property Quark<Aluminium^, Helium^, Carbon^>^ Deimos { Quark<Aluminium^, Helium^, Carbon^>^ get() { return Aluminium::Deimos; }};
 			static property Dai<Carbon^, Coronium^>^ Enceladus { Dai<Carbon^, Coronium^>^ get() { return Silicon::Enceladus; }};
+			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
 		};
 	}
 }

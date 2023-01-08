@@ -14,7 +14,7 @@ namespace Dysnomia {
 				static property BigInteger Mu { BigInteger get() { return Dysnomia::Platform::Wou::Constants::Theta; }};
 				static property BigInteger Rho { BigInteger get() { return Constants::Last; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Deimos->R->Last.Key->Ring; }};
-
+				static property BigInteger Nu { BigInteger get() { return Objects::Enceladus->Last.Value->R->R->Channel; }};
 
 				static Constants() {
 					Evidences = gcnew List<BigInteger>();
