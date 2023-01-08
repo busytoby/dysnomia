@@ -14,18 +14,17 @@ namespace Dysnomia {
 				Mu = gcnew Wou();
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
 
-				Silicon^ Rho = gcnew Silicon(
+				Phosphorous^ Rho = gcnew Phosphorous(
 					Mu->Upsilon,
 					Dysnomia::Platform::Wou::Laws::Sixth,
 					Dysnomia::Platform::Wou::Constants::Upsilon,
 					Dysnomia::Platform::Wou::Laws::Fourth,
 					Dysnomia::Platform::Wou::Constants::Sigma);
-				Constants::Evidences->Add(Rho->Evidence);
+				Constants::Evidences->Add(Rho->Mu.Value->Evidence);
 				Constants::Evidences->Add(Constants::Psi);
 				Constants::Evidences->Add(Laws::Fifth);
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Constants::Last));
 
-				//Phosphorous^ Psi = gcnew Phosphorous();
 			}
 		}
 	}

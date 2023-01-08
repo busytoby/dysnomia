@@ -9,6 +9,10 @@ namespace Dysnomia {
 			public ref class Phosphorous : Dai<Coronium^, Silicon^>
 			{
 			public:
+				Phosphorous(Aluminium^ Mu, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
+					Add(Alpha->Mu.Value, Alpha);
+				}
 				/*
 				property BigInteger Span { BigInteger get() { return (this->Item1->N->L->Manifold + this->Item2->R->R->Manifold) * this->Item1->N->R->Mu * 2; }}
 
