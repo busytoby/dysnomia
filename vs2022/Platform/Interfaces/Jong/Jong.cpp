@@ -32,6 +32,8 @@ namespace Dysnomia {
 				Chlorine^ Nu = gcnew Chlorine(Psi);
 				Aether^ Eta = gcnew Aether(Psi);
 				Argon^ Sigma = gcnew Argon(Psi, Nu, Eta);
+
+				Constants::Evidences->Add(Laws::Eighth);
 			}
 		}
 	}
