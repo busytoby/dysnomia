@@ -29,6 +29,12 @@ namespace Dysnomia {
 					if (M.Key->Epsilon.IsZero || M.Value->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
 					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(M.Key->Epsilon, M.Value->Epsilon)); 
 				}
+				void Remove(T1 A, T2 B) {
+					Alpha->Remove(KeyValuePair<T1, T2>(A, B));
+				}
+				void Remove(KeyValuePair<T1, T2> M) {
+					Alpha->Remove(M);
+				}
 
 				property int Count { int get() { return Alpha->Count; }}
 				property KeyValuePair<T1, T2> default[int] { KeyValuePair<T1, T2> get(int i) { return Alpha[i]; } }
