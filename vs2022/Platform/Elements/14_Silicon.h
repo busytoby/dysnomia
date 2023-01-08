@@ -8,6 +8,7 @@ namespace Dysnomia {
 			public ref class Silicon : public Dai<Carbon^, Coronium^>
 			{
 			public:
+				static Dai<Carbon^, Coronium^>^ Enceladus;
 				property BigInteger Evidence { BigInteger get() { return Last.Value->R->N->Xi; }};
 
 				Aluminium^ Zeta;
@@ -19,6 +20,7 @@ namespace Dysnomia {
 					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
 					Add(Beta, gcnew Coronium(Alpha->N, (Nitrogen^)Beta->Xi->Rho.Key, Phi));
 					Aluminium::Deimos->R->Zeta(Beta->Omicron->Rho);
+					if(Enceladus == nullptr) Enceladus = this;
 				}
 
 				Coronium^ Consider(BigInteger Epsilon) {
