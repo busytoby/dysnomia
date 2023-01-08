@@ -27,6 +27,11 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Rho->Rho.Key->R->R->Secret);
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Rho->Rho.Key->R->R->Secret));
 				Constants::Evidences->Add(Laws::Seventh);
+
+				Sulfur^ Psi = gcnew Sulfur(Rho->Last.Value->Zeta, Rho, Rho->Last.Value);
+				Chlorine^ Nu = gcnew Chlorine(Psi);
+				Aether^ Eta = gcnew Aether(Psi);
+				Argon^ Sigma = gcnew Argon(Psi, Nu, Eta);
 			}
 		}
 	}

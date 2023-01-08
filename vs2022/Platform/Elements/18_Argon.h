@@ -1,6 +1,6 @@
 #pragma once
-#include "07_Nitrogen.h"
-#include "72_Hafnium.h"
+#include "16_Sulfur.h"
+#include "17a_Aether.h"
 
 using namespace System;
 using namespace Dysnomia::Platform::Elements;
@@ -8,20 +8,11 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Argon
+			public ref class Argon : Quark<Sulfur^, Chlorine^, Aether^>
 			{
 			public:
-				/*
-				Nitrogen^ Gamma;
-				Beryllium^ Phi;
-				Sodium^ Sigma;
-
-				Argon() { 
-					Gamma = gcnew Nitrogen(); 
-					Phi = gcnew Beryllium(gcnew Hydrogen());
-					Sigma = gcnew Sodium(Phi);
+				Argon(Sulfur^ Psi, Chlorine^ Nu, Aether^ Rho) : Quark<Sulfur^, Chlorine^, Aether^>(Psi, Nu, Rho) {			
 				}
-				*/
 			};
 		}
 	}

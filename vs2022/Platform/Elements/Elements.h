@@ -16,6 +16,8 @@
 #include "14_Silicon.h"
 #include "15_Phosphorous.h"
 #include "16_Sulfur.h"
+#include "17_Chlorine.h"
+#include "18_Argon.h"
 #include <cassert>
 
 using namespace System;
