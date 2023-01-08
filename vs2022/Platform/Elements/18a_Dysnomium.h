@@ -13,6 +13,7 @@ namespace Dysnomia {
 				}
 
 				void Kappa(Dai<Dysnomia::Epsilon^, Dysnomia::Epsilon^>^ Tau) {
+					this->Epsilon = Tau->Last.Key->Epsilon;
 					Tau->Remove(Tau->Last);
 				}
 			};
