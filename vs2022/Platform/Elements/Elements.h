@@ -52,6 +52,7 @@ namespace Dysnomia {
 			static property Quark<Fluorine^, Coronium^, Aluminium^>^ Oberon { Quark<Fluorine^, Coronium^, Aluminium^>^ get() { return Silicon::Oberon; } };
 			static property Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel { Quark<Fluorine^, Coronium^, Carbon^>^ get() { return Silicon::Umbriel; } };
 			static property Quark<Carbon^, Coronium^, Carbon^>^ Ariel { Quark<Carbon^, Coronium^, Carbon^>^ get() { return Silicon::Ariel; } };
+			static property Quark<Coronium^, Coronium^, Carbon^>^ Prospero { Quark<Coronium^, Coronium^, Carbon^>^ get() { return Silicon::Prospero; } };
 		};
 	}
 }
