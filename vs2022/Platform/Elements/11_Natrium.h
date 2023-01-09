@@ -31,13 +31,12 @@ namespace Dysnomia {
 					Chi->Add(Alpha, Chi->Omicron);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->L->L);					
-						Phi->Add(Oxygen::Uranus->R);
-						Add(Kappa, Oxygen::Uranus->R);
+						Phi->Add(Chi, Oxygen::Uranus->R);
+						Add(Kappa, Chi);
 					}
 					else
-						throw gcnew Exception("Unprepared For Second Natriums");
-
-					Add(Kappa, Chi);
+						Add(Kappa, Chi);
+					
 					Hue = Pi->Hue;
 				}
 

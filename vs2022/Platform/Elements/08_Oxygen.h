@@ -11,16 +11,19 @@ namespace Dysnomia {
 				BigInteger _Credit;
 				BigInteger _Charge;
 			public:
-				static Quark<Beryllium^, Carbon^, Boron^>^ Uranus;
+				static Quark<Beryllium^, Beryllium^, Boron^>^ Uranus;
 
 				BigInteger Barn;
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
 					Barn = R->Rod->Barn;
-					Boron^ Lambda = gcnew Boron(R, N, gcnew Hydrogen());
+					Hydrogen^ Beta = gcnew Hydrogen();
+					Beryllium^ Phi = gcnew Beryllium();
+					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
+					Boron^ Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Uranus == nullptr)
-						Uranus = gcnew Quark<Beryllium^, Carbon^, Boron^>(N, gcnew Carbon(), Lambda);
+						Uranus = gcnew Quark<Beryllium^, Beryllium^, Boron^>(Phi, N, Lambda);
 					_Credit = N->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
 				};
