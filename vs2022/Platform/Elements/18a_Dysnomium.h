@@ -10,13 +10,17 @@ namespace Dysnomia {
 			private:
 				Phosphorous^ Tau;
 			public:
+				BigInteger Gamma;
+
 				Dysnomium(Phosphorous^ Phi) {
 					this->Epsilon = Phi->Epsilon;
+					Gamma = this->Epsilon;
 					Tau = Phi;
 				}
 
 				void Kappa(KeyValuePair<Coronium^, Silicon^> Eta) {
 					this->Epsilon = Eta.Key->Epsilon;
+					Gamma = BigInteger::Add(Gamma, Eta.Key->Epsilon);
 					Tau->Remove(Eta);
 				}
 			};
