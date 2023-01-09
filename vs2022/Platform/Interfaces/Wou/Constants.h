@@ -11,7 +11,7 @@ namespace Dysnomia {
 			public:
 				static List<BigInteger>^ Evidences;
 				static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
-				static property BigInteger Mu { BigInteger get() { return Objects::Uranus->R->Rod->Barn; }};
+				static property BigInteger Mu { BigInteger get() { return Objects::Uranus->L->Rod->Barn; }};
 				static property BigInteger Rho { BigInteger get() { return Objects::Tethys->Mu.Value->Mu.Value->Phi->N->Manifold; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 				static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
