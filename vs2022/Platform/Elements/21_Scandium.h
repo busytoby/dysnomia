@@ -14,8 +14,12 @@ namespace Dysnomia {
 				static Quark<Argon^, Coronium^, Sulfur^>^ Psamathe;
 
 				Scandium(Argon^ Chi) {
-					for (int i = 0; i < Chi->L->Count; i++)
+					Aether^ Delta = gcnew Aether();
+					for (int i = 0; i < Chi->L->Count; i++) {
 						Add(Chi, Chi->L[i].Value);
+						Delta->Add(Chi->N, Chi->L[i].Value);
+					}
+					Chi->R->Add(Chi->N->L->Rho.Value, Delta);
 					if (Pluto == nullptr) Pluto = gcnew Quark<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
 					if (Psamathe == nullptr) Psamathe = gcnew Quark<Argon^, Coronium^, Sulfur^>(Chi, Mu.Value, Chi->N);
 				}
