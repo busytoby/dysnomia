@@ -20,6 +20,7 @@ namespace Dysnomia {
 				static property BigInteger Tenth { BigInteger get() { return BigInteger::ModPow(Constants::Last, Ninth, Constants::Rho); }};
 				static property BigInteger Eleventh { BigInteger get() { return BigInteger::ModPow(Fourth, Constants::Rho, Tenth); }};
 				static property BigInteger Twelfth { BigInteger get() { return BigInteger::ModPow(Constants::Upsilon, Constants::Tau, Constants::Sigma); }};
+				static property BigInteger Thirteenth { BigInteger get() { return BigInteger::Add(Constants::Upsilon, Constants::Tau); }};
 			};
 		}
 	}
