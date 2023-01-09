@@ -17,11 +17,11 @@ namespace Dysnomia {
 				}
 
 				BigInteger PresentEvidence() {
-					return BigInteger::ModPow(L->Beta->Identity, N->Last.Value->Last.Key->Beta->Ring, R->Mu.Key->Barn);
+					return BigInteger::ModPow(L->Phi->N->Identity, N->Last.Value->Last.Key->Phi->N->Ring, R->Mu.Key->Barn);
 				}
 
 				BigInteger Testify(BigInteger Phi) {
-					return BigInteger::ModPow(Phi, N->Last.Value->Last.Key->Beta->Ring, R->Mu.Key->Barn);
+					return BigInteger::ModPow(Phi, N->Last.Value->Last.Key->Phi->N->Ring, R->Mu.Key->Barn);
 				}
 			};
 		}

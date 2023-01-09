@@ -26,16 +26,17 @@ namespace Dysnomia {
 					Boron^ Lambda = Phi->Add(Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
 					Chi->Omicron->Zeta(Lambda->N->Cone, Alpha->Cone);
-					Affinity^ R = gcnew Affinity(Alpha->Beta, gcnew Hydrogen());
+					Affinity^ R = gcnew Affinity(Alpha->Phi->N, gcnew Hydrogen());
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
-					((Beryllium^)Fluorine::Neptune->R->R)->Xi->Zeta(Xi, Lambda);
 					Chi->Add(Alpha, Chi->Omicron);
 					if (Oxygen::Uranus->L->L->Barn.IsZero) {
-						Affinity^ A = gcnew Affinity(Xi->Beta, Oxygen::Uranus->L->L);					
+						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->L->L);					
 						Phi->Add(Oxygen::Uranus->R);
 						Add(Kappa, Oxygen::Uranus->R);
 					}
+					else
+						throw gcnew Exception("Unprepared For Second Natriums");
 
 					Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
 					Add(Kappa, Chi);
@@ -46,7 +47,7 @@ namespace Dysnomia {
 					Add(Last.Key, Last.Value);
 					BigInteger T = 0;
 					for (int i = 0; i < Count; i++) {
-						T = BigInteger::Add(T, this[i].Value->Beta->Barn);
+						T = BigInteger::Add(T, this[i].Value->Phi->N->Barn);
 					}
 					return T;
 				}

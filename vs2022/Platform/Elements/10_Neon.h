@@ -31,8 +31,8 @@ namespace Dysnomia {
 				}};
 
 				Neon(Fluorine^ Phi) : Quark(Phi, Phi->Last.Key->Omicron->Last.Value, Phi->Last.Key->Omicron->Last.Key) {
-					if (Star == nullptr) Star = gcnew Quark<Boron^, Boron^, Fluorine^>((Boron^)N->Xi->Psi.Value, (Boron^)N->Xi->Rho.Value, Phi);
-					Manifold = BigInteger::Add(((Boron^)N->Xi->Rho.Value)->N->Cone->Manifold, ((Boron^)N->Xi->Psi.Value)->N->Rod->Manifold);
+					if (Star == nullptr) Star = gcnew Quark<Boron^, Boron^, Fluorine^>(N->Pi, N->Mu.Key->Pi, Phi);
+					Manifold = BigInteger::Add(N->Pi->N->Cone->Manifold, N->Mu.Key->Pi->N->Rod->Manifold);
 				};
 			};
 		}

@@ -14,8 +14,8 @@ namespace Dysnomia {
 				Chlorine(Sulfur^ Psi) {
 					for (int i = 0; i < Psi->R->Count; i++) {
 						Aether^ Mu = gcnew Aether();
-						Mu->Add(Psi, Psi->L->Consider(Psi->L[i].Key->Beta->Barn));
-						Mu->Add(Psi, Psi->L->Consider(Psi->R[i].Value->Zeta->L->Beta->Barn));
+						Mu->Add(Psi, Psi->L->Consider(Psi->L[i].Key->Phi->N->Barn));
+						Mu->Add(Psi, Psi->L->Consider(Psi->R[i].Value->Zeta->L->Phi->N->Barn));
 						Add(Psi->R[i].Key, Mu);
 					}
 				}

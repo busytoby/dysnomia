@@ -7,17 +7,9 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lithium : public Dai<Epsilon^, Epsilon^> {
+			public ref class Lithium : public Quark<Hydrogen^, Hydrogen^, Hydrogen^> {
 			public:
-				Lithium() : Dai<Dysnomia::Epsilon^, Dysnomia::Epsilon^>() {};
-				void Zeta(Dysnomia::Epsilon^ S, Dysnomia::Epsilon^ G) { 
-					if (S == nullptr || G == nullptr) throw gcnew Exception("Null Addition");
-					Add(KeyValuePair<Dysnomia::Epsilon^, Dysnomia::Epsilon^>(S, G)); 
-				}
-				void Zeta(KeyValuePair<Dysnomia::Epsilon^, Dysnomia::Epsilon^> M) {	
-					if (M.Key == nullptr || M.Value == nullptr) throw gcnew Exception("Null Addition");
-					Add(M);
-				}
+				Lithium(Hydrogen^ Beta, Hydrogen^ Phi, Hydrogen^ Gamma) : Quark<Hydrogen^, Hydrogen^, Hydrogen^>(Beta, Phi, Gamma) {};
 			};
 		}
 	}

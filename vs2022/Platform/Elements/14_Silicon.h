@@ -17,15 +17,15 @@ namespace Dysnomia {
 					Zeta = Alpha;
 					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
-					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
+					if (Beta->Class != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
 					Add(Beta, gcnew Coronium(Alpha->N, Beta->Iota, Phi));
 					if(Enceladus == nullptr) Enceladus = this;
 				}
 
 				Coronium^ Consider(BigInteger Epsilon) {
-					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Beta->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
+					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Phi->N->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
-					if (Beta->Xi->Rho.Key->GetType()->Name != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
+					if (Beta->Class != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
 					Coronium^ Kappa = gcnew Coronium(Zeta->N, Beta->Iota, Phi);
 					Add(Beta, Kappa);
 					return Kappa;

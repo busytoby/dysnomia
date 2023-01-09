@@ -14,68 +14,35 @@ namespace Dysnomia {
 				Dysnomia::Epsilon^ Kappa;
 
 			public:
-				Hydrogen^ Beta;
-				Lithium^ Xi;
+				Lithium^ Phi;
 
+				String^ Class;
 				property Helium^ Omicron { Helium^ get() { return (Helium^)Kappa; }};
 				property Nitrogen^ Iota { Nitrogen^ get() { return (Nitrogen^)Kappa; }};
 				
 				Boron^ Pi;
 
-				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Phi) {
-					Xi = gcnew Lithium();
-
-					Beta = gcnew Hydrogen();
-					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Phi);
-					Kappa = gcnew Nitrogen(Alpha, Alpha->Beta, Beta);
-					Pi = gcnew Boron(Iota->N, Iota, Alpha->Beta);
-					Xi->Zeta(Beta, Alpha);
-					Xi->Zeta(Iota, Pi);
+				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+					Class = "Nitrogen";
+					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Qi);
+					Affinity^ Beta = gcnew Affinity();
+					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
+					Kappa = gcnew Nitrogen(Alpha, Alpha->Phi->N, Phi->N);
+					Pi = gcnew Boron(Iota->N, Iota, Alpha->Phi->N);
 					Add(Alpha, Iota);
+					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Phi->N->Foundation);
 				}
 
 				Carbon() {
-					Xi = gcnew Lithium();
+					Class = "Helium";
 					Kappa = gcnew Helium();
-
-					Beta = gcnew Hydrogen();
 					Beryllium^ Alpha = gcnew Beryllium();
-					Affinity^ R = gcnew Affinity(Beta, Alpha->Beta);
-					Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-					Xi->Zeta(Beta, Pi);
-					Omicron->Zeta(Alpha->Cone, Alpha->Beta);
-					Grow();
-				}
-
-				void Grow() {
-					if (Xi->Count > 0 && Xi[Xi->Count - 1].Value->GetType()->Name->Equals("Fluorine"))
-						throw gcnew Exception("Linked Cannot Grow");
-
-					int C = Omicron->Count;
-					for (int i = 0; i < C; i++) {
-						Omicron->Zeta(Omicron[0].Value, Omicron[i].Value);
-					}
-					Add((Beryllium^)((Boron^)Xi[0].Value)->R, Omicron);
-
-					C = Omicron->Count;
-					int D = 18;
-					while (C > 20) {
-						if (C > 40) D = D += 18;
-						C = (C / 41) - 114;
-						if (C > 40) D = D += 18;
-						C = (C / 41) - 111;
-						if (C > 40) D = D += 24;
-						C = (C / 24) - 115;
-					}
-
-					C = Omicron->Count;
-					for(int i = C - 11; i > 0; i -= D) {
-						Beryllium^ Alpha = gcnew Beryllium();
-						Affinity^ R = gcnew Affinity(gcnew Hydrogen(), Alpha->Beta);
-						Pi = gcnew Boron(R, Alpha, Alpha->Beta);
-						Xi->Zeta(R->Rod, Pi);
-						Add(Alpha, Omicron);
-					}
+					Affinity^ Beta = gcnew Affinity();
+					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
+					Affinity^ R = gcnew Affinity(Phi->N, Alpha->Phi->N);
+					Pi = gcnew Boron(R, Alpha, Alpha->Phi->N);
+					Omicron->Zeta(Alpha->Cone, Alpha->Phi->N);
+					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Phi->N->Foundation);
 				}
 			};
 		}

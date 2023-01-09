@@ -11,6 +11,7 @@ namespace Dysnomia {
 			public ref class Helium : public Dai<Hydrogen^, Hydrogen^> {
 			public:
 				Helium() : Dai<Hydrogen^, Hydrogen^>() {
+					this->Epsilon = Math::Random();
 				};
 				Hydrogen^ Zeta(Hydrogen^ S, Hydrogen^ G) {
 					if (!S->Tau.IsZero && !G->Tau.IsZero)

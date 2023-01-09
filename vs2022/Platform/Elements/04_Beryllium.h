@@ -9,19 +9,14 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Beryllium : public Affinity { 
 			public:
-				Hydrogen^ Beta;
-				Lithium^ Xi;
+				Lithium^ Phi;
 
 				Beryllium() : Affinity() {
-					Beta = gcnew Hydrogen();
-					Xi = gcnew Lithium();
-					Xi->Zeta(Rod, Cone);
+					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);
 				}
 				
 				Beryllium(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) : Affinity(Rho, Upsilon, Ohm, Xi) {
-					Beta = gcnew Hydrogen();
-					this->Xi = gcnew Lithium();
-					this->Xi->Zeta(Rod, Cone);
+					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);
 				}
 			};
 		}
