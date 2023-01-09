@@ -8,7 +8,7 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Argon : Quark<Sulfur^, Chlorine^, Aether^>
+			public ref class Argon : public Quark<Sulfur^, Chlorine^, Aether^>
 			{
 			public:
 				static Quark<Magnesium^, Aether^, Sulfur^>^ Telesto;

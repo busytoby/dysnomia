@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Calcium : Dai<Potassium^, Argon^>
+			public ref class Calcium : public Dai<Potassium^, Argon^>
 			{
 			public:
 				static Quark<Sulfur^, Potassium^, Calcium^>^ Deimos;

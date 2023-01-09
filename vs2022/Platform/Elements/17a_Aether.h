@@ -8,7 +8,7 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Aether : Dai<Sulfur^, Coronium^> {
+			public ref class Aether : public Dai<Sulfur^, Coronium^> {
 			public:
 				Aether() {}
 

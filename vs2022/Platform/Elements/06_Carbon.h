@@ -9,7 +9,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon : Dai<Beryllium^, Epsilon^> {
+			public ref class Carbon : public Dai<Beryllium^, Epsilon^> {
 			private:
 				Dysnomia::Epsilon^ Kappa;
 
