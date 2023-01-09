@@ -19,7 +19,7 @@ namespace Dysnomia {
 				static property BigInteger Eta { BigInteger get() { return Objects::Titan->Mu.Value->N->L->Omicron->Mu.Value->Coordinate; }};
 				static property BigInteger Sigma { BigInteger get() { return Objects::Telesto->R->Last.Value->R->N->Rod->Signal; }};
 				static property BigInteger Upsilon { BigInteger get() { return ((Nitrogen^)Objects::Psamathe->L->L->Mu.Key->Mu.Value)->R->Foundation; }};
-				static property BigInteger Tau { BigInteger get() { return Laws::Twelfth; }};
+				static property BigInteger Tau { BigInteger get() { return BigInteger::ModPow(Constants::Eta, Constants::Upsilon, Constants::Rho); }};
 
 				static Constants() {
 					Evidences = gcnew List<BigInteger>();
