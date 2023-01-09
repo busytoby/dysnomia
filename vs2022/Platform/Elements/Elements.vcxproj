@@ -141,6 +141,7 @@
     <ClInclude Include="18a_Dysnomium.h" />
     <ClInclude Include="18_Argon.h" />
     <ClInclude Include="19_Potassium.h" />
+    <ClInclude Include="20_Calcium.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />
