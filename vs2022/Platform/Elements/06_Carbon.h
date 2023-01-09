@@ -42,6 +42,7 @@ namespace Dysnomia {
 					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Phi->N);
 					Pi = gcnew Boron(R, Alpha, Phi->N);
 					Omicron->Zeta(Alpha->Cone, Phi->N);
+					Add(Alpha, Omicron);
 					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Alpha->Phi->N->Foundation);
 				}
 			};
