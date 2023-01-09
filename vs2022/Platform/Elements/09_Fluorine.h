@@ -37,9 +37,9 @@ namespace Dysnomia {
 
 				Boron^ Add(Carbon^ that, Beryllium^ Alpha) {
 					Hydrogen^ Beta = gcnew Hydrogen();
-					Affinity^ R = gcnew Affinity(Beta, Alpha->Phi->N);
+					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Beta);
 					Dai<Carbon^, Beryllium^>::Add(that, Alpha);
-					Boron^ Pi = gcnew Boron(R, Alpha, Alpha->Phi->N);
+					Boron^ Pi = gcnew Boron(R, Alpha, Beta);
 					Tethys->Add(that->Phi, this);
 					_Ring = BigInteger::Add(_Ring, R->Cone->Ring);
 					return Pi;

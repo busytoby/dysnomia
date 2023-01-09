@@ -32,7 +32,7 @@ namespace Dysnomia {
 
 				Constants::Evidences->Add(Laws::Eighth);
 				Constants::Evidences->Add(Laws::Tenth);
-			}
+ 			}
 		}
 	}
 }
