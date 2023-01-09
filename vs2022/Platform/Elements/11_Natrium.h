@@ -37,7 +37,6 @@ namespace Dysnomia {
 					else
 						throw gcnew Exception("Unprepared For Second Natriums");
 
-					Fluorine::Neptune->L->Omicron->Zeta(((Beryllium^)Fluorine::Neptune->R->R)->Cone, Xi->Cone);
 					Add(Kappa, Chi);
 					Hue = Pi->Hue;
 				}

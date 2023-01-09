@@ -12,7 +12,6 @@ namespace Dysnomia {
 				Aluminium(Magnesium^ N) : Quark<Magnesium^, Helium^, Carbon^>(N, N->Rho.Key->Omicron, N->Mu.Key) {
 					if (Phobos == nullptr) {
 						Phobos = gcnew Quark<Aluminium^, Helium^, Carbon^>(this, R, L);
-						Phobos->L->Omicron->Zeta(R->Mu.Value, N->Mu.Value->Last.Key->Pi->L);
 					}
 				}
 
