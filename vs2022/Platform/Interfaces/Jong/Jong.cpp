@@ -29,6 +29,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Laws::Seventh);
 
 				Calcium^ Psi = gcnew Calcium(Rho);
+				Scandium^ Nu = gcnew Scandium(Psi->Mu.Value);
 
 				Constants::Evidences->Add(Laws::Eighth);
 				Constants::Evidences->Add(Laws::Tenth);

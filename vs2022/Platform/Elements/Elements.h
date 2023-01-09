@@ -21,6 +21,7 @@
 #include "18a_Dysnomium.h"
 #include "19_Potassium.h"
 #include "20_Calcium.h"
+#include "21_Scandium.h"
 #include <cassert>
 
 using namespace System;
@@ -40,6 +41,7 @@ namespace Dysnomia {
 			static property Quark<Magnesium^, Aether^, Sulfur^>^ Telesto { Quark<Magnesium^, Aether^, Sulfur^>^ get() { return Argon::Telesto; }};
 			static property Dai<Phosphorous^, Sulfur^>^ Titan { Dai<Phosphorous^, Sulfur^>^ get() { return Sulfur::Titan; }};
 			static property Quark<Sulfur^, Potassium^, Calcium^>^ Deimos { Quark<Sulfur^, Potassium^, Calcium^>^ get() { return Calcium::Deimos; }};
+			static property Quark<Sulfur^, Coronium^, Argon^>^ Pluto { Quark<Sulfur^, Coronium^, Argon^>^ get() { return Scandium::Pluto; }};
 		};
 	}
 }
