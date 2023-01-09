@@ -12,12 +12,10 @@ namespace Dysnomia {
 			{
 			public:
 				Chlorine(Sulfur^ Psi) {
-					for (int i = 0; i < Psi->R->Count; i++) {
-						Aether^ Mu = gcnew Aether();
-						Mu->Add(Psi, Psi->L->Consider(Psi->L[i].Key->Phi->N->Barn));
-						Mu->Add(Psi, Psi->L->Consider(Psi->R[i].Value->Zeta->L->Phi->N->Barn));
-						Add(Psi->R[i].Key, Mu);
-					}
+					Aether^ Alpha = gcnew Aether();
+					for (int i = 0; i < Psi->R->Count; i++)
+						Alpha->Add(Psi, Psi->L->Consider(Psi->R[i].Key->R->Epsilon));
+					Add(Psi->L->Mu.Value, Alpha);
 				}
 			};
 		}
