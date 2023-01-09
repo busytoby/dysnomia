@@ -46,6 +46,7 @@ namespace Dysnomia {
 			static property Quark<Argon^, Coronium^, Sulfur^>^ Psamathe { Quark<Argon^, Coronium^, Sulfur^>^ get() { return Scandium::Psamathe; }};
 			static property Quark<Dysnomium^, Calcium^, Scandium^>^ Despina { Quark<Dysnomium^, Calcium^, Scandium^>^ get() { return Titanium::Despina; }};
 			static property Quark<Magnesium^, Nitrogen^, Fluorine^>^ Halimede { Quark<Magnesium^, Nitrogen^, Fluorine^>^ get() { return Coronium::Halimede; }};
+			static property Quark<Nitrogen^, Fluorine^, Magnesium^>^ Naiad { Quark<Nitrogen^, Fluorine^, Magnesium^>^ get() { return Coronium::Naiad; }};
 		};
 	}
 }
