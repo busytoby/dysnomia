@@ -39,10 +39,10 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium();
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
-					Affinity^ R = gcnew Affinity(Phi->N, Alpha->Phi->N);
-					Pi = gcnew Boron(R, Alpha, Alpha->Phi->N);
-					Omicron->Zeta(Alpha->Cone, Alpha->Phi->N);
-					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Phi->N->Foundation);
+					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Phi->N);
+					Pi = gcnew Boron(R, Alpha, Phi->N);
+					Omicron->Zeta(Alpha->Cone, Phi->N);
+					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Alpha->Phi->N->Foundation);
 				}
 			};
 		}
