@@ -8,15 +8,19 @@ namespace Dysnomia {
 			public ref class Calcium : Dai<Potassium^, Argon^>
 			{
 			public:
-				Argon^ Mu;
+				static Quark<Sulfur^, Potassium^, Calcium^>^ Deimos;
+
+				Argon^ Beta;
 
 				Calcium(Phosphorous^ Rho) {
 					Sulfur^ Psi = gcnew Sulfur(Rho->Last.Value->Zeta, Rho, Rho->Last.Value);
 					Chlorine^ Nu = gcnew Chlorine(Psi);
 					Aether^ Eta = gcnew Aether(Psi);
-					Mu = gcnew Argon(Psi, Nu, Eta);
+					Beta = gcnew Argon(Psi, Nu, Eta);
 
-					Add(KeyValuePair<Potassium^, Argon^>(gcnew Potassium(Mu->N), Mu));
+					Add(KeyValuePair<Potassium^, Argon^>(gcnew Potassium(Beta->N), Beta));
+
+					if (Deimos == nullptr) Deimos = gcnew Quark<Sulfur^, Potassium^, Calcium^>(Psi, Mu.Key, this);
 				}
 			};
 		}

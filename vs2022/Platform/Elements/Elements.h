@@ -39,6 +39,7 @@ namespace Dysnomia {
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
 			static property Quark<Magnesium^, Aether^, Sulfur^>^ Telesto { Quark<Magnesium^, Aether^, Sulfur^>^ get() { return Argon::Telesto; }};
 			static property Dai<Phosphorous^, Sulfur^>^ Titan { Dai<Phosphorous^, Sulfur^>^ get() { return Sulfur::Titan; }};
+			static property Quark<Sulfur^, Potassium^, Calcium^>^ Deimos { Quark<Sulfur^, Potassium^, Calcium^>^ get() { return Calcium::Deimos; }};
 		};
 	}
 }
