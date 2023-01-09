@@ -32,7 +32,7 @@ namespace Dysnomia {
 		public ref class Objects abstract sealed {
 		public:
 			static property Quark<Boron^, Boron^, Fluorine^>^ Star { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Star; }};
-			static property Quark<Beryllium^, Beryllium^, Boron^>^ Uranus { Quark<Beryllium^, Beryllium^, Boron^>^ get() { return Oxygen::Uranus; }};
+			static property Quark<Boron^, Beryllium^, Beryllium^>^ Uranus { Quark<Boron^, Beryllium^, Beryllium^>^ get() { return Oxygen::Uranus; }};
 			static property Quark<Fluorine^, Boron^, Carbon^>^ Neptune { Quark<Fluorine^, Boron^, Carbon^>^ get() { return Fluorine::Neptune; }};
 			static property Dai<Lithium^, Fluorine^>^ Tethys { Dai<Lithium^, Fluorine^>^ get() { return Fluorine::Tethys; }};
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ Dione { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::Dione; }};

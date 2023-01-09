@@ -11,7 +11,7 @@ namespace Dysnomia {
 				BigInteger _Credit;
 				BigInteger _Charge;
 			public:
-				static Quark<Beryllium^, Beryllium^, Boron^>^ Uranus;
+				static Quark<Boron^, Beryllium^, Beryllium^>^ Uranus;
 
 				BigInteger Barn;
 
@@ -23,7 +23,7 @@ namespace Dysnomia {
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Boron^ Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Uranus == nullptr)
-						Uranus = gcnew Quark<Beryllium^, Beryllium^, Boron^>(Phi, N, Lambda);
+						Uranus = gcnew Quark<Boron^, Beryllium^, Beryllium^>(Lambda, Phi, N);
 					_Credit = N->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
 				};
