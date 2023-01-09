@@ -9,6 +9,7 @@ namespace Dysnomia {
 			{
 			public:
 				static Dai<Carbon^, Coronium^>^ Enceladus;
+				static Quark<Fluorine^, Coronium^, Aluminium^>^ Oberon;
 				property BigInteger Evidence { BigInteger get() { return Last.Value->R->N->Xi; }};
 
 				Aluminium^ Zeta;
@@ -19,6 +20,7 @@ namespace Dysnomia {
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Class != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
 					Add(Beta, gcnew Coronium(Alpha->N, Beta->Iota, Phi));
+					if (Oberon == nullptr) Oberon = gcnew Quark<Fluorine^, Coronium^, Aluminium^>(Phi, Mu.Value, Alpha);
 					if(Enceladus == nullptr) Enceladus = this;
 				}
 
