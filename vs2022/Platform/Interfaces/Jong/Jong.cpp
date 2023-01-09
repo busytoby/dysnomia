@@ -35,6 +35,10 @@ namespace Dysnomia {
 				Scandium^ Nu = gcnew Scandium(Psi->Mu.Value);
 				Titanium^ Eta = gcnew Titanium(Psi, Nu);
  			}
+
+			Aether^ Zheng() {
+				return gcnew Aether();
+			}
 		}
 	}
 }
