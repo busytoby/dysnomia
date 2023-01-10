@@ -9,13 +9,13 @@ namespace Dysnomia {
 			{
 			public:
 				static Quark<Magnesium^, Fluorine^, Natrium^>^ VanAllenBelt;
-				static Quark<Boron^, Fluorine^, Magnesium^>^ Dione;
+				static Quark<Magnesium^, Fluorine^, Boron^>^ Dione;
 
 				Magnesium(Natrium^ S, Fluorine^ K) {
 					this->Epsilon = Math::ModPow(K->Mu.Value->Cone->Signal, S->Mu.Key->N->Rod->Channel, Math::Prime);
 					Add(S->Mu.Value, S->Pi->N);
 					if (VanAllenBelt == nullptr) VanAllenBelt = gcnew Quark<Magnesium^, Fluorine^, Natrium^>(this, K, S);
-					if (Dione == nullptr) Dione = gcnew Quark<Boron^, Fluorine^, Magnesium^>(S->Mu.Value->Pi, K, this);
+					if (Dione == nullptr) Dione = gcnew Quark<Magnesium^, Fluorine^, Boron^>(this, K, S->Mu.Value->Pi);
 				}
 			};
 		}

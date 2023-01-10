@@ -11,10 +11,12 @@ namespace Dysnomia {
 			public ref class Argon : public Quark<Sulfur^, Chlorine^, Aether^>
 			{
 			public:
-				static Quark<Sulfur^, Magnesium^, Aether^>^ Telesto;
+				static Quark<Sulfur^, Aether^, Magnesium^>^ Telesto;
+				static Quark<Sulfur^, Magnesium^, Chlorine^>^ Ferdinand;
 
 				Argon(Sulfur^ Psi, Chlorine^ Nu, Aether^ Rho) : Quark<Sulfur^, Chlorine^, Aether^>(Psi, Nu, Rho) {
-					if (Telesto == nullptr) Telesto = gcnew Quark<Sulfur^, Magnesium^, Aether^>(Psi, Rho, Psi->N->N);
+					if (Telesto == nullptr) Telesto = gcnew Quark<Sulfur^, Aether^, Magnesium^>(Psi, Rho, Psi->N->N);
+					if (Ferdinand == nullptr) Ferdinand = gcnew Quark<Sulfur^, Magnesium^, Chlorine^>(Psi, Psi->N->N, Nu);
 				}
 			};
 		}

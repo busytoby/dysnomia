@@ -31,7 +31,7 @@ namespace Dysnomia {
 					Chi->Add(Alpha, Chi->Omicron);
 					if (Oxygen::Uranus->N->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->N->L);					
-						Phi->Add(Chi, Oxygen::Uranus->R);
+						Phi->Add(Chi, Oxygen::Uranus->L);
 						Add(Kappa, Chi);
 					}
 					else
