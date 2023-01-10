@@ -16,8 +16,19 @@ namespace Dysnomia {
 
 				Vanadium(Titanium^ Phi) {
 					Xi = Phi;
-					Add(Phi->R->Mu.Value->N, Phi->R->Mu.Value->L);
 					if (Jupiter == nullptr) Jupiter = this;
+					
+					Aluminium^ Psi = gcnew Aluminium(Phi->R->Mu.Key->R);
+					Phosphorous^ Nu = gcnew Phosphorous(
+						Psi,
+						Phi->N->Mu.Key->N->L->Nu.Key->Iota->R->Cone->Manifold,
+						Phi->N->Mu.Key->N->L->Nu.Key->Iota->N->Ring,
+						Phi->N->Mu.Key->N->L->Nu.Key->Iota->N->Identity,
+						Phi->N->Mu.Key->N->L->Nu.Key->Iota->R->Rod->Manifold);
+					Sulfur^ Eta = gcnew Sulfur(Nu->Rho.Value->Zeta, Nu, Nu->Mu.Value);
+
+					Add(Phi->R->Mu.Value->N, Phi->R->Mu.Value->L);
+					Add(Eta, Phi->R->Mu.Value->L);
 				}
 			};
 		}

@@ -11,7 +11,7 @@ namespace Dysnomia {
 				static Quark<Sulfur^, Potassium^, Calcium^>^ Deimos;
 
 				Calcium(Phosphorous^ Rho) {
-					Sulfur^ Psi = gcnew Sulfur(Rho->Last.Value->Zeta, Rho, Rho->Last.Value);
+					Sulfur^ Psi = gcnew Sulfur(Rho->Rho.Value->Zeta, Rho, Rho->Mu.Value);
 					Chlorine^ Nu = gcnew Chlorine(Psi);
 					Aether^ Eta = gcnew Aether(Psi);
 					Argon^ Sigma = gcnew Argon(Psi, Nu, Eta);
