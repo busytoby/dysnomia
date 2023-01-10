@@ -61,9 +61,9 @@ namespace Dysnomia {
 			static property Quark<Dysnomium^, Scandium^, Calcium^>^ Despina { Quark<Dysnomium^, Scandium^, Calcium^>^ get() { return Titanium::Despina; }};
 			static property Dai<Sulfur^, Aether^>^ Jupiter { Dai<Sulfur^, Aether^>^ get() { return Vanadium::Jupiter; }};
 			static property Quark<Vanadium^, Sulfur^, Titanium^>^ Puck { Quark<Vanadium^, Sulfur^, Titanium^>^ get() { return Chromium::Puck; }};
-			static property Quark<Vanadium^, Chromium^, Titanium^>^ Belinda { Quark<Vanadium^, Chromium^, Titanium^>^ get() { return Chromium::Belinda; }};
+			static property Quark<Vanadium^, Dysnomium^, Titanium^>^ Belinda { Quark<Vanadium^, Dysnomium^, Titanium^>^ get() { return Chromium::Belinda; }};
 			static property Quark<Titanium^, Sulfur^, Vanadium^>^ Mars { Quark<Titanium^, Sulfur^, Vanadium^>^ get() { return Chromium::Mars; }};
-			static property Quark<Titanium^, Chromium^, Vanadium^>^ Sycorax { Quark<Titanium^, Chromium^, Vanadium^>^ get() { return Chromium::Sycorax; }};
+			static property Quark<Titanium^, Coronium^, Vanadium^>^ Sycorax { Quark<Titanium^, Coronium^, Vanadium^>^ get() { return Chromium::Sycorax; }};
 		};
 	}
 }

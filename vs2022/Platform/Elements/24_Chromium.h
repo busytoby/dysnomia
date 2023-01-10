@@ -10,8 +10,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Chromium : public Dai<Vanadium^, Coronium^> {
 			public:
-				static Quark<Titanium^, Chromium^, Vanadium^>^ Sycorax;
-				static Quark<Vanadium^, Chromium^, Titanium^>^ Belinda;
+				static Quark<Titanium^, Coronium^, Vanadium^>^ Sycorax;
+				static Quark<Vanadium^, Dysnomium^, Titanium^>^ Belinda;
 				static Quark<Vanadium^, Sulfur^, Titanium^>^ Puck;
 				static Quark<Titanium^, Sulfur^, Vanadium^>^ Mars;
 
@@ -22,8 +22,8 @@ namespace Dysnomia {
 
 					if (Mars == nullptr) Mars = gcnew Quark<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
 					if (Puck == nullptr) Puck = gcnew Quark<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
-					if (Belinda == nullptr) Belinda = gcnew Quark<Vanadium^, Chromium^, Titanium^>(Alpha, this, Alpha->Xi);
-					if (Sycorax == nullptr) Sycorax = gcnew Quark<Titanium^, Chromium^, Vanadium^>(Alpha->Xi, this, Alpha);
+					if (Belinda == nullptr) Belinda = gcnew Quark<Vanadium^, Dysnomium^, Titanium^>(Alpha, Alpha->Xi->L, Alpha->Xi);
+					if (Sycorax == nullptr) Sycorax = gcnew Quark<Titanium^, Coronium^, Vanadium^>(Alpha->Xi, Alpha->Mu.Value->Mu.Value, Alpha);
 				}
 			};
 		}
