@@ -29,7 +29,7 @@ namespace Dysnomia {
 					_Charge = R->Rod->Dynamo;
 				};
 
-				BigInteger PresentEvidence() {
+				BigInteger Evidence() {
 					return BigInteger::ModPow(_Charge, Barn, _Credit);
 				}
 			};

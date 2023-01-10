@@ -17,7 +17,7 @@ namespace Dysnomia {
 				Mu = gcnew Carbon();
 				Rho = gcnew Fluorine(Mu);
 				Psi = gcnew Natrium(Rho);
-				Constants::Evidences->Add(Psi->Mu.Key->PresentEvidence());
+				Constants::Evidences->Add(Psi->Mu.Key->Evidence());
 				Constants::Evidences->Add(Laws::Third);
 
 				Nu = gcnew Carbon();
@@ -28,7 +28,7 @@ namespace Dysnomia {
 
 				Sigma = gcnew Magnesium(Psi, Eta);
 				Upsilon = gcnew Aluminium(Sigma);
-				Constants::Evidences->Add(Upsilon->PresentEvidence());
+				Constants::Evidences->Add(Upsilon->Evidence());
 				Constants::Evidences->Add(Laws::Tenth);			
 			}
 		}

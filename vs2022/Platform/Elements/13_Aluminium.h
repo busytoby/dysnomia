@@ -15,7 +15,7 @@ namespace Dysnomia {
 					}
 				}
 
-				BigInteger PresentEvidence() {
+				BigInteger Evidence() {
 					return BigInteger::ModPow(L->Phi->N->Identity, N->Mu.Value->Mu.Key->Phi->N->Ring, R->Rod->Barn);
 				}
 
