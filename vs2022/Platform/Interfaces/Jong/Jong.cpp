@@ -24,8 +24,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Psi);
 				Constants::Evidences->Add(Laws::Fifth);
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Constants::Last));
-				Constants::Evidences->Add(Rho->Rho.Key->R->R->Secret);
-				Constants::Evidences->Add(Mu->Upsilon->Testify(Rho->Rho.Key->R->R->Secret));
+				Constants::Evidences->Add(Rho->Rho.Key->R->L->Secret);
+				Constants::Evidences->Add(Mu->Upsilon->Testify(Rho->Rho.Key->R->L->Secret));
 				Constants::Evidences->Add(Laws::Seventh);
 
 				Calcium^ Psi = gcnew Calcium(Rho);
@@ -36,7 +36,7 @@ namespace Dysnomia {
 				Titanium^ Eta = gcnew Titanium(Psi, Nu);
  			}
 
-			Aether^ Zheng() {
+			Aether^ Jong::Zheng() {
 				return gcnew Aether();
 			}
 		}

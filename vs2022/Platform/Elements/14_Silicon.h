@@ -13,7 +13,7 @@ namespace Dysnomia {
 				static Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel;
 				static Quark<Carbon^, Coronium^, Carbon^>^ Ariel;
 				static Quark<Coronium^, Coronium^, Carbon^>^ Prospero;
-				property BigInteger Evidence { BigInteger get() { return Last.Value->R->N->Xi; }};
+				property BigInteger Evidence { BigInteger get() { return Last.Value->R->R->Xi; }};
 
 				Aluminium^ Zeta;
 

@@ -27,8 +27,8 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Qi);
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
-					Kappa = gcnew Nitrogen(Alpha, Alpha->Phi->N, Phi->N);
-					Pi = gcnew Boron(Iota->N, Iota, Alpha->Phi->N);
+					Kappa = gcnew Nitrogen(Phi->N, Alpha, Alpha->Phi->N);
+					Pi = gcnew Boron(Iota->R, Iota, Alpha->Phi->N);
 					Add(Alpha, Iota);
 					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Phi->N->Foundation);
 				}
