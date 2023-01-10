@@ -15,7 +15,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
 				static Dai<Lithium^, Fluorine^>^ Tethys;
-				static Quark<Boron^, Carbon^, Fluorine^>^ Laodemeia;
+				static Quark<Boron^, Fluorine^, Carbon^>^ Laodemeia;
 
 				Boron^ Pi;
 
@@ -29,7 +29,7 @@ namespace Dysnomia {
 
 					Pi = Add(that);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
-					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Boron^, Carbon^, Fluorine^>(Pi, that, this);
+					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Boron^, Fluorine^, Carbon^>(Pi, this, that);
 				}
 
 				Boron^ Add(Carbon^ that) {
