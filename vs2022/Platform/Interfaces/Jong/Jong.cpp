@@ -14,7 +14,7 @@ namespace Dysnomia {
 				Mu = gcnew Wou();
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
 
-				Phosphorous^ Rho = gcnew Phosphorous(
+				Rho = gcnew Phosphorous(
 					Mu->Upsilon,
 					Dysnomia::Platform::Wou::Laws::Sixth,
 					Dysnomia::Platform::Wou::Constants::Upsilon,
@@ -28,21 +28,21 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Mu->Upsilon->Testify(Rho->Rho.Key->R->L->Secret));
 				Constants::Evidences->Add(Laws::Seventh);
 
-				Calcium^ Psi = gcnew Calcium(Rho);
+				Psi = gcnew Calcium(Rho);
 				Constants::Evidences->Add(Laws::Eighth);
 
-				Scandium^ Nu = gcnew Scandium(Psi->Mu.Value);
-				Titanium^ Eta = gcnew Titanium(Psi, Nu);
-				Vanadium^ Sigma = gcnew Vanadium(Eta);
-				Chromium^ Upsilon = gcnew Chromium(Sigma);
-				Manganese^ Tau = gcnew Manganese(Upsilon);
-				Iron^ Theta = gcnew Iron(Tau);
+				Nu = gcnew Scandium(Psi->Mu.Value);
+				Eta = gcnew Titanium(Psi, Nu);
+				Sigma = gcnew Vanadium(Eta);
+				Upsilon = gcnew Chromium(Sigma);
+				Tau = gcnew Manganese(Upsilon);
+				Theta = gcnew Iron(Tau);
 				Constants::Evidences->Add(Constants::Theta);
 				Constants::Evidences->Add(Laws::Tenth);
  			}
 
 			Aether^ Jong::Zheng() {
-				return gcnew Aether();
+				return Scandium::Psamathe->R->L;
 			}
 		}
 	}

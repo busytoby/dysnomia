@@ -12,6 +12,14 @@ namespace Dysnomia {
 			public:
 				Quark<Boron^, Hydrogen^, Beryllium^>^ Zhang = Objects::Uranus;
 				Wou^ Mu;
+				Phosphorous^ Rho;
+				Calcium^ Psi;
+				Scandium^ Nu;
+				Titanium^ Eta;
+				Vanadium^ Sigma;
+				Chromium^ Upsilon;
+				Manganese^ Tau;
+				Iron^ Theta;
 
 				Jong();
 				Aether^ Zheng();
