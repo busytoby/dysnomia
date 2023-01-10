@@ -22,8 +22,6 @@ namespace Dysnomia {
 
 				Nu = gcnew Carbon();
 				Eta = gcnew Fluorine(Nu);
-				Objects::Neptune->L->Add(Eta->Mu.Value, Nu->Omicron);
-				Objects::Neptune->L->Add((Beryllium^)Nu->Pi->R, Objects::Neptune->L->Omicron);
 				Constants::Evidences->Add(Constants::Upsilon);
 				Constants::Evidences->Add(Laws::Sixth);
 				Constants::Evidences->Add(Laws::Eighth);

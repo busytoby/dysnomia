@@ -21,8 +21,8 @@ namespace Dysnomia {
 					Zeta = Alpha;
 					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
-					if (Beta->Class != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
-					Add(Beta, gcnew Coronium(Alpha->N, Beta->Iota, Phi));
+					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
+					Add(Beta, gcnew Coronium(Alpha->N, Beta->Mu.Value, Phi));
 					if (Oberon == nullptr) Oberon = gcnew Quark<Fluorine^, Coronium^, Aluminium^>(Phi, Mu.Value, Alpha);
 					if(Enceladus == nullptr) Enceladus = this;
 				}
@@ -30,8 +30,8 @@ namespace Dysnomia {
 				Coronium^ Consider(BigInteger Epsilon) {
 					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Phi->N->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
-					if (Beta->Class != "Nitrogen") throw gcnew Exception("Incompatible Carbon");
-					Coronium^ Kappa = gcnew Coronium(Zeta->N, Beta->Iota, Phi);
+					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
+					Coronium^ Kappa = gcnew Coronium(Zeta->N, Beta->Mu.Value, Phi);
 					if (Umbriel == nullptr) Umbriel = gcnew Quark<Fluorine^, Coronium^, Carbon^>(Phi, Kappa, Beta);
 					else if(Ariel == nullptr) Ariel = gcnew Quark<Carbon^, Coronium^, Carbon^>(Beta, Kappa, Rho.Key);
 					else if (Prospero == nullptr) Prospero = gcnew Quark<Coronium^, Coronium^, Carbon^>(Kappa, Mu.Value, Beta);

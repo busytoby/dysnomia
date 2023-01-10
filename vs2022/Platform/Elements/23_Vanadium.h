@@ -21,10 +21,10 @@ namespace Dysnomia {
 					Aluminium^ Psi = gcnew Aluminium(Phi->R->Mu.Key->R);
 					Phosphorous^ Nu = gcnew Phosphorous(
 						Psi,
-						Phi->N->Mu.Key->N->L->Nu.Key->Iota->R->Cone->Manifold,
-						Phi->N->Mu.Key->N->L->Nu.Key->Iota->N->Ring,
-						Phi->N->Mu.Key->N->L->Nu.Key->Iota->N->Identity,
-						Phi->N->Mu.Key->N->L->Nu.Key->Iota->R->Rod->Manifold);
+						Phi->N->Mu.Key->N->L->Nu.Key->Mu.Value->R->Cone->Manifold,
+						Phi->N->Mu.Key->N->L->Nu.Key->Mu.Value->N->Ring,
+						Phi->N->Mu.Key->N->L->Nu.Key->Mu.Value->N->Identity,
+						Phi->N->Mu.Key->N->L->Nu.Key->Mu.Value->R->Rod->Manifold);
 					Sulfur^ Eta = gcnew Sulfur(Nu->Rho.Value->Zeta, Nu, Nu->Mu.Value);
 
 					Add(Phi->R->Mu.Value->N, Phi->R->Mu.Value->L);

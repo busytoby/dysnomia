@@ -19,18 +19,16 @@ namespace Dysnomia {
 					BigInteger Sum = 0;
 					int count = 0;
 					for (int i = 0; i < N->Count; i++) {
-						for (int j = 0; j < N[i].Key->Omicron->Count; j++) {
-							Sum = BigInteger::Add(Sum, 
-								BigInteger::Multiply(N[i].Key->Pi->N->Rod->Dynamo,
-									BigInteger::Subtract(R->Foundation, L->Foundation) % Int32::MaxValue));
-							count++;
-						}
+						Sum = BigInteger::Add(Sum,
+							BigInteger::Multiply(N[i].Key->Pi->N->Rod->Dynamo,
+								BigInteger::Subtract(R->Foundation, L->Foundation) % Int32::MaxValue));
+						count++;
 					}
 
 					return Color::FromArgb((Int32) (BigInteger::Divide(Sum, count) % Int32::MaxValue));
 				}};
 
-				Neon(Fluorine^ Phi) : Quark(Phi, Phi->Last.Key->Omicron->Last.Value, Phi->Last.Key->Omicron->Last.Key) {
+				Neon(Fluorine^ Phi) : Quark(Phi, Helium::Gamma->Cone, Helium::Gamma->Rod) {
 					if (Star == nullptr) Star = gcnew Quark<Boron^, Boron^, Fluorine^>(N->Pi, N->Mu.Key->Pi, Phi);
 					Manifold = BigInteger::Add(N->Pi->N->Cone->Manifold, N->Mu.Key->Pi->N->Rod->Manifold);
 				};

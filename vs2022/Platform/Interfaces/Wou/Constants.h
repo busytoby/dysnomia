@@ -17,8 +17,8 @@ namespace Dysnomia {
 				static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
 				static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
 				static property BigInteger Sigma { BigInteger get() { return Objects::Star->L->Mu.Key->Pi->N->Rod->Base; }}
-				static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Rho.Key->Cone->Signal; }}
-				static property BigInteger Tau { BigInteger get() { return Objects::Phobos->R->Mu.Value->Manifold; }}
+				static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Pi->N->Cone->Signal; }}
+				static property BigInteger Tau { BigInteger get() { return Objects::Phobos->R->Rod->Manifold; }}
 				static property BigInteger Theta { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }}
 
 				static Constants() {

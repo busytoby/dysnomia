@@ -10,9 +10,11 @@ namespace Dysnomia {
 			public ref class Beryllium : public Affinity { 
 			public:
 				Lithium^ Phi;
+				Helium^ Sigma;
 
 				Beryllium() : Affinity() {
 					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);
+					Sigma = gcnew Helium(this);
 				}
 				
 				Beryllium(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) : Affinity(Rho, Upsilon, Ohm, Xi) {
