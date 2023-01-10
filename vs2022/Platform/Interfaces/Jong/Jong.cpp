@@ -37,6 +37,7 @@ namespace Dysnomia {
 				Chromium^ Upsilon = gcnew Chromium(Sigma);
 				Manganese^ Tau = gcnew Manganese(Upsilon);
 				Iron^ Theta = gcnew Iron(Tau);
+				Constants::Evidences->Add(Constants::Theta);
 				Constants::Evidences->Add(Laws::Tenth);
  			}
 
