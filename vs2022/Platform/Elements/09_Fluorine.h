@@ -15,7 +15,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
 				static Dai<Lithium^, Fluorine^>^ Tethys;
-				static Quark<Boron^, Carbon^, Fluorine^>^ Laomedeia;
+				static Quark<Boron^, Carbon^, Fluorine^>^ Laodemeia;
 
 				Boron^ Pi;
 
