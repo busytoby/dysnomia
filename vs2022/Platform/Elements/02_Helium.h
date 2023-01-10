@@ -20,7 +20,7 @@ namespace Dysnomia {
 
 				Helium(Affinity^ Sigma) {
 					if (Gamma == nullptr) Gamma = Sigma;
-					Helium::Helium();
+					this->Helium::Helium();
 				};
 			};
 		}
