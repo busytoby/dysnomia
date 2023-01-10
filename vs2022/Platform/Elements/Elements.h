@@ -23,6 +23,7 @@
 #include "20_Calcium.h"
 #include "21_Scandium.h"
 #include "22_Titanium.h"
+#include "23_Vanadium.h"
 #include <cassert>
 
 using namespace System;
