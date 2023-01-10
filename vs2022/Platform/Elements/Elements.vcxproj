@@ -146,6 +146,7 @@
     <ClInclude Include="22_Titanium.h" />
     <ClInclude Include="23_Vanadium.h" />
     <ClInclude Include="24_Chromium.h" />
+    <ClInclude Include="25_Manganese.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />
