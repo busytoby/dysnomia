@@ -29,7 +29,7 @@ namespace Dysnomia {
 
 					Pi = Add(that);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
-					if (Laomedeia == nullptr) Laomedeia = gcnew Quark<Boron^, Carbon^, Fluorine^>(Pi, that, this);
+					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Boron^, Carbon^, Fluorine^>(Pi, that, this);
 				}
 
 				Boron^ Add(Carbon^ that) {
