@@ -58,6 +58,7 @@ namespace Dysnomia {
 			static property Quark<Coronium^, Coronium^, Carbon^>^ Prospero { Quark<Coronium^, Coronium^, Carbon^>^ get() { return Silicon::Prospero; } };
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
 			static property Quark<Dysnomium^, Calcium^, Scandium^>^ Despina { Quark<Dysnomium^, Calcium^, Scandium^>^ get() { return Titanium::Despina; }};
+			static property Dai<Sulfur^, Aether^>^ Jupiter { Dai<Sulfur^, Aether^>^ get() { return Vanadium::Jupiter; }};
 		};
 	}
 }
