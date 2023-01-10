@@ -11,7 +11,7 @@ namespace Dysnomia {
 			{
 			public:
 				static Quark<Sulfur^, Coronium^, Argon^>^ Pluto;
-				static Quark<Argon^, Coronium^, Sulfur^>^ Psamathe;
+				static Quark<Sulfur^, Argon^, Coronium^>^ Psamathe;
 
 				Scandium(Argon^ Chi) {
 					Aether^ Delta = gcnew Aether();
@@ -21,7 +21,9 @@ namespace Dysnomia {
 					}
 					Chi->R->Add(Chi->N->L->Rho.Value, Delta);
 					if (Pluto == nullptr) Pluto = gcnew Quark<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
-					if (Psamathe == nullptr) Psamathe = gcnew Quark<Argon^, Coronium^, Sulfur^>(Chi, Mu.Value, Chi->N);
+
+					// Set Psamathe After Second Sulfur
+					//if (Psamathe == nullptr) Psamathe = gcnew Quark<Sulfur^, Argon^, Coronium^>(Chi->N, Chi, Mu.Value);
 				}
 			};
 		}
