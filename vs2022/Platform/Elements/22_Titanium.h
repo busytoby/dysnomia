@@ -11,10 +11,10 @@ namespace Dysnomia {
 			public ref class Titanium : public Quark<Scandium^, Calcium^, Dysnomium^>
 			{
 			public:
-				static Quark<Dysnomium^, Calcium^, Scandium^>^ Despina;
+				static Quark<Dysnomium^, Scandium^, Calcium^>^ Despina;
 
 				Titanium(Calcium^ Upsilon, Scandium^ Nu) : Quark(Nu, Upsilon, Upsilon->Mu.Key->N) {
-					if (Despina == nullptr) Despina = gcnew Quark<Dysnomium^, Calcium^, Scandium^>(L, R, N);
+					if (Despina == nullptr) Despina = gcnew Quark<Dysnomium^, Scandium^, Calcium^>(L, N, R);
 				}
 			};
 		}
