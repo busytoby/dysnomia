@@ -11,8 +11,9 @@ namespace Dysnomia {
 				BigInteger _Credit;
 				BigInteger _Charge;
 			public:
-				static Quark<Boron^, Beryllium^, Beryllium^>^ Uranus;
-
+				static Quark<Boron^, Beryllium^, Hydrogen^>^ Hippocamp;
+				static Quark<Boron^, Hydrogen^, Beryllium^>^ Uranus;
+				
 				BigInteger Barn;
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
@@ -22,8 +23,8 @@ namespace Dysnomia {
 					Beryllium^ Phi = gcnew Beryllium();
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Boron^ Lambda = gcnew Boron(R, N, Phi->Phi->N);
-					if (Uranus == nullptr)
-						Uranus = gcnew Quark<Boron^, Beryllium^, Beryllium^>(Lambda, Phi, N);
+					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
+					if (Uranus == nullptr) Uranus = gcnew Quark<Boron^, Hydrogen^, Beryllium^>(Lambda, Phi->Phi->N, N);
 					_Credit = N->Rod->Foundation;
 					_Charge = R->Rod->Dynamo;
 				};
