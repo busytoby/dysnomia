@@ -10,10 +10,20 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Chromium : public Dai<Vanadium^, Coronium^> {
 			public:
+				static Quark<Titanium^, Chromium^, Vanadium^>^ Sycorax;
+				static Quark<Vanadium^, Chromium^, Titanium^>^ Belinda;
+				static Quark<Vanadium^, Sulfur^, Titanium^>^ Puck;
+				static Quark<Titanium^, Sulfur^, Vanadium^>^ Mars;
+
 				Chromium(Vanadium^ Alpha) {
 					for (int i = 0; i < Alpha->Count; i++)
 						for (int j = 0; j < Alpha[i].Value->Count; j++)
 							Add(Alpha, Alpha[i].Value[j].Value);
+
+					if (Mars == nullptr) Mars = gcnew Quark<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
+					if (Puck == nullptr) Puck = gcnew Quark<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
+					if (Belinda == nullptr) Belinda = gcnew Quark<Vanadium^, Chromium^, Titanium^>(Alpha, this, Alpha->Xi);
+					if (Sycorax == nullptr) Sycorax = gcnew Quark<Titanium^, Chromium^, Vanadium^>(Alpha->Xi, this, Alpha);
 				}
 			};
 		}
