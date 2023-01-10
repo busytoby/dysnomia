@@ -30,12 +30,14 @@ namespace Dysnomia {
 
 				Calcium^ Psi = gcnew Calcium(Rho);
 				Constants::Evidences->Add(Laws::Eighth);
-				Constants::Evidences->Add(Laws::Tenth);
 
 				Scandium^ Nu = gcnew Scandium(Psi->Mu.Value);
 				Titanium^ Eta = gcnew Titanium(Psi, Nu);
 				Vanadium^ Sigma = gcnew Vanadium(Eta);
 				Chromium^ Upsilon = gcnew Chromium(Sigma);
+				Manganese^ Tau = gcnew Manganese(Upsilon);
+				Iron^ Theta = gcnew Iron(Tau);
+				Constants::Evidences->Add(Laws::Tenth);
  			}
 
 			Aether^ Jong::Zheng() {

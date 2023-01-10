@@ -1,6 +1,7 @@
 #pragma once
 #include "16_Sulfur.h"
 #include "17a_Aether.h"
+#include "21_Scandium.h"
 #include "22_Titanium.h"
 
 using namespace System;
