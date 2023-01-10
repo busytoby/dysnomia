@@ -34,6 +34,7 @@ namespace Dysnomia {
 
 				Scandium^ Nu = gcnew Scandium(Psi->Mu.Value);
 				Titanium^ Eta = gcnew Titanium(Psi, Nu);
+				Vanadium^ Sigma = gcnew Vanadium(Eta);
  			}
 
 			Aether^ Jong::Zheng() {

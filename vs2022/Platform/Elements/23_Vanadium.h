@@ -11,7 +11,12 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Vanadium : public Dai<Sulfur^, Aether^> {
 			public:
-				Titanium^ Phi;
+				Titanium^ Xi;
+
+				Vanadium(Titanium^ Phi) {
+					Xi = Phi;
+					Add(Phi->R->Mu.Value->N, Phi->R->Mu.Value->L);
+				}
 			};
 		}
 	}
