@@ -24,6 +24,7 @@
 #include "21_Scandium.h"
 #include "22_Titanium.h"
 #include "23_Vanadium.h"
+#include "24_Chromium.h"
 #include <cassert>
 
 using namespace System;
