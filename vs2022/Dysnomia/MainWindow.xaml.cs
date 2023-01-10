@@ -30,7 +30,7 @@ namespace Dysnomia
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Jong Xibe;
+        private Tian Xibe;
 
         public MainWindow()
         {
@@ -40,7 +40,7 @@ namespace Dysnomia
 
         private void ReadyPlatform()
         {
-            Xibe = new Jong();
+            Xibe = new Tian();
         }
     }
 }

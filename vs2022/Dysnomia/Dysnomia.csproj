@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Platform\Interfaces\Jong\Jong.vcxproj" />
+    <ProjectReference Include="..\Platform\Interfaces\Tian\Tian.vcxproj" />
   </ItemGroup>
 
 </Project>
