@@ -13,7 +13,7 @@ namespace Dysnomia {
 				Aether() {}
 
 				Aether(Sulfur^ Upsilon) {
-					Add(Upsilon, Upsilon->L->Consider(Helium::Gamma->Cone->Manifold));
+					Add(Upsilon, Upsilon->L->Contain(Helium::Gamma->Cone->Manifold));
 				}
 			};
 		}

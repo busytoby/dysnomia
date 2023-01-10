@@ -27,7 +27,7 @@ namespace Dysnomia {
 					if(Enceladus == nullptr) Enceladus = this;
 				}
 
-				Coronium^ Consider(BigInteger Epsilon) {
+				Coronium^ Contain(BigInteger Epsilon) {
 					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Phi->N->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");

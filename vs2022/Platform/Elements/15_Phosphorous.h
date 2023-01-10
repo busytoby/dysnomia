@@ -23,7 +23,7 @@ namespace Dysnomia {
 				}
 
 				Coronium^ Retain(BigInteger Qi, Silicon^ Alpha) {
-					Coronium^ Iota = Alpha->Consider(Qi);
+					Coronium^ Iota = Alpha->Contain(Qi);
 					Add(Iota, Alpha);
 					return Iota;
 				}

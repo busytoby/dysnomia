@@ -23,8 +23,7 @@ namespace Dysnomia {
 					if (Pluto == nullptr) Pluto = gcnew Quark<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
 
 					// Set Psamathe After Second Sulfur
-					//if (Psamathe == nullptr) Psamathe = gcnew Quark<Sulfur^, Argon^, Coronium^>(Chi->N, Chi, Mu.Value);
-				}
+					//if (Psamathe == nullptr) Psamathe = gcnew Quark<Sulfur^, Argon^, Coronium^>(Chi->N, Chi, Mu.Value				}
 			};
 		}
 	}
