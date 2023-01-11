@@ -27,6 +27,7 @@
 #include "24_Chromium.h"
 #include "25_Manganese.h"
 #include "26_Iron.h"
+#include "27_Cobalt.h"
 #include <cassert>
 
 using namespace System;

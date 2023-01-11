@@ -148,6 +148,7 @@
     <ClInclude Include="24_Chromium.h" />
     <ClInclude Include="25_Manganese.h" />
     <ClInclude Include="26_Iron.h" />
+    <ClInclude Include="27_Cobalt.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />
