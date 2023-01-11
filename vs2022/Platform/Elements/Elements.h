@@ -63,6 +63,7 @@ namespace Dysnomia {
 			static property Quark<Sulfur^, Coronium^, Argon^>^ Pluto { Quark<Sulfur^, Coronium^, Argon^>^ get() { return Scandium::Pluto; }};
 			static property Quark<Sulfur^, Argon^, Coronium^>^ Psamathe { Quark<Sulfur^, Argon^, Coronium^>^ get() { return Scandium::Psamathe; }};
 			static property Dai<Sulfur^, Aether^>^ Jupiter { Dai<Sulfur^, Aether^>^ get() { return Vanadium::Jupiter; }};
+			static property Dai<Aether^, Iron^>^ Amalthea { Dai<Aether^, Iron^>^ get() { return Nickel::Amalthea; }};
 			static property Quark<Dysnomium^, Scandium^, Calcium^>^ Despina { Quark<Dysnomium^, Scandium^, Calcium^>^ get() { return Titanium::Despina; }};
 			static property Quark<Potassium^, Scandium^, Vanadium^>^ Himalia { Quark<Potassium^, Scandium^, Vanadium^>^ get() { return Manganese::Himalia; }};
 			static property Quark<Scandium^, Potassium^, Vanadium^>^ Ganymede { Quark<Scandium^, Potassium^, Vanadium^>^ get() { return Manganese::Ganymede; }};

@@ -14,6 +14,8 @@ namespace Dysnomia {
 			public ref class Iron : public Dai<Dysnomium^, Scandium^>
 			{
 			public:
+				static Quark<Sulfur^, Aether^, Iron^>^ Io;
+
 				Manganese^ Beta;
 
 				Iron(Manganese^ Alpha) {

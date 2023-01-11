@@ -10,8 +10,12 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Nickel : public Dai<Iron^, Aether^> {
 			public:
+				static Dai<Aether^, Iron^>^ Amalthea;
+
 				Nickel(Aether^ Mu, Iron^ Lambda) {
 					Add(Lambda, Mu);
+					if(Amalthea == nullptr) Amalthea = gcnew Dai<Aether^, Iron^>();
+					Amalthea->Add(Mu, Lambda);
 				}
 			};
 		}
