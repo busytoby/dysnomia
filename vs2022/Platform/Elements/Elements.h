@@ -29,6 +29,7 @@
 #include "26_Iron.h"
 #include "27_Cobalt.h"
 #include "28_Nickel.h"
+#include "29_Copper.h"
 #include <cassert>
 
 using namespace System;

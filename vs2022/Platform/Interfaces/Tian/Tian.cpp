@@ -13,6 +13,7 @@ namespace Dysnomia {
 				Cobalt^ Rho = gcnew Cobalt(Mu->Tau);
 				Constants::Evidences->Add(Constants::Mu);
 				Nickel^ Psi = gcnew Nickel(Mu->Zheng(), Mu->Theta);
+				Copper^ Nu = gcnew Copper(Psi);
 			}
 		}
 	}
