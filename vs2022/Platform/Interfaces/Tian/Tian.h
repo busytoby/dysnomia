@@ -14,8 +14,6 @@ namespace Dysnomia {
 			public ref class Tian
 			{
 			public:
-				static Quark<Iron^, Aether^, Sulfur^>^ Io;
-
 				Jong^ Mu;
 
 				Tian();
