@@ -1,5 +1,6 @@
 #pragma once
 #include "13_Aluminium.h"
+#include "18_Argon.h"
 #include "28_Nickel.h"
 
 using namespace System;

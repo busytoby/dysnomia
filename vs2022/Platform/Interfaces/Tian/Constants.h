@@ -13,6 +13,7 @@ namespace Dysnomia {
 				static List<BigInteger>^ Evidences;
 				static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
 				static property BigInteger Mu { BigInteger get() { return Objects::Mercury->N->Mu.Value->Mu.Value->R->N->Identity; }};
+				static property BigInteger Rho { BigInteger get() { return ((Beryllium^)Objects::Adrastea->Mu.Key->R->Mu.Value->Mu.Value->L->Pi->R)->Phi->R->Identity; }};
 				static Constants() { Evidences = gcnew List<BigInteger>(); }
 			};
 		}
