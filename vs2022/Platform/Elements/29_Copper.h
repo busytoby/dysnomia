@@ -9,8 +9,12 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Copper : Dai<Aluminium^, Nickel^> {
 			public:
+				static Dai<Argon^, Aluminium^>^ Adrastea;
+
 				Copper(Nickel^ Eta) {
 					Add(Eta->Mu.Key->Beta->R->L, Eta);
+					if (Adrastea == nullptr) Adrastea = gcnew Dai<Argon^, Aluminium^>();
+					Adrastea->Add(Eta->Mu.Key->Beta->L->Mu.Key, Eta->Mu.Key->Beta->R->L);
 				}
 			};
 		}
