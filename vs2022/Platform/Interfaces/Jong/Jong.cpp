@@ -42,7 +42,7 @@ namespace Dysnomia {
  			}
 
 			Aether^ Jong::Zheng() {
-				return Scandium::Psamathe->R->L;
+				return Objects::Psamathe->R->L;
 			}
 		}
 	}

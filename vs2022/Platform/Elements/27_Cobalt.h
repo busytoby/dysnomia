@@ -7,12 +7,12 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Cobolt : public Dai<Vanadium^, Chromium^> {
+			public ref class Cobalt : public Dai<Vanadium^, Chromium^> {
 			public:
 				static Quark<Vanadium^, Manganese^, Chromium^>^ Mercury;
 				Manganese^ Phi;
 
-				Cobolt(Manganese^ Alpha) {
+				Cobalt(Manganese^ Alpha) {
 					Phi = Alpha;
 					Add(Alpha->N, Alpha->Xi);
 					if (Mercury == nullptr) Mercury = gcnew Quark<Vanadium^, Manganese^, Chromium^>(Alpha->N, Alpha, Alpha->Xi);

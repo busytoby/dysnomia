@@ -10,8 +10,9 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Tian::Tian() {
 				Mu = gcnew Jong();
-				Cobolt^ Rho = gcnew Cobolt(Mu->Tau);
+				Cobalt^ Rho = gcnew Cobalt(Mu->Tau);
 				Constants::Evidences->Add(Constants::Mu);
+				Nickel^ Psi = gcnew Nickel(Mu->Zheng(), Mu->Theta);
 			}
 		}
 	}
