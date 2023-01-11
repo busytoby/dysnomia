@@ -15,6 +15,7 @@ namespace Dysnomia {
 			{
 			public:
 				Jong^ Mu;
+				static property BigInteger Mu { BigInteger get() { return Dysnomia::Platform::Wou::Constants::Theta; }};
 
 				Tian();
 			};
