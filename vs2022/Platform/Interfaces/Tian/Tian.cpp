@@ -10,6 +10,7 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Tian::Tian() {
 				Mu = gcnew Jong();
+				Cobolt^ Rho = gcnew Cobolt(Mu->Tau);
 			}
 		}
 	}

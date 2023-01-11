@@ -14,7 +14,10 @@ namespace Dysnomia {
 			public ref class Iron : public Dai<Dysnomium^, Scandium^>
 			{
 			public:
-				Iron(Manganese^ Beta) {
+				Manganese^ Beta;
+
+				Iron(Manganese^ Alpha) {
+					Beta = Alpha;
 					Add(Beta->R->N, Beta->L);
 					Sulfur^ Mu = gcnew Sulfur(Sulfur::Titan->Mu.Key->Psi.Value->Zeta, Sulfur::Titan->Mu.Key, Sulfur::Titan->Rho.Key->Nu.Value);
 					Beta->N->Add(Mu, Beta->N->Mu.Value);

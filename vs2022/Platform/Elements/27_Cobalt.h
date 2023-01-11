@@ -9,7 +9,9 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Cobolt : public Dai<Vanadium^, Chromium^> {
 			public:
-
+				Cobolt(Manganese^ Alpha) {
+					int i = 99;
+				}
 			};
 		}
 	}
