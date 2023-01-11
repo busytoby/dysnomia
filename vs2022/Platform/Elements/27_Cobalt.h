@@ -9,8 +9,13 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Cobolt : public Dai<Vanadium^, Chromium^> {
 			public:
+				static Quark<Vanadium^, Manganese^, Chromium^>^ Mercury;
+				Manganese^ Phi;
+
 				Cobolt(Manganese^ Alpha) {
-					int i = 99;
+					Phi = Alpha;
+					Add(Alpha->N, Alpha->Xi);
+					if (Mercury == nullptr) Mercury = gcnew Quark<Vanadium^, Manganese^, Chromium^>(Alpha->N, Alpha, Alpha->Xi);
 				}
 			};
 		}

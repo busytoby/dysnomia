@@ -11,6 +11,7 @@ namespace Dysnomia {
 			Tian::Tian() {
 				Mu = gcnew Jong();
 				Cobolt^ Rho = gcnew Cobolt(Mu->Tau);
+				Constants::Evidences->Add(Constants::Mu);
 			}
 		}
 	}
