@@ -11,10 +11,12 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Carbon : public Dai<Beryllium^, Nitrogen^> {
 			public:
+				Helium^ Gamma;
 				Lithium^ Phi;
 				Boron^ Pi;
 
 				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+					Gamma = gcnew Helium();
 					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Qi);
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
@@ -26,6 +28,7 @@ namespace Dysnomia {
 
 				Carbon() {
 					Beryllium^ Alpha = gcnew Beryllium();
+					Gamma = gcnew Helium();
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
 					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Phi->N);
