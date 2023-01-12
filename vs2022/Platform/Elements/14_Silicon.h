@@ -26,7 +26,8 @@ namespace Dysnomia {
 					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
-					Add(Beta, gcnew Coronium(Alpha->N, Beta->Mu.Value, Phi));
+					Coronium^ Eta = gcnew Coronium(Alpha->N, Beta->Mu.Value, Phi);
+					Add(Beta, Eta);
 					if (Oberon == nullptr) Oberon = gcnew Quark<Fluorine^, Coronium^, Aluminium^>(Phi, Mu.Value, Alpha);
 					if(Enceladus == nullptr) Enceladus = this;
 				}

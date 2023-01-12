@@ -14,7 +14,8 @@ namespace Dysnomia {
 
 				Phosphorous(Aluminium^ Mu, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
 					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
-					Add(Alpha->Mu.Value, Alpha);
+					for (int i = 0; i < Alpha->Count; i++)
+						Add(Alpha[i].Value, Alpha);
 					Retain(Qi, Alpha);
 					Retain(Rho, Alpha);
 					Retain(Ohm, Alpha);
