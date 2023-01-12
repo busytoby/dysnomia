@@ -17,10 +17,16 @@ namespace Dysnomia {
 					Tau = Phi;
 				}
 
-				void Kappa(KeyValuePair<Coronium^, Silicon^> Eta) {
-					this->Epsilon = Eta.Key->Epsilon;
-					Gamma = BigInteger::Add(Gamma, Eta.Key->Epsilon);
-					Tau->Remove(Eta);
+				void Omega(Coronium^ Psi, Silicon^ Nu) {
+					this->Epsilon = Psi->Epsilon;
+					Gamma = BigInteger::Add(Gamma, Psi->Epsilon);
+					Tau->Add(KeyValuePair<Coronium^, Silicon^>(Psi, Nu));
+				}
+
+				void Kappa(Coronium^ Psi, Silicon^ Nu) {
+					this->Epsilon = Psi->Epsilon;
+					Gamma = BigInteger::Add(Gamma, Psi->Epsilon);
+					Tau->Remove(KeyValuePair<Coronium^, Silicon^>(Psi, Nu));
 				}
 			};
 		}

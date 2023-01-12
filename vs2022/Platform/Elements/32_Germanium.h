@@ -10,13 +10,13 @@ namespace Dysnomia {
 				static Dai<Aether^, Zinc^>^ Proteus;
 
 				Germanium(Zinc^ Beta) {
-					for (int i = 0; i < Beta->N->Mu.Value->Count; i++)
-						Add(Beta->N->Mu.Value[i].Value, Beta);
 					for (int i = 0; i < Beta->L->Count; i++)
 						Add(Beta->L[i].Value, Beta);
 					for (int i = 0; i < Beta->R->Count; i++)
 						Add(Beta->R[i].Value, Beta);
 					if (Proteus == nullptr) Proteus = this;
+
+					Beta->N->Mu.Value->Mu.Key->Mu.Key->Omega(Beta->N->Mu.Value->Mu.Value->Mu.Value, Beta->N->Mu.Value->Mu.Value->Mu.Key->L);
 				}
 			};
 		}

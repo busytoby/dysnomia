@@ -14,7 +14,7 @@ namespace Dysnomia {
 
 				Coronium^ Kappa(Silicon^ Phi) {
 					if (Phi->Count < 5) throw gcnew Exception("Incomplete Thought");
-					N->Kappa(KeyValuePair<Coronium^, Silicon^>(Phi->Psi.Value, Phi));
+					N->Kappa(Phi->Psi.Value, Phi);
 					return Phi->Eta.Value;
 				}
 			};
