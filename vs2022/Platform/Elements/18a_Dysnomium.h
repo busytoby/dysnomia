@@ -7,9 +7,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Dysnomium : public Epsilon
 			{
-			private:
-				Phosphorous^ Tau;
 			public:
+				Phosphorous^ Tau;
 				BigInteger Gamma;
 
 				Dysnomium(Phosphorous^ Phi) {
