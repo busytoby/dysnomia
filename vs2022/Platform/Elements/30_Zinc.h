@@ -12,12 +12,14 @@ namespace Dysnomia {
 			public ref class Zinc : Quark<Copper^, Nickel^, Nickel^> {
 			public:
 				static Dai<Zinc^, Argon^>^ Venus;
+				static Quark<Nickel^, Argon^, Natrium^>^ Neith;
 
 				Zinc(Copper^ Nu, Nickel^ Eta) : Quark(Nu, Eta, Nu->Mu.Value) {
-					if (Venus == nullptr) Venus == gcnew Dai<Zinc^, Argon^>();
+					if (Venus == nullptr) Venus = gcnew Dai<Zinc^, Argon^>();
 					Aluminium^ Theta = gcnew Aluminium(Eta->Mu.Value->Mu.Key->N->N);
 					Nu->Add(Theta, Eta);
 					Argon^ Rho = gcnew Argon(Nu->Mu.Value->Mu.Value->Mu.Key, gcnew Chlorine(Nu->Mu.Value->Mu.Value->Mu.Key), Nu->Mu.Value->Mu.Value);
+					if (Neith == nullptr) Neith = gcnew Quark<Nickel^, Argon^, Natrium^>(Nu->Mu.Value, Rho, Nu->Mu.Key->N->Zeta);
 					Venus->Add(this, Rho);
 				};
 			};

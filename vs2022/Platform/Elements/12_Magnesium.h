@@ -11,11 +11,14 @@ namespace Dysnomia {
 				static Quark<Magnesium^, Fluorine^, Natrium^>^ VanAllenBelt;
 				static Quark<Magnesium^, Fluorine^, Boron^>^ Dione;
 
-				Magnesium(Natrium^ S, Fluorine^ K) {
-					this->Epsilon = Math::ModPow(K->Mu.Value->Cone->Signal, S->Mu.Key->N->Rod->Channel, Math::Prime);
-					Add(S->Mu.Value, S->Pi->N);
-					if (VanAllenBelt == nullptr) VanAllenBelt = gcnew Quark<Magnesium^, Fluorine^, Natrium^>(this, K, S);
-					if (Dione == nullptr) Dione = gcnew Quark<Magnesium^, Fluorine^, Boron^>(this, K, S->Mu.Value->Pi);
+				Natrium^ Zeta;
+
+				Magnesium(Natrium^ Alpha, Fluorine^ Chi) {
+					Zeta = Alpha;
+					this->Epsilon = Math::ModPow(Chi->Mu.Value->Cone->Signal, Alpha->Mu.Key->N->Rod->Channel, Math::Prime);
+					Add(Alpha->Mu.Value, Alpha->Pi->N);
+					if (VanAllenBelt == nullptr) VanAllenBelt = gcnew Quark<Magnesium^, Fluorine^, Natrium^>(this, Chi, Alpha);
+					if (Dione == nullptr) Dione = gcnew Quark<Magnesium^, Fluorine^, Boron^>(this, Chi, Alpha->Mu.Value->Pi);
 				}
 			};
 		}
