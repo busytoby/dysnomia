@@ -26,6 +26,10 @@ namespace Dysnomia {
 
 					if (Scandium::Psamathe == nullptr) Scandium::Psamathe = gcnew Quark<Sulfur^, Argon^, Coronium^>(Beta->N->Rho.Key, Beta->L->Mu.Key, Beta->L->Mu.Value);
 				}
+
+				void Omega() {
+
+				}
 			};
 		}
 	}

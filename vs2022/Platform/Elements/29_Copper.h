@@ -23,6 +23,7 @@ namespace Dysnomia {
 					if (Count > 1) throw gcnew Exception("Copper Already Delta");
 					Aether^ Beta = Mu.Value->Mu.Value->Beta(Last.Key);
 					Nickel^ Phi = gcnew Nickel(Beta, Mu.Value->Mu.Key);
+					Mu.Value->Mu.Key->Omega();
 					if (Triton == nullptr) Triton = gcnew Quark<Aluminium^, Aether^, Nickel^>(Mu.Key, Beta, Phi);
 					return Phi;
 				}
