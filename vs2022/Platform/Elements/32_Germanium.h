@@ -7,6 +7,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Germanium : Dai<Aether^, Zinc^> {
 			public:
+				static Dai<Aether^, Zinc^>^ Proteus;
+
 				Germanium(Zinc^ Beta) {
 					for (int i = 0; i < Beta->N->Mu.Value->Count; i++)
 						Add(Beta->N->Mu.Value[i].Value, Beta);
@@ -14,6 +16,7 @@ namespace Dysnomia {
 						Add(Beta->L[i].Value, Beta);
 					for (int i = 0; i < Beta->R->Count; i++)
 						Add(Beta->R[i].Value, Beta);
+					if (Proteus == nullptr) Proteus = this;
 				}
 			};
 		}
