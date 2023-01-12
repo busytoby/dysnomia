@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Germanium : Dai<Aether^, Zinc^> {
+			public ref class Germanium : public Dai<Aether^, Zinc^> {
 			public:
 				static Dai<Aether^, Zinc^>^ Proteus;
 

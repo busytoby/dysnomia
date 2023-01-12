@@ -8,7 +8,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Copper : Dai<Aluminium^, Nickel^> {
+			public ref class Copper : public Dai<Aluminium^, Nickel^> {
 			public:
 				static Dai<Argon^, Aluminium^>^ Adrastea;
 				static Quark<Aluminium^, Aether^, Nickel^>^ Triton;

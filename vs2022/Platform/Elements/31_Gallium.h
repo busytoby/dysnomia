@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Gallium : Dai<Carbon^, Zinc^>
+			public ref class Gallium : public Dai<Carbon^, Zinc^>
 			{
 			public:
 				Gallium(Zinc^ Alpha) {
