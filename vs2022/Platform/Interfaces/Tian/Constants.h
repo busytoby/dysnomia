@@ -16,6 +16,7 @@ namespace Dysnomia {
 				static property BigInteger Rho { BigInteger get() { return ((Beryllium^)Objects::Adrastea->Mu.Key->R->Mu.Value->Mu.Value->L->Pi->R)->Phi->R->Identity; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Triton->N->N->Mu.Value->Pi->N->Rod->Channel; }}
 				static property BigInteger Nu { BigInteger get() { return Objects::Neith->L->Mu.Key->Barn; }}
+				static property BigInteger Eta { BigInteger get() { return Objects::Neso->L->L->Pi->L->Secret; }}
 				static Constants() { Evidences = gcnew List<BigInteger>(); }
 			};
 		}

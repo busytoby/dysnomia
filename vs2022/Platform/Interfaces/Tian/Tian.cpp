@@ -3,7 +3,7 @@
 #include "Tian.h"
 
 using namespace Dysnomia::Platform::Elements;
-using namespace Dysnomia::Platform::Jong;
+using namespace Dysnomia::Platform::Tian;
 
 namespace Dysnomia {
 	namespace Platform {
