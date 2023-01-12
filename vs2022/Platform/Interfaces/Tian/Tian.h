@@ -15,6 +15,14 @@ namespace Dysnomia {
 			{
 			public:
 				Jong^ Mu;
+				Cobalt^ Rho;
+				Nickel^ Psi;
+				Copper^ Nu;
+				Nickel^ Eta;
+				Zinc^ Sigma;
+				Gallium^ Upsilon;
+				Germanium^ Tau;
+				Arsenic^ Theta;
 
 				Tian();
 			};

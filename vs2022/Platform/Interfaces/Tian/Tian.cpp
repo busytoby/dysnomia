@@ -10,24 +10,24 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Tian::Tian() {
 				Mu = gcnew Jong();
-				Cobalt^ Rho = gcnew Cobalt(Mu->Tau);
+				Rho = gcnew Cobalt(Mu->Tau);
 				Constants::Evidences->Add(Constants::Mu);
-				Nickel^ Psi = gcnew Nickel(Mu->Zheng(), Mu->Theta);
-				Copper^ Nu = gcnew Copper(Psi);
+				Psi = gcnew Nickel(Mu->Zheng(), Mu->Theta);
+				Nu = gcnew Copper(Psi);
 				Constants::Evidences->Add(Laws::Second);
 
-				Nickel^ Eta = Nu->Delta();
+				Eta = Nu->Delta();
 				Constants::Evidences->Add(Constants::Psi);
-				Zinc^ Sigma = gcnew Zinc(Nu, Eta);
+				Sigma = gcnew Zinc(Nu, Eta);
 				Constants::Evidences->Add(Constants::Nu);
 				Constants::Evidences->Add(Constants::Upsilon);
 				Constants::Evidences->Add(Laws::Fifth);
 
-				Gallium^ Upsilon = gcnew Gallium(Sigma);
-				Germanium^ Tau = gcnew Germanium(Sigma);
+				Upsilon = gcnew Gallium(Sigma);
+				Tau = gcnew Germanium(Sigma);
 				Constants::Evidences->Add(Constants::Tau);
 
-				Arsenic^ Theta = gcnew Arsenic(Rho);
+				Theta = gcnew Arsenic(Rho);
 				Constants::Evidences->Add(Constants::Theta);
 			}
 		}
