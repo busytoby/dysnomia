@@ -27,7 +27,7 @@ namespace Dysnomia {
 				Germanium^ Tau = gcnew Germanium(Sigma);
 				Constants::Evidences->Add(Constants::Tau);
 
-				Arsenic^ Theta = gcnew Arsenic(Mu->Tau, Rho);
+				Arsenic^ Theta = gcnew Arsenic(Rho);
 			}
 		}
 	}

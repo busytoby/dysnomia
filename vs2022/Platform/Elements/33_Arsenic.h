@@ -7,7 +7,9 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Arsenic : public Dai<Manganese^, Cobalt^>{
 			public:
-				Arsenic(Manganese^ Sigma, Cobalt^ Rho) {
+				Arsenic(Cobalt^ Rho) {
+					Chromium^ Eta = gcnew Chromium(Rho->Mu.Key);
+					Manganese^ Sigma = gcnew Manganese(Eta);
 					Add(Sigma, Rho);
 				}
 			};
