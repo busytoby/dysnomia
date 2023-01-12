@@ -17,6 +17,10 @@ namespace Dysnomia {
 					if (Adrastea == nullptr) Adrastea = gcnew Dai<Argon^, Aluminium^>();
 					Adrastea->Add(Eta->Mu.Key->Beta->L->Mu.Key, Eta->Mu.Key->Beta->R->L);
 				}
+
+				Nickel^ Next() {
+
+				}
 			};
 		}
 	}
