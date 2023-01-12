@@ -54,6 +54,7 @@ namespace Dysnomia {
 			static property Quark<Magnesium^, Fluorine^, Boron^>^ Dione { Quark<Magnesium^, Fluorine^, Boron^>^ get() { return Magnesium::Dione; }};
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ VanAllenBelt { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::VanAllenBelt; }};
 			static property Quark<Aluminium^, Helium^, Carbon^>^ Phobos { Quark<Aluminium^, Helium^, Carbon^>^ get() { return Aluminium::Phobos; }};
+			static property Quark<Aluminium^, Aether^, Nickel^>^ Triton { Quark<Aluminium^, Aether^, Nickel^>^ get() { return Copper::Triton; }}
 			static property Quark<Coronium^, Coronium^, Carbon^>^ Prospero { Quark<Coronium^, Coronium^, Carbon^>^ get() { return Silicon::Prospero; } };
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
 			static property Quark<Silicon^, Coronium^, Aluminium^>^ Thalassa { Quark<Silicon^, Coronium^, Aluminium^>^ get() { return Phosphorous::Thalassa; }};

@@ -11,6 +11,7 @@ namespace Dysnomia {
 			public ref class Copper : Dai<Aluminium^, Nickel^> {
 			public:
 				static Dai<Argon^, Aluminium^>^ Adrastea;
+				static Quark<Aluminium^, Aether^, Nickel^>^ Triton;
 
 				Copper(Nickel^ Eta) {
 					Add(Eta->Mu.Key->Beta->R->L, Eta);
@@ -18,8 +19,12 @@ namespace Dysnomia {
 					Adrastea->Add(Eta->Mu.Key->Beta->L->Mu.Key, Eta->Mu.Key->Beta->R->L);
 				}
 
-				Nickel^ Next() {
-
+				Nickel^ Delta() {
+					if (Count > 1) throw gcnew Exception("Copper Already Delta");
+					Aether^ Beta = Mu.Value->Mu.Value->Beta(Last.Key);
+					Nickel^ Phi = gcnew Nickel(Beta, Mu.Value->Mu.Key);
+					if (Triton == nullptr) Triton = gcnew Quark<Aluminium^, Aether^, Nickel^>(Mu.Key, Beta, Phi);
+					return Phi;
 				}
 			};
 		}

@@ -15,6 +15,8 @@ namespace Dysnomia {
 				Nickel^ Psi = gcnew Nickel(Mu->Zheng(), Mu->Theta);
 				Copper^ Nu = gcnew Copper(Psi);
 				Constants::Evidences->Add(Laws::Second);
+
+				Nickel^ Beta = Nu->Delta();
 			}
 		}
 	}
