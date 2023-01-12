@@ -17,6 +17,10 @@ namespace Dysnomia {
 
 				Aluminium^ Zeta;
 
+				Silicon(Carbon^ Delta, Coronium^ Eta) {
+					Add(Delta, Eta);
+				}
+
 				Silicon(Aluminium^ Alpha, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
 					Zeta = Alpha;
 					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
