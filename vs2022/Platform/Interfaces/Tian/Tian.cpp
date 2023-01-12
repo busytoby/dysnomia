@@ -16,8 +16,9 @@ namespace Dysnomia {
 				Copper^ Nu = gcnew Copper(Psi);
 				Constants::Evidences->Add(Laws::Second);
 
-				Nickel^ Beta = Nu->Delta();
+				Nickel^ Eta = Nu->Delta();
 				Constants::Evidences->Add(Constants::Psi);
+				Zinc^ Sigma = gcnew Zinc(Nu, Eta);
 			}
 		}
 	}
