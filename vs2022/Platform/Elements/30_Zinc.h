@@ -13,6 +13,7 @@ namespace Dysnomia {
 			public:
 				static Dai<Zinc^, Argon^>^ Venus;
 				static Quark<Nickel^, Argon^, Natrium^>^ Neith;
+				static Quark<Nickel^, Argon^, Zinc^>^ Callisto;
 
 				Zinc(Copper^ Nu, Nickel^ Eta) : Quark(Nu, Eta, Nu->Mu.Value) {
 					if (Venus == nullptr) Venus = gcnew Dai<Zinc^, Argon^>();
@@ -21,6 +22,7 @@ namespace Dysnomia {
 					Argon^ Rho = gcnew Argon(Nu->Mu.Value->Mu.Value->Mu.Key, gcnew Chlorine(Nu->Mu.Value->Mu.Value->Mu.Key), Nu->Mu.Value->Mu.Value);
 					if (Neith == nullptr) Neith = gcnew Quark<Nickel^, Argon^, Natrium^>(Nu->Mu.Value, Rho, Nu->Mu.Key->N->Zeta);
 					Venus->Add(this, Rho);
+					if (Callisto == nullptr) Callisto = gcnew Quark<Nickel^, Argon^, Zinc^>(Nu->Mu.Value, Rho, this);
 				};
 			};
 		}
