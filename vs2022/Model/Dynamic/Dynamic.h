@@ -48,13 +48,13 @@ namespace Dysnomia {
 						R->Add(Key);
 					else 
 						Key->Find(R, _Type);
-					/*
 					Dysnomia::Epsilon^ Value = (Dysnomia::Epsilon^)E->Current->GetType()->GetProperty("Value")->GetValue(E->Current);
-					if (Value->GetType()->Name == _Type) 
-						R->Add(Value);
-					else 
+					if (Value->GetType()->Name == _Type) {
+						//R->Add(Value);
+						throw gcnew Exception("Invalidate Search");
+					} 
+					else
 						Value->Find(R, _Type);
-					*/
 				}
 			}
 		}
