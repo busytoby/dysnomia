@@ -21,6 +21,7 @@ namespace Dysnomia {
 				Zinc^ Sigma = gcnew Zinc(Nu, Eta);
 				Constants::Evidences->Add(Constants::Nu);
 				Constants::Evidences->Add(Constants::Upsilon);
+				Constants::Evidences->Add(Laws::Fifth);
 			}
 		}
 	}
