@@ -153,6 +153,7 @@
     <ClInclude Include="29_Copper.h" />
     <ClInclude Include="30_Zinc.h" />
     <ClInclude Include="31_Gallium.h" />
+    <ClInclude Include="32_Germanium.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />

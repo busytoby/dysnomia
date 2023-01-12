@@ -32,6 +32,7 @@
 #include "29_Copper.h"
 #include "30_Zinc.h"
 #include "31_Gallium.h"
+#include "32_Germanium.h"
 #include <cassert>
 
 using namespace System;
