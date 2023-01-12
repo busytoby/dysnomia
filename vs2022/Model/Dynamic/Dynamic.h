@@ -25,17 +25,17 @@ namespace Dysnomia {
 	public:
 		BigInteger Epsilon;
 
-		void Find(List<Dysnomia::Epsilon^>^ R, String^ _Type) {
+		void FindKeys(List<Dysnomia::Epsilon^>^ R, String^ _Type) {
 			for each (FieldInfo^ F in this->GetType()->GetFields(BindingFlags::Instance | BindingFlags::Public | BindingFlags::NonPublic)) {
 				if (F->FieldType->Name == "BigInteger" || F->FieldType->Name == "Color") continue;
 				Object^ V = F->GetValue(this);
 				if (V == nullptr)
 					continue;
 				if (F->FieldType->Name == _Type) {
-					R->Add((Dysnomia::Epsilon^)V);
+					//R->Add((Dysnomia::Epsilon^)V);
 				}
 				else if(F->Name == "N")
-					((Dysnomia::Epsilon^)V)->Find(R, _Type);
+					((Dysnomia::Epsilon^)V)->FindKeys(R, _Type);
 			}
 			if (this->GetType()->BaseType->Name->StartsWith("Dai")) {
 				FieldInfo^ F = this->GetType()->BaseType->GetField("Alpha", System::Reflection::BindingFlags::Instance | System::Reflection::BindingFlags::NonPublic);
@@ -47,14 +47,14 @@ namespace Dysnomia {
 					if (Key->GetType()->Name == _Type) 
 						R->Add(Key);
 					else 
-						Key->Find(R, _Type);
+						Key->FindKeys(R, _Type);
 					Dysnomia::Epsilon^ Value = (Dysnomia::Epsilon^)E->Current->GetType()->GetProperty("Value")->GetValue(E->Current);
 					if (Value->GetType()->Name == _Type) {
 						//R->Add(Value);
 						throw gcnew Exception("Invalidate Search");
 					} 
 					else
-						Value->Find(R, _Type);
+						Value->FindKeys(R, _Type);
 				}
 			}
 		}
