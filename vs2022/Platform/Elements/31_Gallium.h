@@ -9,6 +9,8 @@ namespace Dysnomia {
 			{
 			public:
 				Gallium(Zinc^ Alpha) {
+					List<Dysnomia::Epsilon^>^ Carbons = gcnew List<Dysnomia::Epsilon^>();
+					Alpha->Find(Carbons, "Carbon");
 					Add(Alpha->N->Mu.Key->N->Mu.Key, Alpha);
 					Add(Alpha->N->Mu.Key->N->Mu.Value->Mu.Key, Alpha);
 					for (int i = 0; i < Alpha->N->Mu.Value->Mu.Key->Count; i++) {

@@ -7,6 +7,7 @@ Ordered Pairs:
 using namespace System;
 using namespace System::Numerics;
 using namespace System::Collections::Generic;
+using namespace System::Reflection;
 
 namespace Dysnomia {
 	public ref class DynamicException : public Exception {
@@ -23,6 +24,40 @@ namespace Dysnomia {
 	public ref class Epsilon {
 	public:
 		BigInteger Epsilon;
+
+		void Find(List<Dysnomia::Epsilon^>^ R, String^ _Type) {
+			for each (FieldInfo^ F in this->GetType()->GetFields(BindingFlags::Instance | BindingFlags::Public | BindingFlags::NonPublic)) {
+				if (F->FieldType->Name == "BigInteger" || F->FieldType->Name == "Color") continue;
+				Object^ V = F->GetValue(this);
+				if (V == nullptr)
+					continue;
+				if (F->FieldType->Name == _Type) {
+					R->Add((Dysnomia::Epsilon^)V);
+				}
+				else if(F->Name == "N")
+					((Dysnomia::Epsilon^)V)->Find(R, _Type);
+			}
+			if (this->GetType()->BaseType->Name->StartsWith("Dai")) {
+				FieldInfo^ F = this->GetType()->BaseType->GetField("Alpha", System::Reflection::BindingFlags::Instance | System::Reflection::BindingFlags::NonPublic);
+				Object^ V = F->GetValue(this);
+
+				System::Collections::IEnumerator^ E = ((System::Collections::IEnumerable^)V)->GetEnumerator();
+				while (E->MoveNext()) {
+					Dysnomia::Epsilon^ Key = (Dysnomia::Epsilon^)E->Current->GetType()->GetProperty("Key")->GetValue(E->Current);
+					if (Key->GetType()->Name == _Type) 
+						R->Add(Key);
+					else 
+						Key->Find(R, _Type);
+					/*
+					Dysnomia::Epsilon^ Value = (Dysnomia::Epsilon^)E->Current->GetType()->GetProperty("Value")->GetValue(E->Current);
+					if (Value->GetType()->Name == _Type) 
+						R->Add(Value);
+					else 
+						Value->Find(R, _Type);
+					*/
+				}
+			}
+		}
 	};
 
 	public ref class Dynamic : Epsilon
