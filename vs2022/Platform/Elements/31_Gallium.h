@@ -29,7 +29,8 @@ namespace Dysnomia {
 						Add(Alpha->N->Mu.Value->Mu.Value->Mu.Key->L[i].Key, Alpha);
 					*/
 
-					Add(Alpha->R->Mu.Value->Mu.Value->N->Mu.Key, Alpha);
+					// Option
+					//Add(Alpha->R->Mu.Value->Mu.Value->N->Mu.Key, Alpha);
 				}
 			};
 		}
