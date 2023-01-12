@@ -22,6 +22,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Nu);
 				Constants::Evidences->Add(Constants::Upsilon);
 				Constants::Evidences->Add(Laws::Fifth);
+
+				Gallium^ Upsilon = gcnew Gallium(Sigma);
 			}
 		}
 	}
