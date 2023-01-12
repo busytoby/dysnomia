@@ -17,6 +17,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Laws::Second);
 
 				Nickel^ Beta = Nu->Delta();
+				Constants::Evidences->Add(Constants::Psi);
 			}
 		}
 	}
