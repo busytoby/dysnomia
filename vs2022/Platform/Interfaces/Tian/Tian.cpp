@@ -19,6 +19,7 @@ namespace Dysnomia {
 				Nickel^ Eta = Nu->Delta();
 				Constants::Evidences->Add(Constants::Psi);
 				Zinc^ Sigma = gcnew Zinc(Nu, Eta);
+				Constants::Evidences->Add(Constants::Nu);
 			}
 		}
 	}
