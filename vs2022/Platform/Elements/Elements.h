@@ -83,6 +83,7 @@ namespace Dysnomia {
 			static property Quark<Vanadium^, Sulfur^, Titanium^>^ Puck { Quark<Vanadium^, Sulfur^, Titanium^>^ get() { return Chromium::Puck; }};
 			static property Quark<Vanadium^, Dysnomium^, Titanium^>^ Belinda { Quark<Vanadium^, Dysnomium^, Titanium^>^ get() { return Chromium::Belinda; }};
 			static property Quark<Vanadium^, Manganese^, Chromium^>^ Mercury { Quark<Vanadium^, Manganese^, Chromium^>^ get() { return Cobalt::Mercury; }};
+			static property Dai<Vanadium^, Chromium^>^ Larissa { Dai<Vanadium^, Chromium^>^ get() { return Cobalt::Larissa; }}
 			static property Dai<Vanadium^, Manganese^>^ Rosalind { Dai<Vanadium^, Manganese^>^ get() { return Manganese::Rosalind; }};
 			static property Dai<Manganese^, Vanadium^>^ Mab { Dai<Manganese^, Vanadium^>^ get() { return Manganese::Mab; }};
 			static property Dai<Manganese^, Cobalt^>^ Thebe { Dai<Manganese^, Cobalt^>^ get() { return Arsenic::Thebe; }}
