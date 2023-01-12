@@ -29,6 +29,7 @@ namespace Dysnomia {
 
 				Theta = gcnew Arsenic(Rho);
 				Constants::Evidences->Add(Constants::Theta);
+				Constants::Evidences->Add(Laws::Sixth);
 			}
 		}
 	}
