@@ -19,6 +19,7 @@ namespace Dysnomia {
 					Add(Alpha->N->Mu.Value->Mu.Value->Mu.Key->N->N->Mu.Key, Alpha);
 					for (int i = 0; i < Alpha->N->Mu.Value->Mu.Value->Mu.Key->L->Count; i++)
 						Add(Alpha->N->Mu.Value->Mu.Value->Mu.Key->L[i].Key, Alpha);
+					Add(Alpha->R->Mu.Value->Mu.Value->N->Mu.Key, Alpha)
 				}
 			};
 		}
