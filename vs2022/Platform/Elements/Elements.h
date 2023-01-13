@@ -39,6 +39,7 @@
 #include "36_Meow.h"
 #include "37_Blong.h"
 #include "38_Qiao.h"
+#include "39_Yttrium.h"
 #include <cassert>
 
 using namespace System;
