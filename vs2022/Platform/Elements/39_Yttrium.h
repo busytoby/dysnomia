@@ -8,7 +8,11 @@ namespace Dysnomia {
 			public ref class Yttrium : Quark<Blong^, Qiao^, Meow^>
 			{
 			public:
-				Yttrium(Blong^ Nu, Qiao^ Rho, Meow^ Psi) : Quark(Nu, Rho, Psi) {};
+				static Dai<Qiao^, Blong^>^ Perdita;
+				Yttrium(Blong^ Nu, Qiao^ Rho, Meow^ Psi) : Quark(Nu, Rho, Psi) {
+					if (Perdita == nullptr) Perdita = gcnew Dai<Qiao^, Blong^>();
+					Perdita->Add(Rho, Nu);
+				};
 			};
 		}
 	}

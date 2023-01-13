@@ -114,6 +114,7 @@ namespace Dysnomia {
 			static property Dai<Meow^, Woof^>^ Tarvos { Dai<Meow^, Woof^>^ get() { return Blong::Tarvos; }};
 			static property Dai<Meow^, Nickel^>^ Siarnaq { Dai<Meow^, Nickel^>^ get() { return Blong::Siarnaq; }};
 			static property Quark<Meow^, Woof^, Nickel^>^ Skathi { Quark<Meow^, Woof^, Nickel^>^ get() { return Blong::Skathi; }};
+			static property Dai<Qiao^, Blong^>^ Perdita { Dai<Qiao^, Blong^>^ get() { return Yttrium::Perdita; }};
 		};
 	}
 }
