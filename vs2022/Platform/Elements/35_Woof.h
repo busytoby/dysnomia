@@ -24,7 +24,7 @@ namespace Dysnomia {
 				Woof(Arsenic^ Omicron, Copper^ Lambda) {
 					Beta = Lambda;
 					Pi = Beta->Delta();
-					Theta = Beta->Mu.Value->Mu.Value->Mu.Key;
+					Theta = Omicron->Mu.Key->N->Mu.Key;
 					Tau = gcnew Chlorine(Theta, Pi->Mu.Value);
 					Zeta = gcnew Argon(Theta, Tau, Pi->Mu.Value);
 					Hiss^ Psi = gcnew Hiss(Omicron, Pi, Zeta);
