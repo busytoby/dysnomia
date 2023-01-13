@@ -96,12 +96,20 @@ namespace Dysnomia {
 			static property Dai<Cobalt^, Sulfur^>^ Mimas { Dai<Cobalt^, Sulfur^>^ get() { return Meow::Mimas; }};
 			static property Quark<Nickel^, Argon^, Natrium^>^ Neith { Quark<Nickel^, Argon^, Natrium^>^ get() { return Zinc::Neith; }};
 			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }};
+			static property Quark<Nickel^, Meow^, Woof^>^ Paaliaq { Quark<Nickel^, Meow^, Woof^>^ get() { return Blong::Paaliaq; }};
+			static property Dai<Nickel^, Woof^>^ Rhea { Dai<Nickel^, Woof^>^ get() { return Blong::Rhea; }};
+			static property Dai<Nickel^, Meow^>^ Ljiraq { Dai<Nickel^, Meow^>^ get() { return Blong::Ljiraq; }};
 			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }};
 			static property Dai<Arsenic^, Hiss^>^ KuiperBelt { Dai<Arsenic^, Hiss^>^ get() { return Hiss::KuiperBelt; }};
 			static property Quark<Arsenic^, Woof^, Meow^>^ Earth { Quark<Arsenic^, Woof^, Meow^>^ get() { return Meow::Earth; }};
 			static property Dai<Hiss^, Boron^>^ Daphnis { Dai<Hiss^, Boron^>^ get() { return Woof::Daphnis; }};
+			static property Dai<Woof^, Nickel^>^ Kiviuq { Dai<Woof^, Nickel^>^ get() { return Blong::Kiviuq; }};
+			static property Dai<Woof^, Meow^>^ Narvi { Dai<Woof^, Meow^>^ get() { return Blong::Narvi; }};
 			static property Quark<Woof^, Argon^, Nickel^>^ Sun { Quark<Woof^, Argon^, Nickel^>^ get() { return Woof::Sun; }};
 			static property Quark<Woof^, Meow^, Nickel^>^ Cressida { Quark<Woof^, Meow^, Nickel^>^ get() { return Blong::Cressida; }};
+			static property Dai<Meow^, Woof^>^ Tarvos { Dai<Meow^, Woof^>^ get() { return Blong::Tarvos; }};
+			static property Dai<Meow^, Nickel^>^ Siarnaq { Dai<Meow^, Nickel^>^ get() { return Blong::Siarnaq; }};
+			static property Quark<Meow^, Woof^, Nickel^>^ Skathi { Quark<Meow^, Woof^, Nickel^>^ get() { return Blong::Skathi; }};
 		};
 	}
 }
