@@ -5,11 +5,11 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Zirconium : public Dai<Woof^, Yttrium^>
+			public ref class Quaternion : public Dai<Woof^, Yttrium^>
 			{
 			public:
 
-				Zirconium(Yttrium^ Nu) {
+				Quaternion(Yttrium^ Nu) {
 					Add(Nu->N->R, Nu);
 					for (int i = 0; i < Nu->L->Count; i++)
 						Add(Nu->L[i].Key, Nu);
@@ -17,6 +17,7 @@ namespace Dysnomia {
 						Add(Nu->R[i].Key, Nu);
 						Add(Nu->R[i].Value->R, Nu);
 					}
+					if (Count > 4) throw gcnew Exception("Quaternions With Count > 4 Are Not Expected Yet");
 				}
 			};
 		}

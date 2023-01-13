@@ -161,7 +161,7 @@
     <ClInclude Include="37_Blong.h" />
     <ClInclude Include="38_Qiao.h" />
     <ClInclude Include="39_Yttrium.h" />
-    <ClInclude Include="40_Zirconium.h" />
+    <ClInclude Include="40_Quaternion.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />

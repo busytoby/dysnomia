@@ -27,7 +27,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Sigma);
 				Constants::Evidences->Add(Eta->Gamma());
 				Constants::Evidences->Add(Laws::Sixth);
-				Zirconium^ Sigma = gcnew Zirconium(Eta);
+				Elements::Quaternion^ Sigma = gcnew Elements::Quaternion(Eta);
 			}
 		}
 	}
