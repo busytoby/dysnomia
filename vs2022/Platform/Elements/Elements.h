@@ -36,6 +36,7 @@
 #include "33_Arsenic.h"
 #include "34_Selenium.h"
 #include "35_Bromine.h"
+#include "36_Krypton.h"
 #include <cassert>
 
 using namespace System;

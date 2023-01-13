@@ -157,6 +157,7 @@
     <ClInclude Include="33_Arsenic.h" />
     <ClInclude Include="34_Selenium.h" />
     <ClInclude Include="35_Bromine.h" />
+    <ClInclude Include="36_Krypton.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />
