@@ -25,6 +25,7 @@ namespace Dysnomia {
 				Qiao^ Nu = gcnew Qiao(Rho->Mu.Key, Psi);
 				Yttrium^ Eta = gcnew Yttrium(Psi, Nu, Rho);
 				Constants::Evidences->Add(Constants::Sigma);
+				Constants::Evidences->Add(Eta->Gamma());
 			}
 		}
 	}
