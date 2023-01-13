@@ -22,6 +22,7 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Eta);
 
 				Blong^ Psi = gcnew Blong(Rho, Rho->Mu.Key, Rho->Mu.Key->Pi);
+				Qiao^ Nu = gcnew Qiao(Rho->Mu.Key, Psi);
 			}
 		}
 	}
