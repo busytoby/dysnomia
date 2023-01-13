@@ -100,6 +100,7 @@ namespace Dysnomia {
 			static property Quark<Nickel^, Argon^, Natrium^>^ Neith { Quark<Nickel^, Argon^, Natrium^>^ get() { return Zinc::Neith; }};
 			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }};
 			static property Quark<Nickel^, Meow^, Woof^>^ Paaliaq { Quark<Nickel^, Meow^, Woof^>^ get() { return Blong::Paaliaq; }};
+			static property Dai<Nickel^, Hiss^>^ Phoebe { Dai<Nickel^, Hiss^>^ get() { return Hiss::Phoebe; }};
 			static property Dai<Nickel^, Woof^>^ Rhea { Dai<Nickel^, Woof^>^ get() { return Blong::Rhea; }};
 			static property Dai<Nickel^, Meow^>^ Ljiraq { Dai<Nickel^, Meow^>^ get() { return Blong::Ljiraq; }};
 			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }};
