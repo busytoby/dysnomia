@@ -14,6 +14,7 @@ namespace Dysnomia {
 				static property BigInteger Fourth { BigInteger get() { return BigInteger::ModPow(Constants::Mu, Constants::Sigma, Constants::Rho); }};
 				static property BigInteger Fifth { BigInteger get() { return BigInteger::ModPow(Constants::Eta, Constants::Sigma, Constants::Mu); }};
 				static property BigInteger Sixth { BigInteger get() { return BigInteger::ModPow(Platform::Wou::Constants::Tau, Constants::Last, Constants::Sigma); }};
+				static property BigInteger Seventh { BigInteger get() { return BigInteger::ModPow(Constants::Rho, Laws::Sixth, Platform::Jong::Constants::Psi); }};
 			};
 		}
 	}
