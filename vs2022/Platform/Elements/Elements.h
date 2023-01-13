@@ -127,6 +127,7 @@ namespace Dysnomia {
 			static property Quark<Blong^, Meow^, Qiao^>^ Bestla { Quark<Blong^, Meow^, Qiao^>^ get() { return Yttrium::Bestla; }};
 			static property Dai<Qiao^, Blong^>^ Perdita { Dai<Qiao^, Blong^>^ get() { return Yttrium::Perdita; }};
 			static property Quark<Qiao^, Blong^, Meow^>^ Portia { Quark<Qiao^, Blong^, Meow^>^ get() { return Yttrium::Portia; }};
+			static property Dai<Yttrium^, Woof^>^ Fornjot { Dai<Yttrium^, Woof^>^ get() { return Elements::Quaternion::Fornjot; }};
 		};
 	}
 }
