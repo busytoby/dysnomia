@@ -21,7 +21,7 @@ namespace Dysnomia {
 					if (Rho->Count > 1 && FranciscoProliferation == nullptr) FranciscoProliferation = gcnew Dai<Coronium^, Aether^>();
 					if (Rho->Count > 1 && FranciscoProliferation != nullptr)
 						for (int i = 0; i < Rho->Count; i++)
-							FranciscoProliferation->Add(Rho[i].Value, Rho[i].Key);
+							FranciscoProliferation->Add(Rho[i].Value, Rho);
 				}
 			};
 		}
