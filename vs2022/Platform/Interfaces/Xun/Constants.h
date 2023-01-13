@@ -17,6 +17,7 @@ namespace Dysnomia {
 				static property BigInteger Psi { BigInteger get() { return Objects::Sun->L->Mu.Value->Psi.Value->R->R->Cone->Manifold; }};
 				static property BigInteger Nu { BigInteger get() { return Objects::Sun->R->N->R->Rho.Value->Epsilon; }};
 				static property BigInteger Eta { BigInteger get() { return Objects::Mimas->Mu.Key->Mu.Key->Psi.Value->Mu.Value->N->Zeta->Pi->R->Ring; }};
+				static property BigInteger Sigma { BigInteger get() { return Objects::Perdita->Mu.Key->Mu.Key->Mu.Key->N->N->N->L->Phi->R->Ring; }};
 
 				static Constants() { Evidences = gcnew List<BigInteger>(); }
 			};
