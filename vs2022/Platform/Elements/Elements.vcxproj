@@ -195,9 +195,6 @@
     <ProjectReference Include="..\..\Model\Quark\Quark.vcxproj">
       <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\Model\Spin\Spin.vcxproj">
-      <Project>{c9e94ef9-ca32-40ff-ab36-ac027ef7699b}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>
     </ProjectReference>
