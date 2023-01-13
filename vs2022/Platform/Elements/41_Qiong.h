@@ -8,7 +8,11 @@ namespace Dysnomia {
 			public ref class Qiong : public Quark<Elements::Quaternion^, Blong^, Qiao^>
 			{
 			public:
-				Qiong(Elements::Quaternion^ Rho, Blong^ Qi, Qiao^ Xi) : Quark(Rho, Qi, Xi) { };
+				static Quark<Elements::Quaternion^, Blong^, Qiao^>^ Hyrrokkin;
+
+				Qiong(Elements::Quaternion^ Rho, Blong^ Qi, Qiao^ Xi) : Quark(Rho, Qi, Xi) {
+					if (Hyrrokkin == nullptr) Hyrrokkin = this;
+				};
 			};
 		}
 	}

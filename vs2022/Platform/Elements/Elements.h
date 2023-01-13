@@ -77,12 +77,12 @@ namespace Dysnomia {
 			static property Quark<Sulfur^, Aether^, Magnesium^>^ Telesto { Quark<Sulfur^, Aether^, Magnesium^>^ get() { return Argon::Telesto; }};
 			static property Quark<Sulfur^, Coronium^, Argon^>^ Pluto { Quark<Sulfur^, Coronium^, Argon^>^ get() { return Scandium::Pluto; }};
 			static property Quark<Sulfur^, Argon^, Coronium^>^ Psamathe { Quark<Sulfur^, Argon^, Coronium^>^ get() { return Scandium::Psamathe; }};
-			static property Quark<Sulfur^, Aether^, Iron^>^ Io { Quark<Sulfur^, Aether^, Iron^>^ get() { return Iron::Io; }};		
+			static property Quark<Sulfur^, Aether^, Iron^>^ Io { Quark<Sulfur^, Aether^, Iron^>^ get() { return Iron::Io; }};
 			static property Dai<Sulfur^, Aether^>^ Jupiter { Dai<Sulfur^, Aether^>^ get() { return Vanadium::Jupiter; }};
 			static property Quark<Chlorine^, Woof^, Meow^>^ Pallene { Quark<Chlorine^, Woof^, Meow^>^ get() { return Qiao::Pallene; }};
 			static property Dai<Aether^, Iron^>^ Amalthea { Dai<Aether^, Iron^>^ get() { return Nickel::Amalthea; }};
 			static property Dai<Aether^, Zinc^>^ Proteus { Dai<Aether^, Zinc^>^ get() { return Germanium::Proteus; }};
-			static property Dai<Argon^, Aluminium^>^ Adrastea { Dai<Argon^, Aluminium^>^ get() { return Copper::Adrastea; }};	
+			static property Dai<Argon^, Aluminium^>^ Adrastea { Dai<Argon^, Aluminium^>^ get() { return Copper::Adrastea; }};
 			static property Quark<Argon^, Zinc^, Aluminium^>^ Neso { Quark<Argon^, Zinc^, Aluminium^>^ get() { return Zinc::Neso; }};
 			static property Quark<Argon^, Nickel^, Arsenic^>^ Mundilfari { Quark<Argon^, Nickel^, Arsenic^>^ get() { return Hiss::Mundilfari; }};
 			static property Quark<Argon^, Woof^, Nickel^>^ Valetudo { Quark<Argon^, Woof^, Nickel^>^ get() { return Woof::Valetudo; }};
@@ -129,6 +129,7 @@ namespace Dysnomia {
 			static property Dai<Qiao^, Blong^>^ Perdita { Dai<Qiao^, Blong^>^ get() { return Yttrium::Perdita; }};
 			static property Quark<Qiao^, Blong^, Meow^>^ Portia { Quark<Qiao^, Blong^, Meow^>^ get() { return Yttrium::Portia; }};
 			static property Dai<Yttrium^, Woof^>^ Fornjot { Dai<Yttrium^, Woof^>^ get() { return Elements::Quaternion::Fornjot; }};
+			static property Quark<Elements::Quaternion^, Blong^, Qiao^>^ Hyrrokkin { Quark<Elements::Quaternion^, Blong^, Qiao^>^ get() { return Qiong::Hyrrokkin; }};
 		};
 	}
 }
