@@ -7,11 +7,11 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Bromine : public Dai<Selenium^, Boron^>
+			public ref class Woof : public Dai<Selenium^, Boron^>
 			{
 			public:
-				static Quark<Bromine^, Argon^, Nickel^>^ Sun;
-				static Quark<Argon^, Bromine^, Nickel^>^ Valetudo;
+				static Quark<Woof^, Argon^, Nickel^>^ Sun;
+				static Quark<Argon^, Woof^, Nickel^>^ Valetudo;
 
 				Sulfur^ Theta;
 				Chlorine^ Tau;
@@ -20,7 +20,7 @@ namespace Dysnomia {
 				Nickel^ Pi;
 				Argon^ Zeta;
 
-				Bromine(Arsenic^ Omicron, Copper^ Lambda) {
+				Woof(Arsenic^ Omicron, Copper^ Lambda) {
 					Beta = Lambda;
 					Pi = Beta->Delta();
 					Theta = Beta->Mu.Value->Mu.Value->Mu.Key;
@@ -28,8 +28,8 @@ namespace Dysnomia {
 					Zeta = gcnew Argon(Theta, Tau, Pi->Mu.Value);
 					Selenium^ Psi = gcnew Selenium(Omicron, Pi, Zeta);
 					Add(Psi, Theta->N->L->Pi);
-					if (Sun == nullptr) Sun = gcnew Quark<Bromine^, Argon^, Nickel^>(this, Zeta, Pi);
-					if (Valetudo == nullptr) Valetudo = gcnew Quark<Argon^, Bromine^, Nickel^>(Zeta, this, Pi);
+					if (Sun == nullptr) Sun = gcnew Quark<Woof^, Argon^, Nickel^>(this, Zeta, Pi);
+					if (Valetudo == nullptr) Valetudo = gcnew Quark<Argon^, Woof^, Nickel^>(Zeta, this, Pi);
 				}
 			};
 		}

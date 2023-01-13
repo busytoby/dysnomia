@@ -11,7 +11,7 @@ namespace Dysnomia {
 			Xun::Xun() {
 				Mu = gcnew Tian();
 
-				Krypton^ Rho = gcnew Krypton(
+				Meow^ Rho = gcnew Meow(
 					Mu->Nu, 
 					Dysnomia::Platform::Tian::Laws::First, 
 					Dysnomia::Platform::Jong::Laws::First, 
