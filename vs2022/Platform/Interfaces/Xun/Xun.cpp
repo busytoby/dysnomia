@@ -18,6 +18,7 @@ namespace Dysnomia {
 					Dysnomia::Platform::Wou::Laws::First, 
 					Dysnomia::Platform::Tian::Constants::Last);
 				Constants::Evidences->Add(Constants::Mu);
+				Constants::Evidences->Add(Laws::Third);
 			}
 		}
 	}
