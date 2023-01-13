@@ -123,6 +123,7 @@ namespace Dysnomia {
 			static property Dai<Blong^, Argon^>^ Stephano { Dai<Blong^, Argon^>^ get() { return Qiao::Stephano; }};
 			static property Dai<Blong^, Meow^>^ Epimetheus { Dai<Blong^, Meow^>^ get() { return Qiao::Epimetheus; }};
 			static property Dai<Qiao^, Blong^>^ Perdita { Dai<Qiao^, Blong^>^ get() { return Yttrium::Perdita; }};
+			static property Quark<Qiao^, Blong^, Meow^>^ Portia { Quark<Qiao^, Blong^, Meow^>^ get() { return Yttrium::Portia; }};
 		};
 	}
 }
