@@ -9,6 +9,7 @@ namespace Dysnomia {
 			{
 			public:
 				static Quark<Arsenic^, Woof^, Meow^>^ Earth;
+				static Dai<Cobalt^, Sulfur^>^ Mimas;
 				Copper^ Beta;
 				Cobalt^ Omicron;
 				Arsenic^ Alpha;
@@ -19,7 +20,9 @@ namespace Dysnomia {
 					Arsenic^ Alpha = gcnew Arsenic(Omicron, Rho, Upsilon, Ohm, Xi);
 					Woof^ Omega = gcnew Woof(Alpha, Beta);
 					Add(Omega, Omicron->Phi->N->Mu.Key);
+					if (Mimas == nullptr) Mimas = gcnew Dai<Cobalt^, Sulfur^>();
 					if (Earth == nullptr) Earth = gcnew Quark<Arsenic^, Woof^, Meow^>(Alpha, Omega, this);
+					Mimas->Add(Omicron, Omicron->Phi->N->Mu.Key);
 				}
 			};
 		}
