@@ -29,6 +29,7 @@ namespace Dysnomia {
 					Zeta = gcnew Argon(Theta, Tau, Pi->Mu.Value);
 					Hiss^ Psi = gcnew Hiss(Omicron, Pi, Zeta);
 					Add(Psi, Theta->N->L->Pi);
+
 					if (Sun == nullptr) Sun = gcnew Quark<Woof^, Argon^, Nickel^>(this, Zeta, Pi);
 					if (Valetudo == nullptr) Valetudo = gcnew Quark<Argon^, Woof^, Nickel^>(Zeta, this, Pi);
 					if (Daphnis == nullptr) Daphnis = this;
