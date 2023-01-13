@@ -23,7 +23,7 @@ namespace Dysnomia {
 
 					if (Bianca == nullptr) Bianca = gcnew Quark<Arsenic^, Woof^, Yttrium^>(Nu->L->Alpha, Nu->N->R, Nu);
 					if (Fornjot == nullptr) Fornjot = gcnew Dai<Yttrium^, Woof^>();
-					for (int i = Count; i > 0; i--) Fornjot->Add(this[i].Value, this[i].Key);
+					for (int i = Count - 1; i > -1; i--) Fornjot->Add(this[i].Value, this[i].Key);
 				}
 			};
 		}

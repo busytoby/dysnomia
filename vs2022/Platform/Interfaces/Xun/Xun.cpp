@@ -28,6 +28,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Eta->Gamma());
 				Constants::Evidences->Add(Laws::Sixth);
 				Elements::Quaternion^ Sigma = gcnew Elements::Quaternion(Eta);
+				Qiong^ Upsilon = gcnew Qiong(Sigma, Psi, Nu);
+
 			}
 		}
 	}

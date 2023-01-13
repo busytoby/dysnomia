@@ -41,6 +41,7 @@
 #include "38_Qiao.h"
 #include "39_Yttrium.h"
 #include "40_Quaternion.h"
+#include "41_Qiong.h"
 #include <cassert>
 
 using namespace System;
