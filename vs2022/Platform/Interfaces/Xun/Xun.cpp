@@ -20,6 +20,8 @@ namespace Dysnomia {
 				Constants::Evidences->Add(Constants::Mu);
 				Constants::Evidences->Add(Laws::Third);
 				Constants::Evidences->Add(Constants::Eta);
+
+				Blong^ Psi = gcnew Blong(Rho, Rho->Mu.Key, Rho->Mu.Key->Pi);
 			}
 		}
 	}
