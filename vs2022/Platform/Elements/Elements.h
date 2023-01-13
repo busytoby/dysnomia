@@ -75,6 +75,7 @@ namespace Dysnomia {
 			static property Quark<Sulfur^, Argon^, Coronium^>^ Psamathe { Quark<Sulfur^, Argon^, Coronium^>^ get() { return Scandium::Psamathe; }};
 			static property Quark<Sulfur^, Aether^, Iron^>^ Io { Quark<Sulfur^, Aether^, Iron^>^ get() { return Iron::Io; }};		
 			static property Dai<Sulfur^, Aether^>^ Jupiter { Dai<Sulfur^, Aether^>^ get() { return Vanadium::Jupiter; }};
+			static property Quark<Chlorine^, Woof^, Meow^>^ Pallene { Quark<Chlorine^, Woof^, Meow^>^ get() { return Qiao::Pallene; }};
 			static property Dai<Aether^, Iron^>^ Amalthea { Dai<Aether^, Iron^>^ get() { return Nickel::Amalthea; }};
 			static property Dai<Aether^, Zinc^>^ Proteus { Dai<Aether^, Zinc^>^ get() { return Germanium::Proteus; }};
 			static property Dai<Argon^, Aluminium^>^ Adrastea { Dai<Argon^, Aluminium^>^ get() { return Copper::Adrastea; }};	
@@ -108,6 +109,7 @@ namespace Dysnomia {
 			static property Dai<Woof^, Meow^>^ Narvi { Dai<Woof^, Meow^>^ get() { return Blong::Narvi; }};
 			static property Quark<Woof^, Argon^, Nickel^>^ Sun { Quark<Woof^, Argon^, Nickel^>^ get() { return Woof::Sun; }};
 			static property Quark<Woof^, Meow^, Nickel^>^ Cressida { Quark<Woof^, Meow^, Nickel^>^ get() { return Blong::Cressida; }};
+			static property Dai<Woof^, Blong^>^ Methone { Dai<Woof^, Blong^>^ get() { return Qiao::Methone; }};
 			static property Dai<Meow^, Woof^>^ Tarvos { Dai<Meow^, Woof^>^ get() { return Blong::Tarvos; }};
 			static property Dai<Meow^, Nickel^>^ Siarnaq { Dai<Meow^, Nickel^>^ get() { return Blong::Siarnaq; }};
 			static property Quark<Meow^, Woof^, Nickel^>^ Skathi { Quark<Meow^, Woof^, Nickel^>^ get() { return Blong::Skathi; }};
