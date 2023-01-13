@@ -12,6 +12,11 @@ namespace Dysnomia {
 				Potassium(Sulfur^ Upsilon) : Quark<Dysnomium^, Magnesium^, Aluminium^>(gcnew Dysnomium(Upsilon->R), Upsilon->N->N, Upsilon->N) {
 				}
 
+				Coronium^ Omega(Silicon^ Phi) {
+					N->Omega(Phi->Psi.Value, Phi);
+					return Phi->Last.Value;
+				}
+
 				Coronium^ Kappa(Silicon^ Phi) {
 					if (Phi->Count < 5) throw gcnew Exception("Incomplete Thought");
 					N->Kappa(Phi->Psi.Value, Phi);

@@ -28,6 +28,13 @@ namespace Dysnomia {
 					if (Triton == nullptr) Triton = gcnew Quark<Aluminium^, Aether^, Nickel^>(Mu.Key, Beta, Phi);
 					return Phi;
 				}
+
+				Nickel^ Delta(Aether^ Beta, Nickel^ Phi) {
+					Phi->Mu.Key->Omega();
+					Phi->Mu.Key->Xi(Beta->Mu.Key->R, Beta->Mu.Key->L);
+					Add(Mu.Key, Phi);
+					return Phi;
+				}
 			};
 		}
 	}

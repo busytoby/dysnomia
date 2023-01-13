@@ -14,6 +14,8 @@ namespace Dysnomia {
 				static Dai<Blong^, Argon^>^ Stephano;
 				static Dai<Argon^, Blong^>^ Margaret;
 
+				Nickel^ Chi;
+
 				Qiao(Woof^ Mu, Blong^ Rho) {
 					Add(Mu, Rho);
 					if (Pallene == nullptr) Pallene = gcnew Quark<Chlorine^, Woof^, Meow^>(Mu->Tau, Mu, Rho->N);
@@ -24,6 +26,11 @@ namespace Dysnomia {
 					Stephano->Add(Rho, Mu->Zeta);
 					if (Margaret == nullptr) Margaret = gcnew Dai<Argon^, Blong^>();
 					Margaret->Add(Mu->Zeta, Rho);
+
+					Chi = Mu->Beta->Delta();
+
+					for (int i = 0; i < Mu->Pi->Count; i++)
+						Rho->R->Beta->Delta(Mu->Pi[i].Value, Chi);
 				}
 			};
 		}

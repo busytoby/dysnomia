@@ -30,6 +30,10 @@ namespace Dysnomia {
 						Rosalind->Add(Alpha[i].Key, this);
 					}
 				};
+
+				Coronium^ Omega(Silicon^ Phi) {
+					return R->Omega(Phi);
+				}
 			};
 		}
 	}

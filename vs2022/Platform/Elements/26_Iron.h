@@ -33,6 +33,7 @@ namespace Dysnomia {
 				void Xi(Phosphorous^ Eta, Silicon^ Sigma) {
 					Sulfur^ Mu = gcnew Sulfur(Sulfur::Titan->Mu.Key->Psi.Value->Zeta, Eta, Sigma);
 					Beta->N->Add(Mu, Beta->N->Mu.Value);
+					Beta->Omega(Sigma);
 				}
 			};
 		}
