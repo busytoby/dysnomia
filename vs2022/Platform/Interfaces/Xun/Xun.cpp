@@ -13,10 +13,10 @@ namespace Dysnomia {
 
 				Meow^ Rho = gcnew Meow(
 					Mu->Nu, 
-					Dysnomia::Platform::Tian::Laws::Third, 
+					Dysnomia::Platform::Tian::Laws::Sixth, 
 					Dysnomia::Platform::Wou::Laws::Seventh, 
-					Dysnomia::Platform::Jong::Laws::Tenth, 
-					Dysnomia::Platform::Tian::Laws::Fifth);
+					Dysnomia::Platform::Jong::Laws::Thirteenth, 
+					Dysnomia::Platform::Tian::Laws::Fourth);
 				Constants::Evidences->Add(Constants::Mu);
 				Constants::Evidences->Add(Laws::Third);
 				Constants::Evidences->Add(Constants::Eta);
