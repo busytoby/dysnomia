@@ -11,10 +11,13 @@ namespace Dysnomia {
 			Xun::Xun() {
 				Mu = gcnew Tian();
 
-				Bromine^ Rho = gcnew Bromine(Mu->Theta, Mu->Nu);
+				Krypton^ Rho = gcnew Krypton(
+					Mu->Nu, 
+					Dysnomia::Platform::Tian::Laws::First, 
+					Dysnomia::Platform::Jong::Laws::First, 
+					Dysnomia::Platform::Wou::Laws::First, 
+					Dysnomia::Platform::Tian::Constants::Last);
 				Constants::Evidences->Add(Constants::Mu);
-				
-				
 			}
 		}
 	}

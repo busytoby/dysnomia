@@ -158,8 +158,14 @@
     <ProjectReference Include="..\Dai\Dai.vcxproj">
       <Project>{aa973657-2e6a-46a3-91c7-894e7b6eee21}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Jong\Jong.vcxproj">
+      <Project>{4c5a274c-22ce-4959-aa2a-225e5b295e9b}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Tian\Tian.vcxproj">
       <Project>{f219a401-f560-4955-a07d-08c5653c68a1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Wou\Wou.vcxproj">
+      <Project>{d2baa4da-ce56-43a1-83a5-ea0bf77f47d8}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

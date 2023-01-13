@@ -7,7 +7,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Bromine : Dai<Selenium^, Boron^>
+			public ref class Bromine : public Dai<Selenium^, Boron^>
 			{
 			public:
 				static Quark<Bromine^, Argon^, Nickel^>^ Sun;

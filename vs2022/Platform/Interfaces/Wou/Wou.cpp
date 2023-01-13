@@ -29,7 +29,7 @@ namespace Dysnomia {
 				Sigma = gcnew Magnesium(Psi, Eta);
 				Upsilon = gcnew Aluminium(Sigma);
 				Constants::Evidences->Add(Upsilon->Evidence());
-				Constants::Evidences->Add(Laws::Tenth);			
+				Constants::Evidences->Add(Laws::Tenth);
 			}
 		}
 	}
