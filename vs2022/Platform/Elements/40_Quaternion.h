@@ -8,6 +8,7 @@ namespace Dysnomia {
 			public ref class Quaternion : public Dai<Woof^, Yttrium^>
 			{
 			public:
+				static Quark<Arsenic^, Woof^, Yttrium^>^ Bianca;
 
 				Quaternion(Yttrium^ Nu) {
 					Add(Nu->N->R, Nu);
@@ -18,6 +19,8 @@ namespace Dysnomia {
 						Add(Nu->R[i].Value->R, Nu);
 					}
 					if (Count > 4) throw gcnew Exception("Quaternions With Count > 4 Are Not Expected Yet");
+
+					if (Bianca == nullptr) Bianca = gcnew Quark<Arsenic^, Woof^, Yttrium^>(Nu->L->Alpha, Nu->N->R, Nu);
 				}
 			};
 		}

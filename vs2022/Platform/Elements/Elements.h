@@ -109,6 +109,7 @@ namespace Dysnomia {
 			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }};
 			static property Dai<Arsenic^, Hiss^>^ KuiperBelt { Dai<Arsenic^, Hiss^>^ get() { return Hiss::KuiperBelt; }};
 			static property Quark<Arsenic^, Woof^, Meow^>^ Earth { Quark<Arsenic^, Woof^, Meow^>^ get() { return Meow::Earth; }};
+			static property Quark<Arsenic^, Woof^, Yttrium^>^ Bianca { Quark<Arsenic^, Woof^, Yttrium^>^ get() { return Elements::Quaternion::Bianca; }};
 			static property Dai<Hiss^, Boron^>^ Daphnis { Dai<Hiss^, Boron^>^ get() { return Woof::Daphnis; }};
 			static property Dai<Hiss^, Argon^>^ Setebos { Dai<Hiss^, Argon^>^ get() { return Hiss::Setebos; }};
 			static property Dai<Hiss^, Arsenic^>^ Ophelia { Dai<Hiss^, Arsenic^>^ get() { return Hiss::Ophelia; }};
