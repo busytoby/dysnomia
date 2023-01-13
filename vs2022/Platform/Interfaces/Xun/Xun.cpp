@@ -12,7 +12,8 @@ namespace Dysnomia {
 				Mu = gcnew Tian();
 
 				Bromine^ Rho = gcnew Bromine(Mu->Theta, Mu->Nu);
-				int i = 99;
+				Constants::Evidences->Add(Constants::Mu);
+				
 				
 			}
 		}
