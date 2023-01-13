@@ -12,6 +12,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Woof^, Argon^, Nickel^>^ Sun;
 				static Quark<Argon^, Woof^, Nickel^>^ Valetudo;
+				static Dai<Selenium^, Boron^>^ Daphnis;
 
 				Sulfur^ Theta;
 				Chlorine^ Tau;
@@ -30,6 +31,7 @@ namespace Dysnomia {
 					Add(Psi, Theta->N->L->Pi);
 					if (Sun == nullptr) Sun = gcnew Quark<Woof^, Argon^, Nickel^>(this, Zeta, Pi);
 					if (Valetudo == nullptr) Valetudo = gcnew Quark<Argon^, Woof^, Nickel^>(Zeta, this, Pi);
+					if (Daphnis == nullptr) Daphnis = this;
 				}
 			};
 		}
