@@ -9,6 +9,7 @@ namespace Dysnomia {
 			{
 			public:
 				static Dai<Arsenic^, Hiss^>^ KuiperBelt;
+				static Dai<Hiss^, Arsenic^>^ Ophelia;
 				static Dai<Nickel^, Hiss^>^ Phoebe;
 				static Dai<Hiss^, Argon^>^ Setebos;
 				static Quark<Argon^, Nickel^, Arsenic^>^ Mundilfari;
@@ -16,6 +17,8 @@ namespace Dysnomia {
 				Hiss(Arsenic^ Beta, Nickel^ Alpha, Argon^ Sigma) : Quark(Sigma, Alpha, Beta) {
 					if (KuiperBelt == nullptr) KuiperBelt = gcnew Dai<Arsenic^, Hiss^>();
 					KuiperBelt->Add(Beta, this);
+					if (Ophelia == nullptr) Ophelia = gcnew Dai<Hiss^, Arsenic^>();
+					Ophelia->Add(this, Beta);
 					if (Mundilfari == nullptr) Mundilfari = this;
 					if (Phoebe == nullptr) Phoebe = gcnew Dai<Nickel^, Hiss^>();
 					Phoebe->Add(Alpha, this);
