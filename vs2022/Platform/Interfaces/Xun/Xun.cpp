@@ -26,6 +26,7 @@ namespace Dysnomia {
 				Yttrium^ Eta = gcnew Yttrium(Psi, Nu, Rho);
 				Constants::Evidences->Add(Constants::Sigma);
 				Constants::Evidences->Add(Eta->Gamma());
+				Constants::Evidences->Add(Laws::Sixth);
 			}
 		}
 	}
