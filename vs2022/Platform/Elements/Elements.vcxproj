@@ -159,6 +159,7 @@
     <ClInclude Include="35_Woof.h" />
     <ClInclude Include="36_Meow.h" />
     <ClInclude Include="37_Blong.h" />
+    <ClInclude Include="38_Qiao.h" />
     <ClInclude Include="50_Tin.h" />
     <ClInclude Include="58_Cerium.h" />
     <ClInclude Include="59_Praseodymium.h" />
