@@ -10,6 +10,8 @@ namespace Dysnomia {
 			public ref class Bromine : Dai<Selenium^, Boron^>
 			{
 			public:
+				static Quark<Bromine^, Argon^, Nickel^>^ Sun;
+
 				Sulfur^ Theta;
 				Chlorine^ Tau;
 
@@ -25,6 +27,7 @@ namespace Dysnomia {
 					Zeta = gcnew Argon(Theta, Tau, Pi->Mu.Value);
 					Selenium^ Psi = gcnew Selenium(Omicron, Pi, Zeta);
 					Add(Psi, Theta->N->L->Pi);
+					if (Sun == nullptr) Sun = gcnew Quark<Bromine^, Argon^, Nickel^>(this, Zeta, Pi);
 				}
 			};
 		}

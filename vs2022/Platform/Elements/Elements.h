@@ -93,6 +93,7 @@ namespace Dysnomia {
 			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }}
 			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }}
 			static property Dai<Arsenic^, Selenium^>^ KuiperBelt { Dai<Arsenic^, Selenium^>^ get() { return Selenium::KuiperBelt; }}
+			static property Quark<Bromine^, Argon^, Nickel^>^ Sun { Quark<Bromine^, Argon^, Nickel^>^ get() { return Bromine::Sun; }}
 		};
 	}
 }
