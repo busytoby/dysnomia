@@ -12,6 +12,7 @@ namespace Dysnomia {
 				static Dai<Woof^, Blong^>^ Methone;
 				static Dai<Blong^, Meow^>^ Epimetheus;
 				static Dai<Blong^, Argon^>^ Stephano;
+				static Dai<Argon^, Blong^>^ Margaret;
 
 				Qiao(Woof^ Mu, Blong^ Rho) {
 					Add(Mu, Rho);
@@ -21,6 +22,8 @@ namespace Dysnomia {
 					Epimetheus->Add(Rho, Rho->N);
 					if (Stephano == nullptr) Stephano = gcnew Dai<Blong^, Argon^>();
 					Stephano->Add(Rho, Mu->Zeta);
+					if (Margaret == nullptr) Margaret = gcnew Dai<Argon^, Blong^>();
+					Margaret->Add(Mu->Zeta, Rho);
 				}
 			};
 		}

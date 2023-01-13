@@ -84,6 +84,7 @@ namespace Dysnomia {
 			static property Quark<Argon^, Zinc^, Aluminium^>^ Neso { Quark<Argon^, Zinc^, Aluminium^>^ get() { return Zinc::Neso; }};
 			static property Quark<Argon^, Nickel^, Arsenic^>^ Mundilfari { Quark<Argon^, Nickel^, Arsenic^>^ get() { return Hiss::Mundilfari; }};
 			static property Quark<Argon^, Woof^, Nickel^>^ Valetudo { Quark<Argon^, Woof^, Nickel^>^ get() { return Woof::Valetudo; }};
+			static property Dai<Argon^, Blong^>^ Margaret { Dai<Argon^, Blong^>^ get() { return Qiao::Margaret; }};
 			static property Quark<Dysnomium^, Scandium^, Calcium^>^ Despina { Quark<Dysnomium^, Scandium^, Calcium^>^ get() { return Titanium::Despina; }};
 			static property Quark<Dysnomium^, Chromium^, Manganese^>^ Sao { Quark<Dysnomium^, Chromium^, Manganese^>^ get() { return Arsenic::Sao; }};
 			static property Quark<Potassium^, Scandium^, Vanadium^>^ Himalia { Quark<Potassium^, Scandium^, Vanadium^>^ get() { return Manganese::Himalia; }};
