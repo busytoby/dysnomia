@@ -13,6 +13,10 @@ namespace Dysnomia {
 			public:
 				Chlorine(Sulfur^ Psi) {
 					Aether^ Alpha = gcnew Aether();
+					this->Chlorine::Chlorine(Psi, Alpha);
+				}
+
+				Chlorine(Sulfur^ Psi, Aether^ Alpha) {
 					for (int i = 0; i < Psi->R->Count; i++)
 						Alpha->Add(Psi, Psi->L->Contain(Psi->R[i].Key->R->Epsilon));
 					Add(Psi->L->Mu.Value, Alpha);

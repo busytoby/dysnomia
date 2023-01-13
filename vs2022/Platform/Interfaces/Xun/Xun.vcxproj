@@ -149,6 +149,9 @@
     <ProjectReference Include="..\..\..\Model\Dynamic\Dynamic.vcxproj">
       <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Quark\Quark.vcxproj">
+      <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Elements\Elements.vcxproj">
       <Project>{8eb3b263-33aa-40cb-8552-2ad6109c4b78}</Project>
     </ProjectReference>
