@@ -50,19 +50,19 @@ namespace Dysnomia {
 			static property Quark<Boron^, Boron^, Fluorine^>^ Star { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Star; }};
 			static property Quark<Boron^, Hydrogen^, Beryllium^>^ Uranus { Quark<Boron^, Hydrogen^, Beryllium^>^ get() { return Oxygen::Uranus; }};
 			static property Quark<Boron^, Beryllium^, Hydrogen^>^ Hippocamp { Quark<Boron^, Beryllium^, Hydrogen^>^ get() { return Oxygen::Hippocamp; }};
-			static property Quark<Boron^, Fluorine^, Carbon^>^ Laodemeia { Quark<Boron^, Fluorine^, Carbon^>^ get() { return Fluorine::Laodemeia; } };
+			static property Quark<Boron^, Fluorine^, Carbon^>^ Laodemeia { Quark<Boron^, Fluorine^, Carbon^>^ get() { return Fluorine::Laodemeia; }};
 			static property Dai<Carbon^, Coronium^>^ Enceladus { Dai<Carbon^, Coronium^>^ get() { return Silicon::Enceladus; }};
-			static property Quark<Carbon^, Coronium^, Carbon^>^ Ariel { Quark<Carbon^, Coronium^, Carbon^>^ get() { return Silicon::Ariel; } };
+			static property Quark<Carbon^, Coronium^, Carbon^>^ Ariel { Quark<Carbon^, Coronium^, Carbon^>^ get() { return Silicon::Ariel; }};
 			static property Quark<Nitrogen^, Fluorine^, Magnesium^>^ Naiad { Quark<Nitrogen^, Fluorine^, Magnesium^>^ get() { return Coronium::Naiad; }};
 			static property Quark<Fluorine^, Boron^, Carbon^>^ Neptune { Quark<Fluorine^, Boron^, Carbon^>^ get() { return Fluorine::Neptune; }};
 			static property Quark<Fluorine^, Coronium^, Aluminium^>^ Oberon { Quark<Fluorine^, Coronium^, Aluminium^>^ get() { return Silicon::Oberon; } };
-			static property Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel { Quark<Fluorine^, Coronium^, Carbon^>^ get() { return Silicon::Umbriel; } };
+			static property Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel { Quark<Fluorine^, Coronium^, Carbon^>^ get() { return Silicon::Umbriel; }};
 			static property Quark<Magnesium^, Nitrogen^, Fluorine^>^ Halimede { Quark<Magnesium^, Nitrogen^, Fluorine^>^ get() { return Coronium::Halimede; }};
 			static property Quark<Magnesium^, Fluorine^, Boron^>^ Dione { Quark<Magnesium^, Fluorine^, Boron^>^ get() { return Magnesium::Dione; }};
 			static property Quark<Magnesium^, Fluorine^, Natrium^>^ VanAllenBelt { Quark<Magnesium^, Fluorine^, Natrium^>^ get() { return Magnesium::VanAllenBelt; }};
 			static property Quark<Aluminium^, Helium^, Carbon^>^ Phobos { Quark<Aluminium^, Helium^, Carbon^>^ get() { return Aluminium::Phobos; }};
 			static property Quark<Aluminium^, Aether^, Nickel^>^ Triton { Quark<Aluminium^, Aether^, Nickel^>^ get() { return Copper::Triton; }}
-			static property Quark<Coronium^, Coronium^, Carbon^>^ Prospero { Quark<Coronium^, Coronium^, Carbon^>^ get() { return Silicon::Prospero; } };
+			static property Quark<Coronium^, Coronium^, Carbon^>^ Prospero { Quark<Coronium^, Coronium^, Carbon^>^ get() { return Silicon::Prospero; }};
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};
 			static property Quark<Silicon^, Coronium^, Aluminium^>^ Thalassa { Quark<Silicon^, Coronium^, Aluminium^>^ get() { return Phosphorous::Thalassa; }};
 			static property Dai<Phosphorous^, Sulfur^>^ Titan { Dai<Phosphorous^, Sulfur^>^ get() { return Sulfur::Titan; }};
@@ -76,10 +76,10 @@ namespace Dysnomia {
 			static property Dai<Aether^, Iron^>^ Amalthea { Dai<Aether^, Iron^>^ get() { return Nickel::Amalthea; }};
 			static property Dai<Aether^, Zinc^>^ Proteus { Dai<Aether^, Zinc^>^ get() { return Germanium::Proteus; }};
 			static property Dai<Argon^, Aluminium^>^ Adrastea { Dai<Argon^, Aluminium^>^ get() { return Copper::Adrastea; }};	
-			static property Quark<Argon^, Zinc^, Aluminium^>^ Neso { Quark<Argon^, Zinc^, Aluminium^>^ get() { return Zinc::Neso; }}
-			static property Quark<Argon^, Woof^, Nickel^>^ Valetudo { Quark<Argon^, Woof^, Nickel^>^ get() { return Woof::Valetudo; }}
+			static property Quark<Argon^, Zinc^, Aluminium^>^ Neso { Quark<Argon^, Zinc^, Aluminium^>^ get() { return Zinc::Neso; }};
+			static property Quark<Argon^, Woof^, Nickel^>^ Valetudo { Quark<Argon^, Woof^, Nickel^>^ get() { return Woof::Valetudo; }};
 			static property Quark<Dysnomium^, Scandium^, Calcium^>^ Despina { Quark<Dysnomium^, Scandium^, Calcium^>^ get() { return Titanium::Despina; }};
-			static property Quark<Dysnomium^, Chromium^, Manganese^>^ Sao { Quark<Dysnomium^, Chromium^, Manganese^>^ get() { return Arsenic::Sao; }}
+			static property Quark<Dysnomium^, Chromium^, Manganese^>^ Sao { Quark<Dysnomium^, Chromium^, Manganese^>^ get() { return Arsenic::Sao; }};
 			static property Quark<Potassium^, Scandium^, Vanadium^>^ Himalia { Quark<Potassium^, Scandium^, Vanadium^>^ get() { return Manganese::Himalia; }};
 			static property Quark<Scandium^, Potassium^, Vanadium^>^ Ganymede { Quark<Scandium^, Potassium^, Vanadium^>^ get() { return Manganese::Ganymede; }};
 			static property Quark<Titanium^, Sulfur^, Vanadium^>^ Mars { Quark<Titanium^, Sulfur^, Vanadium^>^ get() { return Chromium::Mars; }};
@@ -87,15 +87,16 @@ namespace Dysnomia {
 			static property Quark<Vanadium^, Sulfur^, Titanium^>^ Puck { Quark<Vanadium^, Sulfur^, Titanium^>^ get() { return Chromium::Puck; }};
 			static property Quark<Vanadium^, Dysnomium^, Titanium^>^ Belinda { Quark<Vanadium^, Dysnomium^, Titanium^>^ get() { return Chromium::Belinda; }};
 			static property Quark<Vanadium^, Manganese^, Chromium^>^ Mercury { Quark<Vanadium^, Manganese^, Chromium^>^ get() { return Cobalt::Mercury; }};
-			static property Dai<Vanadium^, Chromium^>^ Larissa { Dai<Vanadium^, Chromium^>^ get() { return Cobalt::Larissa; }}
+			static property Dai<Vanadium^, Chromium^>^ Larissa { Dai<Vanadium^, Chromium^>^ get() { return Cobalt::Larissa; }};
 			static property Dai<Vanadium^, Manganese^>^ Rosalind { Dai<Vanadium^, Manganese^>^ get() { return Manganese::Rosalind; }};
 			static property Dai<Manganese^, Vanadium^>^ Mab { Dai<Manganese^, Vanadium^>^ get() { return Manganese::Mab; }};
-			static property Dai<Manganese^, Cobalt^>^ Thebe { Dai<Manganese^, Cobalt^>^ get() { return Arsenic::Thebe; }}
-			static property Quark<Nickel^, Argon^, Natrium^>^ Neith { Quark<Nickel^, Argon^, Natrium^>^ get() { return Zinc::Neith; }}
-			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }}
-			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }}
-			static property Dai<Arsenic^, Selenium^>^ KuiperBelt { Dai<Arsenic^, Selenium^>^ get() { return Selenium::KuiperBelt; }}
-			static property Quark<Woof^, Argon^, Nickel^>^ Sun { Quark<Woof^, Argon^, Nickel^>^ get() { return Woof::Sun; }}
+			static property Dai<Manganese^, Cobalt^>^ Thebe { Dai<Manganese^, Cobalt^>^ get() { return Arsenic::Thebe; }};
+			static property Quark<Nickel^, Argon^, Natrium^>^ Neith { Quark<Nickel^, Argon^, Natrium^>^ get() { return Zinc::Neith; }};
+			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }};
+			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }};
+			static property Dai<Arsenic^, Selenium^>^ KuiperBelt { Dai<Arsenic^, Selenium^>^ get() { return Selenium::KuiperBelt; }};
+			static property Quark<Arsenic^, Woof^, Meow^>^ Earth { Quark<Arsenic^, Woof^, Meow^>^ get() { return Meow::Earth; }};
+			static property Quark<Woof^, Argon^, Nickel^>^ Sun { Quark<Woof^, Argon^, Nickel^>^ get() { return Woof::Sun; }};
 		};
 	}
 }
