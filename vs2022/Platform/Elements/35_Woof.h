@@ -1,18 +1,18 @@
 #pragma once
 #include "05_Boron.h"
-#include "34_Selenium.h"
+#include "34_Hiss.h"
 
 using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Woof : public Dai<Selenium^, Boron^>
+			public ref class Woof : public Dai<Hiss^, Boron^>
 			{
 			public:
 				static Quark<Woof^, Argon^, Nickel^>^ Sun;
 				static Quark<Argon^, Woof^, Nickel^>^ Valetudo;
-				static Dai<Selenium^, Boron^>^ Daphnis;
+				static Dai<Hiss^, Boron^>^ Daphnis;
 
 				Sulfur^ Theta;
 				Chlorine^ Tau;
@@ -27,7 +27,7 @@ namespace Dysnomia {
 					Theta = Beta->Mu.Value->Mu.Value->Mu.Key;
 					Tau = gcnew Chlorine(Theta, Pi->Mu.Value);
 					Zeta = gcnew Argon(Theta, Tau, Pi->Mu.Value);
-					Selenium^ Psi = gcnew Selenium(Omicron, Pi, Zeta);
+					Hiss^ Psi = gcnew Hiss(Omicron, Pi, Zeta);
 					Add(Psi, Theta->N->L->Pi);
 					if (Sun == nullptr) Sun = gcnew Quark<Woof^, Argon^, Nickel^>(this, Zeta, Pi);
 					if (Valetudo == nullptr) Valetudo = gcnew Quark<Argon^, Woof^, Nickel^>(Zeta, this, Pi);

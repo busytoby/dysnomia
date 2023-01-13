@@ -34,7 +34,7 @@
 #include "31_Gallium.h"
 #include "32_Germanium.h"
 #include "33_Arsenic.h"
-#include "34_Selenium.h"
+#include "34_Hiss.h"
 #include "35_Woof.h"
 #include "36_Meow.h"
 #include <cassert>
@@ -77,6 +77,7 @@ namespace Dysnomia {
 			static property Dai<Aether^, Zinc^>^ Proteus { Dai<Aether^, Zinc^>^ get() { return Germanium::Proteus; }};
 			static property Dai<Argon^, Aluminium^>^ Adrastea { Dai<Argon^, Aluminium^>^ get() { return Copper::Adrastea; }};	
 			static property Quark<Argon^, Zinc^, Aluminium^>^ Neso { Quark<Argon^, Zinc^, Aluminium^>^ get() { return Zinc::Neso; }};
+			static property Quark<Argon^, Nickel^, Arsenic^>^ Mundilfari { Quark<Argon^, Nickel^, Arsenic^>^ get() { return Hiss::Mundilfari; }};
 			static property Quark<Argon^, Woof^, Nickel^>^ Valetudo { Quark<Argon^, Woof^, Nickel^>^ get() { return Woof::Valetudo; }};
 			static property Quark<Dysnomium^, Scandium^, Calcium^>^ Despina { Quark<Dysnomium^, Scandium^, Calcium^>^ get() { return Titanium::Despina; }};
 			static property Quark<Dysnomium^, Chromium^, Manganese^>^ Sao { Quark<Dysnomium^, Chromium^, Manganese^>^ get() { return Arsenic::Sao; }};
@@ -95,9 +96,9 @@ namespace Dysnomia {
 			static property Quark<Nickel^, Argon^, Natrium^>^ Neith { Quark<Nickel^, Argon^, Natrium^>^ get() { return Zinc::Neith; }};
 			static property Quark<Nickel^, Argon^, Zinc^>^ Callisto { Quark<Nickel^, Argon^, Zinc^>^ get() { return Zinc::Callisto; }};
 			static property Dai<Zinc^, Argon^>^ Venus { Dai<Zinc^, Argon^>^ get() { return Zinc::Venus; }};
-			static property Dai<Arsenic^, Selenium^>^ KuiperBelt { Dai<Arsenic^, Selenium^>^ get() { return Selenium::KuiperBelt; }};
+			static property Dai<Arsenic^, Hiss^>^ KuiperBelt { Dai<Arsenic^, Hiss^>^ get() { return Hiss::KuiperBelt; }};
 			static property Quark<Arsenic^, Woof^, Meow^>^ Earth { Quark<Arsenic^, Woof^, Meow^>^ get() { return Meow::Earth; }};
-			static property Dai<Selenium^, Boron^>^ Daphnis { Dai<Selenium^, Boron^>^ get() { return Woof::Daphnis; }};
+			static property Dai<Hiss^, Boron^>^ Daphnis { Dai<Hiss^, Boron^>^ get() { return Woof::Daphnis; }};
 			static property Quark<Woof^, Argon^, Nickel^>^ Sun { Quark<Woof^, Argon^, Nickel^>^ get() { return Woof::Sun; }};
 		};
 	}

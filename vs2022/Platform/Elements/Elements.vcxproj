@@ -155,7 +155,7 @@
     <ClInclude Include="31_Gallium.h" />
     <ClInclude Include="32_Germanium.h" />
     <ClInclude Include="33_Arsenic.h" />
-    <ClInclude Include="34_Selenium.h" />
+    <ClInclude Include="34_Hiss.h" />
     <ClInclude Include="35_Woof.h" />
     <ClInclude Include="36_Meow.h" />
     <ClInclude Include="50_Tin.h" />
