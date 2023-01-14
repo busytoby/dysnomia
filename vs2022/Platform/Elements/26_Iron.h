@@ -16,6 +16,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Sulfur^, Aether^, Iron^>^ Io;
 
+				BigInteger Ring;
 				Manganese^ Beta;
 
 				Iron(Manganese^ Alpha) {
@@ -28,6 +29,8 @@ namespace Dysnomia {
 
 				void Omega() {
 					Add(Beta->R->N, Beta->L);
+					Ring = BigInteger::ModPow(Beta->L->Ring, Beta->R->R->Zeta->Mu.Key->Barn, Beta->N->Xi->Ring);
+					if (!Ring.IsZero) throw gcnew Exception("Singularity");
 				}
 
 				void Xi(Phosphorous^ Eta, Silicon^ Sigma) {

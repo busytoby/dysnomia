@@ -12,9 +12,11 @@ namespace Dysnomia {
 			{
 			public:
 				static Quark<Dysnomium^, Scandium^, Calcium^>^ Despina;
+				BigInteger Ring;
 
 				Titanium(Calcium^ Upsilon, Scandium^ Nu) : Quark(Nu, Upsilon, Upsilon->Mu.Key->N) {
 					if (Despina == nullptr) Despina = gcnew Quark<Dysnomium^, Scandium^, Calcium^>(L, N, R);
+					Ring = Nu->Ring;
 				}
 			};
 		}

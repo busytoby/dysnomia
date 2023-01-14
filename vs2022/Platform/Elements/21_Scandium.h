@@ -9,15 +9,24 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Scandium : public Dai<Argon^, Coronium^>
 			{
+			private:
+				BigInteger _Ring;
 			public:
 				static Quark<Sulfur^, Coronium^, Argon^>^ Pluto;
 				static Quark<Sulfur^, Argon^, Coronium^>^ Psamathe;
+
+				property BigInteger Ring { BigInteger get() {
+					for(int i = 0; i < this->Count; i++)
+						_Ring = BigInteger::Add(_Ring, this[i].Value->R->R->Cone->Ring); 
+					return _Ring;
+				}};
 
 				Scandium(Argon^ Chi) {
 					Aether^ Delta = gcnew Aether();
 					for (int i = 0; i < Chi->L->Count; i++) {
 						Add(Chi, Chi->L[i].Value);
 						Delta->Add(Chi->N, Chi->L[i].Value);
+						BigInteger Iota = Ring; 
 					}
 					Chi->R->Add(Chi->N->L->Rho.Value, Delta);
 					if (Pluto == nullptr) Pluto = gcnew Quark<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
