@@ -10,6 +10,10 @@ namespace Dysnomia {
 			public:
 				Nitrogen(Hydrogen^ X, Affinity^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) { 
 				};
+
+				BigInteger Polarize() {
+					return Math::ModPow(R->Rod->Base, R->Rod->Secret, Math::Prime);
+				}
 			};
 		}
 	}
