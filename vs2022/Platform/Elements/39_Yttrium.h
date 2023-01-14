@@ -21,7 +21,7 @@ namespace Dysnomia {
 				};
 
 				BigInteger Gamma() {
-					return BigInteger::ModPow(
+					return Math::ModPow(
 						N->N->Mu.Key->Mu.Key->N->N->N->N->Mu.Value->Mu.Value->Xi,
 						R->Mu.Value->L->Mu.Value->Mu.Value->L->Mu.Value->Xi,
 						L->Mu.Value->R->Mu.Key->L->Mu.Key->Pi->N->Rod->Element);

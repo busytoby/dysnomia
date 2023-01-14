@@ -4,6 +4,7 @@ using namespace Dysnomia::Platform::Elements;
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Numerics;
+using Dysnomia::Math;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -19,7 +20,7 @@ namespace Dysnomia {
 				static property BigInteger Eta { BigInteger get() { return Objects::Titan->Mu.Key->Mu.Key->N->Mu.Key->Pi->N->Rod->Coordinate; }};
 				static property BigInteger Sigma { BigInteger get() { return Objects::Telesto->R->Last.Value->R->R->Rod->Signal; }};
 				static property BigInteger Upsilon { BigInteger get() { return Objects::Psamathe->L->L->Mu.Key->Mu.Value->L->Foundation; }};
-				static property BigInteger Tau { BigInteger get() { return BigInteger::ModPow(Constants::Eta, Constants::Upsilon, Constants::Rho); }};
+				static property BigInteger Tau { BigInteger get() { return Math::ModPow(Constants::Eta, Constants::Upsilon, Constants::Rho); }};
 				static property BigInteger Theta { BigInteger get() { return Objects::Psamathe->N->L->Mu.Value->L->Mu.Value->Phi->N->Barn; }};
 
 				static Constants() {

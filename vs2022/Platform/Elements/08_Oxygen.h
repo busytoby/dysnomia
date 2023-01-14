@@ -18,7 +18,7 @@ namespace Dysnomia {
 				Beryllium^ Phi;
 				Boron^ Lambda;
 
-				BigInteger Barn;
+				property BigInteger Barn { BigInteger get() { return L->Barn; }};
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					while (R->Cone->Manifold > Math::Prime / 3 || R->Rod->Barn * 3 < Math::Prime * 2)
@@ -26,7 +26,6 @@ namespace Dysnomia {
 					this->R = R->Cone;
 					this->L = R->Rod;
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
-					Barn = R->Rod->Barn;
 					Beta = gcnew Hydrogen();
 					do {
 						Phi = gcnew Beryllium();
@@ -40,7 +39,7 @@ namespace Dysnomia {
 				};
 
 				BigInteger Evidence() {
-					return BigInteger::ModPow(_Charge, Barn, _Credit);
+					return Math::ModPow(_Charge, Barn, _Credit);
 				}
 			};
 		}
