@@ -15,9 +15,12 @@ namespace Dysnomia {
 				Lithium^ Phi;
 				Boron^ Pi;
 
+				BigInteger Barn;
+
 				Carbon(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
 					Gamma = gcnew Helium();
 					Beryllium^ Alpha = gcnew Beryllium(Rho, Upsilon, Ohm, Qi);
+					Barn = Alpha->Rod->Barn;
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
 					Nitrogen^ Iota = gcnew Nitrogen(Phi->N, Alpha, Alpha->Phi->N);
@@ -32,6 +35,7 @@ namespace Dysnomia {
 					Affinity^ Beta = gcnew Affinity();
 					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
 					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Phi->N);
+					Barn = R->Rod->Barn;
 					Pi = gcnew Boron(R, Alpha, Phi->N);
 					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Alpha->Phi->N->Foundation);
 				}
