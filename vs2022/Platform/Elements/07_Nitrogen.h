@@ -8,7 +8,8 @@ namespace Dysnomia {
 			public ref class Nitrogen : public Quark<Hydrogen^, Affinity^, Hydrogen^>
 			{
 			public:
-				Nitrogen(Hydrogen^ X, Affinity^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) { };
+				Nitrogen(Hydrogen^ X, Affinity^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) { 
+				};
 			};
 		}
 	}

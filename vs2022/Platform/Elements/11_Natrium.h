@@ -17,6 +17,7 @@ namespace Dysnomia {
 			public:
 				Beryllium^ Xi;
 				Neon^ Pi;
+				Boron^ Lambda;
 
 				Color Hue;
 
@@ -27,6 +28,8 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium();
 					Affinity^ R = gcnew Affinity(Alpha->Phi->N, gcnew Hydrogen());
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
+					Lambda = Kappa->Lambda;
+					Kappa->Lambda = nullptr;
 					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
 					if (Oxygen::Uranus->N->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->N->L);					
