@@ -21,12 +21,14 @@ namespace Dysnomia {
 				BigInteger Barn;
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
+					while (R->Cone->Manifold > Math::Prime / 3 || R->Rod->Barn * 3 < Math::Prime * 2)
+						R = gcnew Affinity();
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
 					Barn = R->Rod->Barn;
 					Beta = gcnew Hydrogen();
 					do {
 						Phi = gcnew Beryllium();
-					} while (Phi->Cone->Barn > Barn / 2 || Phi->Cone->Manifold < R->Cone->Manifold);
+					} while (Phi->Cone->Barn > Barn / 5 || Phi->Cone->Manifold < R->Cone->Manifold);
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
