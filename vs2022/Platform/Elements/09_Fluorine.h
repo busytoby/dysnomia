@@ -11,8 +11,6 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Fluorine : public Dai<Carbon^, Beryllium^>
 			{
-			private:
-				BigInteger _Ring;
 			public:
 				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
 				static Dai<Lithium^, Fluorine^>^ Tethys;
@@ -20,11 +18,11 @@ namespace Dysnomia {
 
 				Boron^ Pi;
 
-				property BigInteger Psi { BigInteger get() { return _Ring; }};
-				property BigInteger Ring { BigInteger get() { return BigInteger::Divide(_Ring, Count); }};
+				BigInteger Base;
+				BigInteger Xi;
+				property BigInteger Psi { BigInteger get() { return Math::ModPow(Base, Pi->Signal, Math::Prime); }};
 
 				Fluorine(Carbon^ that) {
-					_Ring = 0;
 					this->Epsilon = Math::Random();
 					if(Tethys == nullptr) Tethys = gcnew Dai<Lithium^, Fluorine^>();
 
@@ -45,7 +43,9 @@ namespace Dysnomia {
 					Dai<Carbon^, Beryllium^>::Add(that, Alpha);
 					Boron^ Pi = gcnew Boron(R, Alpha, Beta);
 					Tethys->Add(that->Phi, this);
-					_Ring = BigInteger::Add(_Ring, R->Cone->Ring);
+					Xi = Math::ModPow(Beta->Signal, that->Channel, Math::Prime);
+					Beta->Tau = Beta->Avail(Xi);
+					Base = Math::ModPow(Beta->Tau, Alpha->Secret, Math::Prime);
 					return Pi;
 				}
 			};

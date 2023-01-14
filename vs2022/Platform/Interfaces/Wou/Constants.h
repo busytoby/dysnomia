@@ -15,7 +15,7 @@ namespace Dysnomia {
 				static property BigInteger Rho { BigInteger get() { return Objects::Tethys->Mu.Value->Mu.Value->Phi->N->Manifold; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
 				static property BigInteger Nu { BigInteger get() { return BigInteger::Add(Objects::Star->N->N->Cone->Manifold, Objects::Star->R->N->Rod->Manifold); }}
-				static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Ring; }}
+				static property BigInteger Eta { BigInteger get() { return Objects::Neptune->N->Base; }}
 				static property BigInteger Sigma { BigInteger get() { return Objects::Star->L->Mu.Key->Pi->N->Rod->Base; }}
 				static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Pi->N->Cone->Signal; }}
 				static property BigInteger Tau { BigInteger get() { return Objects::Phobos->R->Rod->Manifold; }}
