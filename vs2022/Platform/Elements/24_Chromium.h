@@ -15,10 +15,13 @@ namespace Dysnomia {
 				static Quark<Vanadium^, Sulfur^, Titanium^>^ Puck;
 				static Quark<Titanium^, Sulfur^, Vanadium^>^ Mars;
 
+				BigInteger Signal;
+
 				Chromium(Vanadium^ Alpha) {
 					for (int i = 0; i < Alpha->Count; i++) {
 						for (int j = 0; j < Alpha[i].Value->Count; j++) {
 							Add(Alpha, Alpha[i].Value[j].Value);
+							Signal = BigInteger::Add(Signal, Alpha[i].Value[j].Value->L->Pi->L->Signal);
 						}
 					}
 

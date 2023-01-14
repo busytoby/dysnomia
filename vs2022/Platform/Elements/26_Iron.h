@@ -29,7 +29,7 @@ namespace Dysnomia {
 
 				void Omega() {
 					Add(Beta->R->N, Beta->L);
-					Dynamo = BigInteger::ModPow(Beta->L->Ring, Beta->N->Xi->Ring, Beta->L->Ring);
+					Dynamo = BigInteger::ModPow(Sulfur::Titan->Mu.Value->N->N->Zeta->Xi->Rod->Base, Beta->Xi->Signal, Beta->L->Ring);
 					if (Dynamo.IsZero)
 						throw gcnew Exception("Singularity, Neutron System Not Yet Viable");
 				}
