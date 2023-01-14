@@ -30,8 +30,8 @@ namespace Dysnomia {
 				void Omega() {
 					Add(Beta->R->N, Beta->L);
 					Ring = BigInteger::ModPow(BigInteger::Add(Ring, Beta->L->Ring), Beta->N->Xi->Ring, Beta->L->Ring);
-					if(Ring.IsZero) 
-						Xi(Sulfur::Titan->Mu.Key, Sulfur::Titan->Rho.Key->Nu.Value);
+					if (Ring.IsZero)
+						throw gcnew Exception("Singularity, Neutron System Not Yet Viable");
 				}
 
 				void Xi(Phosphorous^ Eta, Silicon^ Sigma) {
