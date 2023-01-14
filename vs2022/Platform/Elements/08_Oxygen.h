@@ -26,7 +26,7 @@ namespace Dysnomia {
 					Beta = gcnew Hydrogen();
 					do {
 						Phi = gcnew Beryllium();
-					} while (Phi->Cone->Barn > Barn);
+					} while (Phi->Cone->Barn > Barn / 2);
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
