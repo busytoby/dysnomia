@@ -41,21 +41,7 @@ namespace Dysnomia
 
         private void ReadyPlatform()
         {
-            bool Failed = true;
-            int tries = 0;
-            while (tries++ < 20 && Failed == true)
-            {
-                try
-                {
-                    Xibe = new Xun();
-                    Failed = false;
-                }
-                catch (Exception ex)
-                {
-                    continue;
-                }
-            }
-            if (tries >= 20) throw new Exception("Failed");
+            Xibe = new Xun();
         }
     }
 }
