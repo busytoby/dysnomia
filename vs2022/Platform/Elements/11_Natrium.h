@@ -28,9 +28,7 @@ namespace Dysnomia {
 					Beryllium^ Alpha = gcnew Beryllium();
 					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Alpha->Phi->Base, Alpha->Secret, Lambda->Signal, Chi->Channel);
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
-					Lambda = Kappa->Lambda;
-					Kappa->Lambda = nullptr;
-					Xi = gcnew Beryllium(Pi->Manifold, Phi->Ring, Kappa->Barn, R->Xi);
+					Xi = gcnew Beryllium(Kappa->N->Phi->Base, Kappa->N->Secret, Kappa->Lambda->Signal, Chi->Channel);
 					if (Oxygen::Uranus->N->L->Barn.IsZero) {
 						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->N->L);					
 						Phi->Add(Chi, Oxygen::Uranus->L);
