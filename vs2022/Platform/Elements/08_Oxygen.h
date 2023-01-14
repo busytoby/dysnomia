@@ -23,6 +23,8 @@ namespace Dysnomia {
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					while (R->Cone->Manifold > Math::Prime / 3 || R->Rod->Barn * 3 < Math::Prime * 2)
 						R = gcnew Affinity();
+					this->R = R->Cone;
+					this->L = R->Rod;
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
 					Barn = R->Rod->Barn;
 					Beta = gcnew Hydrogen();
