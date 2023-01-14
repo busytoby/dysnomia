@@ -12,11 +12,15 @@ namespace Dysnomia {
 			public:
 				static Dai<Aether^, Iron^>^ Amalthea;
 
+				BigInteger Barn;
+
 				Nickel(Aether^ Eta, Iron^ Lambda) {
 					Add(Lambda, Eta);
 					if (Iron::Io == nullptr) Iron::Io = gcnew Quark<Sulfur^, Aether^, Iron^>(Mu.Value->Mu.Key, Mu.Value, Mu.Key);
 					if(Amalthea == nullptr) Amalthea = gcnew Dai<Aether^, Iron^>();
 					Amalthea->Add(Eta, Lambda);
+
+					Barn = Math::ModPow(Lambda->Beta->N->Xi->Ring, Lambda->Beta->R->R->Epsilon, Lambda->Dynamo);
 				}
 			};
 		}
