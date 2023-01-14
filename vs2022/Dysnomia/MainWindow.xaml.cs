@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Security.Policy;
 using System.Text;
@@ -40,7 +41,21 @@ namespace Dysnomia
 
         private void ReadyPlatform()
         {
-            Xibe = new Xun();
+            bool Failed = true;
+            int tries = 0;
+            while (tries++ < 20 && Failed == true)
+            {
+                try
+                {
+                    Xibe = new Xun();
+                    Failed = false;
+                }
+                catch (Exception ex)
+                {
+                    continue;
+                }
+            }
+            if (tries >= 20) throw new Exception("Failed");
         }
     }
 }

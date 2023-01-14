@@ -17,16 +17,17 @@ namespace Dysnomia {
 				BigInteger Barn;
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
-					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");
+					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
 					Barn = R->Rod->Barn;
 					Hydrogen^ Beta = gcnew Hydrogen();
 					Beryllium^ Phi = gcnew Beryllium();
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
+					if (Q->Cone->Barn > Barn) throw gcnew Exception("Quasar System Is Not Yet Viable");
 					Boron^ Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
 					if (Uranus == nullptr) Uranus = gcnew Quark<Boron^, Hydrogen^, Beryllium^>(Lambda, Phi->Phi->N, N);
 					_Credit = N->Rod->Foundation;
-					_Charge = R->Rod->Dynamo;
+					_Charge = L->Dynamo;
 				};
 
 				BigInteger Evidence() {

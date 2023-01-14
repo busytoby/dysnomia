@@ -16,7 +16,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Sulfur^, Aether^, Iron^>^ Io;
 
-				BigInteger Ring;
+				BigInteger Dynamo;
 				Manganese^ Beta;
 
 				Iron(Manganese^ Alpha) {
@@ -29,8 +29,8 @@ namespace Dysnomia {
 
 				void Omega() {
 					Add(Beta->R->N, Beta->L);
-					Ring = BigInteger::ModPow(BigInteger::Add(Ring, Beta->L->Ring), Beta->N->Xi->Ring, Beta->L->Ring);
-					if (Ring.IsZero)
+					Dynamo = BigInteger::ModPow(Beta->L->Ring, Beta->N->Xi->Ring, Beta->L->Ring);
+					if (Dynamo.IsZero)
 						throw gcnew Exception("Singularity, Neutron System Not Yet Viable");
 				}
 

@@ -16,9 +16,11 @@ namespace Dysnomia {
 				static Quark<Titanium^, Sulfur^, Vanadium^>^ Mars;
 
 				Chromium(Vanadium^ Alpha) {
-					for (int i = 0; i < Alpha->Count; i++)
-						for (int j = 0; j < Alpha[i].Value->Count; j++)
+					for (int i = 0; i < Alpha->Count; i++) {
+						for (int j = 0; j < Alpha[i].Value->Count; j++) {
 							Add(Alpha, Alpha[i].Value[j].Value);
+						}
+					}
 
 					if (Mars == nullptr) Mars = gcnew Quark<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
 					if (Puck == nullptr) Puck = gcnew Quark<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
