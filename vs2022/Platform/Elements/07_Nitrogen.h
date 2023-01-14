@@ -8,11 +8,19 @@ namespace Dysnomia {
 			public ref class Nitrogen : public Quark<Hydrogen^, Affinity^, Hydrogen^>
 			{
 			public:
+				BigInteger Pole;
+
 				Nitrogen(Hydrogen^ X, Affinity^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) { 
 				};
 
 				BigInteger Polarize() {
-					return Math::ModPow(R->Rod->Base, R->Rod->Secret, Math::Prime);
+					if (!Pole.IsZero) throw gcnew Exception("Already Polarized");
+					Pole = Math::ModPow(R->Rod->Base, R->Rod->Secret, Math::Prime);
+				}
+
+				BigInteger Depolarize() {
+					if (Pole.IsZero) throw gcnew Exception("Already Depolarized");
+					Pole = 0;
 				}
 			};
 		}
