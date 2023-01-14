@@ -48,6 +48,7 @@ namespace Dysnomia {
 
 	Affinity::Affinity(Dynamic^ N, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Rod = N;
+		if (!Rod->Barn.IsZero) throw gcnew Exception("Rod Already Paired");
 		Cone = gcnew Dynamic();
 		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 	}
