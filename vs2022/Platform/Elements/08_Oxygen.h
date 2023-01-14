@@ -14,18 +14,21 @@ namespace Dysnomia {
 				static Quark<Boron^, Beryllium^, Hydrogen^>^ Hippocamp;
 				static Quark<Boron^, Hydrogen^, Beryllium^>^ Uranus;
 				
-				BigInteger Barn;
+				Hydrogen^ Beta;
 				Beryllium^ Phi;
+				Boron^ Lambda;
+
+				BigInteger Barn;
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
 					Barn = R->Rod->Barn;
-					Hydrogen^ Beta = gcnew Hydrogen();
+					Beta = gcnew Hydrogen();
 					do {
 						Phi = gcnew Beryllium();
 					} while (Phi->Cone->Barn > Barn);
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
-					Boron^ Lambda = gcnew Boron(R, N, Phi->Phi->N);
+					Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
 					if (Uranus == nullptr) Uranus = gcnew Quark<Boron^, Hydrogen^, Beryllium^>(Lambda, Phi->Phi->N, N);
 					_Credit = N->Rod->Foundation;
