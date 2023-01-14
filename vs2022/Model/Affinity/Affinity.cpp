@@ -43,6 +43,16 @@ namespace Dysnomia {
 	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Rod = gcnew Dynamic();
 		Cone = gcnew Dynamic();
+		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
+	}
+
+	Affinity::Affinity(Dynamic^ N, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+		Rod = N;
+		Cone = gcnew Dynamic();
+		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
+	}
+
+	void Affinity::FuseAndOpen(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
 		Cone->Fuse(Rho, Upsilon, Ohm);
 		Cone->Tune();
 		OpenManifolds(Xi);

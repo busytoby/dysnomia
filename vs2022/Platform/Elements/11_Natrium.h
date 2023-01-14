@@ -26,7 +26,7 @@ namespace Dysnomia {
 					Carbon^ Chi = gcnew Carbon();
 					Boron^ Lambda = Phi->Add(Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
-					Affinity^ R = gcnew Affinity(Alpha->Phi->N, gcnew Hydrogen());
+					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Alpha->Phi->Base, Alpha->Secret, Lambda->Signal, Chi->Channel);
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Lambda = Kappa->Lambda;
 					Kappa->Lambda = nullptr;

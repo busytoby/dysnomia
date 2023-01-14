@@ -31,6 +31,8 @@ namespace Dysnomia {
 		Affinity();
 		Affinity::Affinity(Dynamic^, Dynamic^);
 		Affinity::Affinity(BigInteger, BigInteger, BigInteger, BigInteger);
+		Affinity::Affinity(Dynamic^, BigInteger, BigInteger, BigInteger, BigInteger);
+		void FuseAndOpen(BigInteger, BigInteger, BigInteger, BigInteger);
 		void OpenManifolds(BigInteger);
 		BigInteger WaveFunction(String^);
 		/*

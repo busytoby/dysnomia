@@ -21,15 +21,9 @@ namespace Dysnomia {
 				property BigInteger Barn { BigInteger get() { return L->Barn; }};
 
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
-					while (R->Cone->Manifold > Math::Prime / 3 || R->Rod->Barn * 3 < Math::Prime * 2)
-						R = gcnew Affinity();
-					this->R = R->Cone;
-					this->L = R->Rod;
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
 					Beta = gcnew Hydrogen();
-					do {
-						Phi = gcnew Beryllium();
-					} while (Phi->Cone->Barn > Barn / 5 || Phi->Cone->Manifold < R->Cone->Manifold);
+					Phi = gcnew Beryllium();
 					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Lambda = gcnew Boron(R, N, Phi->Phi->N);
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
