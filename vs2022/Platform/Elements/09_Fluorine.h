@@ -22,7 +22,6 @@ namespace Dysnomia {
 
 				property BigInteger Psi { BigInteger get() { return _Ring; }};
 				property BigInteger Ring { BigInteger get() { return BigInteger::Divide(_Ring, Count); }};
-				//BigInteger Manifold;
 
 				Fluorine(Carbon^ that) {
 					_Ring = 0;
@@ -36,7 +35,6 @@ namespace Dysnomia {
 
 				Boron^ Add(Carbon^ that) {
 					Beryllium^ Alpha = gcnew Beryllium();
-					//Manifold = Math::ModPow(Alpha->Secret, that->Channel, Element);
 					Boron^ Pi = Add(that, Alpha);
 					return Pi;
 				}

@@ -14,26 +14,29 @@ namespace Dysnomia {
 				static Quark<Boron^, Beryllium^, Hydrogen^>^ Hippocamp;
 				static Quark<Boron^, Hydrogen^, Beryllium^>^ Uranus;
 				
-				Hydrogen^ Beta;
+				Hydrogen^ Alpha;
 				Beryllium^ Phi;
 				Boron^ Lambda;
 
-				property BigInteger Barn { BigInteger get() { return L->Barn; }};
-
 				Oxygen(Beryllium^ N, Affinity^ R) : Quark(N, R->Cone, R->Rod) {
 					if (R->Cone->Barn != R->Rod->Barn) throw gcnew Exception("Sour");				
-					Beta = gcnew Hydrogen();
 					Phi = gcnew Beryllium();
-					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Beta);
 					Lambda = gcnew Boron(R, N, Phi->Phi->N);
-					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Beta);
+					Affinity^ Q = gcnew Affinity(Phi->Phi->N, Phi->Phi->Base, Phi->Secret, Lambda->Signal, Math::Random());
+					Alpha = Q->Cone;
+					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Boron^, Beryllium^, Hydrogen^>(Lambda, Phi, Alpha);
 					if (Uranus == nullptr) Uranus = gcnew Quark<Boron^, Hydrogen^, Beryllium^>(Lambda, Phi->Phi->N, N);
 					_Credit = N->Rod->Foundation;
 					_Charge = L->Dynamo;
 				};
 
+				BigInteger Avail(BigInteger Xi)
+				{
+					return Math::ModPow(Xi, Phi->Secret, Math::Prime);
+				}
+
 				BigInteger Evidence() {
-					return Math::ModPow(_Charge, Barn, _Credit);
+					return Math::ModPow(_Charge, Avail(_Charge), _Credit);
 				}
 			};
 		}
