@@ -4,6 +4,7 @@
 #include "27_Cobalt.h"
 
 using namespace System;
+using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -12,6 +13,7 @@ namespace Dysnomia {
 			public:
 				static Dai<Aether^, Iron^>^ Amalthea;
 
+				BigInteger Dynamo;
 				BigInteger Barn;
 
 				Nickel(Aether^ Eta, Iron^ Lambda) {
@@ -21,6 +23,8 @@ namespace Dysnomia {
 					Amalthea->Add(Eta, Lambda);
 
 					Barn = Math::ModPow(Lambda->Beta->N->Xi->Ring, Lambda->Beta->R->R->Epsilon, Lambda->Dynamo);
+					Dynamo = BigInteger::Subtract(Barn, Lambda->Mu.Value->Ring);
+					if (BigInteger::IsPositive(Dynamo)) throw gcnew Exception("Too Hot");
 				}
 			};
 		}
