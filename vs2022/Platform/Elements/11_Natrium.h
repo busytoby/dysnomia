@@ -26,16 +26,10 @@ namespace Dysnomia {
 					Carbon^ Chi = gcnew Carbon();
 					Boron^ Lambda = Phi->Add(Chi);
 					Beryllium^ Alpha = gcnew Beryllium();
-					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Alpha->Phi->Base, Alpha->Secret, Lambda->Signal, Chi->Channel);
+					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Chi->Phi->Base, Alpha->Secret, Lambda->Signal, Chi->Channel);
 					Oxygen^ Kappa = gcnew Oxygen(Alpha, R);
 					Xi = gcnew Beryllium(Kappa->N->Phi->Base, Kappa->N->Secret, Kappa->Lambda->Signal, Chi->Channel);
-					if (Oxygen::Uranus->N->L->Barn.IsZero) {
-						Affinity^ A = gcnew Affinity(Xi->Phi->N, Oxygen::Uranus->N->L);					
-						Phi->Add(Chi, Oxygen::Uranus->L);
-						Add(Kappa, Chi);
-					}
-					else
-						Add(Kappa, Chi);
+					Add(Kappa, Chi);
 					
 					Hue = Pi->Hue;
 				}
