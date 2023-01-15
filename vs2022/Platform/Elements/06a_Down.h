@@ -10,23 +10,23 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Down : public Metal<Nucleon^> {
 			public:
-				property Hydrogen^ Gamma { Hydrogen^ get() { return Last->L->Gamma; }};
+				property Hadron^ Gamma { Hadron^ get() { return Last->L->Gamma; }};
 				property Dynamic^ Zeta { Dynamic^ get() { return Last->L->Zeta; }};
 				property BigInteger Channel { BigInteger get() { return Zeta->Channel; }};
 
 				Affinity^ Alpha;
 
 				Down() {
-					Hydrogen^ Mu = gcnew Hydrogen();
+					Hadron^ Mu = gcnew Hadron();
 					Hel^ Rho = gcnew Hel();
 					Lith^ Psi = gcnew Lith(Mu);
-					Hydrogen^ Nu = gcnew Hydrogen();
+					Hadron^ Nu = gcnew Hadron();
 					Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
 					Rho->Add(Eta->R, Eta->L->Mu->I->R);
 					Nucleon^ Sigma = gcnew Nucleon(Eta);
 					Add(Eta, Sigma);
 					Omega();
-					Hydrogen^ Beta = gcnew Hydrogen(Alpha->Rod);
+					Hadron^ Beta = gcnew Hadron(Alpha->Rod);
 					Beta->L->Epsilon = Alpha->Cone->Tau;
 					Eta->Chi(Beta, Alpha->Cone);
 				}

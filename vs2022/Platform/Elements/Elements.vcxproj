@@ -120,7 +120,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="01_Hydrogen.h" />
+    <ClInclude Include="01_Hadron.h" />
     <ClInclude Include="02_Hel.h" />
     <ClInclude Include="03_Lith.h" />
     <ClInclude Include="04_Beryl.h" />

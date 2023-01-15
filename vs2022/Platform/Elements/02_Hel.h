@@ -8,11 +8,11 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Hel : public Dai<Hydrogen^, Dynamic^> {
+			public ref class Hel : public Dai<Hadron^, Dynamic^> {
 			public:
 				Hel() {
 					Affinity^ Alpha = gcnew Affinity();
-					Add(gcnew Hydrogen(Alpha->Rod), Alpha->Cone);
+					Add(gcnew Hadron(Alpha->Rod), Alpha->Cone);
 					Mu->I->L->Epsilon = Alpha->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}

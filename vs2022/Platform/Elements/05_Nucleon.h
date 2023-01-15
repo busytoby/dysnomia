@@ -7,7 +7,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Nucleon : public Dai<Beryl^, Hel^> {
 			public:
-				property Hydrogen^ Gamma { Hydrogen^ get() { return Last->I->Gamma; }};
+				property Hadron^ Gamma { Hadron^ get() { return Last->I->Gamma; }};
 				property Dynamic^ Zeta { Dynamic^ get() { return Last->I->Zeta; }};
 				property BigInteger Signal { BigInteger get() { return Zeta->Signal; }};
 
