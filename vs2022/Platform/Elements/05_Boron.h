@@ -7,10 +7,14 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Boron : public Dai<Beryl^, Hel^> {
 			public:
-				property BigInteger Signal { BigInteger get() { return Mu->I->N->Mu->L->Signal; }};
+				property Hydrogen^ Gamma { Hydrogen^ get() { return Last->I->Gamma; }};
+				property Dynamic^ Zeta { Dynamic^ get() { return Last->I->Zeta; }};
+				property BigInteger Signal { BigInteger get() { return Zeta->Signal; }};
 
 				Boron(Beryl^ Alpha) {
 					Add(Alpha, gcnew Hel());
+					Alpha->N->Add(Mu->L->Mu->I, Mu->L->Mu->L);
+					Alpha->L->Last->L->Add(Mu->L->Mu->I, Mu->L->Mu->L);
 				}
 			};
 		}
