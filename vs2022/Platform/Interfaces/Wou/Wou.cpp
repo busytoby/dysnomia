@@ -15,6 +15,7 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Down^ Mu = gcnew Down();
+				Charm^ Rho = gcnew Charm(Mu);
 
 				/*
 				Mu = gcnew Carbon();

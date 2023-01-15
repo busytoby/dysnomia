@@ -6,7 +6,9 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Baryon : Epsilon { //: public Quark<Beryllium^, Hydrogen^, Hydrogen^> {
+			public ref class Baryon : public Quark<Down^, Lith^, Hel^> {
+			public:
+				Baryon(Down^ Mu, Lith^ Psi, Hel^ Rho) : Quark<Down^, Lith^, Hel^>(Mu, Psi, Rho) { }
 
 				/*
 			private:

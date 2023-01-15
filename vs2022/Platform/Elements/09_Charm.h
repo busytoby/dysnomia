@@ -8,48 +8,33 @@ using Dysnomia::Math;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Fluorine : public Metal<Baryon^>
+			public ref class Charm : public Metal<Baryon^>
 			{
-
-				/*
 			public:
-				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
-				static Dai<Lithium^, Fluorine^>^ Tethys;
-				static Quark<Boron^, Fluorine^, Carbon^>^ Laodemeia;
+				static Quark<Charm^, Nucleon^, Down^>^ Neptune;
+				static Dai<Lith^, Charm^>^ Tethys;
+				static Quark<Nucleon^, Charm^, Down^>^ Laodemeia;
 
-				Boron^ Pi;
+				Charm(Down^ Alpha) {
+					Affinity^ Beta = gcnew Affinity(
+						Alpha[0]->L[0]->I->R->R->Base,
+						Alpha[0]->I->L[0]->I->R->Secret,
+						Alpha[0]->I->L[1]->I->R->Signal,
+						Alpha[0]->L[0]->L[0]->L->Channel);
+					Hadron^ Phi = gcnew Hadron(Beta->Rod);
+					Phi->L->Epsilon = Beta->Cone->Tau;
+					Alpha[0]->I->Chi(Phi, Beta->Cone);
 
-				BigInteger Base;
-				BigInteger Xi;
-				property BigInteger Psi { BigInteger get() { return Math::ModPow(Base, Pi->Signal, Math::Prime); }};
+					Alpha[0]->L[0]->L->Add(Phi, Beta->Cone);
+					Baryon^ Psi = gcnew Baryon(Alpha, Alpha[0]->I->L, Alpha[0]->L[0]->L);
 
-				Fluorine(Carbon^ that) {
-					this->Epsilon = Math::Random();
-					if(Tethys == nullptr) Tethys = gcnew Dai<Lithium^, Fluorine^>();
+					Add(Alpha[0]->I, Psi);
 
-					Pi = Add(that);
-					if (Neptune == nullptr) Neptune = gcnew Quark<Fluorine^, Boron^, Carbon^>(this, Pi, that);
-					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Boron^, Fluorine^, Carbon^>(Pi, this, that);
+					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
+					Tethys->Add(Alpha[0]->I->L, this);
+					if (Neptune == nullptr) Neptune = gcnew Quark<Charm^, Nucleon^, Down^>(this, Alpha[0]->L, Alpha);
+					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Nucleon^, Charm^, Down^>(Alpha[0]->L, this, Alpha);
 				}
-
-				Boron^ Add(Carbon^ that) {
-					Beryllium^ Alpha = gcnew Beryllium();
-					Boron^ Pi = Add(that, Alpha);
-					return Pi;
-				}
-
-				Boron^ Add(Carbon^ that, Beryllium^ Alpha) {
-					Hydrogen^ Beta = gcnew Hydrogen();
-					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Beta);
-					Dai<Carbon^, Beryllium^>::Add(that, Alpha);
-					Boron^ Pi = gcnew Boron(R, Alpha, Beta);
-					Tethys->Add(that->Phi, this);
-					Xi = Math::ModPow(Beta->Signal, that->Channel, Math::Prime);
-					Beta->Tau = Beta->Avail(Xi);
-					Base = Math::ModPow(Beta->Tau, Alpha->Secret, Math::Prime);
-					return Pi;
-				}
-				*/
 			};
 		}
 	}

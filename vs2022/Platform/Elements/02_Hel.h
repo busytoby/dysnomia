@@ -16,6 +16,12 @@ namespace Dysnomia {
 					Mu->I->L->Epsilon = Alpha->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}
+
+				Hel(Affinity^ Alpha) {
+					Add(gcnew Hadron(Alpha->Rod), Alpha->Cone);
+					Mu->I->L->Epsilon = Alpha->Cone->Tau;
+					this->Epsilon = Mu->I->Epsilon;
+				}
 			};
 		}
 	}
