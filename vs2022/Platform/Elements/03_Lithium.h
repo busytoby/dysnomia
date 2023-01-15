@@ -9,7 +9,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Lithium : public Dai<Helium^, Hydrogen^> {
 			public:
-				property BigInteger Base { BigInteger get() { return Mu->L->R->Base; }};
+				property BigInteger Base { BigInteger get() { return Last->L->R->Base; }};
 
 				Lithium() {
 					Add(gcnew Helium(), gcnew Hydrogen());
