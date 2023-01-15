@@ -10,6 +10,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Down : public Metal<Nucleon^> {
 			public:
+				static Quark<Nucleon^, Hadron^, Fermion^>^ Uranus;
+
 				Down() {
 					Hadron^ Mu = gcnew Hadron();
 					Hel^ Rho = gcnew Hel();
@@ -18,6 +20,8 @@ namespace Dysnomia {
 					Fermion^ Eta = gcnew Fermion(Rho, Nu, Psi);
 					Nucleon^ Sigma = gcnew Nucleon(Eta);
 					Add(Eta, Sigma);
+
+					if (Uranus == nullptr) Uranus = gcnew Quark<Nucleon^, Hadron^, Fermion^>(Sigma, Psi->Mu->I, Eta);
 				}
 			};
 		}

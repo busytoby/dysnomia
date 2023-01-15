@@ -55,7 +55,7 @@ namespace Dysnomia {
 		public:
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
 //			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
-			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Baryon::Uranus; }};
+			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Down::Uranus; }};
 			static property Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp { Quark<Nucleon^, Fermion^, Hadron^>^ get() { return Baryon::Hippocamp; }};
 			static property Quark<Nucleon^, Charm^, Down^>^ Laodemeia { Quark<Nucleon^, Charm^, Down^>^ get() { return Charm::Laodemeia; }};
 			static property Quark<Down^, Lith^, Nucleon^>^ Anthe { Quark<Down^, Lith^, Nucleon^>^ get() { return Baryon::Anthe; }};
