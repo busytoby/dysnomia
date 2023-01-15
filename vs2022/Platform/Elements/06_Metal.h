@@ -8,7 +8,9 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Metal : public Dai<Beryl^, Boron^> {
+			generic <typename T>
+			where T : Epsilon
+			public ref class Metal : public Dai<Beryl^, T> {
 			public:
 				/*
 				Helium^ Gamma;
