@@ -10,45 +10,56 @@ namespace Dysnomia {
 			generic <typename T1, typename T2>
 			where T1 : Epsilon
 			where T2 : Epsilon
+			public ref class Chi {
+			public:
+				T1 I;
+				T2 L;
+
+				Chi(T1 Lambda, T2 Xi) {
+					I = Lambda;
+					L = Xi;
+				}
+
+				Chi(KeyValuePair<T1, T2> Beta) {
+					I = Beta.Key;
+					L = Beta.Value;
+				}
+			};
+
+			generic <typename T1, typename T2>
+			where T1 : Epsilon
+			where T2 : Epsilon
 			public ref class Dai : public Epsilon
 			{
-			typedef KeyValuePair<T1, T2> Chi;
 			private:
-				List<Chi>^ Alpha;
+				List<Chi<T1, T2>^>^ Alpha;
+
 			public:
 				Dai() {
-					Alpha = gcnew List<Chi>();
+					Alpha = gcnew List<Chi<T1, T2>^>();
 				}
 
 				void Add(T1 A, T2 B) { 
-					Alpha->Add(Chi(A, B));
+					Alpha->Add(gcnew Chi<T1, T2>(A, B));
 					if (A->Epsilon.IsZero || B->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
 					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(A->Epsilon, B->Epsilon)); 
 				}
-				void Add(Chi M) {
-					Alpha->Add(M); 
-					if (M.Key->Epsilon.IsZero || M.Value->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
-					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(M.Key->Epsilon, M.Value->Epsilon)); 
-				}
-				void Remove(T1 A, T2 B) {
-					Alpha->Remove(Chi(A, B));
-				}
-				void Remove(Chi M) {
+				void Remove(Chi<T1, T2>^ M) {
 					Alpha->Remove(M);
 				}
 
 				property int Count { int get() { return Alpha->Count; }}
-				property Chi default[int] { Chi get(int i) { return Alpha[i]; } }
-				property Chi Mu { Chi get() { return Alpha[0]; } }
-				property Chi Rho { Chi get() { return Alpha[1]; } }
-				property Chi Psi { Chi get() { return Alpha[2]; } }
-				property Chi Nu { Chi get() { return Alpha[3]; } }
-				property Chi Eta { Chi get() { return Alpha[4]; } }
-				property Chi Sigma { Chi get() { return Alpha[5]; } }
-				property Chi Upsilon { Chi get() { return Alpha[6]; } }
-				property Chi Tau { Chi get() { return Alpha[7]; } }
-				property Chi Theta { Chi get() { return Alpha[8]; } }
-				property Chi Last { Chi get() { return Alpha[Alpha->Count - 1]; } }
+				property Chi<T1, T2>^ default[int] { Chi<T1, T2>^ get(int i) { return Alpha[i]; }}
+				property Chi<T1, T2>^ Mu { Chi<T1, T2>^ get() { return Alpha[0]; }}
+				property Chi<T1, T2>^ Rho { Chi<T1, T2>^ get() { return Alpha[1]; }}
+				property Chi<T1, T2>^ Psi { Chi<T1, T2>^ get() { return Alpha[2]; }}
+				property Chi<T1, T2>^ Nu { Chi<T1, T2>^ get() { return Alpha[3]; }}
+				property Chi<T1, T2>^ Eta { Chi<T1, T2>^ get() { return Alpha[4]; }}
+				property Chi<T1, T2>^ Sigma { Chi<T1, T2>^ get() { return Alpha[5]; }}
+				property Chi<T1, T2>^ Upsilon { Chi<T1, T2>^ get() { return Alpha[6]; }}
+				property Chi<T1, T2>^ Tau { Chi<T1, T2>^ get() { return Alpha[7]; }}
+				property Chi<T1, T2>^ Theta { Chi<T1, T2>^ get() { return Alpha[8]; }}
+				property Chi<T1, T2>^ Last { Chi<T1, T2>^ get() { return Alpha[Alpha->Count - 1]; }}
 			};
 		}
 	}

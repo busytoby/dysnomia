@@ -8,20 +8,13 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Helium : public Affinity {
+			public ref class Helium : public Dai<Hydrogen^, Hydrogen^> {
 			public:
-				static Affinity^ Gamma;
-
 				Helium() {
-					this->Rod = Gamma->Rod;
-					this->Cone = Gamma->Cone;
-					this->Epsilon = Gamma->Epsilon;
+					Affinity^ Alpha = gcnew Affinity();
+					Add(gcnew Hydrogen(Alpha->Rod), gcnew Hydrogen(Alpha->Cone));
+					this->Epsilon = Mu->I->Epsilon;
 				}
-
-				Helium(Affinity^ Sigma) {
-					if (Gamma == nullptr) Gamma = Sigma;
-					this->Helium::Helium();
-				};
 			};
 		}
 	}
