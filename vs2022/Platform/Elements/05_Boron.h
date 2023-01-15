@@ -13,8 +13,7 @@ namespace Dysnomia {
 
 				Boron(Beryl^ Alpha) {
 					Add(Alpha, gcnew Hel());
-					Alpha->N->Add(Mu->L->Mu->I, Mu->L->Mu->L);
-					Alpha->L->Last->L->Add(Mu->L->Mu->I, Mu->L->Mu->L);
+					Alpha->Chi(Mu->L->Mu->I, Mu->L->Mu->L);
 				}
 			};
 		}
