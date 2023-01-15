@@ -7,12 +7,16 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Lith : public Dai<Hel^, Hydrogen^> {
+			public ref class Lith : public Dai<Hydrogen^, Hel^> {
 			public:
 				property BigInteger Base { BigInteger get() { return Last->L->R->Base; }};
 
 				Lith(Hydrogen^ Beta) {
-					Add(gcnew Hel(), Beta);
+					Add(Beta, gcnew Hel());
+				}
+
+				Lith(Hydrogen^ Beta, Hel^ Eta) {
+					Add(Beta, Eta);
 				}
 			};
 		}
