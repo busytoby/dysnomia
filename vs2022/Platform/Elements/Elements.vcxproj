@@ -125,6 +125,7 @@
     <ClInclude Include="03_Lith.h" />
     <ClInclude Include="04_Beryl.h" />
     <ClInclude Include="05_Boron.h" />
+    <ClInclude Include="06a_Down.h" />
     <ClInclude Include="06_Metal.h" />
     <ClInclude Include="07_Nitrogen.h" />
     <ClInclude Include="08_Oxygen.h" />
