@@ -14,6 +14,8 @@ namespace Dysnomia {
 
 	public:
 		static BigInteger Prime;
+		static double Mu = 7712503;
+		static BigInteger Tau = BigInteger::Parse("483D2FE51", NumberStyles::AllowHexSpecifier);
 
 		// Fourth Repunit Prime
 		static BigInteger RepunitPrime = BigInteger::Parse(
@@ -51,8 +53,8 @@ namespace Dysnomia {
 			"71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71" \
 			"C71C71C71C71C71C71C71C71C71C71C71C71C71C7", NumberStyles::AllowHexSpecifier);
 
-		static BigInteger DeathPrime = 4294967297;
-		static BigInteger MuPrime = 541;
+		static BigInteger Delta = 4294967297;
+		static BigInteger Gamma = 541;
 
 		static Random rnd;
 

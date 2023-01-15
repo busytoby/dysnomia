@@ -12,7 +12,7 @@ namespace Dysnomia {
 				Lithium^ Phi;
 				Helium^ Sigma;
 
-				property BigInteger Secret { BigInteger get() { return Phi->N->Secret; }};
+				property BigInteger Secret { BigInteger get() { return Phi->N->R->Secret; }};
 
 				Beryllium() : Affinity() {
 					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);

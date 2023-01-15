@@ -11,6 +11,7 @@ namespace Dysnomia {
 			public:
 				static List<BigInteger>^ Evidences;
 				static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
+/*
 				static property BigInteger Mu { BigInteger get() { return Objects::Uranus->L->Rod->Barn; }};
 				static property BigInteger Rho { BigInteger get() { return Objects::Tethys->Mu.Value->Mu.Value->Phi->N->Manifold; }};
 				static property BigInteger Psi { BigInteger get() { return Objects::Neptune->N->Psi; }}
@@ -20,7 +21,7 @@ namespace Dysnomia {
 				static property BigInteger Upsilon { BigInteger get() { return Objects::Neptune->L->Pi->N->Cone->Signal; }}
 				static property BigInteger Tau { BigInteger get() { return Objects::Phobos->R->Rod->Manifold; }}
 				static property BigInteger Theta { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }}
-
+*/
 				static Constants() {
 					Evidences = gcnew List<BigInteger>();
 				}

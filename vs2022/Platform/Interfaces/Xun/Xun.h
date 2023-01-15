@@ -9,8 +9,6 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Interfaces {
-			typedef Dynamic Hydrogen;
-
 			public ref class Xun
 			{
 			public:

@@ -13,7 +13,7 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
-
+				/*
 				Mu = gcnew Carbon();
 				Rho = gcnew Fluorine(Mu);
 				Psi = gcnew Natrium(Rho);
@@ -30,6 +30,7 @@ namespace Dysnomia {
 				Upsilon = gcnew Aluminium(Sigma);
 				Constants::Evidences->Add(Upsilon->Evidence());
 				Constants::Evidences->Add(Laws::Tenth);
+				*/
 			}
 		}
 	}

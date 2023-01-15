@@ -9,7 +9,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Lithium : public Quark<Hydrogen^, Hydrogen^, Hydrogen^> {
 			public:
-				property BigInteger Base { BigInteger get() { return N->Base; }};
+				property BigInteger Base { BigInteger get() { return N->R->Base; }};
 
 				Lithium(Hydrogen^ Beta, Hydrogen^ Phi, Hydrogen^ Gamma) : Quark<Hydrogen^, Hydrogen^, Hydrogen^>(Beta, Phi, Gamma) {};
 			};

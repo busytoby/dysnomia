@@ -9,11 +9,10 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Interfaces {
-			typedef Dynamic Hydrogen;
-
 			public ref class Wou
 			{
 			public:
+				/*
 				Carbon^ Mu;
 				Fluorine^ Rho;
 				Natrium^ Psi;
@@ -21,7 +20,7 @@ namespace Dysnomia {
 				Fluorine^ Eta;
 				Magnesium^ Sigma;
 				Aluminium^ Upsilon;
-
+				*/
 				Wou();
 			};
 		}

@@ -1,5 +1,6 @@
 #pragma once
 #include "01_Hydrogen.h"
+/*
 #include "02_Helium.h"
 #include "03_Lithium.h"
 #include "04_Beryllium.h"
@@ -42,6 +43,7 @@
 #include "39_Yttrium.h"
 #include "40_Quaternion.h"
 #include "41_Qiong.h"
+*/
 #include <cassert>
 
 using namespace System;
@@ -50,6 +52,7 @@ namespace Dysnomia {
 	namespace Platform {
 		public ref class Objects abstract sealed {
 		public:
+			/*
 			static property Dai<Lithium^, Fluorine^>^ Tethys { Dai<Lithium^, Fluorine^>^ get() { return Fluorine::Tethys; }};
 
 			static property Quark<Boron^, Boron^, Fluorine^>^ Star { Quark<Boron^, Boron^, Fluorine^>^ get() { return Neon::Star; }};
@@ -131,6 +134,7 @@ namespace Dysnomia {
 			static property Dai<Yttrium^, Woof^>^ Fornjot { Dai<Yttrium^, Woof^>^ get() { return Elements::Quaternion::Fornjot; }};
 			static property Dai<Elements::Quaternion^, Blong^>^ Jarnsaxa { Dai<Elements::Quaternion^, Blong^>^ get() { return Qiong::Jarnsaxa; }};
 			static property Quark<Elements::Quaternion^, Blong^, Qiao^>^ Hyrrokkin { Quark<Elements::Quaternion^, Blong^, Qiao^>^ get() { return Qiong::Hyrrokkin; }};
+			*/
 		};
 	}
 }
