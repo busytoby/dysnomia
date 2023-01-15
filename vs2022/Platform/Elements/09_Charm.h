@@ -8,7 +8,7 @@ using Dysnomia::Math;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Fluorine : public Metal<Oxygen^>
+			public ref class Fluorine : public Metal<Baryon^>
 			{
 
 				/*

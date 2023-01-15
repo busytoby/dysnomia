@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Nitrogen : public Quark<Hydrogen^, Hel^, Hydrogen^>
+			public ref class Hyperon : public Quark<Hydrogen^, Hel^, Hydrogen^>
 			{
 			public:
 				BigInteger Pole;

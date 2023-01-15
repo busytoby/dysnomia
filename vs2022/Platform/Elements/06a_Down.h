@@ -8,7 +8,7 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Down : public Metal<Boron^> {
+			public ref class Down : public Metal<Nucleon^> {
 			public:
 				property Hydrogen^ Gamma { Hydrogen^ get() { return Last->L->Gamma; }};
 				property Dynamic^ Zeta { Dynamic^ get() { return Last->L->Zeta; }};
@@ -23,7 +23,7 @@ namespace Dysnomia {
 					Hydrogen^ Nu = gcnew Hydrogen();
 					Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
 					Rho->Add(Eta->R, Eta->L->Mu->I->R);
-					Boron^ Sigma = gcnew Boron(Eta);
+					Nucleon^ Sigma = gcnew Nucleon(Eta);
 					Add(Eta, Sigma);
 					Omega();
 					Hydrogen^ Beta = gcnew Hydrogen(Alpha->Rod);

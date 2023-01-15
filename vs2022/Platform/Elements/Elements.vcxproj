@@ -124,11 +124,11 @@
     <ClInclude Include="02_Hel.h" />
     <ClInclude Include="03_Lith.h" />
     <ClInclude Include="04_Beryl.h" />
-    <ClInclude Include="05_Boron.h" />
+    <ClInclude Include="05_Nucleon.h" />
     <ClInclude Include="06a_Down.h" />
     <ClInclude Include="06_Metal.h" />
-    <ClInclude Include="07_Nitrogen.h" />
-    <ClInclude Include="08_Oxygen.h" />
+    <ClInclude Include="07_Hyperon.h" />
+    <ClInclude Include="08_Baryon.h" />
     <ClInclude Include="09_Charm.h" />
     <ClInclude Include="10_Neon.h" />
     <ClInclude Include="11_Natrium.h" />
