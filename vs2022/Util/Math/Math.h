@@ -15,6 +15,7 @@ namespace Dysnomia {
 	public:
 		static BigInteger Prime;
 		static double Mu = 7712503;
+		static double Gamma = 2702765;
 		static BigInteger Tau = BigInteger::Parse("483D2FE51", NumberStyles::AllowHexSpecifier);
 
 		// Fourth Repunit Prime
