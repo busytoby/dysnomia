@@ -17,8 +17,9 @@ namespace Dysnomia {
 				Hydrogen^ Mu = gcnew Hydrogen();
 				Hel^ Rho = gcnew Hel();
 				Lith^ Psi = gcnew Lith(Mu);
-				Beryl^ Nu = gcnew Beryl(Rho, Psi);
-				Rho->Add(Nu->R, Nu->L->Mu->I->R);
+				Hydrogen^ Nu = gcnew Hydrogen();
+				Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
+				Rho->Add(Eta->R, Eta->L->Mu->I->R);
 
 				/*
 				Mu = gcnew Carbon();
