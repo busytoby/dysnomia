@@ -16,6 +16,7 @@ namespace Dysnomia {
 				static Quark<Nucleon^, Charm^, Down^>^ Laodemeia;
 
 				Charm(Down^ Alpha) {
+					if (Alpha->Count > 1) throw gcnew Exception("Cannot Charm");
 					Affinity^ Beta = gcnew Affinity(
 						Alpha[0]->L[0]->I->R->R->Base,
 						Alpha[0]->I->L[0]->I->R->Secret,
