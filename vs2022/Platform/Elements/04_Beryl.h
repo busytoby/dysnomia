@@ -21,6 +21,7 @@ namespace Dysnomia {
 
 				void Chi(Hydrogen^ Beta, Dynamic^ Phi) {
 					L->Last->L->Add(Beta, Phi);
+					N->Last->I->N->Rho();
 					N->Add(Beta, Phi);
 				}
 			};

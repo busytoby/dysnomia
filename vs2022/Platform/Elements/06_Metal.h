@@ -1,5 +1,4 @@
 #pragma once
-#include "07_Nitrogen.h"
 
 using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
@@ -9,8 +8,9 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Carbon : public Dai<Beryllium^, Nitrogen^> {
+			public ref class Metal : public Dai<Beryl^, Boron^> {
 			public:
+				/*
 				Helium^ Gamma;
 				Lithium^ Phi;
 				Boron^ Pi;
@@ -39,6 +39,7 @@ namespace Dysnomia {
 					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Alpha->Phi->N->Foundation);
 					Channel = Math::ModPow(Phi->Base, Pi->Signal, Math::Prime);
 				}
+				*/
 			};
 		}
 	}

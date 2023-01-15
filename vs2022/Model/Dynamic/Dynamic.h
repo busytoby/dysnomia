@@ -62,9 +62,10 @@ namespace Dysnomia {
 
 	public ref class Mu : Epsilon {
 	public:
-		double Epsilon;
+		Double Epsilon;
 
-		Mu::Mu(double Y) { this->Epsilon = Y;	}
+		Mu::Mu(Double Y) { this->Epsilon = Y; }
+		void Mu::Rho() { this->Epsilon = this->Epsilon / 3.141592; }
 	};
 
 	public ref class Tau : Epsilon {
