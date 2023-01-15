@@ -11,8 +11,8 @@ namespace Dysnomia {
 			public:
 				property BigInteger Base { BigInteger get() { return Last->L->R->Base; }};
 
-				Lithium() {
-					Add(gcnew Helium(), gcnew Hydrogen());
+				Lithium(Hydrogen^ Beta) {
+					Add(gcnew Helium(), Beta);
 				}
 			};
 		}
