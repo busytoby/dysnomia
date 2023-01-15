@@ -14,8 +14,7 @@ namespace Dysnomia {
 				property BigInteger Secret { BigInteger get() { return Zeta->Secret; }};
 
 				Beryl(Hel^ Mu, Hydrogen^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
-					Affinity^ Q = gcnew Affinity(R->R, L->Mu->I->R);
-					Gamma->L->Epsilon = Zeta->Tau;
+					Gamma->Phi(R);
 					L->Add(R, N);
 					Chi(R, L->Mu->I->R);
 				}
