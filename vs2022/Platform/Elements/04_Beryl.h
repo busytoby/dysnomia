@@ -16,6 +16,7 @@ namespace Dysnomia {
 				Beryl(Hel^ Mu, Hydrogen^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
 					Affinity^ Q = gcnew Affinity(R->R, L->Mu->I->R);
 					L->Add(R, N);
+					N->Add(R, L->Mu->I->R);
 				}
 			};
 		}
