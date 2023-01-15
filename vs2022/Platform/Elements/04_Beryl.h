@@ -9,7 +9,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Beryl : public Quark<Hel^, Hydrogen^, Lith^> { 
 			public:
-				property BigInteger Secret { BigInteger get() { return L->Last->I->R->Secret; }};
+				property Dynamic^ Zeta { Dynamic^ get() { return L->Zeta; }};
+				property BigInteger Secret { BigInteger get() { return Zeta->Secret; }};
 
 				Beryl(Hel^ Mu, Lith^ Rho) : Quark(Mu, gcnew Hydrogen(), Rho) {
 				}
