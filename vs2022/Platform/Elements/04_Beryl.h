@@ -11,7 +11,7 @@ namespace Dysnomia {
 			public:
 				property BigInteger Secret { BigInteger get() { return R->R->Secret; }};
 
-				Beryl(Hel^ Mu, Lith^ Rho) : Quark(Mu, gcnew Hydrogen(), Rho) {
+				Beryl(Hel^ Mu, Hydrogen^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
 					Affinity^ Q = gcnew Affinity(R->R, L->Mu->I->R);
 				}
 				
