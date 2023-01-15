@@ -18,6 +18,7 @@ namespace Dysnomia {
 					if (!Beta->R->Barn.IsZero || !R->Barn.IsZero) throw gcnew Exception("Already Paired");
 					Affinity^ Pi = gcnew Affinity(Beta->R, R);
 					L->Epsilon = Pi->Cone->Tau;
+					Beta->L->Epsilon = Pi->Cone->Tau;
 				}
 			};
 		}

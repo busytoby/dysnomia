@@ -12,7 +12,7 @@ namespace Dysnomia {
 				Fermion(Hel^ Beta, Hadron^ Pi, Lith^ Xi) : Quark(Beta, Pi, Xi) {
 					L->Last->I->Phi(R);
 					L->Add(R, N);
-					Chi(R, L->Mu->I->R);
+					Chi(R, R->R);
 				}
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
