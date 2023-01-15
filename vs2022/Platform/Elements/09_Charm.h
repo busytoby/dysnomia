@@ -17,16 +17,6 @@ namespace Dysnomia {
 
 				Charm(Down^ Alpha) {
 					if (Alpha->Count > 1) throw gcnew Exception("Cannot Charm");
-					Affinity^ Beta = gcnew Affinity(
-						Alpha[0]->L[0]->I->R->R->Base,
-						Alpha[0]->I->L[0]->I->R->Secret,
-						Alpha[0]->I->L[1]->I->R->Signal,
-						Alpha[0]->L[0]->L[0]->L->Channel);
-					Hadron^ Phi = gcnew Hadron(Beta->Rod);
-					Phi->L->Epsilon = Beta->Cone->Tau;
-					Alpha[0]->I->Chi(Phi, Beta->Cone);
-
-					Alpha[0]->L[0]->L->Add(Phi, Beta->Cone);
 					Baryon^ Psi = gcnew Baryon(Alpha, Alpha[0]->I->L, Alpha[0]->L[0]->L);
 
 					Add(Alpha[0]->I, Psi);
