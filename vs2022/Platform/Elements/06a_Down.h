@@ -30,6 +30,7 @@ namespace Dysnomia {
 				}
 
 				void Omega() {
+					if (Alpha != nullptr) throw gcnew Exception("Nope");
 					Alpha = gcnew Affinity(Zeta->Base, Zeta->Secret, Zeta->Signal, Zeta->Channel);
 				}
 			};
