@@ -20,6 +20,7 @@ namespace Dysnomia {
 				Hydrogen^ Nu = gcnew Hydrogen();
 				Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
 				Rho->Add(Eta->R, Eta->L->Mu->I->R);
+				Boron^ Sigma = gcnew Boron(Eta);
 
 				/*
 				Mu = gcnew Carbon();

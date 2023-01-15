@@ -5,11 +5,13 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Boron : public Quark<Affinity^, Epsilon^, Hydrogen^>	{
+			public ref class Boron : public Dai<Beryl^, Hel^> {
 			public:
-				property BigInteger Signal { BigInteger get() { return N->Rod->Signal; }};
+				property BigInteger Signal { BigInteger get() { return Mu->I->N->Mu->L->Signal; }};
 
-				Boron(Affinity^ N, Dysnomia::Epsilon^ R, Hydrogen^ L) : Quark(N, R, L) {};
+				Boron(Beryl^ Alpha) {
+					Add(Alpha, gcnew Hel());
+				}
 			};
 		}
 	}
