@@ -14,13 +14,7 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
-				Hydrogen^ Mu = gcnew Hydrogen();
-				Hel^ Rho = gcnew Hel();
-				Lith^ Psi = gcnew Lith(Mu);
-				Hydrogen^ Nu = gcnew Hydrogen();
-				Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
-				Rho->Add(Eta->R, Eta->L->Mu->I->R);
-				Boron^ Sigma = gcnew Boron(Eta);
+				Down^ Mu = gcnew Down();
 
 				/*
 				Mu = gcnew Carbon();
