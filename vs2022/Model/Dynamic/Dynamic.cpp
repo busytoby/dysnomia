@@ -86,21 +86,22 @@ namespace Dysnomia {
 
 	void Dynamic::Conify()
 	{
+		if (!Nu.IsZero) throw gcnew Exception("Already Conified");
 		Identity = Math::Random();
 		if (BigInteger::IsNegative(Identity)) Identity = Identity * -1;
 		Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		if (BigInteger::IsNegative(Foundation)) throw gcnew DynamicException(7, "Negative Foundation");
-		Tau = 1;
+		Nu = 1;
 	}
 
 	BigInteger Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
 	{
-		if (Tau.IsZero)
+		if (Nu.IsZero)
 		{
 			Identity = Math::Random();
 			Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		}
-		else if (Tau != (long long) 1) throw gcnew DynamicException(10, "Cone Tau Exception");
+		else if (Nu != (long long) 1) throw gcnew DynamicException(10, "Cone Nu Exception");
 
 		// BigInteger Gamma, Kappa
 		BigInteger Beta, Rho, Eta, Phi;
@@ -116,9 +117,9 @@ namespace Dysnomia {
 		//Gamma = Math::ModPow(Theta, Signal, Math::Prime);
 		//Kappa = BigInteger::Add(Element, Gamma);
 
-		if (Tau.IsZero)
+		if (Nu.IsZero)
 			Mu = Beta;
-		else if (Tau != (long long) 1) throw gcnew DynamicException(10, "Cone Tau Exception");
+		else if (Nu != (long long) 1) throw gcnew DynamicException(10, "Cone Nu Exception");
 		else
 			Mu = Rho;
 
