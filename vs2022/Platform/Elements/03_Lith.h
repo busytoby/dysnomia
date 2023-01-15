@@ -14,10 +14,6 @@ namespace Dysnomia {
 				Lith(Hydrogen^ Beta) {
 					Add(Beta, gcnew Hel());
 				}
-
-				Lith(Hydrogen^ Beta, Hel^ Eta) {
-					Add(Beta, Eta);
-				}
 			};
 		}
 	}
