@@ -26,6 +26,7 @@ namespace Dysnomia {
 					Boron^ Sigma = gcnew Boron(Eta);
 					Add(Eta, Sigma);
 					Omega();
+					Eta->Chi(gcnew Hydrogen(Alpha->Rod), Alpha->Cone);
 				}
 
 				void Omega() {
