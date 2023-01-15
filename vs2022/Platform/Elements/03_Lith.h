@@ -9,7 +9,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Lith : public Dai<Hydrogen^, Hel^> {
 			public:
-				property BigInteger Base { BigInteger get() { return Last->L->R->Base; }};
+				property BigInteger Base { BigInteger get() { return Last->I->R->Base; }};
 
 				Lith(Hydrogen^ Beta) {
 					Add(Beta, gcnew Hel());
