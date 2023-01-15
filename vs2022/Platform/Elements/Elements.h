@@ -54,11 +54,11 @@ namespace Dysnomia {
 		public ref class Objects abstract sealed {
 		public:
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
-/*
-			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
-			static property Quark<Nucleon^, Hydrogen^, Beryllium^>^ Uranus { Quark<Nucleon^, Hydrogen^, Beryllium^>^ get() { return Oxygen::Uranus; }};
-			static property Quark<Nucleon^, Beryllium^, Hydrogen^>^ Hippocamp { Quark<Nucleon^, Beryllium^, Hydrogen^>^ get() { return Oxygen::Hippocamp; }};
+//			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
+			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Baryon::Uranus; }};
+			static property Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp { Quark<Nucleon^, Fermion^, Hadron^>^ get() { return Baryon::Hippocamp; }};
 			static property Quark<Nucleon^, Charm^, Down^>^ Laodemeia { Quark<Nucleon^, Charm^, Down^>^ get() { return Charm::Laodemeia; }};
+			/*
 			static property Dai<Down^, Coronium^>^ Enceladus { Dai<Down^, Coronium^>^ get() { return Silicon::Enceladus; }};
 			static property Quark<Down^, Coronium^, Down^>^ Ariel { Quark<Down^, Coronium^, Down^>^ get() { return Silicon::Ariel; }};
 			static property Quark<Nitrogen^, Charm^, Magnesium^>^ Naiad { Quark<Nitrogen^, Charm^, Magnesium^>^ get() { return Coronium::Naiad; }};
