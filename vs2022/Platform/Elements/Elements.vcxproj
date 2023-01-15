@@ -123,7 +123,7 @@
     <ClInclude Include="01_Hydrogen.h" />
     <ClInclude Include="02_Hel.h" />
     <ClInclude Include="03_Lith.h" />
-    <ClInclude Include="04_Beryllium.h" />
+    <ClInclude Include="04_Beryl.h" />
     <ClInclude Include="05_Boron.h" />
     <ClInclude Include="06_Carbon.h" />
     <ClInclude Include="07_Nitrogen.h" />

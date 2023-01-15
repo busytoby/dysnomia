@@ -7,21 +7,19 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Beryllium : public Affinity { 
+			public ref class Beryl : public Quark<Hel^, Hydrogen^, Lith^> { 
 			public:
-				Lithium^ Phi;
-				Helium^ Sigma;
+				property BigInteger Secret { BigInteger get() { return R->R->Secret; }};
 
-				property BigInteger Secret { BigInteger get() { return Phi->N->R->Secret; }};
-
-				Beryllium() : Affinity() {
-					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);
-					Sigma = gcnew Helium(this);
+				Beryl(Hel^ Mu, Lith^ Rho) : Quark(Mu, gcnew Hydrogen(), Rho) {
+					Affinity^ Q = gcnew Affinity(R->R, L->Mu->I->R);
 				}
 				
+				/*
 				Beryllium(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) : Affinity(Rho, Upsilon, Ohm, Xi) {
 					Phi = gcnew Lithium(gcnew Hydrogen(), Cone, Rod);
 				}
+				*/
 			};
 		}
 	}

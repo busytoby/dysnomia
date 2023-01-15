@@ -13,6 +13,12 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
+
+				Hydrogen^ Mu = gcnew Hydrogen();
+				Hel^ Rho = gcnew Hel();
+				Lith^ Psi = gcnew Lith(Mu);
+				Beryl^ Nu = gcnew Beryl(Rho, Psi);
+
 				/*
 				Mu = gcnew Carbon();
 				Rho = gcnew Fluorine(Mu);
