@@ -10,10 +10,6 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Down : public Metal<Nucleon^> {
 			public:
-				property Hadron^ Gamma { Hadron^ get() { return Last->L->Gamma; }};
-				property Dynamic^ Zeta { Dynamic^ get() { return Last->L->Zeta; }};
-				property BigInteger Channel { BigInteger get() { return Zeta->Channel; }};
-
 				Affinity^ Alpha;
 
 				Down() {
@@ -22,7 +18,6 @@ namespace Dysnomia {
 					Lith^ Psi = gcnew Lith(Mu);
 					Hadron^ Nu = gcnew Hadron();
 					Fermion^ Eta = gcnew Fermion(Rho, Nu, Psi);
-					Rho->Add(Eta->R, Eta->L->Mu->I->R);
 					Nucleon^ Sigma = gcnew Nucleon(Eta);
 					Add(Eta, Sigma);
 					Omega();
@@ -33,7 +28,7 @@ namespace Dysnomia {
 
 				void Omega() {
 					if (Alpha != nullptr) throw gcnew Exception("Nope");
-					Alpha = gcnew Affinity(Zeta->Base, Zeta->Secret, Zeta->Signal, Zeta->Channel);
+					//Alpha = gcnew Affinity(Mu->I->L[0]->I->R->Base, Mu->I->L[1]->I->R->Secret, Gamma[0]->I->R->Signal, Zeta->Channel);
 				}
 			};
 		}
