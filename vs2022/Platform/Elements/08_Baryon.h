@@ -11,20 +11,20 @@ namespace Dysnomia {
 				static Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp;
 				static Quark<Down^, Lith^, Nucleon^>^ Anthe;
 
-				Baryon(Down^ Mu, Lith^ Psi, Hel^ Rho) : Quark<Down^, Lith^, Hel^>(Mu, Psi, Rho) {
-					Affinity^ Beta = gcnew Affinity(
-						Mu[0]->L[0]->I->R->R->Base,
-						Mu[0]->I->L[0]->I->R->Secret,
-						Mu[0]->I->L[1]->I->R->Signal,
-						Mu[0]->L[0]->L[0]->L->Channel);
-					Hadron^ Phi = gcnew Hadron(Beta->Rod);
-					Phi->L->Epsilon = Beta->Cone->Tau;
-					Mu[0]->I->Chi(Phi, Beta->Cone);
+				Baryon(Down^ Beta, Lith^ Pi, Hel^ Xi) : Quark<Down^, Lith^, Hel^>(Beta, Pi, Xi) {
+					Affinity^ Omicron = gcnew Affinity(
+						Beta[0]->L[0]->I->R->R->Base,
+						Beta[0]->I->L[0]->I->R->Secret,
+						Beta[0]->I->L[1]->I->R->Signal,
+						Beta[0]->L[0]->L[0]->L->Channel);
+					Hadron^ Delta = gcnew Hadron(Omicron->Rod);
+					Delta->L->Epsilon = Omicron->Cone->Tau;
+					Beta[0]->I->Chi(Delta, Omicron->Cone);
 
-					Mu[0]->L[0]->L->Add(Phi, Beta->Cone);
+					Beta[0]->L[0]->L->Add(Delta, Omicron->Cone);
 
-					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Mu[0]->L, Mu[0]->I, Phi);
-					if (Anthe == nullptr) Anthe = gcnew Quark<Down^, Lith^, Nucleon^>(Mu, Psi, Mu[0]->L);
+					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->I, Delta);
+					if (Anthe == nullptr) Anthe = gcnew Quark<Down^, Lith^, Nucleon^>(Beta, Pi, Beta[0]->L);
 				}
 			};
 		}

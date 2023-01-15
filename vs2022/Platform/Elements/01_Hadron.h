@@ -11,13 +11,13 @@ namespace Dysnomia {
 				Hadron() : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), gcnew Dynamic(), gcnew Tau(0)) {
 					this->Epsilon = R->Epsilon;
 				};
-				Hadron(Dynamic^ Lambda) : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), Lambda, gcnew Tau(0)) {
+				Hadron(Dynamic^ Beta) : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), Beta, gcnew Tau(0)) {
 					this->Epsilon = R->Epsilon;
 				};
-				void Phi(Hadron^ Delta) {
-					if (!Delta->R->Barn.IsZero || !R->Barn.IsZero) throw gcnew Exception("Already Paired");
-					Affinity^ Q = gcnew Affinity(Delta->R, R);
-					L->Epsilon = Q->Cone->Tau;
+				void Phi(Hadron^ Beta) {
+					if (!Beta->R->Barn.IsZero || !R->Barn.IsZero) throw gcnew Exception("Already Paired");
+					Affinity^ Pi = gcnew Affinity(Beta->R, R);
+					L->Epsilon = Pi->Cone->Tau;
 				}
 			};
 		}

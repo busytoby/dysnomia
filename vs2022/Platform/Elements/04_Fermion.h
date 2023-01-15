@@ -9,14 +9,14 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Fermion : public Quark<Hel^, Hadron^, Lith^> {
 			public:
-				Fermion(Hel^ Mu, Hadron^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
+				Fermion(Hel^ Beta, Hadron^ Pi, Lith^ Xi) : Quark(Beta, Pi, Xi) {
 					L->Last->I->Phi(R);
 					L->Add(R, N);
 					Chi(R, L->Mu->I->R);
 				}
 
-				void Chi(Hadron^ Beta, Dynamic^ Phi) {
-					N->Add(Beta, Phi);
+				void Chi(Hadron^ Beta, Dynamic^ Pi) {
+					N->Add(Beta, Pi);
 					for(int i = N->Count - 1; i > -1; i--)
 						N[i]->I->N->Rho();
 				}

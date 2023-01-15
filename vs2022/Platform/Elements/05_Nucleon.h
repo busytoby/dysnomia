@@ -7,9 +7,9 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Nucleon : public Dai<Fermion^, Hel^> {
 			public:
-				Nucleon(Fermion^ Alpha) {
-					Add(Alpha, gcnew Hel());
-					Alpha->Chi(Mu->L->Mu->I, Mu->L->Mu->L);
+				Nucleon(Fermion^ Beta) {
+					Add(Beta, gcnew Hel());
+					Beta->Chi(Mu->L->Mu->I, Mu->L->Mu->L);
 				}
 			};
 		}
