@@ -123,7 +123,7 @@
     <ClInclude Include="01_Hadron.h" />
     <ClInclude Include="02_Hel.h" />
     <ClInclude Include="03_Lith.h" />
-    <ClInclude Include="04_Beryl.h" />
+    <ClInclude Include="04_Fermion.h" />
     <ClInclude Include="05_Nucleon.h" />
     <ClInclude Include="06a_Down.h" />
     <ClInclude Include="06_Metal.h" />

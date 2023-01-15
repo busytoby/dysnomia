@@ -21,7 +21,7 @@ namespace Dysnomia {
 					Hel^ Rho = gcnew Hel();
 					Lith^ Psi = gcnew Lith(Mu);
 					Hadron^ Nu = gcnew Hadron();
-					Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
+					Fermion^ Eta = gcnew Fermion(Rho, Nu, Psi);
 					Rho->Add(Eta->R, Eta->L->Mu->I->R);
 					Nucleon^ Sigma = gcnew Nucleon(Eta);
 					Add(Eta, Sigma);

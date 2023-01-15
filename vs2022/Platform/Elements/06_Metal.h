@@ -10,7 +10,7 @@ namespace Dysnomia {
 		namespace Elements {
 			generic <typename T>
 			where T : Epsilon
-			public ref class Metal : public Dai<Beryl^, T> {
+			public ref class Metal : public Dai<Fermion^, T> {
 			public:
 				/*
 				Helium^ Gamma;

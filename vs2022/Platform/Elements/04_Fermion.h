@@ -7,13 +7,13 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Beryl : public Quark<Hel^, Hadron^, Lith^> {
+			public ref class Fermion : public Quark<Hel^, Hadron^, Lith^> {
 			public:
 				property Hadron^ Gamma { Hadron^ get() { return L->Gamma; }};
 				property Dynamic^ Zeta { Dynamic^ get() { return L->Zeta; }};
 				property BigInteger Secret { BigInteger get() { return Zeta->Secret; }};
 
-				Beryl(Hel^ Mu, Hadron^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
+				Fermion(Hel^ Mu, Hadron^ Psi, Lith^ Rho) : Quark(Mu, Psi, Rho) {
 					Gamma->Phi(R);
 					L->Add(R, N);
 					Chi(R, L->Mu->I->R);
