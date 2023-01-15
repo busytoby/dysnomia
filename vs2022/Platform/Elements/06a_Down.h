@@ -28,7 +28,7 @@ namespace Dysnomia {
 
 				void Omega() {
 					if (Alpha != nullptr) throw gcnew Exception("Nope");
-					//Alpha = gcnew Affinity(Mu->I->L[0]->I->R->Base, Mu->I->L[1]->I->R->Secret, Gamma[0]->I->R->Signal, Zeta->Channel);
+					Alpha = gcnew Affinity(Mu->L[0]->I->R->R->Base, Mu->I->L[0]->I->R->Secret, Mu->I->L[1]->I->R->Signal, Mu->L[0]->L[0]->L->Channel);
 				}
 			};
 		}
