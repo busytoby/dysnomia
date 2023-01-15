@@ -1,5 +1,4 @@
 #pragma once
-#include "06_Carbon.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -9,8 +8,10 @@ using Dysnomia::Math;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Fluorine : public Dai<Carbon^, Beryllium^>
+			public ref class Fluorine : public Metal<Oxygen^>
 			{
+
+				/*
 			public:
 				static Quark<Fluorine^, Boron^, Carbon^>^ Neptune;
 				static Dai<Lithium^, Fluorine^>^ Tethys;
@@ -48,6 +49,7 @@ namespace Dysnomia {
 					Base = Math::ModPow(Beta->Tau, Alpha->Secret, Math::Prime);
 					return Pi;
 				}
+				*/
 			};
 		}
 	}

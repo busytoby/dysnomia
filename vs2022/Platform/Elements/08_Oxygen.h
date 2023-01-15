@@ -6,7 +6,9 @@ using namespace System::Numerics;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Oxygen : public Quark<Beryllium^, Hydrogen^, Hydrogen^> {
+			public ref class Oxygen : Epsilon { //: public Quark<Beryllium^, Hydrogen^, Hydrogen^> {
+
+				/*
 			private:
 				BigInteger _Credit;
 				BigInteger _Charge;
@@ -38,6 +40,7 @@ namespace Dysnomia {
 				BigInteger Evidence() {
 					return Math::ModPow(_Charge, Avail(_Charge), _Credit);
 				}
+				*/
 			};
 		}
 	}

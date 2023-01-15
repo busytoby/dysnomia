@@ -5,12 +5,12 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Nitrogen : public Quark<Hydrogen^, Affinity^, Hydrogen^>
+			public ref class Nitrogen : public Quark<Hydrogen^, Hel^, Hydrogen^>
 			{
 			public:
 				BigInteger Pole;
 
-				Nitrogen(Hydrogen^ X, Affinity^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) { 
+				Nitrogen(Hydrogen^ X, Hel^ C, Hydrogen^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) {
 				};
 
 				BigInteger Polarize() {

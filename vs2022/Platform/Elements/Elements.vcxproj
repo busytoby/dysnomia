@@ -129,7 +129,7 @@
     <ClInclude Include="06_Metal.h" />
     <ClInclude Include="07_Nitrogen.h" />
     <ClInclude Include="08_Oxygen.h" />
-    <ClInclude Include="09_Fluorine.h" />
+    <ClInclude Include="09_Charm.h" />
     <ClInclude Include="10_Neon.h" />
     <ClInclude Include="11_Natrium.h" />
     <ClInclude Include="12_Magnesium.h" />
