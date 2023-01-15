@@ -17,7 +17,7 @@ namespace Dysnomia {
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
-					Beta->L->Epsilon = BigInteger::Subtract(Beta->L->Epsilon, Pi->Manifold);
+					Beta->L->Epsilon = Math::ModPow(Beta->L->Epsilon, Pi->Secret, Math::Prime);
 					for(int i = N->Count - 1; i > -1; i--)
 						N[i]->I->N->Rho();
 				}
