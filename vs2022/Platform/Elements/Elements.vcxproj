@@ -121,8 +121,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="01_Hydrogen.h" />
-    <ClInclude Include="02_Helium.h" />
-    <ClInclude Include="03_Lithium.h" />
+    <ClInclude Include="02_Hel.h" />
+    <ClInclude Include="03_Lith.h" />
     <ClInclude Include="04_Beryllium.h" />
     <ClInclude Include="05_Boron.h" />
     <ClInclude Include="06_Carbon.h" />
