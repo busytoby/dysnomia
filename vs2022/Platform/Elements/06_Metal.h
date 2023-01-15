@@ -30,17 +30,6 @@ namespace Dysnomia {
 					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Phi->N->Foundation);
 					Channel = Math::ModPow(Phi->Base, Pi->Signal, Math::Prime);
 				}
-
-				Carbon() {
-					Beryllium^ Alpha = gcnew Beryllium();
-					Gamma = gcnew Helium();
-					Affinity^ Beta = gcnew Affinity();
-					Phi = gcnew Lithium(gcnew Hydrogen(), Beta->Cone, Beta->Rod);
-					Affinity^ R = gcnew Affinity(Alpha->Phi->N, Phi->N);
-					Pi = gcnew Boron(R, Alpha, Phi->N);
-					this->Epsilon = Math::ModPow(Phi->R->Signal, Phi->L->Channel, Alpha->Phi->N->Foundation);
-					Channel = Math::ModPow(Phi->Base, Pi->Signal, Math::Prime);
-				}
 				*/
 			};
 		}

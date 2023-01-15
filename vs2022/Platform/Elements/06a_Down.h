@@ -14,6 +14,8 @@ namespace Dysnomia {
 				property Dynamic^ Zeta { Dynamic^ get() { return Last->L->Zeta; }};
 				property BigInteger Channel { BigInteger get() { return Zeta->Channel; }};
 
+				Affinity^ Alpha;
+
 				Down() {
 					Hydrogen^ Mu = gcnew Hydrogen();
 					Hel^ Rho = gcnew Hel();
@@ -22,6 +24,12 @@ namespace Dysnomia {
 					Beryl^ Eta = gcnew Beryl(Rho, Nu, Psi);
 					Rho->Add(Eta->R, Eta->L->Mu->I->R);
 					Boron^ Sigma = gcnew Boron(Eta);
+					Add(Eta, Sigma);
+					Omega();
+				}
+
+				void Omega() {
+					Alpha = gcnew Affinity(Zeta->Base, Zeta->Secret, Zeta->Signal, Zeta->Channel);
 				}
 			};
 		}
