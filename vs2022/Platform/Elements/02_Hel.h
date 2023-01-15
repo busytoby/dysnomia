@@ -13,13 +13,13 @@ namespace Dysnomia {
 				Hel() {
 					Affinity^ Beta = gcnew Affinity();
 					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
-					Mu->I->L->Epsilon = Beta->Cone->Tau;
+					Mu->I->R->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}
 
 				Hel(Affinity^ Beta) {
 					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
-					Mu->I->L->Epsilon = Beta->Cone->Tau;
+					Mu->I->R->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}
 			};

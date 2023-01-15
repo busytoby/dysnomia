@@ -13,12 +13,12 @@ namespace Dysnomia {
 
 				Baryon(Down^ Beta, Lith^ Pi, Hel^ Xi) : Quark<Down^, Lith^, Hel^>(Beta, Pi, Xi) {
 					Affinity^ Omicron = gcnew Affinity(
-						Beta[0]->L[0]->I->R->R->Base,
-						Beta[0]->I->L[0]->I->R->Secret,
-						Beta[0]->I->L[1]->I->R->Signal,
+						Beta[0]->L[0]->I->I->I->Base,
+						Beta[0]->I->R[0]->I->I->Secret,
+						Beta[0]->I->R[1]->I->I->Signal,
 						Beta[0]->L[0]->L[0]->L->Channel);
 					Hadron^ Delta = gcnew Hadron(Omicron->Rod);
-					Delta->L->Epsilon = Omicron->Cone->Tau;
+					Delta->R->Epsilon = Omicron->Cone->Tau;
 					Beta[0]->I->Chi(Delta, Omicron->Cone);
 
 					Beta[0]->L[0]->L->Add(Delta, Omicron->Cone);

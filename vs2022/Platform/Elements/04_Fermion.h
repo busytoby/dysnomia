@@ -10,14 +10,14 @@ namespace Dysnomia {
 			public ref class Fermion : public Quark<Hel^, Hadron^, Lith^> {
 			public:
 				Fermion(Hel^ Beta, Hadron^ Pi, Lith^ Xi) : Quark(Beta, Pi, Xi) {
-					L->Last->I->Phi(R);
-					L->Add(R, N);
-					Chi(R, R->R);
+					R->Last->I->Phi(I);
+					R->Add(I, N);
+					Chi(I, I->I);
 				}
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
-					Beta->L->Epsilon = Math::ModPow(Beta->L->Epsilon, Pi->Secret, Math::Prime);
+					Beta->R->Epsilon = Math::ModPow(Beta->R->Epsilon, Pi->Secret, Math::Prime);
 					for(int i = N->Count - 1; i > -1; i--)
 						N[i]->I->N->Rho();
 				}

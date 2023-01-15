@@ -23,8 +23,8 @@ namespace Dysnomia {
 		public ref class Quark : Epsilon {
 	public:
 		T1 N;
-		T2 R;
-		T3 L;
+		T2 I;
+		T3 R;
 
 		Quark(T1, T2, T3);
 	};
