@@ -11,6 +11,7 @@ namespace Dysnomia {
 			public:
 				Lith(Hadron^ Beta) {
 					Add(Beta, gcnew Hel());
+					Double M = Mass;
 				}
 			};
 		}

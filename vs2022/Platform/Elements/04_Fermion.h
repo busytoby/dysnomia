@@ -21,7 +21,6 @@ namespace Dysnomia {
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
-					Beta->R->Epsilon = Math::ModPow(Beta->R->Epsilon, Pi->Secret, Math::Prime);
 					for(int i = N->Count - 1; i > -1; i--)
 						N[i]->I->N->Rho();
 				}

@@ -12,7 +12,7 @@ namespace Dysnomia {
 				static Quark<Down^, Lith^, Nucleon^>^ Anthe;
 
 				Baryon(Down^ Beta, Lith^ Pi, Hel^ Xi) : Quark<Down^, Lith^, Hel^>(Beta, Pi, Xi) {
-					if (Hippocamp != nullptr && Anthe != nullptr) throw gcnew Exception("Baryon Is Singular");
+					if (Hippocamp != nullptr || Anthe != nullptr) throw gcnew Exception("Baryon Is Singular");
 					Affinity^ Omicron = gcnew Affinity(
 						Beta[0]->L[0]->I->I->I->Base,
 						Beta[0]->I->R[0]->I->I->Secret,

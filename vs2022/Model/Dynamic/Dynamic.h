@@ -23,6 +23,7 @@ namespace Dysnomia {
 
 	public ref class Epsilon {
 	public:
+		virtual property Double Mass { Double get() { return 0.0; }};
 		BigInteger Epsilon;
 
 		void FindKeys(List<Dysnomia::Epsilon^>^ R, String^ _Type) {

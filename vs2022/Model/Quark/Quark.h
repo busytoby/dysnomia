@@ -20,8 +20,9 @@ namespace Dysnomia {
 	where T1 : Epsilon 
 	where T2 : Epsilon 
 	where T3 : Epsilon
-		public ref class Quark : Epsilon {
+	public ref class Quark : Epsilon {
 	public:
+		virtual property Double Mass { Double get() override { Double _Mass = N->Mass + I->Mass + R->Mass; return _Mass; }};
 		T1 N;
 		T2 I;
 		T3 R;
