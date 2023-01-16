@@ -32,8 +32,17 @@ namespace Dysnomia {
 				}
 
 				void Omicron() {
-					Xi->Sort(gcnew Hadron::CompareByRho());
+					Xi->Sort(gcnew CompareByRho());
 				}
+
+				ref class CompareByRho : Comparer<Hadron^>
+				{
+				public:
+					virtual int Compare(Hadron^ Beta, Hadron^ Pi) override
+					{
+						return Beta->R->Rho.CompareTo(Pi->R->Rho);
+					}
+				};
 			};
 		}
 	}

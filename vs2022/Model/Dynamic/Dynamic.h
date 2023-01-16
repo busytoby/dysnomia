@@ -72,6 +72,7 @@ namespace Dysnomia {
 	public ref class Tau : Epsilon {
 	public:
 		Double Rho;
+		Double Psi;
 		Tau::Tau(BigInteger X) { this->Epsilon = X; }
 	};
 
