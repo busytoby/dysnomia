@@ -53,6 +53,7 @@ namespace Dysnomia {
 	namespace Platform {
 		public ref class Objects abstract sealed {
 		public:
+			static property Quark<Hel^, Hadron^, Lith^>^ Corona { Quark<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
 //			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
 			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Down::Uranus; }};

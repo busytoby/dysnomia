@@ -9,10 +9,14 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Fermion : public Quark<Hel^, Hadron^, Lith^> {
 			public:
+				static Quark<Hel^, Hadron^, Lith^>^ Corona;
+
 				Fermion(Hel^ Beta, Hadron^ Pi, Lith^ Xi) : Quark(Beta, Pi, Xi) {
+					if (Corona != nullptr) throw gcnew Exception("Fermion Is Singular");
 					R->Last->I->Phi(I);
 					R->Add(I, N);
 					Chi(I, I->I);
+					Corona = this;
 				}
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
