@@ -31,7 +31,8 @@ namespace Dysnomia {
 					if (Mass != 1) throw gcnew Exception("Mass Failure");
 				}
 				void Rho(Double Ohm) {
-					R->Rho += Ohm;
+					if (R->Rho > 0) R->Rho += Ohm;
+					else R->Rho -= Ohm;
 					N->Rho();
 				}
 			};

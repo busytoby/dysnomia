@@ -21,8 +21,13 @@ namespace Dysnomia {
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
-					for(int i = N->Count - 1; i > -1; i--)
+					for (int i = N->Count - 1; i > -1; i--) {
+						if (N[i]->I->R->Rho != 0) {
+							Double Kappa = (-N->Mass + N[i]->Mass) / 2;
+							N[i]->I->Rho(Kappa);
+						}
 						N[i]->I->Rho(Mass);
+					}
 				}
 			};
 		}

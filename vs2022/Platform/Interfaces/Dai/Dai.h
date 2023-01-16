@@ -12,6 +12,7 @@ namespace Dysnomia {
 			where T2 : Epsilon
 			public ref class Chi {
 			public:
+				virtual property Double Mass { Double get() override { return I->Mass - L->Mass; }};
 				T1 I;
 				T2 L;
 
