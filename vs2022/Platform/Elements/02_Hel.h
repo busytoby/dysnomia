@@ -10,8 +10,6 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Hel : public Dai<Hadron^, Dynamic^> {
 			public:
-				List<Hadron^>^ Xi;
-
 				Hel() {
 					Affinity^ Beta = gcnew Affinity();
 					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
@@ -24,29 +22,6 @@ namespace Dysnomia {
 					Mu->I->R->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}
-
-				void Add(Hadron^ Beta, Dynamic^ Pi) {
-					if (Xi == nullptr) Xi = gcnew List<Hadron^>();
-					this->Dai<Hadron^, Dynamic^>::Add(Beta, Pi);
-					Xi->Add(Beta);
-				}
-
-				void Omicron() {
-					Xi->Sort(gcnew CompareByRho());
-				}
-
-				short Pi(Hadron^ Beta) {
-					return Xi->IndexOf(Beta);
-				}
-
-				ref class CompareByRho : Comparer<Hadron^>
-				{
-				public:
-					virtual int Compare(Hadron^ Beta, Hadron^ Pi) override
-					{
-						return Beta->R->Rho.CompareTo(Pi->R->Rho);
-					}
-				};
 			};
 		}
 	}

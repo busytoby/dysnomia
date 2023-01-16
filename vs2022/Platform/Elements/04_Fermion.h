@@ -22,20 +22,7 @@ namespace Dysnomia {
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
 					for (int i = N->Count - 1; i > -1; i--) {
-						if (N[i]->I->R->Rho != 0) {
-							Double Kappa = (-N->Mass + N[i]->Mass) / 2;
-							N[i]->I->Rho(Kappa);
-
-							short Iota = N->Pi(N[i]->I);
-							Kappa = 0;
-							Double Lambda = 0;
-							if (N[i]->I->R->Rho < 0)
-								for (int j = Iota; j > -1; j--) {
-
-								}
-						}
-						N[i]->I->Rho(Mass);
-						N->Omicron();
+						N[i]->I->N->Rho();
 					}
 				}
 			};
