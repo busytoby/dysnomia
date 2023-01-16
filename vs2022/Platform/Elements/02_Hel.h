@@ -35,6 +35,10 @@ namespace Dysnomia {
 					Xi->Sort(gcnew CompareByRho());
 				}
 
+				short Pi(Hadron^ Beta) {
+					return Xi->IndexOf(Beta);
+				}
+
 				ref class CompareByRho : Comparer<Hadron^>
 				{
 				public:

@@ -26,15 +26,17 @@ namespace Dysnomia {
 							Double Kappa = (-N->Mass + N[i]->Mass) / 2;
 							N[i]->I->Rho(Kappa);
 
-							for (int j = 0; j < N->Xi->Count; j++) {
-								if (N->Xi[j] == N[i]->I) continue;
-								else if (N->Xi[j]->R->Rho < N[i]->I->R->Rho) {
+							short Iota = N->Pi(N[i]->I);
+							Kappa = 0;
+							Double Lambda = 0;
+							if (N[i]->I->R->Rho < 0)
+								for (int j = Iota; j > -1; j--) {
 
 								}
-								else {
+							else
+								for (int j = Iota; j < N->Xi->Count; j++) {
 
-								}								
-							}
+								}
 						}
 						N[i]->I->Rho(Mass);
 						N->Omicron();
