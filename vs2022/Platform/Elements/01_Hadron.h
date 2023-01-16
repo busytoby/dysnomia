@@ -1,6 +1,7 @@
 #pragma once
 
 using namespace System;
+using namespace System::Collections::Generic;
 using Dysnomia::Epsilon;
 
 namespace Dysnomia {
@@ -35,6 +36,15 @@ namespace Dysnomia {
 					else R->Rho -= Ohm;
 					N->Rho();
 				}
+
+				ref class CompareByRho : Comparer<Hadron^>
+				{
+				public:
+					virtual int Compare(Hadron^ Beta, Hadron^ Pi) override
+					{
+						return Beta->R->Rho.CompareTo(Pi->R->Rho);
+					}
+				};
 			};
 		}
 	}

@@ -32,10 +32,8 @@ namespace Dysnomia {
 			where T2 : Epsilon
 			public ref class Dai : public Epsilon
 			{
-			private:
-				List<Chi<T1, T2>^>^ Alpha;
-
 			public:
+				List<Chi<T1, T2>^>^ Alpha;
 				virtual property Double Mass { Double get() override { Double _Mass = 0; for (int i = 0; i < Count; i++) { _Mass += this[i]->I->Mass; } return _Mass; }};
 				Dai() {
 					Alpha = gcnew List<Chi<T1, T2>^>();
