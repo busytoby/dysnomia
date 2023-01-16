@@ -15,10 +15,12 @@ namespace Dysnomia {
 				Hadron() : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), gcnew Dynamic(), gcnew Tau(0)) {
 					this->Epsilon = I->Epsilon;
 					_Mass = 0.5;
+					R->Rho = 0;
 				};
 				Hadron(Dynamic^ Beta) : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), Beta, gcnew Tau(0)) {
 					this->Epsilon = I->Epsilon;
 					_Mass = 0.5;
+					R->Rho = 0;
 				};
 				void Phi(Hadron^ Beta) {
 					if (!Beta->I->Barn.IsZero || !I->Barn.IsZero) throw gcnew Exception("Already Paired");
@@ -27,6 +29,10 @@ namespace Dysnomia {
 					Beta->R->Epsilon = Pi->Cone->Tau;
 					_Mass += 0.5;
 					if (Mass != 1) throw gcnew Exception("Mass Failure");
+				}
+				void Rho(Double Ohm) {
+					R->Rho += Ohm;
+					N->Rho();
 				}
 			};
 		}

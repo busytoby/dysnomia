@@ -22,7 +22,7 @@ namespace Dysnomia {
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
 					for(int i = N->Count - 1; i > -1; i--)
-						N[i]->I->N->Rho();
+						N[i]->I->Rho(Mass);
 				}
 			};
 		}

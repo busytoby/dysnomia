@@ -71,7 +71,8 @@ namespace Dysnomia {
 
 	public ref class Tau : Epsilon {
 	public:
-		 Tau::Tau(BigInteger X) { this->Epsilon = X; }
+		Double Rho;
+		Tau::Tau(BigInteger X) { this->Epsilon = X; }
 	};
 
 	public ref class Dynamic : Epsilon
