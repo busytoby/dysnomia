@@ -19,12 +19,11 @@ namespace Dysnomia {
 					if (Beta->Count > 1) throw gcnew Exception("Cannot Charm");
 					Baryon^ Psi = gcnew Baryon(Beta, Beta[0]->I->R, Beta[0]->L[0]->L);
 					Add(Beta[0]->I, Psi);
-					Double M = Mass;
 
 					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
 					Tethys->Add(Beta[0]->I->R, this);
-					if (Neptune == nullptr) Neptune = gcnew Quark<Charm^, Nucleon^, Down^>(this, Beta[0]->L, Beta);
 					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Nucleon^, Charm^, Down^>(Beta[0]->L, this, Beta);
+					if (Neptune == nullptr) Neptune = gcnew Quark<Charm^, Nucleon^, Down^>(this, Beta[0]->L, Beta);
 				}
 			};
 		}
