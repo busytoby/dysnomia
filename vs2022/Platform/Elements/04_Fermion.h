@@ -33,10 +33,6 @@ namespace Dysnomia {
 								for (int j = Iota; j > -1; j--) {
 
 								}
-							else
-								for (int j = Iota; j < N->Xi->Count; j++) {
-
-								}
 						}
 						N[i]->I->Rho(Mass);
 						N->Omicron();
