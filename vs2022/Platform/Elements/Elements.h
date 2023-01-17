@@ -55,6 +55,7 @@ namespace Dysnomia {
 		public:
 			static property Dynamic^ MuB { Dynamic^ get() { return Hadron::MuB; }};
 			static property Affinity^ MuA { Affinity^ get() { return Hel::MuA; }};
+			static property Quark<Dynamic^, Dynamic^, Dynamic^>^ ZeroPerspectiveHelium { Quark<Dynamic^, Dynamic^, Dynamic^>^ get() { return Hel::ZeroPerspectiveHelium; }};
 			static property Quark<Hel^, Hadron^, Lith^>^ Corona { Quark<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
 //			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
