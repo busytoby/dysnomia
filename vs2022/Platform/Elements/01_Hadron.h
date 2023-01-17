@@ -12,15 +12,12 @@ namespace Dysnomia {
 			public:
 				static Hadron^ MuB;
 				virtual property Double Mass { Double get() override { return _Mass; }};
-				Double Mu;
 
 				Hadron() : Dynamic() {
 					if (MuB == nullptr) MuB = this;
-					Mu = Math::Mu;
 					_Mass = 0.5;
 				};
 				Hadron(Dynamic^ Beta) : Dynamic((Dynamic%)Beta) {
-					Mu = Math::Mu;
 					_Mass = 0.5;
 				};
 				void Phi(Hadron^ Beta) {

@@ -21,9 +21,6 @@ namespace Dysnomia {
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
-					for (int i = N->Count - 1; i > -1; i--) {
-						N[i]->I->Mu /= 3.141592;
-					}
 				}
 			};
 		}
