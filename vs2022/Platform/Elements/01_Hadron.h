@@ -10,10 +10,12 @@ namespace Dysnomia {
 			private:
 				Double _Mass;
 			public:
+				static Hadron^ MuB;
 				virtual property Double Mass { Double get() override { return _Mass; }};
 				Double Mu;
 
 				Hadron() : Dynamic() {
+					if (MuB == nullptr) MuB = this;
 					Mu = Math::Mu;
 					_Mass = 0.5;
 				};

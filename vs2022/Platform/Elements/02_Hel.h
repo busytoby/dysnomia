@@ -10,6 +10,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Hel : public Dai<Hadron^, Dynamic^> {
 			public:
+				static Affinity^ MuA;
 				Hel() {
 					this->Hel::Hel(gcnew Affinity());
 				}
@@ -22,6 +23,7 @@ namespace Dysnomia {
 					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
 					Mu->I->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
+					if (MuA == nullptr) MuA = Beta;
 				}
 			};
 		}
