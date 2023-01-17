@@ -15,14 +15,14 @@ namespace Dysnomia {
 					if (Corona != nullptr) throw gcnew Exception("Fermion Is Singular");
 					R->Last->I->Phi(I);
 					R->Add(I, N);
-					Chi(I, I->I);
+					Chi(I, R->Last->I);
 					Corona = this;
 				}
 
 				void Chi(Hadron^ Beta, Dynamic^ Pi) {
 					N->Add(Beta, Pi);
 					for (int i = N->Count - 1; i > -1; i--) {
-						N[i]->I->N->Rho();
+						N[i]->I->Mu /= 3.141592;
 					}
 				}
 			};

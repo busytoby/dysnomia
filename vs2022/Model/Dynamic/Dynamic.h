@@ -61,19 +61,6 @@ namespace Dysnomia {
 		}
 	};
 
-	public ref class Mu : Epsilon {
-	public:
-		Double Epsilon;
-
-		Mu::Mu(Double Y) { this->Epsilon = Y; }
-		void Mu::Rho() { this->Epsilon = this->Epsilon / 3.141592; }
-	};
-
-	public ref class Tau : Epsilon {
-	public:
-		Tau::Tau(BigInteger X) { this->Epsilon = X; }
-	};
-
 	public ref class Dynamic : Epsilon
 	{
 	private:

@@ -6,25 +6,24 @@ using Dysnomia::Epsilon;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Hadron : public Quark<Mu^, Dynamic^, Tau^> {
+			public ref class Hadron : public Dynamic {
 			private:
 				Double _Mass;
 			public:
 				virtual property Double Mass { Double get() override { return _Mass; }};
+				Double Mu;
 
-				Hadron() : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), gcnew Dynamic(), gcnew Tau(0)) {
-					this->Epsilon = I->Epsilon;
+				Hadron() : Dynamic() {
+					Mu = Math::Mu;
 					_Mass = 0.5;
 				};
-				Hadron(Dynamic^ Beta) : Quark<Mu^, Dynamic^, Tau^>(gcnew Mu(Math::Mu), Beta, gcnew Tau(0)) {
-					this->Epsilon = I->Epsilon;
+				Hadron(Dynamic^ Beta) : Dynamic((Dynamic%)Beta) {
+					Mu = Math::Mu;
 					_Mass = 0.5;
 				};
 				void Phi(Hadron^ Beta) {
-					if (!Beta->I->Barn.IsZero || !I->Barn.IsZero) throw gcnew Exception("Already Paired");
-					Affinity^ Pi = gcnew Affinity(Beta->I, I);
-					R->Epsilon = Pi->Cone->Tau;
-					Beta->R->Epsilon = Pi->Cone->Tau;
+					if (!Beta->Barn.IsZero || !Barn.IsZero) throw gcnew Exception("Already Paired");
+					Affinity^ Pi = gcnew Affinity(Beta, this);
 					_Mass += 0.5;
 					if (Mass != 1) throw gcnew Exception("Mass Failure");
 				}

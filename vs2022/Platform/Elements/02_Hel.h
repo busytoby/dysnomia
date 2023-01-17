@@ -11,15 +11,16 @@ namespace Dysnomia {
 			public ref class Hel : public Dai<Hadron^, Dynamic^> {
 			public:
 				Hel() {
-					Affinity^ Beta = gcnew Affinity();
-					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
-					Mu->I->R->Epsilon = Beta->Cone->Tau;
-					this->Epsilon = Mu->I->Epsilon;
+					this->Hel::Hel(gcnew Affinity());
+				}
+
+				Hel(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+					this->Hel::Hel(gcnew Affinity(Rho, Upsilon, Ohm, Xi));
 				}
 
 				Hel(Affinity^ Beta) {
 					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
-					Mu->I->R->Epsilon = Beta->Cone->Tau;
+					Mu->I->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 				}
 			};
