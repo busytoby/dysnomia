@@ -15,7 +15,6 @@ namespace Dysnomia {
 				Lith(Hadron^ Beta) {
 					Add(Beta, gcnew Hel());
 					if (Dipole == nullptr) Dipole = Mu;					
-					Double M = Mass;
 				}
 
 				void Add(Hadron^ Beta, Hel^ Pi) {
