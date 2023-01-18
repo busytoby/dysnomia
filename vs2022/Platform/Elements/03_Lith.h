@@ -13,6 +13,7 @@ namespace Dysnomia {
 				static Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>^ Quadrupole;
 
 				Lith(Hadron^ Beta) {
+					if (Dipole != nullptr) throw gcnew Exception("Monopole Requirement Failure");
 					Add(Beta, gcnew Hel());
 					if (Dipole == nullptr) Dipole = Mu;					
 				}
