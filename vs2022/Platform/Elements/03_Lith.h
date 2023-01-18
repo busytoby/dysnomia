@@ -18,6 +18,7 @@ namespace Dysnomia {
 				}
 
 				void Add(Hadron^ Beta, Hel^ Pi) {
+					if (Count >= 2) throw gcnew Exception("The Hyperfine Requirement Specifies No More Than A Quadrupole");
 					this->Dai<Hadron^, Hel^>::Add(Beta, Pi);
 					if (Count == 2) Quadrupole = gcnew Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>(Mu, Rho);
 				}
