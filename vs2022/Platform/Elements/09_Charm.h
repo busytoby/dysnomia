@@ -20,12 +20,12 @@ namespace Dysnomia {
 					Baryon^ Psi = gcnew Baryon(Beta);
 					Add(Beta[0]->I, Psi);
 
-//					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
-//					Tethys->Add(Beta[0]->I->R, this);
+					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
+					Tethys->Add(Beta[0]->I[3]->L, this);
 
 					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Nucleon^, Charm^, Down^>(Beta[0]->L, this, Beta);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Charm^, Nucleon^, Down^>(this, Beta[0]->L, Beta);
-//					if (Anthe == nullptr) Anthe = gcnew Quark<Down^, Lith^, Nucleon^>(Beta, Beta[0]->I->R, Beta[0]->L);
+					if (Anthe == nullptr) Anthe = gcnew Quark<Down^, Lith^, Nucleon^>(Beta, Beta[0]->I[2]->L, Beta[0]->L);
 				}
 			};
 		}
