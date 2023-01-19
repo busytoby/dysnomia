@@ -2,20 +2,18 @@
 
 using namespace System;
 using namespace System::Globalization;
-using namespace System::Numerics;
 using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	public ref class Math
 	{
-	private:
-		static void Math::Initialize_Random();
-		static bool rnd_Initialized = false;
-
 	public:
-		static BigInteger Prime;
-		static double Mu = 7712503;
-		static double Gamma = 2702765;
+		static Int64 Prime;
+		static Int64 Mu = 7712503;
+		static Int64 Gamma = 2702765;
+		static Int64 MotzkinPrime = 953467954114363;
+
+		/*
 		static BigInteger Tau = BigInteger::Parse("483D2FE51", NumberStyles::AllowHexSpecifier);
 
 		static BigInteger Delta = 4294967297;
@@ -32,7 +30,7 @@ namespace Dysnomia {
 			"01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" \
 			"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", NumberStyles::AllowHexSpecifier);
 
-		static BigInteger MotzkinPrime = BigInteger::Parse("03632C8EB5AF3B", NumberStyles::AllowHexSpecifier);
+		//static BigInteger MotzkinPrime = BigInteger::Parse("03632C8EB5AF3B", NumberStyles::AllowHexSpecifier);
 
 		// Second Prime In Catalan's Constant
 		static BigInteger CatalanPrime = BigInteger::Parse(
@@ -56,11 +54,13 @@ namespace Dysnomia {
 			"1C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C" \
 			"71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71C71" \
 			"C71C71C71C71C71C71C71C71C71C71C71C71C71C7", NumberStyles::AllowHexSpecifier);
+		*/
+		static Random^ rnd;
 
-		static Random rnd;
-
-		static BigInteger Random();
+		//static BigInteger Random();
+		static Int64 Random();
 		static String^ ByteArrayToHexString(array<Byte>^);
-		static BigInteger ModPow(BigInteger, BigInteger, BigInteger);
+		static Int64 ModPow(Int64 A, Int64 B, Int64 C);
+		//static BigInteger ModPow(BigInteger, BigInteger, BigInteger);
 	};
 }

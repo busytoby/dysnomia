@@ -16,7 +16,7 @@ namespace Dysnomia {
 			public:
 				static Quark<Sulfur^, Aether^, Iron^>^ Io;
 
-				BigInteger Dynamo;
+				Int64 Dynamo;
 				Manganese^ Beta;
 
 				Iron(Manganese^ Alpha) {

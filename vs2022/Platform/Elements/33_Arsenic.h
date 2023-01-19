@@ -10,7 +10,7 @@ namespace Dysnomia {
 				static Dai<Manganese^, Cobalt^>^ Thebe;
 				static Quark<Dysnomium^, Chromium^, Manganese^>^ Sao;
 
-				Arsenic(Cobalt^ Zeta, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+				Arsenic(Cobalt^ Zeta, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 					Phosphorous^ Alpha = gcnew Phosphorous(Zeta->Mu.Key->Mu.Key->N,	Rho, Upsilon, Ohm, Xi);
 					Calcium^ Delta = gcnew Calcium(Alpha);
 					Scandium^ Phi = gcnew Scandium(Delta->Mu.Value);

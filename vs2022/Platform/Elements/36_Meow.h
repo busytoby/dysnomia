@@ -14,7 +14,7 @@ namespace Dysnomia {
 				Cobalt^ Omicron;
 				Arsenic^ Alpha;
 
-				Meow(Copper^ Lambda, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+				Meow(Copper^ Lambda, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 					Beta = Lambda;
 					Cobalt^ Omicron = gcnew Cobalt(Beta->Mu.Value->Mu.Key->Beta);
 					Arsenic^ Alpha = gcnew Arsenic(Omicron, Rho, Upsilon, Ohm, Xi);

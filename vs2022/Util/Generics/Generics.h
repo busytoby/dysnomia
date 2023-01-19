@@ -2,7 +2,6 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 
 namespace Dysnomia {
 	generic <typename T1, typename T2>
@@ -34,8 +33,8 @@ namespace Dysnomia {
 	generic <typename T>
 	public ref class Shift : public List<T> {
 	public:
-		Shift(LinkedList<KeyValuePair<BigInteger, T>>^ In) {
-			for each(T V in RightShift<BigInteger, T>(In)) {
+		Shift(LinkedList<KeyValuePair<Int64, T>>^ In) {
+			for each(T V in RightShift<Int64, T>(In)) {
 				Add(V);
 			}
 		}

@@ -12,7 +12,7 @@ namespace Dysnomia {
 				static Dai<Coronium^, Silicon^>^ Jupiter19;
 				static Quark<Silicon^, Coronium^, Aluminium^>^ Thalassa;
 
-				Phosphorous(Aluminium^ Mu, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+				Phosphorous(Aluminium^ Mu, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Qi) {
 					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
 					for (int i = 0; i < Alpha->Count; i++)
 						Add(Alpha[i].Value, Alpha);
@@ -23,7 +23,7 @@ namespace Dysnomia {
 					if (Thalassa == nullptr) Thalassa = gcnew Quark<Silicon^, Coronium^, Aluminium^>(Alpha, Alpha->Mu.Value, Mu);
 				}
 
-				Coronium^ Retain(BigInteger Qi, Silicon^ Alpha) {
+				Coronium^ Retain(Int64 Qi, Silicon^ Alpha) {
 					Coronium^ Iota = Alpha->Contain(Qi);
 					Add(Iota, Alpha);
 					return Iota;

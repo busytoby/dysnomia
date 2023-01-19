@@ -13,11 +13,11 @@ namespace Dysnomia {
         I = X;
         R = Z;
 
-        if (!N->Epsilon.IsZero)
+        if (!N->Epsilon == 0)
             this->Epsilon = N->Epsilon;
-        else if (!I->Epsilon.IsZero)
+        else if (!I->Epsilon == 0)
             this->Epsilon = I->Epsilon;
-        else if (!R->Epsilon.IsZero)
+        else if (!R->Epsilon == 0)
             this->Epsilon = R->Epsilon;
         else throw gcnew Exception("Zero Epsilons");
     }

@@ -3,7 +3,6 @@
 using namespace Dysnomia::Platform::Interfaces;
 using namespace System;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -14,10 +13,10 @@ namespace Dysnomia {
 				static Affinity^ MuA;
 				Hel() {
 					this->Hel::Hel(gcnew Affinity());
-					if (ZeroPerspectiveHelium == nullptr) ZeroPerspectiveHelium = gcnew Quark<Dynamic^, Dynamic^, Dynamic^>(this[0]->I, this[0]->L, nullptr);
+					if (ZeroPerspectiveTraction == nullptr) ZeroPerspectiveTraction = gcnew Quark<Dynamic^, Dynamic^, Dynamic^>(this[0]->I, this[0]->L, nullptr);
 				}
 
-				Hel(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+				Hel(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 					this->Hel::Hel(gcnew Affinity(Rho, Upsilon, Ohm, Xi));
 				}
 

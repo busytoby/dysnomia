@@ -26,7 +26,7 @@ namespace Dysnomia {
 
 	Affinity::Affinity(Dynamic^ Rod, Dynamic^ Cone) {
 		try {
-			if(!Rod->Barn.IsZero || !Cone->Barn.IsZero) throw gcnew AffinityException(4, "Affinity Already Paired");
+			if(!Rod->Barn == 0 || !Cone->Barn == 0) throw gcnew AffinityException(4, "Affinity Already Paired");
 			this->Rod = Rod;
 			this->Cone = Cone;
 			OpenManifolds();
@@ -40,20 +40,20 @@ namespace Dysnomia {
 		this->Epsilon = Math::ModPow(Cone->Signal, Rod->Channel, Math::Prime);
 	}
 
-	Affinity::Affinity(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+	Affinity::Affinity(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 		Rod = gcnew Dynamic();
 		Cone = gcnew Dynamic();
 		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 	}
 
-	Affinity::Affinity(Dynamic^ N, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+	Affinity::Affinity(Dynamic^ N, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 		Rod = N;
-		if (!Rod->Barn.IsZero) throw gcnew Exception("Rod Already Paired");
+		if (!Rod->Barn == 0) throw gcnew Exception("Rod Already Paired");
 		Cone = gcnew Dynamic();
 		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 	}
 
-	void Affinity::FuseAndOpen(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Xi) {
+	void Affinity::FuseAndOpen(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 		Cone->Fuse(Rho, Upsilon, Ohm);
 		Cone->Tune();
 		OpenManifolds(Xi);
@@ -65,7 +65,7 @@ namespace Dysnomia {
 		OpenManifolds(Xi);
 	}
 
-	void Affinity::ConductorGenerate(BigInteger Xi) {
+	void Affinity::ConductorGenerate(Int64 Xi) {
 		Phi = Rod->Avail(Xi);
 		Cone->Tau = Cone->Avail(Xi);
 		
@@ -76,7 +76,7 @@ namespace Dysnomia {
 		Cone->Polarize();
 	}
 
-	void Affinity::OpenManifolds(BigInteger Xi) {
+	void Affinity::OpenManifolds(Int64 Xi) {
 		ConductorGenerate(Xi);
 
 		Rod->Conjugate(Cone->Pole);
@@ -110,7 +110,8 @@ namespace Dysnomia {
 	}
 
 	// Hash Function
-	BigInteger Affinity::WaveFunction(String^ Psi)
+	/*
+	Int64 Affinity::WaveFunction(String^ Psi)
 	{
 		array<Byte>^ dataBytes = System::Text::Encoding::UTF8->GetBytes(Psi);
 		int blocksize = Cone->Element.ToByteArray()->Length;
@@ -120,18 +121,19 @@ namespace Dysnomia {
 		ArraySegment<Byte>^ segment = gcnew ArraySegment<Byte>(dataBytes, 0, blocksize);
 		array<Byte>^ segmentarray = gcnew array<Byte>(segment->Count);
 		Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-		BigInteger Hash = Math::ModPow(Cone->Barn, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
+		Int64 Hash = Math::ModPow(Cone->Barn, Int64::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		for (int i = blocksize; i < dataBytes->Length; i += blocksize)
 		{
 			int thisblocksize = (i + blocksize > dataBytes->Length) ? dataBytes->Length - i : blocksize;
 			segment = gcnew ArraySegment<Byte>(dataBytes, i, thisblocksize);
 			segmentarray = gcnew array<Byte>(segment->Count);
 			Array::Copy(segment->Array, segment->Offset, segmentarray, 0, segment->Count);
-			Hash = Math::ModPow(Hash, BigInteger::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
+			Hash = Math::ModPow(Hash, Int64::Parse(Math::ByteArrayToHexString(segmentarray), NumberStyles::AllowHexSpecifier), Rod->Manifold);
 		}
-		if (BigInteger::IsNegative(Hash)) Hash = Hash * -1;
+		if (Int64::IsNegative(Hash)) Hash = Hash * -1;
 		return Hash;
 	}
+	*/
 
 	/*
 	void Affinity::Charge(BigInteger Signal) {

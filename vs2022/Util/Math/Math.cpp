@@ -3,10 +3,7 @@
 #include "Math.h"
 
 namespace Dysnomia {
-    void Math::Initialize_Random() {
-        rnd_Initialized = true;
-    }
-
+    /*
 	BigInteger Math::Random() {
         if (Prime.IsZero) throw gcnew Exception("Prime Undeclared");
         array<System::Byte>^ bytes = Prime.ToByteArray();
@@ -21,6 +18,12 @@ namespace Dysnomia {
 
 		return R;
 	}
+    */
+
+    Int64 Math::Random() { 
+        if (rnd == nullptr) rnd = gcnew System::Random();
+        return rnd->NextInt64(); 
+    }
 
     String^ Math::ByteArrayToHexString(array<Byte>^ Bytes) {
         System::Text::StringBuilder sb;
@@ -32,6 +35,18 @@ namespace Dysnomia {
         return sb.ToString();
     }
 
+    Int64 Math::ModPow(Int64 A, Int64 B, Int64 C) {
+        Int64 Result = Int64::Abs(A) ^ Int64::Abs(B) % Int64::Abs(C);
+        bool Negative = false;
+        if (Int64::IsNegative(A)) Negative = !Negative;
+        if (Int64::IsNegative(B)) Negative = !Negative;
+        if (Int64::IsNegative(C)) Negative = !Negative;
+        if (Negative) Result = Result * -1;
+
+        return Result;
+    }
+
+    /*
     BigInteger Math::ModPow(BigInteger A, BigInteger B, BigInteger C) {
         BigInteger Result = BigInteger::ModPow(BigInteger::Abs(A), BigInteger::Abs(B), BigInteger::Abs(C));
         bool Negative = false;
@@ -42,4 +57,5 @@ namespace Dysnomia {
 
         return Result;
     }
+    */
 }

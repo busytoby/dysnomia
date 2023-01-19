@@ -20,7 +20,7 @@ namespace Dysnomia {
 					if (Trinculo == nullptr) Trinculo = gcnew Quark<Meow^, Qiao^, Blong^>(Psi, Rho, Nu);
 				};
 
-				BigInteger Gamma() {
+				Int64 Gamma() {
 					return Math::ModPow(
 						N->N->Mu.Key->Mu.Key->N->N->N->N->Mu.Value->Mu.Value->Xi,
 						R->Mu.Value->L->Mu.Value->Mu.Value->L->Mu.Value->Xi,

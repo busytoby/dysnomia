@@ -2,15 +2,14 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Wou {
 			public ref class Constants abstract sealed {
 			public:
-				static List<BigInteger>^ Evidences;
-				static property BigInteger Last { BigInteger get() { return Evidences[Evidences->Count - 1]; }}
+				static List<Int64>^ Evidences;
+				static property Int64 Last { Int64 get() { return Evidences[Evidences->Count - 1]; }}
 /*
 				static property BigInteger Mu { BigInteger get() { return Objects::Uranus->L->Rod->Barn; }};
 				static property BigInteger Rho { BigInteger get() { return Objects::Tethys->Mu.Value->Mu.Value->Phi->N->Manifold; }};
@@ -23,7 +22,7 @@ namespace Dysnomia {
 				static property BigInteger Theta { BigInteger get() { return BigInteger::Add(Constants::Last, Constants::Tau); }}
 */
 				static Constants() {
-					Evidences = gcnew List<BigInteger>();
+					Evidences = gcnew List<Int64>();
 				}
 			};
 		}

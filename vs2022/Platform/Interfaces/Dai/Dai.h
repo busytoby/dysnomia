@@ -2,7 +2,6 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {
@@ -41,8 +40,8 @@ namespace Dysnomia {
 
 				void Add(T1 A, T2 B) { 
 					Alpha->Add(gcnew Chi<T1, T2>(A, B));
-					if (A->Epsilon.IsZero || B->Epsilon.IsZero) throw gcnew Exception("Zero Epsilon");
-					this->Epsilon = BigInteger::Add(this->Epsilon, BigInteger::Add(A->Epsilon, B->Epsilon)); 
+					if (A->Epsilon == 0 || B->Epsilon == 0) throw gcnew Exception("Zero Epsilon");
+					this->Epsilon = this->Epsilon + A->Epsilon + B->Epsilon; 
 				}
 				void Remove(Chi<T1, T2>^ M) {
 					Alpha->Remove(M);

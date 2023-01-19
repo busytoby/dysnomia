@@ -15,11 +15,11 @@ namespace Dysnomia {
 					}
 				}
 
-				BigInteger Evidence() {
+				Int64 Evidence() {
 					return Math::ModPow(L->Phi->N->Identity, N->Mu.Value->Mu.Key->Phi->N->Ring, R->Rod->Barn);
 				}
 
-				BigInteger Testify(BigInteger Phi) {
+				Int64 Testify(Int64 Phi) {
 					return Math::ModPow(Phi, N->Mu.Value->Mu.Key->Phi->N->Ring, R->Cone->Barn);
 				}
 			};

@@ -21,7 +21,7 @@ namespace Dysnomia {
 					_Mass = 0.5;
 				};
 				void Phi(Hadron^ Beta) {
-					if (!Beta->Barn.IsZero || !Barn.IsZero) throw gcnew Exception("Already Paired");
+					if (!Beta->Barn == 0 || !Barn == 0) throw gcnew Exception("Already Paired");
 					Affinity^ Pi = gcnew Affinity(Beta, this);
 					_Mass += 0.5;
 					if (Mass != 1) throw gcnew Exception("Mass Failure");

@@ -6,7 +6,6 @@
 using namespace System;
 using namespace System::Drawing;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 using namespace Dysnomia::Platform;
 
 namespace Dysnomia {
@@ -34,11 +33,11 @@ namespace Dysnomia {
 					Hue = Pi->Hue;
 				}
 
-				BigInteger Grow() {
+				Int64 Grow() {
 					Add(Last.Key, Last.Value);
-					BigInteger T = 0;
+					Int64 T = 0;
 					for (int i = 0; i < Count; i++) {
-						T = BigInteger::Add(T, this[i].Value->Phi->N->Barn);
+						T = T + this[i].Value->Phi->N->Barn;
 					}
 					return T;
 				}

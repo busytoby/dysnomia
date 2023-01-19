@@ -13,7 +13,7 @@ namespace Dysnomia {
 
 	Dynamic::Dynamic(const Dynamic% Copier) {
 		Base = Copier.Base;
-		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(5, "Negative Clone Base");
+		if (Int64::IsNegative(Base)) throw gcnew DynamicException(5, "Negative Clone Base");
 		Secret = Copier.Secret;
 		Signal = Copier.Signal;
 		Channel = Copier.Channel;
@@ -42,34 +42,34 @@ namespace Dysnomia {
 	void Dynamic::Seed()
 	{
 		Base = Math::Random();
-		if (BigInteger::IsNegative(Base)) Base = Base * -1;
+		if (Int64::IsNegative(Base)) Base = Base * -1;
 		Secret = Math::Random();
 		Signal = Math::Random();
-		if (BigInteger::IsNegative(Signal)) Signal = Signal * -1;
+		if (Int64::IsNegative(Signal)) Signal = Signal * -1;
 	}
 
 	void Dynamic::Tune()
 	{
 		Channel = Math::ModPow(Base, Signal, Math::Prime);
-		if (BigInteger::IsNegative(Channel)) throw gcnew DynamicException(1, "Pulsar Exception");
+		if (Int64::IsNegative(Channel)) throw gcnew DynamicException(1, "Pulsar Exception");
 	}
 
-	void Dynamic::Fuse(BigInteger Rho, BigInteger Upsilon, BigInteger Ohm) {
+	void Dynamic::Fuse(Int64 Rho, Int64 Upsilon, Int64 Ohm) {
 		Base = Upsilon;
-		if (BigInteger::IsNegative(Base)) throw gcnew DynamicException(3, "Negative Fusion Base");
+		if (Int64::IsNegative(Base)) throw gcnew DynamicException(3, "Negative Fusion Base");
 		Secret = Ohm;
 		Signal = Rho;
 	}
 
-	BigInteger Dynamic::Avail(BigInteger Xi)
+	Int64 Dynamic::Avail(Int64 Xi)
 	{
 		return Math::ModPow(Xi, Secret, Math::Prime);
 	}
 
-	void Dynamic::Form(BigInteger Nu)
+	void Dynamic::Form(Int64 Nu)
 	{
 		Base = Math::ModPow(Nu, Secret, Math::Prime);
-		if (BigInteger::IsNegative(Base)) Base = Base * -1;
+		if (Int64::IsNegative(Base)) Base = Base * -1;
 		Tune();
 	}
 
@@ -78,7 +78,7 @@ namespace Dysnomia {
 		Pole = Math::ModPow(Base, Secret, Math::Prime);
 	}
 
-	void Dynamic::Conjugate(BigInteger% Nu)
+	void Dynamic::Conjugate(Int64% Nu)
 	{
 		Coordinate = Math::ModPow(Nu, Secret, Math::Prime);
 		Nu = 0;
@@ -86,38 +86,38 @@ namespace Dysnomia {
 
 	void Dynamic::Conify()
 	{
-		if (!Nu.IsZero) throw gcnew Exception("Already Conified");
+		if (!Nu == 0) throw gcnew Exception("Already Conified");
 		Identity = Math::Random();
-		if (BigInteger::IsNegative(Identity)) Identity = Identity * -1;
+		if (Int64::IsNegative(Identity)) Identity = Identity * -1;
 		Foundation = Math::ModPow(Base, Identity, Math::Prime);
-		if (BigInteger::IsNegative(Foundation)) throw gcnew DynamicException(7, "Negative Foundation");
+		if (Int64::IsNegative(Foundation)) throw gcnew DynamicException(7, "Negative Foundation");
 		Nu = 1;
 	}
 
-	BigInteger Dynamic::Saturate(BigInteger Epsilon, BigInteger Theta)
+	Int64 Dynamic::Saturate(Int64 Epsilon, Int64 Theta)
 	{
-		if (Nu.IsZero)
+		if (Nu == 0)
 		{
 			Identity = Math::Random();
 			Foundation = Math::ModPow(Base, Identity, Math::Prime);
 		}
 		else if (Nu != (long long) 1) throw gcnew DynamicException(10, "Cone Nu Exception");
 
-		// BigInteger Gamma, Kappa
-		BigInteger Beta, Rho, Eta, Phi;
+		// Int64 Gamma, Kappa
+		Int64 Beta, Rho, Eta, Phi;
 
 		Beta = Math::ModPow(Epsilon, Identity, Math::Prime);
 		Rho = Math::ModPow(Theta, Identity, Math::Prime);
 		Eta = Math::ModPow(Epsilon, Signal, Math::Prime);
 
-		Phi = BigInteger::Add(Rho, Eta);
-		Element = BigInteger::Add(Beta, Phi);
+		Phi = Rho + Eta;
+		Element = Beta + Phi;
 
 		// Principal Uncertainty
 		//Gamma = Math::ModPow(Theta, Signal, Math::Prime);
-		//Kappa = BigInteger::Add(Element, Gamma);
+		//Kappa = Element + Gamma;
 
-		if (Nu.IsZero)
+		if (Nu == 0)
 			Mu = Beta;
 		else if (Nu != (long long) 1) throw gcnew DynamicException(10, "Cone Nu Exception");
 		else
@@ -132,7 +132,7 @@ namespace Dysnomia {
 		Pole = 0;
 	}
 
-	void Dynamic::Adduct(BigInteger Phi)
+	void Dynamic::Adduct(Int64 Phi)
 	{
 		Manifold = Math::ModPow(Phi, Signal, Element);
 	}
@@ -146,12 +146,12 @@ namespace Dysnomia {
 	bool Dynamic::ManifoldCompare(Dynamic^ Rod)
 	{
 		if (Secret == Rod->Secret || Signal == Rod->Signal || Channel == Rod->Channel ||
-			!Pole.IsZero || !Rod->Pole.IsZero || Dynamo == Rod->Dynamo) {
+			!Pole == 0 || !Rod->Pole == 0 || Dynamo == Rod->Dynamo) {
 			Seed(); return false;
 		}
 
 
-		if (Manifold.IsZero || Ring.IsZero || Barn.IsZero)
+		if (Manifold == 0 || Ring == 0 || Barn == 0)
 		{
 			Seed(); return false;
 		}
@@ -162,23 +162,23 @@ namespace Dysnomia {
 			Barn == Rod->Barn);
 	}
 
-	BigInteger Dynamic::Charge(BigInteger Psi, bool Decay)
+	Int64 Dynamic::Charge(Int64 Psi, bool Decay)
 	{
-		BigInteger _barn = Math::ModPow(Barn, Psi, Ring);
+		Int64 _barn = Math::ModPow(Barn, Psi, Ring);
 		if (Decay == false) Barn = _barn;
 		return _barn;
 	}
 
-	BigInteger Dynamic::Induce(BigInteger Sigma, bool Decay)
+	Int64 Dynamic::Induce(Int64 Sigma, bool Decay)
 	{
-		BigInteger _ring = Math::ModPow(Sigma, Manifold, Ring);
+		Int64 _ring = Math::ModPow(Sigma, Manifold, Ring);
 		if (Decay == false) Ring = _ring;
 		return _ring;
 	}
 
-	BigInteger Dynamic::Torque(BigInteger Sigma, bool Critical)
+	Int64 Dynamic::Torque(Int64 Sigma, bool Critical)
 	{
-		BigInteger _channel;
+		Int64 _channel;
 		if (Critical)
 			_channel = Manifold;
 		else
@@ -186,17 +186,17 @@ namespace Dysnomia {
 		return Math::ModPow(Sigma, Element, _channel);
 	}
 
-	BigInteger Dynamic::Amplify(BigInteger Upsilon, bool Critical)
+	Int64 Dynamic::Amplify(Int64 Upsilon, bool Critical)
 	{
 		return Torque(Upsilon, Critical);
 	}
 
-	BigInteger Dynamic::Sustain(BigInteger Ohm, bool Critical)
+	Int64 Dynamic::Sustain(Int64 Ohm, bool Critical)
 	{
 		return Torque(Ohm, Critical);
 	}
 
-	void Dynamic::React(BigInteger Pi, BigInteger Theta)
+	void Dynamic::React(Int64 Pi, Int64 Theta)
 	{
 		Eta = Math::ModPow(Pi, Channel, Theta);
 		Nu = Math::ModPow(Pi, Theta, Channel);

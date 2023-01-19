@@ -2,7 +2,6 @@
 
 using namespace System;
 using namespace System::Collections::Generic;
-using namespace System::Numerics;
 using Dysnomia::Math;
 
 namespace Dysnomia {

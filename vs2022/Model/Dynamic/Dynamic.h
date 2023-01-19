@@ -5,7 +5,6 @@ Ordered Pairs:
 */
 
 using namespace System;
-using namespace System::Numerics;
 using namespace System::Collections::Generic;
 using namespace System::Reflection;
 
@@ -24,11 +23,11 @@ namespace Dysnomia {
 	public ref class Epsilon {
 	public:
 		virtual property Double Mass { Double get() { return 0.0; }};
-		BigInteger Epsilon;
+		Int64 Epsilon;
 
 		void FindKeys(List<Dysnomia::Epsilon^>^ R, String^ _Type) {
 			for each (FieldInfo^ F in this->GetType()->GetFields(BindingFlags::Instance | BindingFlags::Public | BindingFlags::NonPublic)) {
-				if (F->FieldType->Name == "BigInteger" || F->FieldType->Name == "Color") continue;
+				if (F->FieldType->Name == "Int64" || F->FieldType->Name == "Color") continue;
 				Object^ V = F->GetValue(this);
 				if (V == nullptr)
 					continue;
@@ -68,28 +67,28 @@ namespace Dysnomia {
 		void Seed();
 
 	public:
-		BigInteger Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn, Coordinate;
-		BigInteger Tau, Mu, Eta, Nu, Rho, Alpha;
+		Int64 Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn, Coordinate;
+		Int64 Tau, Mu, Eta, Nu, Rho, Alpha;
 
 		Dynamic();
 		Dynamic(const Dynamic%);
 		void Tune();
-		void Fuse(BigInteger, BigInteger, BigInteger);
-		BigInteger Avail(BigInteger);
-		void Form(BigInteger);
+		void Fuse(Int64, Int64, Int64);
+		Int64 Avail(Int64);
+		void Form(Int64);
 		void Polarize();
-		void Conjugate(BigInteger%);
+		void Conjugate(Int64%);
 		void Conify();
-		BigInteger Saturate(BigInteger, BigInteger);
+		Int64 Saturate(Int64, Int64);
 		void Bond();
-		void Adduct(BigInteger);
+		void Adduct(Int64);
 		void Open();
 		bool ManifoldCompare(Dynamic^);
-		BigInteger Charge(BigInteger, bool);
-		BigInteger Induce(BigInteger, bool);
-		BigInteger Torque(BigInteger, bool);
-		BigInteger Amplify(BigInteger, bool);
-		BigInteger Sustain(BigInteger, bool);
-		void React(BigInteger, BigInteger);
+		Int64 Charge(Int64, bool);
+		Int64 Induce(Int64, bool);
+		Int64 Torque(Int64, bool);
+		Int64 Amplify(Int64, bool);
+		Int64 Sustain(Int64, bool);
+		void React(Int64, Int64);
 	};
 }

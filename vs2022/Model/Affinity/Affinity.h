@@ -1,7 +1,6 @@
 #pragma once
 
 using namespace System;
-using namespace System::Numerics;
 using namespace System::Collections::Generic;
 
 namespace Dysnomia {
@@ -19,29 +18,29 @@ namespace Dysnomia {
 	public ref class Affinity : Epsilon
 	{
 	private:
-		void ConductorGenerate(BigInteger);
+		void ConductorGenerate(Int64);
 		void OpenManifolds();
 		void Ratchet();
 
 	public:
 		Dynamic^ Rod;
 		Dynamic^ Cone;
-		BigInteger Phi, Eta, Mu, /* Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega */ Xi;
+		Int64 Phi, Eta, Mu, /* Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega */ Xi;
 
 		Affinity();
 		Affinity::Affinity(Dynamic^, Dynamic^);
-		Affinity::Affinity(BigInteger, BigInteger, BigInteger, BigInteger);
-		Affinity::Affinity(Dynamic^, BigInteger, BigInteger, BigInteger, BigInteger);
-		void FuseAndOpen(BigInteger, BigInteger, BigInteger, BigInteger);
-		void OpenManifolds(BigInteger);
-		BigInteger WaveFunction(String^);
+		Affinity::Affinity(Int64, Int64, Int64, Int64);
+		Affinity::Affinity(Dynamic^, Int64, Int64, Int64, Int64);
+		void FuseAndOpen(Int64, Int64, Int64, Int64);
+		void OpenManifolds(Int64);
+		//Int64 WaveFunction(String^);
 		/*
-		void Charge(BigInteger);
-		void Induce(BigInteger);
-		void Torque(BigInteger);
-		void Amplify(BigInteger, bool);
-		void Sustain(BigInteger, bool);
-		void React(BigInteger);
+		void Charge(Int64);
+		void Induce(Int64);
+		void Torque(Int64);
+		void Amplify(Int64, bool);
+		void Sustain(Int64, bool);
+		void React(Int64);
 		array<Affinity^>^ Denature();
 		*/
 	};

@@ -3,7 +3,6 @@
 #include "Wou.h"
 
 #include <assert.h>
-using namespace System::Numerics;
 using namespace System::Drawing;
 using namespace Dysnomia::Platform::Wou;
 using namespace Dysnomia::Platform::Elements;

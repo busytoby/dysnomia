@@ -1,7 +1,6 @@
 #pragma once
 #include "Constants.h"
 
-using namespace System::Numerics;
 
 namespace Dysnomia {
 	namespace Platform {

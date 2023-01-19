@@ -13,7 +13,7 @@ namespace Dysnomia {
 				static Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel;
 				static Quark<Carbon^, Coronium^, Carbon^>^ Ariel;
 				static Quark<Coronium^, Coronium^, Carbon^>^ Prospero;
-				property BigInteger Evidence { BigInteger get() { return Last.Value->R->R->Xi; }};
+				property Int64 Evidence { Int64 get() { return Last.Value->R->R->Xi; }};
 
 				Aluminium^ Zeta;
 
@@ -21,7 +21,7 @@ namespace Dysnomia {
 					Add(Delta, Eta);
 				}
 
-				Silicon(Aluminium^ Alpha, BigInteger Rho, BigInteger Upsilon, BigInteger Ohm, BigInteger Qi) {
+				Silicon(Aluminium^ Alpha, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Qi) {
 					Zeta = Alpha;
 					Carbon^ Beta = gcnew Carbon(Rho, Upsilon, Ohm, Qi);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
@@ -32,7 +32,7 @@ namespace Dysnomia {
 					if(Enceladus == nullptr) Enceladus = this;
 				}
 
-				Coronium^ Contain(BigInteger Epsilon) {
+				Coronium^ Contain(Int64 Epsilon) {
 					Carbon^ Beta = gcnew Carbon(Epsilon, Zeta->N->Mu.Value->Mu.Value->Rod->Identity, Zeta->L->Phi->N->Ring, ((Beryllium^)Zeta->L->Pi->R)->Cone->Barn);
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
