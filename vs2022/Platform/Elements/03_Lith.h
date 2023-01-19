@@ -9,19 +9,10 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Lith : public Dai<Hadron^, Hel^> {
 			public:
-				static Chi<Hadron^, Hel^>^ Dipole;
-				static Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>^ Quadrupole;
-
-				Lith(Hadron^ Beta) {
-					if (Dipole != nullptr) throw gcnew Exception("Monopole Requirement Failure");
-					Add(Beta, gcnew Hel());
-					if (Dipole == nullptr) Dipole = Mu;					
-				}
-
-				void Add(Hadron^ Beta, Hel^ Pi) {
-					if (Count >= 2) throw gcnew Exception("The Hyperfine Requirement Specifies No More Than A Quadrupole");
-					this->Dai<Hadron^, Hel^>::Add(Beta, Pi);
-					if (Count == 2) Quadrupole = gcnew Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>(Mu, Rho);
+				Lith(Hel^ Beta) {
+					if (Beta->Last->I->Barn != 0 || Beta->Last->L->Barn != 0) throw gcnew Exception("Already Paired");
+					Affinity^ Pi = gcnew Affinity(Beta->Last->I, Beta->Last->L);
+					Add(gcnew Hadron(), Beta);
 				}
 			};
 		}

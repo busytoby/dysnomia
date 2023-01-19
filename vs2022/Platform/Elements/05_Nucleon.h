@@ -5,11 +5,14 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Nucleon : public Dai<Fermion^, Hel^> {
+			public ref class Nucleon : public Dai<Lith^, Fermion^> {
 			public:
 				Nucleon(Fermion^ Beta) {
-					Add(Beta, gcnew Hel());
-					Beta->Chi(Mu->L->Mu->I, Mu->L->Mu->L);
+					Hel^ Pi = gcnew Hel(Beta->Last->I);
+					Lith^ Xi = gcnew Lith(Pi);
+					Fermion^ Omicron = gcnew Fermion(Xi);
+					Add(Xi, Beta);
+					Add(Xi, Omicron);
 				}
 			};
 		}

@@ -7,13 +7,17 @@ using namespace System::Collections::Generic;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Hel : public Dai<Hadron^, Dynamic^> {
+			public ref class Hel : public Dai<Hadron^, Hadron^> {
 			public:
-				static Quark<Dynamic^, Dynamic^, Dynamic^>^ ZeroPerspectiveTraction;
 				static Affinity^ MuA;
 				Hel() {
-					this->Hel::Hel(gcnew Affinity());
-					if (ZeroPerspectiveTraction == nullptr) ZeroPerspectiveTraction = gcnew Quark<Dynamic^, Dynamic^, Dynamic^>(this[0]->I, this[0]->L, nullptr);
+					Add(gcnew Hadron(), gcnew Hadron());
+					this->Epsilon = Mu->I->Epsilon;
+				}
+
+				Hel(Hadron^ Beta) {
+					Add(Beta, gcnew Hadron());
+					this->Epsilon = Mu->I->Epsilon;
 				}
 
 				Hel(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
@@ -21,7 +25,7 @@ namespace Dysnomia {
 				}
 
 				Hel(Affinity^ Beta) {
-					Add(gcnew Hadron(Beta->Rod), Beta->Cone);
+					Add(gcnew Hadron(Beta->Rod), gcnew Hadron(Beta->Cone));
 					Mu->I->Epsilon = Beta->Cone->Tau;
 					this->Epsilon = Mu->I->Epsilon;
 					if (MuA == nullptr) MuA = Beta;
