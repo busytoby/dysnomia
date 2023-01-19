@@ -10,7 +10,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Hel : public Dai<Hadron^, Dynamic^> {
 			public:
-				static Quark<Dynamic^, Dynamic^, Dynamic^>^ ZeroPerspectiveHelium;
+				static Quark<Dynamic^, Dynamic^, Dynamic^>^ ZeroPerspectiveTraction;
 				static Affinity^ MuA;
 				Hel() {
 					this->Hel::Hel(gcnew Affinity());
