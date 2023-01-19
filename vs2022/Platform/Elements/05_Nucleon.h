@@ -12,6 +12,11 @@ namespace Dysnomia {
 					Lith^ Xi = gcnew Lith(Pi);
 					Fermion^ Omicron = gcnew Fermion(Xi);
 					Add(Xi, Omicron);
+
+					Beta->Add(Pi->Mu->I, Omicron->Mu->L);
+					for (int i = 0; i < Beta->Count; i++) {
+						Omicron->Add(Pi->Mu->L, Beta[i]->L);
+					}
 				}
 			};
 		}
