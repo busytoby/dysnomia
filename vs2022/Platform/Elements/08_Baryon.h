@@ -19,7 +19,7 @@ namespace Dysnomia {
 						Beta[0]->L[0]->L[6]->L[0]->I->Channel);
 
 					Add(Omicron, Beta);
-					Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->I, Omicron[0]->I);
+					Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Omicron[0]->L);
 				}
 			};
 		}
