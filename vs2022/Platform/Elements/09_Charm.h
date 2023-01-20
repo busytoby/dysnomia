@@ -19,7 +19,7 @@ namespace Dysnomia {
 					if (Beta->Count > 1) throw gcnew Exception("Cannot Charm");
 					Strange^ Pi = gcnew Strange(Beta[0]->L[0]->L[2]->I);
 					Baryon^ Xi = gcnew Baryon(Beta);
-					Xi->Add(Pi[0]->L->I, Xi->Last->L);
+					Xi->Add(Pi[0]->L->I, Beta);
 					Add(Beta[0]->I, Xi);
 
 					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();

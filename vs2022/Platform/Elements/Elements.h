@@ -56,10 +56,7 @@ namespace Dysnomia {
 		public:
 			static property Dynamic^ MuB { Dynamic^ get() { return Hadron::MuB; }};
 			static property Affinity^ MuA { Affinity^ get() { return Hel::MuA; }};
-//			static property Quark<Dynamic^, Dynamic^, Dynamic^>^ ZeroPerspectiveTraction { Quark<Dynamic^, Dynamic^, Dynamic^>^ get() { return Hel::ZeroPerspectiveTraction; }};
-//			static property Chi<Hadron^, Hel^>^ Dipole { Chi<Hadron^, Hel^>^ get() { return Lith::Dipole; }};
-//			static property Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>^ Quadrupole { Tuple<Chi<Hadron^, Hel^>^, Chi<Hadron^, Hel^>^>^ get() { return Lith::Quadrupole; }};
-//			static property Quark<Hel^, Hadron^, Lith^>^ Corona { Quark<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
+			static property Quark<Hel^, Hadron^, Lith^>^ Corona { Quark<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
 //			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
 			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Down::Uranus; }};

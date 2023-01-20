@@ -9,12 +9,15 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Fermion : public Dai<Hadron^, Lith^> {
 			public:
+				static Quark<Hel^, Hadron^, Lith^>^ Corona;
+
 				Fermion(Lith^ Xi) {
 					Add(Xi->Last->I, Xi);
 					Hel^ Beta = gcnew Hel(Mu->I);
 					Lith^ Pi = gcnew Lith(Beta);
 					Add(Xi->Last->I, Pi);
 					Add(Pi->Last->I, Pi);
+					if (Corona == nullptr) Corona = gcnew Quark<Hel^, Hadron^, Lith^>(Xi->Mu->L, Pi->Mu->I, Pi);
 				}
 			};
 		}
