@@ -10,16 +10,19 @@ namespace Dysnomia {
 				static Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp;
 
 				Baryon(Down^ Beta) {
-					if (Hippocamp != nullptr) throw gcnew Exception("Baryon Is Singular");
+					Hel^ Pi = gcnew Hel();
+					Lith^ Xi = gcnew Lith(Pi);
+					Affinity^ Omicron = gcnew Affinity(Xi[0]->I, Beta[0]->L[0]->L[1]->L[0]->I);
+					Add(Pi, Beta);
 
-					Hel^ Omicron = gcnew Hel(
-						Beta[0]->I[3]->L[0]->I->Base,
+					Hel^ Delta = gcnew Hel(
+						Beta[0]->I[1]->L[0]->I->Base,
 						Beta[0]->I[1]->I->Secret,
-						Beta[0]->L[0]->I[0]->I->Signal,
-						Beta[0]->L[0]->L[6]->L[0]->I->Channel);
+						Beta[0]->L[0]->L[0]->I->Signal,
+						Beta[0]->L[0]->L[1]->L[0]->I->Channel);
+					Add(Delta, Beta);
 
-					Add(Omicron, Beta);
-					Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Omicron[0]->L);
+					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Delta[0]->L);
 				}
 			};
 		}
