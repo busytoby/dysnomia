@@ -10,16 +10,19 @@ namespace Dysnomia {
 			public:
 				Int64 Pole;
 
-				Nitrogen(Hadron^ X, Hel^ C, Hadron^ Y) : Quark(C->Rod, gcnew Affinity(X, Y), C->Cone) {
+				Hyperon(Hel^ C) : Quark(C->Last->I, gcnew Hel(), C->Last->L) {
+				};
+
+				Hyperon(Hadron^ X, Hel^ C, Hadron^ Y) : Quark(C->Last->I, gcnew Hel(gcnew Affinity(X, Y)), C->Last->L) {
 				};
 
 				Int64 Polarize() {
-					if (!Pole.IsZero) throw gcnew Exception("Already Polarized");
-					Pole = Math::ModPow(R->Rod->Base, R->Rod->Secret, Math::Prime);
+					if (Pole != 0) throw gcnew Exception("Already Polarized");
+					Pole = Math::ModPow(R->Base, R->Secret, Math::Prime);
 				}
 
 				Int64 Depolarize() {
-					if (Pole.IsZero) throw gcnew Exception("Already Depolarized");
+					if (Pole == 0) throw gcnew Exception("Already Depolarized");
 					Pole = 0;
 				}
 			};

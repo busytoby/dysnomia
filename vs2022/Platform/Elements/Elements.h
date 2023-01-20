@@ -6,7 +6,7 @@
 #include "05_Nucleon.h"
 #include "06_Metal.h"
 #include "06a_Down.h"
-//#include "07_Hyperon.h"
+#include "07_Hyperon.h"
 #include "08_Baryon.h"
 #include "09_Charm.h"
 /*
