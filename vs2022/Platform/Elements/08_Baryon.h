@@ -17,6 +17,9 @@ namespace Dysnomia {
 						Beta[0]->L[0]->L[1]->L[0]->I->Channel);
 
 					Add(Delta, Beta);
+					Add(Beta[0]->L[0]->L[6]->L[0]->L, Beta);
+					Add(Beta[0]->L[0]->L[5]->L[0]->L, Beta);
+					Add(Beta[0]->L[0]->L[2]->L[0]->L, Beta);
 
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Delta[0]->L);
 				}
