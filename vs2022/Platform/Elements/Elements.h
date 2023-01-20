@@ -58,7 +58,7 @@ namespace Dysnomia {
 			static property Affinity^ MuA { Affinity^ get() { return Hel::MuA; }};
 			static property Quark<Hel^, Hadron^, Lith^>^ Corona { Quark<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
 			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
-//			static property Quark<Nucleon^, Nucleon^, Charm^>^ Star { Quark<Nucleon^, Nucleon^, Charm^>^ get() { return Neon::Star; }};
+			static property Chi<Lith^, Fermion^>^ Star { Chi<Lith^, Fermion^>^ get() { return Baryon::Star; }};
 			static property Quark<Nucleon^, Hadron^, Fermion^>^ Uranus { Quark<Nucleon^, Hadron^, Fermion^>^ get() { return Down::Uranus; }};
 			static property Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp { Quark<Nucleon^, Fermion^, Hadron^>^ get() { return Baryon::Hippocamp; }};
 			static property Quark<Nucleon^, Charm^, Down^>^ Laodemeia { Quark<Nucleon^, Charm^, Down^>^ get() { return Charm::Laodemeia; }};
