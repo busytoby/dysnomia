@@ -22,7 +22,7 @@ namespace Dysnomia {
 					Add(Beta[0]->I, Xi);
 
 					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
-					Tethys->Add(Beta[0]->I[1]->L, this);
+					Tethys->Add(Xi[0]->L[0]->I[0]->L, this);
 
 					if (Laodemeia == nullptr) Laodemeia = gcnew Quark<Nucleon^, Charm^, Down^>(Beta[0]->L, this, Beta);
 					if (Neptune == nullptr) Neptune = gcnew Quark<Charm^, Nucleon^, Down^>(this, Beta[0]->L, Beta);
