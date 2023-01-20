@@ -127,6 +127,7 @@
     <ClInclude Include="05_Nucleon.h" />
     <ClInclude Include="06a_Down.h" />
     <ClInclude Include="06_Metal.h" />
+    <ClInclude Include="07a_Strange.h" />
     <ClInclude Include="07_Hyperon.h" />
     <ClInclude Include="08_Baryon.h" />
     <ClInclude Include="09_Charm.h" />
