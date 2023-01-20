@@ -22,6 +22,7 @@ namespace Dysnomia {
 
 					Baryon^ Omicron = gcnew Baryon(Beta);
 					Hyperon^ Delta = gcnew Hyperon(Xi[0]->I, Omicron[0]->I, Beta[0]->L[0]->L[1]->L[0]->I);
+					Omicron->Add(Pi, Delta);
 
 					Add(Beta[0]->I, Omicron);
 
