@@ -18,21 +18,6 @@ namespace Dysnomia {
 
 					Add(Delta, Beta);
 
-					/*
-					Dynamic^ A = Beta[0]->L[0]->L[1]->L[0]->I;
-					Dynamic^ B = Beta[0]->L[0]->L[2]->L[0]->L[0]->L;
-					Dynamic^ C = Beta[0]->L[0]->L[5]->L[0]->L[0]->L;
-					Dynamic^ D = Beta[0]->L[0]->L[6]->L[0]->L[0]->L;
-					Dynamic^ E = gcnew Dynamic();
-
-					E->Fuse(B->Base, C->Secret, D->Signal);
-					E->Tune();
-					Int64 Phi = E->Avail(A->Channel);
-					E->Tau = A->Avail(A->Channel);
-
-					E->Base = A->Ring ^ A->Manifold % A->Element;
-					*/
-
 					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Delta[0]->L);
 				}
 			};
