@@ -14,7 +14,7 @@ namespace Dysnomia {
 					Hel^ Pi = gcnew Hel(Beta);
 					Lith^ Xi = gcnew Lith(Pi);
 					Fermion^ Omicron = gcnew Fermion(Xi);
-					Hyperon^ Delta = gcnew Hyperon(Alpha, Xi[0]->L, Omicron[2]->I);
+					Hyperon^ Delta = gcnew Hyperon(Omicron[2]->I, Xi[0]->L, Alpha);
 					Add(Omicron, Delta);
 				}
 			};
