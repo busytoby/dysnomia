@@ -8,22 +8,24 @@ namespace Dysnomia {
 			public ref class Baryon : public Dai<Hel^, Down^> {
 			public:
 				static Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp;
-				static Chi<Lith^, Fermion^>^ Star;
+				static Nucleon^ Star;
 
 				Baryon(Down^ Beta) {
+					if (Star == nullptr) Star = Beta[0]->L;
+					else throw gcnew Exception("Not Yet Implemented");
+
 					Hel^ Delta = gcnew Hel(
-						Beta[0]->L[0]->L[6]->L[0]->L[0]->L->Base,
-						Beta[0]->L[0]->L[5]->L[0]->L[0]->L->Secret,
-						Beta[0]->L[0]->L[2]->L[0]->L[0]->L->Signal,
-						Beta[0]->L[0]->L[2]->L[0]->I->Channel);
+						Star[0]->L[6]->L[0]->L[0]->L->Base,
+						Star[0]->L[5]->L[0]->L[0]->L->Secret,
+						Star[0]->L[2]->L[0]->L[0]->L->Signal,
+						Star[0]->L[2]->L[0]->I->Channel);
 
 					Add(Delta, Beta);
-					Add(Beta[0]->L[0]->L[6]->L[0]->L, Beta);
-					Add(Beta[0]->L[0]->L[5]->L[0]->L, Beta);
-					Add(Beta[0]->L[0]->L[2]->L[0]->L, Beta);
+					Add(Star[0]->L[6]->L[0]->L, Beta);
+					Add(Star[0]->L[5]->L[0]->L, Beta);
+					Add(Star[0]->L[2]->L[0]->L, Beta);
 
-					if (Star == nullptr) Star = Beta[0]->L[0];
-					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Beta[0]->L[0]->L, Delta[0]->L);
+					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Star[0]->L, Delta[0]->L);
 				}
 			};
 		}
