@@ -14,7 +14,7 @@ namespace Dysnomia {
 						Beta[0]->L[0]->L[6]->L[0]->L[0]->L->Base,
 						Beta[0]->L[0]->L[5]->L[0]->L[0]->L->Secret,
 						Beta[0]->L[0]->L[2]->L[0]->L[0]->L->Signal,
-						Beta[0]->L[0]->L[1]->L[0]->I->Channel);
+						Beta[0]->L[0]->L[2]->L[0]->I->Channel);
 
 					Add(Delta, Beta);
 					Add(Beta[0]->L[0]->L[6]->L[0]->L, Beta);
