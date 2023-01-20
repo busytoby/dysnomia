@@ -24,6 +24,9 @@ namespace Dysnomia {
 					Hyperon^ Delta = gcnew Hyperon(Xi[0]->I, Omicron[0]->I, Beta[0]->L[0]->L[1]->L[0]->I);
 					Omicron->Add(Pi, Delta);
 
+					Fermion^ Alpha = gcnew Fermion(Xi);
+					Beta[0]->L->Add(Xi, Alpha);
+
 					Add(Beta[0]->I, Omicron);
 
 					if (Tethys == nullptr) Tethys = gcnew Dai<Lith^, Charm^>();
