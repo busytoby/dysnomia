@@ -5,28 +5,27 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Dysnomium : public Epsilon
+			public ref class Dysnomium : public Dai<Parity^, Argon^>
 			{
 			public:
-				Phosphorous^ Tau;
 				Int64 Gamma;
 
-				Dysnomium(Phosphorous^ Phi) {
-					this->Epsilon = Phi->Epsilon;
+				Dysnomium(Argon^ Beta) {
+					this->Epsilon = Beta->Epsilon;
 					Gamma = this->Epsilon;
-					Tau = Phi;
+					Add(Beta->N->I, Beta);
 				}
 
-				void Omega(Coronium^ Psi, Silicon^ Nu) {
-					this->Epsilon = Psi->Epsilon;
-					Gamma = Gamma + Psi->Epsilon;
-					Tau->Add(KeyValuePair<Coronium^, Silicon^>(Psi, Nu));
+				void Omega(Tauon^ Beta, Compensation^ Rho) {
+					this->Epsilon = Beta->Epsilon;
+					Gamma = Gamma + Beta->Epsilon;
+					Mu->I->Add(Beta, Rho);
 				}
 
-				void Kappa(Coronium^ Psi, Silicon^ Nu) {
-					this->Epsilon = Psi->Epsilon;
-					Gamma = Gamma + Psi->Epsilon;
-					Tau->Remove(KeyValuePair<Coronium^, Silicon^>(Psi, Nu));
+				void Kappa(Parity::Chi^ Beta) {
+					this->Epsilon = Beta->I->Epsilon;
+					Gamma = Gamma + Beta->I->Epsilon;
+					Mu->I->Remove(Beta);
 				}
 			};
 		}

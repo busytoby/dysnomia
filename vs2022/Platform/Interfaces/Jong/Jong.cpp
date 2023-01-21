@@ -16,6 +16,7 @@ namespace Dysnomia {
 				Sulfur^ Psi = gcnew Sulfur(Rho);
 				Chlorine^ Nu = gcnew Chlorine(Psi);
 				Argon^ Eta = gcnew Argon(Nu);
+				Dysnomium^ Sigma = gcnew Dysnomium(Eta);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
