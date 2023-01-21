@@ -9,8 +9,10 @@ namespace Dysnomia {
 			public ref class Jong
 			{
 			public:
-				Edge<Boron^, Hydrogen^, Beryllium^>^ Zhang = Objects::Uranus;
+				// Edge<Boron^, Hydrogen^, Beryllium^>^ Zhang = Objects::Uranus;
 				Wou^ Mu;
+
+				/*
 				Phosphorous^ Rho;
 				Calcium^ Psi;
 				Scandium^ Nu;
@@ -19,9 +21,10 @@ namespace Dysnomia {
 				Chromium^ Upsilon;
 				Manganese^ Tau;
 				Iron^ Theta;
+				*/
 
 				Jong();
-				Aether^ Zheng();
+				//Aether^ Zheng();
 			};
 		}
 	}

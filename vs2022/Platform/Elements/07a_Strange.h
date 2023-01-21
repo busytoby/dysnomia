@@ -14,7 +14,7 @@ namespace Dysnomia {
 					if (CygnusLoop == nullptr) CygnusLoop = gcnew List<Strange^>();
 					Hadron^ Beta = gcnew Hadron();
 					Hel^ Pi = gcnew Hel(Beta);
-					Lith^ Xi = gcnew Lith(Pi);
+					Muon^ Xi = gcnew Muon(Pi);
 					Fermion^ Omicron = gcnew Fermion(Xi);
 					Hyperon^ Delta = gcnew Hyperon(Omicron[2]->I, Xi[0]->L, Alpha);
 					Add(Omicron, Delta);

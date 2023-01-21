@@ -15,7 +15,7 @@ namespace Dysnomia {
 					if (Beta->Count > 1) throw gcnew Exception("Cannot Charm");
 					Hadron^ Xi = gcnew Hadron();
 					Hel^ Omicron = gcnew Hel(Xi);
-					Lith^ Delta = gcnew Lith(Omicron);
+					Muon^ Delta = gcnew Muon(Omicron);
 					Fermion^ Alpha = gcnew Fermion(Delta);			
 
 					Strange^ Chi = gcnew Strange(Beta[0]->I[2]->I);

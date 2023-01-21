@@ -122,7 +122,7 @@
   <ItemGroup>
     <ClInclude Include="01_Hadron.h" />
     <ClInclude Include="02_Hel.h" />
-    <ClInclude Include="03_Lith.h" />
+    <ClInclude Include="03_Muon.h" />
     <ClInclude Include="04_Fermion.h" />
     <ClInclude Include="05_Nucleon.h" />
     <ClInclude Include="06a_Down.h" />
@@ -134,7 +134,7 @@
     <ClInclude Include="10_Top.h" />
     <ClInclude Include="11_Up.h" />
     <ClInclude Include="12_Bottom.h" />
-    <ClInclude Include="13a_Coronium.h" />
+    <ClInclude Include="13a_Tauon.h" />
     <ClInclude Include="14_Silicon.h" />
     <ClInclude Include="15_Phosphorous.h" />
     <ClInclude Include="16_Sulfur.h" />

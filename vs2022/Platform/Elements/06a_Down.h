@@ -7,7 +7,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Down : public Metal<Nucleon^> {
 			public:
-				static Edge<Hel^, Hadron^, Lith^>^ Corona;
+				static Edge<Hel^, Hadron^, Muon^>^ Corona;
 				static Edge<Nucleon^, Hadron^, Fermion^>^ Uranus;
 
 				Down() {
@@ -17,7 +17,7 @@ namespace Dysnomia {
 				}
 
 				Down(Hel^ Beta) {
-					Lith^ Pi = gcnew Lith(Beta);
+					Muon^ Pi = gcnew Muon(Beta);
 					Fermion^ Xi = gcnew Fermion(Pi);
 					Nucleon^ Omicron = gcnew Nucleon(Xi);
 					Add(Xi, Omicron);

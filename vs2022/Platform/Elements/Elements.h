@@ -1,7 +1,7 @@
 #pragma once
 #include "01_Hadron.h"
 #include "02_Hel.h"
-#include "03_Lith.h"
+#include "03_Muon.h"
 #include "04_Fermion.h"
 #include "05_Nucleon.h"
 #include "06_Metal.h"
@@ -14,8 +14,8 @@
 #include "11_Up.h"
 #include "12_Bottom.h"
 #include "13_Aluminium.h"
+#include "13a_Tauon.h"
 /*
-#include "13a_Coronium.h"
 #include "14_Silicon.h"
 #include "15_Phosphorous.h"
 #include "16_Sulfur.h"
@@ -58,13 +58,13 @@ namespace Dysnomia {
 		public:
 			static property Dynamic^ MuB { Dynamic^ get() { return Hadron::MuB; }};
 			static property Affinity^ MuA { Affinity^ get() { return Hel::MuA; }};
-			static property Edge<Hel^, Hadron^, Lith^>^ Corona { Edge<Hel^, Hadron^, Lith^>^ get() { return Fermion::Corona; }};
-			static property Dai<Lith^, Charm^>^ Tethys { Dai<Lith^, Charm^>^ get() { return Charm::Tethys; }};
+			static property Edge<Hel^, Hadron^, Muon^>^ Corona { Edge<Hel^, Hadron^, Muon^>^ get() { return Fermion::Corona; }};
+			static property Dai<Muon^, Charm^>^ Tethys { Dai<Muon^, Charm^>^ get() { return Charm::Tethys; }};
 			static property Nucleon^ Star { Nucleon^ get() { return Baryon::Star; }};
 			static property Edge<Nucleon^, Hadron^, Fermion^>^ Uranus { Edge<Nucleon^, Hadron^, Fermion^>^ get() { return Down::Uranus; }};
 			static property Edge<Nucleon^, Fermion^, Hadron^>^ Hippocamp { Edge<Nucleon^, Fermion^, Hadron^>^ get() { return Baryon::Hippocamp; }};
 			static property Edge<Nucleon^, Charm^, Down^>^ Laodemeia { Edge<Nucleon^, Charm^, Down^>^ get() { return Charm::Laodemeia; }};
-			static property Edge<Down^, Lith^, Nucleon^>^ Anthe { Edge<Down^, Lith^, Nucleon^>^ get() { return Charm::Anthe; }};
+			static property Edge<Down^, Muon^, Nucleon^>^ Anthe { Edge<Down^, Muon^, Nucleon^>^ get() { return Charm::Anthe; }};
 			static property List<Strange^>^ CygnusLoop { List<Strange^>^ get() { return Strange::CygnusLoop; }};
 			/*
 			static property Dai<Down^, Coronium^>^ Enceladus { Dai<Down^, Coronium^>^ get() { return Silicon::Enceladus; }};

@@ -5,17 +5,17 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Fermion : public Dai<Hadron^, Lith^> {
+			public ref class Fermion : public Dai<Hadron^, Muon^> {
 			public:
-				static Edge<Hel^, Hadron^, Lith^>^ Corona;
+				static Edge<Hel^, Hadron^, Muon^>^ Corona;
 
-				Fermion(Lith^ Xi) {
+				Fermion(Muon^ Xi) {
 					Add(Xi->Last->I, Xi);
 					Hel^ Beta = gcnew Hel(Mu->I);
-					Lith^ Pi = gcnew Lith(Beta);
+					Muon^ Pi = gcnew Muon(Beta);
 					Add(Xi->Last->I, Pi);
 					Add(Pi->Last->I, Pi);
-					if (Corona == nullptr) Corona = gcnew Edge<Hel^, Hadron^, Lith^>(Xi->Mu->L, Pi->Mu->I, Pi);
+					if (Corona == nullptr) Corona = gcnew Edge<Hel^, Hadron^, Muon^>(Xi->Mu->L, Pi->Mu->I, Pi);
 				}
 			};
 		}

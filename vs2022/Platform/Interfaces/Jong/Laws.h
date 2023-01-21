@@ -7,6 +7,7 @@ namespace Dysnomia {
 		namespace Jong {
 			public ref class Laws abstract sealed {
 			public:
+				/*
 				static property Int64 First { Int64 get() { return Constants::Mu + Constants::Evidences[0]; }};
 				static property Int64 Second { Int64 get() { return Math::ModPow(Dysnomia::Platform::Wou::Laws::Fourth, Constants::Mu, Constants::Rho); }};
 				static property Int64 Third { Int64 get() { return Math::ModPow(Second, Constants::Rho, Constants::Mu); }};
@@ -20,6 +21,7 @@ namespace Dysnomia {
 				static property Int64 Eleventh { Int64 get() { return Math::ModPow(Fourth, Constants::Rho, Tenth); }};
 				static property Int64 Twelfth { Int64 get() { return Math::ModPow(Constants::Upsilon, Constants::Tau, Constants::Sigma); }};
 				static property Int64 Thirteenth { Int64 get() { return Constants::Upsilon + Constants::Tau; }};
+				*/
 			};
 		}
 	}

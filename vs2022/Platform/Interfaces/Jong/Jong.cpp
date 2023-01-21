@@ -12,6 +12,8 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Jong::Jong() {
 				Mu = gcnew Wou();
+
+				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
 
 				Rho = gcnew Phosphorous(
@@ -39,11 +41,14 @@ namespace Dysnomia {
 				Theta = gcnew Iron(Tau);
 				Constants::Evidences->Add(Constants::Theta);
 				Constants::Evidences->Add(Laws::Tenth);
+				*/
  			}
 
+			/*
 			Aether^ Jong::Zheng() {
 				return Objects::Psamathe->R->L;
 			}
+			*/
 		}
 	}
 }
