@@ -17,8 +17,8 @@
 #include "13a_Tauon.h"
 #include "14_Compensation.h"
 #include "15_Parity.h"
-/*
 #include "16_Sulfur.h"
+/*
 #include "17_Chlorine.h"
 #include "18_Argon.h"
 #include "18a_Dysnomium.h"
