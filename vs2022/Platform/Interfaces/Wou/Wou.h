@@ -12,15 +12,14 @@ namespace Dysnomia {
 			public ref class Wou
 			{
 			public:
-				/*
-				Carbon^ Mu;
-				Fluorine^ Rho;
-				Natrium^ Psi;
-				Carbon^ Nu;
-				Fluorine^ Eta;
-				Magnesium^ Sigma;
+				Down^ Mu;
+				Charm^ Rho;
+				Up^ Psi;
+				Down^ Nu;
+				Charm^ Eta;
+				Bottom^ Sigma;
 				Aluminium^ Upsilon;
-				*/
+
 				Wou();
 			};
 		}
