@@ -132,7 +132,7 @@
     <ClInclude Include="08_Baryon.h" />
     <ClInclude Include="09_Charm.h" />
     <ClInclude Include="10_Top.h" />
-    <ClInclude Include="11_Natrium.h" />
+    <ClInclude Include="11_Up.h" />
     <ClInclude Include="12_Magnesium.h" />
     <ClInclude Include="13a_Coronium.h" />
     <ClInclude Include="14_Silicon.h" />

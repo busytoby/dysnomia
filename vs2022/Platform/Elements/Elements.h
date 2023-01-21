@@ -11,8 +11,8 @@
 #include "08_Baryon.h"
 #include "09_Charm.h"
 #include "10_Top.h"
+#include "11_Up.h"
 /*
-#include "11_Natrium.h"
 #include "12_Magnesium.h"
 #include "13_Aluminium.h"
 #include "13a_Coronium.h"
@@ -49,6 +49,8 @@
 #include <cassert>
 
 using namespace System;
+using namespace Dysnomia::Platform::Elements;
+using namespace Dysnomia::Platform::Interfaces;
 
 namespace Dysnomia {
 	namespace Platform {

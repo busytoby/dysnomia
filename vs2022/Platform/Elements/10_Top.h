@@ -1,8 +1,6 @@
 #pragma once
 
 using namespace System;
-using namespace System::Drawing;
-using namespace System::Collections::Generic;
 
 namespace Dysnomia {
 	namespace Platform {

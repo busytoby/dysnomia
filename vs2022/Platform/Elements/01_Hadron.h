@@ -1,7 +1,6 @@
 #pragma once
 
 using namespace System;
-using Dysnomia::Epsilon;
 
 namespace Dysnomia {
 	namespace Platform {
