@@ -17,6 +17,11 @@ namespace Dysnomia {
 				Charm^ Rho = gcnew Charm(Mu);
 				Up^ Psi = gcnew Up(Rho);
 
+				Down^ Nu = gcnew Down();
+				Charm^ Eta = gcnew Charm(Nu);
+
+				Bottom^ Sigma = gcnew Bottom(Psi, Eta);
+
 				/*
 				Mu = gcnew Carbon();
 				Rho = gcnew Fluorine(Mu);

@@ -12,7 +12,7 @@ namespace Dysnomia {
 
 				Baryon(Down^ Beta) {
 					if (Star == nullptr) Star = Beta[0]->L;
-					else throw gcnew Exception("Not Yet Implemented");
+					else if (Star->Count > 1) throw gcnew Exception("Not Yet Implemented");
 
 					Hel^ Delta = gcnew Hel(
 						Star[0]->L[6]->L[0]->L[0]->L->Base,
