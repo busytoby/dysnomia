@@ -65,6 +65,7 @@ namespace Dysnomia {
 			static property Edge<Nucleon^, Fermion^, Hadron^>^ Hippocamp { Edge<Nucleon^, Fermion^, Hadron^>^ get() { return Baryon::Hippocamp; }};
 			static property Edge<Nucleon^, Charm^, Down^>^ Laodemeia { Edge<Nucleon^, Charm^, Down^>^ get() { return Charm::Laodemeia; }};
 			static property Edge<Down^, Lith^, Nucleon^>^ Anthe { Edge<Down^, Lith^, Nucleon^>^ get() { return Charm::Anthe; }};
+			static property List<Strange^>^ CygnusLoop { List<Strange^>^ get() { return Strange::CygnusLoop; }};
 			/*
 			static property Dai<Down^, Coronium^>^ Enceladus { Dai<Down^, Coronium^>^ get() { return Silicon::Enceladus; }};
 			static property Edge<Down^, Coronium^, Down^>^ Ariel { Edge<Down^, Coronium^, Down^>^ get() { return Silicon::Ariel; }};
