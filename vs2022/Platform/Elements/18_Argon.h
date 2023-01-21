@@ -1,6 +1,4 @@
 #pragma once
-#include "16_Sulfur.h"
-#include "17a_Aether.h"
 
 using namespace System;
 using namespace Dysnomia::Platform::Elements;
@@ -8,20 +6,21 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Argon : public Edge<Sulfur^, Chlorine^, Aether^>
+			public ref class Argon : public Edge<Sulfur^, Chlorine^, Gluon^>
 			{
 			public:
-				static Edge<Sulfur^, Aether^, Magnesium^>^ Telesto;
-				static Edge<Sulfur^, Magnesium^, Chlorine^>^ Ferdinand;
-				static Dai<Coronium^, Aether^>^ FranciscoProliferation;
+				static Edge<Sulfur^, Gluon^, Bottom^>^ Telesto;
+				static Edge<Sulfur^, Bottom^, Chlorine^>^ Ferdinand;
+				static Dai<Tauon^, Gluon^>^ FranciscoProliferation;
 
-				Argon(Sulfur^ Psi, Chlorine^ Nu, Aether^ Rho) : Edge<Sulfur^, Chlorine^, Aether^>(Psi, Nu, Rho) {
-					if (Telesto == nullptr) Telesto = gcnew Edge<Sulfur^, Aether^, Magnesium^>(Psi, Rho, Psi->N->N);
-					if (Ferdinand == nullptr) Ferdinand = gcnew Edge<Sulfur^, Magnesium^, Chlorine^>(Psi, Psi->N->N, Nu);
-					if (Rho->Count > 1 && FranciscoProliferation == nullptr) FranciscoProliferation = gcnew Dai<Coronium^, Aether^>();
-					if (Rho->Count > 1 && FranciscoProliferation != nullptr)
-						for (int i = 0; i < Rho->Count; i++)
-							FranciscoProliferation->Add(Rho[i].Value, Rho);
+				Argon(Chlorine^ Beta) : Edge<Sulfur^, Chlorine^, Gluon^>(Beta[0]->L[0]->I, Beta, Beta[0]->L) {
+					int i = 99;
+					if (Telesto == nullptr) Telesto = gcnew Edge<Sulfur^, Gluon^, Bottom^>(Beta[0]->L[0]->I, Beta[0]->L, Beta[0]->I[0]->L[0]->L);
+					if (Ferdinand == nullptr) Ferdinand = gcnew Edge<Sulfur^, Bottom^, Chlorine^>(Beta[0]->L[0]->I, Beta[0]->I[0]->L[0]->L, Beta);
+					if (Beta[0]->L->Count > 1 && FranciscoProliferation == nullptr) FranciscoProliferation = gcnew Dai<Tauon^, Gluon^>();
+					if (Beta[0]->L->Count > 1 && FranciscoProliferation != nullptr)
+						for (int i = 0; i < Beta[0]->L->Count; i++)
+							FranciscoProliferation->Add(Beta[0]->L[i]->L, Beta[0]->L);
 				}
 			};
 		}

@@ -15,6 +15,7 @@ namespace Dysnomia {
 				Parity^ Rho = gcnew Parity(Mu->Upsilon);
 				Sulfur^ Psi = gcnew Sulfur(Rho);
 				Chlorine^ Nu = gcnew Chlorine(Psi);
+				Argon^ Eta = gcnew Argon(Nu);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);

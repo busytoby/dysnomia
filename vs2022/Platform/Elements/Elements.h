@@ -20,8 +20,8 @@
 #include "16_Sulfur.h"
 #include "16a_Gluon.h"
 #include "17_Chlorine.h"
-/*
 #include "18_Argon.h"
+/*
 #include "18a_Dysnomium.h"
 #include "19_Potassium.h"
 #include "20_Calcium.h"

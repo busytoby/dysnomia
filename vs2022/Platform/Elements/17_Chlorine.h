@@ -8,15 +8,15 @@ namespace Dysnomia {
 			public ref class Chlorine : public Dai<Tauon^, Gluon^>
 			{
 			public:
-				Chlorine(Sulfur^ Psi) {
+				Chlorine(Sulfur^ Beta) {
 					Gluon^ Alpha = gcnew Gluon();
-					this->Chlorine::Chlorine(Psi, Alpha);
+					this->Chlorine::Chlorine(Beta, Alpha);
 				}
 
-				Chlorine(Sulfur^ Psi, Gluon^ Alpha) {
-					for (int i = 0; i < Psi->R->Count; i++)
-						Alpha->Add(Psi, Psi->R[i]->L);
-					Add(Psi->I[0]->I, Alpha);
+				Chlorine(Sulfur^ Beta, Gluon^ Rho) {
+					for (int i = 0; i < Beta->R->Count; i++)
+						Rho->Add(Beta, Beta->R[i]->L);
+					Add(Beta->I[0]->I, Rho);
 				}
 			};
 		}
