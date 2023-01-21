@@ -138,7 +138,7 @@
     <ClInclude Include="14_Compensation.h" />
     <ClInclude Include="15_Parity.h" />
     <ClInclude Include="16_Sulfur.h" />
-    <ClInclude Include="17a_Aether.h" />
+    <ClInclude Include="16a_Gluon.h" />
     <ClInclude Include="17_Chlorine.h" />
     <ClInclude Include="18a_Dysnomium.h" />
     <ClInclude Include="18_Argon.h" />
