@@ -21,6 +21,7 @@ namespace Dysnomia {
 				Charm^ Eta = gcnew Charm(Nu);
 
 				Bottom^ Sigma = gcnew Bottom(Psi, Eta);
+				Aluminium^ Upsilon = gcnew Aluminium(Sigma);
 
 				/*
 				Mu = gcnew Carbon();

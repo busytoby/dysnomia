@@ -21,7 +21,7 @@ namespace Dysnomia {
 					Strange^ Chi = gcnew Strange(Beta[0]->I[2]->I);
 					Add(Alpha, Pi);
 					if (VanAllenBelt == nullptr) VanAllenBelt = gcnew Edge<Bottom^, Charm^, Up^>(this, Pi, Beta);
-					//if (Dione == nullptr) Dione = gcnew Edge<Bottom^, Charm^, Nucleon^>(this, Pi, Alpha->Mu.Value->Pi);
+					if (Dione == nullptr) Dione = gcnew Edge<Bottom^, Charm^, Nucleon^>(this, Pi, Pi[0]->L[3]->L[0]->L);
 				}
 			};
 		}
