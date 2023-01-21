@@ -8,7 +8,7 @@ namespace Dysnomia {
 			public ref class Qiao : public Dai<Woof^, Blong^>
 			{
 			public:
-				static Quark<Chlorine^, Woof^, Meow^>^ Pallene;
+				static Edge<Chlorine^, Woof^, Meow^>^ Pallene;
 				static Dai<Woof^, Blong^>^ Methone;
 				static Dai<Blong^, Meow^>^ Epimetheus;
 				static Dai<Blong^, Argon^>^ Stephano;
@@ -16,7 +16,7 @@ namespace Dysnomia {
 
 				Qiao(Woof^ Mu, Blong^ Rho) {
 					Add(Mu, Rho);
-					if (Pallene == nullptr) Pallene = gcnew Quark<Chlorine^, Woof^, Meow^>(Mu->Tau, Mu, Rho->N);
+					if (Pallene == nullptr) Pallene = gcnew Edge<Chlorine^, Woof^, Meow^>(Mu->Tau, Mu, Rho->N);
 					if (Methone == nullptr) Methone = this;
 					if (Epimetheus == nullptr) Epimetheus = gcnew Dai<Blong^, Meow^>();
 					Epimetheus->Add(Rho, Rho->N);

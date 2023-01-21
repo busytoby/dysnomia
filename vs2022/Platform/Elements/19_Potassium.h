@@ -6,10 +6,10 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Potassium : Quark<Dysnomium^, Magnesium^, Aluminium^>
+			public ref class Potassium : Edge<Dysnomium^, Magnesium^, Aluminium^>
 			{
 			public:
-				Potassium(Sulfur^ Upsilon) : Quark<Dysnomium^, Magnesium^, Aluminium^>(gcnew Dysnomium(Upsilon->R), Upsilon->N->N, Upsilon->N) {
+				Potassium(Sulfur^ Upsilon) : Edge<Dysnomium^, Magnesium^, Aluminium^>(gcnew Dysnomium(Upsilon->R), Upsilon->N->N, Upsilon->N) {
 				}
 
 				Coronium^ Omega(Silicon^ Phi) {

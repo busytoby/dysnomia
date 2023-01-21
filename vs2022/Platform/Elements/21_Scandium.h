@@ -12,8 +12,8 @@ namespace Dysnomia {
 			private:
 				Int64 _Ring;
 			public:
-				static Quark<Sulfur^, Coronium^, Argon^>^ Pluto;
-				static Quark<Sulfur^, Argon^, Coronium^>^ Psamathe;
+				static Edge<Sulfur^, Coronium^, Argon^>^ Pluto;
+				static Edge<Sulfur^, Argon^, Coronium^>^ Psamathe;
 
 				property Int64 Ring { Int64 get() {
 					for(int i = 0; i < this->Count; i++)
@@ -29,7 +29,7 @@ namespace Dysnomia {
 						Int64 Iota = Ring;
 					}
 					Chi->R->Add(Chi->N->L->Rho.Value, Delta);
-					if (Pluto == nullptr) Pluto = gcnew Quark<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
+					if (Pluto == nullptr) Pluto = gcnew Edge<Sulfur^, Coronium^, Argon^>(Chi->N, Mu.Value, Chi);
 				}
 			};
 		}

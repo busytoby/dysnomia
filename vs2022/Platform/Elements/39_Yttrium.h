@@ -5,19 +5,19 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Yttrium : Quark<Blong^, Qiao^, Meow^>
+			public ref class Yttrium : Edge<Blong^, Qiao^, Meow^>
 			{
 			public:
-				static Quark<Qiao^, Blong^, Meow^>^ Portia;
-				static Quark<Blong^, Meow^, Qiao^>^ Bestla;
-				static Quark<Meow^, Qiao^, Blong^>^ Trinculo;
+				static Edge<Qiao^, Blong^, Meow^>^ Portia;
+				static Edge<Blong^, Meow^, Qiao^>^ Bestla;
+				static Edge<Meow^, Qiao^, Blong^>^ Trinculo;
 				static Dai<Qiao^, Blong^>^ Perdita;
-				Yttrium(Blong^ Nu, Qiao^ Rho, Meow^ Psi) : Quark(Nu, Rho, Psi) {
+				Yttrium(Blong^ Nu, Qiao^ Rho, Meow^ Psi) : Edge(Nu, Rho, Psi) {
 					if (Perdita == nullptr) Perdita = gcnew Dai<Qiao^, Blong^>();
 					Perdita->Add(Rho, Nu);
-					if (Portia == nullptr) Portia = gcnew Quark<Qiao^, Blong^, Meow^>(Rho, Nu, Psi);
-					if (Bestla == nullptr) Bestla = gcnew Quark<Blong^, Meow^, Qiao^>(Nu, Psi, Rho);
-					if (Trinculo == nullptr) Trinculo = gcnew Quark<Meow^, Qiao^, Blong^>(Psi, Rho, Nu);
+					if (Portia == nullptr) Portia = gcnew Edge<Qiao^, Blong^, Meow^>(Rho, Nu, Psi);
+					if (Bestla == nullptr) Bestla = gcnew Edge<Blong^, Meow^, Qiao^>(Nu, Psi, Rho);
+					if (Trinculo == nullptr) Trinculo = gcnew Edge<Meow^, Qiao^, Blong^>(Psi, Rho, Nu);
 				};
 
 				Int64 Gamma() {

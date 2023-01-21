@@ -5,14 +5,14 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Coronium : public Quark<Magnesium^, Nitrogen^, Fluorine^>
+			public ref class Coronium : public Edge<Magnesium^, Nitrogen^, Fluorine^>
 			{
 			public:
-				static Quark<Magnesium^, Nitrogen^, Fluorine^>^ Halimede;
-				static Quark<Nitrogen^, Fluorine^, Magnesium^>^ Naiad;
-				Coronium(Magnesium^ Mu, Nitrogen^ Rho, Fluorine^ Psi) : Quark(Mu, Rho, Psi) { 
+				static Edge<Magnesium^, Nitrogen^, Fluorine^>^ Halimede;
+				static Edge<Nitrogen^, Fluorine^, Magnesium^>^ Naiad;
+				Coronium(Magnesium^ Mu, Nitrogen^ Rho, Fluorine^ Psi) : Edge(Mu, Rho, Psi) { 
 					if (Halimede == nullptr) Halimede = this;
-					if (Naiad == nullptr) Naiad = gcnew Quark<Nitrogen^, Fluorine^, Magnesium^>(R, L, N);
+					if (Naiad == nullptr) Naiad = gcnew Edge<Nitrogen^, Fluorine^, Magnesium^>(R, L, N);
 				}
 			};
 		}

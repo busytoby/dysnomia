@@ -8,12 +8,12 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Sulfur : public Quark<Aluminium^, Phosphorous^, Silicon^>
+			public ref class Sulfur : public Edge<Aluminium^, Phosphorous^, Silicon^>
 			{
 			public:
 				static Dai<Phosphorous^, Sulfur^>^ Titan;
 
-				Sulfur(Aluminium^ Phi, Phosphorous^ Rho, Silicon^ Upsilon) : Quark<Aluminium^, Phosphorous^, Silicon^>(Phi, Rho, Upsilon) {
+				Sulfur(Aluminium^ Phi, Phosphorous^ Rho, Silicon^ Upsilon) : Edge<Aluminium^, Phosphorous^, Silicon^>(Phi, Rho, Upsilon) {
 					if(Titan == nullptr) Titan = gcnew Dai<Phosphorous^, Sulfur^>();
 					Phosphorous^ Eta = gcnew Phosphorous(
 						Phi,

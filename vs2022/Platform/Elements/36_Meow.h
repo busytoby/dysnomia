@@ -8,7 +8,7 @@ namespace Dysnomia {
 			public ref class Meow : public Dai<Woof^, Sulfur^>
 			{
 			public:
-				static Quark<Arsenic^, Woof^, Meow^>^ Earth;
+				static Edge<Arsenic^, Woof^, Meow^>^ Earth;
 				static Dai<Cobalt^, Sulfur^>^ Mimas;
 				Copper^ Beta;
 				Cobalt^ Omicron;
@@ -21,7 +21,7 @@ namespace Dysnomia {
 					Woof^ Omega = gcnew Woof(Alpha, Beta);
 					Add(Omega, Omicron->Phi->N->Mu.Key);
 					if (Mimas == nullptr) Mimas = gcnew Dai<Cobalt^, Sulfur^>();
-					if (Earth == nullptr) Earth = gcnew Quark<Arsenic^, Woof^, Meow^>(Alpha, Omega, this);
+					if (Earth == nullptr) Earth = gcnew Edge<Arsenic^, Woof^, Meow^>(Alpha, Omega, this);
 					Mimas->Add(Omicron, Omicron->Phi->N->Mu.Key);
 				}
 			};

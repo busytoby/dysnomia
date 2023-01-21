@@ -10,10 +10,10 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Chromium : public Dai<Vanadium^, Coronium^> {
 			public:
-				static Quark<Titanium^, Coronium^, Vanadium^>^ Sycorax;
-				static Quark<Vanadium^, Dysnomium^, Titanium^>^ Belinda;
-				static Quark<Vanadium^, Sulfur^, Titanium^>^ Puck;
-				static Quark<Titanium^, Sulfur^, Vanadium^>^ Mars;
+				static Edge<Titanium^, Coronium^, Vanadium^>^ Sycorax;
+				static Edge<Vanadium^, Dysnomium^, Titanium^>^ Belinda;
+				static Edge<Vanadium^, Sulfur^, Titanium^>^ Puck;
+				static Edge<Titanium^, Sulfur^, Vanadium^>^ Mars;
 
 				Int64 Signal;
 
@@ -25,10 +25,10 @@ namespace Dysnomia {
 						}
 					}
 
-					if (Mars == nullptr) Mars = gcnew Quark<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
-					if (Puck == nullptr) Puck = gcnew Quark<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
-					if (Belinda == nullptr) Belinda = gcnew Quark<Vanadium^, Dysnomium^, Titanium^>(Alpha, Alpha->Xi->L, Alpha->Xi);
-					if (Sycorax == nullptr) Sycorax = gcnew Quark<Titanium^, Coronium^, Vanadium^>(Alpha->Xi, Alpha->Mu.Value->Mu.Value, Alpha);
+					if (Mars == nullptr) Mars = gcnew Edge<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
+					if (Puck == nullptr) Puck = gcnew Edge<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
+					if (Belinda == nullptr) Belinda = gcnew Edge<Vanadium^, Dysnomium^, Titanium^>(Alpha, Alpha->Xi->L, Alpha->Xi);
+					if (Sycorax == nullptr) Sycorax = gcnew Edge<Titanium^, Coronium^, Vanadium^>(Alpha->Xi, Alpha->Mu.Value->Mu.Value, Alpha);
 				}
 			};
 		}

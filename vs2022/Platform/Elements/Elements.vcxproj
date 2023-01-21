@@ -131,7 +131,7 @@
     <ClInclude Include="07_Hyperon.h" />
     <ClInclude Include="08_Baryon.h" />
     <ClInclude Include="09_Charm.h" />
-    <ClInclude Include="10_Neon.h" />
+    <ClInclude Include="10_Top.h" />
     <ClInclude Include="11_Natrium.h" />
     <ClInclude Include="12_Magnesium.h" />
     <ClInclude Include="13a_Coronium.h" />
@@ -198,9 +198,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\Model\Dynamic\Dynamic.vcxproj">
       <Project>{fa7e9bb1-725f-4b76-8e49-b700d773baa5}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Model\Quark\Quark.vcxproj">
-      <Project>{1986499b-2b92-4e30-930f-36cfb1b019d9}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Util\Math\Math.vcxproj">
       <Project>{8582c43d-1722-4d10-ab37-3dbe7b588957}</Project>

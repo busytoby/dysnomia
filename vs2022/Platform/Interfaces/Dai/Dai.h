@@ -65,6 +65,33 @@ namespace Dysnomia {
 				property Chi^ Theta { Chi^ get() { return Alpha[8]; }}
 				property Chi^ Last { Chi^ get() { return Alpha[Alpha->Count - 1]; }}
 			};
+
+			generic <typename T1, typename T2, typename T3>
+			where T1 : Epsilon
+			where T2 : Epsilon
+			where T3 : Epsilon
+			public ref class Edge : Epsilon {
+			public:
+				virtual property Double Mass { Double get() override { Double _Mass = N->Mass + I->Mass - R->Mass; return _Mass; }};
+				T1 N;
+				T2 I;
+				T3 R;
+
+				Edge(T1 Y, T2 X, T3 Z)
+				{
+					N = Y;
+					I = X;
+					R = Z;
+
+					if (!N->Epsilon == 0)
+						this->Epsilon = N->Epsilon;
+					else if (!I->Epsilon == 0)
+						this->Epsilon = I->Epsilon;
+					else if (!R->Epsilon == 0)
+						this->Epsilon = R->Epsilon;
+					else throw gcnew Exception("Zero Epsilons");
+				}
+			};
 		}
 	}
 }

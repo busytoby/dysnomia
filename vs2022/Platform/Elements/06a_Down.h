@@ -9,8 +9,8 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Down : public Metal<Nucleon^> {
 			public:
-				static Quark<Hel^, Hadron^, Lith^>^ Corona;
-				static Quark<Nucleon^, Hadron^, Fermion^>^ Uranus;
+				static Edge<Hel^, Hadron^, Lith^>^ Corona;
+				static Edge<Nucleon^, Hadron^, Fermion^>^ Uranus;
 
 				Down() {
 					Hadron^ Beta = gcnew Hadron();
@@ -20,7 +20,7 @@ namespace Dysnomia {
 					Nucleon^ Delta = gcnew Nucleon(Omicron);
 					Add(Omicron, Delta);
 
-					if (Uranus == nullptr) Uranus = gcnew Quark<Nucleon^, Hadron^, Fermion^>(Delta, Xi->Mu->I, Omicron);
+					if (Uranus == nullptr) Uranus = gcnew Edge<Nucleon^, Hadron^, Fermion^>(Delta, Xi->Mu->I, Omicron);
 				}
 			};
 		}

@@ -8,13 +8,13 @@ namespace Dysnomia {
 			public ref class Calcium : public Dai<Potassium^, Argon^>
 			{
 			public:
-				static Quark<Sulfur^, Potassium^, Calcium^>^ Deimos;
+				static Edge<Sulfur^, Potassium^, Calcium^>^ Deimos;
 
 				Calcium(Phosphorous^ Rho) {
 					Sulfur^ Psi = gcnew Sulfur(Rho->Rho.Value->Zeta, Rho, Rho->Mu.Value);
 
 					this->Calcium::Calcium(Psi);
-					if (Deimos == nullptr) Deimos = gcnew Quark<Sulfur^, Potassium^, Calcium^>(Psi, Mu.Key, this);
+					if (Deimos == nullptr) Deimos = gcnew Edge<Sulfur^, Potassium^, Calcium^>(Psi, Mu.Key, this);
 				}
 
 				Calcium(Sulfur^ Psi) {

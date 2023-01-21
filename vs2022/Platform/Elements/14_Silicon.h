@@ -9,10 +9,10 @@ namespace Dysnomia {
 			{
 			public:
 				static Dai<Carbon^, Coronium^>^ Enceladus;
-				static Quark<Fluorine^, Coronium^, Aluminium^>^ Oberon;
-				static Quark<Fluorine^, Coronium^, Carbon^>^ Umbriel;
-				static Quark<Carbon^, Coronium^, Carbon^>^ Ariel;
-				static Quark<Coronium^, Coronium^, Carbon^>^ Prospero;
+				static Edge<Fluorine^, Coronium^, Aluminium^>^ Oberon;
+				static Edge<Fluorine^, Coronium^, Carbon^>^ Umbriel;
+				static Edge<Carbon^, Coronium^, Carbon^>^ Ariel;
+				static Edge<Coronium^, Coronium^, Carbon^>^ Prospero;
 				property Int64 Evidence { Int64 get() { return Last.Value->R->R->Xi; }};
 
 				Aluminium^ Zeta;
@@ -28,7 +28,7 @@ namespace Dysnomia {
 					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
 					Coronium^ Eta = gcnew Coronium(Alpha->N, Beta->Mu.Value, Phi);
 					Add(Beta, Eta);
-					if (Oberon == nullptr) Oberon = gcnew Quark<Fluorine^, Coronium^, Aluminium^>(Phi, Mu.Value, Alpha);
+					if (Oberon == nullptr) Oberon = gcnew Edge<Fluorine^, Coronium^, Aluminium^>(Phi, Mu.Value, Alpha);
 					if(Enceladus == nullptr) Enceladus = this;
 				}
 
@@ -37,9 +37,9 @@ namespace Dysnomia {
 					Fluorine^ Phi = gcnew Fluorine(Beta);
 					if (Beta->Count == 0) throw gcnew Exception("Inactivated Carbon");
 					Coronium^ Kappa = gcnew Coronium(Zeta->N, Beta->Mu.Value, Phi);
-					if (Umbriel == nullptr) Umbriel = gcnew Quark<Fluorine^, Coronium^, Carbon^>(Phi, Kappa, Beta);
-					else if(Ariel == nullptr) Ariel = gcnew Quark<Carbon^, Coronium^, Carbon^>(Beta, Kappa, Rho.Key);
-					else if (Prospero == nullptr) Prospero = gcnew Quark<Coronium^, Coronium^, Carbon^>(Kappa, Mu.Value, Beta);
+					if (Umbriel == nullptr) Umbriel = gcnew Edge<Fluorine^, Coronium^, Carbon^>(Phi, Kappa, Beta);
+					else if(Ariel == nullptr) Ariel = gcnew Edge<Carbon^, Coronium^, Carbon^>(Beta, Kappa, Rho.Key);
+					else if (Prospero == nullptr) Prospero = gcnew Edge<Coronium^, Coronium^, Carbon^>(Kappa, Mu.Value, Beta);
 					Add(Beta, Kappa);
 					return Kappa;
 				}

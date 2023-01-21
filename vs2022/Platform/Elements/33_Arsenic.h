@@ -8,7 +8,7 @@ namespace Dysnomia {
 			public ref class Arsenic : public Dai<Manganese^, Cobalt^>{
 			public:
 				static Dai<Manganese^, Cobalt^>^ Thebe;
-				static Quark<Dysnomium^, Chromium^, Manganese^>^ Sao;
+				static Edge<Dysnomium^, Chromium^, Manganese^>^ Sao;
 
 				Arsenic(Cobalt^ Zeta, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 					Phosphorous^ Alpha = gcnew Phosphorous(Zeta->Mu.Key->Mu.Key->N,	Rho, Upsilon, Ohm, Xi);
@@ -21,7 +21,7 @@ namespace Dysnomia {
 					Add(Chi, Zeta);
 					if (Thebe == nullptr) Thebe = this;
 					Copper::Adrastea->Add(Chi->L->Mu.Key, Chi->L->Mu.Key->N->N);
-					if (Sao == nullptr) Sao = gcnew Quark<Dysnomium^, Chromium^, Manganese^>(Lambda->Mu.Key->Xi->L, Zeta->Mu.Value, Chi);
+					if (Sao == nullptr) Sao = gcnew Edge<Dysnomium^, Chromium^, Manganese^>(Lambda->Mu.Key->Xi->L, Zeta->Mu.Value, Chi);
 				}
 			};
 		}

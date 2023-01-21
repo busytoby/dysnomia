@@ -9,14 +9,14 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Cobalt : public Dai<Vanadium^, Chromium^> {
 			public:
-				static Quark<Vanadium^, Manganese^, Chromium^>^ Mercury;
+				static Edge<Vanadium^, Manganese^, Chromium^>^ Mercury;
 				static Dai<Vanadium^, Chromium^>^ Larissa;
 				Manganese^ Phi;
 
 				Cobalt(Manganese^ Alpha) {
 					Phi = Alpha;
 					Add(Alpha->N, Alpha->Xi);
-					if (Mercury == nullptr) Mercury = gcnew Quark<Vanadium^, Manganese^, Chromium^>(Alpha->N, Alpha, Alpha->Xi);
+					if (Mercury == nullptr) Mercury = gcnew Edge<Vanadium^, Manganese^, Chromium^>(Alpha->N, Alpha, Alpha->Xi);
 					if (Larissa == nullptr) Larissa = this;
 				}
 			};

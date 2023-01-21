@@ -8,14 +8,14 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Titanium : public Quark<Scandium^, Calcium^, Dysnomium^>
+			public ref class Titanium : public Edge<Scandium^, Calcium^, Dysnomium^>
 			{
 			public:
-				static Quark<Dysnomium^, Scandium^, Calcium^>^ Despina;
+				static Edge<Dysnomium^, Scandium^, Calcium^>^ Despina;
 				Int64 Ring;
 
-				Titanium(Calcium^ Upsilon, Scandium^ Nu) : Quark(Nu, Upsilon, Upsilon->Mu.Key->N) {
-					if (Despina == nullptr) Despina = gcnew Quark<Dysnomium^, Scandium^, Calcium^>(L, N, R);
+				Titanium(Calcium^ Upsilon, Scandium^ Nu) : Edge(Nu, Upsilon, Upsilon->Mu.Key->N) {
+					if (Despina == nullptr) Despina = gcnew Edge<Dysnomium^, Scandium^, Calcium^>(L, N, R);
 					Ring = Nu->Ring;
 				}
 			};

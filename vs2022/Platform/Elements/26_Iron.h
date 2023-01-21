@@ -14,7 +14,7 @@ namespace Dysnomia {
 			public ref class Iron : public Dai<Dysnomium^, Scandium^>
 			{
 			public:
-				static Quark<Sulfur^, Aether^, Iron^>^ Io;
+				static Edge<Sulfur^, Aether^, Iron^>^ Io;
 
 				Int64 Dynamo;
 				Manganese^ Beta;
@@ -24,7 +24,7 @@ namespace Dysnomia {
 					Omega();
 					Xi(Sulfur::Titan->Mu.Key, Sulfur::Titan->Rho.Key->Nu.Value);
 
-					if (Scandium::Psamathe == nullptr) Scandium::Psamathe = gcnew Quark<Sulfur^, Argon^, Coronium^>(Beta->N->Rho.Key, Beta->L->Mu.Key, Beta->L->Mu.Value);
+					if (Scandium::Psamathe == nullptr) Scandium::Psamathe = gcnew Edge<Sulfur^, Argon^, Coronium^>(Beta->N->Rho.Key, Beta->L->Mu.Key, Beta->L->Mu.Value);
 				}
 
 				void Omega() {

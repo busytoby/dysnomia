@@ -8,7 +8,7 @@ namespace Dysnomia {
 			public ref class Quaternion : public Dai<Woof^, Yttrium^>
 			{
 			public:
-				static Quark<Arsenic^, Woof^, Yttrium^>^ Bianca;
+				static Edge<Arsenic^, Woof^, Yttrium^>^ Bianca;
 				static Dai<Yttrium^, Woof^>^ Fornjot;
 
 				Quaternion(Yttrium^ Nu) {
@@ -21,7 +21,7 @@ namespace Dysnomia {
 					}
 					if (Count > 4) throw gcnew Exception("Quaternions With Count > 4 Are Not Expected Yet");
 
-					if (Bianca == nullptr) Bianca = gcnew Quark<Arsenic^, Woof^, Yttrium^>(Nu->L->Alpha, Nu->N->R, Nu);
+					if (Bianca == nullptr) Bianca = gcnew Edge<Arsenic^, Woof^, Yttrium^>(Nu->L->Alpha, Nu->N->R, Nu);
 					if (Fornjot == nullptr) Fornjot = gcnew Dai<Yttrium^, Woof^>();
 					for (int i = Count - 1; i > -1; i--) Fornjot->Add(this[i].Value, this[i].Key);
 				}

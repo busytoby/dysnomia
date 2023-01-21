@@ -9,7 +9,7 @@ namespace Dysnomia {
 			public ref class Jong
 			{
 			public:
-				Quark<Boron^, Hydrogen^, Beryllium^>^ Zhang = Objects::Uranus;
+				Edge<Boron^, Hydrogen^, Beryllium^>^ Zhang = Objects::Uranus;
 				Wou^ Mu;
 				Phosphorous^ Rho;
 				Calcium^ Psi;

@@ -7,7 +7,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Baryon : public Dai<Hel^, Down^> {
 			public:
-				static Quark<Nucleon^, Fermion^, Hadron^>^ Hippocamp;
+				static Edge<Nucleon^, Fermion^, Hadron^>^ Hippocamp;
 				static Nucleon^ Star;
 
 				Baryon(Down^ Beta) {
@@ -25,7 +25,7 @@ namespace Dysnomia {
 					Add(Star[0]->L[5]->L[0]->L, Beta);
 					Add(Star[0]->L[2]->L[0]->L, Beta);
 
-					if (Hippocamp == nullptr) Hippocamp = gcnew Quark<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Star[0]->L, Delta[0]->L);
+					if (Hippocamp == nullptr) Hippocamp = gcnew Edge<Nucleon^, Fermion^, Hadron^>(Beta[0]->L, Star[0]->L, Delta[0]->L);
 				}
 			};
 		}

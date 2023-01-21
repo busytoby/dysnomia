@@ -5,13 +5,13 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Aluminium : public Quark<Magnesium^, Helium^, Carbon^> {
+			public ref class Aluminium : public Edge<Magnesium^, Helium^, Carbon^> {
 			public:
-				static Quark<Aluminium^, Helium^, Carbon^>^ Phobos;
+				static Edge<Aluminium^, Helium^, Carbon^>^ Phobos;
 
-				Aluminium(Magnesium^ N) : Quark<Magnesium^, Helium^, Carbon^>(N, gcnew Helium(), N->Mu.Key) {
+				Aluminium(Magnesium^ N) : Edge<Magnesium^, Helium^, Carbon^>(N, gcnew Helium(), N->Mu.Key) {
 					if (Phobos == nullptr) {
-						Phobos = gcnew Quark<Aluminium^, Helium^, Carbon^>(this, R, L);
+						Phobos = gcnew Edge<Aluminium^, Helium^, Carbon^>(this, R, L);
 					}
 				}
 

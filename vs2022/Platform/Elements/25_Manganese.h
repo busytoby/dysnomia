@@ -10,21 +10,21 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Manganese : public Quark<Vanadium^, Potassium^, Scandium^> {
+			public ref class Manganese : public Edge<Vanadium^, Potassium^, Scandium^> {
 			public:
 				static Dai<Manganese^, Vanadium^>^ Mab;
 				static Dai<Vanadium^, Manganese^>^ Rosalind;
-				static Quark<Scandium^, Potassium^, Vanadium^>^ Ganymede;
-				static Quark<Potassium^, Scandium^, Vanadium^>^ Himalia;
+				static Edge<Scandium^, Potassium^, Vanadium^>^ Ganymede;
+				static Edge<Potassium^, Scandium^, Vanadium^>^ Himalia;
 
 				Chromium^ Xi;
 
-				Manganese(Chromium^ Alpha) : Quark(Alpha->Mu.Key, Alpha->Mu.Key->Xi->R->Mu.Key, Alpha->Mu.Key->Xi->N) {
+				Manganese(Chromium^ Alpha) : Edge(Alpha->Mu.Key, Alpha->Mu.Key->Xi->R->Mu.Key, Alpha->Mu.Key->Xi->N) {
 					Xi = Alpha;
 					if (Mab == nullptr) Mab = gcnew Dai<Manganese^, Vanadium^>();
 					if (Rosalind == nullptr) Rosalind = gcnew Dai<Vanadium^, Manganese^>();
-					if (Ganymede == nullptr) Ganymede = gcnew Quark<Scandium^, Potassium^, Vanadium^>(L, R, N);
-					if (Himalia == nullptr) Himalia = gcnew Quark<Potassium^, Scandium^, Vanadium^>(R, L, N);
+					if (Ganymede == nullptr) Ganymede = gcnew Edge<Scandium^, Potassium^, Vanadium^>(L, R, N);
+					if (Himalia == nullptr) Himalia = gcnew Edge<Potassium^, Scandium^, Vanadium^>(R, L, N);
 					for (int i = 0; i < Alpha->Count; i++) {
 						Mab->Add(this, Alpha[i].Key);
 						Rosalind->Add(Alpha[i].Key, this);
