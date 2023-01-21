@@ -12,7 +12,7 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Jong::Jong() {
 				Mu = gcnew Wou();
-				Compensation^ Rho = gcnew Compensation(Mu->Upsilon);
+				Parity^ Rho = gcnew Parity(Mu->Upsilon);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
