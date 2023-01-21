@@ -77,7 +77,7 @@ namespace Dysnomia {
 			static property Edge<Magnesium^, Nitrogen^, Charm^>^ Halimede { Edge<Magnesium^, Nitrogen^, Charm^>^ get() { return Coronium::Halimede; }};
 			static property Edge<Magnesium^, Charm^, Nucleon^>^ Dione { Edge<Magnesium^, Charm^, Nucleon^>^ get() { return Magnesium::Dione; }};
 			static property Edge<Magnesium^, Charm^, Natrium^>^ VanAllenBelt { Edge<Magnesium^, Charm^, Natrium^>^ get() { return Magnesium::VanAllenBelt; }};
-			static property Edge<Aluminium^, Helium^, Down^>^ Phobos { Edge<Aluminium^, Helium^, Down^>^ get() { return Aluminium::Phobos; }};
+			static property Edge<Aluminium^, Bottom^, Down^>^ Phobos { Edge<Aluminium^, Bottom^, Down^>^ get() { return Aluminium::Phobos; }};
 			static property Edge<Aluminium^, Aether^, Nickel^>^ Triton { Edge<Aluminium^, Aether^, Nickel^>^ get() { return Copper::Triton; }}
 			static property Edge<Coronium^, Coronium^, Down^>^ Prospero { Edge<Coronium^, Coronium^, Down^>^ get() { return Silicon::Prospero; }};
 			static property Dai<Coronium^, Silicon^>^ Jupiter19 { Dai<Coronium^, Silicon^>^ get() { return Phosphorous::Jupiter19; }};

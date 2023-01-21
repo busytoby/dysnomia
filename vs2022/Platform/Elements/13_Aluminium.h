@@ -7,7 +7,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Aluminium : public Dai<Charm^, Bottom^> {
 			public:
-				static Edge<Aluminium^, Hel^, Down^>^ Phobos;
+				static Edge<Aluminium^, Bottom^, Down^>^ Phobos;
 
 				Aluminium(Bottom^ Beta) {
 					Hel^ Pi = gcnew Hel(Beta[0]->I[2]->I);
@@ -17,7 +17,7 @@ namespace Dysnomia {
 					Add(Omicron, Beta);
 
 					if (Phobos == nullptr) {
-						Phobos = gcnew Edge<Aluminium^, Hel^, Down^>(this, Pi, Xi);
+						Phobos = gcnew Edge<Aluminium^, Bottom^, Down^>(this, Beta, Xi);
 					}
 				}
 			};

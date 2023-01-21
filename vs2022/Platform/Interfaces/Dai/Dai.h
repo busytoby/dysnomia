@@ -45,7 +45,7 @@ namespace Dysnomia {
 
 				void Add(T1 A, T2 B) { 
 					Alpha->Add(gcnew Chi(A, B));
-					if (A->Epsilon == 0 || B->Epsilon == 0) throw gcnew Exception("Zero Epsilon");
+					if (A->Epsilon == 0 && B->Epsilon == 0) throw gcnew Exception("Zero Epsilon");
 					this->Epsilon = this->Epsilon + A->Epsilon + B->Epsilon; 
 				}
 				void Remove(Chi^ M) {

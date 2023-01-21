@@ -1,17 +1,22 @@
 #pragma once
-#include "14_Silicon.h"
 
 using namespace System;
 
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Phosphorous : public Dai<Coronium^, Silicon^>
+			public ref class Parity : public Dai<Tauon^, Compensation^>
 			{
 			public:
-				static Dai<Coronium^, Silicon^>^ Jupiter19;
-				static Edge<Silicon^, Coronium^, Aluminium^>^ Thalassa;
+//				static Dai<Coronium^, Silicon^>^ Jupiter19;
+//				static Edge<Silicon^, Coronium^, Aluminium^>^ Thalassa;
 
+				Parity(Aluminium^ Beta) {			
+					Compensation^ Rho = gcnew Compensation(Beta);
+					for (int i = 0; i < Rho->Count; i++)
+						Add(Rho[i]->L, Rho);
+				}
+/*
 				Phosphorous(Aluminium^ Mu, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Qi) {
 					Silicon^ Alpha = gcnew Silicon(Mu, Rho, Upsilon, Ohm, Qi);
 					for (int i = 0; i < Alpha->Count; i++)
@@ -28,6 +33,7 @@ namespace Dysnomia {
 					Add(Iota, Alpha);
 					return Iota;
 				}
+*/
 			};
 		}
 	}
