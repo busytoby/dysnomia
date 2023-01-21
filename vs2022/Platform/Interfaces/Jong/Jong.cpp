@@ -13,6 +13,7 @@ namespace Dysnomia {
 			Jong::Jong() {
 				Mu = gcnew Wou();
 				Tauon^ Rho = gcnew Tauon(Mu->Upsilon);
+				Compensation^ Psi = gcnew Compensation(Rho, Mu->Upsilon);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);

@@ -135,7 +135,7 @@
     <ClInclude Include="11_Up.h" />
     <ClInclude Include="12_Bottom.h" />
     <ClInclude Include="13a_Tauon.h" />
-    <ClInclude Include="14_Silicon.h" />
+    <ClInclude Include="14_Compensation.h" />
     <ClInclude Include="15_Phosphorous.h" />
     <ClInclude Include="16_Sulfur.h" />
     <ClInclude Include="17a_Aether.h" />
