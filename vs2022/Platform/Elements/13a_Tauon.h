@@ -12,9 +12,10 @@ namespace Dysnomia {
 				static Edge<Bottom^, Hyperon^, Charm^>^ Halimede;
 				static Edge<Hyperon^, Charm^, Bottom^>^ Naiad;
 				Tauon(Aluminium^ Beta) {
+					Add(Bottom::VanAllenBelt->R[0]->L, Beta);
+
 					Top^ Rho = gcnew Top(Beta[0]->I);
 					Add(Rho, Beta);
-					Add(Bottom::VanAllenBelt->R[0]->L, Beta);
 					
 					if (Halimede == nullptr) Halimede = gcnew Edge<Bottom^, Hyperon^, Charm^>(Beta[0]->L, Strange::CygnusLoop[3][0]->L, Beta[0]->I);
 					if (Naiad == nullptr) Naiad = gcnew Edge<Hyperon^, Charm^, Bottom^>(Strange::CygnusLoop[3][0]->L, Beta[0]->L[0]->L, Beta[0]->L);
