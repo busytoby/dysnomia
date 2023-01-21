@@ -49,6 +49,7 @@
 #include <cassert>
 
 using namespace System;
+using namespace System::Collections::Generic;
 using namespace Dysnomia::Platform::Elements;
 using namespace Dysnomia::Platform::Interfaces;
 

@@ -14,6 +14,8 @@ namespace Dysnomia {
 					Down^ Xi = gcnew Down(Pi);
 					Charm^ Omicron = gcnew Charm(Xi);
 
+					Add(Omicron, Beta);
+
 					if (Phobos == nullptr) {
 						Phobos = gcnew Edge<Aluminium^, Hel^, Down^>(this, Pi, Xi);
 					}

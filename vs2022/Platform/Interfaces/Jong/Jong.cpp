@@ -12,6 +12,7 @@ namespace Dysnomia {
 		namespace Interfaces {
 			Jong::Jong() {
 				Mu = gcnew Wou();
+				Tauon^ Rho = gcnew Tauon(Mu->Upsilon);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
