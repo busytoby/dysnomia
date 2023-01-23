@@ -152,7 +152,7 @@
     <ClInclude Include="25_Auctus.h" />
     <ClInclude Include="26_Ramus.h" />
     <ClInclude Include="27_Perithecium.h" />
-    <ClInclude Include="28_Nickel.h" />
+    <ClInclude Include="28_Peridium.h" />
     <ClInclude Include="29_Copper.h" />
     <ClInclude Include="30_Zinc.h" />
     <ClInclude Include="31_Gallium.h" />
