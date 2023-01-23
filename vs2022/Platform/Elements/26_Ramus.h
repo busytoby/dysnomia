@@ -22,6 +22,8 @@ namespace Dysnomia {
 					Auctus^ Tau = gcnew Auctus(Upsilon);
 					Versor^ Theta = gcnew Versor(Tau);
 
+					Add(Tau, Theta);
+
 					if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Ether^>(Psi[0]->I->N, Psi[0]->I, Psi);
 					if (Io == nullptr) Io = gcnew Edge<Apse^, Ramus^, Eun^>(Nu, this, Sigma);
 				}
