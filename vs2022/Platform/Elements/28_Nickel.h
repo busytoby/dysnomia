@@ -17,7 +17,6 @@ namespace Dysnomia {
 
 				Nickel(Aether^ Eta, Iron^ Lambda) {
 					Add(Lambda, Eta);
-					if (Iron::Io == nullptr) Iron::Io = gcnew Edge<Sulfur^, Aether^, Iron^>(Mu.Value->Mu.Key, Mu.Value, Mu.Key);
 					if(Amalthea == nullptr) Amalthea = gcnew Dai<Aether^, Iron^>();
 					Amalthea->Add(Eta, Lambda);
 

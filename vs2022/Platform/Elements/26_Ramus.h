@@ -8,8 +8,8 @@ namespace Dysnomia {
 			public ref class Ramus : public Dai<Auctus^, Versor^>
 			{
 			public:
-				static Edge<Sulfur^, Argon^, Tauon^>^ Psamathe;
-				static Edge<Sulfur^, Gluon^, Ramus^>^ Io;
+				static Edge<Sulfur^, Argon^, Ether^>^ Psamathe;
+				static Edge<Apse^, Ramus^, Eun^>^ Io;
 
 				Ramus() {
 					Aluminium^ Mu = gcnew Aluminium();
@@ -22,7 +22,8 @@ namespace Dysnomia {
 					Auctus^ Tau = gcnew Auctus(Upsilon);
 					Versor^ Theta = gcnew Versor(Tau);
 
-					if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Tauon^>(Psi[0]->I->N, Psi[0]->I, Rho[0]->I);
+					if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Ether^>(Psi[0]->I->N, Psi[0]->I, Psi);
+					if (Io == nullptr) Io = gcnew Edge<Apse^, Ramus^, Eun^>(Nu, this, Sigma);
 				}
 			};
 		}
