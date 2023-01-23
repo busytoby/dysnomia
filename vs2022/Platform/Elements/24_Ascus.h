@@ -8,7 +8,7 @@ namespace Dysnomia {
 		namespace Elements {
 			public ref class Ascus : public Dai<Synapse^, Eun^> {
 			public:
-				static Edge<Synapse^, Tauon^, Eun^>^ Sycorax;
+				static Edge<Synapse^, Pion^, Eun^>^ Sycorax;
 				static Dai<Dysnomium^, Synapse^>^ Belinda;
 				static Edge<Eun^, Sulfur^, Synapse^>^ Puck;
 				static Ascus^ Mars;
@@ -20,7 +20,7 @@ namespace Dysnomia {
 					if (Puck == nullptr) Puck = gcnew Edge<Eun^, Sulfur^, Synapse^>(Iota, Iota[0]->I[0]->I->N, Beta);
 					if (Belinda == nullptr) Belinda = gcnew Dai<Dysnomium^, Synapse^>();
 					Belinda->Add(Beta->R, Beta);
-					if (Sycorax == nullptr) Sycorax = gcnew Edge<Synapse^, Tauon^, Eun^>(Beta, Beta->N[0]->L, Iota);
+					if (Sycorax == nullptr) Sycorax = gcnew Edge<Synapse^, Pion^, Eun^>(Beta, Beta->I[0]->L, Iota);
 				}
 			};
 		}
