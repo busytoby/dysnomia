@@ -6,14 +6,14 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Chromium : public Dai<Synapse^, Eun^> {
+			public ref class Ascus : public Dai<Synapse^, Eun^> {
 			public:
 				static Edge<Synapse^, Tauon^, Eun^>^ Sycorax;
 				static Edge<Eun^, Dysnomium^, Synapse^>^ Belinda;
 				static Edge<Eun^, Sulfur^, Synapse^>^ Puck;
 				static Edge<Synapse^, Sulfur^, Eun^>^ Mars;
 
-				Chromium(Synapse^ Beta, Eun^ Rho) {
+				Ascus(Synapse^ Beta, Eun^ Rho) {
 					Add(Beta, Rho);
 
 					/*

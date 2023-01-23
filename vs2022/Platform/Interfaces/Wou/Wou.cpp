@@ -19,7 +19,7 @@ namespace Dysnomia {
 				Nu = gcnew Apse(Psi->Mu->L);
 				Eta = gcnew Synapse(Psi, Nu);
 				Sigma = gcnew Eun(Eta);
-				Chromium^ Upsilon = gcnew Chromium(Eta, Sigma);
+				Ascus^ Upsilon = gcnew Ascus(Eta, Sigma);
 			}
 		}
 	}
