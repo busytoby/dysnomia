@@ -5,24 +5,21 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Calcium : public Dai<Potassium^, Argon^>
+			public ref class Calcium : public Dai<Argon^, Potassium^>
 			{
 			public:
 				static Edge<Sulfur^, Potassium^, Calcium^>^ Deimos;
 
-				Calcium(Phosphorous^ Rho) {
-					Sulfur^ Psi = gcnew Sulfur(Rho->Rho.Value->Zeta, Rho, Rho->Mu.Value);
-
-					this->Calcium::Calcium(Psi);
-					if (Deimos == nullptr) Deimos = gcnew Edge<Sulfur^, Potassium^, Calcium^>(Psi, Mu.Key, this);
+				Calcium(Parity^ Beta) {
+					Sulfur^ Rho = gcnew Sulfur(Beta);
+					this->Calcium::Calcium(Rho);
+					if (Deimos == nullptr) Deimos = gcnew Edge<Sulfur^, Potassium^, Calcium^>(Rho, Mu->L, this);
 				}
 
-				Calcium(Sulfur^ Psi) {
-					Chlorine^ Nu = gcnew Chlorine(Psi);
-					Aether^ Eta = gcnew Aether(Psi);
-					Argon^ Sigma = gcnew Argon(Psi, Nu, Eta);
-
-					Add(KeyValuePair<Potassium^, Argon^>(gcnew Potassium(Sigma->N), Sigma));
+				Calcium(Sulfur^ Beta) {
+					Chlorine^ Rho = gcnew Chlorine(Beta);
+					Argon^ Sigma = gcnew Argon(Rho);
+					Add(Sigma, gcnew Potassium(Sigma));
 				}
 			};
 		}

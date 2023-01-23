@@ -5,7 +5,7 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Dysnomium : public Dai<Parity^, Argon^>
+			public ref class Dysnomium : public Dai<Gluon^, Argon^>
 			{
 			public:
 				Int64 Gamma;
@@ -13,16 +13,28 @@ namespace Dysnomia {
 				Dysnomium(Argon^ Beta) {
 					this->Epsilon = Beta->Epsilon;
 					Gamma = this->Epsilon;
-					Add(Beta->N->I, Beta);
+					Add(Beta->R, Beta);
 				}
 
-				void Omega(Tauon^ Beta, Compensation^ Rho) {
+				void Omicron(Tauon^ Beta) {
 					this->Epsilon = Beta->Epsilon;
 					Gamma = Gamma + Beta->Epsilon;
-					Mu->I->Add(Beta, Rho);
+					Mu->I->Add(Last->L->N, Beta);
 				}
 
-				void Kappa(Parity::Chi^ Beta) {
+				void Omega(Gluon^ Beta) {
+					this->Epsilon = Beta->Epsilon;
+					Gamma = Gamma + Beta->Epsilon;
+					Add(Beta, Last->L);
+				}
+
+				void Omega(Gluon^ Beta, Argon^ Rho) {
+					this->Epsilon = Beta->Epsilon;
+					Gamma = Gamma + Beta->Epsilon;
+					Add(Beta, Rho);
+				}
+
+				void Kappa(Gluon::Chi^ Beta) {
 					this->Epsilon = Beta->I->Epsilon;
 					Gamma = Gamma + Beta->I->Epsilon;
 					Mu->I->Remove(Beta);

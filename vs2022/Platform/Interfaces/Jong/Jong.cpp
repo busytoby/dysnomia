@@ -13,10 +13,7 @@ namespace Dysnomia {
 			Jong::Jong() {
 				Mu = gcnew Wou();
 				Parity^ Rho = gcnew Parity(Mu->Upsilon);
-				Sulfur^ Psi = gcnew Sulfur(Rho);
-				Chlorine^ Nu = gcnew Chlorine(Psi);
-				Argon^ Eta = gcnew Argon(Nu);
-				Dysnomium^ Sigma = gcnew Dysnomium(Eta);
+				Calcium^ Psi = gcnew Calcium(Rho);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
