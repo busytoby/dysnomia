@@ -154,7 +154,7 @@
     <ClInclude Include="27_Perithecium.h" />
     <ClInclude Include="28_Peridium.h" />
     <ClInclude Include="29_Conidium.h" />
-    <ClInclude Include="30_Zinc.h" />
+    <ClInclude Include="30_Hymenium.h" />
     <ClInclude Include="31_Gallium.h" />
     <ClInclude Include="32_Germanium.h" />
     <ClInclude Include="33_Arsenic.h" />
