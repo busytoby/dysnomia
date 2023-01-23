@@ -5,32 +5,18 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Ramus : public Dai<Dysnomium^, Apse^>
+			public ref class Ramus : public Dai<Auctus^, Versor^>
 			{
 			public:
 				static Edge<Sulfur^, Argon^, Tauon^>^ Psamathe;
-				static Edge<Sulfur^, Gluon^, Iron^>^ Io;
-
-				Int64 Dynamo;
+				static Edge<Sulfur^, Gluon^, Ramus^>^ Io;
 
 				Ramus(Auctus^ Beta) {
-					Omega();
-					Xi(Sulfur::Titan->Mu.Key, Sulfur::Titan->Rho.Key->Nu.Value);
+					//for(int i = 0; i < Beta[0]->I->Count; i++)
+					//	Add(Beta[0]->I[i]->L[0]->I, Beta[0]->I[i]->L);
+					//Xi(Sulfur::Titan[0]->I, Sulfur::Titan[1]->L->R);
 
-					if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Tauon^>(Beta->N->Rho.Key, Beta->L->Mu.Key, Beta->L->Mu.Value);
-				}
-
-				void Omega() {
-					Add(Beta->R->N, Beta->L);
-					Dynamo = Math::ModPow(Sulfur::Titan->Mu.Value->N->N->Zeta->Xi->Rod->Base, Beta->Xi->Signal, Beta->L->Ring);
-					if (Dynamo.IsZero)
-						throw gcnew Exception("Singularity, Neutron System Not Yet Viable");
-				}
-
-				void Xi(Parity^ Eta, Compensation^ Sigma) {
-					Sulfur^ Mu = gcnew Sulfur(Sulfur::Titan->Mu.Key->Psi.Value->Zeta, Eta, Sigma);
-					Beta->N->Add(Mu, Beta->N->Mu.Value);
-					Beta->Omega(Sigma);
+					//if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Tauon^>(Beta[0]->L[0]->I->I[0]->I->N, Beta[0]->L[0]->L[0]->I[0]->I, Beta[0]->I[0]->I[0]->L->R[0]->L);
 				}
 			};
 		}
