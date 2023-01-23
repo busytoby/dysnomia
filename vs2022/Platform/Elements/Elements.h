@@ -29,6 +29,7 @@
 #include "23_Eun.h"
 #include "24_Ascus.h"
 #include "25_Auctus.h"
+#include "25a_Versor.h"
 #include "26_Ramus.h"
 /*
 #include "27_Cobalt.h"
