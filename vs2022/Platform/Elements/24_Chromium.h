@@ -1,6 +1,4 @@
 #pragma once
-#include "13a_Coronium.h"
-#include "23_Vanadium.h"
 
 using namespace System;
 using namespace Dysnomia::Platform::Elements;
@@ -8,27 +6,22 @@ using namespace Dysnomia::Platform::Elements;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Chromium : public Dai<Vanadium^, Coronium^> {
+			public ref class Chromium : public Dai<Synapse^, Eun^> {
 			public:
-				static Edge<Titanium^, Coronium^, Vanadium^>^ Sycorax;
-				static Edge<Vanadium^, Dysnomium^, Titanium^>^ Belinda;
-				static Edge<Vanadium^, Sulfur^, Titanium^>^ Puck;
-				static Edge<Titanium^, Sulfur^, Vanadium^>^ Mars;
+				static Edge<Synapse^, Tauon^, Eun^>^ Sycorax;
+				static Edge<Eun^, Dysnomium^, Synapse^>^ Belinda;
+				static Edge<Eun^, Sulfur^, Synapse^>^ Puck;
+				static Edge<Synapse^, Sulfur^, Eun^>^ Mars;
 
-				Int64 Signal;
+				Chromium(Synapse^ Beta, Eun^ Rho) {
+					Add(Beta, Rho);
 
-				Chromium(Vanadium^ Alpha) {
-					for (int i = 0; i < Alpha->Count; i++) {
-						for (int j = 0; j < Alpha[i].Value->Count; j++) {
-							Add(Alpha, Alpha[i].Value[j].Value);
-							Signal = Signal + Alpha[i].Value[j].Value->L->Pi->L->Signal;
-						}
-					}
-
-					if (Mars == nullptr) Mars = gcnew Edge<Titanium^, Sulfur^, Vanadium^>(Alpha->Xi, Alpha->Mu.Key, Alpha);
-					if (Puck == nullptr) Puck = gcnew Edge<Vanadium^, Sulfur^, Titanium^>(Alpha, Alpha->Mu.Key, Alpha->Xi);
-					if (Belinda == nullptr) Belinda = gcnew Edge<Vanadium^, Dysnomium^, Titanium^>(Alpha, Alpha->Xi->L, Alpha->Xi);
-					if (Sycorax == nullptr) Sycorax = gcnew Edge<Titanium^, Coronium^, Vanadium^>(Alpha->Xi, Alpha->Mu.Value->Mu.Value, Alpha);
+					/*
+					if (Mars == nullptr) Mars = gcnew Edge<Synapse^, Sulfur^, Eun^>(Beta, Alpha->Mu.Key, Rho);
+					if (Puck == nullptr) Puck = gcnew Edge<Eun^, Sulfur^, Synapse^>(Rho, Alpha->Mu.Key, Beta);
+					if (Belinda == nullptr) Belinda = gcnew Edge<Eun^, Dysnomium^, Synapse^>(Rho, Alpha->Xi->L, Beta);
+					if (Sycorax == nullptr) Sycorax = gcnew Edge<Synapse^, Tauon^, Eun^>(Beta, Alpha->Mu.Value->Mu.Value, Rho);
+					*/
 				}
 			};
 		}
