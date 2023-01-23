@@ -9,6 +9,19 @@ namespace Dysnomia {
 			public:
 				static Edge<Aluminium^, Bottom^, Down^>^ Phobos;
 
+				Aluminium() {
+					Down^ Beta = gcnew Down();
+					Charm^ Pi = gcnew Charm(Beta);
+					Up^ Xi = gcnew Up(Pi);
+
+					Down^ Omicron = gcnew Down();
+					Charm^ Delta = gcnew Charm(Omicron);
+
+					Bottom^ Alpha = gcnew Bottom(Xi, Delta);
+
+					this->Aluminium::Aluminium(Alpha);
+				}
+
 				Aluminium(Bottom^ Beta) {
 					Hel^ Pi = gcnew Hel(Beta[0]->I[2]->I);
 					Down^ Xi = gcnew Down(Pi);

@@ -16,6 +16,7 @@ namespace Dysnomia {
 				Ether^ Psi = gcnew Ether(Rho);
 				Apse^ Nu = gcnew Apse(Psi->Mu->L);
 				Synapse^ Eta = gcnew Synapse(Psi, Nu);
+				Eun^ Sigma = gcnew Eun(Eta);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);

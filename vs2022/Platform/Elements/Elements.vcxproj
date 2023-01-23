@@ -146,7 +146,7 @@
     <ClInclude Include="20_Ether.h" />
     <ClInclude Include="21_Apse.h" />
     <ClInclude Include="22_Synapse.h" />
-    <ClInclude Include="23_Vanadium.h" />
+    <ClInclude Include="23_Eun.h" />
     <ClInclude Include="24_Chromium.h" />
     <ClInclude Include="25_Manganese.h" />
     <ClInclude Include="26_Iron.h" />
