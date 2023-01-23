@@ -13,14 +13,7 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
-				Mu = gcnew Aluminium();
-				Rho = gcnew Parity(Mu);
-				Psi = gcnew Ether(Rho);
-				Nu = gcnew Apse(Psi->Mu->L);
-				Eta = gcnew Synapse(Psi, Nu);
-				Sigma = gcnew Eun(Eta);
-				Ascus^ Upsilon = gcnew Ascus(Eta, Sigma);
-				Auctus^ Tau = gcnew Auctus(Upsilon);
+				Mu = gcnew Ramus();
 			}
 		}
 	}

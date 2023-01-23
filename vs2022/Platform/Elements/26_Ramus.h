@@ -11,12 +11,18 @@ namespace Dysnomia {
 				static Edge<Sulfur^, Argon^, Tauon^>^ Psamathe;
 				static Edge<Sulfur^, Gluon^, Ramus^>^ Io;
 
-				Ramus(Auctus^ Beta) {
-					//for(int i = 0; i < Beta[0]->I->Count; i++)
-					//	Add(Beta[0]->I[i]->L[0]->I, Beta[0]->I[i]->L);
-					//Xi(Sulfur::Titan[0]->I, Sulfur::Titan[1]->L->R);
+				Ramus() {
+					Aluminium^ Mu = gcnew Aluminium();
+					Parity^ Rho = gcnew Parity(Mu);
+					Ether^ Psi = gcnew Ether(Rho);
+					Apse^ Nu = gcnew Apse(Psi->Mu->L);
+					Synapse^ Eta = gcnew Synapse(Psi, Nu);
+					Eun^ Sigma = gcnew Eun(Eta);
+					Ascus^ Upsilon = gcnew Ascus(Eta, Sigma);
+					Auctus^ Tau = gcnew Auctus(Upsilon);
+					Versor^ Theta = gcnew Versor(Tau);
 
-					//if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Tauon^>(Beta[0]->L[0]->I->I[0]->I->N, Beta[0]->L[0]->L[0]->I[0]->I, Beta[0]->I[0]->I[0]->L->R[0]->L);
+					if (Psamathe == nullptr) Psamathe = gcnew Edge<Sulfur^, Argon^, Tauon^>(Psi[0]->I->N, Psi[0]->I, Rho[0]->I);
 				}
 			};
 		}
