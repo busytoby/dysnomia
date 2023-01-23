@@ -33,8 +33,8 @@
 #include "26_Ramus.h"
 #include "27_Perithecium.h"
 #include "28_Peridium.h"
+#include "29_Conidium.h"
 /*
-#include "29_Copper.h"
 #include "30_Zinc.h"
 #include "31_Gallium.h"
 #include "32_Germanium.h"

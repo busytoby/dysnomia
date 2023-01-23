@@ -16,6 +16,7 @@ namespace Dysnomia {
 				Mu = gcnew Ramus();
 				Perithecium^ Rho = gcnew Perithecium(Mu);
 				Peridium^ Psi = gcnew Peridium(Mu[0]->L, Rho);
+				Conidium^ Nu = gcnew Conidium(Mu[0]->I[0]->I, Psi);
 			}
 		}
 	}
