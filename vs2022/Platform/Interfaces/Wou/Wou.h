@@ -12,13 +12,12 @@ namespace Dysnomia {
 			public ref class Wou
 			{
 			public:
-				Down^ Mu;
-				Charm^ Rho;
-				Up^ Psi;
-				Down^ Nu;
-				Charm^ Eta;
-				Bottom^ Sigma;
-				Aluminium^ Upsilon;
+				Aluminium^ Mu;
+				Parity^ Rho;
+				Ether^ Psi;
+				Apse^ Nu;
+				Synapse^ Eta;
+				Eun^ Sigma;
 
 				Wou();
 			};

@@ -13,15 +13,12 @@ namespace Dysnomia {
 			Wou::Wou() {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
-				Mu = gcnew Down();
-				Rho = gcnew Charm(Mu);
-				Psi = gcnew Up(Rho);
-
-				Nu = gcnew Down();
-				Eta = gcnew Charm(Nu);
-
-				Sigma = gcnew Bottom(Psi, Eta);
-				Upsilon = gcnew Aluminium(Sigma);
+				Mu = gcnew Aluminium();
+				Rho = gcnew Parity(Mu);
+				Psi = gcnew Ether(Rho);
+				Nu = gcnew Apse(Psi->Mu->L);
+				Eta = gcnew Synapse(Psi, Nu);
+				Sigma = gcnew Eun(Eta);
 			}
 		}
 	}
