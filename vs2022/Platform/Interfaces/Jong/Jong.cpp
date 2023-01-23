@@ -14,6 +14,7 @@ namespace Dysnomia {
 				Mu = gcnew Wou();
 				Parity^ Rho = gcnew Parity(Mu->Upsilon);
 				Ether^ Psi = gcnew Ether(Rho);
+				Apse^ Nu = gcnew Apse(Psi->Mu->L);
 
 				/*
 				Constants::Evidences->Add(Dysnomia::Platform::Wou::Constants::Theta);
