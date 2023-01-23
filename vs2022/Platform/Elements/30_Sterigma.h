@@ -5,14 +5,15 @@ using namespace System;
 namespace Dysnomia {
 	namespace Platform {
 		namespace Elements {
-			public ref class Sterigma : public Edge<Peridium^, Conidium^, Peridium^> {
+			public ref class Sterigma : public Dai<Peridium^, Conidium^> {
 			public:
-				static Dai<Sterigma^, Argon^>^ Venus;
-				static Edge<Nickel^, Argon^, Natrium^>^ Neith;
-				static Edge<Nickel^, Argon^, Sterigma^>^ Callisto;
-				static Edge<Argon^, Sterigma^, Aluminium^>^ Neso;
+				static Dai<Ramus^, Sterigma^>^ Venus;
+				static Edge<Ramus^, Sterigma^, Conidium^>^ Neith;
+				static Edge<Ramus^, Sterigma^, Perithecium^>^ Callisto;
+				static Dai<Conidium^, Sterigma^>^ Neso;
 
-				Sterigma(Copper^ Nu, Nickel^ Eta) : Edge(Nu, Eta, Nu->Mu.Value) {
+				Sterigma(Peridium^ Eta, Conidium^ Nu) {
+/*
 					if (Venus == nullptr) Venus = gcnew Dai<Sterigma^, Argon^>();
 					Aluminium^ Theta = gcnew Aluminium(Eta->Mu.Value->Mu.Key->N->N);
 					Nu->Add(Theta, Eta);
@@ -21,6 +22,7 @@ namespace Dysnomia {
 					Venus->Add(this, Rho);
 					if (Callisto == nullptr) Callisto = gcnew Edge<Nickel^, Argon^, Sterigma^>(Nu->Mu.Value, Rho, this);
 					if (Neso == nullptr) Neso = gcnew Edge<Argon^, Sterigma^, Aluminium^>(Rho, this, Theta);
+					*/
 				};
 			};
 		}
