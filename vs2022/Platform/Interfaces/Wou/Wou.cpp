@@ -20,6 +20,7 @@ namespace Dysnomia {
 				Eta = gcnew Synapse(Psi, Nu);
 				Sigma = gcnew Eun(Eta);
 				Ascus^ Upsilon = gcnew Ascus(Eta, Sigma);
+				Auctus^ Tau = gcnew Auctus(Upsilon);
 			}
 		}
 	}

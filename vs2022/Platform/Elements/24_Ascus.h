@@ -11,17 +11,15 @@ namespace Dysnomia {
 				static Edge<Synapse^, Tauon^, Eun^>^ Sycorax;
 				static Edge<Eun^, Dysnomium^, Synapse^>^ Belinda;
 				static Edge<Eun^, Sulfur^, Synapse^>^ Puck;
-				static Edge<Synapse^, Sulfur^, Eun^>^ Mars;
+				static Ascus^ Mars;
 
-				Ascus(Synapse^ Beta, Eun^ Rho) {
-					Add(Beta, Rho);
+				Ascus(Synapse^ Beta, Eun^ Iota) {
+					Add(Beta, Iota);
 
-					/*
-					if (Mars == nullptr) Mars = gcnew Edge<Synapse^, Sulfur^, Eun^>(Beta, Alpha->Mu.Key, Rho);
-					if (Puck == nullptr) Puck = gcnew Edge<Eun^, Sulfur^, Synapse^>(Rho, Alpha->Mu.Key, Beta);
-					if (Belinda == nullptr) Belinda = gcnew Edge<Eun^, Dysnomium^, Synapse^>(Rho, Alpha->Xi->L, Beta);
-					if (Sycorax == nullptr) Sycorax = gcnew Edge<Synapse^, Tauon^, Eun^>(Beta, Alpha->Mu.Value->Mu.Value, Rho);
-					*/
+					if (Mars == nullptr) Mars = this;
+					if (Puck == nullptr) Puck = gcnew Edge<Eun^, Sulfur^, Synapse^>(Iota, Iota[0]->I[0]->I->N, Beta);
+					if (Belinda == nullptr) Belinda = gcnew Edge<Eun^, Dysnomium^, Synapse^>(Iota, Beta->R, Beta);
+					if (Sycorax == nullptr) Sycorax = gcnew Edge<Synapse^, Tauon^, Eun^>(Beta, Beta->N[0]->L, Iota);
 				}
 			};
 		}
