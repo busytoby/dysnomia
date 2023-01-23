@@ -151,7 +151,7 @@
     <ClInclude Include="25a_Versor.h" />
     <ClInclude Include="25_Auctus.h" />
     <ClInclude Include="26_Ramus.h" />
-    <ClInclude Include="27_Cobalt.h" />
+    <ClInclude Include="27_Perithecium.h" />
     <ClInclude Include="28_Nickel.h" />
     <ClInclude Include="29_Copper.h" />
     <ClInclude Include="30_Zinc.h" />

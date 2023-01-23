@@ -31,8 +31,8 @@
 #include "25_Auctus.h"
 #include "25a_Versor.h"
 #include "26_Ramus.h"
+#include "27_Perithecium.h"
 /*
-#include "27_Cobalt.h"
 #include "28_Nickel.h"
 #include "29_Copper.h"
 #include "30_Zinc.h"

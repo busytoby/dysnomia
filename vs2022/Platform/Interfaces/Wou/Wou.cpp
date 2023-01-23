@@ -14,6 +14,7 @@ namespace Dysnomia {
 				Dysnomia::Math::Prime = Dysnomia::Math::MotzkinPrime;
 
 				Mu = gcnew Ramus();
+				Perithecium^ Rho = gcnew Perithecium(Mu);
 			}
 		}
 	}

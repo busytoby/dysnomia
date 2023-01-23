@@ -12,7 +12,6 @@ namespace Dysnomia {
 				static Edge<Apse^, Pion^, Eun^>^ Ganymede;
 				static Edge<Pion^, Apse^, Eun^>^ Himalia;
 
-
 				Auctus(Ascus^ Alpha) {
 					Add(Alpha[0]->L, Alpha);
 					if (Mab == nullptr) Mab = gcnew Dai<Auctus^, Eun^>();
