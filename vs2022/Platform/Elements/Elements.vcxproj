@@ -143,7 +143,7 @@
     <ClInclude Include="18a_Dysnomium.h" />
     <ClInclude Include="18_Argon.h" />
     <ClInclude Include="19_Potassium.h" />
-    <ClInclude Include="20_Calcium.h" />
+    <ClInclude Include="20_Ether.h" />
     <ClInclude Include="21_Scandium.h" />
     <ClInclude Include="22_Titanium.h" />
     <ClInclude Include="23_Vanadium.h" />
