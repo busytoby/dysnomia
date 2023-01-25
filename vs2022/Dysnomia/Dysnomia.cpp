@@ -31,5 +31,10 @@ int main()
     if (Upsilon->Cone->Signal != Eta->Cone->Signal) throw 100;
     if (Upsilon->Cone->Barn != Eta->Cone->Barn) throw 100;
     if (Upsilon->Xi != Rho->Xi) throw 100;
-    int i = 99;
+    Dynamic* Tau = new Dynamic();
+    Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+    Tau->Tune();
+    Affinity* Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+    if (Theta->Rod->Base != 0) throw 100;
+    if (Theta->Cone->Base != 0) throw 100;
 }
