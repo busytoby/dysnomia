@@ -21,5 +21,6 @@ namespace Dysnomia {
 		Affinity* Beta();
 		Affinity* Omicron();
 		Affinity* Delta(Affinity*, Affinity*);
+		Affinity* Kappa(Aluminium*);
 	};
 }

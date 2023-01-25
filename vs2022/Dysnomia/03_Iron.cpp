@@ -45,4 +45,10 @@ namespace Dysnomia {
         Dynamic* Chi = new Dynamic();
         return new Affinity(Chi, Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
     }
+
+    // SO(4) Versors
+    Affinity* Iron::Kappa(Aluminium* Iota) {
+        Dynamic* Lambda = Rho->Pi();
+        return new Affinity(Iota->Pi(), Lambda);
+    }
 }
