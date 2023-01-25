@@ -12,4 +12,5 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Tin* Mu = new Tin();
+    Iron* Rho = new Iron();
 }
