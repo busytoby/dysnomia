@@ -12,4 +12,6 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Sulphur* Mu = new Sulphur();
+    Aluminium* Rho = new Aluminium();
+    Aluminium* Psi = new Aluminium(Mu->Theta, Mu->Upsilon->Base, Mu->Upsilon->Element, Mu->Upsilon->Manifold, Mu->Theta->Tau);
 }

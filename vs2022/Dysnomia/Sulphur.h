@@ -13,7 +13,7 @@ namespace Dysnomia {
 		Dynamic* Eta;
 		Affinity* Sigma;
 		Dynamic* Upsilon;
-		Affinity* Tau;
+		Aluminium* Tau;
 		Dynamic* Theta;
 
 		Sulphur();

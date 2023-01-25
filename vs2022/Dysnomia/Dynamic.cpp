@@ -145,7 +145,7 @@ namespace Dysnomia {
 		}
 
 
-		if (Manifold == 0 || Ring == 0 || Barn == 0)
+		if (Manifold == 0 || Ring == 0 || (Manifold != Ring) && Barn == 0)
 		{
 			Seed(); return false;
 		}
