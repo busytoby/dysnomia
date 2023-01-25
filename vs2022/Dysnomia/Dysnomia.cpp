@@ -12,9 +12,9 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    int QuasarAvoidances = 0;
+    int DestructiveAvoidances = 0;
 
-    while (QuasarAvoidances < 10) {
+    while (DestructiveAvoidances < 10) {
         try {
             Tin* Mu = new Tin();
             Iron* Rho = new Iron();
@@ -26,8 +26,8 @@ int main()
 
             break;
         }
-        catch (int e) { QuasarAvoidances++; continue; };
+        catch (int e) { DestructiveAvoidances++; continue; };
     }
 
-    cout << "Completed With " << QuasarAvoidances << " Quasar Avoidances\n";
+    cout << "Completed With " << DestructiveAvoidances << " Destructive Avoidances\n";
 }
