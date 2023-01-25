@@ -132,12 +132,14 @@
     <ClCompile Include="Dynamic.cpp" />
     <ClCompile Include="Dysnomia.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Sulphur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="Aluminium.h" />
     <ClInclude Include="Dynamic.h" />
     <ClInclude Include="Math.h" />
+    <ClInclude Include="Sulphur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
