@@ -14,10 +14,8 @@ int main()
     Aluminium* Mu = new Aluminium();
     Dynamic* Rho = Mu->Pi();
     Aluminium* Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
-
-    if (Mu->Theta->Rod->Secret != Psi->Theta->Rod->Secret) throw 100;
-    if (Mu->Theta->Rod->Secret != Psi->Theta->Cone->Tau) throw 100;
-    if (Mu->Theta->Cone->Tau != Psi->Theta->Rod->Secret) throw 100;
-    if (Mu->Theta->Cone->Tau != Psi->Theta->Cone->Tau) throw 100;
-    Psi->Theta->Compare(Mu->Theta);
+    Affinity* Nu = new Affinity(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+    Dynamic* Eta = new Dynamic();
+    Affinity* Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+    Sigma->Compare(Mu->Theta);
 }
