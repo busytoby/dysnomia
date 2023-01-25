@@ -18,4 +18,5 @@ int main()
     Sulphur* Eta = new Sulphur(Nu);
     Iron* Sigma = new Iron(Eta, Psi, Rho);
     Affinity* Upsilon = Sigma->Beta();
+    Aluminium* Tau = new Aluminium(Upsilon);
 }
