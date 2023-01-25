@@ -1,5 +1,5 @@
 #pragma once
-#include "Aluminium.h"
+#include "01_Aluminium.h"
 
 namespace Dysnomia {
     Aluminium::Aluminium(Dynamic* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {

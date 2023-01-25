@@ -1,5 +1,5 @@
 #pragma once
-#include "Sulphur.h"
+#include "02_Sulphur.h"
 
 namespace Dysnomia {
 	Sulphur::Sulphur() {
