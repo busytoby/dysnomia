@@ -13,4 +13,5 @@ int main()
 
     Tin* Mu = new Tin();
     Iron* Rho = new Iron();
+    Qiao* Psi = new Qiao(Rho);
 }
