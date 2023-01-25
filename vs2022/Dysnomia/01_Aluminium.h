@@ -18,6 +18,7 @@ namespace Dysnomia {
 
 		Aluminium();
 		Aluminium(Dynamic*, Int64, Int64, Int64, Int64);
+		Aluminium(Affinity*);
 		Dynamic* Pi();
 	};
 }

@@ -17,5 +17,6 @@ namespace Dysnomia {
 		Dynamic* Theta;
 
 		Sulphur();
+		Sulphur(Affinity*);
 	};
 }

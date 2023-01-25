@@ -9,6 +9,7 @@ namespace Dysnomia {
         Nu = Beta();
         Eta = Omicron();
         Sigma = Delta(Nu, Eta);
+        Upsilon = new Sulphur(Sigma);
     }
 
     // SO(2) Versor 1
@@ -28,6 +29,6 @@ namespace Dysnomia {
     // SO(3) Versors
     Affinity* Iron::Delta(Affinity* Pi, Affinity* Alpha) {
         Dynamic* Chi = new Dynamic();
-        Upsilon = new Affinity(Chi, Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+        return new Affinity(Chi, Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
     }
 }

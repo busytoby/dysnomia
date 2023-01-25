@@ -12,9 +12,9 @@ namespace Dysnomia {
 		Affinity* Nu;
 		Affinity* Eta;
 		Affinity* Sigma;
-		Affinity* Upsilon;
-		Dynamic* Tau;
-		Affinity* Theta;
+		Sulphur* Upsilon;
+		void* Tau;
+		void* Theta;
 
 		Iron();
 		Affinity* Beta();
