@@ -19,4 +19,5 @@ int main()
     Iron* Sigma = new Iron(Eta, Psi, Rho);
     Affinity* Upsilon = Sigma->Beta();
     Aluminium* Tau = new Aluminium(Upsilon);
+    Iron* Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
 }
