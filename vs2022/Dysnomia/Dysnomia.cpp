@@ -15,4 +15,5 @@ int main()
     Affinity* Rho = Mu->Omicron();
     Affinity* Psi = Mu->Beta();
     Affinity* Nu = Mu->Delta(Rho, Psi);
+    Sulphur* Eta = new Sulphur(Nu);
 }
