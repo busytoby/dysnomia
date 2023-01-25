@@ -10,6 +10,8 @@ namespace Dysnomia {
         Eta = Omicron();
         Sigma = Delta(Nu, Eta);
         Upsilon = new Sulphur(Sigma);
+        Tau = Upsilon->Tau->Pi();
+        Theta = new Aluminium(Tau, Upsilon->Mu->Theta->Cone->Base, Upsilon->Mu->Theta->Rod->Signal, Upsilon->Mu->Theta->Cone->Signal, Upsilon->Mu->Theta->Cone->Tau);
     }
 
     // SO(2) Versor 1
