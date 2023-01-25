@@ -12,7 +12,7 @@ namespace Dysnomia {
 
 	public:
 		Int64 Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn, Coordinate;
-		Int64 Tau, Mu, Eta, Nu, Rho, Alpha;
+		Int64 Tau, Mu, Eta, Nu, Rho, Beta, Phi;
 
 		Dynamic();
 		Dynamic(const Dynamic& Copier);

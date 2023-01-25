@@ -14,6 +14,10 @@ int main()
 
     Dynamic* Mu = new Dynamic();
     Affinity* Rho = new Affinity();
-    
+    Affinity* Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+    if (Rho->Cone->Ring != Psi->Cone->Barn) throw 100;
+    Dynamic* Nu = new Dynamic();
+
+
     int i = 99;
 }

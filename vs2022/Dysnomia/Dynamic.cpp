@@ -100,9 +100,6 @@ namespace Dysnomia {
 		}
 		else if (Nu != 1) throw 6;
 
-		// Int64 Gamma, Kappa
-		Int64 Beta, Rho, Eta, Phi;
-
 		Beta = Math::ModPow(Epsilon, Identity, Math::Prime);
 		Rho = Math::ModPow(Theta, Identity, Math::Prime);
 		Eta = Math::ModPow(Epsilon, Signal, Math::Prime);
