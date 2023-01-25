@@ -17,6 +17,7 @@ namespace Dysnomia {
 		Aluminium* Theta;
 
 		Iron();
+		Iron(Sulphur*, Affinity*, Affinity*);
 		Affinity* Beta();
 		Affinity* Omicron();
 		Affinity* Delta(Affinity*, Affinity*);

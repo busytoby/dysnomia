@@ -16,4 +16,5 @@ int main()
     Affinity* Psi = Mu->Beta();
     Affinity* Nu = Mu->Delta(Rho, Psi);
     Sulphur* Eta = new Sulphur(Nu);
+    Iron* Sigma = new Iron(Eta, Psi, Rho);
 }

@@ -2,6 +2,18 @@
 #include "03_Iron.h"
 
 namespace Dysnomia {
+    Iron::Iron(Sulphur* Xi, Affinity* Iota, Affinity* Lambda) {
+        Mu = Xi;
+        Rho = new Aluminium(Iota);
+        Psi = new Aluminium(Lambda);
+        Nu = Xi->Nu;
+        Eta = Xi->Sigma;
+        Sigma = Delta(Eta, Nu);
+        Upsilon = new Sulphur(Sigma);
+        Tau = Mu->Tau->Pi();
+        Theta = new Aluminium(Tau, Upsilon->Mu->Theta->Cone->Base, Upsilon->Mu->Theta->Rod->Signal, Upsilon->Mu->Theta->Cone->Signal, Upsilon->Mu->Theta->Cone->Tau);
+    }
+
     Iron::Iron() {
         Mu = new Sulphur();
         Rho = new Aluminium();
