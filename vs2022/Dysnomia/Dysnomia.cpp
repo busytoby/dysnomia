@@ -12,4 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Iron* Mu = new Iron();
+    Affinity* Rho = Mu->Omicron();
+    Affinity* Psi = Mu->Beta();
+    Affinity* Nu = Mu->Delta(Rho, Psi);
 }
