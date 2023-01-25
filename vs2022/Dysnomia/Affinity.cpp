@@ -167,4 +167,82 @@ namespace Dysnomia {
 		return D;
 	}
 	*/
+
+	void Affinity::Compare(Affinity* B) {
+		Compare(B->Rod);
+		Compare(B->Cone);
+		Find(B->Phi);
+		Find(B->Eta);
+		Find(B->Mu);
+		Find(B->Xi);
+	}
+
+	void Affinity::Compare(Dynamic* B) {
+		Find(B->Base);
+		Find(B->Secret);
+		Find(B->Signal);
+		Find(B->Channel);
+		Find(B->Identity);
+		Find(B->Foundation);
+		Find(B->Element);
+		Find(B->Dynamo);
+		Find(B->Manifold);
+		Find(B->Ring);
+		Find(B->Barn);
+		Find(B->Coordinate);
+		Find(B->Tau);
+		Find(B->Mu);
+		Find(B->Rho);
+		Find(B->Eta);
+		Find(B->Beta);
+		Find(B->Nu);
+		Find(B->Phi);
+	}
+
+	list<string>* Affinity::Find(Int64 N) {
+		list<string>* M = new list<string>();
+		if (Rod->Base == N) M->push_back("Rod->Base");
+		if (Rod->Secret == N) M->push_back("Rod->Secret");
+		if (Rod->Signal == N) M->push_back("Rod->Signal");
+		if (Rod->Channel == N) M->push_back("Rod->Channel");
+		if (Rod->Identity == N) M->push_back("Rod->Identity");
+		if (Rod->Foundation == N) M->push_back("Rod->Foundation");
+		if (Rod->Element == N) M->push_back("Rod->Element");
+		if (Rod->Dynamo == N) M->push_back("Rod->Dynamo");
+		if (Rod->Manifold == N) M->push_back("Rod->Manifold");
+		if (Rod->Ring == N) M->push_back("Rod->Ring");
+		if (Rod->Coordinate == N) M->push_back("Rod->Coordinate");
+		if (Rod->Tau == N) M->push_back("Rod->Tau");
+		if (Rod->Mu == N) M->push_back("Rod->Mu");
+		if (Rod->Eta == N) M->push_back("Rod->Eta");
+		if (Rod->Rho == N) M->push_back("Rod->Rho");
+		if (Rod->Beta == N) M->push_back("Rod->Beta");
+		if (Rod->Phi == N) M->push_back("Rod->Phi");
+
+		if (Cone->Base == N) M->push_back("Cone->Base");
+		if (Cone->Secret == N) M->push_back("Cone->Secret");
+		if (Cone->Signal == N) M->push_back("Cone->Signal");
+		if (Cone->Channel == N) M->push_back("Cone->Channel");
+		if (Cone->Identity == N) M->push_back("Cone->Identity");
+		if (Cone->Foundation == N) M->push_back("Cone->Foundation");
+		if (Cone->Element == N) M->push_back("Cone->Element");
+		if (Cone->Dynamo == N) M->push_back("Cone->Dynamo");
+		if (Cone->Manifold == N) M->push_back("Cone->Manifold");
+		if (Cone->Ring == N) M->push_back("Cone->Ring");
+		if (Cone->Coordinate == N) M->push_back("Cone->Coordinate");
+		if (Cone->Tau == N) M->push_back("Cone->Tau");
+		if (Cone->Mu == N) M->push_back("Cone->Mu");
+		if (Cone->Eta == N) M->push_back("Cone->Eta");
+		if (Cone->Rho == N) M->push_back("Cone->Rho");
+		if (Cone->Beta == N) M->push_back("Cone->Beta");
+		if (Cone->Phi == N) M->push_back("Cone->Phi");
+
+		if (Phi == N) M->push_back("Phi");
+		if (Eta == N) M->push_back("Eta");
+		if (Mu == N) M->push_back("Mu");
+		if (Xi == N) M->push_back("Xi");
+
+		// set a breakpoint
+		return M;
+	}
 }

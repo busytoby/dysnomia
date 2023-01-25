@@ -17,5 +17,7 @@ namespace Dysnomia {
 		Affinity* Theta;
 
 		Aluminium();
+		Aluminium(Dynamic*, Int64, Int64, Int64, Int64);
+		Dynamic* Pi();
 	};
 }

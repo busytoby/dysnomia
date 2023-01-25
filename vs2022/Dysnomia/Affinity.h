@@ -1,4 +1,7 @@
 #pragma once
+#include <list>
+#include <string>
+#include <tuple>
 #include "Dynamic.h"
 
 namespace Dysnomia {
@@ -20,6 +23,9 @@ namespace Dysnomia {
 		Affinity(Dynamic*, Int64, Int64, Int64, Int64);
 		void FuseAndOpen(Int64, Int64, Int64, Int64);
 		void OpenManifolds(Int64);
+		void Compare(Affinity*);
+		void Compare(Dynamic*);
+		list<string>* Find(Int64 N);
 		//Int64 WaveFunction(String^);
 		/*
 		void Charge(Int64);
