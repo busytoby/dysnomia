@@ -30,6 +30,7 @@ namespace Dysnomia {
         Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
 	}
 
+    // First Quaternion
     Dynamic* Aluminium::Pi() {
         Dynamic* Beta = new Dynamic();
         Beta->Fuse(Eta->Rod->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold);
