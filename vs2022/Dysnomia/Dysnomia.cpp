@@ -37,4 +37,10 @@ int main()
     Affinity* Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
     if (Theta->Rod->Base != 0) throw 100;
     if (Theta->Cone->Base != 0) throw 100;
+    if (Theta->Cone->Signal != Upsilon->Cone->Base) throw 100;
+    if (Theta->Cone->Signal != Theta->Cone->Channel) throw 100;
+    if (Theta->Cone->Identity != Theta->Cone->Foundation) throw 100;
+    if (Theta->Cone->Manifold != Upsilon->Cone->Dynamo) throw 100;
+    if (Theta->Cone->Barn != Upsilon->Cone->Ring) throw 100;
+    if (Theta->Cone->Tau != Upsilon->Cone->Barn) throw 100;
 }
