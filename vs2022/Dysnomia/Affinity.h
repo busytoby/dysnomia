@@ -24,8 +24,8 @@ namespace Dysnomia {
 		void FuseAndOpen(Int64, Int64, Int64, Int64);
 		void OpenManifolds(Int64);
 		void Compare(Affinity*);
-		void Compare(Dynamic*);
-		list<string>* Find(Int64 N);
+		void Compare(Dynamic*, string);
+		list<string>* Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
 		/*
 		void Charge(Int64);
