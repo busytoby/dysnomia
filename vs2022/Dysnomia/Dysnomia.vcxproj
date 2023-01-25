@@ -130,6 +130,7 @@
     <ClCompile Include="03_Iron.cpp" />
     <ClCompile Include="04_Qiao.cpp" />
     <ClCompile Include="04_Qiao.h" />
+    <ClCompile Include="05_Tin.cpp" />
     <ClCompile Include="Affinity.cpp" />
     <ClCompile Include="01_Aluminium.cpp" />
     <ClCompile Include="Dynamic.cpp" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_Iron.h" />
+    <ClInclude Include="05_Tin.h" />
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="01_Aluminium.h" />
     <ClInclude Include="Dynamic.h" />
