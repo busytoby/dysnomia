@@ -11,7 +11,7 @@ namespace Dysnomia {
 		Aluminium* Psi;
 		Affinity* Nu;
 		Affinity* Eta;
-		Dynamic* Sigma;
+		Affinity* Sigma;
 		Affinity* Upsilon;
 		Dynamic* Tau;
 		Affinity* Theta;
@@ -19,5 +19,6 @@ namespace Dysnomia {
 		Iron();
 		Affinity* Beta();
 		Affinity* Omicron();
+		Affinity* Delta(Affinity*, Affinity*);
 	};
 }

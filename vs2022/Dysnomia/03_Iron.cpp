@@ -8,8 +8,7 @@ namespace Dysnomia {
         Psi = new Aluminium(Mu->Theta, Mu->Upsilon->Base, Mu->Upsilon->Element, Mu->Upsilon->Manifold, Mu->Theta->Tau);
         Nu = Beta();
         Eta = Omicron();
-        Sigma = new Dynamic();
-        Upsilon = new Affinity(Sigma, Eta->Cone->Base, Nu->Cone->Element, Eta->Cone->Barn, Eta->Cone->Tau);
+        Sigma = Delta(Nu, Eta);
     }
 
     // SO(2) Versor 1
@@ -24,5 +23,11 @@ namespace Dysnomia {
         Dynamic* Iota = Psi->Pi();
         Dynamic* Lambda = Rho->Pi();
         return new Affinity(Iota, Lambda);
+    }
+
+    // SO(3) Versors
+    Affinity* Iron::Delta(Affinity* Pi, Affinity* Alpha) {
+        Dynamic* Chi = new Dynamic();
+        Upsilon = new Affinity(Chi, Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
     }
 }
