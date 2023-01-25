@@ -27,12 +27,12 @@ namespace Dysnomia {
         Tau = new Dynamic();
         Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
         Tau->Tune();
-        Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+        Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
 	}
 
     Dynamic* Aluminium::Pi() {
         Dynamic* Beta = new Dynamic();
-        Beta->Fuse(Theta->Rod->Signal, Theta->Cone->Signal, Theta->Cone->Tau);
+        Beta->Fuse(Eta->Rod->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold);
         Beta->Tune();
         return Beta;
     }

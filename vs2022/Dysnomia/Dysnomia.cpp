@@ -18,5 +18,6 @@ int main()
     Dynamic* Eta = new Dynamic();
     Affinity* Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
     Dynamic* Upsilon = Psi->Pi();
-    Aluminium* Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);  
+    Aluminium* Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+    Tau->Theta->Compare(Mu->Theta);
 }
