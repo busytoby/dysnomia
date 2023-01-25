@@ -12,4 +12,10 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Qiao* Mu = new Qiao();
+    Qiao* Rho = new Qiao();
+    Affinity* Psi = Mu->Sigma->Omicron();
+    Affinity* Nu = Rho->Sigma->Omicron();
+    Affinity* Eta = Mu->Sigma->Delta(Psi, Nu);
+    Sulphur* Sigma = new Sulphur(Eta);
+    Iron* Upsilon = new Iron(Sigma, Nu, Psi);
 }
