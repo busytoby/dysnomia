@@ -9,5 +9,6 @@ namespace Dysnomia {
 		Song* Mu;
 		Eun* Rho;
 		Eun* Psi;
+		Iron* Nu;
 	};
 }

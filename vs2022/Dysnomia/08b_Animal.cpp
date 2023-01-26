@@ -6,5 +6,6 @@ namespace Dysnomia {
         Mu = new Song();
         Rho = new Eun(Mu->Sigma);
         Psi = new Eun(Rho->Sigma);
+        Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Beta(), Mu->Tau->Omicron());
     }
 }
