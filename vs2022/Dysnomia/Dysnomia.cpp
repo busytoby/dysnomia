@@ -23,6 +23,7 @@ int main()
             Aluminium* Eta = new Aluminium(Nu, Psi->Tau->Theta->Cone->Base, Psi->Tau->Theta->Rod->Signal, Psi->Tau->Theta->Cone->Signal, Psi->Tau->Theta->Cone->Tau);
             Iron* Sigma = new Iron(Psi->Eta, Mu->Rho->Eta->Sigma, Psi->Eta->Sigma);
             Affinity* Upsilon = Sigma->Kappa(Eta);
+            Qiao* Tau = new Qiao(Sigma, Upsilon);
 
             break;
         }
