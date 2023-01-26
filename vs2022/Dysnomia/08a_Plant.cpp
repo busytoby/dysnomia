@@ -3,12 +3,18 @@
 
 namespace Dysnomia {
     Plant::Plant() {
-        Mu = new Song();
-        Rho = new Eun(Mu->Tau);
-        Psi = new Eun(Rho->Sigma);
-        Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Omicron(), Mu->Tau->Beta());
-        Eta = new Tin(Nu->Kappa(Mu->Psi));
-        Sigma = new Qiao(Nu);
-        Upsilon = new Song(Rho);
+        int DestructiveAvoidances = 0;
+        while (DestructiveAvoidances < 10) {
+            try {
+                Mu = new Song();
+                Rho = new Eun(Mu->Tau);
+                Psi = new Eun(Rho->Sigma);
+                Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Omicron(), Mu->Tau->Beta());
+                Eta = new Tin(Nu->Kappa(Mu->Psi));
+                Sigma = new Qiao(Nu);
+                Upsilon = new Song(Rho);
+            }
+            catch (int e) { DestructiveAvoidances++; continue; };
+        }
     }
 }
