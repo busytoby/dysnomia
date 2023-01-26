@@ -11,5 +11,7 @@ namespace Dysnomia {
 		Eun* Psi;
 		Iron* Nu;
 		Tin* Eta;
+		Qiao* Sigma;
+		Song* Upsilon;
 	};
 }

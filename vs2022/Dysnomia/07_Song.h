@@ -17,5 +17,6 @@ namespace Dysnomia {
 		Qiao* Theta;
 
 		Song();
+		Song(Eun*);
 	};
 }
