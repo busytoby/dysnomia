@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "07_Song.h"
+#include "08a_Plant.h"
+#include "08b_Animal.h"
 
 
 using namespace Dysnomia;
@@ -16,7 +17,8 @@ int main()
 
     while (DestructiveAvoidances < 10) {
         try {
-            Song* Mu = new Song();
+            Plant* Alpha = new Plant();
+            Animal* Beta = new Animal();
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
