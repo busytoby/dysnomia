@@ -19,6 +19,7 @@ int main()
             Eun* Mu = new Eun();
             Affinity* Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
             Qiao* Psi = new Qiao(Mu->Rho, Rho);
+            Sulphur* Nu = new Sulphur(Rho);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
