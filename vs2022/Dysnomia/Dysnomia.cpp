@@ -17,6 +17,7 @@ int main()
     while (DestructiveAvoidances < 10) {
         try {
             Eun* Mu = new Eun();
+            Aluminium* Rho = new Aluminium(Mu->Theta);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
