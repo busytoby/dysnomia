@@ -14,5 +14,6 @@ namespace Dysnomia {
 		Qiao* Sigma;
 		Song* Upsilon;
 		Aluminium* Tau;
+		Song* Theta;
 	};
 }
