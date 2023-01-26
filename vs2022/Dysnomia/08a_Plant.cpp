@@ -7,5 +7,6 @@ namespace Dysnomia {
         Rho = new Eun(Mu->Tau);
         Psi = new Eun(Rho->Sigma);
         Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Omicron(), Mu->Tau->Beta());
+        Eta = new Tin(Nu->Kappa(Mu->Psi));
     }
 }

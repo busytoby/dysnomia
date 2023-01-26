@@ -10,5 +10,6 @@ namespace Dysnomia {
 		Eun* Rho;
 		Eun* Psi;
 		Iron* Nu;
+		Tin* Eta;
 	};
 }

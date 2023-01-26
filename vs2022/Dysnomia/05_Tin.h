@@ -17,5 +17,6 @@ namespace Dysnomia {
 		Iron* Theta;
 
 		Tin();
+		Tin(Affinity*);
 	};
 }
