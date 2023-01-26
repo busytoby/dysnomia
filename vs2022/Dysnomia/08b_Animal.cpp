@@ -13,6 +13,7 @@ namespace Dysnomia {
                 Eta = new Tin(Nu->Kappa(Mu->Psi));
                 Sigma = new Qiao(Nu, Rho->Mu->Nu);
                 Upsilon = new Song(Psi);
+                Tau = new Aluminium(Eta->Mu->Theta->Beta());
                 break;
             }
             catch (int e) { DestructiveAvoidances++; continue; };
