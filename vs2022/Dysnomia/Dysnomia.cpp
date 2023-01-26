@@ -18,9 +18,11 @@ int main()
         try {
             Eun* Mu = new Eun();
             Affinity* Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
-            Qiao* Psi = new Qiao(Mu->Rho, Rho);
-            Sulphur* Nu = new Sulphur(Rho);
-            Iron* Eta = new Iron(Nu, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+            Aluminium* Psi = new Aluminium(Rho);
+            Qiao* Nu = new Qiao(Mu->Rho, Rho);
+            Sulphur* Eta = new Sulphur(Rho);
+            Iron* Sigma = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+            Eun* Upsilon = new Eun(Sigma);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
