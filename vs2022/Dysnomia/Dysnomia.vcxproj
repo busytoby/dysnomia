@@ -132,6 +132,7 @@
     <ClCompile Include="04_Qiao.h" />
     <ClCompile Include="05_Tin.cpp" />
     <ClCompile Include="06_Eun.cpp" />
+    <ClCompile Include="07_Song.cpp" />
     <ClCompile Include="Affinity.cpp" />
     <ClCompile Include="01_Aluminium.cpp" />
     <ClCompile Include="Dynamic.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="03_Iron.h" />
     <ClInclude Include="05_Tin.h" />
     <ClInclude Include="06_Eun.h" />
+    <ClInclude Include="07_Song.h" />
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="01_Aluminium.h" />
     <ClInclude Include="Dynamic.h" />

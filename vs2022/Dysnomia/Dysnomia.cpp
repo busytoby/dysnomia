@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "06_Eun.h"
+#include "07_Song.h"
 
 
 using namespace Dysnomia;
@@ -16,13 +16,7 @@ int main()
 
     while (DestructiveAvoidances < 10) {
         try {
-            Eun* Mu = new Eun();
-            Affinity* Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
-            Aluminium* Psi = new Aluminium(Rho);
-            Qiao* Nu = new Qiao(Mu->Rho, Rho);
-            Sulphur* Eta = new Sulphur(Rho);
-            Iron* Sigma = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
-            Eun* Upsilon = new Eun(Sigma);
+            Song* Mu = new Song();
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
