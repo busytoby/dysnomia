@@ -3,7 +3,8 @@
 
 namespace Dysnomia {
     Animal::Animal() {
-        Song* Mu = new Song();
-        Eun* Rho = new Eun(Mu->Sigma);
+        Mu = new Song();
+        Rho = new Eun(Mu->Sigma);
+        Psi = new Eun(Rho->Sigma);
     }
 }

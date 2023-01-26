@@ -7,6 +7,7 @@ namespace Dysnomia {
 	class Life {
 	public:
 		Song* Mu;
-		Eun* Rho;	
+		Eun* Rho;
+		Eun* Psi;
 	};
 }
