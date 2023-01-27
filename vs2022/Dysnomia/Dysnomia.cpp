@@ -21,8 +21,9 @@ int main()
             Animal* Beta = new Animal();
 
             Nat* Mu = new Nat(Alpha);
-
-
+            Eun* Rho = new Eun(Mu->Nu);
+            Song* Psi = new Song(Mu->Eta);
+            Qiao* Nu = new Qiao(Mu->Psi);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
