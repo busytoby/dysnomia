@@ -28,6 +28,7 @@ int main()
             Sulphur* Sigma = new Sulphur(Eta);
             Qiao* Upsilon = new Qiao(Rho->Tau);
             Eun* Tau = new Eun(Rho->Sigma);
+            Iron* Theta = new Iron(Tau->Mu->Sigma, Mu->Rho->Sigma->Beta(), Mu->Rho->Sigma->Omicron());
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
