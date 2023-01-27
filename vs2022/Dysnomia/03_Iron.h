@@ -18,6 +18,7 @@ namespace Dysnomia {
 
 		Iron();
 		Iron(Sulphur*, Affinity*, Affinity*);
+		Iron(Sulphur*, Affinity*, Affinity*, Affinity*, Affinity*);
 		Affinity* Beta();
 		Affinity* Omicron();
 		Affinity* Delta(Affinity*, Affinity*);

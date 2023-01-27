@@ -1,7 +1,20 @@
 #pragma once
 #include "03_Iron.h"
+#include "06_Eun.h"
 
 namespace Dysnomia {
+    Iron::Iron(Sulphur* Beta, Affinity* Iota, Affinity* Omicron, Affinity* Lambda, Affinity* Xi) {
+        Mu = Beta;
+        Rho = new Aluminium(Iota);
+        Psi = new Aluminium(Omicron);
+        Nu = Lambda;
+        Eta = Xi;
+        Sigma = Delta(Eta, Nu);
+        Upsilon = new Sulphur(Sigma);
+        Tau = Mu->Tau->Pi();
+        Theta = new Aluminium(Tau, Upsilon->Mu->Theta->Cone->Base, Upsilon->Mu->Theta->Rod->Signal, Upsilon->Mu->Theta->Cone->Signal, Upsilon->Mu->Theta->Cone->Tau);
+    }
+
     Iron::Iron(Sulphur* Xi, Affinity* Iota, Affinity* Lambda) {
         Mu = Xi;
         Rho = new Aluminium(Iota);

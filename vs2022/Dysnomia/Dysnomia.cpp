@@ -19,6 +19,13 @@ int main()
         try {
             Plant* Alpha = new Plant();
             Animal* Beta = new Animal();
+
+            Tin* Mu = new Tin(Alpha->Upsilon->Rho);
+            Iron* Rho = new Iron(Alpha->Psi->Mu->Sigma, Alpha->Psi->Mu->Upsilon->Beta(), Alpha->Psi->Mu->Upsilon->Omicron(), Alpha->Psi->Mu->Sigma->Nu, Alpha->Psi->Mu->Sigma->Sigma);
+            Iron* Psi = new Iron(Rho->Upsilon, Rho->Beta(), Rho->Omicron());
+            Eun* Nu = new Eun(Rho);
+
+
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
