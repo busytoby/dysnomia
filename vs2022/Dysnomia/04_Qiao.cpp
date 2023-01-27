@@ -2,6 +2,18 @@
 #include "04_Qiao.h"
 
 namespace Dysnomia {
+    Qiao::Qiao(Iron* Beta, Affinity* Iota, Affinity* Omicron, Sulphur* Lambda) {
+        Mu = Beta;
+        Rho = Omicron;
+        Psi = Iota;
+        Nu = Mu->Delta(Rho, Psi);
+        Eta = Lambda;
+        Sigma = new Iron(Eta, Psi, Rho);
+        Upsilon = Sigma->Beta();
+        Tau = new Aluminium(Upsilon);
+        Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+    }
+
     Qiao::Qiao(Iron* Omega, Affinity* Pi) {
         Mu = Omega;
         Rho = Mu->Beta();

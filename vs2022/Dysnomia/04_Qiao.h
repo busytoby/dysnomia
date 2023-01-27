@@ -20,5 +20,6 @@ namespace Dysnomia {
 		Qiao();
 		Qiao(Iron*);
 		Qiao(Iron*, Affinity*);
+		Qiao(Iron*, Affinity*, Affinity*, Sulphur*);
 	};
 }
