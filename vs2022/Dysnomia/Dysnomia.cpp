@@ -4,6 +4,7 @@
 #include "08a_Plant.h"
 #include "08b_Animal.h"
 #include "10_Tung.h"
+#include "11_Xiao.h"
 
 using namespace Dysnomia;
 
@@ -15,20 +16,13 @@ int main()
 
     int DestructiveAvoidances = 0;
 
-    while (DestructiveAvoidances < 10) {
+    while (DestructiveAvoidances < 20) {
         try {
             Plant* Alpha = new Plant();
             Animal* Beta = new Animal();
 
             Tung* Mu = new Tung(Alpha);
-            Song* Rho = new Song();
-            Aluminium* Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
-            Affinity* Nu = new Affinity(Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Ring);
-            Affinity* Eta = new Affinity(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
-            Sulphur* Sigma = new Sulphur(Eta);
-            Qiao* Upsilon = new Qiao(Rho->Tau);
-            Eun* Tau = new Eun(Rho->Sigma);
-            Iron* Theta = new Iron(Tau->Mu->Sigma, Mu->Rho->Sigma->Beta(), Mu->Rho->Sigma->Omicron());
+            Xiao* Rho = new Xiao(Mu);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
