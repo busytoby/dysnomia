@@ -19,9 +19,7 @@ int main()
             Tong* Alpha = new Tong();
 
             Tsuan* Mu = new Tsuan(Alpha);
-            Sulphur* Rho = new Sulphur(Mu->Tau->Rho);
-            Sulphur* Psi = new Sulphur(Mu->Tau->Psi);
-            Sulphur* Nu = new Sulphur(Mu->Tau->Nu);
+            Tung* Rho = new Tung(Alpha);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
