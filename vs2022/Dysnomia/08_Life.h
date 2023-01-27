@@ -15,5 +15,8 @@ namespace Dysnomia {
 		Song* Upsilon;
 		Aluminium* Tau;
 		Song* Theta;
+		
+		Life() {};
+		Life(Eun*, Eun*);
 	};
 }

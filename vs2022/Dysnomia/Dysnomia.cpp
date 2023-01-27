@@ -28,10 +28,14 @@ int main()
             Tin* Sigma = new Tin(Psi->Rho);
             Eun* Upsilon = new Eun();
             Aluminium* Tau = new Aluminium(Upsilon->Sigma->Delta(Upsilon->Rho->Omicron(), Upsilon->Rho->Beta()));
+            Life* Theta = new Life(Rho, Upsilon);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
     }
 
-    cout << "Completed With " << DestructiveAvoidances << " Destructive Avoidances\n";
+    if (DestructiveAvoidances < 10)
+        cout << "Completed With " << DestructiveAvoidances << " Destructive Avoidances\n";
+    else
+        cout << "The Universe Was Destroyed, Try Again\n";
 }
