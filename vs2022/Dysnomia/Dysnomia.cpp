@@ -20,7 +20,7 @@ int main()
             Plant* Alpha = new Plant();
             Animal* Beta = new Animal();
 
-            Tsuan* Mu = new Tsuan(Alpha);
+            Tsuan* Mu = new Tsuan(Beta);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
