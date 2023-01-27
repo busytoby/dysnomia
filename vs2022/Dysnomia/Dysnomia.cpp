@@ -21,6 +21,9 @@ int main()
             Animal* Beta = new Animal();
 
             Tsuan* Mu = new Tsuan(Beta);
+            Sulphur* Rho = new Sulphur(Mu->Tau->Rho);
+            Sulphur* Psi = new Sulphur(Mu->Tau->Psi);
+            Sulphur* Nu = new Sulphur(Mu->Tau->Nu);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
