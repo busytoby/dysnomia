@@ -29,6 +29,8 @@ int main()
             pair<Eun*, Iron*> Two = Rho->Pi();
             Eun* Sigma = Two.first;
             Eun* Upsilon = new Eun(Two.second);
+            Qiao* Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+            Tin* Theta = new Tin(Tau->Upsilon);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
