@@ -17,13 +17,13 @@ int main()
 
     while (DestructiveAvoidances < 10) {
         try {
-            Plant* Alpha = new Plant();
             Animal* Beta = new Animal();
 
-            Tin* Mu = new Tin(Alpha->Upsilon->Rho);
-            Iron* Rho = new Iron(Alpha->Psi->Mu->Sigma, Alpha->Psi->Mu->Upsilon->Beta(), Alpha->Psi->Mu->Upsilon->Omicron(), Alpha->Psi->Mu->Sigma->Nu, Alpha->Psi->Mu->Sigma->Sigma);
-            Iron* Psi = new Iron(Rho->Upsilon, Rho->Beta(), Rho->Omicron());
-            Eun* Nu = new Eun(Rho);
+            Plant* Mu = new Plant();
+            Tin* Rho = new Tin(Mu->Upsilon->Rho);
+            Iron* Psi = new Iron(Mu->Psi->Mu->Sigma, Mu->Psi->Mu->Upsilon->Beta(), Mu->Psi->Mu->Upsilon->Omicron(), Mu->Psi->Mu->Sigma->Nu, Mu->Psi->Mu->Sigma->Sigma);
+            Iron* Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
+            Eun* Eta = new Eun(Psi);
 
 
             break;
