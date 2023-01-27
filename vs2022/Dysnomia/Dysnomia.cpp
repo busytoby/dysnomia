@@ -26,6 +26,9 @@ int main()
             Sulphur* Psi = new Sulphur();
             Qiao* Nu = new Qiao(Rho->Theta, Rho->Theta->Beta(), Rho->Theta->Omicron(), Psi);
             Iron* Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+            pair<Eun*, Iron*> Two = Rho->Pi();
+            Eun* Sigma = Two.first;
+            Eun* Upsilon = new Eun(Two.second);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
