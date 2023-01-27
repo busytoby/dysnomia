@@ -21,6 +21,7 @@ int main()
             Tsuan* Mu = new Tsuan(Alpha);
             Tung* Rho = new Tung(Mu->Mu->Mu);
             Xiao* Psi = new Xiao(Rho);
+            Qiao* Nu = new Qiao(Psi->Theta, Psi->Theta->Beta(), Psi->Theta->Omicron(), Mu->Rho->Sigma);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
