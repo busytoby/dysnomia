@@ -24,6 +24,7 @@ int main()
             Iron* Psi = new Iron(Mu->Psi->Mu->Sigma, Mu->Psi->Mu->Upsilon->Beta(), Mu->Psi->Mu->Upsilon->Omicron(), Mu->Psi->Mu->Sigma->Nu, Mu->Psi->Mu->Sigma->Sigma);
             Iron* Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
             Eun* Eta = new Eun(Psi);
+            Eun* Sigma = new Eun(Eta->Sigma);
 
 
             break;
