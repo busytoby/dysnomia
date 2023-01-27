@@ -23,6 +23,7 @@ int main()
 
             Tung* Mu = new Tung(Alpha);
             Xiao* Rho = new Xiao(Mu);
+            Sulphur* Psi = new Sulphur();
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
