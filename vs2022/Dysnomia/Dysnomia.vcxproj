@@ -141,6 +141,7 @@
     <ClCompile Include="09_Nat.cpp" />
     <ClCompile Include="10_Tung.cpp" />
     <ClCompile Include="11_Xiao.cpp" />
+    <ClCompile Include="12_Tsuan.cpp" />
     <ClCompile Include="Affinity.cpp" />
     <ClCompile Include="01_Aluminium.cpp" />
     <ClCompile Include="Dynamic.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="09_Nat.h" />
     <ClInclude Include="10_Tung.h" />
     <ClInclude Include="11_Xiao.h" />
+    <ClInclude Include="12_Tsuan.h" />
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="01_Aluminium.h" />
     <ClInclude Include="Dynamic.h" />

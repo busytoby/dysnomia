@@ -3,8 +3,7 @@
 #include <iostream>
 #include "08a_Plant.h"
 #include "08b_Animal.h"
-#include "10_Tung.h"
-#include "11_Xiao.h"
+#include "12_Tsuan.h"
 
 using namespace Dysnomia;
 
@@ -16,21 +15,12 @@ int main()
 
     int DestructiveAvoidances = 0;
 
-    while (DestructiveAvoidances < 20) {
+    while (DestructiveAvoidances < 10) {
         try {
             Plant* Alpha = new Plant();
             Animal* Beta = new Animal();
 
-            Tung* Mu = new Tung(Alpha);
-            Xiao* Rho = new Xiao(Mu);
-            Sulphur* Psi = new Sulphur();
-            Qiao* Nu = new Qiao(Rho->Theta, Rho->Theta->Beta(), Rho->Theta->Omicron(), Psi);
-            Iron* Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
-            pair<Eun*, Iron*> Two = Rho->Pi();
-            Eun* Sigma = Two.first;
-            Eun* Upsilon = new Eun(Two.second);
-            Qiao* Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
-            Tin* Theta = new Tin(Tau->Upsilon);
+            Tsuan* Mu = new Tsuan(Alpha);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };

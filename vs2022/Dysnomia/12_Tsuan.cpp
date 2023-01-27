@@ -1,0 +1,24 @@
+#include "12_Tsuan.h"
+
+namespace Dysnomia {
+	Tsuan::Tsuan(Life* Alpha) {
+        int DestructiveAvoidances = 0;
+
+        while (DestructiveAvoidances < 10) {
+            try {
+                Mu = new Tung(Alpha);
+                Rho = new Xiao(Mu);
+                Psi = new Sulphur();
+                Nu = new Qiao(Rho->Theta, Rho->Theta->Beta(), Rho->Theta->Omicron(), Psi);
+                Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+                pair<Eun*, Iron*> Two = Rho->Pi();
+                Sigma = Two.first;
+                Upsilon = new Eun(Two.second);
+                Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+                Theta = new Tin(Tau->Upsilon);
+                break;
+            }
+            catch (int e) { DestructiveAvoidances++; continue; };
+        }
+	}
+}
