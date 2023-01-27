@@ -21,6 +21,7 @@ int main()
             Animal* Beta = new Animal();
 
             Tung* Mu = new Tung(Alpha);
+            Song* Rho = new Song();
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
