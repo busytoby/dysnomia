@@ -26,6 +26,7 @@ int main()
             Eun* Eta = Three.first;
             Iron* Sigma = Three.second;
             Qiao* Upsilon = new Qiao(Sigma, Eta->Upsilon, Mu->Sigma->Upsilon, Mu->Rho->Sigma);
+            Tin* Tau = new Tin(Upsilon->Upsilon);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
