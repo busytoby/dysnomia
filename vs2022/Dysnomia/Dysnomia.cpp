@@ -22,6 +22,7 @@ int main()
 
             Tung* Mu = new Tung(Alpha);
             Song* Rho = new Song();
+            Aluminium* Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };

@@ -16,6 +16,7 @@ namespace Dysnomia {
 		Aluminium* Tau;
 		Song* Theta;
 		
+		~Life() { delete Mu; delete Rho; delete Psi; delete Nu; delete Eta; delete Sigma; delete Upsilon; delete Tau; delete Theta; }
 		Life() {};
 		Life(Eun*, Eun*);
 	};
