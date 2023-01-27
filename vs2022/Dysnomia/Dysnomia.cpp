@@ -27,6 +27,7 @@ int main()
             Affinity* Eta = new Affinity(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
             Sulphur* Sigma = new Sulphur(Eta);
             Qiao* Upsilon = new Qiao(Rho->Tau);
+            Eun* Tau = new Eun(Rho->Sigma);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
