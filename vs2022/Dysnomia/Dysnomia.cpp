@@ -26,6 +26,8 @@ int main()
             Qiao* Nu = new Qiao(Mu->Psi);
             Qiao* Eta = new Qiao(Psi->Sigma, Mu->Rho->Theta->Kappa(Nu->Tau));
             Tin* Sigma = new Tin(Psi->Rho);
+            Eun* Upsilon = new Eun();
+            Aluminium* Tau = new Aluminium(Upsilon->Sigma->Delta(Upsilon->Rho->Omicron(), Upsilon->Rho->Beta()));
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
