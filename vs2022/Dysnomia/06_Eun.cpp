@@ -2,6 +2,18 @@
 #include "06_Eun.h"
 
 namespace Dysnomia {
+    Eun::Eun(Tin* Omicron, Iron* Lambda) {
+        Mu = Omicron;
+        Rho = Lambda;
+        Psi = Omicron->Mu;
+        Nu = Psi->Tau->Pi();
+        Eta = new Aluminium(Nu, Psi->Tau->Theta->Cone->Base, Psi->Tau->Theta->Rod->Signal, Psi->Tau->Theta->Cone->Signal, Psi->Tau->Theta->Cone->Tau);
+        Sigma = new Iron(Psi->Eta, Mu->Rho->Eta->Sigma, Psi->Eta->Sigma);
+        Upsilon = Sigma->Kappa(Eta);
+        Tau = new Qiao(Sigma, Upsilon);
+        Theta = Tau->Mu->Omicron();
+    }
+
     Eun::Eun(Iron* Lambda) {
         Mu = new Tin();
         Rho = Lambda;

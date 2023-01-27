@@ -19,7 +19,7 @@ int main()
             Tong* Alpha = new Tong();
 
             Tsuan* Mu = new Tsuan(Alpha);
-            Tung* Rho = new Tung(Alpha);
+            Tung* Rho = new Tung(Mu->Mu->Mu);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
