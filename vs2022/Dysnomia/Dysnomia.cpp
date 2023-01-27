@@ -25,6 +25,7 @@ int main()
             Song* Psi = new Song(Mu->Eta);
             Qiao* Nu = new Qiao(Mu->Psi);
             Qiao* Eta = new Qiao(Psi->Sigma, Mu->Rho->Theta->Kappa(Nu->Tau));
+            Tin* Sigma = new Tin(Psi->Rho);
             break;
         }
         catch (int e) { DestructiveAvoidances++; continue; };
