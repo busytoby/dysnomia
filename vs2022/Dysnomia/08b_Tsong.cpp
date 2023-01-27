@@ -19,6 +19,6 @@ namespace Dysnomia {
             }
             catch (int e) { DestructiveAvoidances++; continue; };
         }
-        if (DestructiveAvoidances > 10) throw 100;
+        if (DestructiveAvoidances >= 10) throw 100;
     }
 }
