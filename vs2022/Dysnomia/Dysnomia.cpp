@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "08a_Plant.h"
-#include "08b_Animal.h"
+#include "08a_Tong.h"
 #include "12_Tsuan.h"
 
 using namespace Dysnomia;
@@ -17,10 +16,9 @@ int main()
 
     while (DestructiveAvoidances < 10) {
         try {
-            Plant* Alpha = new Plant();
-            Animal* Beta = new Animal();
+            Tong* Alpha = new Tong();
 
-            Tsuan* Mu = new Tsuan(Beta);
+            Tsuan* Mu = new Tsuan(Alpha);
             Sulphur* Rho = new Sulphur(Mu->Tau->Rho);
             Sulphur* Psi = new Sulphur(Mu->Tau->Psi);
             Sulphur* Nu = new Sulphur(Mu->Tau->Nu);

@@ -20,6 +20,7 @@ namespace Dysnomia {
             }
             catch (int e) { DestructiveAvoidances++; continue; };
         }
+        if (DestructiveAvoidances > 10) throw 100;
 	}
 
     pair<Eun*, Eun*> Tsuan::Kappa() {

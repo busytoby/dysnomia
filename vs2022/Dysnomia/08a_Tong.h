@@ -4,8 +4,8 @@
 using namespace std;
 
 namespace Dysnomia {
-	class Plant : public Life {
+	class Tong : public Life {
 	public:
-		Plant();
+		Tong();
 	};
 }

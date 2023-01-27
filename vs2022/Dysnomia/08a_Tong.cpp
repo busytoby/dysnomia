@@ -1,8 +1,8 @@
 #pragma once
-#include "08a_Plant.h"
+#include "08a_Tong.h"
 
 namespace Dysnomia {
-    Plant::Plant() {
+    Tong::Tong() {
         int DestructiveAvoidances = 0;
         while (DestructiveAvoidances < 10) {
             try {
@@ -19,5 +19,6 @@ namespace Dysnomia {
             }
             catch (int e) { DestructiveAvoidances++; continue; };
         }
+        if (DestructiveAvoidances > 10) throw 100;
     }
 }

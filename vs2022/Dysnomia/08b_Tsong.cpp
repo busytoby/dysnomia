@@ -1,8 +1,8 @@
 #pragma once
-#include "08b_Animal.h"
+#include "08b_Tsong.h"
 
 namespace Dysnomia {
-    Animal::Animal() {
+    Tsong::Tsong() {
         int DestructiveAvoidances = 0;
         while (DestructiveAvoidances < 10) {
             try {
@@ -19,5 +19,6 @@ namespace Dysnomia {
             }
             catch (int e) { DestructiveAvoidances++; continue; };
         }
+        if (DestructiveAvoidances > 10) throw 100;
     }
 }
