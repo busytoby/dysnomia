@@ -15,4 +15,6 @@ int main()
     Wou* Two = new Wou();
     
     Sulphur* Sigma = Two->Pi(One->Omega());
+    Iron* OneTau = One->Tau(Sigma, Two->Nu->Tau->Omicron(), Two->Nu->Tau->Beta());
+    Iron* TwoTau = Two->Tau(Sigma, Two->Nu->Tau->Omicron(), Two->Nu->Tau->Beta());
 }

@@ -40,9 +40,22 @@ namespace Dysnomia {
         Sulphur* Pi(Affinity* Beta) {
             lock_guard<mutex> K(Kappa);
             if (Theta != 0) throw 201;
+            Theta = 1;
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             return new Sulphur(Beta);
+        }
+
+        Iron* Tau(Sulphur* Beta, Affinity* Iota, Affinity* Omicron) {
+            lock_guard<mutex> K(Kappa);
+            if (Theta != 1) throw 202;
+            Theta = 2;
+            Beta->Gamma++;
+            Iota->Rod->Gamma++;
+            Iota->Cone->Gamma++;
+            Omicron->Rod->Gamma++;
+            Omicron->Cone->Gamma++;
+            return new Iron(Beta, Iota, Omicron);
         }
     };
 }
