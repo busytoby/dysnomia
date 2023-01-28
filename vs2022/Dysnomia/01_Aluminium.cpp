@@ -3,6 +3,8 @@
 
 namespace Dysnomia {
     Aluminium::Aluminium(Affinity* Pi) {
+        Pi->Rod->Gamma++;
+        Pi->Cone->Gamma++;
         Mu = new Dynamic();
         Rho = Pi;
         Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
@@ -17,6 +19,7 @@ namespace Dysnomia {
     }
 
     Aluminium::Aluminium(Dynamic* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
+        Beta->Gamma++;
         Mu = new Dynamic();
         Rho = new Affinity(Beta, Iota, Omicron, Lambda, Xi);
         Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);

@@ -3,7 +3,7 @@
 namespace Dysnomia {
 	void freeptr(void* ptr) {
 		if ((unsigned long long) ptr == 0xdddddddddddddddd) {
-			return;
+			ptr = nullptr;
 		}
 		if (ptr != nullptr)
 			delete ptr;

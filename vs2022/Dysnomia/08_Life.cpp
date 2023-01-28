@@ -3,6 +3,8 @@
 
 namespace Dysnomia {
     Life::Life(Eun* Beta, Eun* Iota) {
+        Beta->Gamma++;
+        Iota->Gamma++;
         Mu = new Song(Beta);
         Rho = Iota;
         Psi = new Eun(Rho->Sigma);

@@ -2,6 +2,7 @@
 
 namespace Dysnomia {
 	Tung::Tung(Nat* Alpha) {
+		Alpha->Gamma++;
 		Mu = Alpha;
 		Rho = new Eun(Mu->Psi);
 		Psi = new Song(Mu->Eta);
@@ -14,6 +15,7 @@ namespace Dysnomia {
 	}
 
 	Tung::Tung(Life* Alpha) {
+		Alpha->Gamma++;
 		Mu = new Nat(Alpha);
 		Rho = new Eun(Mu->Nu);
 		Psi = new Song(Mu->Eta);

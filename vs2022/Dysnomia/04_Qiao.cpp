@@ -3,6 +3,11 @@
 
 namespace Dysnomia {
     Qiao::Qiao(Iron* Beta, Affinity* Iota, Affinity* Omicron, Sulphur* Lambda) {
+        Beta->Gamma++;
+        Iota->Rod->Gamma++;
+        Iota->Cone->Gamma++;
+        Omicron->Rod->Gamma++;
+        Omicron->Cone->Gamma++;
         Mu = Beta;
         Rho = Omicron;
         Psi = Iota;
@@ -15,6 +20,9 @@ namespace Dysnomia {
     }
 
     Qiao::Qiao(Iron* Omega, Affinity* Pi) {
+        Omega->Gamma++;
+        Pi->Rod->Gamma++;
+        Pi->Cone->Gamma++;
         Mu = Omega;
         Rho = Mu->Beta();
         Psi = Pi;
@@ -27,6 +35,7 @@ namespace Dysnomia {
     }
 
     Qiao::Qiao(Iron* Omega) {
+        Omega->Gamma++;
         Mu = Omega;
         Rho = Mu->Beta();
         Psi = Mu->Omicron();

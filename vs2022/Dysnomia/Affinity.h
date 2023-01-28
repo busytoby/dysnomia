@@ -15,15 +15,15 @@ namespace Dysnomia {
 
 	public:
 		Dynamic* Rod = nullptr;
-		bool OwnRod = true;
 		Dynamic* Cone = nullptr;
-		bool OwnCone = true;
 
 		Int64 Phi, Eta, Mu, Xi;
 
 		~Affinity() {
-			if (OwnRod) { freeptr(Rod); }
-			if (OwnCone) { freeptr(Cone); }
+			if (Rod->Gamma == 1) delete Rod;
+			else Rod->Gamma--;
+			if (Cone->Gamma == 1) delete Cone;
+			else Cone->Gamma--;
 		};
 		Affinity();
 		Affinity(Dynamic*, Dynamic*);

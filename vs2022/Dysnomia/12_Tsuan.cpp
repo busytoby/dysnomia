@@ -2,6 +2,7 @@
 
 namespace Dysnomia {
     Tsuan::Tsuan(Life* Alpha) {
+        Alpha->Gamma++;
         Mu = new Tung(Alpha);
         Rho = new Xiao(Mu);
         Psi = new Sulphur();

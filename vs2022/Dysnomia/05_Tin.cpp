@@ -3,6 +3,8 @@
 
 namespace Dysnomia {
     Tin::Tin(Affinity* Beta) {
+        Beta->Rod->Gamma++;
+        Beta->Cone->Gamma++;
         Mu = new Qiao();
         Rho = new Qiao();
         Psi = Mu->Sigma->Omicron();

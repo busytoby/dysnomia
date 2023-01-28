@@ -2,6 +2,7 @@
 
 namespace Dysnomia {
     Xiao::Xiao(Tung* Beta) {
+        Beta->Gamma++;
         Mu = Beta;
         Rho = new Song();
         Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);

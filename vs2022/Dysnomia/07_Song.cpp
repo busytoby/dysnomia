@@ -3,6 +3,7 @@
 
 namespace Dysnomia {
     Song::Song(Eun* Lambda) {
+        Lambda->Gamma++;
         Mu = Lambda;
         Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
         Psi = new Aluminium(Rho);

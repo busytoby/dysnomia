@@ -2,6 +2,7 @@
 
 namespace Dysnomia {
 	Nat::Nat(Life* Beta) {
+        Beta->Gamma++;
         Mu = Beta;
         Rho = new Tin(Mu->Upsilon->Rho);
         Psi = new Iron(Mu->Psi->Mu->Sigma, Mu->Psi->Mu->Upsilon->Beta(), Mu->Psi->Mu->Upsilon->Omicron(), Mu->Psi->Mu->Sigma->Nu, Mu->Psi->Mu->Sigma->Sigma);

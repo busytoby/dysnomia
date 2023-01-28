@@ -3,6 +3,8 @@
 
 namespace Dysnomia {
     Sulphur::Sulphur(Affinity* Beta) {
+        Beta->Rod->Gamma++;
+        Beta->Cone->Gamma++;
         Mu = new Aluminium(Beta);
         Rho = Mu->Pi();
         Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);

@@ -25,8 +25,6 @@ namespace Dysnomia {
 	}
 
 	Affinity::Affinity(Dynamic* Rod, Dynamic* Cone) {
-		OwnRod = false;
-		OwnCone = false;
 		try {
 			if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
 			this->Rod = Rod;
@@ -39,6 +37,8 @@ namespace Dysnomia {
 			if (E == 7) throw 3;
 			if (E != 11) throw;
 		}
+		Rod->Gamma++;
+		Cone->Gamma++;
 	}
 
 	Affinity::Affinity(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
@@ -47,8 +47,7 @@ namespace Dysnomia {
 		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 	}
 
-	Affinity::Affinity(Dynamic* N, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
-		OwnRod = false;
+	Affinity::Affinity(Dynamic* N, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {	
 		Rod = N;
 		if (!Rod->Barn == 0) 
 			throw 100;
@@ -71,6 +70,7 @@ namespace Dysnomia {
 				else throw;
 			}
 		}
+		Rod->Gamma++;
 	}
 
 	void Affinity::FuseAndOpen(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {

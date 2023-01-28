@@ -4,6 +4,15 @@
 
 namespace Dysnomia {
     Iron::Iron(Sulphur* Beta, Affinity* Iota, Affinity* Omicron, Affinity* Lambda, Affinity* Xi) {
+        Beta->Gamma++;
+        Iota->Rod->Gamma++;
+        Iota->Cone->Gamma++;
+        Omicron->Rod->Gamma++;
+        Omicron->Cone->Gamma++;
+        Lambda->Rod->Gamma++;
+        Lambda->Cone->Gamma++;
+        Xi->Rod->Gamma++;
+        Xi->Cone->Gamma++;
         Mu = Beta;
         Rho = new Aluminium(Iota);
         Psi = new Aluminium(Omicron);
@@ -16,11 +25,20 @@ namespace Dysnomia {
     }
 
     Iron::Iron(Sulphur* Xi, Affinity* Iota, Affinity* Lambda) {
+        Xi->Gamma++;
+        Iota->Rod->Gamma++;
+        Iota->Cone->Gamma++;
+        Lambda->Rod->Gamma++;
+        Lambda->Cone->Gamma++;
         Mu = Xi;
         Rho = new Aluminium(Iota);
         Psi = new Aluminium(Lambda);
         Nu = Xi->Nu;
+        Xi->Nu->Rod->Gamma++;
+        Xi->Nu->Cone->Gamma++;
         Eta = Xi->Sigma;
+        Xi->Sigma->Rod->Gamma++;
+        Xi->Sigma->Cone->Gamma++;
         Sigma = Delta(Eta, Nu);
         Upsilon = new Sulphur(Sigma);
         Tau = Mu->Tau->Pi();
@@ -41,27 +59,21 @@ namespace Dysnomia {
 
     // SO(2) Versor 1
     Affinity* Iron::Beta() {
-        Dynamic* Iota = Rho->Pi();
-        Dynamic* Lambda = Psi->Pi();
-        return new Affinity(Iota, Lambda);
+        return new Affinity(Rho->Pi(), Psi->Pi());
     }
 
     // SO(2) Versor 2
     Affinity* Iron::Omicron() {
-        Dynamic* Iota = Psi->Pi();
-        Dynamic* Lambda = Rho->Pi();
-        return new Affinity(Iota, Lambda);
+        return new Affinity(Psi->Pi(), Rho->Pi());
     }
 
     // SO(3) Versors
     Affinity* Iron::Delta(Affinity* Pi, Affinity* Alpha) {
-        Dynamic* Chi = new Dynamic();
-        return new Affinity(Chi, Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+        return new Affinity(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
     }
 
     // SO(4) Versors
     Affinity* Iron::Kappa(Aluminium* Iota) {
-        Dynamic* Lambda = Rho->Pi();
-        return new Affinity(Iota->Pi(), Lambda);
+        return new Affinity(Iota->Pi(), Rho->Pi());
     }
 }

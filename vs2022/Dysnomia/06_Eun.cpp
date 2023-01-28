@@ -3,6 +3,8 @@
 
 namespace Dysnomia {
     Eun::Eun(Tin* Omicron, Iron* Lambda) {
+        Omicron->Gamma++;
+        Lambda->Gamma++;
         Mu = Omicron;
         Rho = Lambda;
         Psi = Omicron->Mu;
@@ -15,6 +17,7 @@ namespace Dysnomia {
     }
 
     Eun::Eun(Iron* Lambda) {
+        Lambda->Gamma++;
         Mu = new Tin();
         Rho = Lambda;
         Psi = new Qiao(Rho);
