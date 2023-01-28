@@ -20,10 +20,10 @@ namespace Dysnomia {
         }
 
         Beit() {
-            Rong* Mu = new Rong();
-            Xiao* Nu = new Xiao(Mu->Mu->Rho);
-            Song* Eta = new Song();
-            Tin* Upsilon = new Tin(Eta->Rho);
+            Mu = new Rong();
+            Nu = new Xiao(Mu->Mu->Rho);
+            Eta = new Song();
+            Upsilon = new Tin(Eta->Rho);
         }
     };
 }
