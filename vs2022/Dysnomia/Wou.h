@@ -12,7 +12,7 @@ namespace Dysnomia {
         Eun* Psi;
         Song* Nu;
         int Gamma;
-        int Theta = 0;
+        int Lambda = 0;
         mutex Kappa;
 
         ~Wou() {
@@ -32,15 +32,15 @@ namespace Dysnomia {
 
         Affinity* Omega() {
             lock_guard<mutex> K(Kappa);
-            if (Theta != 0) return nullptr;
-            Theta = 1;
+            if (Lambda != 0) return nullptr;
+            Lambda = 1;
             return Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
         }
 
         Sulphur* Pi(Affinity* Beta) {
             lock_guard<mutex> K(Kappa);
-            if (Theta != 0) throw 201;
-            Theta = 1;
+            if (Lambda != 0) throw 201;
+            Lambda = 1;
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             return new Sulphur(Beta);
@@ -48,14 +48,24 @@ namespace Dysnomia {
 
         Iron* Tau(Sulphur* Beta, Affinity* Iota, Affinity* Omicron) {
             lock_guard<mutex> K(Kappa);
-            if (Theta != 1) throw 202;
-            Theta = 2;
+            if (Lambda != 1) throw 202;
+            Lambda = 2;
             Beta->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
             Omicron->Rod->Gamma++;
             Omicron->Cone->Gamma++;
             return new Iron(Beta, Iota, Omicron);
+        }
+
+        Qiao* Theta(Iron* Beta, Affinity* Iota) {
+            lock_guard<mutex> K(Kappa);
+            if (Lambda != 2) throw 203;
+            Lambda = 3;
+            Beta->Gamma++;
+            Iota->Rod->Gamma++;
+            Iota->Cone->Gamma++;
+            return new Qiao(Beta, Iota);
         }
     };
 }
