@@ -28,6 +28,20 @@ namespace Dysnomia {
 			if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
+
+		Tsuan(Tung* Beta, Xiao* Iota, Sulphur* Omicron, Qiao* Lambda) {
+			Beta->Gamma++;
+			Mu = Beta;
+			Rho = Iota;
+			Psi = Omicron;
+			Nu = Lambda;
+			Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+			pair<Eun*, Eun*> Two = Kappa();
+			Sigma = Two.first;
+			Upsilon = Two.second;
+			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+			Theta = new Tin(Tau->Upsilon);
+		}
 		
 		Tsuan(Life* Alpha) {
 			Alpha->Gamma++;
