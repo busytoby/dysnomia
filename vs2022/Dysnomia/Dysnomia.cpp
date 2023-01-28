@@ -21,4 +21,6 @@ int main()
     Qiao* OneQiao = One->Theta(OneTau, One->Nu->Tau->Delta(Two->Nu->Tau->Beta(), Two->Nu->Tau->Omicron()));
     Tin* OneTin = new Tin(One->Nu->Tau->Kappa(OneQiao->Tau));
     Tin* TwoTin = new Tin(Two->Nu->Tau->Kappa(TwoQiao->Tau));
+    Eun* OnePlayer = new Eun(OneTin, OneTau);
+    Eun* TwoPlayer = new Eun(TwoTin, TwoTau);
 }
