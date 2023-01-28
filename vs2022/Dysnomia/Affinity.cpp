@@ -21,6 +21,8 @@ namespace Dysnomia {
 	}
 
 	Affinity::Affinity(Dynamic* Rod, Dynamic* Cone) {
+		OwnRod = false;
+		OwnCone = false;
 		try {
 			if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
 			this->Rod = Rod;
@@ -42,8 +44,10 @@ namespace Dysnomia {
 	}
 
 	Affinity::Affinity(Dynamic* N, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
+		OwnRod = false;
 		Rod = N;
-		if (!Rod->Barn == 0) throw 100;
+		if (!Rod->Barn == 0) 
+			throw 100;
 		Cone = new Dynamic();
 		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 	}
@@ -76,14 +80,16 @@ namespace Dysnomia {
 		Rod->Conjugate(&Cone->Pole);
 		Cone->Conjugate(&Rod->Pole);
 
-		if (Rod->Coordinate != Cone->Coordinate) throw 100;
+		if (Rod->Coordinate != Cone->Coordinate) 
+			throw 100;
 
 		Cone->Conify();
 
 		Eta = Rod->Saturate(Cone->Foundation, Cone->Channel);
 		Mu = Cone->Saturate(Rod->Foundation, Rod->Channel);
 
-		if (Rod->Element != Cone->Element) throw 100;
+		if (Rod->Element != Cone->Element) 
+			throw 100;
 
 		Ratchet();
 
@@ -93,7 +99,8 @@ namespace Dysnomia {
 		Rod->Open();
 		Cone->Open();
 
-		if (!Cone->ManifoldCompare(Rod)) throw 100;
+		if (!Cone->ManifoldCompare(Rod)) 
+			throw 100;
 		this->Xi = Xi;
 	}
 

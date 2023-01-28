@@ -14,9 +14,13 @@ namespace Dysnomia {
 
 	public:
 		Dynamic* Rod;
+		bool OwnRod = true;
 		Dynamic* Cone;
+		bool OwnCone = true;
+
 		Int64 Phi, Eta, Mu, /* Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega */ Xi;
 
+		~Affinity() { if (OwnRod && Rod != nullptr) delete Rod; if (OwnCone && Cone != nullptr) delete Cone; };
 		Affinity();
 		Affinity(Dynamic*, Dynamic*);
 		Affinity(Int64, Int64, Int64, Int64);

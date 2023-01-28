@@ -1,7 +1,7 @@
 #include "11_Xiao.h"
 
 namespace Dysnomia {
-	Xiao::Xiao(Tung* Beta) {
+    Xiao::Xiao(Tung* Beta) {
         Mu = Beta;
         Rho = new Song();
         Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
@@ -12,7 +12,7 @@ namespace Dysnomia {
         pair<Eun*, Iron*> Siao = Pi();
         Tau = Siao.first;
         Theta = Siao.second;
-	}
+    }
 
     pair<Eun*, Iron*> Xiao::Pi() {
         Eun* Beta = new Eun(Rho->Sigma);
