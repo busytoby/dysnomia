@@ -12,4 +12,5 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Wou* Mu = new Wou();
+    Mu->Omega();
 }

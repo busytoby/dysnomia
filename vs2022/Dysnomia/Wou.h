@@ -26,5 +26,11 @@ namespace Dysnomia {
             Psi = Five.second;
             Nu = new Song(Psi);
         }
+
+        void Omega() {
+            Affinity* Sigma = Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
+            Affinity* Theta = Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Mu);
+            Affinity* Tau = Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Psi);
+        }
     };
 }
