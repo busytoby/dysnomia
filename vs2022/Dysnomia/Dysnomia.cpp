@@ -18,4 +18,7 @@ int main()
     Tung* Psi = new Tung(Rho->Pi());
     Xiao* Nu = new Xiao(Psi);
     Qiao* Eta = new Qiao(Nu->Theta, Nu->Theta->Beta(), Nu->Theta->Omicron(), Psi->Theta->Mu->Eta);
+    Iron* Sigma = new Iron(Psi->Theta->Mu->Eta, Eta->Nu, Psi->Mu->Nu->Omicron());
+    Qiao* Upsilon = new Qiao(Sigma, Mu->Psi->Upsilon, Rho->Eta->Upsilon, Psi->Theta->Mu->Eta);
+
 }
