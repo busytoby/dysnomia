@@ -28,7 +28,7 @@ int main()
     One->Alpha();
     Two->Alpha();
 
-    vector<Affinity*> OneAffinities = One->Affinities();
-    vector<Affinity*> TwoAffinities = Two->Affinities();
+    vector<Affinity*> OneAffinities = OneSong->Affinities();
+    vector<Affinity*> TwoAffinities = TwoSong->Affinities();
 
 }
