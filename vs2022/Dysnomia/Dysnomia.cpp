@@ -31,4 +31,12 @@ int main()
     vector<Affinity*> OneAffinities = OneSong->Affinities();
     vector<Affinity*> TwoAffinities = TwoSong->Affinities();
 
+    for (int i = 0; i < OneAffinities.size(); i++) {
+        string A = "One["s + to_string(i) + "]";
+        for (int j = 0; j < TwoAffinities.size(); j++) {
+            OneAffinities[i]->Compare(TwoAffinities[j], A);
+        }
+    }
+
+    int i = 99;
 }

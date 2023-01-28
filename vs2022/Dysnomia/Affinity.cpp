@@ -1,4 +1,5 @@
 #include "Affinity.h"
+#include <iostream>
 
 namespace Dysnomia {
 	Affinity::Affinity() {
@@ -196,13 +197,13 @@ namespace Dysnomia {
 	}
 	*/
 
-	void Affinity::Compare(Affinity* B) {
-		Compare(B->Rod, "Rod");
-		Compare(B->Cone, "Cone");
-		Find(B->Phi, "Phi");
-		Find(B->Eta, "Eta");
-		Find(B->Mu, "Mu");
-		Find(B->Xi, "Xi");
+	void Affinity::Compare(Affinity* B, string A) {
+		Compare(B->Rod, A + "->Rod");
+		Compare(B->Cone, A + "->Cone");
+		Find(B->Phi, A + "->Phi");
+		Find(B->Eta, A + "->Eta");
+		Find(B->Mu, A + "->Mu");
+		Find(B->Xi, A + "->Xi");
 	}
 
 	void Affinity::Compare(Dynamic* B, string A) {
@@ -227,54 +228,48 @@ namespace Dysnomia {
 		Find(B->Phi, A + "->Phi");
 	}
 
-	list<string>* Affinity::Find(Int64 N, string A) {
-		list<string>* M = new list<string>();
-		if (N == 0) return M;
+	void Affinity::Find(Int64 N, string A) {
+		if (N == 0) return;
 
-		if (Rod->Base == N) M->push_back(A + " Rod->Base");
-		if (Rod->Secret == N) M->push_back(A + " Rod->Secret");
-		if (Rod->Signal == N) M->push_back(A + " Rod->Signal");
-		if (Rod->Channel == N) M->push_back(A + " Rod->Channel");
-		if (Rod->Identity == N) M->push_back(A + " Rod->Identity");
-		if (Rod->Foundation == N) M->push_back(A + " Rod->Foundation");
-		if (Rod->Element == N) M->push_back(A + " Rod->Element");
-		if (Rod->Dynamo == N) M->push_back(A + " Rod->Dynamo");
-		if (Rod->Manifold == N) M->push_back(A + " Rod->Manifold");
-		if (Rod->Ring == N) M->push_back(A + " Rod->Ring");
-		if (Rod->Coordinate == N) M->push_back(A + " Rod->Coordinate");
-		if (Rod->Tau == N) M->push_back(A + " Rod->Tau");
-		if (Rod->Mu == N) M->push_back(A + " Rod->Mu");
-		if (Rod->Eta == N) M->push_back(A + " Rod->Eta");
-		if (Rod->Rho == N) M->push_back(A + " Rod->Rho");
-		if (Rod->Beta == N) M->push_back(A + " Rod->Beta");
-		if (Rod->Phi == N) M->push_back(A + " Rod->Phi");
+		if (Rod->Base == N) cout << A + " Rod->Base\n";
+		if (Rod->Secret == N) cout << A + " Rod->Secret\n";
+		if (Rod->Signal == N) cout << A + " Rod->Signal\n";
+		if (Rod->Channel == N) cout << A + " Rod->Channel\n";
+		if (Rod->Identity == N) cout << A + " Rod->Identity\n";
+		if (Rod->Foundation == N) cout << A + " Rod->Foundation\n";
+		if (Rod->Element == N) cout << A + " Rod->Element\n";
+		if (Rod->Dynamo == N) cout << A + " Rod->Dynamo\n";
+		if (Rod->Manifold == N) cout << A + " Rod->Manifold\n";
+		if (Rod->Ring == N) cout << A + " Rod->Ring\n";
+		if (Rod->Coordinate == N) cout << A + " Rod->Coordinate\n";
+		if (Rod->Tau == N) cout << A + " Rod->Tau\n";
+		if (Rod->Mu == N) cout << A + " Rod->Mu\n";
+		if (Rod->Eta == N) cout << A + " Rod->Eta\n";
+		if (Rod->Rho == N) cout << A + " Rod->Rho\n";
+		if (Rod->Beta == N) cout << A + " Rod->Beta\n";
+		if (Rod->Phi == N) cout << A + " Rod->Phi\n";
 
-		if (Cone->Base == N) M->push_back(A + " Cone->Base");
-		if (Cone->Secret == N) M->push_back(A + " Cone->Secret");
-		if (Cone->Signal == N) M->push_back(A + " Cone->Signal");
-		if (Cone->Channel == N) M->push_back(A + " Cone->Channel");
-		if (Cone->Identity == N) M->push_back(A + " Cone->Identity");
-		if (Cone->Foundation == N) M->push_back(A + " Cone->Foundation");
-		if (Cone->Element == N) M->push_back(A + " Cone->Element");
-		if (Cone->Dynamo == N) M->push_back(A + " Cone->Dynamo");
-		if (Cone->Manifold == N) M->push_back(A + " Cone->Manifold");
-		if (Cone->Ring == N) M->push_back(A + " Cone->Ring");
-		if (Cone->Coordinate == N) M->push_back(A + " Cone->Coordinate");
-		if (Cone->Tau == N) M->push_back(A + " Cone->Tau");
-		if (Cone->Mu == N) M->push_back(A + " Cone->Mu");
-		if (Cone->Eta == N) M->push_back(A + " Cone->Eta");
-		if (Cone->Rho == N) M->push_back(A + " Cone->Rho");
-		if (Cone->Beta == N) M->push_back(A + " Cone->Beta");
-		if (Cone->Phi == N) M->push_back(A + " Cone->Phi");
+		if (Cone->Base == N) cout << A + " Cone->Base\n";
+		if (Cone->Secret == N) cout << A + " Cone->Secret\n";
+		if (Cone->Signal == N) cout << A + " Cone->Signal\n";
+		if (Cone->Channel == N) cout << A + " Cone->Channel\n";
+		if (Cone->Identity == N) cout << A + " Cone->Identity\n";
+		if (Cone->Foundation == N) cout << A + " Cone->Foundation\n";
+		if (Cone->Element == N) cout << A + " Cone->Element\n";
+		if (Cone->Dynamo == N) cout << A + " Cone->Dynamo\n";
+		if (Cone->Manifold == N) cout << A + " Cone->Manifold\n";
+		if (Cone->Ring == N) cout << A + " Cone->Ring\n";
+		if (Cone->Coordinate == N) cout << A + " Cone->Coordinate\n";
+		if (Cone->Tau == N) cout << A + " Cone->Tau\n";
+		if (Cone->Mu == N) cout << A + " Cone->Mu\n";
+		if (Cone->Eta == N) cout << A + " Cone->Eta\n";
+		if (Cone->Rho == N) cout << A + " Cone->Rho\n";
+		if (Cone->Beta == N) cout << A + " Cone->Beta\n";
+		if (Cone->Phi == N) cout << A + " Cone->Phi\n";
 
-		if (Phi == N) M->push_back(A + " Phi");
-		if (Eta == N) M->push_back(A + " Eta");
-		if (Mu == N) M->push_back(A + " Mu");
-		if (Xi == N) M->push_back(A + " Xi");
-
-		// set a breakpoint
-		if (M->size() > 0)
-			int i = 99;
-		return M;
+		if (Phi == N) cout << A + " Phi\n";
+		if (Eta == N) cout << A + " Eta\n";
+		if (Mu == N) cout << A + " Mu\n";
+		if (Xi == N) cout << A + " Xi\n";
 	}
 }
