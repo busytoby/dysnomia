@@ -1,6 +1,6 @@
 #pragma once
+#include <vector>
 #include "Affinity.h"
-#include "Util.h"
 
 using namespace std;
 
@@ -17,6 +17,8 @@ namespace Dysnomia {
 		Dynamic* Tau;
 		Affinity* Theta;
 		int Gamma = 1;
+
+        vector<Affinity*> Affinities() { return vector<Affinity*>({ Rho, Psi, Eta, Upsilon, Theta }); }
 
 		~Aluminium() { 
 			if (--Gamma > 0) return;

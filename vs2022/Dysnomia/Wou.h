@@ -15,6 +15,17 @@ namespace Dysnomia {
         int Lambda = 0;
         mutex Kappa;
 
+        vector<Affinity*> Affinities() {
+            vector<Affinity*> Alpha(Mu->Affinities());
+            vector<Affinity*> Beta = Rho->Affinities();
+            Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+            vector<Affinity*> Iota = Psi->Affinities();
+            Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
+            vector<Affinity*> Omicron = Nu->Affinities();
+            Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+            return Alpha;
+        }
+
         ~Wou() {
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;

@@ -1,5 +1,6 @@
 #pragma once
 #include "01_Aluminium.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -16,6 +17,17 @@ namespace Dysnomia {
 		Aluminium* Tau;
 		Dynamic* Theta;
 		int Gamma = 1;
+
+		vector<Affinity*> Affinities() { 
+			vector<Affinity*> Alpha(Mu->Affinities());
+			vector<Affinity*> Beta = Psi->Affinities();
+			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+			Alpha.push_back(Nu);
+			Alpha.push_back(Sigma);
+			vector<Affinity*> Omicron = Tau->Affinities();
+			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+			return Alpha;
+		}
 
 		~Sulphur() {
 			if (--Gamma > 0) return;

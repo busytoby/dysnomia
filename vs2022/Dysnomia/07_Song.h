@@ -17,6 +17,26 @@ namespace Dysnomia {
 		Qiao* Theta;
 		int Gamma = 1;
 
+		vector<Affinity*> Affinities() {
+			vector<Affinity*> Alpha(Mu->Affinities());
+			Alpha.push_back(Rho);
+			vector<Affinity*> Beta = Psi->Affinities();
+			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+			vector<Affinity*> Iota = Nu->Affinities();
+			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
+			vector<Affinity*> Omicron = Eta->Affinities();
+			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+			vector<Affinity*> Lambda = Sigma->Affinities();
+			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
+			vector<Affinity*> Xi = Upsilon->Affinities();
+			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
+			vector<Affinity*> Delta = Tau->Affinities();
+			Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
+			vector<Affinity*> Pi = Theta->Affinities();
+			Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
+			return Alpha;
+		}
+
 		~Song() { 
 			if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
 			if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;

@@ -3,7 +3,6 @@
 #include <string>
 #include <tuple>
 #include "Dynamic.h"
-#include "Util.h"
 
 namespace Dysnomia {
 	class Affinity

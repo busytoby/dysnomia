@@ -27,4 +27,8 @@ int main()
     Song* TwoSong = new Song(TwoPlayer);
     One->Alpha();
     Two->Alpha();
+
+    vector<Affinity*> OneAffinities = One->Affinities();
+    vector<Affinity*> TwoAffinities = Two->Affinities();
+
 }

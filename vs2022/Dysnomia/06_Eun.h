@@ -17,6 +17,23 @@ namespace Dysnomia {
 		Affinity* Theta;
 		int Gamma = 1;
 
+		vector<Affinity*> Affinities() {
+			vector<Affinity*> Alpha(Mu->Affinities());
+			vector<Affinity*> Beta = Rho->Affinities();
+			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+			vector<Affinity*> Iota = Psi->Affinities();
+			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
+			vector<Affinity*> Omicron = Eta->Affinities();
+			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+			vector<Affinity*> Lambda = Sigma->Affinities();
+			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
+			Alpha.push_back(Upsilon);
+			vector<Affinity*> Xi = Tau->Affinities();
+			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
+			Alpha.push_back(Theta);
+			return Alpha;
+		}
+
 		~Eun() { 
 			if (Theta->Rod->Gamma <= 1 && Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
 			if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;

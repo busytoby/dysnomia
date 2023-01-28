@@ -12,6 +12,17 @@ namespace Dysnomia {
         Tin* Upsilon;
         int Gamma = 1;
 
+        vector<Affinity*> Affinities() {
+            vector<Affinity*> Alpha(Mu->Affinities());
+            vector<Affinity*> Omicron = Nu->Affinities();
+            Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+            vector<Affinity*> Lambda = Eta->Affinities();
+            Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
+            vector<Affinity*> Delta = Upsilon->Affinities();
+            Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
+            return Alpha;
+        }
+
         ~Beit() {
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
