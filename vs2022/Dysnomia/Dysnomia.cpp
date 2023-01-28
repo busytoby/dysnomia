@@ -16,4 +16,6 @@ int main()
     Tong* Mu = new Tong();
     Fao* Rho = new Fao(Mu);
     Tung* Psi = new Tung(Rho->Pi());
+    Xiao* Nu = new Xiao(Psi);
+    Qiao* Eta = new Qiao(Nu->Theta, Nu->Theta->Beta(), Nu->Theta->Omicron(), Psi->Theta->Mu->Eta);
 }
