@@ -37,12 +37,12 @@ namespace Dysnomia {
             return Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
         }
 
-        Aluminium* Pi(Affinity* Beta) {
+        Sulphur* Pi(Affinity* Beta) {
             lock_guard<mutex> K(Kappa);
             if (Theta != 0) throw 201;
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
-            return new Aluminium(Beta);
+            return new Sulphur(Beta);
         }
     };
 }

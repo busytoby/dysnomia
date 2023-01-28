@@ -14,5 +14,5 @@ int main()
     Wou* One = new Wou();
     Wou* Two = new Wou();
     
-    Aluminium* Sigma = Two->Pi(One->Omega());
+    Sulphur* Sigma = Two->Pi(One->Omega());
 }
