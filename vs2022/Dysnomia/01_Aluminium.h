@@ -30,9 +30,58 @@ namespace Dysnomia {
 			if (Rho->Rod->Gamma <= 1 && Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
 			if(Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
-		Aluminium();
-		Aluminium(Dynamic*, Int64, Int64, Int64, Int64);
-		Aluminium(Affinity*);
-		Dynamic* Pi();
+
+        Aluminium(Affinity* Pi) {
+            Pi->Rod->Gamma++;
+            Pi->Cone->Gamma++;
+            Mu = new Dynamic();
+            Rho = Pi;
+            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Dynamic();
+            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Dynamic();
+            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Dynamic();
+            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            Tau->Tune();
+            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+        }
+
+        Aluminium(Dynamic* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
+            Beta->Gamma++;
+            Mu = new Dynamic();
+            Rho = new Affinity(Beta, Iota, Omicron, Lambda, Xi);
+            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Dynamic();
+            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Dynamic();
+            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Dynamic();
+            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            Tau->Tune();
+            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+        }
+
+        Aluminium() {
+            Mu = new Dynamic();
+            Rho = new Affinity();
+            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Dynamic();
+            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Dynamic();
+            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Dynamic();
+            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            Tau->Tune();
+            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+        }
+
+        // First Quaternion
+        Dynamic* Pi() {
+            Dynamic* Beta = new Dynamic();
+            Beta->Fuse(Eta->Rod->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold);
+            Beta->Tune();
+            return Beta;
+        }
 	};
 }

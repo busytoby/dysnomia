@@ -29,7 +29,31 @@ namespace Dysnomia {
 			if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
-		Sulphur();
-		Sulphur(Affinity*);
+		
+		Sulphur(Affinity* Beta) {
+			Beta->Rod->Gamma++;
+			Beta->Cone->Gamma++;
+			Mu = new Aluminium(Beta);
+			Rho = Mu->Pi();
+			Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+			Nu = new Affinity(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+			Eta = new Dynamic();
+			Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Upsilon = Psi->Pi();
+			Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+			Theta = Tau->Pi();
+		}
+
+		Sulphur() {
+			Mu = new Aluminium();
+			Rho = Mu->Pi();
+			Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+			Nu = new Affinity(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+			Eta = new Dynamic();
+			Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Upsilon = Psi->Pi();
+			Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+			Theta = Tau->Pi();
+		}
 	};
 }

@@ -129,26 +129,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="03_Iron.cpp" />
-    <ClCompile Include="04_Qiao.cpp" />
     <ClCompile Include="04_Qiao.h" />
-    <ClCompile Include="05_Tin.cpp" />
-    <ClCompile Include="06_Eun.cpp" />
-    <ClCompile Include="07_Song.cpp" />
-    <ClCompile Include="08a_Tong.cpp" />
-    <ClCompile Include="08b_Tsong.cpp" />
-    <ClCompile Include="08_Life.cpp" />
-    <ClCompile Include="09_Nat.cpp" />
-    <ClCompile Include="10_Tung.cpp" />
-    <ClCompile Include="11_Xiao.cpp" />
-    <ClCompile Include="12_Tsuan.cpp" />
-    <ClCompile Include="13_Fao.cpp" />
     <ClCompile Include="Affinity.cpp" />
-    <ClCompile Include="01_Aluminium.cpp" />
     <ClCompile Include="Dynamic.cpp" />
     <ClCompile Include="Dysnomia.cpp" />
     <ClCompile Include="Math.cpp" />
-    <ClCompile Include="02_Sulphur.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>

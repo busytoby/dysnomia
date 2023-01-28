@@ -26,6 +26,22 @@ namespace Dysnomia {
 			if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
-		Fao(Life*);
+		
+		Fao(Life* Alpha) {
+			Alpha->Gamma++;
+			Mu = new Tsuan(Alpha);
+			Rho = new Tung(Mu->Mu->Mu);
+			Psi = new Xiao(Rho);
+			Nu = new Qiao(Psi->Theta, Psi->Theta->Beta(), Psi->Theta->Omicron(), Mu->Rho->Sigma);
+			pair<Eun*, Iron*> Three = Psi->Pi();
+			Eta = Three.first;
+			Sigma = Three.second;
+			Upsilon = new Qiao(Sigma, Eta->Upsilon, Mu->Sigma->Upsilon, Mu->Rho->Sigma);
+			Tau = new Tin(Upsilon->Upsilon);
+		}
+
+		Tsong* Pi() {
+			return new Tsong(Psi->Rho);
+		}
 	};
 }

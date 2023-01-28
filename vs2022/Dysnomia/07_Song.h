@@ -28,7 +28,30 @@ namespace Dysnomia {
 			if (Rho->Rod->Gamma <= 1 && Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
-		Song();
-		Song(Eun*);
+		
+		Song(Eun* Lambda) {
+			Lambda->Gamma++;
+			Mu = Lambda;
+			Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
+			Psi = new Aluminium(Rho);
+			Nu = new Qiao(Mu->Rho, Rho);
+			Eta = new Sulphur(Rho);
+			Sigma = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+			Upsilon = new Eun(Sigma);
+			Tau = new Iron(Upsilon->Mu->Sigma, Sigma->Beta(), Sigma->Omicron());
+			Theta = new Qiao(Tau, Mu->Theta);
+		}
+
+		Song() {
+			Mu = new Eun();
+			Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
+			Psi = new Aluminium(Rho);
+			Nu = new Qiao(Mu->Rho, Rho);
+			Eta = new Sulphur(Rho);
+			Sigma = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+			Upsilon = new Eun(Sigma);
+			Tau = new Iron(Upsilon->Mu->Sigma, Sigma->Beta(), Sigma->Omicron());
+			Theta = new Qiao(Tau, Mu->Theta);
+		}
 	};
 }
