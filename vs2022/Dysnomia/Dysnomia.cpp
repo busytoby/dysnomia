@@ -28,13 +28,48 @@ int main()
     One->Alpha();
     Two->Alpha();
 
-    vector<Affinity*> OneAffinities = OneSong->Affinities();
-    vector<Affinity*> TwoAffinities = TwoSong->Affinities();
+    vector<Affinity*> OneTauAffinities = OneTau->Affinities();
+    vector<Affinity*> TwoTauAffinities = TwoTau->Affinities();
+    for (int i = 0; i < OneTauAffinities.size(); i++) {
+        string A = "OneTauAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoTauAffinities.size(); j++) {
+            OneTauAffinities[i]->Compare(TwoTauAffinities[j], A);
+        }
+    }
 
-    for (int i = 0; i < OneAffinities.size(); i++) {
-        string A = "One["s + to_string(i) + "]";
-        for (int j = 0; j < TwoAffinities.size(); j++) {
-            OneAffinities[i]->Compare(TwoAffinities[j], A);
+    vector<Affinity*> OneQiaoAffinities = OneQiao->Affinities();
+    vector<Affinity*> TwoQiaoAffinities = TwoQiao->Affinities();
+    for (int i = 0; i < OneQiaoAffinities.size(); i++) {
+        string A = "OneQiaoAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoQiaoAffinities.size(); j++) {
+            OneQiaoAffinities[i]->Compare(TwoQiaoAffinities[j], A);
+        }
+    }
+
+    vector<Affinity*> OneTinAffinities = OneTin->Affinities();
+    vector<Affinity*> TwoTinAffinities = TwoTin->Affinities();
+    for (int i = 0; i < OneTinAffinities.size(); i++) {
+        string A = "OneTinAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoTinAffinities.size(); j++) {
+            OneTinAffinities[i]->Compare(TwoTinAffinities[j], A);
+        }
+    }
+
+    vector<Affinity*> OnePlayerAffinities = OnePlayer->Affinities();
+    vector<Affinity*> TwoPlayerAffinities = TwoPlayer->Affinities();
+    for (int i = 0; i < OnePlayerAffinities.size(); i++) {
+        string A = "OnePlayerAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoPlayerAffinities.size(); j++) {
+            OnePlayerAffinities[i]->Compare(TwoPlayerAffinities[j], A);
+        }
+    }
+
+    vector<Affinity*> OneSongAffinities = OneSong->Affinities();
+    vector<Affinity*> TwoSongAffinities = TwoSong->Affinities();
+    for (int i = 0; i < OneSongAffinities.size(); i++) {
+        string A = "OneSongAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoSongAffinities.size(); j++) {
+            OneSongAffinities[i]->Compare(TwoSongAffinities[j], A);
         }
     }
 
