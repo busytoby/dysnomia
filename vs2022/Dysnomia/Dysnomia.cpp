@@ -13,4 +13,5 @@ int main()
 
     Huo* Mu = new Huo();
     Huo* Rho = new Huo(Mu);
+    Xiao* Psi = new Xiao(Rho->Rho);
 }

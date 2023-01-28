@@ -30,26 +30,26 @@ namespace Dysnomia {
 
         Huo(Huo* Beta) {
             Mu = Beta->Theta;
-            Tung* Rho = new Tung(Mu->Theta->Mu->Mu);
-            Xiao* Psi = new Xiao(Rho);
-            Qiao* Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
-            Tung* Eta = new Tung(Mu->Rho->Mu->Mu->Mu);
-            Xiao* Sigma = new Xiao(Eta);
-            Tsuan* Upsilon = new Tsuan(Psi, Nu, Eta);
-            Fao* Tau = new Fao(Upsilon, Sigma);
-            Feng* Theta = new Feng(Tau);
+            Rho = new Tung(Mu->Theta->Mu->Mu);
+            Psi = new Xiao(Rho);
+            Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
+            Eta = new Tung(Mu->Rho->Mu->Mu->Mu);
+            Sigma = new Xiao(Eta);
+            Upsilon = new Tsuan(Psi, Nu, Eta);
+            Tau = new Fao(Upsilon, Sigma);
+            Theta = new Feng(Tau);
         }
 
         Huo() {
-            Feng* Mu = new Feng();
-            Tung* Rho = new Tung(Mu->Theta->Mu->Mu);
-            Xiao* Psi = new Xiao(Rho);
-            Qiao* Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
-            Tung* Eta = new Tung(Mu->Rho->Mu->Mu->Mu);
-            Xiao* Sigma = new Xiao(Eta);
-            Tsuan* Upsilon = new Tsuan(Psi, Nu, Eta);
-            Fao* Tau = new Fao(Upsilon, Sigma);
-            Feng* Theta = new Feng(Tau);
+            Mu = new Feng();
+            Rho = new Tung(Mu->Theta->Mu->Mu);
+            Psi = new Xiao(Rho);
+            Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
+            Eta = new Tung(Mu->Rho->Mu->Mu->Mu);
+            Sigma = new Xiao(Eta);
+            Upsilon = new Tsuan(Psi, Nu, Eta);
+            Tau = new Fao(Upsilon, Sigma);
+            Theta = new Feng(Tau);
         }
     };
 }
