@@ -25,4 +25,6 @@ int main()
     Eun* TwoPlayer = new Eun(TwoTin, TwoTau);
     Song* OneSong = new Song(OnePlayer);
     Song* TwoSong = new Song(TwoPlayer);
+    One->Alpha();
+    Two->Alpha();
 }

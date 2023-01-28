@@ -67,5 +67,11 @@ namespace Dysnomia {
             Iota->Cone->Gamma++;
             return new Qiao(Beta, Iota);
         }
+
+        void Alpha() {
+            lock_guard<mutex> K(Kappa);
+            if (Lambda != 3) throw 204;
+            Lambda = 0;
+        }
     };
 }
