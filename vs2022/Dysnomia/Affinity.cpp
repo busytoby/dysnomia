@@ -11,6 +11,10 @@ namespace Dysnomia {
 				Failed = false;
 			}
 			catch (int E) {
+				delete Rod;
+				Rod = nullptr;
+				delete Cone;
+				Cone = nullptr;
 				if (E == 1) continue;
 				if (E == 4) continue;
 				if (E == 6) continue;
@@ -48,8 +52,25 @@ namespace Dysnomia {
 		Rod = N;
 		if (!Rod->Barn == 0) 
 			throw 100;
-		Cone = new Dynamic();
-		FuseAndOpen(Rho, Upsilon, Ohm, Xi);
+
+		bool Failed = true;
+		while (Failed) {
+			try {
+				Cone = new Dynamic();
+				FuseAndOpen(Rho, Upsilon, Ohm, Xi);
+				Failed = false;
+			}
+			catch (int E) {
+				delete Cone;
+				Cone = nullptr;
+				if (E == 1) continue;
+				if (E == 4) continue;
+				if (E == 6) continue;
+				if (E == 7) continue;
+				if (E == 103) continue;
+				else throw;
+			}
+		}
 	}
 
 	void Affinity::FuseAndOpen(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
@@ -81,7 +102,7 @@ namespace Dysnomia {
 		Cone->Conjugate(&Rod->Pole);
 
 		if (Rod->Coordinate != Cone->Coordinate) 
-			throw 100;
+			throw 101;
 
 		Cone->Conify();
 
@@ -89,7 +110,7 @@ namespace Dysnomia {
 		Mu = Cone->Saturate(Rod->Foundation, Rod->Channel);
 
 		if (Rod->Element != Cone->Element) 
-			throw 100;
+			throw 102;
 
 		Ratchet();
 
@@ -100,7 +121,7 @@ namespace Dysnomia {
 		Cone->Open();
 
 		if (!Cone->ManifoldCompare(Rod)) 
-			throw 100;
+			throw 103;
 		this->Xi = Xi;
 	}
 

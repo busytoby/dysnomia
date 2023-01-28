@@ -16,7 +16,7 @@ namespace Dysnomia {
 		Aluminium* Tau;
 		Life* Theta;
 
-		~Tung() { delete Mu; delete Rho; delete Psi; delete Nu; delete Eta; delete Sigma; delete Upsilon; delete Tau; delete Theta; }
+		~Tung() { freeptr(Mu); freeptr(Rho); freeptr(Psi); freeptr(Nu); freeptr(Eta); freeptr(Sigma); freeptr(Upsilon); freeptr(Tau); freeptr(Theta); }
 		Tung(Life*);
 		Tung(Nat*);
 	};

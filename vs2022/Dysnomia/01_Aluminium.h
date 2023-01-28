@@ -1,5 +1,6 @@
 #pragma once
 #include "Affinity.h"
+#include "Util.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ namespace Dysnomia {
 		Dynamic* Tau;
 		Affinity* Theta;
 
-		~Aluminium() { delete Mu; delete Rho; delete Psi; delete Nu; delete Eta; delete Sigma; delete Upsilon; delete Tau; delete Theta; }
+		~Aluminium() { freeptr(Theta); freeptr(Upsilon); freeptr(Eta); freeptr(Psi); freeptr(Rho); freeptr(Mu); freeptr(Nu); freeptr(Sigma); freeptr(Tau); }
 		Aluminium();
 		Aluminium(Dynamic*, Int64, Int64, Int64, Int64);
 		Aluminium(Affinity*);

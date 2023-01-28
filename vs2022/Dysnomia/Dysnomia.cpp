@@ -12,9 +12,14 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Tong* Alpha = new Tong();
+    for (int i = 0; i < 20; i++) {
+        Tong* Alpha = new Tong();
 
-    Fao* Mu = new Fao(Alpha);
+        Fao* Mu = new Fao(Alpha);
 
-    int i = 99;
+        delete Alpha;
+        delete Mu;
+
+        int b = 99;
+    }
 }

@@ -16,7 +16,7 @@ namespace Dysnomia {
 		Iron* Tau;
 		Iron* Theta;
 
-		~Tin() { delete Mu; delete Rho; delete Psi; delete Nu; delete Eta; delete Sigma; delete Upsilon; delete Tau; delete Theta; }
+		~Tin() { freeptr(Mu); freeptr(Rho); freeptr(Psi); freeptr(Nu); freeptr(Eta); freeptr(Sigma); freeptr(Upsilon); freeptr(Tau); freeptr(Theta); }
 		Tin();
 		Tin(Affinity*);
 	};

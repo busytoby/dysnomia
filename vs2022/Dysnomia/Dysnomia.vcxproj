@@ -149,6 +149,7 @@
     <ClCompile Include="Dysnomia.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="02_Sulphur.cpp" />
+    <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03_Iron.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Dynamic.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="02_Sulphur.h" />
+    <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

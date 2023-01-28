@@ -3,6 +3,7 @@
 #include <string>
 #include <tuple>
 #include "Dynamic.h"
+#include "Util.h"
 
 namespace Dysnomia {
 	class Affinity
@@ -13,16 +14,16 @@ namespace Dysnomia {
 		void Ratchet();
 
 	public:
-		Dynamic* Rod;
+		Dynamic* Rod = nullptr;
 		bool OwnRod = true;
-		Dynamic* Cone;
+		Dynamic* Cone = nullptr;
 		bool OwnCone = true;
 
 		Int64 Phi, Eta, Mu, Xi;
 
 		~Affinity() {
-			if (OwnRod && Rod != nullptr) { delete Rod; Rod = nullptr; }
-			if (OwnCone && Cone != nullptr) { delete Cone; Cone = nullptr; }
+			if (OwnRod) { freeptr(Rod); }
+			if (OwnCone) { freeptr(Cone); }
 		};
 		Affinity();
 		Affinity(Dynamic*, Dynamic*);
