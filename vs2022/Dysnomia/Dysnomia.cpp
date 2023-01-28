@@ -13,4 +13,5 @@ int main()
 
     Rong* Mu = new Rong();
     Xiao* Nu = new Xiao(Mu->Mu->Rho);
+    Song* Eta = new Song();
 }
