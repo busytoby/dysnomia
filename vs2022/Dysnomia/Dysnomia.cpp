@@ -19,4 +19,5 @@ int main()
     Xiao* Sigma = new Xiao(Eta);
     Tsuan* Upsilon = new Tsuan(Psi, Nu, Eta);
     Fao* Tau = new Fao(Upsilon, Sigma);
+    Feng* Theta = new Feng(Tau);
 }

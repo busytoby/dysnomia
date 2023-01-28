@@ -7,7 +7,7 @@ using namespace std;
 namespace Dysnomia {
     class Feng {
     public:
-        Tong* Mu;
+        Life* Mu;
         Fao* Rho;
         Tung* Psi;
         Xiao* Nu;
@@ -27,6 +27,18 @@ namespace Dysnomia {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+        }
+
+        Feng(Fao* Beta) {
+            Mu = Beta->Pi();
+            Rho = Beta;
+            Psi = new Tung(Rho->Pi());
+            Nu = new Xiao(Psi);
+            Eta = new Qiao(Nu->Theta, Nu->Theta->Beta(), Nu->Theta->Omicron(), Psi->Theta->Mu->Eta);
+            Sigma = new Iron(Psi->Theta->Mu->Eta, Eta->Nu, Psi->Mu->Nu->Omicron());
+            Upsilon = new Qiao(Sigma, Mu->Psi->Upsilon, Rho->Eta->Upsilon, Psi->Theta->Mu->Eta);
+            Tau = new Xiao(Nu->Mu);
+            Theta = new Tsuan(Psi, Nu, Psi->Theta->Mu->Eta, Eta);
         }
 
         Feng() {
