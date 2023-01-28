@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "16_Rong.h"
+#include "17_Beit.h"
 
 using namespace Dysnomia;
 
@@ -11,7 +11,5 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Rong* Mu = new Rong();
-    Xiao* Nu = new Xiao(Mu->Mu->Rho);
-    Song* Eta = new Song();
+    Beit* Mu = new Beit();
 }
