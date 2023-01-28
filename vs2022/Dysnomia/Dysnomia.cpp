@@ -12,5 +12,6 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Feng* Mu = new Feng();
+    Tung* Rho = new Tung(Mu->Rho->Mu->Mu->Mu);
 
 }
