@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "18_Wou.h"
+#include "Wou.h"
 
 using namespace Dysnomia;
 

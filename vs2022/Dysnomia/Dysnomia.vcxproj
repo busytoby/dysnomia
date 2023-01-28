@@ -153,7 +153,7 @@
     <ClInclude Include="15_Huo.h" />
     <ClInclude Include="16_Rong.h" />
     <ClInclude Include="17_Beit.h" />
-    <ClInclude Include="18_Wou.h" />
+    <ClInclude Include="Wou.h" />
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="01_Aluminium.h" />
     <ClInclude Include="Dynamic.h" />
