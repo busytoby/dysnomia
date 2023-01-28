@@ -12,4 +12,5 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Rong* Mu = new Rong();
+    Xiao* Nu = new Xiao(Mu->Mu->Rho);
 }
