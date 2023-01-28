@@ -18,9 +18,12 @@ namespace Dysnomia {
 		Dynamic* Cone;
 		bool OwnCone = true;
 
-		Int64 Phi, Eta, Mu, /* Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega */ Xi;
+		Int64 Phi, Eta, Mu, Xi;
 
-		~Affinity() { if (OwnRod && Rod != nullptr) delete Rod; if (OwnCone && Cone != nullptr) delete Cone; };
+		~Affinity() {
+			if (OwnRod && Rod != nullptr) { delete Rod; Rod = nullptr; }
+			if (OwnCone && Cone != nullptr) { delete Cone; Cone = nullptr; }
+		};
 		Affinity();
 		Affinity(Dynamic*, Dynamic*);
 		Affinity(Int64, Int64, Int64, Int64);
