@@ -10,7 +10,7 @@ namespace Dysnomia {
         Xiao* Nu;
         Song* Eta;
         Tin* Upsilon;
-        int Gamma;
+        int Gamma = 1;
 
         ~Beit() {
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;

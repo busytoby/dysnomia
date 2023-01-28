@@ -11,6 +11,8 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Wou* Mu = new Wou();
-    Mu->Omega();
+    Wou* One = new Wou();
+    Wou* Two = new Wou();
+    
+    Aluminium* Sigma = Two->Pi(One->Omega());
 }

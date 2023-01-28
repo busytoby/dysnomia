@@ -16,7 +16,7 @@ namespace Dysnomia {
         Qiao* Upsilon;
         Xiao* Tau;
         Tsuan* Theta;
-        int Gamma;
+        int Gamma = 1;
 
         ~Feng() {
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
@@ -30,6 +30,7 @@ namespace Dysnomia {
         }
 
         Feng(Fao* Beta) {
+            Beta->Gamma++;
             Mu = Beta->Pi();
             Rho = Beta;
             Psi = new Tung(Rho->Pi());

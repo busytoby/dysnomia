@@ -13,7 +13,7 @@ namespace Dysnomia {
         Iron* Eta;
         Qiao* Upsilon;
         Qiao* Theta;
-        int Gamma;
+        int Gamma = 1;
 
         ~Rong() {
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;

@@ -1,4 +1,5 @@
 #pragma once
+#include <mutex>
 #include "17_Beit.h"
 
 using namespace std;
@@ -11,6 +12,8 @@ namespace Dysnomia {
         Eun* Psi;
         Song* Nu;
         int Gamma;
+        int Theta = 0;
+        mutex Kappa;
 
         ~Wou() {
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
@@ -27,8 +30,19 @@ namespace Dysnomia {
             Nu = new Song(Psi);
         }
 
-        void Omega() {
-            Affinity* Sigma = Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
+        Affinity* Omega() {
+            lock_guard<mutex> K(Kappa);
+            if (Theta != 0) return nullptr;
+            Theta = 1;
+            return Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
+        }
+
+        Aluminium* Pi(Affinity* Beta) {
+            lock_guard<mutex> K(Kappa);
+            if (Theta != 0) throw 201;
+            Beta->Rod->Gamma++;
+            Beta->Cone->Gamma++;
+            return new Aluminium(Beta);
         }
     };
 }
