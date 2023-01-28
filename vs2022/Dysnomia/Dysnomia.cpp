@@ -23,4 +23,6 @@ int main()
     Tin* TwoTin = new Tin(Two->Nu->Tau->Kappa(TwoQiao->Tau));
     Eun* OnePlayer = new Eun(OneTin, OneTau);
     Eun* TwoPlayer = new Eun(TwoTin, TwoTau);
+    Song* OneSong = new Song(OnePlayer);
+    Song* TwoSong = new Song(TwoPlayer);
 }
