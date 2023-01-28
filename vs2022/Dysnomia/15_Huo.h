@@ -28,6 +28,18 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
+        Huo(Huo* Beta) {
+            Mu = Beta->Theta;
+            Tung* Rho = new Tung(Mu->Theta->Mu->Mu);
+            Xiao* Psi = new Xiao(Rho);
+            Qiao* Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
+            Tung* Eta = new Tung(Mu->Rho->Mu->Mu->Mu);
+            Xiao* Sigma = new Xiao(Eta);
+            Tsuan* Upsilon = new Tsuan(Psi, Nu, Eta);
+            Fao* Tau = new Fao(Upsilon, Sigma);
+            Feng* Theta = new Feng(Tau);
+        }
+
         Huo() {
             Feng* Mu = new Feng();
             Tung* Rho = new Tung(Mu->Theta->Mu->Mu);

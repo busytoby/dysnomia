@@ -12,4 +12,5 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Huo* Mu = new Huo();
+    Huo* Rho = new Huo(Mu);
 }
