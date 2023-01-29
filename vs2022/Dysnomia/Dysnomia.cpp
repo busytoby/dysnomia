@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "21_Chu.h"
+#include "22_Chi.h"
 
 using namespace Dysnomia;
 
@@ -14,8 +14,6 @@ int main()
     Wou* One = new Wou();
     Wou* Two = new Wou();
     
-    Chu* Mu = new Chu(One, Two);
-    Qiao* Psi = new Qiao(Mu->Eta->Upsilon->Theta, Mu->Eta->Eta->Rho, Mu->Eta->Mu->Psi->Eta, Mu->Theta->Mu->Mu);
-    Eun* Nu = new Eun(Psi->Theta);
+    Chi* Mu = new Chi(One, Two);
     int i = 99; 
 }
