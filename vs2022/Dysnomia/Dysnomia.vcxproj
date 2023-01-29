@@ -154,6 +154,7 @@
     <ClInclude Include="17_Beit.h" />
     <ClInclude Include="19_Sing.h" />
     <ClInclude Include="20_Xun.h" />
+    <ClInclude Include="21_Chu.h" />
     <ClInclude Include="Wou.h" />
     <ClInclude Include="Affinity.h" />
     <ClInclude Include="01_Aluminium.h" />
