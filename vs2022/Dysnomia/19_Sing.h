@@ -1,19 +1,31 @@
 #pragma once
-#include "15_Huo.h"
+#include "Wou.h"
 
 using namespace std;
 
 namespace Dysnomia {
-    class Rong {
+    class Sing {
     public:
-        Huo* Mu;
-        Huo* Rho;
-        Xiao* Psi;
-        Eun* Nu;
-        Iron* Eta;
-        Qiao* Upsilon;
-        Qiao* Theta;
+        Sulphur* Mu;
+        Iron* Rho;
+        Qiao* Psi;
+        Tin* Nu;
+        Eun* Eta;
+        Affinity* Sigma;
+        Song* Tau;
+        Tsong* Theta;
         int Gamma = 1;
+
+        Sing(Wou* Beta, Wou* Iota) {
+            Sulphur* Mu = Iota->Pi(Beta->Omega());
+            Iron* Rho = Beta->Tau(Mu, Iota->Nu->Tau->Beta(), Iota->Nu->Tau->Omicron());
+            Qiao* Psi = new Qiao(Rho, Iota->Psi->Rho->Beta());
+            Tin* Nu = new Tin(Rho->Omicron());
+            Eun* Eta = new Eun(Nu, Rho);
+            Affinity* Sigma = Iota->Nu->Tau->Omega(Beta->Nu->Tau->Omicron(), Rho->Beta());
+            Song* Tau = new Song(Eta, Sigma);
+            Tsong* Theta = new Tsong(Tau);
+        }
 
         vector<Affinity*> Affinities() {
             vector<Affinity*> Alpha(Mu->Affinities());
@@ -25,32 +37,23 @@ namespace Dysnomia {
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
             vector<Affinity*> Lambda = Eta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-            vector<Affinity*> Delta = Upsilon->Affinities();
-            Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
+            Alpha.push_back(Sigma);
+            vector<Affinity*> Pi = Tau->Affinities();
+            Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
             vector<Affinity*> Chi = Theta->Affinities();
             Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
             return Alpha;
         }
 
-        ~Rong() {
-            if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+        ~Sing() {
+            if (Theta->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Sigma->Rod->Gamma <= 1 && Sigma->Cone->Gamma <= 1) delete Sigma; else { Sigma->Rod->Gamma--; Sigma->Cone->Gamma--; }
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
-        }
-
-        Rong() {
-            Mu = new Huo();
-            Rho = new Huo(Mu);
-            Psi = new Xiao(Rho->Rho);
-            pair<Eun*, Iron*> Four = Psi->Pi();
-            Nu = Four.first;
-            Eta = Four.second;
-            Upsilon = new Qiao(Eta, Eta->Kappa(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu));
-            Theta = new Qiao(Eta, Eta->Kappa(Rho->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu));
         }
     };
 }
