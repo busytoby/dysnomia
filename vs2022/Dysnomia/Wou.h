@@ -82,7 +82,7 @@ namespace Dysnomia {
         void Alpha() {
             lock_guard<mutex> K(Kappa);
             if (Lambda != 3) throw 204;
-            Lambda = 0;
+            Lambda = 1;
         }
     };
 }

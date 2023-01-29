@@ -227,7 +227,7 @@ namespace Dysnomia {
 		matches += Find(B->Beta, A + "->Beta");
 		matches += Find(B->Nu, A + "->Nu");
 		matches += Find(B->Phi, A + "->Phi");
-		if (matches > 0) cout << A + " " + to_string(matches) + "\n";
+		if (matches > 5) cout << A + " " + to_string(matches) + "\n";
 	}
 
 	int Affinity::Find(Int64 N, string A) {

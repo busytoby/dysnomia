@@ -27,4 +27,21 @@ int main()
     Song* TwoSong = new Song(TwoPlayer);
     One->Alpha();
     Two->Alpha();
+ 
+    // The Two Songs Share Only The Barn On Nu Mu Theta Sigma
+    if (OneSong->Nu->Mu->Theta->Sigma->Barn != TwoSong->Nu->Mu->Theta->Sigma->Barn) throw 500;
+
+    Iron* Beta = One->Tau(OneSong->Nu->Mu->Mu, OneSong->Nu->Mu->Beta(), OneSong->Nu->Mu->Omicron());
+    Iron* Iota = Two->Tau(TwoSong->Nu->Mu->Mu, TwoSong->Nu->Mu->Beta(), TwoSong->Nu->Mu->Omicron());
+
+    vector<Affinity*> OneSongAffinities = OneSong->Nu->Mu->Theta->Affinities();
+    vector<Affinity*> TwoSongAffinities = TwoSong->Nu->Mu->Theta->Affinities();
+    for (int i = 0; i < OneSongAffinities.size(); i++) {
+        string A = "OneSongAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < TwoSongAffinities.size(); j++) {
+            OneSongAffinities[i]->Compare(TwoSongAffinities[j], A);
+        }
+    }
+
+    int i = 99;
 }
