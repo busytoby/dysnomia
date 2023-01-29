@@ -53,11 +53,11 @@ namespace Dysnomia {
 			Mu = Beta;
 			Rho = Mu->Mu;
 			Psi = Iota;
-			Nu = new Qiao(Psi->Theta, Omicron->Mu->Nu->Omicron(), Omicron->Mu->Nu->Beta(), Iota->Theta);
+			Nu = new Qiao(Psi->Theta, Omicron->Mu->Nu->Omicron(), Omicron->Mu->Nu->Beta(), Iota->Sigma);
 			pair<Eun*, Iron*> Three = Psi->Pi();
 			Eta = Three.first;
 			Sigma = Three.second;
-			Upsilon = new Qiao(Omicron->Mu->Mu->Tau, Omicron->Upsilon, Omicron->Mu->Mu->Rho, Iota->Theta);
+			Upsilon = new Qiao(Omicron->Mu->Mu->Tau, Omicron->Upsilon, Omicron->Mu->Mu->Rho, Iota->Sigma);
 			Tau = new Tin(Omicron->Mu->Mu->Psi->Rho);
 		}
 
