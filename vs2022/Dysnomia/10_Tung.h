@@ -49,6 +49,19 @@ namespace Dysnomia {
 			if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
+
+		Tung(Nat* Alpha, Eun* Beta, Qiao* Omicron) {
+			Alpha->Gamma++;
+			Mu = Alpha;
+			Rho = new Eun(Mu->Nu);
+			Psi = new Song(Mu->Sigma);
+			Nu = Omicron;
+			Eta = new Qiao(Psi->Sigma, Mu->Rho->Theta->Delta(Upsilon->Rho->Omicron(), Upsilon->Rho->Beta());
+			Sigma = new Tin(Mu->Mu->Upsilon->Rho);
+			Upsilon = Beta;
+			Tau = new Aluminium(Upsilon->Sigma->Kappa(Nu->Tau));
+			Theta = new Life(Rho, Upsilon);
+		}
 		
 		Tung(Nat* Alpha) {
 			Alpha->Gamma++;
