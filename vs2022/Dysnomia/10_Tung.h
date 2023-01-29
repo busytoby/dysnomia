@@ -56,7 +56,7 @@ namespace Dysnomia {
 			Rho = new Eun(Mu->Nu);
 			Psi = new Song(Mu->Sigma);
 			Nu = Omicron;
-			Eta = new Qiao(Psi->Sigma, Mu->Rho->Theta->Delta(Upsilon->Rho->Omicron(), Upsilon->Rho->Beta());
+			Eta = new Qiao(Psi->Sigma, Mu->Rho->Theta->Delta(Beta->Rho->Omicron(), Beta->Rho->Beta()));
 			Sigma = new Tin(Mu->Mu->Upsilon->Rho);
 			Upsilon = Beta;
 			Tau = new Aluminium(Upsilon->Sigma->Kappa(Nu->Tau));

@@ -17,14 +17,14 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Sing(Wou* Beta, Wou* Iota) {
-            Sulphur* Mu = Iota->Pi(Beta->Omega());
-            Iron* Rho = Beta->Tau(Mu, Iota->Nu->Tau->Beta(), Iota->Nu->Tau->Omicron());
-            Qiao* Psi = new Qiao(Rho, Iota->Psi->Rho->Beta());
-            Tin* Nu = new Tin(Rho->Omicron());
-            Eun* Eta = new Eun(Nu, Rho);
-            Affinity* Sigma = Iota->Nu->Tau->Omega(Beta->Nu->Tau->Omicron(), Rho->Beta());
-            Song* Tau = new Song(Eta, Sigma);
-            Tsong* Theta = new Tsong(Tau);
+            Mu = Iota->Pi(Beta->Omega());
+            Rho = Beta->Tau(Mu, Iota->Nu->Tau->Beta(), Iota->Nu->Tau->Omicron());
+            Psi = new Qiao(Rho, Iota->Psi->Rho->Beta());
+            Nu = new Tin(Rho->Omicron());
+            Eta = new Eun(Nu, Rho);
+            Sigma = Iota->Nu->Tau->Omega(Beta->Nu->Tau->Omicron(), Rho->Beta());
+            Tau = new Song(Eta, Sigma);
+            Theta = new Tsong(Tau);
         }
 
         vector<Affinity*> Affinities() {
