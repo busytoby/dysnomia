@@ -16,5 +16,6 @@ int main()
     
     Chu* Mu = new Chu(One, Two);
     Qiao* Psi = new Qiao(Mu->Eta->Upsilon->Theta, Mu->Eta->Eta->Rho, Mu->Eta->Mu->Psi->Eta, Mu->Theta->Mu->Mu);
+    Eun* Nu = new Eun(Psi->Theta);
     int i = 99; 
 }
