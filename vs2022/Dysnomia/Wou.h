@@ -79,10 +79,12 @@ namespace Dysnomia {
             return new Qiao(Beta, Iota);
         }
 
-        void Alpha() {
+        void Alpha(bool Zero = false) {
             lock_guard<mutex> K(Kappa);
-            if (Lambda != 3) throw 204;
-            Lambda = 1;
+            if (Zero = true) Lambda = 0;
+            else if (Lambda != 3) throw 204;
+            else if (Zero == false)
+                Lambda = 1;
         }
     };
 }

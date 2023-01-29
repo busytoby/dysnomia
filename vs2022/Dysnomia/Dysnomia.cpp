@@ -16,7 +16,11 @@ int main()
     
     Xun* Mu = new Xun(One, Two);
     Rong* Rho = new Rong(Mu->Theta);
+    One->Alpha(true);
     Beit* Eta = new Beit(Rho);
+    Two->Alpha(true);
     Sing* Tau = new Sing(Two, One);
+    One->Alpha(true); Two->Alpha(true);
+    Xun* Theta = new Xun(Two, One);
     int i = 99; 
 }
