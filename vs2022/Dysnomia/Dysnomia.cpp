@@ -15,5 +15,6 @@ int main()
     Wou* Two = new Wou();
     
     Chi* Mu = new Chi(One, Two);
+    Qiao* Tau = new Qiao(Mu->Psi->Mu);
     int i = 99; 
 }
