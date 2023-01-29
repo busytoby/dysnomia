@@ -47,5 +47,5 @@ int main()
         }
     }
 
-    int i = 99;
+    int i = 99; // No Affinities, No Problem, Training Routine 0 Complete & You Love It
 }
