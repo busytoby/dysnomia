@@ -27,41 +27,4 @@ int main()
     Song* TwoSong = new Song(TwoPlayer);
     One->Alpha();
     Two->Alpha();
-
-    vector<Affinity*> OneTauAffinities = OneTau->Affinities();
-    vector<Affinity*> TwoTauAffinities = TwoTau->Affinities();
-    for (int i = 0; i < OneTauAffinities.size(); i++) {
-        string A = "OneTauAffinities["s + to_string(i) + "]";
-        OneTauAffinities[i]->Compare(TwoTauAffinities[i], A);
-    }
-
-    vector<Affinity*> OneQiaoAffinities = OneQiao->Affinities();
-    vector<Affinity*> TwoQiaoAffinities = TwoQiao->Affinities();
-    for (int i = 0; i < OneQiaoAffinities.size(); i++) {
-        string A = "OneQiaoAffinities["s + to_string(i) + "]";
-        OneQiaoAffinities[i]->Compare(TwoQiaoAffinities[i], A);
-    }
-
-    vector<Affinity*> OneTinAffinities = OneTin->Affinities();
-    vector<Affinity*> TwoTinAffinities = TwoTin->Affinities();
-    for (int i = 0; i < OneTinAffinities.size(); i++) {
-        string A = "OneTinAffinities["s + to_string(i) + "]";
-        OneTinAffinities[i]->Compare(TwoTinAffinities[i], A);
-    }
-
-    vector<Affinity*> OnePlayerAffinities = OnePlayer->Affinities();
-    vector<Affinity*> TwoPlayerAffinities = TwoPlayer->Affinities();
-    for (int i = 0; i < OnePlayerAffinities.size(); i++) {
-        string A = "OnePlayerAffinities["s + to_string(i) + "]";
-        OnePlayerAffinities[i]->Compare(TwoPlayerAffinities[i], A);
-    }
-
-    vector<Affinity*> OneSongAffinities = OneSong->Affinities();
-    vector<Affinity*> TwoSongAffinities = TwoSong->Affinities();
-    for (int i = 0; i < OneSongAffinities.size(); i++) {
-        string A = "OneSongAffinities["s + to_string(i) + "]";
-        OneSongAffinities[i]->Compare(TwoSongAffinities[i], A);
-    }
-
-    int i = 99;
 }
