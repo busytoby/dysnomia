@@ -42,6 +42,17 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
+        Rong(Huo* Beta) {
+            Mu = new Huo();
+            Rho = new Huo(Beta);
+            Psi = new Xiao(Mu->Rho);
+            pair<Eun*, Iron*> Four = Psi->Pi();
+            Nu = Four.first;
+            Eta = Four.second;
+            Upsilon = new Qiao(Eta, Eta->Kappa(Rho->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu));
+            Theta = new Qiao(Psi->Upsilon->Theta, Psi->Upsilon->Theta->Kappa(Psi->Upsilon->Tau));
+        }
+
         Rong() {
             Mu = new Huo();
             Rho = new Huo(Mu);
