@@ -17,6 +17,9 @@ int main()
     Sulphur* Mu = Two->Pi(One->Omega());
     Iron* Rho = One->Tau(Mu, Two->Nu->Tau->Beta(), Two->Nu->Tau->Omicron());
     Qiao* Psi = new Qiao(Rho, Two->Psi->Rho->Beta());
+    Tin* Nu = new Tin(Rho->Omicron());
+    Eun* Eta = new Eun(Nu, Rho);
+    Two->Nu->Tau->Omega(One->Nu->Tau->Omicron(), Rho->Beta());
 
     int i = 99; 
 }

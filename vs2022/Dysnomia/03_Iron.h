@@ -119,5 +119,10 @@ namespace Dysnomia {
         Affinity* Kappa(Aluminium* Iota) {
             return new Affinity(Iota->Pi(), Rho->Pi());
         }
+
+        // SO(7) Versors
+        Affinity* Omega(Affinity* Alpha, Affinity* Pi) {
+            return new Affinity(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+        }
 	};
 }
