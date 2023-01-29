@@ -32,7 +32,7 @@ namespace Dysnomia {
 		void OpenManifolds(Int64);
 		void Compare(Affinity*, string);
 		void Compare(Dynamic*, string);
-		void Find(Int64 N, string);
+		int Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
 		/*
 		void Charge(Int64);

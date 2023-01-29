@@ -207,69 +207,75 @@ namespace Dysnomia {
 	}
 
 	void Affinity::Compare(Dynamic* B, string A) {
-		Find(B->Base, A + "->Base");
-		Find(B->Secret, A + "->Secret");
-		Find(B->Signal, A + "->Signal");
-		Find(B->Channel, A + "->Channel");
-		Find(B->Identity, A + "->Identity");
-		Find(B->Foundation, A + "->Foundation");
-		Find(B->Element, A + "->Element");
-		Find(B->Dynamo, A + "->Dynamo");
-		Find(B->Manifold, A + "->Manifold");
-		Find(B->Ring, A + "->Ring");
-		Find(B->Barn, A + "->Barn");
-		Find(B->Coordinate, A + "->Coordinate");
-		Find(B->Tau, A + "->Tau");
-		Find(B->Mu, A + "->Mu");
-		Find(B->Rho, A + "->Rho");
-		Find(B->Eta, A + "->Eta");
-		Find(B->Beta, A + "->Beta");
-		Find(B->Nu, A + "->Nu");
-		Find(B->Phi, A + "->Phi");
+		int matches = 0;
+		matches += Find(B->Base, A + "->Base");
+		matches += Find(B->Secret, A + "->Secret");
+		matches += Find(B->Signal, A + "->Signal");
+		matches += Find(B->Channel, A + "->Channel");
+		matches += Find(B->Identity, A + "->Identity");
+		matches += Find(B->Foundation, A + "->Foundation");
+		matches += Find(B->Element, A + "->Element");
+		matches += Find(B->Dynamo, A + "->Dynamo");
+		matches += Find(B->Manifold, A + "->Manifold");
+		matches += Find(B->Ring, A + "->Ring");
+		matches += Find(B->Barn, A + "->Barn");
+		matches += Find(B->Coordinate, A + "->Coordinate");
+		matches += Find(B->Tau, A + "->Tau");
+		matches += Find(B->Mu, A + "->Mu");
+		matches += Find(B->Rho, A + "->Rho");
+		matches += Find(B->Eta, A + "->Eta");
+		matches += Find(B->Beta, A + "->Beta");
+		matches += Find(B->Nu, A + "->Nu");
+		matches += Find(B->Phi, A + "->Phi");
+		if (matches > 0) cout << A + " " + to_string(matches) + "\n";
 	}
 
-	void Affinity::Find(Int64 N, string A) {
-		if (N == 0) return;
+	int Affinity::Find(Int64 N, string A) {
+		if (N == 0) return 0;
 
-		if (Rod->Base == N) cout << A + " Rod->Base\n";
-		if (Rod->Secret == N) cout << A + " Rod->Secret\n";
-		if (Rod->Signal == N) cout << A + " Rod->Signal\n";
-		if (Rod->Channel == N) cout << A + " Rod->Channel\n";
-		if (Rod->Identity == N) cout << A + " Rod->Identity\n";
-		if (Rod->Foundation == N) cout << A + " Rod->Foundation\n";
-		if (Rod->Element == N) cout << A + " Rod->Element\n";
-		if (Rod->Dynamo == N) cout << A + " Rod->Dynamo\n";
-		if (Rod->Manifold == N) cout << A + " Rod->Manifold\n";
-		if (Rod->Ring == N) cout << A + " Rod->Ring\n";
-		if (Rod->Coordinate == N) cout << A + " Rod->Coordinate\n";
-		if (Rod->Tau == N) cout << A + " Rod->Tau\n";
-		if (Rod->Mu == N) cout << A + " Rod->Mu\n";
-		if (Rod->Eta == N) cout << A + " Rod->Eta\n";
-		if (Rod->Rho == N) cout << A + " Rod->Rho\n";
-		if (Rod->Beta == N) cout << A + " Rod->Beta\n";
-		if (Rod->Phi == N) cout << A + " Rod->Phi\n";
+		int matches = 0;
 
-		if (Cone->Base == N) cout << A + " Cone->Base\n";
-		if (Cone->Secret == N) cout << A + " Cone->Secret\n";
-		if (Cone->Signal == N) cout << A + " Cone->Signal\n";
-		if (Cone->Channel == N) cout << A + " Cone->Channel\n";
-		if (Cone->Identity == N) cout << A + " Cone->Identity\n";
-		if (Cone->Foundation == N) cout << A + " Cone->Foundation\n";
-		if (Cone->Element == N) cout << A + " Cone->Element\n";
-		if (Cone->Dynamo == N) cout << A + " Cone->Dynamo\n";
-		if (Cone->Manifold == N) cout << A + " Cone->Manifold\n";
-		if (Cone->Ring == N) cout << A + " Cone->Ring\n";
-		if (Cone->Coordinate == N) cout << A + " Cone->Coordinate\n";
-		if (Cone->Tau == N) cout << A + " Cone->Tau\n";
-		if (Cone->Mu == N) cout << A + " Cone->Mu\n";
-		if (Cone->Eta == N) cout << A + " Cone->Eta\n";
-		if (Cone->Rho == N) cout << A + " Cone->Rho\n";
-		if (Cone->Beta == N) cout << A + " Cone->Beta\n";
-		if (Cone->Phi == N) cout << A + " Cone->Phi\n";
+		if (Rod->Base == N) matches++;
+		if (Rod->Secret == N) matches++;
+		if (Rod->Signal == N) matches++;
+		if (Rod->Channel == N) matches++;
+		if (Rod->Identity == N) matches++;
+		if (Rod->Foundation == N) matches++;
+		if (Rod->Element == N) matches++;
+		if (Rod->Dynamo == N) matches++;
+		if (Rod->Manifold == N) matches++;
+		if (Rod->Ring == N) matches++;
+		if (Rod->Coordinate == N) matches++;
+		if (Rod->Tau == N) matches++;
+		if (Rod->Mu == N) matches++;
+		if (Rod->Eta == N) matches++;
+		if (Rod->Rho == N) matches++;
+		if (Rod->Beta == N) matches++;
+		if (Rod->Phi == N) matches++;
 
-		if (Phi == N) cout << A + " Phi\n";
-		if (Eta == N) cout << A + " Eta\n";
-		if (Mu == N) cout << A + " Mu\n";
-		if (Xi == N) cout << A + " Xi\n";
+		if (Cone->Base == N) matches++;
+		if (Cone->Secret == N) matches++;
+		if (Cone->Signal == N) matches++;
+		if (Cone->Channel == N) matches++;
+		if (Cone->Identity == N) matches++;
+		if (Cone->Foundation == N) matches++;
+		if (Cone->Element == N) matches++;
+		if (Cone->Dynamo == N) matches++;
+		if (Cone->Manifold == N) matches++;
+		if (Cone->Ring == N) matches++;
+		if (Cone->Coordinate == N) matches++;
+		if (Cone->Tau == N) matches++;
+		if (Cone->Mu == N) matches++;
+		if (Cone->Eta == N) matches++;
+		if (Cone->Rho == N) matches++;
+		if (Cone->Beta == N) matches++;
+		if (Cone->Phi == N) matches++;
+
+		if (Phi == N) matches++;
+		if (Eta == N) matches++;
+		if (Mu == N) matches++;
+		if (Xi == N) matches++;
+
+		return matches;
 	}
 }
