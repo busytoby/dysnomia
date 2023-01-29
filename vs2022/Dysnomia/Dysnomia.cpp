@@ -21,5 +21,6 @@ int main()
     Tsuan* Eta = new Tsuan(Psi, Mu->Theta, Nu);
     Fao* Upsilon = new Fao(Eta, Nu, Rho);
     Feng* Tau = new Feng(Upsilon, Psi);
+    Huo* Theta = new Huo(Two->Mu->Mu->Mu);
     int i = 99; 
 }
