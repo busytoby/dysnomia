@@ -48,6 +48,21 @@ namespace Dysnomia {
 			if (Rho->Rod->Gamma <= 1 && Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
+
+		Song(Eun* Lambda, Affinity* Omicron) {
+			Lambda->Gamma++;
+			Omicron->Rod->Gamma++;
+			Omicron->Cone->Gamma++;
+			Mu = new Eun(Sigma);
+			Rho = Omicron;
+			Psi = new Aluminium(Rho);
+			Nu = new Qiao(Tau, Mu->Theta); 
+			Eta = new Sulphur(Rho);
+			Sigma = new Iron(Upsilon->Mu->Sigma, Sigma->Beta(), Sigma->Omicron()); 
+			Upsilon = Lambda;
+			Tau = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+			Theta = new Qiao(Mu->Rho, Rho);
+		}
 		
 		Song(Eun* Lambda) {
 			Lambda->Gamma++;

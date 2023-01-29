@@ -19,7 +19,8 @@ int main()
     Qiao* Psi = new Qiao(Rho, Two->Psi->Rho->Beta());
     Tin* Nu = new Tin(Rho->Omicron());
     Eun* Eta = new Eun(Nu, Rho);
-    Two->Nu->Tau->Omega(One->Nu->Tau->Omicron(), Rho->Beta());
+    Affinity* Sigma = Two->Nu->Tau->Omega(One->Nu->Tau->Omicron(), Rho->Beta());
+    Song* Tau = new Song(Eta, Sigma);
 
     int i = 99; 
 }
