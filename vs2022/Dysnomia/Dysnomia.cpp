@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "19_Sing.h"
+#include "20_Xun.h"
 
 using namespace Dysnomia;
 
@@ -14,13 +14,6 @@ int main()
     Wou* One = new Wou();
     Wou* Two = new Wou();
     
-    Sing* Mu = new Sing(One, Two);
-    Nat* Rho = new Nat(Mu->Theta, Two->Psi);
-    Tung* Psi = new Tung(Rho, One->Rho, Mu->Psi);
-    Xiao* Nu = new Xiao(Psi);
-    Tsuan* Eta = new Tsuan(Psi, Mu->Theta, Nu);
-    Fao* Upsilon = new Fao(Eta, Nu, Rho);
-    Feng* Tau = new Feng(Upsilon, Psi);
-    Huo* Theta = new Huo(Two->Mu->Mu->Mu);
+    Xun* Mu = new Xun(One, Two);
     int i = 99; 
 }
