@@ -15,5 +15,6 @@ int main()
     Wou* Two = new Wou();
     
     Sing* Mu = new Sing(One, Two);
+    Nat* Rho = new Nat(Mu->Theta, Two->Psi);
     int i = 99; 
 }

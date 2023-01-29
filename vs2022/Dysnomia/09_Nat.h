@@ -46,6 +46,20 @@ namespace Dysnomia {
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
+
+        Nat(Life* Beta, Eun* Omicron) {
+            Beta->Gamma++;
+            Omicron->Gamma++;
+            Mu = Beta;
+            Rho = new Tin(Mu->Upsilon->Rho);
+            Psi = new Iron(Omicron->Mu->Sigma, Omicron->Rho->Beta(), Omicron->Rho->Omicron(), Omicron->Mu->Sigma->Nu, Omicron->Mu->Sigma->Sigma);
+            Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
+            Eta = Omicron;
+            Sigma = new Eun(Eta->Sigma);
+            Upsilon = Sigma->Sigma->Delta(Omicron->Sigma->Omicron(), Omicron->Sigma->Beta());
+            Tau = new Aluminium(Upsilon);
+            Theta = new Qiao(Psi, Upsilon);
+        }
         
         Nat(Life* Beta) {
             Beta->Gamma++;
