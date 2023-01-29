@@ -111,11 +111,7 @@ namespace Dysnomia {
 		//Gamma = Math::ModPow(Theta, Signal, Math::Prime);
 		//Kappa = Element + Gamma;
 
-		if (Nu == 0)
-			Mu = Beta;
-		else if (Nu != (long long)1) throw 7;
-		else
-			Mu = Rho;
+		if (Nu != 0 && Nu != 1) throw 7;
 
 		return Eta;
 	}
@@ -156,6 +152,7 @@ namespace Dysnomia {
 			Barn == Rod->Barn);
 	}
 
+	/*
 	Int64 Dynamic::Charge(Int64 Psi, bool Decay)
 	{
 		Int64 _barn = Math::ModPow(Barn, Psi, Ring);
@@ -195,4 +192,5 @@ namespace Dysnomia {
 		Eta = Math::ModPow(Pi, Channel, Theta);
 		Nu = Math::ModPow(Pi, Theta, Channel);
 	}
+	*/
 }

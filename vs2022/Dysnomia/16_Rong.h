@@ -43,6 +43,7 @@ namespace Dysnomia {
         }
 
         Rong(Huo* Beta) {
+            Beta->Gamma++;
             Mu = new Huo();
             Rho = new Huo(Beta);
             Psi = new Xiao(Mu->Rho);

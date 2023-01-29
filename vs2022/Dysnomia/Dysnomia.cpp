@@ -16,5 +16,6 @@ int main()
     
     Xun* Mu = new Xun(One, Two);
     Rong* Rho = new Rong(Mu->Theta);
+    Beit* Eta = new Beit(Rho);
     int i = 99; 
 }

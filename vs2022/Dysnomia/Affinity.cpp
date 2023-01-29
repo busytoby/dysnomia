@@ -221,7 +221,6 @@ namespace Dysnomia {
 		matches += Find(B->Barn, A + "->Barn");
 		matches += Find(B->Coordinate, A + "->Coordinate");
 		matches += Find(B->Tau, A + "->Tau");
-		matches += Find(B->Mu, A + "->Mu");
 		matches += Find(B->Rho, A + "->Rho");
 		matches += Find(B->Eta, A + "->Eta");
 		matches += Find(B->Beta, A + "->Beta");
@@ -247,7 +246,6 @@ namespace Dysnomia {
 		if (Rod->Ring == N) matches++;
 		if (Rod->Coordinate == N) matches++;
 		if (Rod->Tau == N) matches++;
-		if (Rod->Mu == N) matches++;
 		if (Rod->Eta == N) matches++;
 		if (Rod->Rho == N) matches++;
 		if (Rod->Beta == N) matches++;
@@ -265,7 +263,6 @@ namespace Dysnomia {
 		if (Cone->Ring == N) matches++;
 		if (Cone->Coordinate == N) matches++;
 		if (Cone->Tau == N) matches++;
-		if (Cone->Mu == N) matches++;
 		if (Cone->Eta == N) matches++;
 		if (Cone->Rho == N) matches++;
 		if (Cone->Beta == N) matches++;

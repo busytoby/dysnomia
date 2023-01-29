@@ -12,7 +12,8 @@ namespace Dysnomia {
 
 	public:
 		Int64 Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn, Coordinate;
-		Int64 Tau, Mu, Eta, Nu, Rho, Beta, Phi;
+		Int64 Tau, Eta, Rho, Beta, Phi;
+		short Nu;
 		int Gamma = 1;
 
 		Dynamic();
@@ -29,11 +30,13 @@ namespace Dysnomia {
 		void Adduct(Int64);
 		void Open();
 		bool ManifoldCompare(Dynamic*);
+		/*
 		Int64 Charge(Int64, bool);
 		Int64 Induce(Int64, bool);
 		Int64 Torque(Int64, bool);
 		Int64 Amplify(Int64, bool);
 		Int64 Sustain(Int64, bool);
 		void React(Int64, Int64);
+		*/
 	};
 }

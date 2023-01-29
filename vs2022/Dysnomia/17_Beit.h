@@ -30,6 +30,14 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
+        Beit(Rong* Beta) {
+            Beta->Gamma++;
+            Mu = Beta;
+            Nu = new Xiao(Mu->Rho->Rho);
+            Eta = new Song(Beta->Nu);
+            Upsilon = new Tin(Eta->Rho);
+        }
+
         Beit() {
             Mu = new Rong();
             Nu = new Xiao(Mu->Mu->Rho);

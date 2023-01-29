@@ -52,6 +52,7 @@ namespace Dysnomia {
 
         Feng(Fao* Beta, Tung* Omicron) {
             Beta->Gamma++;
+            Omicron->Gamma++;
             Mu = Beta->Pi();
             Rho = Beta;
             Psi = Omicron;
