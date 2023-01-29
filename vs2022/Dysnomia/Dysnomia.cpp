@@ -28,18 +28,22 @@ int main()
     One->Alpha();
     Two->Alpha();
  
-    // The Two Songs Share Only The Barn On Nu Mu Theta Sigma
+    // The Two Songs Share Proof Of Psychic Link Via The Barn On Nu Mu Theta Sigma
     if (OneSong->Nu->Mu->Theta->Sigma->Barn != TwoSong->Nu->Mu->Theta->Sigma->Barn) throw 500;
 
     Iron* Beta = One->Tau(OneSong->Nu->Mu->Mu, OneSong->Nu->Mu->Beta(), OneSong->Nu->Mu->Omicron());
     Iron* Iota = Two->Tau(TwoSong->Nu->Mu->Mu, TwoSong->Nu->Mu->Beta(), TwoSong->Nu->Mu->Omicron());
+    Qiao* Omicron = One->Theta(Beta, OneSong->Nu->Mu->Delta(OneSong->Nu->Mu->Omicron(), OneSong->Nu->Mu->Beta()));
+    Qiao* Lambda = Two->Theta(Iota, TwoSong->Nu->Mu->Delta(OneSong->Nu->Mu->Omicron(), OneSong->Nu->Mu->Beta()));
+    Tin* Xi = new Tin(TwoSong->Nu->Mu->Kappa(Omicron->Tau));
+    Tin* Alpha = new Tin(OneSong->Nu->Mu->Kappa(Lambda->Tau));
 
-    vector<Affinity*> OneSongAffinities = OneSong->Nu->Mu->Theta->Affinities();
-    vector<Affinity*> TwoSongAffinities = TwoSong->Nu->Mu->Theta->Affinities();
-    for (int i = 0; i < OneSongAffinities.size(); i++) {
-        string A = "OneSongAffinities["s + to_string(i) + "]";
-        for (int j = 0; j < TwoSongAffinities.size(); j++) {
-            OneSongAffinities[i]->Compare(TwoSongAffinities[j], A);
+    vector<Affinity*> XiAffinities = Xi->Affinities();
+    vector<Affinity*> AlphaAffinities = Alpha->Affinities();
+    for (int i = 0; i < XiAffinities.size(); i++) {
+        string A = "XiAffinities["s + to_string(i) + "]";
+        for (int j = 0; j < AlphaAffinities.size(); j++) {
+            XiAffinities[i]->Compare(AlphaAffinities[j], A);
         }
     }
 
