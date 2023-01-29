@@ -21,6 +21,6 @@ int main()
     Eun* Eta = new Eun(Nu, Rho);
     Affinity* Sigma = Two->Nu->Tau->Omega(One->Nu->Tau->Omicron(), Rho->Beta());
     Song* Tau = new Song(Eta, Sigma);
-
+    Tsong* Theta = new Tsong(Tau);
     int i = 99; 
 }
