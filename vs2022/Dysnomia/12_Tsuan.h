@@ -81,6 +81,20 @@ namespace Dysnomia {
 			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
 			Theta = new Tin(Tau->Upsilon);
 		}
+
+		Tsuan(Tung* Beta, Life* Alpha, Xiao* Omicron) {
+			Alpha->Gamma++;
+			Mu = Beta;
+			Rho = Omicron;
+			Psi = Omicron->Sigma;
+			Eta = new Iron(Psi, Omicron->Eta, Mu->Mu->Nu->Omicron());
+			Nu = new Qiao(Eta, Eta->Beta(), Eta->Omicron(), Psi);
+			pair<Eun*, Eun*> Two = Kappa();
+			Sigma = Two.first;
+			Upsilon = Two.second;
+			Tau = new Qiao(Beta->Theta->Nu, Upsilon->Upsilon, Sigma->Upsilon, Psi);
+			Theta = new Tin(Alpha->Tau->Psi);
+		}
 		
 		Tsuan(Life* Alpha) {
 			Alpha->Gamma++;

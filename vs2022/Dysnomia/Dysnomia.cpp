@@ -18,5 +18,6 @@ int main()
     Nat* Rho = new Nat(Mu->Theta, Two->Psi);
     Tung* Psi = new Tung(Rho, One->Rho, Mu->Psi);
     Xiao* Nu = new Xiao(Psi);
+    Tsuan* Eta = new Tsuan(Psi, Mu->Theta, Nu);
     int i = 99; 
 }
