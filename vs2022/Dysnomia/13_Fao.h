@@ -47,6 +47,20 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 
+		Fao(Tsuan* Beta, Xiao* Iota, Nat* Omicron) {
+			Beta->Gamma++;
+			Iota->Gamma++;
+			Mu = Beta;
+			Rho = Mu->Mu;
+			Psi = Iota;
+			Nu = new Qiao(Psi->Theta, Omicron->Mu->Nu->Omicron(), Omicron->Mu->Nu->Beta(), Iota->Theta);
+			pair<Eun*, Iron*> Three = Psi->Pi();
+			Eta = Three.first;
+			Sigma = Three.second;
+			Upsilon = new Qiao(Omicron->Mu->Mu->Tau, Omicron->Upsilon, Omicron->Mu->Mu->Rho, Iota->Theta);
+			Tau = new Tin(Omicron->Mu->Mu->Psi->Rho);
+		}
+
 		Fao(Tsuan* Beta, Xiao* Iota) {
 			Beta->Gamma++;
 			Iota->Gamma++;

@@ -19,5 +19,6 @@ int main()
     Tung* Psi = new Tung(Rho, One->Rho, Mu->Psi);
     Xiao* Nu = new Xiao(Psi);
     Tsuan* Eta = new Tsuan(Psi, Mu->Theta, Nu);
+    Fao* Upsilon = new Fao(Eta, Nu, Rho);
     int i = 99; 
 }
