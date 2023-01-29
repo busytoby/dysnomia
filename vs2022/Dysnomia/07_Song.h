@@ -53,14 +53,14 @@ namespace Dysnomia {
 			Lambda->Gamma++;
 			Omicron->Rod->Gamma++;
 			Omicron->Cone->Gamma++;
+			Upsilon = Lambda;
+			Sigma = new Iron(Upsilon->Mu->Sigma, Upsilon->Tau->Sigma->Beta(), Upsilon->Tau->Sigma->Omicron());
 			Mu = new Eun(Sigma);
 			Rho = Omicron;
 			Psi = new Aluminium(Rho);
-			Nu = new Qiao(Tau, Mu->Theta); 
 			Eta = new Sulphur(Rho);
-			Sigma = new Iron(Upsilon->Mu->Sigma, Sigma->Beta(), Sigma->Omicron()); 
-			Upsilon = Lambda;
 			Tau = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+			Nu = new Qiao(Tau, Mu->Theta); 
 			Theta = new Qiao(Mu->Rho, Rho);
 		}
 		
