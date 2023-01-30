@@ -11,10 +11,10 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Wou* One = new Wou();
-    Wou* Two = new Wou();
+    Wou* Sigma = new Wou();
+    Wou* Tau = new Wou();
     
-    Chi* Mu = new Chi(One, Two);
-    Qiao* Tau = new Qiao(Mu->Psi->Mu);
+    Chi* Rho = new Chi(Sigma, Tau);
+    Qiao* Theta = new Qiao(Rho->Psi->Mu);
     int i = 99; 
 }
