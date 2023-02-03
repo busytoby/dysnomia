@@ -13,11 +13,11 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Host() {
-            Wou* Sigma = new Wou();
-            Wou* Tau = new Wou();
+            Sigma = new Wou();
+            Tau = new Wou();
 
-            Chi* Rho = new Chi(Sigma, Tau);
-            Qiao* Theta = new Qiao(Rho->Psi->Mu);
+            Rho = new Chi(Sigma, Tau);
+            Theta = new Qiao(Rho->Psi->Mu);
         }
 
         vector<Affinity*> Affinities() {

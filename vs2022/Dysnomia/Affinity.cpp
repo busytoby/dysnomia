@@ -273,6 +273,8 @@ namespace Dysnomia {
 		if (Mu == N) matches++;
 		if (Xi == N) matches++;
 
+		if (matches > 0) cout << to_string(matches) << " Matches on " << to_string(N) << "\n";
+
 		return matches;
 	}
 }
