@@ -21,6 +21,7 @@ int main()
     Affinity* AlphaMu = Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Delta(MuOmicron->Mu->Nu, Alpha->Tau->Mu->Eta->Upsilon->Upsilon);
     //
     Song* MuLambda = new Song(MuOmicron, AlphaMu);
+    Tong* MuXi = new Tong(MuLambda, AlphaMu);
 
     Iron* RhoAlpha = new Iron();
     Qiao* RhoBeta = new Qiao(RhoAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), RhoAlpha->Mu);
@@ -30,6 +31,7 @@ int main()
     Affinity* AlphaRho = Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Delta(RhoOmicron->Mu->Nu, Alpha->Tau->Mu->Eta->Upsilon->Upsilon);
     //
     Song* RhoLambda = new Song(RhoOmicron, AlphaRho);
+    Tong* RhoXi = new Tong(RhoLambda, AlphaRho);
 
     Iron* PsiAlpha = new Iron();
     Qiao* PsiBeta = new Qiao(PsiAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), PsiAlpha->Mu);
@@ -39,6 +41,7 @@ int main()
     Affinity* AlphaPsi = Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Delta(PsiOmicron->Mu->Nu, Alpha->Tau->Mu->Eta->Upsilon->Upsilon);
     //
     Song* PsiLambda = new Song(PsiOmicron, AlphaPsi);
+    Tong* PsiXi = new Tong(PsiLambda, AlphaPsi);
 
     Iron* NuAlpha = new Iron();
     Qiao* NuBeta = new Qiao(NuAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), NuAlpha->Mu);
@@ -48,6 +51,7 @@ int main()
     Affinity* AlphaNu = Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Delta(NuOmicron->Mu->Nu, Alpha->Tau->Mu->Eta->Upsilon->Upsilon);
     //
     Song* NuLambda = new Song(NuOmicron, AlphaNu);
+    Tong* NuXi = new Tong(NuLambda, AlphaNu);
 
     Iron* EtaAlpha = new Iron();
     Qiao* EtaBeta = new Qiao(EtaAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), EtaAlpha->Mu);
@@ -57,9 +61,10 @@ int main()
     Affinity* AlphaEta = Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Delta(EtaOmicron->Mu->Nu, Alpha->Tau->Mu->Eta->Upsilon->Upsilon);
     //
     Song* EtaLambda = new Song(EtaOmicron, AlphaEta);
+    Tong* EtaXi = new Tong(EtaLambda, AlphaEta);
 
-    vector<Affinity*> MuAffinities = MuLambda->Affinities();
-    vector<Affinity*> RhoAffinities = RhoLambda->Affinities();
+    vector<Affinity*> MuAffinities = MuXi->Affinities();
+    vector<Affinity*> RhoAffinities = RhoXi->Affinities();
 
     for (int i = 0; i < MuAffinities.size(); i++) {
         string A = "MuAffinities["s + to_string(i) + "]";

@@ -6,6 +6,18 @@ using namespace std;
 namespace Dysnomia {
 	class Tong : public Life {
 	public:
+        Tong(Song* Alpha, Affinity* Xi) {
+            Mu = Alpha;
+            Rho = new Eun(Mu->Tau);
+            Psi = new Eun(Rho->Sigma);
+            Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Beta(), Xi);
+            Eta = new Tin(Nu->Kappa(Mu->Psi));
+            Sigma = new Qiao(Nu);
+            Upsilon = new Song(Rho);
+            Tau = new Aluminium(Xi);
+            Theta = new Song(Psi);
+        }
+
         Tong() {
             Mu = new Song();
             Rho = new Eun(Mu->Tau);
