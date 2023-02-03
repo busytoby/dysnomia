@@ -23,6 +23,10 @@ int main()
     Song* MuLambda = new Song(MuOmicron, AlphaMu);
     Tong* MuXi = new Tong(MuLambda, AlphaMu);
     Nat* MuDelta = new Nat(MuXi, MuOmicron);
+    // //
+    pair<Eun*, Iron*> AlphaSigma = Alpha->Sigma->Mu->Nu->Pi();
+    // //
+    Tung* MuPi = new Tung(MuDelta, AlphaSigma.first, AlphaSigma.first->Psi);
 
     Iron* RhoAlpha = new Iron();
     Qiao* RhoBeta = new Qiao(RhoAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), RhoAlpha->Mu);
@@ -34,6 +38,7 @@ int main()
     Song* RhoLambda = new Song(RhoOmicron, AlphaRho);
     Tong* RhoXi = new Tong(RhoLambda, AlphaRho);
     Nat* RhoDelta = new Nat(RhoXi, RhoOmicron);
+    Tung* RhoPi = new Tung(RhoDelta, AlphaSigma.first, AlphaSigma.first->Psi);
 
     Iron* PsiAlpha = new Iron();
     Qiao* PsiBeta = new Qiao(PsiAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), PsiAlpha->Mu);
@@ -45,6 +50,7 @@ int main()
     Song* PsiLambda = new Song(PsiOmicron, AlphaPsi);
     Tong* PsiXi = new Tong(PsiLambda, AlphaPsi);
     Nat* PsiDelta = new Nat(PsiXi, PsiOmicron);
+    Tung* PsiPi = new Tung(PsiDelta, AlphaSigma.first, AlphaSigma.first->Psi);
 
     Iron* NuAlpha = new Iron();
     Qiao* NuBeta = new Qiao(NuAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), NuAlpha->Mu);
@@ -56,6 +62,7 @@ int main()
     Song* NuLambda = new Song(NuOmicron, AlphaNu);
     Tong* NuXi = new Tong(NuLambda, AlphaNu);
     Nat* NuDelta = new Nat(NuXi, NuOmicron);
+    Tung* NuPi = new Tung(NuDelta, AlphaSigma.first, AlphaSigma.first->Psi);
 
     Iron* EtaAlpha = new Iron();
     Qiao* EtaBeta = new Qiao(EtaAlpha, Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Beta(), Alpha->Tau->Mu->Eta->Upsilon->Mu->Upsilon->Omicron(), EtaAlpha->Mu);
@@ -67,9 +74,11 @@ int main()
     Song* EtaLambda = new Song(EtaOmicron, AlphaEta);
     Tong* EtaXi = new Tong(EtaLambda, AlphaEta);
     Nat* EtaDelta = new Nat(EtaXi, EtaOmicron);
+    Tung* EtaPi = new Tung(EtaDelta, AlphaSigma.first, AlphaSigma.first->Psi);
 
-    vector<Affinity*> MuAffinities = MuDelta->Affinities();
-    vector<Affinity*> RhoAffinities = RhoDelta->Affinities();
+    /* Too Many Matches By Here
+    vector<Affinity*> MuAffinities = MuPi->Affinities();
+    vector<Affinity*> RhoAffinities = RhoPi->Affinities();
 
     for (int i = 0; i < MuAffinities.size(); i++) {
         string A = "MuAffinities["s + to_string(i) + "]";
@@ -77,6 +86,7 @@ int main()
     }
 
     cout << "Set Break Point On Line 81 And Search In Debugger For Matched Pair Values\n";
+    */
 
     int i = 99; 
 }
