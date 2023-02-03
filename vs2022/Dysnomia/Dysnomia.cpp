@@ -71,7 +71,7 @@ int main()
         MuAffinities[i]->Compare(RhoAffinities[i], A);
     }
 
-    cout << "Set Break Point On Line 49 And Search In Debugger For Matched Pair Values\n";
+    cout << "Set Break Point On Line 74 And Search In Debugger For Matched Pair Values\n";
 
     int i = 99; 
 }
