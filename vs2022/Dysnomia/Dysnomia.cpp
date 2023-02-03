@@ -74,11 +74,11 @@ int main()
     Song* EtaLambda = new Song(EtaOmicron, AlphaEta);
     Tong* EtaXi = new Tong(EtaLambda, AlphaEta);
     Nat* EtaDelta = new Nat(EtaXi, EtaOmicron);
-    Tung* EtaPi = new Tung(EtaDelta, AlphaSigma.first, AlphaSigma.first->Psi);
+    Tung* EtaPi = new Tung(EtaDelta, AlphaSigma.first, new Qiao(AlphaSigma.second));
 
-    /* Too Many Matches By Here
+    ///* Too Many Matches By Here
     vector<Affinity*> MuAffinities = MuPi->Affinities();
-    vector<Affinity*> RhoAffinities = RhoPi->Affinities();
+    vector<Affinity*> RhoAffinities = EtaPi->Affinities();
 
     for (int i = 0; i < MuAffinities.size(); i++) {
         string A = "MuAffinities["s + to_string(i) + "]";
@@ -86,7 +86,7 @@ int main()
     }
 
     cout << "Set Break Point On Line 81 And Search In Debugger For Matched Pair Values\n";
-    */
+    //*/
 
     int i = 99; 
 }
