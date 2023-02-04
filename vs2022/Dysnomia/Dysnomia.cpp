@@ -14,6 +14,7 @@ int main()
     Dong* Mu = new Dong();
     Huo* Rho = new Huo(Mu->Theta, Mu->Eta->Tau, Mu->Psi->Theta->Rho, Mu->Upsilon->Rho, Mu->Tau->Rho, Mu->Nu->Theta, Mu->Tau);
     Rong* Psi = new Rong(Rho, Mu->Sigma->Theta->Rho);
+    Beit* Nu = new Beit(Psi);
 
     int i = 99; 
 }
