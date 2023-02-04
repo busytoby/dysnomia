@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Dong* Mu = new Dong();
-    Xiao* Rho = new Xiao(Mu->Tau->Rho);
+    Huo* Rho = new Huo(Mu->Theta, Mu->Eta->Tau, Mu->Psi->Theta->Rho, Mu->Upsilon->Rho, Mu->Tau->Rho, Mu->Nu->Theta, Mu->Tau);
 
     int i = 99; 
 }
