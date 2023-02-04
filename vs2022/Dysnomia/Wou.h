@@ -33,6 +33,14 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
+        Wou(Beit* Beta) {
+            Mu = Beta;
+            pair<Eun*, Eun*> Five = Mu->Mu->Rho->Upsilon->Kappa();
+            Rho = Five.first;
+            Psi = Five.second;
+            Nu = new Song(Psi);
+        }
+
         Wou() {
             Mu = new Beit();
             pair<Eun*, Eun*> Five = Mu->Mu->Rho->Upsilon->Kappa();
