@@ -156,6 +156,7 @@
     <ClInclude Include="20_Xun.h" />
     <ClInclude Include="21_Chu.h" />
     <ClInclude Include="22_Chi.h" />
+    <ClInclude Include="24_Cie.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Wou.h" />
     <ClInclude Include="Affinity.h" />
