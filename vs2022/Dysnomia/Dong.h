@@ -19,14 +19,14 @@ namespace Dysnomia {
             Beta->Gamma++;
             Mu = Beta;
 
-            pair<Eun*, Iron*> Beta = Mu->Sigma->Mu->Nu->Pi();
+            pair<Eun*, Iron*> Omicron = Mu->Sigma->Mu->Nu->Pi();
             Rho = Mu->Tau->Mu->Mu->Rho->Tau->Pi();
 
-            Psi = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Beta.first, Beta.first->Psi, Rho, Mu->Sigma->Mu->Nu);
-            Nu = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Beta.first, new Qiao(Beta.second), Rho, Psi->Theta->Rho);
-            Eta = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Beta.first, Beta.first->Psi, Rho, Nu->Theta->Rho);
-            Sigma = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Beta.first, Beta.first->Psi, Rho, Eta->Theta->Rho);
-            Upsilon = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Beta.first, new Qiao(Beta.second), Rho, Sigma->Theta->Rho);
+            Psi = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Omicron.first, Omicron.first->Psi, Rho, Mu->Sigma->Mu->Nu);
+            Nu = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Omicron.first, new Qiao(Omicron.second), Rho, Psi->Theta->Rho);
+            Eta = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Omicron.first, Omicron.first->Psi, Rho, Nu->Theta->Rho);
+            Sigma = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Omicron.first, Omicron.first->Psi, Rho, Eta->Theta->Rho);
+            Upsilon = new Cie(Mu->Tau->Mu->Eta->Upsilon->Mu->Upsilon, Mu->Tau->Mu->Eta->Upsilon->Upsilon, Omicron.first, new Qiao(Omicron.second), Rho, Sigma->Theta->Rho);
 
             Tau = new Fao(Upsilon->Theta, Mu->Tau->Mu->Mu->Rho->Tau->Psi);
             Theta = new Feng(Tau);
