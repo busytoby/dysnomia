@@ -15,8 +15,9 @@ namespace Dysnomia {
         Feng* Theta;
         int Gamma = 1;
 
-        Dong() {
-            Mu = new Host();
+        Dong(Host* Beta) {
+            Beta->Gamma++;
+            Mu = Beta;
 
             pair<Eun*, Iron*> Beta = Mu->Sigma->Mu->Nu->Pi();
             Rho = Mu->Tau->Mu->Mu->Rho->Tau->Pi();

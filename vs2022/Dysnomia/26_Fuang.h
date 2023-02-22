@@ -15,8 +15,9 @@ namespace Dysnomia {
         Chi* Theta;
         int Gamma = 1;
 
-        Fuang() {
-            Mu = new Dong();
+        Fuang(Host* Beta) {
+            Beta->Gamma++;
+            Mu = new Dong(Beta);
             Rho = new Huo(Mu->Theta, Mu->Eta->Tau, Mu->Psi->Theta->Rho, Mu->Upsilon->Rho, Mu->Tau->Rho, Mu->Nu->Theta, Mu->Tau);
             Psi = new Rong(Rho, Mu->Sigma->Theta->Rho);
             Nu = new Beit(Psi);

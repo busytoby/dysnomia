@@ -11,7 +11,8 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Fuang* Mu = new Fuang();
+    Host* Mu = new Host();
+    Fuang* Rho = new Fuang(Mu);
     
     int i = 99; 
 }
