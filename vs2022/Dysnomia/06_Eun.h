@@ -9,26 +9,26 @@ namespace Dysnomia {
 		Tin* Mu;
 		Iron* Rho;
 		Qiao* Psi;
-		Dynamic* Nu;
+		Fa* Nu;
 		Aluminium* Eta;
 		Iron* Sigma;
-		Affinity* Upsilon;
+		Faung* Upsilon;
 		Qiao* Tau;
-		Affinity* Theta;
+		Faung* Theta;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() {
-			vector<Affinity*> Alpha(Mu->Affinities());
-			vector<Affinity*> Beta = Rho->Affinities();
+		vector<Faung*> Affinities() {
+			vector<Faung*> Alpha(Mu->Affinities());
+			vector<Faung*> Beta = Rho->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-			vector<Affinity*> Iota = Psi->Affinities();
+			vector<Faung*> Iota = Psi->Affinities();
 			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-			vector<Affinity*> Omicron = Eta->Affinities();
+			vector<Faung*> Omicron = Eta->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-			vector<Affinity*> Lambda = Sigma->Affinities();
+			vector<Faung*> Lambda = Sigma->Affinities();
 			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
 			Alpha.push_back(Upsilon);
-			vector<Affinity*> Xi = Tau->Affinities();
+			vector<Faung*> Xi = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
 			Alpha.push_back(Theta);
 			return Alpha;

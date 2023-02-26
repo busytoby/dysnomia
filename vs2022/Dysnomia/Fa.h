@@ -4,7 +4,7 @@
 using namespace std;
 
 namespace Dysnomia {
-	class Dynamic
+	class Fa
 	{
 	private:
 		void Initialize();
@@ -16,8 +16,8 @@ namespace Dysnomia {
 		short Nu;
 		int Gamma = 1;
 
-		Dynamic();
-		Dynamic(const Dynamic& Copier);
+		Fa();
+		Fa(const Fa& Copier);
 		void Tune();
 		void Fuse(Int64, Int64, Int64);
 		Int64 Avail(Int64);
@@ -29,7 +29,7 @@ namespace Dysnomia {
 		void Bond();
 		void Adduct(Int64);
 		void Open();
-		bool ManifoldCompare(Dynamic*);
+		bool ManifoldCompare(Fa*);
 		/*
 		Int64 Charge(Int64, bool);
 		Int64 Induce(Int64, bool);

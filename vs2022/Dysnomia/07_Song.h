@@ -7,7 +7,7 @@ namespace Dysnomia {
 	class Song {
 	public:
 		Eun* Mu;
-		Affinity* Rho;
+		Faung* Rho;
 		Aluminium* Psi;
 		Qiao* Nu;
 		Sulphur* Eta;
@@ -17,22 +17,22 @@ namespace Dysnomia {
 		Qiao* Theta;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() {
-			vector<Affinity*> Alpha(Mu->Affinities());
+		vector<Faung*> Affinities() {
+			vector<Faung*> Alpha(Mu->Affinities());
 			Alpha.push_back(Rho);
-			vector<Affinity*> Beta = Psi->Affinities();
+			vector<Faung*> Beta = Psi->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-			vector<Affinity*> Iota = Nu->Affinities();
+			vector<Faung*> Iota = Nu->Affinities();
 			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-			vector<Affinity*> Omicron = Eta->Affinities();
+			vector<Faung*> Omicron = Eta->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-			vector<Affinity*> Lambda = Sigma->Affinities();
+			vector<Faung*> Lambda = Sigma->Affinities();
 			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-			vector<Affinity*> Xi = Upsilon->Affinities();
+			vector<Faung*> Xi = Upsilon->Affinities();
 			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
-			vector<Affinity*> Delta = Tau->Affinities();
+			vector<Faung*> Delta = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
-			vector<Affinity*> Pi = Theta->Affinities();
+			vector<Faung*> Pi = Theta->Affinities();
 			Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
 			return Alpha;
 		}
@@ -49,7 +49,7 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 
-		Song(Eun* Lambda, Affinity* Omicron) {
+		Song(Eun* Lambda, Faung* Omicron) {
 			Lambda->Gamma++;
 			Omicron->Rod->Gamma++;
 			Omicron->Cone->Gamma++;

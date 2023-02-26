@@ -1,14 +1,14 @@
-#include "Dynamic.h"
+#include "Fa.h"
 
 namespace Dysnomia {
-	Dynamic::Dynamic() {
+	Fa::Fa() {
 		Tau = 0;
 		Initialize();
 		Seed();
 		Tune();
 	}
 
-	Dynamic::Dynamic(const Dynamic& Copier) {
+	Fa::Fa(const Fa& Copier) {
 		Base = Copier.Base;
 		if (Base < 0) throw 1;
 		Secret = Copier.Secret;
@@ -25,7 +25,7 @@ namespace Dysnomia {
 	}
 
 
-	void Dynamic::Initialize()
+	void Fa::Initialize()
 	{
 		Base = Secret = Signal = Channel = Pole = 0;
 		Identity = Foundation = Element = 0;
@@ -36,7 +36,7 @@ namespace Dysnomia {
 		Nu = 0;
 	}
 
-	void Dynamic::Seed()
+	void Fa::Seed()
 	{
 		Base = Math::Random();
 		if (Base < 0) Base = Base * -1;
@@ -45,43 +45,43 @@ namespace Dysnomia {
 		if (Signal < 0) Signal = Signal * -1;
 	}
 
-	void Dynamic::Tune()
+	void Fa::Tune()
 	{
 		Channel = Math::ModPow(Base, Signal, Math::Prime);
 		if (Channel < 0) throw 2;
 	}
 
-	void Dynamic::Fuse(Int64 Rho, Int64 Upsilon, Int64 Ohm) {
+	void Fa::Fuse(Int64 Rho, Int64 Upsilon, Int64 Ohm) {
 		Base = Upsilon;
 		if (Base < 0) throw 3;
 		Secret = Ohm;
 		Signal = Rho;
 	}
 
-	Int64 Dynamic::Avail(Int64 Xi)
+	Int64 Fa::Avail(Int64 Xi)
 	{
 		return Math::ModPow(Xi, Secret, Math::Prime);
 	}
 
-	void Dynamic::Form(Int64 Chi)
+	void Fa::Form(Int64 Chi)
 	{
 		Base = Math::ModPow(Chi, Secret, Math::Prime);
 		if (Base < 0) Base = Base * -1;
 		Tune();
 	}
 
-	void Dynamic::Polarize()
+	void Fa::Polarize()
 	{
 		Pole = Math::ModPow(Base, Secret, Math::Prime);
 	}
 
-	void Dynamic::Conjugate(Int64* Chi)
+	void Fa::Conjugate(Int64* Chi)
 	{
 		Coordinate = Math::ModPow(*Chi, Secret, Math::Prime);
 		*Chi = 0;
 	}
 
-	void Dynamic::Conify()
+	void Fa::Conify()
 	{
 		if (!Nu == 0) throw 4;
 		Identity = Math::Random();
@@ -91,7 +91,7 @@ namespace Dysnomia {
 		Nu = 1;
 	}
 
-	Int64 Dynamic::Saturate(Int64 Epsilon, Int64 Theta)
+	Int64 Fa::Saturate(Int64 Epsilon, Int64 Theta)
 	{
 		if (Nu == 0)
 		{
@@ -116,24 +116,24 @@ namespace Dysnomia {
 		return Eta;
 	}
 
-	void Dynamic::Bond()
+	void Fa::Bond()
 	{
 		Dynamo = Math::ModPow(Base, Signal, Element);
 		Pole = 0;
 	}
 
-	void Dynamic::Adduct(Int64 Phi)
+	void Fa::Adduct(Int64 Phi)
 	{
 		Manifold = Math::ModPow(Phi, Signal, Element);
 	}
 
-	void Dynamic::Open()
+	void Fa::Open()
 	{
 		Ring = Math::ModPow(Coordinate, Manifold, Element);
 		Barn = Math::ModPow(Ring, Manifold, Element);
 	}
 
-	bool Dynamic::ManifoldCompare(Dynamic* Rod)
+	bool Fa::ManifoldCompare(Fa* Rod)
 	{
 		if (Secret == Rod->Secret || Signal == Rod->Signal || Channel == Rod->Channel ||
 			!Pole == 0 || !Rod->Pole == 0 || Dynamo == Rod->Dynamo) {
@@ -153,21 +153,21 @@ namespace Dysnomia {
 	}
 
 	/*
-	Int64 Dynamic::Charge(Int64 Psi, bool Decay)
+	Int64 Fa::Charge(Int64 Psi, bool Decay)
 	{
 		Int64 _barn = Math::ModPow(Barn, Psi, Ring);
 		if (Decay == false) Barn = _barn;
 		return _barn;
 	}
 
-	Int64 Dynamic::Induce(Int64 Sigma, bool Decay)
+	Int64 Fa::Induce(Int64 Sigma, bool Decay)
 	{
 		Int64 _ring = Math::ModPow(Sigma, Manifold, Ring);
 		if (Decay == false) Ring = _ring;
 		return _ring;
 	}
 
-	Int64 Dynamic::Torque(Int64 Sigma, bool Critical)
+	Int64 Fa::Torque(Int64 Sigma, bool Critical)
 	{
 		Int64 _channel;
 		if (Critical)
@@ -177,17 +177,17 @@ namespace Dysnomia {
 		return Math::ModPow(Sigma, Element, _channel);
 	}
 
-	Int64 Dynamic::Amplify(Int64 Upsilon, bool Critical)
+	Int64 Fa::Amplify(Int64 Upsilon, bool Critical)
 	{
 		return Torque(Upsilon, Critical);
 	}
 
-	Int64 Dynamic::Sustain(Int64 Ohm, bool Critical)
+	Int64 Fa::Sustain(Int64 Ohm, bool Critical)
 	{
 		return Torque(Ohm, Critical);
 	}
 
-	void Dynamic::React(Int64 Pi, Int64 Theta)
+	void Fa::React(Int64 Pi, Int64 Theta)
 	{
 		Eta = Math::ModPow(Pi, Channel, Theta);
 		Nu = Math::ModPow(Pi, Theta, Channel);

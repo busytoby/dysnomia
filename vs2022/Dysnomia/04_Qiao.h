@@ -7,29 +7,29 @@ namespace Dysnomia {
 	class Qiao {
 	public:
 		Iron* Mu;
-		Affinity* Rho;
-		Affinity* Psi;
-		Affinity* Nu;
+		Faung* Rho;
+		Faung* Psi;
+		Faung* Nu;
 		Sulphur* Eta;
 		Iron* Sigma;
-		Affinity* Upsilon;
+		Faung* Upsilon;
 		Aluminium* Tau;
 		Iron* Theta;
 		int Gamma = 1;
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
             Alpha.push_back(Rho);
             Alpha.push_back(Psi);
             Alpha.push_back(Nu);
-            vector<Affinity*> Beta = Eta->Affinities();
+            vector<Faung*> Beta = Eta->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            vector<Affinity*> Iota = Sigma->Affinities();
+            vector<Faung*> Iota = Sigma->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
             Alpha.push_back(Upsilon);
-            vector<Affinity*> Omicron = Tau->Affinities();
+            vector<Faung*> Omicron = Tau->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Theta->Affinities();
+            vector<Faung*> Lambda = Theta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
             return Alpha;
         }
@@ -46,7 +46,7 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 		
-        Qiao(Iron* Beta, Affinity* Iota, Affinity* Omicron, Sulphur* Lambda) {
+        Qiao(Iron* Beta, Faung* Iota, Faung* Omicron, Sulphur* Lambda) {
             Beta->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -63,7 +63,7 @@ namespace Dysnomia {
             Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
-        Qiao(Iron* Omega, Affinity* Pi) {
+        Qiao(Iron* Omega, Faung* Pi) {
             Omega->Gamma++;
             Pi->Rod->Gamma++;
             Pi->Cone->Gamma++;

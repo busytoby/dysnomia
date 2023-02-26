@@ -17,21 +17,21 @@ namespace Dysnomia {
 		Tin* Tau;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() {
-			vector<Affinity*> Alpha(Mu->Affinities());
-			vector<Affinity*> Beta = Rho->Affinities();
+		vector<Faung*> Affinities() {
+			vector<Faung*> Alpha(Mu->Affinities());
+			vector<Faung*> Beta = Rho->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-			vector<Affinity*> Iota = Psi->Affinities();
+			vector<Faung*> Iota = Psi->Affinities();
 			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-			vector<Affinity*> Omicron = Nu->Affinities();
+			vector<Faung*> Omicron = Nu->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-			vector<Affinity*> Lambda = Eta->Affinities();
+			vector<Faung*> Lambda = Eta->Affinities();
 			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-			vector<Affinity*> Xi = Sigma->Affinities();
+			vector<Faung*> Xi = Sigma->Affinities();
 			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
-			vector<Affinity*> Delta = Upsilon->Affinities();
+			vector<Faung*> Delta = Upsilon->Affinities();
 			Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
-			vector<Affinity*> Pi = Tau->Affinities();
+			vector<Faung*> Pi = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
 			return Alpha;
 		}

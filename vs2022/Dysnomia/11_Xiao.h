@@ -9,29 +9,29 @@ namespace Dysnomia {
 		Tung* Mu;
 		Song* Rho;
 		Aluminium* Psi;
-		Affinity* Nu;
-		Affinity* Eta;
+		Faung* Nu;
+		Faung* Eta;
 		Sulphur* Sigma;
 		Qiao* Upsilon;
 		Eun* Tau;
 		Iron* Theta;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() {
-			vector<Affinity*> Alpha(Mu->Affinities());
-			vector<Affinity*> Beta = Rho->Affinities();
+		vector<Faung*> Affinities() {
+			vector<Faung*> Alpha(Mu->Affinities());
+			vector<Faung*> Beta = Rho->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-			vector<Affinity*> Iota = Psi->Affinities();
+			vector<Faung*> Iota = Psi->Affinities();
 			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
 			Alpha.push_back(Nu);
 			Alpha.push_back(Eta);
-			vector<Affinity*> Xi = Sigma->Affinities();
+			vector<Faung*> Xi = Sigma->Affinities();
 			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
-			vector<Affinity*> Delta = Upsilon->Affinities();
+			vector<Faung*> Delta = Upsilon->Affinities();
 			Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
-			vector<Affinity*> Pi = Tau->Affinities();
+			vector<Faung*> Pi = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
-			vector<Affinity*> Chi = Theta->Affinities();
+			vector<Faung*> Chi = Theta->Affinities();
 			Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
 			return Alpha;
 		}
@@ -53,8 +53,8 @@ namespace Dysnomia {
 			Mu = Beta;
 			Rho = new Song();
 			Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
-			Nu = new Affinity(Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Ring);
-			Eta = new Affinity(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Nu = new Faung(Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Ring);
+			Eta = new Faung(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
 			Sigma = new Sulphur(Eta);
 			Upsilon = new Qiao(Rho->Tau);
 			pair<Eun*, Iron*> Siao = Pi();

@@ -17,11 +17,11 @@ namespace Dysnomia {
             Nu = new Eun(Psi->Theta);
         }
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
-            vector<Affinity*> Omicron = Psi->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
+            vector<Faung*> Omicron = Psi->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Nu->Affinities();
+            vector<Faung*> Lambda = Nu->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
             return Alpha;
         }

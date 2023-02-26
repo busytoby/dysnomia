@@ -12,13 +12,13 @@ namespace Dysnomia {
         Tin* Upsilon;
         int Gamma = 1;
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
-            vector<Affinity*> Omicron = Nu->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
+            vector<Faung*> Omicron = Nu->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Eta->Affinities();
+            vector<Faung*> Lambda = Eta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-            vector<Affinity*> Delta = Upsilon->Affinities();
+            vector<Faung*> Delta = Upsilon->Affinities();
             Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
             return Alpha;
         }

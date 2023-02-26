@@ -20,13 +20,13 @@ namespace Dysnomia {
             Theta = new Qiao(Rho->Psi->Mu);
         }
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Rho->Affinities());
-            vector<Affinity*> Omicron = Sigma->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Rho->Affinities());
+            vector<Faung*> Omicron = Sigma->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Tau->Affinities();
+            vector<Faung*> Lambda = Tau->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-            vector<Affinity*> Pi = Theta->Affinities();
+            vector<Faung*> Pi = Theta->Affinities();
             Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
             return Alpha;
         }

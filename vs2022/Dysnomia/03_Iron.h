@@ -9,26 +9,26 @@ namespace Dysnomia {
 		Sulphur* Mu;
 		Aluminium* Rho;
 		Aluminium* Psi;
-		Affinity* Nu;
-		Affinity* Eta;
-		Affinity* Sigma;
+		Faung* Nu;
+		Faung* Eta;
+		Faung* Sigma;
 		Sulphur* Upsilon;
-		Dynamic* Tau;
+		Fa* Tau;
 		Aluminium* Theta;
 		int Gamma = 1;
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
-            vector<Affinity*> Beta = Rho->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
+            vector<Faung*> Beta = Rho->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            vector<Affinity*> Iota = Psi->Affinities();
+            vector<Faung*> Iota = Psi->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
             Alpha.push_back(Nu);
             Alpha.push_back(Eta);
             Alpha.push_back(Sigma);
-            vector<Affinity*> Omicron = Upsilon->Affinities();
+            vector<Faung*> Omicron = Upsilon->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Theta->Affinities();
+            vector<Faung*> Lambda = Theta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
             return Alpha;
         }
@@ -46,7 +46,7 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 		
-        Iron(Sulphur* Beta, Affinity* Iota, Affinity* Omicron, Affinity* Lambda, Affinity* Xi) {
+        Iron(Sulphur* Beta, Faung* Iota, Faung* Omicron, Faung* Lambda, Faung* Xi) {
             Beta->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -67,7 +67,7 @@ namespace Dysnomia {
             Theta = new Aluminium(Tau, Upsilon->Mu->Theta->Cone->Base, Upsilon->Mu->Theta->Rod->Signal, Upsilon->Mu->Theta->Cone->Signal, Upsilon->Mu->Theta->Cone->Tau);
         }
 
-        Iron(Sulphur* Xi, Affinity* Iota, Affinity* Lambda) {
+        Iron(Sulphur* Xi, Faung* Iota, Faung* Lambda) {
             Xi->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -101,28 +101,28 @@ namespace Dysnomia {
         }
 
         // SO(2) Versor 1
-        Affinity* Beta() {
-            return new Affinity(Rho->Pi(), Psi->Pi());
+        Faung* Beta() {
+            return new Faung(Rho->Pi(), Psi->Pi());
         }
 
         // SO(2) Versor 2
-        Affinity* Omicron() {
-            return new Affinity(Psi->Pi(), Rho->Pi());
+        Faung* Omicron() {
+            return new Faung(Psi->Pi(), Rho->Pi());
         }
 
         // SO(3) Versors
-        Affinity* Delta(Affinity* Pi, Affinity* Alpha) {
-            return new Affinity(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+        Faung* Delta(Faung* Pi, Faung* Alpha) {
+            return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
         }
 
         // SO(4) Versors
-        Affinity* Kappa(Aluminium* Iota) {
-            return new Affinity(Iota->Pi(), Rho->Pi());
+        Faung* Kappa(Aluminium* Iota) {
+            return new Faung(Iota->Pi(), Rho->Pi());
         }
 
         // SO(7) Versors
-        Affinity* Omega(Affinity* Alpha, Affinity* Pi) {
-            return new Affinity(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+        Faung* Omega(Faung* Alpha, Faung* Pi) {
+            return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
         }
 	};
 }

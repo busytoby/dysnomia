@@ -8,29 +8,29 @@ namespace Dysnomia {
 	public:
 		Qiao* Mu;
 		Qiao* Rho;
-		Affinity* Psi;
-		Affinity* Nu;
-		Affinity* Eta;
+		Faung* Psi;
+		Faung* Nu;
+		Faung* Eta;
 		Sulphur* Sigma;
 		Iron* Upsilon;
 		Iron* Tau;
 		Iron* Theta;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() {
-			vector<Affinity*> Alpha(Mu->Affinities());
-			vector<Affinity*> Beta = Rho->Affinities();
+		vector<Faung*> Affinities() {
+			vector<Faung*> Alpha(Mu->Affinities());
+			vector<Faung*> Beta = Rho->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
 			Alpha.push_back(Psi);
 			Alpha.push_back(Nu);
 			Alpha.push_back(Eta);
-			vector<Affinity*> Iota = Sigma->Affinities();
+			vector<Faung*> Iota = Sigma->Affinities();
 			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-			vector<Affinity*> Omicron = Upsilon->Affinities();
+			vector<Faung*> Omicron = Upsilon->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-			vector<Affinity*> Lambda = Tau->Affinities();
+			vector<Faung*> Lambda = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-			vector<Affinity*> Xi = Theta->Affinities();
+			vector<Faung*> Xi = Theta->Affinities();
 			Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
 			return Alpha;
 		}
@@ -47,7 +47,7 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 		
-		Tin(Affinity* Beta) {
+		Tin(Faung* Beta) {
 			Beta->Rod->Gamma++;
 			Beta->Cone->Gamma++;
 			Mu = new Qiao();

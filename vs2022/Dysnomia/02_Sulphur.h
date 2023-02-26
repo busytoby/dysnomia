@@ -8,23 +8,23 @@ namespace Dysnomia {
 	class Sulphur {
 	public:
 		Aluminium* Mu;
-		Dynamic* Rho;
+		Fa* Rho;
 		Aluminium* Psi;
-		Affinity* Nu;
-		Dynamic* Eta;
-		Affinity* Sigma;
-		Dynamic* Upsilon;
+		Faung* Nu;
+		Fa* Eta;
+		Faung* Sigma;
+		Fa* Upsilon;
 		Aluminium* Tau;
-		Dynamic* Theta;
+		Fa* Theta;
 		int Gamma = 1;
 
-		vector<Affinity*> Affinities() { 
-			vector<Affinity*> Alpha(Mu->Affinities());
-			vector<Affinity*> Beta = Psi->Affinities();
+		vector<Faung*> Affinities() { 
+			vector<Faung*> Alpha(Mu->Affinities());
+			vector<Faung*> Beta = Psi->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
 			Alpha.push_back(Nu);
 			Alpha.push_back(Sigma);
-			vector<Affinity*> Omicron = Tau->Affinities();
+			vector<Faung*> Omicron = Tau->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
 			return Alpha;
 		}
@@ -42,15 +42,15 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 		
-		Sulphur(Affinity* Beta) {
+		Sulphur(Faung* Beta) {
 			Beta->Rod->Gamma++;
 			Beta->Cone->Gamma++;
 			Mu = new Aluminium(Beta);
 			Rho = Mu->Pi();
 			Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
-			Nu = new Affinity(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
-			Eta = new Dynamic();
-			Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Nu = new Faung(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+			Eta = new Fa();
+			Sigma = new Faung(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
 			Upsilon = Psi->Pi();
 			Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
 			Theta = Tau->Pi();
@@ -60,9 +60,9 @@ namespace Dysnomia {
 			Mu = new Aluminium();
 			Rho = Mu->Pi();
 			Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
-			Nu = new Affinity(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
-			Eta = new Dynamic();
-			Sigma = new Affinity(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Nu = new Faung(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+			Eta = new Fa();
+			Sigma = new Faung(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
 			Upsilon = Psi->Pi();
 			Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
 			Theta = Tau->Pi();

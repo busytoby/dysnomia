@@ -6,7 +6,7 @@ using namespace std;
 namespace Dysnomia {
 	class Tong : public Life {
 	public:
-        Tong(Song* Alpha, Affinity* Xi) {
+        Tong(Song* Alpha, Faung* Xi) {
             Mu = Alpha;
             Rho = new Eun(Mu->Tau);
             Psi = new Eun(Rho->Sigma);

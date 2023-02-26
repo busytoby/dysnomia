@@ -15,13 +15,13 @@ namespace Dysnomia {
         int Lambda = 0;
         mutex Kappa;
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
-            vector<Affinity*> Beta = Rho->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
+            vector<Faung*> Beta = Rho->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            vector<Affinity*> Iota = Psi->Affinities();
+            vector<Faung*> Iota = Psi->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-            vector<Affinity*> Omicron = Nu->Affinities();
+            vector<Faung*> Omicron = Nu->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
             return Alpha;
         }
@@ -49,14 +49,14 @@ namespace Dysnomia {
             Nu = new Song(Psi);
         }
 
-        Affinity* Omega() {
+        Faung* Omega() {
             lock_guard<mutex> K(Kappa);
             if (Lambda != 0) return nullptr;
             Lambda = 1;
             return Mu->Eta->Sigma->Kappa(Mu->Eta->Eta->Tau);
         }
 
-        Sulphur* Pi(Affinity* Beta) {
+        Sulphur* Pi(Faung* Beta) {
             lock_guard<mutex> K(Kappa);
             if (Lambda != 0) throw 201;
             Lambda = 1;
@@ -65,7 +65,7 @@ namespace Dysnomia {
             return new Sulphur(Beta);
         }
 
-        Iron* Tau(Sulphur* Beta, Affinity* Iota, Affinity* Omicron) {
+        Iron* Tau(Sulphur* Beta, Faung* Iota, Faung* Omicron) {
             lock_guard<mutex> K(Kappa);
             if (Lambda != 1) throw 202;
             Lambda = 2;
@@ -77,7 +77,7 @@ namespace Dysnomia {
             return new Iron(Beta, Iota, Omicron);
         }
 
-        Qiao* Theta(Iron* Beta, Affinity* Iota) {
+        Qiao* Theta(Iron* Beta, Faung* Iota) {
             lock_guard<mutex> K(Kappa);
             if (Lambda != 2) throw 203;
             Lambda = 3;

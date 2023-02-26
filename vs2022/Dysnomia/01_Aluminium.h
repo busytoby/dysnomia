@@ -1,25 +1,25 @@
 #pragma once
 #include <map>
 #include <vector>
-#include "Affinity.h"
+#include "Faung.h"
 
 using namespace std;
 
 namespace Dysnomia {
 	class Aluminium {
 	public:
-		Dynamic* Mu;
-		Affinity* Rho;
-		Affinity* Psi;
-		Dynamic* Nu;
-		Affinity* Eta;
-		Dynamic* Sigma;
-		Affinity* Upsilon;
-		Dynamic* Tau;
-		Affinity* Theta;
+		Fa* Mu;
+		Faung* Rho;
+		Faung* Psi;
+		Fa* Nu;
+		Faung* Eta;
+		Fa* Sigma;
+		Faung* Upsilon;
+		Fa* Tau;
+		Faung* Theta;
 		int Gamma = 1;
 
-        vector<Affinity*> Affinities() { return vector<Affinity*>({ Rho, Psi, Eta, Upsilon, Theta }); }
+        vector<Faung*> Affinities() { return vector<Faung*>({ Rho, Psi, Eta, Upsilon, Theta }); }
 
 		~Aluminium() { 
 			if (--Gamma > 0) return;
@@ -34,54 +34,54 @@ namespace Dysnomia {
 			if(Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 
-        Aluminium(Affinity* Pi) {
+        Aluminium(Faung* Pi) {
             Pi->Rod->Gamma++;
             Pi->Cone->Gamma++;
-            Mu = new Dynamic();
+            Mu = new Fa();
             Rho = Pi;
-            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
-            Nu = new Dynamic();
-            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
-            Sigma = new Dynamic();
-            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
-            Tau = new Dynamic();
+            Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Fa();
+            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Fa();
+            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Fa();
             Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
-        Aluminium(Dynamic* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
+        Aluminium(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
             Beta->Gamma++;
-            Mu = new Dynamic();
-            Rho = new Affinity(Beta, Iota, Omicron, Lambda, Xi);
-            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
-            Nu = new Dynamic();
-            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
-            Sigma = new Dynamic();
-            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
-            Tau = new Dynamic();
+            Mu = new Fa();
+            Rho = new Faung(Beta, Iota, Omicron, Lambda, Xi);
+            Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Fa();
+            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Fa();
+            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Fa();
             Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
         Aluminium() {
-            Mu = new Dynamic();
-            Rho = new Affinity();
-            Psi = new Affinity(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
-            Nu = new Dynamic();
-            Eta = new Affinity(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
-            Sigma = new Dynamic();
-            Upsilon = new Affinity(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
-            Tau = new Dynamic();
+            Mu = new Fa();
+            Rho = new Faung();
+            Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            Nu = new Fa();
+            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            Sigma = new Fa();
+            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            Tau = new Fa();
             Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Affinity(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
         // First Quaternion
-        Dynamic* Pi() {
-            Dynamic* Beta = new Dynamic();
+        Fa* Pi() {
+            Fa* Beta = new Fa();
             Beta->Fuse(Eta->Rod->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold);
             Beta->Tune();
             return Beta;

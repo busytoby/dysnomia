@@ -130,8 +130,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="04_Qiao.h" />
-    <ClCompile Include="Affinity.cpp" />
-    <ClCompile Include="Dynamic.cpp" />
+    <ClCompile Include="Faung.cpp" />
+    <ClCompile Include="Fa.cpp" />
     <ClCompile Include="Dysnomia.cpp" />
     <ClCompile Include="Math.cpp" />
   </ItemGroup>
@@ -161,9 +161,9 @@
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Wou.h" />
-    <ClInclude Include="Affinity.h" />
+    <ClInclude Include="Faung.h" />
     <ClInclude Include="01_Aluminium.h" />
-    <ClInclude Include="Dynamic.h" />
+    <ClInclude Include="Fa.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="02_Sulphur.h" />
   </ItemGroup>

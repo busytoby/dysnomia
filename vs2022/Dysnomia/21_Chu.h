@@ -24,15 +24,15 @@ namespace Dysnomia {
             Theta = new Xun(Iota, Beta);
         }
 
-        vector<Affinity*> Affinities() {
-            vector<Affinity*> Alpha(Mu->Affinities());
-            vector<Affinity*> Omicron = Rho->Affinities();
+        vector<Faung*> Affinities() {
+            vector<Faung*> Alpha(Mu->Affinities());
+            vector<Faung*> Omicron = Rho->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Affinity*> Lambda = Eta->Affinities();
+            vector<Faung*> Lambda = Eta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
-            vector<Affinity*> Pi = Tau->Affinities();
+            vector<Faung*> Pi = Tau->Affinities();
             Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
-            vector<Affinity*> Chi = Theta->Affinities();
+            vector<Faung*> Chi = Theta->Affinities();
             Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
             return Alpha;
         }
