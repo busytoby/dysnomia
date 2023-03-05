@@ -2,6 +2,7 @@
 #include "26_Fuang.h"
 
 namespace Dysnomia {
+    // Fubini–Study SU(2) IsoSpin
     class MAI {
     public:
         Host* Mu;
