@@ -12,6 +12,10 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Dang* Mu = new Dang();
+    Dong* Rho = new Dong(new Host(Mu->Sigma->Nu, Mu->Rho->Nu));
+    Dong* Psi = new Dong(new Host(Mu->Upsilon->Nu, Mu->Psi->Nu));
+    Dong* Nu = new Dong(new Host(Mu->Tau->Nu, Mu->Nu->Nu));
+    Dong* Eta = new Dong(new Host(Mu->Theta->Nu, Mu->Eta->Nu));
     
     int i = 99; 
 }

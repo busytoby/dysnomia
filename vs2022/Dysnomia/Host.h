@@ -20,6 +20,14 @@ namespace Dysnomia {
             Theta = new Qiao(Rho->Psi->Mu);
         }
 
+        Host(Beit* Beta, Beit* Omicron) {
+            Sigma = new Wou(Beta);
+            Tau = new Wou(Omicron);
+
+            Rho = new Chi(Sigma, Tau);
+            Theta = new Qiao(Rho->Psi->Mu);
+        }
+
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Rho->Affinities());
             vector<Faung*> Omicron = Sigma->Affinities();
