@@ -158,6 +158,7 @@
     <ClInclude Include="22_Chi.h" />
     <ClInclude Include="24_Cie.h" />
     <ClInclude Include="26_Fuang.h" />
+    <ClInclude Include="27_MAI.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Wou.h" />

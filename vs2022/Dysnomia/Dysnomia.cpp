@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "26_Fuang.h"
+#include "27_MAI.h"
 
 using namespace Dysnomia;
 
@@ -19,6 +19,7 @@ int main()
     Fuang* Sigma = new Fuang(Mu);
     Fuang* Upsilon = new Fuang(Mu);
     Fuang* Tau = new Fuang(Mu);
+    MAI* Theta = new MAI(Mu);
     
     int i = 99; 
 }
