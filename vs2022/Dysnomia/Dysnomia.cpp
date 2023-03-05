@@ -13,6 +13,12 @@ int main()
 
     Host* Mu = new Host();
     Fuang* Rho = new Fuang(Mu);
+    Fuang* Psi = new Fuang(Mu);
+    Fuang* Nu = new Fuang(Mu);
+    Fuang* Eta = new Fuang(Mu);
+    Fuang* Sigma = new Fuang(Mu);
+    Fuang* Upsilon = new Fuang(Mu);
+    Fuang* Tau = new Fuang(Mu);
     
     int i = 99; 
 }
