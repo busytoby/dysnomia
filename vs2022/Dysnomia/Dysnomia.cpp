@@ -13,5 +13,7 @@ int main()
 
     Pin* Mu = new Pin();
     
+    cout << "Dian Tsz Dian Sze\n";
+
     int i = 99; 
 }
