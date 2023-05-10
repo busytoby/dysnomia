@@ -12,6 +12,8 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Pin* Mu = new Pin();
+
+    Tsong* Two = Mu->Rho->Tau->Pi();
     
     cout << "Dian Tsz Dian Sze\n";
 
