@@ -13,6 +13,7 @@ int main()
 
     Pin* Mu = new Pin();
     Tong* Rho = Mu->Rho->Tau->Beta();
+    Tsong* Psi = Mu->Psi->Tau->Pi();
     
     cout << "Dian Tsz Dian Sze\n";
 
