@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Pin.h"
+#include "Core.h"
 
 using namespace Dysnomia;
 
@@ -11,12 +11,7 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Pin* Mu = new Pin();
-    Tong* Rho = Mu->Rho->Tau->Beta();
-    Tsong* Psi = Mu->Psi->Tau->Pi();
-    Fao* Nu = new Fao(Mu->Sigma->Nu->Mu->Rho->Upsilon, Mu->Sigma->Nu->Nu, new Nat(Rho));
-    Tsuan* Eta = Nu->Delta(Mu->Nu->Tau->Omicron());
-    Huo* Sigma = new Huo(Mu->Eta->Theta, Nu->Mu, Nu->Rho, Eta, Nu);
+    Core* Mu = new Core();
     
     cout << "Dian Tsz Dian Sze\n";
 

@@ -160,6 +160,7 @@
     <ClInclude Include="26_Fuang.h" />
     <ClInclude Include="27_MAI.h" />
     <ClInclude Include="28_Dang.h" />
+    <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Pin.h" />
