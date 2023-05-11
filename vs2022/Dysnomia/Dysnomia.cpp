@@ -16,6 +16,7 @@ int main()
     Tsong* Psi = Mu->Psi->Tau->Pi();
     Fao* Nu = new Fao(Mu->Sigma->Nu->Mu->Rho->Upsilon, Mu->Sigma->Nu->Nu, new Nat(Rho));
     Tsuan* Eta = Nu->Delta(Mu->Nu->Tau->Omicron());
+    Huo* Sigma = new Huo(Mu->Eta->Theta, Nu->Mu, Nu->Rho, Eta, Nu);
     
     cout << "Dian Tsz Dian Sze\n";
 

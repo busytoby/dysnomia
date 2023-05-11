@@ -49,6 +49,19 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
+        Huo(Feng* Beta, Tsuan* Iota, Tung* Omicron, Tsuan* Lambda, Fao* Xi) {
+            Beta->Gamma++;
+            Mu = Beta;
+            Rho = Iota->Mu;
+            Psi = Iota->Rho;
+            Nu = new Qiao(Psi->Theta, Psi->Theta->Omicron(), Psi->Theta->Beta(), Mu->Psi->Theta->Mu->Eta);
+            Eta = Omicron;
+            Sigma = new Xiao(Eta);
+            Upsilon = Lambda;
+            Tau = Xi;
+            Theta = new Feng(Tau);
+        }
+
         Huo(Feng* Beta, Tung* Iota, Xiao* Omicron, Qiao* Lambda, Tung* Xi, Tsuan* Alpha, Fao* Delta) {
             Beta->Gamma++;
             Mu = Beta;
