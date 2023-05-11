@@ -14,6 +14,7 @@ int main()
     Pin* Mu = new Pin();
     Tong* Rho = Mu->Rho->Tau->Beta();
     Tsong* Psi = Mu->Psi->Tau->Pi();
+    Fao* Nu = new Fao(Mu->Sigma->Nu->Mu->Rho->Upsilon, Mu->Sigma->Nu->Nu, new Nat(Rho));
     
     cout << "Dian Tsz Dian Sze\n";
 
