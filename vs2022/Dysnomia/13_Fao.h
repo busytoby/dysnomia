@@ -95,5 +95,13 @@ namespace Dysnomia {
 		Tong* Beta() {
 			return new Tong(Psi->Rho, Sigma->Beta());
 		}
+
+		Tong* Omicron() {
+			return new Tong(Psi->Rho, Sigma->Omicron());
+		}
+
+		Tsuan* Delta(Tong* Iota) {
+			return new Tsuan(Rho, Iota, Psi);
+		}
 	};
 }
