@@ -91,5 +91,9 @@ namespace Dysnomia {
 		Tsong* Pi() {
 			return new Tsong(Psi->Rho);
 		}
+
+		Tong* Beta() {
+			return new Tong(Psi->Rho, Sigma->Beta());
+		}
 	};
 }
