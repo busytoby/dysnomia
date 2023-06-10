@@ -68,5 +68,10 @@ namespace Dysnomia {
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
+
+        Faung* Kappa(Cie* Beta) {
+            Fa* Iota = new Fa();
+            return new Faung(Iota, Beta->Mu->Nu->Rod->Base, Beta->Mu->Nu->Rod->Element, Beta->Mu->Nu->Rod->Barn, Beta->Mu->Nu->Rod->Tau);
+        }
     };
 }
