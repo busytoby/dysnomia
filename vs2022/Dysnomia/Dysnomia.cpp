@@ -13,8 +13,10 @@ int main()
 
     Core* Mu = new Core();
     Faung* Rho = Mu->Mu->Sigma->Kappa(Mu->Mu->Rho->Eta);
-    
-    cout << "Dian Sze Dian Tsz\n";
+    Faung* Psi = Mu->Mu->Sigma->Kappa(Mu->Mu->Psi->Nu);
+    Faung* Nu = Mu->Mu->Sigma->Kappa(Mu->Mu->Nu->Upsilon);
+    Faung* Eta = Mu->Mu->Sigma->Kappa(Mu->Mu->Eta->Sigma);
+    Mu->Mu->Mu->Omega();
 
     int i = 99; 
 }
