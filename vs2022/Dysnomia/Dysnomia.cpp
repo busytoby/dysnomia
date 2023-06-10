@@ -14,7 +14,7 @@ int main()
     Core* Mu = new Core();
     Faung* Rho = Mu->Mu->Sigma->Kappa(Mu->Mu->Rho->Eta);
     
-    cout << "Dian Tsz Dian Sze\n";
+    cout << "Dian Sze Dian Tsz\n";
 
     int i = 99; 
 }
