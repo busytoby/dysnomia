@@ -12,11 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Core* Mu = new Core();
-    Faung* Rho = Mu->Mu->Mu->Theta->Kappa(Mu->Mu->Rho->Eta);
-    Faung* Psi = Mu->Mu->Mu->Theta->Kappa(Mu->Mu->Psi->Nu);
-    Faung* Nu = Mu->Mu->Mu->Theta->Kappa(Mu->Mu->Nu->Upsilon);
-    Faung* Eta = Mu->Mu->Mu->Theta->Kappa(Mu->Mu->Eta->Sigma);
-    Mu->Mu->Mu->Omega();
+    Mu->Mu->Mu->Omega(Mu->Mu->Rho->Eta, Mu->Mu->Psi->Nu, Mu->Mu->Nu->Upsilon, Mu->Mu->Eta->Sigma);
 
     int i = 99; 
 }
