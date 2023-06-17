@@ -65,6 +65,7 @@ namespace Dysnomia {
             Faung* Psi = Theta->Kappa(Iota);
             Faung* Nu = Theta->Kappa(Omicron);
             Faung* Eta = Theta->Kappa(Lambda);
+            delete Sigma->Theta;
             cout << "Started Dian Sze Dian Tsz\n";
         }
     };
