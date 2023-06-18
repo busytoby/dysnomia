@@ -46,6 +46,7 @@ namespace Dysnomia {
         }
 
         void Call() {
+            delete Mu->Sigma->Theta;
             Mu->Omega(Rho->Eta, Psi->Nu, Nu->Upsilon, Eta->Sigma);
         }
     };
