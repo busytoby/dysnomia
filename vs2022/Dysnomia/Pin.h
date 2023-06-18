@@ -44,5 +44,13 @@ namespace Dysnomia {
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
+
+        void Call() {
+            delete Mu->Sigma->Theta;
+            Faung* Beta = Mu->Theta->Kappa(Rho->Eta);
+            Faung* Iota = Mu->Theta->Kappa(Psi->Nu);
+            Faung* Omicron = Mu->Theta->Kappa(Nu->Upsilon);
+            Faung* Lambda = Mu->Theta->Kappa(Eta->Sigma);
+        }
     };
 }

@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Core* Mu = new Core();
-    Mu->Mu->Mu->Omega(Mu->Mu->Rho->Eta, Mu->Mu->Psi->Nu, Mu->Mu->Nu->Upsilon, Mu->Mu->Eta->Sigma);
-
+    Mu->Mu->Call();
+    cout << "Dian Sze Tsz Dian Tsz Sze\n";
     int i = 99; 
 }
