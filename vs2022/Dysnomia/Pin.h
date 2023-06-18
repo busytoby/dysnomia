@@ -46,11 +46,7 @@ namespace Dysnomia {
         }
 
         void Call() {
-            delete Mu->Sigma->Theta;
-            Faung* Beta = Mu->Theta->Kappa(Rho->Eta);
-            Faung* Iota = Mu->Theta->Kappa(Psi->Nu);
-            Faung* Omicron = Mu->Theta->Kappa(Nu->Upsilon);
-            Faung* Lambda = Mu->Theta->Kappa(Eta->Sigma);
+            Mu->Omega(Rho->Eta, Psi->Nu, Nu->Upsilon, Eta->Sigma);
         }
     };
 }
