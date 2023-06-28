@@ -51,6 +51,7 @@ namespace Dysnomia {
             delete Mu->Sigma->Theta;
             Tung* Omicron = new Tung(Iota, Mu->Theta->Mu->Tau->Psi, Mu->Mu->Theta);
             Mu->Omega(Rho->Eta, Psi->Nu, Nu->Upsilon, Eta->Sigma);
+            Tsuan* Lambda = new Tsuan(Omicron, Mu->Mu->Sigma->Mu->Mu->Mu->Upsilon->Mu->Theta, new Xiao(Omicron));
         }
     };
 }
