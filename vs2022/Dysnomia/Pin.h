@@ -45,7 +45,7 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
-        void Call() {
+        void Delta() {
             Tong* Beta = new Tong(Psi->Eta->Eta, Mu->Sigma->Theta->Psi->Upsilon);
             Nat* Iota = new Nat(Beta, Mu->Sigma->Theta->Nu);
             delete Mu->Sigma->Theta;
