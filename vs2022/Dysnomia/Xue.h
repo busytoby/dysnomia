@@ -56,9 +56,5 @@ namespace Dysnomia {
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
-
-        void Delta() {
-
-        }
     };
 }

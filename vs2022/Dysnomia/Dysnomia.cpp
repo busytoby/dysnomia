@@ -14,6 +14,6 @@ int main()
 
     Core* Mu = new Core();
     Xue* Rho = new Xue(Mu->Mu);
-    cout << "Xue Xue Tiao\n";
+    Faung* Psi = Rho->Mu->Sigma->Theta->Omega(Rho->Mu->Sigma->Sigma->Beta(), Rho->Mu->Sigma->Upsilon);
     int i = 99; 
 }
