@@ -15,5 +15,6 @@ int main()
     Core* Mu = new Core();
     Xue* Rho = new Xue(Mu->Mu);
     Faung* Psi = Rho->Mu->Sigma->Theta->Omega(Rho->Mu->Sigma->Sigma->Beta(), Rho->Mu->Sigma->Upsilon);
+    Faung* Sigma = Rho->Theta->Eta->Kappa(new Aluminium(Psi));
     int i = 99; 
 }
