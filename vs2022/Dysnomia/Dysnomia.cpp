@@ -3,6 +3,7 @@
 #include <time.h>
 #include <iostream>
 #include "Core.h"
+#include "Xue.h"
 
 using namespace Dysnomia;
 
@@ -12,7 +13,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Core* Mu = new Core();
-    Mu->Mu->Delta();
-    cout << "Dian Sze Tsz Dian Tsz Sze\n";
+    Xue* Rho = new Xue(Mu->Mu);
+    cout << "Xue Xue Tiao\n";
     int i = 99; 
 }

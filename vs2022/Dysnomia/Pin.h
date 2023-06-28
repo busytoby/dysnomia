@@ -44,14 +44,5 @@ namespace Dysnomia {
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
-
-        void Delta() {
-            Tong* Beta = new Tong(Psi->Eta->Eta, Mu->Sigma->Theta->Psi->Upsilon);
-            Nat* Iota = new Nat(Beta, Mu->Sigma->Theta->Nu);
-            delete Mu->Sigma->Theta;
-            Tung* Omicron = new Tung(Iota, Mu->Theta->Mu->Tau->Psi, Mu->Mu->Theta);
-            Mu->Omega(Rho->Eta, Psi->Nu, Nu->Upsilon, Eta->Sigma);
-            Tsuan* Lambda = new Tsuan(Omicron, Mu->Mu->Sigma->Mu->Mu->Mu->Upsilon->Mu->Theta, new Xiao(Omicron));
-        }
     };
 }
