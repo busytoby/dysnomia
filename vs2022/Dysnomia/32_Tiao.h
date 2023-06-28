@@ -14,12 +14,12 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Tiao() {
-            Core* Mu = new Core();
-            Xue* Rho = new Xue(Mu->Mu);
-            Faung* Psi = Rho->Mu->Sigma->Theta->Omega(Rho->Mu->Sigma->Sigma->Beta(), Rho->Mu->Sigma->Upsilon);
-            Faung* Sigma = Rho->Theta->Eta->Kappa(new Aluminium(Psi));
-            Faung* Tau = Rho->Theta->Sigma->Tau->Mu->Kappa(new Aluminium(Sigma));
-            Qiao* Theta = new Qiao(Rho->Theta->Upsilon->Tau->Mu, Tau);
+            Mu = new Core();
+            Rho = new Xue(Mu->Mu);
+            Psi = Rho->Mu->Sigma->Theta->Omega(Rho->Mu->Sigma->Sigma->Beta(), Rho->Mu->Sigma->Upsilon);
+            Sigma = Rho->Theta->Eta->Kappa(new Aluminium(Psi));
+            Tau = Rho->Theta->Sigma->Tau->Mu->Kappa(new Aluminium(Sigma));
+            Theta = new Qiao(Rho->Theta->Upsilon->Tau->Mu, Tau);
         }
 
         vector<Faung*> Affinities() {

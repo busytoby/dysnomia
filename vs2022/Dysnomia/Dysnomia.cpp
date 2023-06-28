@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "32_Tiao.h"
+#include "33_Wong.h"
 
 using namespace Dysnomia;
 
@@ -11,6 +11,6 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
 
-    Tiao* Mu = new Tiao();
-    int i = 99; 
+    Wong* Mu = new Wong();
+    int i = 4; 
 }
