@@ -46,7 +46,7 @@ namespace Dysnomia {
         }
 
         void Call() {
-            Psi->Eta->Mu->Mu->Mu->Mu->Conjugate(&Mu->Sigma->Theta->Psi->Mu->Mu->Eta->Identity);
+            Tong* Beta = new Tong(Psi->Eta->Eta, Mu->Sigma->Theta->Psi->Upsilon);
 
             delete Mu->Sigma->Theta;
             Mu->Omega(Rho->Eta, Psi->Nu, Nu->Upsilon, Eta->Sigma);
