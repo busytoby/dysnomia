@@ -8,23 +8,6 @@ namespace Dysnomia {
 		Tune();
 	}
 
-	Fa::Fa(const Fa& Copier) {
-		Base = Copier.Base;
-		if (Base < 0) throw 1;
-		Secret = Copier.Secret;
-		Signal = Copier.Signal;
-		Channel = Copier.Channel;
-		Pole = Copier.Pole;
-		Identity = Copier.Identity;
-		Foundation = Copier.Foundation;
-		Element = Copier.Element;
-		Dynamo = Copier.Dynamo;
-		Manifold = Copier.Manifold;
-		Ring = Copier.Ring;
-		Barn = Copier.Barn;
-	}
-
-
 	void Fa::Initialize()
 	{
 		Base = Secret = Signal = Channel = Pole = 0;

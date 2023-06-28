@@ -17,7 +17,6 @@ namespace Dysnomia {
 		int Gamma = 1;
 
 		Fa();
-		Fa(const Fa& Copier);
 		void Tune();
 		void Fuse(Int64, Int64, Int64);
 		Int64 Avail(Int64);
