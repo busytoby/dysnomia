@@ -165,6 +165,7 @@
     <ClInclude Include="34_Sze.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
+    <ClInclude Include="Gue.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Pin.h" />
     <ClInclude Include="Wou.h" />
