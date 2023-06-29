@@ -14,7 +14,7 @@ namespace Dysnomia {
             Beta->Cone->Gamma++;
             Mu = Beta;
             Eta = new Fa();
-            Theta = new Faung(Eta, Beta->Rod->Base, Beta->Cone->Element, Beta->Rod->Barn, Beta->Rod->Tau);
+            Theta = new Faung(Eta, Beta->Rod->Base, Beta->Cone->Element, Beta->Rod->Barn, Beta->Cone->Tau);
         }
 
         vector<Faung*> Affinities() {
