@@ -16,6 +16,7 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Xue(Pin* Beta) {
+            Beta->Gamma++;
             Mu = new Tong(Beta->Psi->Eta->Eta, Beta->Mu->Sigma->Theta->Psi->Upsilon);
             Rho = new Nat(Mu, Beta->Mu->Sigma->Theta->Nu);
             Psi = new Tung(Rho, Beta->Mu->Theta->Mu->Tau->Psi, Beta->Mu->Mu->Theta);

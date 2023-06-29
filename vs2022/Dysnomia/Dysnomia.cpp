@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Gue.h"
+#include "35_Tue.h"
 
 using namespace Dysnomia;
 
@@ -15,5 +15,7 @@ int main()
     Rho->Nu->Upsilon->Alpha();
     Rho->Nu->Eta->Alpha();
     Xun* Nu = new Xun(Rho->Nu->Upsilon, Rho->Nu->Eta);
-    int i = 12; 
+    Tue* Eta = new Tue(Rho->Upsilon->Rho->Omega(Rho->Nu->Upsilon->Mu->Upsilon->Theta->Beta(), Rho->Nu->Upsilon->Mu->Upsilon->Theta->Omicron()), Nu);
+
+    int i = 100; 
 }

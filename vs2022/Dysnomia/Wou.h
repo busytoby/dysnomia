@@ -34,6 +34,7 @@ namespace Dysnomia {
         }
 
         Wou(Beit* Beta) {
+            Beta->Gamma++;
             Mu = Beta;
             pair<Eun*, Eun*> Five = Mu->Mu->Rho->Upsilon->Kappa();
             Rho = Five.first;
