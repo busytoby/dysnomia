@@ -162,6 +162,7 @@
     <ClInclude Include="28_Dang.h" />
     <ClInclude Include="32_Tiao.h" />
     <ClInclude Include="33_Wong.h" />
+    <ClInclude Include="34_Sze.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Host.h" />

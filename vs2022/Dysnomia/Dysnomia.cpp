@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "33_Wong.h"
+#include "34_Sze.h"
 
 using namespace Dysnomia;
 
@@ -12,5 +12,6 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Wong* Mu = new Wong();
-    int i = 4; 
+    Sze* Nu = new Sze(Mu);
+    int i = 5; 
 }
