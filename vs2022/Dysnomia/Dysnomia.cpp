@@ -12,5 +12,8 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Gue* Rho = new Gue();
-    int i = 9; 
+    Rho->Nu->Upsilon->Alpha();
+    Rho->Nu->Eta->Alpha();
+    Xun* Nu = new Xun(Rho->Nu->Upsilon, Rho->Nu->Eta);
+    int i = 12; 
 }
