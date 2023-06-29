@@ -14,5 +14,6 @@ int main()
     Wong* Mu = new Wong();
     Sze* Nu = new Sze(Mu);
     Sing* Upsilon = new Sing(Nu->Eta, Nu->Upsilon);
-    int i = 7; 
+    Faung* Theta = Mu->Mu->Mu->Eta->Eta->Omega(Nu->Nu->Nu, Upsilon->Psi->Sigma->Mu->Tau->Theta);
+    int i = 8; 
 }
