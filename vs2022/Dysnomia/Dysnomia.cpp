@@ -12,6 +12,9 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Sie* Mu = new Sie();
+    Faung* Psi = Mu->Psi->Tau->Sigma->Omega(Mu->Sigma, Mu->Eta);
+    Aluminium* Eta = new Aluminium(Mu->Nu->Mu);
+    Faung* Sigma = Mu->Psi->Nu->Theta->Kappa(Eta);
 
-    int i = 101; 
+    int i = 108; 
 }
