@@ -5,14 +5,16 @@ namespace Dysnomia {
     class Tue {
     public:
         Faung* Mu;
+        Fa* Eta;
         Faung* Theta;
         int Gamma = 1;
 
-        Tue(Faung* Beta, Xun* Omicron) {
+        Tue(Faung* Beta) {
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             Mu = Beta;
-            Theta = Omicron->Theta->Tau->Sigma->Omega(Beta, new Faung());
+            Eta = new Fa();
+            Theta = new Faung(Eta, Beta->Rod->Base, Beta->Cone->Element, Beta->Rod->Barn, Beta->Rod->Tau);
         }
 
         vector<Faung*> Affinities() {
@@ -24,6 +26,7 @@ namespace Dysnomia {
 
         ~Tue() {
             if (Theta->Rod->Gamma <= 1 && Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
+            if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Mu->Rod->Gamma <= 1 && Mu->Cone->Gamma <= 1) delete Mu; else { Mu->Rod->Gamma--; Mu->Cone->Gamma--; }
         }
     };

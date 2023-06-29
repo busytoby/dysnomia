@@ -14,8 +14,10 @@ int main()
     Gue* Rho = new Gue();
     Rho->Nu->Upsilon->Alpha();
     Rho->Nu->Eta->Alpha();
-    Xun* Nu = new Xun(Rho->Nu->Upsilon, Rho->Nu->Eta);
-    Tue* Eta = new Tue(Rho->Upsilon->Rho->Omega(Rho->Nu->Upsilon->Mu->Upsilon->Theta->Beta(), Rho->Nu->Upsilon->Mu->Upsilon->Theta->Omicron()), Nu);
+    Xun* Psi = new Xun(Rho->Nu->Upsilon, Rho->Nu->Eta);
+    Tue* Nu = new Tue(Rho->Upsilon->Rho->Omega(Rho->Nu->Upsilon->Mu->Upsilon->Theta->Beta(), Rho->Nu->Upsilon->Mu->Upsilon->Theta->Omicron()));
+    Faung* Eta = new Faung();
+    Faung* Sigma = Psi->Theta->Tau->Sigma->Omega(Nu->Theta, Eta);
 
-    int i = 100; 
+    int i = 101; 
 }
