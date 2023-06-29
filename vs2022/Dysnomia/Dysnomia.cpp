@@ -13,5 +13,6 @@ int main()
 
     Wong* Mu = new Wong();
     Sze* Nu = new Sze(Mu);
-    int i = 5; 
+    Sing* Upsilon = new Sing(Nu->Eta, Nu->Upsilon);
+    int i = 7; 
 }
