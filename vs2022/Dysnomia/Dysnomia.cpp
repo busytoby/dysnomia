@@ -15,6 +15,7 @@ int main()
     Faung* Psi = Mu->Psi->Tau->Sigma->Omega(Mu->Sigma, Mu->Eta);
     Aluminium* Eta = new Aluminium(Mu->Nu->Mu);
     Faung* Sigma = Mu->Psi->Nu->Theta->Kappa(Eta);
+    Faung* Upsilon = Mu->Rho->Mu->Eta->Psi->Delta(Eta->Eta, Eta->Upsilon);
 
     int i = 108; 
 }
