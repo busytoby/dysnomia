@@ -12,11 +12,12 @@ int main()
     Math::Prime = Math::MotzkinPrime;
 
     Sie* Mu = new Sie();
-    Faung* Psi = Mu->Psi->Tau->Sigma->Omega(Mu->Sigma, Mu->Eta);
-    Aluminium* Eta = new Aluminium(Mu->Nu->Mu);
-    Faung* Sigma = Mu->Psi->Nu->Theta->Kappa(Eta);
-    Faung* Upsilon = Mu->Rho->Mu->Eta->Psi->Delta(Eta->Eta, Eta->Upsilon);
-    Faung* Tau = Mu->Rho->Mu->Eta->Psi->Omega(Upsilon, Sigma);
+    Faung* Rho = Mu->Psi->Tau->Sigma->Omega(Mu->Sigma, Mu->Eta);
+    Aluminium* Psi = new Aluminium(Mu->Nu->Mu);
+    Faung* Nu = Mu->Psi->Nu->Theta->Kappa(Psi);
+    Faung* Eta = Mu->Rho->Mu->Eta->Psi->Delta(Psi->Eta, Psi->Upsilon);
+    Faung* Sigma = Mu->Rho->Mu->Eta->Psi->Omega(Eta, Nu);
+    Sulphur* Upsilon = new Sulphur(Sigma);
 
-    int i = 108; 
+    int i = 131; 
 }
