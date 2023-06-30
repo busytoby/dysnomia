@@ -18,6 +18,7 @@ int main()
     Faung* Eta = Mu->Rho->Mu->Eta->Psi->Delta(Psi->Eta, Psi->Upsilon);
     Faung* Sigma = Mu->Rho->Mu->Eta->Psi->Omega(Eta, Nu);
     Sulphur* Upsilon = new Sulphur(Sigma);
+    Iron* Tau = new Iron(Upsilon, Eta, Nu);
 
-    int i = 131; 
+    int i = 140; 
 }
