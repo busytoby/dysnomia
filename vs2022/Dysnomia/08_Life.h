@@ -53,6 +53,8 @@ namespace Dysnomia {
 		Life() {};
 
 		Life(Eun* Beta, Eun* Iota) {
+			if (Math::POETRY > 0)
+				cout << "Life ";
 			Beta->Gamma++;
 			Iota->Gamma++;
 			Mu = new Song(Beta);

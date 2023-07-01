@@ -35,6 +35,8 @@ namespace Dysnomia {
 		}
 
         Aluminium(Faung* Pi) {
+            if (Math::POETRY > 0)
+                cout << "Aluminium ";
             Pi->Rod->Gamma++;
             Pi->Cone->Gamma++;
             Mu = new Fa();
@@ -51,6 +53,8 @@ namespace Dysnomia {
         }
 
         Aluminium(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
+            if (Math::POETRY > 0)
+                cout << "Aluminium ";
             Beta->Gamma++;
             Mu = new Fa();
             Rho = new Faung(Beta, Iota, Omicron, Lambda, Xi);
@@ -66,6 +70,8 @@ namespace Dysnomia {
         }
 
         Aluminium() {
+            if (Math::POETRY > 0)
+                cout << "Aluminium ";
             Mu = new Fa();
             Rho = new Faung();
             Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);

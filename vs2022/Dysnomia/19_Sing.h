@@ -17,6 +17,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Sing(Wou* Beta, Wou* Iota) {
+            if (Math::POETRY > 0)
+                cout << "Sing ";
             Mu = Iota->Pi(Beta->Omega());
             Rho = Beta->Tau(Mu, Iota->Nu->Tau->Beta(), Iota->Nu->Tau->Omicron());
             Psi = new Qiao(Rho, Iota->Psi->Rho->Beta());

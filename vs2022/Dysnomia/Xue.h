@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Xue(Pin* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Xue ";
             Beta->Gamma++;
             Mu = new Tong(Beta->Psi->Eta->Eta, Beta->Mu->Sigma->Theta->Psi->Upsilon);
             Rho = new Nat(Mu, Beta->Mu->Sigma->Theta->Nu);

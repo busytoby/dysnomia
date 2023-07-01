@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Tiao() {
+            if (Math::POETRY > 0)
+                cout << "Tiao ";
             Mu = new Core();
             Rho = new Xue(Mu->Mu);
             Psi = Rho->Mu->Sigma->Theta->Omega(Rho->Mu->Sigma->Sigma->Beta(), Rho->Mu->Sigma->Upsilon);

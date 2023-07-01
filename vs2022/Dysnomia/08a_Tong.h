@@ -7,6 +7,8 @@ namespace Dysnomia {
 	class Tong : public Life {
 	public:
         Tong(Song* Alpha, Faung* Xi) {
+            if (Math::POETRY > 0)
+                cout << "Tong ";
             Mu = Alpha;
             Rho = new Eun(Mu->Tau);
             Psi = new Eun(Rho->Sigma);
@@ -19,6 +21,8 @@ namespace Dysnomia {
         }
 
         Tong() {
+            if (Math::POETRY > 0)
+                cout << "Tong ";
             Mu = new Song();
             Rho = new Eun(Mu->Tau);
             Psi = new Eun(Rho->Sigma);

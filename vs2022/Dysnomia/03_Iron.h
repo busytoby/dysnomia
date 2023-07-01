@@ -47,6 +47,8 @@ namespace Dysnomia {
 		}
 		
         Iron(Sulphur* Beta, Faung* Iota, Faung* Omicron, Faung* Lambda, Faung* Xi) {
+            if (Math::POETRY > 0)
+                cout << "Iron ";
             Beta->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -68,6 +70,8 @@ namespace Dysnomia {
         }
 
         Iron(Sulphur* Xi, Faung* Iota, Faung* Lambda) {
+            if (Math::POETRY > 0)
+                cout << "Iron ";
             Xi->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -89,6 +93,8 @@ namespace Dysnomia {
         }
 
         Iron() {
+            if (Math::POETRY > 0)
+                cout << "Iron ";
             Mu = new Sulphur();
             Rho = new Aluminium();
             Psi = new Aluminium(Mu->Theta, Mu->Upsilon->Base, Mu->Upsilon->Element, Mu->Upsilon->Manifold, Mu->Theta->Tau);

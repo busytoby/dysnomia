@@ -30,6 +30,8 @@ namespace Dysnomia {
         }
 
         Gue() {
+            if (Math::POETRY > 0)
+                cout << "Gue ";
             Mu = new Wong();
             Nu = new Sze(Mu);
             Upsilon = new Sing(Nu->Eta, Nu->Upsilon);

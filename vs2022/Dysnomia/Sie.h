@@ -12,6 +12,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Sie() {
+            if (Math::POETRY > 0)
+                cout << "Sie ";
             Rho = new Gue();
             Rho->Nu->Upsilon->Alpha();
             Rho->Nu->Eta->Alpha();

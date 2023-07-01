@@ -7,6 +7,7 @@ namespace Dysnomia {
 	{
 	public:
 		static Int64 Prime;
+		static short POETRY;
 		const static Int64 Mu = 7712503;
 		const static Int64 Gamma = 2702765;
 		const static Int64 MotzkinPrime = 953467954114363;

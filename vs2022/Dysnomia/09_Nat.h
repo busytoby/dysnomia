@@ -48,6 +48,8 @@ namespace Dysnomia {
         }
 
         Nat(Life* Beta, Eun* Omicron) {
+            if (Math::POETRY > 0)
+                cout << "Nat ";
             Beta->Gamma++;
             Omicron->Gamma++;
             Mu = Beta;
@@ -62,6 +64,8 @@ namespace Dysnomia {
         }
         
         Nat(Life* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Nat ";
             Beta->Gamma++;
             Mu = Beta;
             Rho = new Tin(Mu->Upsilon->Rho);

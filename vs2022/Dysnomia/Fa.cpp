@@ -2,6 +2,8 @@
 
 namespace Dysnomia {
 	Fa::Fa() {
+		if (Math::POETRY > 1)
+			cout << "Fa ";
 		Tau = 0;
 		Initialize();
 		Seed();

@@ -48,6 +48,8 @@ namespace Dysnomia {
 		}
 		
 		Tin(Faung* Beta) {
+			if (Math::POETRY > 0)
+				cout << "Tin ";
 			Beta->Rod->Gamma++;
 			Beta->Cone->Gamma++;
 			Mu = new Qiao();
@@ -62,6 +64,8 @@ namespace Dysnomia {
 		}
 
 		Tin() {
+			if (Math::POETRY > 0)
+				cout << "Tin ";
 			Mu = new Qiao();
 			Rho = new Qiao();
 			Psi = Mu->Sigma->Omicron();

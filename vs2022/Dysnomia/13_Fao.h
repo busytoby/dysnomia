@@ -48,6 +48,8 @@ namespace Dysnomia {
 		}
 
 		Fao(Tsuan* Beta, Xiao* Iota, Nat* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Fao ";
 			Beta->Gamma++;
 			Iota->Gamma++;
 			Mu = Beta;
@@ -62,6 +64,8 @@ namespace Dysnomia {
 		}
 
 		Fao(Tsuan* Beta, Xiao* Iota) {
+			if (Math::POETRY > 0)
+				cout << "Fao ";
 			Beta->Gamma++;
 			Iota->Gamma++;
 			Mu = Beta;
@@ -76,6 +80,8 @@ namespace Dysnomia {
 		}
 		
 		Fao(Life* Alpha) {
+			if (Math::POETRY > 0)
+				cout << "Fao ";
 			Alpha->Gamma++;
 			Mu = new Tsuan(Alpha);
 			Rho = new Tung(Mu->Mu->Mu);

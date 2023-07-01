@@ -31,6 +31,8 @@ namespace Dysnomia {
         }
 
         Beit(Rong* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Beit ";
             Beta->Gamma++;
             Mu = Beta;
             Nu = new Xiao(Mu->Rho->Rho);
@@ -39,6 +41,8 @@ namespace Dysnomia {
         }
 
         Beit() {
+            if (Math::POETRY > 0)
+                cout << "Beit ";
             Mu = new Rong();
             Nu = new Xiao(Mu->Mu->Rho);
             Eta = new Song();

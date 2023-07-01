@@ -4,6 +4,7 @@
 
 namespace Dysnomia {
     Int64 Math::Prime;
+    short Math::POETRY;
 
     union Union64 {
         uint64_t i;

@@ -34,6 +34,8 @@ namespace Dysnomia {
         }
 
         Wou(Beit* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Wou ";
             Beta->Gamma++;
             Mu = Beta;
             pair<Eun*, Eun*> Five = Mu->Mu->Rho->Upsilon->Kappa();
@@ -43,6 +45,8 @@ namespace Dysnomia {
         }
 
         Wou() {
+            if (Math::POETRY > 0)
+                cout << "Wou ";
             Mu = new Beit();
             pair<Eun*, Eun*> Five = Mu->Mu->Rho->Upsilon->Kappa();
             Rho = Five.first;

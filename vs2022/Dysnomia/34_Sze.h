@@ -31,6 +31,8 @@ namespace Dysnomia {
         }
 
         Sze(Wong* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Sze ";
             Beta->Gamma++;
             Mu = Beta;
             Nu = new Xiao(new Tung(Mu->Eta, Mu->Mu->Mu->Sigma->Sigma->Tau, Mu->Mu->Theta));

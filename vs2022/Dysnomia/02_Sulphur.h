@@ -43,6 +43,8 @@ namespace Dysnomia {
 		}
 		
 		Sulphur(Faung* Beta) {
+			if (Math::POETRY > 0)
+				cout << "Sulphur ";
 			Beta->Rod->Gamma++;
 			Beta->Cone->Gamma++;
 			Mu = new Aluminium(Beta);
@@ -57,6 +59,8 @@ namespace Dysnomia {
 		}
 
 		Sulphur() {
+			if (Math::POETRY > 0)
+				cout << "Sulphur ";
 			Mu = new Aluminium();
 			Rho = Mu->Pi();
 			Psi = new Aluminium(Rho, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);

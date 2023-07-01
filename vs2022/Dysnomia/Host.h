@@ -13,6 +13,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Host() {
+            if (Math::POETRY > 0)
+                cout << "Host ";
             Sigma = new Wou();
             Tau = new Wou();
 
@@ -21,6 +23,8 @@ namespace Dysnomia {
         }
 
         Host(Beit* Beta, Beit* Omicron) {
+            if (Math::POETRY > 0)
+                cout << "Host ";
             Sigma = new Wou(Beta);
             Tau = new Wou(Omicron);
 

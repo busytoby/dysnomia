@@ -43,6 +43,8 @@ namespace Dysnomia {
         }
 
         Rong(Huo* Beta, Xiao* Omicron) {
+            if (Math::POETRY > 0)
+                cout << "Rong ";
             Beta->Gamma++;
             Mu = new Huo(Beta);
             Rho = new Huo(Mu);
@@ -55,6 +57,8 @@ namespace Dysnomia {
         }
 
         Rong(Huo* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Rong ";
             Beta->Gamma++;
             Mu = new Huo();
             Rho = new Huo(Beta);
@@ -67,6 +71,8 @@ namespace Dysnomia {
         }
 
         Rong() {
+            if (Math::POETRY > 0)
+                cout << "Rong ";
             Mu = new Huo();
             Rho = new Huo(Mu);
             Psi = new Xiao(Rho->Rho);

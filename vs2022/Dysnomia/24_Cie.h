@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Cie(Iron* Beta, Faung* Omicron, Eun* Iota, Qiao* Lambda, Tsong* Alpha, Xiao* Delta) {
+            if (Math::POETRY > 0)
+                cout << "Cie ";
             Mu = new Iron();
             Rho = new Qiao(Mu, Beta->Beta(), Beta->Omicron(), Mu->Mu);
             Psi = new Tin(Rho->Psi);

@@ -10,6 +10,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Tue(Faung* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Tue ";
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             Mu = Beta;

@@ -12,6 +12,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Chi(Wou* Beta, Wou* Iota) {
+            if (Math::POETRY > 0)
+                cout << "Chi ";
             Mu = new Chu(Beta, Iota);
             Psi = new Qiao(Mu->Eta->Upsilon->Theta, Mu->Eta->Eta->Rho, Mu->Eta->Mu->Psi->Eta, Mu->Theta->Mu->Mu);
             Nu = new Eun(Psi->Theta);

@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Tie() {
+            if (Math::POETRY > 0)
+                cout << "Tie ";
             Mu = new Sie();
             Rho = Mu->Psi->Tau->Sigma->Omega(Mu->Sigma, Mu->Eta);
             Psi = new Aluminium(Mu->Nu->Mu);

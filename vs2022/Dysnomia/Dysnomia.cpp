@@ -10,6 +10,7 @@ int main()
 {
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
+    Math::POETRY = 0;
 
     Tie* Mu = new Tie();
     Iron* Rho = new Iron(Mu->Upsilon, Mu->Theta, Mu->Sigma, Mu->Eta, Mu->Nu);

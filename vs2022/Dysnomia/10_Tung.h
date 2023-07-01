@@ -51,6 +51,8 @@ namespace Dysnomia {
 		}
 
 		Tung(Nat* Alpha, Eun* Beta, Qiao* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Tung ";
 			Alpha->Gamma++;
 			Mu = Alpha;
 			Rho = new Eun(Mu->Nu);
@@ -64,6 +66,8 @@ namespace Dysnomia {
 		}
 		
 		Tung(Nat* Alpha) {
+			if (Math::POETRY > 0)
+				cout << "Tung ";
 			Alpha->Gamma++;
 			Mu = Alpha;
 			Rho = new Eun(Mu->Psi);
@@ -77,6 +81,8 @@ namespace Dysnomia {
 		}
 
 		Tung(Life* Alpha) {
+			if (Math::POETRY > 0)
+				cout << "Tung ";
 			Alpha->Gamma++;
 			Mu = new Nat(Alpha);
 			Rho = new Eun(Mu->Nu);

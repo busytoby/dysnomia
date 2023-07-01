@@ -47,6 +47,8 @@ namespace Dysnomia {
 		}
 		
         Qiao(Iron* Beta, Faung* Iota, Faung* Omicron, Sulphur* Lambda) {
+            if (Math::POETRY > 0)
+                cout << "Qiao ";
             Beta->Gamma++;
             Iota->Rod->Gamma++;
             Iota->Cone->Gamma++;
@@ -64,6 +66,8 @@ namespace Dysnomia {
         }
 
         Qiao(Iron* Omega, Faung* Pi) {
+            if (Math::POETRY > 0)
+                cout << "Qiao ";
             Omega->Gamma++;
             Pi->Rod->Gamma++;
             Pi->Cone->Gamma++;
@@ -79,6 +83,8 @@ namespace Dysnomia {
         }
 
         Qiao(Iron* Omega) {
+            if (Math::POETRY > 0)
+                cout << "Qiao ";
             Omega->Gamma++;
             Mu = Omega;
             Rho = Mu->Beta();
@@ -92,6 +98,8 @@ namespace Dysnomia {
         }
 
         Qiao() {
+            if (Math::POETRY > 0)
+                cout << "Qiao ";
             Mu = new Iron();
             Rho = Mu->Omicron();
             Psi = Mu->Beta();

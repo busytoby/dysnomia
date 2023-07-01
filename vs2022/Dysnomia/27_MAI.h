@@ -17,6 +17,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         MAI(Host* Beta) {
+            if (Math::POETRY > 0)
+                cout << "MAI ";
             Beta->Gamma++;
             Mu = Beta;
             Rho = new Huo();

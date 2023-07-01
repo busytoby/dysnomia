@@ -50,6 +50,8 @@ namespace Dysnomia {
 		}
 
 		Song(Eun* Lambda, Faung* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Song ";
 			Lambda->Gamma++;
 			Omicron->Rod->Gamma++;
 			Omicron->Cone->Gamma++;
@@ -65,6 +67,8 @@ namespace Dysnomia {
 		}
 		
 		Song(Eun* Lambda) {
+			if (Math::POETRY > 0)
+				cout << "Song ";
 			Lambda->Gamma++;
 			Mu = Lambda;
 			Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
@@ -78,6 +82,8 @@ namespace Dysnomia {
 		}
 
 		Song() {
+			if (Math::POETRY > 0)
+				cout << "Song ";
 			Mu = new Eun();
 			Rho = Mu->Sigma->Delta(Mu->Rho->Beta(), Mu->Rho->Omicron());
 			Psi = new Aluminium(Rho);

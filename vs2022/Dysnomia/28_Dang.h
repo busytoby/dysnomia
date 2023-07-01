@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Dang() {
+            if (Math::POETRY > 0)
+                cout << "Dang ";
             Mu = new Host();
             Rho = new Fuang(Mu);
             Psi = new Fuang(Mu);

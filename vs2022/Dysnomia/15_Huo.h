@@ -50,6 +50,8 @@ namespace Dysnomia {
         }
 
         Huo(Feng* Beta, Tsuan* Iota, Tung* Omicron, Tsuan* Lambda, Fao* Xi) {
+            if (Math::POETRY > 0)
+                cout << "Huo ";
             Beta->Gamma++;
             Mu = Beta;
             Rho = Iota->Mu;
@@ -63,6 +65,8 @@ namespace Dysnomia {
         }
 
         Huo(Feng* Beta, Tung* Iota, Xiao* Omicron, Qiao* Lambda, Tung* Xi, Tsuan* Alpha, Fao* Delta) {
+            if (Math::POETRY > 0)
+                cout << "Huo ";
             Beta->Gamma++;
             Mu = Beta;
             Rho = Iota;
@@ -76,6 +80,8 @@ namespace Dysnomia {
         }
 
         Huo(Huo* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Huo ";
             Beta->Gamma++;
             Mu = Beta->Theta;
             Rho = new Tung(Mu->Theta->Mu->Mu);
@@ -89,6 +95,8 @@ namespace Dysnomia {
         }
 
         Huo() {
+            if (Math::POETRY > 0)
+                cout << "Huo ";
             Mu = new Feng();
             Rho = new Tung(Mu->Theta->Mu->Mu);
             Psi = new Xiao(Rho);

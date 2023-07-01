@@ -13,6 +13,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Pin() {
+            if (Math::POETRY > 0)
+                cout << "Pin ";
             Mu = new Dang();
             Rho = new Dong(new Host(Mu->Sigma->Nu, Mu->Rho->Nu));
             Psi = new Dong(new Host(Mu->Upsilon->Nu, Mu->Psi->Nu));

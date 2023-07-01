@@ -11,6 +11,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Wong() {
+            if (Math::POETRY > 0)
+                cout << "Wong ";
             Mu = new Tiao();
             Rho = new Nat(Mu->Mu->Rho);
             Psi = new Nat(Mu->Mu->Psi);

@@ -51,6 +51,8 @@ namespace Dysnomia {
 		}
 
 		Tsuan(Xiao* Beta, Qiao* Iota, Tung* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Tsuan ";
 			Beta->Gamma++;
 			Iota->Gamma++;
 			Mu = Omicron;
@@ -66,6 +68,8 @@ namespace Dysnomia {
 		}
 
 		Tsuan(Tung* Beta, Xiao* Iota, Sulphur* Omicron, Qiao* Lambda) {
+			if (Math::POETRY > 0)
+				cout << "Tsuan ";
 			Beta->Gamma++;
 			Iota->Gamma++;
 			Omicron->Gamma++;
@@ -83,6 +87,8 @@ namespace Dysnomia {
 		}
 
 		Tsuan(Tung* Beta, Life* Alpha, Xiao* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Tsuan ";
 			Alpha->Gamma++;
 			Mu = Beta;
 			Rho = Omicron;
@@ -97,6 +103,8 @@ namespace Dysnomia {
 		}
 		
 		Tsuan(Life* Alpha) {
+			if (Math::POETRY > 0)
+				cout << "Tsuan ";
 			Alpha->Gamma++;
 			Mu = new Tung(Alpha);
 			Rho = new Xiao(Mu);

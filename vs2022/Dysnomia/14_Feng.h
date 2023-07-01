@@ -51,6 +51,8 @@ namespace Dysnomia {
         }
 
         Feng(Fao* Beta, Tung* Omicron) {
+            if (Math::POETRY > 0)
+                cout << "Feng ";
             Beta->Gamma++;
             Omicron->Gamma++;
             Mu = Beta->Pi();
@@ -65,6 +67,8 @@ namespace Dysnomia {
         }
 
         Feng(Fao* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Feng ";
             Beta->Gamma++;
             Mu = Beta->Pi();
             Rho = Beta;
@@ -78,6 +82,8 @@ namespace Dysnomia {
         }
 
         Feng() {
+            if (Math::POETRY > 0)
+                cout << "Feng ";
             Mu = new Tong();
             Rho = new Fao(Mu);
             Psi = new Tung(Rho->Pi());

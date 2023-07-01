@@ -49,6 +49,8 @@ namespace Dysnomia {
 		}
 		
 		Xiao(Tung* Beta) {
+			if (Math::POETRY > 0)
+				cout << "Xiao ";
 			Beta->Gamma++;
 			Mu = Beta;
 			Rho = new Song();

@@ -16,6 +16,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Dong(Host* Beta) {
+            if (Math::POETRY > 0)
+                cout << "Dong ";
             Beta->Gamma++;
             Mu = Beta;
 

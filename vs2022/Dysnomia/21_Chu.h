@@ -14,6 +14,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Chu(Wou* Beta, Wou* Iota) {
+            if (Math::POETRY > 0)
+                cout << "Chu ";
             Mu = new Xun(Beta, Iota);
             Rho = new Rong(Mu->Theta);
             Beta->Alpha(true);

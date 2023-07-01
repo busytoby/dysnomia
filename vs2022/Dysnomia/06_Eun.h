@@ -47,6 +47,8 @@ namespace Dysnomia {
 		}
 		
         Eun(Tin* Omicron, Iron* Lambda) {
+			if (Math::POETRY > 0)
+				cout << "Eun ";
             Omicron->Gamma++;
             Lambda->Gamma++;
             Mu = Omicron;
@@ -61,6 +63,8 @@ namespace Dysnomia {
         }
 
         Eun(Iron* Lambda) {
+			if (Math::POETRY > 0)
+				cout << "Eun ";
             Lambda->Gamma++;
             Mu = new Tin();
             Rho = Lambda;
@@ -74,6 +78,8 @@ namespace Dysnomia {
         }
 
         Eun() {
+			if (Math::POETRY > 0)
+				cout << "Eun ";
             Mu = new Tin();
             Rho = new Iron();
             Psi = new Qiao(Rho);
