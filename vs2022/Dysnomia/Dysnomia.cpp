@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    պատմութիւն* Mu = new պատմութիւն();
+    Պատմութիւն* Mu = new Պատմութիւն();
 
     int i = 151; 
 }
