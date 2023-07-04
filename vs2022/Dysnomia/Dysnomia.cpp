@@ -21,6 +21,7 @@ int main()
     Sigma->Fuse(Mu->Upsilon->Cone->Signal, Mu->Nu->Cone->Tau, Mu->Nu->Cone->Tau);
     Sigma->Tune();
     Faung* Upsilon = new Faung(Sigma, Mu->Upsilon->Cone->Base, Mu->Upsilon->Cone->Element, Mu->Upsilon->Cone->Manifold, Mu->Upsilon->Cone->Ring);
+    Sulphur* Tau = new Sulphur(Mu->Upsilon, Psi, Eta, Upsilon);
 
     int i = 151; 
 }
