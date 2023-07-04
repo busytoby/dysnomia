@@ -46,7 +46,7 @@ namespace Dysnomia {
             return Alpha;
         }
 
-        ~պատմութիւն() {
+        ~Պատմութիւն() {
             if (Theta->Rod->Gamma <= 1 && Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Upsilon->Rod->Gamma <= 1 && Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
