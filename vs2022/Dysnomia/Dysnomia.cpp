@@ -17,6 +17,8 @@ int main()
     Tau->Fuse(Theta->Psi->Rod->Signal, Theta->Psi->Rod->Tau, Theta->Psi->Rod->Tau);
     Tau->Tune();
     Faung* Upsilon = new Faung(Tau, Theta->Upsilon->Cone->Base, Theta->Upsilon->Cone->Element, Theta->Upsilon->Cone->Manifold, Theta->Upsilon->Cone->Ring);
+    Iron* Sigma = new Iron(Theta->Theta, Theta->Psi, Upsilon);
+    Qiao* Eta = new Qiao(Sigma, Upsilon, Theta->Psi, Theta->Tau);
 
     int i = 151; 
 }
