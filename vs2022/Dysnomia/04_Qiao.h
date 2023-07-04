@@ -110,5 +110,9 @@ namespace Dysnomia {
             Tau = new Aluminium(Upsilon);
             Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
+
+        Iron* Omega() {
+            return new Iron(Eta, Rho, Psi);
+        }
 	};
 }

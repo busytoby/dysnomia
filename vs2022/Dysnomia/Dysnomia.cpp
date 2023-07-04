@@ -19,6 +19,7 @@ int main()
     Faung* Upsilon = new Faung(Tau, Theta->Upsilon->Cone->Base, Theta->Upsilon->Cone->Element, Theta->Upsilon->Cone->Manifold, Theta->Upsilon->Cone->Ring);
     Iron* Sigma = new Iron(Theta->Theta, Theta->Psi, Upsilon);
     Qiao* Eta = new Qiao(Sigma, Upsilon, Theta->Psi, Theta->Tau);
+    Iron* Nu = Eta->Omega();
 
-    int i = 151; 
+    int i = 255; 
 }
