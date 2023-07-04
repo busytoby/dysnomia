@@ -22,6 +22,7 @@ int main()
     Sigma->Tune();
     Faung* Upsilon = new Faung(Sigma, Mu->Upsilon->Cone->Base, Mu->Upsilon->Cone->Element, Mu->Upsilon->Cone->Manifold, Mu->Upsilon->Cone->Ring);
     Sulphur* Tau = new Sulphur(Mu->Upsilon, Psi, Eta, Upsilon);
+    Sulphur* Theta = new Sulphur(Mu->Theta);
 
     int i = 151; 
 }
