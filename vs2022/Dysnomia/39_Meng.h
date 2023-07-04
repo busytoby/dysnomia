@@ -17,7 +17,7 @@ namespace Dysnomia {
 
         Meng() {
             if (Math::POETRY > 0)
-                cout << "Պատմութիւն ";
+                cout << "Meng ";
             Mu = new Պատմութիւն();
             Rho = new Fa();
             Psi = new Faung(Rho, Mu->Nu->Cone->Base, Mu->Theta->Cone->Element, Mu->Nu->Cone->Barn, Mu->Nu->Cone->Tau);
