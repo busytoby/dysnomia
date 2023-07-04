@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "38_պատմութիւն.h"
+#include "38_Պատմութիւն.h"
 
 using namespace Dysnomia;
 

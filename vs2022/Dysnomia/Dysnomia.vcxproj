@@ -130,7 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="04_Qiao.h" />
-    <ClCompile Include="38_Պատմութիւն.h" />
     <ClCompile Include="Faung.cpp" />
     <ClCompile Include="Fa.cpp" />
     <ClCompile Include="Dysnomia.cpp" />
@@ -166,6 +165,7 @@
     <ClInclude Include="34_Sze.h" />
     <ClInclude Include="35_Tue.h" />
     <ClInclude Include="37_Tie.h" />
+    <ClInclude Include="38_Պատմութիւն.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
