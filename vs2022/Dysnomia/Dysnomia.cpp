@@ -13,6 +13,10 @@ int main()
     Math::POETRY = 0;
 
     Meng* Theta = new Meng();
+    Fa* Tau = new Fa();
+    Tau->Fuse(Theta->Psi->Rod->Signal, Theta->Psi->Rod->Tau, Theta->Psi->Rod->Tau);
+    Tau->Tune();
+    Faung* Upsilon = new Faung(Tau, Theta->Upsilon->Cone->Base, Theta->Upsilon->Cone->Element, Theta->Upsilon->Cone->Manifold, Theta->Upsilon->Cone->Ring);
 
     int i = 151; 
 }
