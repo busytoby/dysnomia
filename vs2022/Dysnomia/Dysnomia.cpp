@@ -22,6 +22,7 @@ int main()
     Iron* Nu = Eta->Omega();
     Iron* Psi = new Iron(Theta->Tau, Theta->Eta, Nu->Beta(), Nu->Omicron(), Upsilon);
     Qiao* Rho = new Qiao(Psi, Upsilon);
+    Qiao* Mu = new Qiao(Nu, Upsilon, Theta->Upsilon, Theta->Mu->Mu->Mu->Psi->Rho->Mu->Nu->Mu);
 
-    int i = 267; 
+    int i = 290; 
 }
