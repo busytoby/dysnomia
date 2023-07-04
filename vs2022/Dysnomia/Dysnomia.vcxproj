@@ -166,6 +166,7 @@
     <ClInclude Include="35_Tue.h" />
     <ClInclude Include="37_Tie.h" />
     <ClInclude Include="38_Պատմութիւն.h" />
+    <ClInclude Include="39_Meng.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
