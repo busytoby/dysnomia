@@ -19,6 +19,7 @@ int main()
     Iron* Eta = new Iron(Nu, Psi->Rho, Psi->Psi, Psi->Eta, Psi->Upsilon);
     Faung* Sigma = Mu->Nu->Omega(Psi->Psi, Mu->Sigma->Omicron());
     Iron* Upsilon = new Iron(Nu, Mu->Sigma->Beta(), Sigma);
+    Faung* Tau = Upsilon->Kappa(Psi);
 
-    int i = 319; 
+    int i = 321; 
 }
