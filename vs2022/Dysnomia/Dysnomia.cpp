@@ -14,6 +14,9 @@ int main()
 
     En* Mu = new En();
     Faung* Rho = Mu->Sigma->Delta(Mu->Mu->Rho, Mu->Upsilon);
+    Aluminium* Psi = new Aluminium(Rho);
+    Sulphur* Nu = new Sulphur(Psi->Theta);
+    Iron* Eta = new Iron(Nu, Psi->Rho, Psi->Psi, Psi->Eta, Psi->Upsilon);
 
-    int i = 297; 
+    int i = 309; 
 }
