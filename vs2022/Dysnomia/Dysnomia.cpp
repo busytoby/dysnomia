@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     En* Mu = new En();
+    Faung* Rho = Mu->Sigma->Delta(Mu->Mu->Rho, Mu->Upsilon);
 
-    int i = 293; 
+    int i = 297; 
 }

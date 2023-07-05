@@ -18,17 +18,17 @@ namespace Dysnomia {
         En() {
             if (Math::POETRY > 0)
                 cout << "En ";
-            Meng* Theta = new Meng();
-            Fa* Tau = new Fa();
+            Theta = new Meng();
+            Tau = new Fa();
             Tau->Fuse(Theta->Psi->Rod->Signal, Theta->Psi->Rod->Tau, Theta->Psi->Rod->Tau);
             Tau->Tune();
-            Faung* Upsilon = new Faung(Tau, Theta->Upsilon->Cone->Base, Theta->Upsilon->Cone->Element, Theta->Upsilon->Cone->Manifold, Theta->Upsilon->Cone->Ring);
-            Iron* Sigma = new Iron(Theta->Theta, Theta->Psi, Upsilon);
-            Qiao* Eta = new Qiao(Sigma, Upsilon, Theta->Psi, Theta->Tau);
-            Iron* Nu = Eta->Omega();
-            Iron* Psi = new Iron(Theta->Tau, Theta->Eta, Nu->Beta(), Nu->Omicron(), Upsilon);
-            Qiao* Rho = new Qiao(Psi, Upsilon);
-            Qiao* Mu = new Qiao(Nu, Upsilon, Theta->Upsilon, Theta->Mu->Mu->Mu->Psi->Rho->Mu->Nu->Mu);
+            Upsilon = new Faung(Tau, Theta->Upsilon->Cone->Base, Theta->Upsilon->Cone->Element, Theta->Upsilon->Cone->Manifold, Theta->Upsilon->Cone->Ring);
+            Sigma = new Iron(Theta->Theta, Theta->Psi, Upsilon);
+            Eta = new Qiao(Sigma, Upsilon, Theta->Psi, Theta->Tau);
+            Nu = Eta->Omega();
+            Psi = new Iron(Theta->Tau, Theta->Eta, Nu->Beta(), Nu->Omicron(), Upsilon);
+            Rho = new Qiao(Psi, Upsilon);
+            Mu = new Qiao(Nu, Upsilon, Theta->Upsilon, Theta->Mu->Mu->Mu->Psi->Rho->Mu->Nu->Mu);
         }
 
         vector<Faung*> Affinities() {
