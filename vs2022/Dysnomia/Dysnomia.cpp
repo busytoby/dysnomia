@@ -20,6 +20,7 @@ int main()
     Faung* Sigma = Mu->Nu->Omega(Psi->Psi, Mu->Sigma->Omicron());
     Iron* Upsilon = new Iron(Nu, Mu->Sigma->Beta(), Sigma);
     Faung* Tau = Upsilon->Kappa(Psi);
+    Iron* Theta = new Iron(Nu, Tau, Mu->Psi->Omicron());
 
-    int i = 321; 
+    int i = 329; 
 }
