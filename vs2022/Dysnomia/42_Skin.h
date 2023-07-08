@@ -17,7 +17,7 @@ namespace Dysnomia {
 
         Skin() {
             if (Math::POETRY > 0)
-                cout << "Sue ";
+                cout << "Skin ";
             Mu = new Gua();
             Rho = new Aluminium(Mu->Tau);
             Psi = Mu->Eta->Kappa(Rho);
