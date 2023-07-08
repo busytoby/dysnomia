@@ -2,7 +2,7 @@
 #include "41_Gua.h"
 
 namespace Dysnomia {
-    class Sue {
+    class Skin {
     public:
         Gua* Mu;
         Aluminium* Rho;
@@ -15,7 +15,7 @@ namespace Dysnomia {
         Iron* Theta;
         int Gamma = 1;
 
-        Sue() {
+        Skin() {
             if (Math::POETRY > 0)
                 cout << "Sue ";
             Mu = new Gua();
@@ -44,7 +44,7 @@ namespace Dysnomia {
             return Alpha;
         }
 
-        ~Sue() {
+        ~Skin() {
             if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Upsilon->Rod->Gamma <= 1 && Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }

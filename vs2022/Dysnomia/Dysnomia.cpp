@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "42_Sue.h"
+#include "42_Skin.h"
 
 using namespace Dysnomia;
 
@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Sue* Mu = new Sue();
+    Skin* Mu = new Skin();
 
     int i = 453; 
 }
