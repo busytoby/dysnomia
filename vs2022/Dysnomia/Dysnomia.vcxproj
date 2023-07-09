@@ -169,7 +169,7 @@
     <ClInclude Include="39_Meng.h" />
     <ClInclude Include="40_En.h" />
     <ClInclude Include="41_Gua.h" />
-    <ClInclude Include="42_Skin.h" />
+    <ClInclude Include="42_剝.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />

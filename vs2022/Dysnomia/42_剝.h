@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 #include "41_Gua.h"
 
 namespace Dysnomia {
-    class Skin {
+    class 剝 {
     public:
         Gua* Mu;
         Aluminium* Rho;
@@ -15,9 +15,9 @@ namespace Dysnomia {
         Iron* Theta;
         int Gamma = 1;
 
-        Skin() {
+        剝() {
             if (Math::POETRY > 0)
-                cout << "Skin ";
+                cout << "剝 ";
             Mu = new Gua();
             Rho = new Aluminium(Mu->Tau);
             Psi = Mu->Eta->Kappa(Rho);
@@ -44,7 +44,7 @@ namespace Dysnomia {
             return Alpha;
         }
 
-        ~Skin() {
+        ~剝() {
             if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Upsilon->Rod->Gamma <= 1 && Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
