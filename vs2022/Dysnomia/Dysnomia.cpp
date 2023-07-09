@@ -16,6 +16,7 @@ int main()
     Faung* Rho = Mu->Theta->Omicron();
     Faung* Psi = Mu->Mu->Upsilon->Beta();
     Faung* Nu = Mu->Eta->Delta(Psi, Rho);
+    Aluminium* Eta = new Aluminium(Nu);
 
-    int i = 459; 
+    int i = 466; 
 }
