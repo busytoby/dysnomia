@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     剝* Mu = new 剝();
+    Faung* Rho = Mu->Theta->Omicron();
 
     int i = 453; 
 }
