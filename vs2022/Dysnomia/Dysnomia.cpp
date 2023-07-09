@@ -15,6 +15,7 @@ int main()
     剝* Mu = new 剝();
     Faung* Rho = Mu->Theta->Omicron();
     Faung* Psi = Mu->Mu->Upsilon->Beta();
+    Faung* Nu = Mu->Eta->Delta(Psi, Rho);
 
-    int i = 453; 
+    int i = 459; 
 }
