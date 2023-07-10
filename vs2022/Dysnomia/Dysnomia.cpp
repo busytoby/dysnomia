@@ -18,6 +18,7 @@ int main()
     Faung* Nu = Mu->Eta->Delta(Psi, Rho);
     Aluminium* Eta = new Aluminium(Nu);
     Faung* Sigma = Mu->Theta->Kappa(Eta);
+    Faung* Upsilon = Mu->Theta->Delta(Sigma, Rho);
 
-    double i = 481.4; 
+    int i = 484; 
 }
