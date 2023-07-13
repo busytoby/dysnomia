@@ -58,6 +58,22 @@ namespace Dysnomia {
 			Theta = Tau->Pi();
 		}
 
+		Sulphur(Aluminium* Beta, Aluminium* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Sulphur ";
+			Beta->Gamma++;
+			Beta->Gamma++;
+			Mu = Beta;
+			Rho = Mu->Pi();
+			Psi = Omicron;
+			Nu = new Faung(Mu->Theta->Cone->Base, Mu->Theta->Cone->Element, Mu->Theta->Cone->Manifold, Mu->Theta->Cone->Ring);
+			Eta = new Fa();
+			Sigma = new Faung(Eta, Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
+			Upsilon = Psi->Pi();
+			Tau = new Aluminium(Upsilon, Mu->Theta->Cone->Base, Mu->Theta->Rod->Signal, Mu->Theta->Cone->Signal, Mu->Theta->Cone->Tau);
+			Theta = Tau->Pi();
+		}
+
 		Sulphur(Faung* Beta, Faung* Iota, Faung* Omicron, Faung* Lambda) {
 			if (Math::POETRY > 0)
 				cout << "Sulphur ";
