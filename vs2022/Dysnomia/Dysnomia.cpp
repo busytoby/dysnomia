@@ -14,6 +14,7 @@ int main()
 
     Sunnah* Mu = new Sunnah();
     Faung* Rho = Mu->Mu->Eta->Kappa(Mu->Theta);
+    Aluminium* Psi = new Aluminium(Rho);
 
-    double i = 491.414141414141414141414141414141414141414141414141414141415; 
+    double i = 494; 
 }
