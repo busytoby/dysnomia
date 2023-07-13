@@ -176,6 +176,7 @@
     <ClInclude Include="Host.h" />
     <ClInclude Include="Pin.h" />
     <ClInclude Include="Sie.h" />
+    <ClInclude Include="Sunnah.h" />
     <ClInclude Include="Wou.h" />
     <ClInclude Include="Faung.h" />
     <ClInclude Include="01_Aluminium.h" />
