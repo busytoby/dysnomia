@@ -130,5 +130,10 @@ namespace Dysnomia {
         Faung* Omega(Faung* Alpha, Faung* Pi) {
             return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
         }
+
+        // SO(11) Versors
+        Faung* Phi(Sulphur* Beta, Fa* Omicron) {
+            return new Faung(Beta->Tau->Pi(), Omicron);
+        }
 	};
 }

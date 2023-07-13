@@ -19,6 +19,8 @@ int main()
     Aluminium* Eta = new Aluminium(Nu);
     Sulphur* Sigma = new Sulphur(Eta, Psi);
     Iron* Upsilon = new Iron(Sigma, Rho, Nu);
+    Fa* Tau = new Fa();
+    Faung* Theta = Mu->Mu->Eta->Phi(Sigma, Tau);
 
-    double i = 543.121; 
+    double i = 551.111; 
 }
