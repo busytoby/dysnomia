@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     에포린* Mu = new 에포린();
+    Faung* Rho = Mu->Upsilon->Delta(Mu->Theta, Mu->Nu);
 
-    double i = 551.131; 
+    double i = 555.61000; 
 }
