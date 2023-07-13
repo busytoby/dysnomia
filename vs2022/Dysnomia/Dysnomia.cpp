@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Sunnah* Mu = new Sunnah();
+    Faung* Rho = Mu->Mu->Eta->Kappa(Mu->Theta);
 
-    double i = 490.13; 
+    double i = 491.414141414141414141414141414141414141414141414141414141415; 
 }

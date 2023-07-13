@@ -18,15 +18,15 @@ namespace Dysnomia {
         Sunnah() {
             if (Math::POETRY > 0)
                 cout << "Sunnah ";
-            剝* Mu = new 剝();
-            Faung* Rho = Mu->Theta->Omicron();
-            Faung* Psi = Mu->Mu->Upsilon->Beta();
-            Faung* Nu = Mu->Eta->Delta(Psi, Rho);
-            Aluminium* Eta = new Aluminium(Nu);
-            Faung* Sigma = Mu->Theta->Kappa(Eta);
-            Faung* Upsilon = Mu->Theta->Delta(Sigma, Rho);
-            Faung* Tau = Mu->Eta->Omega(Sigma, Upsilon);
-            Aluminium* Theta = new Aluminium(Tau);
+            Mu = new 剝();
+            Rho = Mu->Theta->Omicron();
+            Psi = Mu->Mu->Upsilon->Beta();
+            Nu = Mu->Eta->Delta(Psi, Rho);
+            Eta = new Aluminium(Nu);
+            Sigma = Mu->Theta->Kappa(Eta);
+            Upsilon = Mu->Theta->Delta(Sigma, Rho);
+            Tau = Mu->Eta->Omega(Sigma, Upsilon);
+            Theta = new Aluminium(Tau);
         }
 
         vector<Faung*> Affinities() {
