@@ -19,6 +19,8 @@ int main()
     Faung* Eta = Mu->Mu->Mu->Eta->Kappa(Psi);
     Faung* Sigma = Mu->Mu->Mu->Theta->Delta(Eta, Nu);
     Faung* Upsilon = Mu->Mu->Mu->Theta->Delta(Nu, Eta);
+    Faung* Tau = Mu->Mu->Mu->Eta->Omega(Sigma, Upsilon);
+    Faung* Theta = Mu->Mu->Mu->Eta->Omega(Upsilon, Sigma);
 
-    int i = 599; 
+    int i = 799; 
 }
