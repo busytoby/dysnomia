@@ -18,6 +18,7 @@ int main()
     Faung* Nu = Mu->Mu->Theta->Omega(Mu->Sigma, Mu->Upsilon);
     Aluminium* Eta = new Aluminium(Nu);
     Sulphur* Sigma = new Sulphur(Eta, Psi);
+    Iron* Upsilon = new Iron(Sigma, Rho, Nu);
 
-    double i = 499; 
+    double i = 543.121; 
 }
