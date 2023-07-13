@@ -14,6 +14,8 @@ int main()
 
     에포린* Mu = new 에포린();
     Faung* Rho = Mu->Upsilon->Delta(Mu->Theta, Mu->Nu);
+    Aluminium* Psi = new Aluminium(Rho);
+    Faung* Nu = Mu->Upsilon->Kappa(Psi);
 
-    double i = 555.61000; 
+    int i = 559; 
 }
