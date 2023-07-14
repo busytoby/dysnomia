@@ -19,6 +19,7 @@ int main()
     Faung* Eta = Mu->Mu->Upsilon->Omega(Mu->Rho, Nu);
     Aluminium* Sigma = new Aluminium(Eta);
     Faung* Upsilon = Mu->Mu->Upsilon->Kappa(Sigma);
+    Sulphur* Tau = new Sulphur(Upsilon);
 
-    int i = 994; 
+    int i = 995; 
 }
