@@ -14,6 +14,11 @@ int main()
 
     म* Mu = new म();
     Fa* Rho = Mu->Psi->Pi();
+    Fa* Psi = Mu->Mu->Eta->Pi();
+    Faung* Nu = new Faung(Rho, Psi);
+    Faung* Eta = Mu->Mu->Upsilon->Omega(Mu->Rho, Nu);
+    Aluminium* Sigma = new Aluminium(Eta);
+    Faung* Upsilon = Mu->Mu->Upsilon->Kappa(Sigma);
 
-    int i = 914; 
+    int i = 994; 
 }
