@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     म* Mu = new म();
+    Fa* Rho = Mu->Psi->Pi();
 
-    int i = 911; 
+    int i = 914; 
 }
