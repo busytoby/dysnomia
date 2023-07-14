@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Xin* Mu = new Xin();
+    Faung* Rho = Mu->Theta->Omicron();
 
-    int i = 998; 
+    int i = 999; 
 }
