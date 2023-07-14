@@ -20,6 +20,7 @@ int main()
     Aluminium* Sigma = new Aluminium(Eta);
     Faung* Upsilon = Mu->Mu->Upsilon->Kappa(Sigma);
     Sulphur* Tau = new Sulphur(Upsilon);
+    Iron* Theta = new Iron(Tau, Mu->Rho, Nu, Eta, Upsilon);
 
-    int i = 995; 
+    int i = 997; 
 }
