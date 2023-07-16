@@ -173,6 +173,7 @@
     <ClInclude Include="44_에포린.h" />
     <ClInclude Include="45_म.h" />
     <ClInclude Include="46_Xin.h" />
+    <ClInclude Include="47_ᠳ‍ᠥ‍ᠢ.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
