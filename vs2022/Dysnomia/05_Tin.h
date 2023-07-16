@@ -46,6 +46,22 @@ namespace Dysnomia {
 			if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
+
+		Tin(Qiao* Beta, Qiao* Omicron) {
+			if (Math::POETRY > 0)
+				cout << "Tin ";
+			Beta->Gamma++;
+			Omicron->Gamma++;
+			Mu = Beta;
+			Rho = Omicron;
+			Psi = Mu->Sigma->Beta();
+			Nu = Rho->Sigma->Beta();
+			Eta = Mu->Sigma->Delta(Psi, Nu);
+			Sigma = new Sulphur(Eta);
+			Upsilon = new Iron(Sigma, Nu, Psi);
+			Tau = new Iron(Upsilon->Upsilon, Psi, Nu);
+			Theta = new Iron(Tau->Upsilon, Upsilon->Omicron(), Tau->Omicron());
+		}
 		
 		Tin(Faung* Beta) {
 			if (Math::POETRY > 0)

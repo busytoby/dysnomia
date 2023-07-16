@@ -18,6 +18,9 @@ int main()
     Qiao* Nu = new Qiao(Psi, Mu->Tau, Mu->Nu, Rho);
     Iron* Eta = Nu->Omega();
     Qiao* Sigma = new Qiao(Eta);
+    Tin* Upsilon = new Tin(Nu, Sigma);
+    Faung* Tau = Upsilon->Tau->Omicron();
+    Faung* Theta = Upsilon->Theta->Beta();
 
     int i = 999; 
 }
