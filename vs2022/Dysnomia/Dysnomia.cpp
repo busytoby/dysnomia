@@ -14,6 +14,9 @@ int main()
 
     ᠳ‍ᠥ‍ᠢ* Mu = new ᠳ‍ᠥ‍ᠢ();
     Faung* Rho = Mu->Theta->Omicron();
+    Faung* Psi = Mu->Mu->Mu->Mu->Upsilon->Delta(Rho, Mu->Sigma);
+    Aluminium* Nu = new Aluminium(Psi);
+    Faung* Eta = Mu->Theta->Kappa(Nu);
 
     int i = 999; 
 }
