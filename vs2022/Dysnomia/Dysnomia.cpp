@@ -17,6 +17,7 @@ int main()
     Iron* Psi = new Iron(Rho, Mu->Tau, Mu->Nu);
     Qiao* Nu = new Qiao(Psi, Mu->Tau, Mu->Nu, Rho);
     Iron* Eta = Nu->Omega();
+    Qiao* Sigma = new Qiao(Eta);
 
     int i = 999; 
 }
