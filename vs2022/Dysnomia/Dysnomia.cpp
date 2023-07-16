@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     ᠳ‍ᠥ‍ᠢ* Mu = new ᠳ‍ᠥ‍ᠢ();
+    Faung* Rho = Mu->Theta->Omicron();
 
     int i = 999; 
 }
