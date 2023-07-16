@@ -13,6 +13,10 @@ int main()
     Math::POETRY = 0;
 
     演* Mu = new 演();
+    Faung* Rho = Mu->Mu->Theta->Beta();
+    Faung* Psi = Mu->Upsilon->Omicron();
+    Faung* Nu = Mu->Theta->Omega(Rho, Psi);
+
 
     int i = 999; 
 }
