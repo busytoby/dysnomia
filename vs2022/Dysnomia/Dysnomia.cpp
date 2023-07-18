@@ -15,7 +15,12 @@ int main()
     Mei* Mu = new Mei();
     Iron* Rho = Mu->Sigma->Omega();
     Eun* Psi = new Eun(Rho);
-    Eun* Nu = new Eun(Mu->Upsilon, Rho);
+    Song* Nu = new Song(Psi, Mu->Tau);
+    Tong* Eta = new Tong(Nu, Mu->Tau);
+    Nat* Sigma = new Nat(Eta, Psi);
+    Eun* Upsilon = new Eun(Mu->Upsilon, Rho);
+    Song* Tau = new Song(Upsilon, Mu->Theta);
+    Tong* Theta = new Tong(Tau, Mu->Theta);
 
     int i = 999; 
 }
