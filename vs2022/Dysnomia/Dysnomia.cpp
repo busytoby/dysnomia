@@ -18,5 +18,5 @@ int main()
     Faung* Nu = Mu->Rho->Psi->Delta(Rho, Psi);
     Faung* Eta = Mu->Mu->Theta->Nu->Omega(Nu, Mu->Theta->Upsilon);
 
-    cout << "Ready 𐡔 Planet 999";
+    cout << "Ready 𐡔 Nebulae 1";
 }
