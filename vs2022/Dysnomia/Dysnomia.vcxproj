@@ -175,6 +175,7 @@
     <ClInclude Include="46_Xin.h" />
     <ClInclude Include="47_ᠳ‍ᠥ‍ᠢ.h" />
     <ClInclude Include="49_行.h" />
+    <ClInclude Include="50_Mei.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
