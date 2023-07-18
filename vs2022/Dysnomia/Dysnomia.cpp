@@ -15,6 +15,7 @@ int main()
     𐡔* Mu = new 𐡔();
     Faung* Rho = Mu->Mu->Tau->Tau->Omega(Mu->Sigma, Mu->Eta);
     Faung* Psi = Mu->Mu->Tau->Tau->Omega(Mu->Upsilon, Mu->Rho->Upsilon);
+    Faung* Nu = Mu->Rho->Psi->Delta(Rho, Psi);
 
     cout << "Ready 𐡔 Planet 999";
 }
