@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "47_ᠳ‍ᠥ‍ᠢ.h"
 
+#define RAPHE_NEBULAE FALSE
+
 namespace Dysnomia {
     class 演 {
     public:
@@ -23,8 +25,11 @@ namespace Dysnomia {
             Psi = Mu->Mu->Mu->Mu->Upsilon->Delta(Rho, Mu->Sigma);
             Nu = new Aluminium(Psi);
             Eta = Mu->Theta->Kappa(Nu);
-            Sigma = new Sulphur(Eta);
-            Upsilon = new Iron(Sigma, Rho, Nu->Rho, Nu->Upsilon, Nu->Theta);
+            Sigma = new Sulphur(Eta);          
+            if(RAPHE_NEBULAE)
+                Upsilon = new Iron(Sigma, Nu->Rho, Rho, Nu->Upsilon, Nu->Theta);
+            else
+                Upsilon = new Iron(Sigma, Rho, Nu->Rho, Nu->Upsilon, Nu->Theta);
             Tau = Upsilon->Beta();
             Theta = new Iron(Mu->Tau, Tau, Sigma->Mu->Rho);
         }
