@@ -14,5 +14,5 @@ int main()
 
     Guan* Mu = new Guan();
 
-    int i = 999; 
+    cout << "Ready Guan Planet 999";
 }
