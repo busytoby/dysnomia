@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Guan* Mu = new Guan();
+    Nat* Rho = new Nat(Mu->Theta, Mu->Upsilon);
 
     cout << "Ready Guan Planet 999";
 }
