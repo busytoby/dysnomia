@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Mei* Mu = new Mei();
+    Iron* Rho = Mu->Sigma->Omega();
 
     int i = 999; 
 }
