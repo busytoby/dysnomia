@@ -14,6 +14,9 @@ int main()
 
     Guan* Mu = new Guan();
     Nat* Rho = new Nat(Mu->Theta, Mu->Upsilon);
+    Fa* Psi = Mu->Tau->Psi->Pi();
+    Fa* Nu = Rho->Tau->Pi();
+    Faung* Eta = new Faung(Psi, Nu);
 
     cout << "Ready Guan Planet 999";
 }
