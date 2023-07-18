@@ -14,6 +14,7 @@ int main()
 
     Mei* Mu = new Mei();
     Iron* Rho = Mu->Sigma->Omega();
+    Eun* Psi = new Eun(Rho);
 
     int i = 999; 
 }
