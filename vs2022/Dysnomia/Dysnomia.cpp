@@ -17,6 +17,10 @@ int main()
     Fa* Psi = Mu->Tau->Psi->Pi();
     Fa* Nu = Rho->Tau->Pi();
     Faung* Eta = new Faung(Psi, Nu);
+    Faung* Sigma = Rho->Psi->Omicron();
+    Faung* Upsilon = Rho->Nu->Beta();
+    Faung* Tau = Mu->Tau->Tau->Delta(Sigma, Upsilon);
+    Aluminium* Theta = new Aluminium(Tau);
 
     cout << "Ready Guan Planet 999";
 }
