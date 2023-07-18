@@ -19,6 +19,7 @@ int main()
     Faung* Eta = Mu->Mu->Theta->Nu->Omega(Nu, Mu->Theta->Upsilon);
     Sulphur* Sigma = new Sulphur(Rho, Psi, Nu, Eta);
     Iron* Tau = new Iron(Mu->Rho->Mu->Rho->Mu->Sigma, Rho, Psi, Nu, Eta);
+    Faung* Theta = Tau->Omicron();
 
     cout << "Ready 𐡔 Nebulae 1";
 }
