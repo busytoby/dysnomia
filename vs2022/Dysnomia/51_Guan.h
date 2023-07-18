@@ -51,6 +51,7 @@ namespace Dysnomia {
         }
 
         ~Guan() {
+            if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
