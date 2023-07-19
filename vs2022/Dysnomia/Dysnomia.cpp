@@ -19,6 +19,11 @@ int main()
     Rho.push_back(Mu->Theta->Eta->Upsilon);
     Rho.push_back(Mu->Theta->Sigma->Mu->Sigma);
     Qiao* Psi = new Qiao(Mu->Upsilon->Mu, Rho.front());
+    Iron* Nu = new Iron(Psi->Eta, Psi->Mu->Theta->Upsilon, Rho.back());
+    Faung* Eta = Nu->Beta();
+    Faung* Sigma = Nu->Omicron();
+    Faung* Upsilon = Mu->Sigma->Delta(Eta, Sigma);
+    Aluminium* Theta = new Aluminium(Upsilon);
 
-    cout << "Ready UI 6";
+    cout << "Ready";
 }
