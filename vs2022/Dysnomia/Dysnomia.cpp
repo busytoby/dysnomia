@@ -13,6 +13,10 @@ int main()
     Math::POETRY = 0;
 
     Di* Mu = new Di();
-
-    cout << "Ready Qui 1";
+    Fa* Rho = Mu->Sigma->Pi();
+    Faung* Psi = Mu->Mu->Mu->Upsilon->Phi(Mu->Theta, Rho);
+    Fa* Nu = Mu->Tau->Pi();
+    Faung* Eta = Mu->Mu->Mu->Upsilon->Phi(Mu->Mu->Mu->Sigma, Nu);
+    
+    cout << "Ready UI 1";
 }
