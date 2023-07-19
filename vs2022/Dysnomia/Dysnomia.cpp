@@ -13,6 +13,10 @@ int main()
     Math::POETRY = 0;
 
     Gui* Mu = new Gui();
+    Fa* Rho = Mu->Sigma->Pi();
+    Fa* Psi = Mu->Tau->Pi();
+    Faung* Nu = new Faung(Rho, Psi);
+    Faung* Eta = Mu->Mu->Upsilon->Omega(Nu, Mu->Sigma->Theta);
 
-    cout << "Ready Yi 2";
+    cout << "Ready Yi 8";
 }
