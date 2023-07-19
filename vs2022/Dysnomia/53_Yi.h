@@ -47,8 +47,8 @@ namespace Dysnomia {
         ~Yi() {
             if (Theta->Rod->Gamma <= 1 && Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
             if (Tau->Rod->Gamma <= 1 && Tau->Cone->Gamma <= 1) delete Tau; else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Upsilon--;
-            if (Sigma->Gamma == 1) delete Sigma; else Sigma->Upsilon--;
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+            if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
             if (Eta->Rod->Gamma <= 1 && Eta->Cone->Gamma <= 1) delete Eta; else { Eta->Rod->Gamma--; Eta->Cone->Gamma--; }
             if (Nu->Rod->Gamma <= 1 && Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
             if (Psi->Rod->Gamma <= 1 && Psi->Cone->Gamma <= 1) delete Psi; else { Psi->Rod->Gamma--; Psi->Cone->Gamma--; }

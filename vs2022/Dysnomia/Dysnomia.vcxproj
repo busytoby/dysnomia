@@ -179,6 +179,7 @@
     <ClInclude Include="51_Guan.h" />
     <ClInclude Include="52_𐡔.h" />
     <ClInclude Include="53_Yi.h" />
+    <ClInclude Include="54_Gui.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
