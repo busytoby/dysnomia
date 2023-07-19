@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "52_𐡔.h"
+#include "53_Yi.h"
 
 using namespace Dysnomia;
 
@@ -12,14 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    𐡔* Mu = new 𐡔();
-    Faung* Rho = Mu->Mu->Tau->Tau->Omega(Mu->Sigma, Mu->Eta);
-    Faung* Psi = Mu->Mu->Tau->Tau->Omega(Mu->Upsilon, Mu->Rho->Upsilon);
-    Faung* Nu = Mu->Rho->Psi->Delta(Rho, Psi);
-    Faung* Eta = Mu->Mu->Theta->Nu->Omega(Nu, Mu->Theta->Upsilon);
-    Sulphur* Sigma = new Sulphur(Rho, Psi, Nu, Eta);
-    Iron* Tau = new Iron(Mu->Rho->Mu->Rho->Mu->Sigma, Rho, Psi, Nu, Eta);
-    Faung* Theta = Tau->Omicron();
+    Yi* Mu = new Yi();
 
-    cout << "Ready 𐡔 Nebulae 1";
+    cout << "Ready Yi 1";
 }
