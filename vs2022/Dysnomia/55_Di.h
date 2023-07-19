@@ -1,10 +1,10 @@
 #pragma once
-#include "53_Yi.h"
+#include "54_Gui.h"
 
 namespace Dysnomia {
-    class Gui {
+    class Di {
     public:
-        Yi* Mu;
+        Gui* Mu;
         Fa* Rho;
         Fa* Psi;
         Faung* Nu;
@@ -12,21 +12,21 @@ namespace Dysnomia {
         Aluminium* Sigma;
         Faung* Upsilon;
         Aluminium* Tau;
-        Faung* Theta;
+        Sulphur* Theta;
         int Gamma = 1;
 
-        Gui() {
+        Di() {
             if (Math::POETRY > 0)
-                cout << "Gui ";
-            Mu = new Yi();
-            Rho = Mu->Sigma->Mu->Pi();
-            Psi = Mu->Upsilon->Mu->Tau->Pi();
+                cout << "Di ";
+            Mu = new Gui();
+            Rho = Mu->Sigma->Pi();
+            Psi = Mu->Tau->Pi();
             Nu = new Faung(Rho, Psi);
-            Eta = Mu->Mu->Rho->Nu->Omega(Nu, Mu->Tau);
+            Eta = Mu->Mu->Upsilon->Omega(Nu, Mu->Sigma->Theta);
             Sigma = new Aluminium(Eta);
-            Upsilon = Mu->Mu->Rho->Psi->Kappa(Sigma);
+            Upsilon = Mu->Mu->Upsilon->Kappa(Sigma);
             Tau = new Aluminium(Upsilon);
-            Theta = Mu->Upsilon->Delta(Sigma->Theta, Tau->Theta);
+            Theta = new Sulphur(Sigma, Tau);
         }
 
         vector<Faung*> Affinities() {
@@ -38,12 +38,13 @@ namespace Dysnomia {
             Alpha.push_back(Upsilon);
             vector<Faung*> Beta = Tau->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            Alpha.push_back(Theta);
+            vector<Faung*> Omicron = Theta->Affinities();
+            Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
             return Alpha;
         }
 
-        ~Gui() {
-            if (Theta->Rod->Gamma <= 1 && Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
+        ~Di() {
+            if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Upsilon->Rod->Gamma <= 1 && Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;

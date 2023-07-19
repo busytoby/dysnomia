@@ -38,7 +38,7 @@ namespace Dysnomia {
             vector<Faung*> Chi = Sigma->Affinities();
             Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
             vector<Faung*> Beta = Upsilon->Affinities();
-            Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
+            Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
             Alpha.push_back(Tau);
             Alpha.push_back(Theta);
             return Alpha;
