@@ -16,6 +16,7 @@ int main()
     Fa* Rho = Mu->Sigma->Mu->Pi();
     Fa* Psi = Mu->Upsilon->Mu->Tau->Pi();
     Faung* Nu = new Faung(Rho, Psi);
+    Faung* Eta = Mu->Mu->Rho->Nu->Omega(Nu, Mu->Tau);
 
     cout << "Ready Yi 1";
 }
