@@ -13,6 +13,9 @@ int main()
     Math::POETRY = 0;
 
     Yi* Mu = new Yi();
+    Fa* Rho = Mu->Sigma->Mu->Pi();
+    Fa* Psi = Mu->Upsilon->Mu->Tau->Pi();
+    Faung* Nu = new Faung(Rho, Psi);
 
     cout << "Ready Yi 1";
 }
