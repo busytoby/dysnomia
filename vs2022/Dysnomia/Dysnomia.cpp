@@ -17,6 +17,10 @@ int main()
     Fa* Psi = Mu->Upsilon->Mu->Tau->Pi();
     Faung* Nu = new Faung(Rho, Psi);
     Faung* Eta = Mu->Mu->Rho->Nu->Omega(Nu, Mu->Tau);
+    Aluminium* Sigma = new Aluminium(Eta);
+    Faung* Upsilon = Mu->Mu->Rho->Psi->Kappa(Sigma);
+    Aluminium* Tau = new Aluminium(Upsilon);
+    Faung* Theta = Mu->Upsilon->Delta(Sigma->Theta, Tau->Theta);
 
-    cout << "Ready Yi 1";
+    cout << "Ready Yi 2";
 }
