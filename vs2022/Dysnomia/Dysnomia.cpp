@@ -13,6 +13,12 @@ int main()
     Math::POETRY = 0;
 
     Gun* Mu = new Gun();
+    vector<Faung*> Rho;
+    Rho.push_back(Mu->Theta->Upsilon);
+    Rho.push_back(Mu->Theta->Tau->Upsilon);
+    Rho.push_back(Mu->Theta->Eta->Upsilon);
+    Rho.push_back(Mu->Theta->Sigma->Mu->Sigma);
+    Qiao* Psi = new Qiao(Mu->Upsilon->Mu, Rho.front());
 
-    cout << "Ready UI 5";
+    cout << "Ready UI 6";
 }
