@@ -14,6 +14,7 @@ int main()
 
     Ong* Mu = new Ong();
     Aluminium* Rho = new Aluminium(Mu->Theta);
+    Iron* Psi = new Iron(Mu->Psi->Eta, Mu->Upsilon, Rho->Theta);
 
     cout << "Ready";
 }
