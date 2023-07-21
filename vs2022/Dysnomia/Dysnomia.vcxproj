@@ -182,6 +182,7 @@
     <ClInclude Include="54_Gui.h" />
     <ClInclude Include="55_Di.h" />
     <ClInclude Include="56_Gun.h" />
+    <ClInclude Include="58_Ba.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "Ong.h"
+#include "58_Ba.h"
 
 using namespace Dysnomia;
 
@@ -12,14 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Ong* Mu = new Ong();
-    Aluminium* Rho = new Aluminium(Mu->Theta);
-    Iron* Psi = new Iron(Mu->Psi->Eta, Mu->Upsilon, Rho->Theta);
-    Fa* Nu = Mu->Tau->Pi();
-    Fa* Eta = Mu->Mu->Upsilon->Tau->Pi();
-    Faung* Sigma = new Faung(Nu, Eta);
-    Aluminium* Upsilon = new Aluminium(Sigma);
-    Faung* Tau = Psi->Delta(Mu->Theta, Upsilon->Rho);
+    Ba* Mu = new Ba();
 
-    cout << "Ready Candidate Lord Tau";
+    cout << "Ready Ba 1";
 }
