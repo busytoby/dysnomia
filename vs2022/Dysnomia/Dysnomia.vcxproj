@@ -186,6 +186,7 @@
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
     <ClInclude Include="Host.h" />
+    <ClInclude Include="Ong.h" />
     <ClInclude Include="Pin.h" />
     <ClInclude Include="Sie.h" />
     <ClInclude Include="Sunnah.h" />
