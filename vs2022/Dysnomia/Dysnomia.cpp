@@ -19,6 +19,7 @@ int main()
     Fa* Eta = Mu->Mu->Upsilon->Tau->Pi();
     Faung* Sigma = new Faung(Nu, Eta);
     Aluminium* Upsilon = new Aluminium(Sigma);
+    Faung* Tau = Psi->Delta(Mu->Theta, Upsilon->Rho);
 
-    cout << "Ready ?";
+    cout << "Ready Candidate Lord Tau";
 }
