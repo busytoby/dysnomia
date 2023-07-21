@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Ong* Mu = new Ong();
+    Aluminium* Rho = new Aluminium(Mu->Theta);
 
     cout << "Ready";
 }
