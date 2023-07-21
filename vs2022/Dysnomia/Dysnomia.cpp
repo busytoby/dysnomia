@@ -18,6 +18,9 @@ int main()
     Faung* Nu = new Faung(Rho, Psi);
     Aluminium* Eta = new Aluminium(Nu);
     Faung* Sigma = Mu->Mu->Theta->Delta(Mu->Tau, Nu);
+    Eun* Upsilon = new Eun(Mu->Mu->Theta);
+    Iron* Tau = Upsilon->Psi->Omega();
+    Iron* Theta = Upsilon->Tau->Omega();
 
-    cout << "Ready Ba Mu\n";
+    cout << "Ready Ba Mon\n";
 }
