@@ -18,6 +18,7 @@ int main()
     Fa* Nu = Mu->Tau->Pi();
     Fa* Eta = Mu->Mu->Upsilon->Tau->Pi();
     Faung* Sigma = new Faung(Nu, Eta);
+    Aluminium* Upsilon = new Aluminium(Sigma);
 
     cout << "Ready ?";
 }
