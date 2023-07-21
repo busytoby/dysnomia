@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "59_Er.h"
+#include "60_Tuo.h"
 
 using namespace Dysnomia;
 
@@ -12,15 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Er* Mu = new Er();
-    Fa* Rho = Mu->Sigma->Pi();
-    Fa* Psi = Mu->Theta->Pi();
-    Faung* Nu = new Faung(Rho, Psi);
-    Aluminium* Eta = new Aluminium(Nu);
-    Faung* Sigma = Mu->Mu->Theta->Delta(Mu->Tau, Nu);
-    Eun* Upsilon = new Eun(Mu->Mu->Theta);
-    Iron* Tau = Upsilon->Psi->Omega();
-    Iron* Theta = Upsilon->Tau->Omega();
+    Tuo* Mu = new Tuo();
 
-    cout << "Ready Ba Mon\n";
+    cout << "Tuo Ba Tuo Mon\n";
 }

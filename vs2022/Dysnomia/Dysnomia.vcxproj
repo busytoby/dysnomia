@@ -184,6 +184,7 @@
     <ClInclude Include="56_Gun.h" />
     <ClInclude Include="58_Ba.h" />
     <ClInclude Include="59_Er.h" />
+    <ClInclude Include="60_Tuo.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
