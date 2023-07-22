@@ -16,7 +16,12 @@ int main()
     Tung* Rho = new Tung(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Rho, Mu->Upsilon, Mu->Mu->Mu->Mu->Psi);
     Xiao* Psi = new Xiao(Rho);
     Tsuan* Nu = new Tsuan(Rho, Psi, Mu->Upsilon->Mu->Sigma, Mu->Mu->Mu->Mu->Psi);
-    Fao* Eta = new Fao(Nu, Psi, Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Rho);
+    pair<Eun*, Eun*> Beta = Nu->Kappa();
+    Eun* Eta = Beta.first;
+    Eun* Sigma = Beta.second;
+    Fao* Upsilon = new Fao(Nu, Psi, Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Rho);
+    Feng* Tau = new Feng(Upsilon, Rho);
+    Tsuan* Theta = Upsilon->Delta(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Eta);
 
-    cout << "Tuo Ba Tuo Mon Tung Xiao Tsuan\n";
+    cout << "Lian Ready One\n";
 }
