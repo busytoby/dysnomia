@@ -14,6 +14,9 @@ int main()
 
     Tuo* Mu = new Tuo();
     Tung* Rho = new Tung(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Rho, Mu->Upsilon, Mu->Mu->Mu->Mu->Psi);
+    Xiao* Psi = new Xiao(Rho);
+    Tsuan* Nu = new Tsuan(Rho, Psi, Mu->Upsilon->Mu->Sigma, Mu->Mu->Mu->Mu->Psi);
+    Fao* Eta = new Fao(Nu, Psi, Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Rho);
 
-    cout << "Tuo Ba Tuo Mon Tung\n";
+    cout << "Tuo Ba Tuo Mon Tung Xiao Tsuan\n";
 }
