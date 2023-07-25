@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Lian* Theta = new Lian();
+    Life* Tau = Theta->Tau->Rho->Pi();
 
     cout << "Lian Ready One\n";
 }
