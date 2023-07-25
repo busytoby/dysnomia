@@ -203,6 +203,7 @@
     <ClInclude Include="02_Sulphur.h" />
     <ClInclude Include="Xue.h" />
     <ClInclude Include="演.h" />
+    <ClInclude Include="큰.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -30,7 +30,7 @@ namespace Dysnomia {
         }
 
         vector<Faung*> Affinities() {
-            vector<Faung*> Alpha(Theta->Affinities());
+            vector<Faung*> Alpha(Mu->Affinities());
             Alpha.push_back(Rho);
             Alpha.push_back(Psi);
             Alpha.push_back(Nu);
@@ -39,7 +39,6 @@ namespace Dysnomia {
             Alpha.push_back(Sigma);
             vector<Faung*> Iota = Upsilon->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-            Alpha.push_back(Sigma);
             vector<Faung*> Xi = Tau->Affinities();
             Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
             vector<Faung*> Delta = Theta->Affinities();
