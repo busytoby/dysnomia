@@ -14,6 +14,8 @@ int main()
 
     Quo* Theta = new Quo();
     Faung* Tau = Theta->Upsilon->Kappa(Theta->Mu);
+    Faung* Upsilon = Theta->Tau->Theta->Tau->Kappa(Theta->Mu);
+    Faung* Sigma = Theta->Theta->Upsilon->Nu->Sigma->Omega(Tau, Upsilon);
 
-    cout << "Status Quo Ready\n";
+    cout << "Ready Status Quo Participant One\n";
 }
