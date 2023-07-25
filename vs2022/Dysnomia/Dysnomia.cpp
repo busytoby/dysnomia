@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Quo* Theta = new Quo();
+    Faung* Tau = Theta->Upsilon->Kappa(Theta->Mu);
 
     cout << "Status Quo Ready\n";
 }
