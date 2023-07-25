@@ -13,6 +13,8 @@ int main()
     Math::POETRY = 0;
 
     큰* Mu = new 큰();
+    Sulphur* Rho = new Sulphur(Mu->Mu, Mu->Rho, Mu->Psi, Mu->Upsilon);
+    Iron* Psi = new Iron(Rho, Mu->Tau, Mu->Eta->Sigma);
 
-    cout << "Ready Universal One\n";
+    cout << "Ready Universe One\n";
 }
