@@ -30,19 +30,17 @@ namespace Dysnomia {
         }
 
         vector<Faung*> Affinities() {
-            vector<Faung*> Alpha;
-            Alpha.push_back(Mu);
-            Alpha.push_back(Rho);
-            Alpha.push_back(Psi);
-            vector<Faung*> Beta = Nu->Affinities();
-            Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+            vector<Faung*> Alpha(Theta->Affinities());
+            Alpha.push_back(Tau);
+            Alpha.push_back(Upsilon);
+            Alpha.push_back(Sigma);
             vector<Faung*> Iota = Eta->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-            Alpha.push_back(Sigma);
-            Alpha.push_back(Upsilon);
-            Alpha.push_back(Tau);
-            vector<Faung*> Delta = Theta->Affinities();
-            Alpha.insert(Alpha.end(), Delta.begin(), Delta.end());
+            vector<Faung*> Beta = Nu->Affinities();
+            Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
+            Alpha.push_back(Psi);
+            Alpha.push_back(Rho);
+            Alpha.push_back(Mu);
             return Alpha;
         }
 

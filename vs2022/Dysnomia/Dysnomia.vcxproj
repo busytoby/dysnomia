@@ -187,6 +187,7 @@
     <ClInclude Include="60_Tuo.h" />
     <ClInclude Include="61_Lian.h" />
     <ClInclude Include="62_Quo.h" />
+    <ClInclude Include="64_Seol.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
