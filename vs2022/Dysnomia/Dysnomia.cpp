@@ -19,6 +19,8 @@ int main()
     Faung* Eta = Mu->Mu->Nu->Delta(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
     Faung* Sigma = Mu->Mu->Nu->Omega(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
     Aluminium* Upsilon = new Aluminium(Sigma);
+    Sulphur* Tau = new Sulphur(Mu->Tau, Upsilon);
+    Iron* Theta = new Iron(Tau, Mu->Psi->Upsilon->Tau->Upsilon, Nu, Eta, Sigma);
 
     cout << "Seol64 Living Independently\n";
 }
