@@ -14,6 +14,13 @@ int main()
 
     Lian* Theta = new Lian();
     Life* Tau = Theta->Tau->Rho->Pi();
+    Iron* Upsilon = Theta->Rho->Nu->Omega();
+    Faung* Sigma = Tau->Sigma->Theta->Delta(Theta->Mu->Sigma, Tau->Theta->Mu->Theta);
+    Aluminium* Eta = new Aluminium(Sigma);
+    Faung* Nu = Upsilon->Kappa(Eta);
+    Faung* Psi = Theta->Upsilon->Nu->Sigma->Kappa(Eta);
+    Faung* Rho = Tau->Nu->Delta(Nu, Psi);
+    Aluminium* Mu = new Aluminium(Rho);
 
-    cout << "Lian Ready One\n";
+    cout << "Ready\n";
 }
