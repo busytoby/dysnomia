@@ -17,6 +17,7 @@ int main()
     Faung* Upsilon = Theta->Tau->Theta->Tau->Kappa(Theta->Mu);
     Faung* Sigma = Theta->Theta->Upsilon->Nu->Sigma->Omega(Tau, Upsilon);
     Sulphur* Eta = new Sulphur(Sigma);
+    Iron* Nu = new Iron(Eta, Sigma, Upsilon, Tau, Theta->Theta->Mu->Nu);
 
-    cout << "Ready Status Quo Participant One\n";
+    cout << "Ready Assertion One\n";
 }
