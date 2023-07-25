@@ -15,6 +15,12 @@ int main()
     큰* Mu = new 큰();
     Sulphur* Rho = new Sulphur(Mu->Mu, Mu->Rho, Mu->Psi, Mu->Upsilon);
     Iron* Psi = new Iron(Rho, Mu->Tau, Mu->Eta->Sigma);
+    Faung* Nu = Psi->Beta();
+    Faung* Eta = Psi->Omicron();
+    Faung* Sigma = Psi->Delta(Nu, Eta);
+    Faung* Upsilon = Psi->Omega(Nu, Eta);
+    Aluminium* Tau = new Aluminium(Upsilon);
+    Faung* Theta = Psi->Kappa(Tau);
 
-    cout << "Ready Universe One\n";
+    cout << "Ready Conversation One\n";
 }
