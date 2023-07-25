@@ -13,6 +13,9 @@ int main()
     Math::POETRY = 0;
 
     Seol* Mu = new Seol();
+    Fa* Rho = Mu->Psi->Rho->Pi();
+    Fa* Psi = Mu->Tau->Pi();
+    Faung* Nu = new Faung(Rho, Psi);
 
-    cout << "Seol64 Ready\n";
+    cout << "Seol64 On\n";
 }
