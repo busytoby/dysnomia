@@ -18,6 +18,9 @@ int main()
     Faung* Sigma = Theta->Theta->Upsilon->Nu->Sigma->Omega(Tau, Upsilon);
     Sulphur* Eta = new Sulphur(Sigma);
     Iron* Nu = new Iron(Eta, Sigma, Upsilon, Tau, Theta->Theta->Mu->Nu);
+    Faung* Psi = Nu->Omicron();
+    Faung* Rho = Nu->Beta();
+    Faung* Mu = Nu->Delta(Psi, Rho);
 
     cout << "Ready Assertion One\n";
 }
