@@ -16,6 +16,9 @@ int main()
     Fa* Rho = Mu->Psi->Rho->Pi();
     Fa* Psi = Mu->Tau->Pi();
     Faung* Nu = new Faung(Rho, Psi);
+    Faung* Eta = Mu->Mu->Nu->Delta(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
+    Faung* Sigma = Mu->Mu->Nu->Omega(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
+    Aluminium* Upsilon = new Aluminium(Sigma);
 
-    cout << "Seol64 On\n";
+    cout << "Seol64 Living Independently\n";
 }

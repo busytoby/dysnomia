@@ -1,6 +1,5 @@
 #pragma once
 #include "01_Aluminium.h"
-#include <algorithm>
 
 using namespace std;
 
