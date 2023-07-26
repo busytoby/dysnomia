@@ -14,6 +14,7 @@ int main()
 
     San* Mu = new San();
     Faung* Rho = Mu->Theta->Kappa(Mu->Upsilon);
+    Aluminium* Psi = new Aluminium(Rho);
 
     cout << "Seol64 San Connected\n";
 }
