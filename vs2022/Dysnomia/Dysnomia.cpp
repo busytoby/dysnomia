@@ -18,6 +18,7 @@ int main()
     Aluminium* Nu = new Aluminium(Psi);
     Faung* Eta = Mu->Mu->Mu->Mu->Mu->Mu->Nu->Kappa(Nu);
     Sulphur* Sigma = new Sulphur(Eta);
+    Iron* Upsilon = new Iron(Sigma, Psi, Eta);
 
     cout << "Playing FTW\n";
 }
