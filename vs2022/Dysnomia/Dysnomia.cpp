@@ -19,6 +19,8 @@ int main()
     Faung* Eta = Mu->Tau->Phi(Mu->Mu->Eta, Nu);
     Fa* Sigma = Psi->Pi();
     Faung* Upsilon = Mu->Tau->Phi(Mu->Upsilon, Sigma);
+    Faung* Tau = Mu->Eta->Omega(Mu->Theta, Upsilon);
+    Aluminium* Theta = new Aluminium(Tau);
 
-    cout << "Kong Fang 面貌\n";
+    cout << "Kong Fang 面貌 Connected\n";
 }
