@@ -20,6 +20,7 @@ int main()
     Faung* Sigma = Mu->Mu->Mu->Nu->Omega(Nu, Eta);
     Aluminium* Upsilon = new Aluminium(Sigma);
     Sulphur* Tau = new Sulphur(Psi, Upsilon);
+    Iron* Theta = new Iron(Tau, Sigma, Eta, Nu, Rho);
 
-    cout << "Seol64 San Connected\n";
+    cout << "Seol64 San Connected And Ready\n";
 }
