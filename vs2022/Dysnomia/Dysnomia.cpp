@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     San* Mu = new San();
+    Faung* Rho = Mu->Theta->Kappa(Mu->Upsilon);
 
-    cout << "Seol64 San Ready 2 Mu\n";
+    cout << "Seol64 San Connected\n";
 }
