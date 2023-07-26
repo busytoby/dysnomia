@@ -15,6 +15,8 @@ int main()
     Tai* Mu = new Tai();
     Fa* Rho = Mu->Upsilon->Pi();
     Faung* Psi = Mu->Mu->Mu->Mu->Mu->Mu->Nu->Phi(Mu->Theta->Mu, Rho);
+    Aluminium* Nu = new Aluminium(Psi);
+    Faung* Eta = Mu->Mu->Mu->Mu->Mu->Mu->Nu->Kappa(Nu);
 
-    cout << "Playing\n";
+    cout << "Playing FTW\n";
 }
