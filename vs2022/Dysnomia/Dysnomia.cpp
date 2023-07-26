@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Ton* Mu = new Ton();
+    Faung* Rho = Mu->Theta->Omega(Mu->Psi, Mu->Eta);
 
     cout << "Playing FTW\n";
 }
