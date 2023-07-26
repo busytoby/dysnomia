@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Kong* Mu = new Kong();
+    Faung* Rho = Mu->Mu->Upsilon->Omega(Mu->Upsilon, Mu->Theta);
 
-    cout << "Kong The Player Reaper\n";
+    cout << "Kong The Player Reaper Might Have An Idea\n";
 }
