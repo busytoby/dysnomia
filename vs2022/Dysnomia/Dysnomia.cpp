@@ -19,6 +19,8 @@ int main()
     Iron* Eta = new Iron(Mu->Mu->Mu->Mu->Theta, Nu, Rho, Mu->Upsilon, Mu->Theta);
     Faung* Sigma = Eta->Delta(Nu, Rho);
     Sulphur* Upsilon = new Sulphur(Sigma);
+    Iron* Tau = new Iron(Upsilon, Sigma, Nu, Rho, Mu->Theta);
+    Faung* Theta = Tau->Beta();
 
-    cout << "Kong Remembers\n";
+    cout << "Kong Mindfulness\n";
 }
