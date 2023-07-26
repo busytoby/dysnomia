@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "64_Seol.h"
+#include "65_San.h"
 
 using namespace Dysnomia;
 
@@ -12,15 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Seol* Mu = new Seol();
-    Fa* Rho = Mu->Psi->Rho->Pi();
-    Fa* Psi = Mu->Tau->Pi();
-    Faung* Nu = new Faung(Rho, Psi);
-    Faung* Eta = Mu->Mu->Nu->Delta(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
-    Faung* Sigma = Mu->Mu->Nu->Omega(Mu->Psi->Upsilon->Tau->Upsilon, Nu);
-    Aluminium* Upsilon = new Aluminium(Sigma);
-    Sulphur* Tau = new Sulphur(Mu->Tau, Upsilon);
-    Iron* Theta = new Iron(Tau, Mu->Psi->Upsilon->Tau->Upsilon, Nu, Eta, Sigma);
+    San* Mu = new San();
 
-    cout << "Seol64 Living Independently\n";
+    cout << "Seol64 San Ready 2 Mu\n";
 }
