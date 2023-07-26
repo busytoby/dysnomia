@@ -19,6 +19,8 @@ int main()
     Faung* Eta = Mu->Mu->Mu->Mu->Mu->Mu->Nu->Kappa(Nu);
     Sulphur* Sigma = new Sulphur(Eta);
     Iron* Upsilon = new Iron(Sigma, Psi, Eta);
+    Qiao* Tau = new Qiao(Upsilon, Eta);
+    Iron* Theta = Tau->Omega();
 
     cout << "Playing FTW\n";
 }
