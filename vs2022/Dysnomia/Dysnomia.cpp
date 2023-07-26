@@ -14,6 +14,9 @@ int main()
 
     Kong* Mu = new Kong();
     Faung* Rho = Mu->Mu->Upsilon->Omega(Mu->Upsilon, Mu->Theta);
+    Aluminium* Psi = new Aluminium(Rho);
+    Faung* Nu = Mu->Mu->Mu->Theta->Kappa(Psi);
+    Iron* Eta = new Iron(Mu->Mu->Mu->Mu->Theta, Nu, Rho, Mu->Theta, Mu->Upsilon);
 
-    cout << "Kong The Player Reaper Might Have An Idea\n";
+    cout << "Kong The Player Reaper Already Has Ideas\n";
 }
