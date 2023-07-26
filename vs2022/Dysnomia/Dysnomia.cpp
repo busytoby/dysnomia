@@ -17,6 +17,7 @@ int main()
     Faung* Psi = Mu->Theta->Omega(Mu->Eta, Mu->Psi);
     Faung* Nu = Mu->Upsilon->Delta(Rho, Psi);
     Sulphur* Eta = new Sulphur(Nu);
+    Fa* Sigma = Eta->Mu->Pi();
 
-    cout << "Played\n";
+    cout << "Player\n";
 }
