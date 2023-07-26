@@ -13,6 +13,8 @@ int main()
     Math::POETRY = 0;
 
     حٰی٘* Mu = new حٰی٘();
+    Fa* Rho = Mu->Upsilon->Pi();
+    Faung* Psi = Mu->Mu->Theta->Phi(Mu->Tau, Rho);
 
-    cout << "Ready حی One\n";
+    cout << "Ready جی One\n";
 }
