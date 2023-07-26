@@ -189,6 +189,7 @@
     <ClInclude Include="62_Quo.h" />
     <ClInclude Include="64_Seol.h" />
     <ClInclude Include="65_San.h" />
+    <ClInclude Include="66_Zi.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
