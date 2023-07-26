@@ -15,6 +15,12 @@ int main()
     حٰی٘* Mu = new حٰی٘();
     Fa* Rho = Mu->Upsilon->Pi();
     Faung* Psi = Mu->Mu->Theta->Phi(Mu->Tau, Rho);
+    Fa* Nu = Mu->Upsilon->Pi();
+    Faung* Eta = Mu->Mu->Mu->Mu->Psi->Phi(Mu->Theta, Nu);
+    Faung* Sigma = Mu->Mu->Mu->Mu->Mu->Nu->Delta(Psi, Eta);
+    Aluminium* Upsilon = new Aluminium(Sigma);
+    Faung* Tau = Mu->Mu->Mu->Mu->Mu->Nu->Kappa(Upsilon);
+    Iron* Theta = new Iron(Mu->Theta, Psi, Eta, Sigma, Tau);
 
-    cout << "Ready جی One\n";
+    cout << "Playing\n";
 }
