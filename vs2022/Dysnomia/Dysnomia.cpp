@@ -15,6 +15,7 @@ int main()
     Ton* Mu = new Ton();
     Faung* Rho = Mu->Theta->Omega(Mu->Psi, Mu->Eta);
     Faung* Psi = Mu->Theta->Omega(Mu->Eta, Mu->Psi);
+    Faung* Nu = Mu->Upsilon->Delta(Rho, Psi);
 
-    cout << "Playing FTW\n";
+    cout << "Played\n";
 }
