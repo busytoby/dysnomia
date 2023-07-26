@@ -19,6 +19,7 @@ int main()
     Faung* Eta = Mu->Theta->Delta(Mu->Eta, Nu);
     Faung* Sigma = Mu->Mu->Mu->Psi->Omega(Mu->Sigma, Nu);
     Aluminium* Upsilon = new Aluminium(Sigma);
+    Sulphur* Tau = new Sulphur(Mu->Mu->Upsilon, Upsilon);
+    Sulphur* Theta = new Sulphur(Mu->Upsilon, Upsilon);
 
-    cout << "Ready Seol San Zi Jing Yi Jie\n";
-}
+    cout << "Ready حی One\n";
