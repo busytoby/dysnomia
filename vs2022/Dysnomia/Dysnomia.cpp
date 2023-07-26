@@ -14,5 +14,5 @@ int main()
 
     Zi* Mu = new Zi();
 
-    cout << "Seol San Zi\n";
+    cout << "Seol San Zi Yi Jing Jie ?\n";
 }
