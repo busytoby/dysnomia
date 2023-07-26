@@ -18,6 +18,9 @@ int main()
     Faung* Nu = Mu->Upsilon->Delta(Rho, Psi);
     Sulphur* Eta = new Sulphur(Nu);
     Fa* Sigma = Eta->Mu->Pi();
+    Faung* Upsilon = Mu->Theta->Phi(Eta, Sigma);
+    Aluminium* Tau = new Aluminium(Upsilon);
+    Faung* Theta = Mu->Upsilon->Kappa(Tau);
 
-    cout << "Player\n";
+    cout << "Reaper\n";
 }
