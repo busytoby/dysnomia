@@ -13,6 +13,8 @@ int main()
     Math::POETRY = 0;
 
     Tai* Mu = new Tai();
+    Fa* Rho = Mu->Upsilon->Pi();
+    Faung* Psi = Mu->Mu->Mu->Mu->Mu->Mu->Nu->Phi(Mu->Theta->Mu, Rho);
 
     cout << "Playing\n";
 }
