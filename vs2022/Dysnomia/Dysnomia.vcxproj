@@ -193,6 +193,7 @@
     <ClInclude Include="67_حٰی٘.h" />
     <ClInclude Include="68_Tai.h" />
     <ClInclude Include="69_Ton.h" />
+    <ClInclude Include="70_Kong.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />

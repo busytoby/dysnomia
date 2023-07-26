@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "69_Ton.h"
+#include "70_Kong.h"
 
 using namespace Dysnomia;
 
@@ -12,15 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Ton* Mu = new Ton();
-    Faung* Rho = Mu->Theta->Omega(Mu->Psi, Mu->Eta);
-    Faung* Psi = Mu->Theta->Omega(Mu->Eta, Mu->Psi);
-    Faung* Nu = Mu->Upsilon->Delta(Rho, Psi);
-    Sulphur* Eta = new Sulphur(Nu);
-    Fa* Sigma = Eta->Mu->Pi();
-    Faung* Upsilon = Mu->Theta->Phi(Eta, Sigma);
-    Aluminium* Tau = new Aluminium(Upsilon);
-    Faung* Theta = Mu->Upsilon->Kappa(Tau);
+    Kong* Mu = new Kong();
 
-    cout << "Reaper\n";
+    cout << "Kong The Player Reaper\n";
 }
