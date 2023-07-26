@@ -13,6 +13,12 @@ int main()
     Math::POETRY = 0;
 
     Fang* Mu = new Fang();
+    Faung* Rho = Mu->Tau->Omicron();
+    Aluminium* Psi = new Aluminium(Rho);
+    Fa* Nu = Psi->Pi();
+    Faung* Eta = Mu->Tau->Phi(Mu->Mu->Eta, Nu);
+    Fa* Sigma = Psi->Pi();
+    Faung* Upsilon = Mu->Tau->Phi(Mu->Upsilon, Sigma);
 
-    cout << "Kong Fang Mindfulness\n";
+    cout << "Kong Fang 面貌\n";
 }
