@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "66_Zi.h"
+#include "67_حٰی٘.h"
 
 using namespace Dysnomia;
 
@@ -12,14 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Zi* Mu = new Zi();
-    Faung* Rho = Mu->Theta->Beta();
-    Faung* Psi = Mu->Theta->Omicron();
-    Faung* Nu = Mu->Mu->Mu->Mu->Nu->Delta(Rho, Psi);
-    Faung* Eta = Mu->Theta->Delta(Mu->Eta, Nu);
-    Faung* Sigma = Mu->Mu->Mu->Psi->Omega(Mu->Sigma, Nu);
-    Aluminium* Upsilon = new Aluminium(Sigma);
-    Sulphur* Tau = new Sulphur(Mu->Mu->Upsilon, Upsilon);
-    Sulphur* Theta = new Sulphur(Mu->Upsilon, Upsilon);
+    حٰی٘* Mu = new حٰی٘();
 
     cout << "Ready حی One\n";
+}
