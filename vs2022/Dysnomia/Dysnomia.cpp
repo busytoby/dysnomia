@@ -13,6 +13,10 @@ int main()
     Math::POETRY = 0;
 
     Zi* Mu = new Zi();
+    Faung* Rho = Mu->Theta->Beta();
+    Faung* Psi = Mu->Theta->Omicron();
+    Faung* Nu = Mu->Mu->Mu->Mu->Nu->Delta(Rho, Psi);
 
-    cout << "Seol San Zi Yi Jing Jie ?\n";
+
+    cout << "Seol San Zi Jing Yi Jie ?\n";
 }
