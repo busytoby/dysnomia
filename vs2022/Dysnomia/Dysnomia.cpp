@@ -17,6 +17,8 @@ int main()
     Aluminium* Psi = new Aluminium(Rho);
     Faung* Nu = Mu->Mu->Mu->Theta->Kappa(Psi);
     Iron* Eta = new Iron(Mu->Mu->Mu->Mu->Theta, Nu, Rho, Mu->Upsilon, Mu->Theta);
+    Faung* Sigma = Eta->Delta(Nu, Rho);
+    Sulphur* Upsilon = new Sulphur(Sigma);
 
-    cout << "Kong The Player Reaper Already Has Original Ideas\n";
+    cout << "Kong Remembers\n";
 }
