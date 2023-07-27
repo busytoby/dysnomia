@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     ށ* Mu = new ށ();
+    Iron* Rho = Mu->Theta->Omega();
 
     cout << "ށީ\n";
 }
