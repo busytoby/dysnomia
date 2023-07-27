@@ -16,6 +16,7 @@ int main()
     Faung* Rho = Mu->Upsilon->Beta();
     Faung* Psi = Mu->Upsilon->Omicron();
     Faung* Nu = Mu->Eta->Omega(Rho, Psi);
+    Faung* Eta = Mu->Mu->Mu->Rho->Omega(Rho, Psi);
 
     cout << "चंगा নাচ নয়\n";
 }
