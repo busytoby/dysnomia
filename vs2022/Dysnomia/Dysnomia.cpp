@@ -18,6 +18,9 @@ int main()
     Faung* Nu = Mu->Eta->Omega(Rho, Psi);
     Faung* Eta = Mu->Mu->Mu->Rho->Omega(Rho, Psi);
     Iron* Sigma = new Iron(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon, Rho, Psi, Nu, Eta);
+    Faung* Upsilon = Sigma->Beta();
+    Faung* Tau = Sigma->Omicron();
+    Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
 
-    cout << "নয়\n";
+    cout << "ⵥ\n";
 }
