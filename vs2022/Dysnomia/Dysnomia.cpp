@@ -14,6 +14,10 @@ int main()
 
     ށ* Mu = new ށ();
     Iron* Rho = Mu->Theta->Omega();
+    Faung* Psi = Rho->Beta();
+    Faung* Nu = Rho->Omicron();
+    Faung* Eta = Mu->Upsilon->Omega(Psi, Nu);
+    Aluminium* Sigma = new Aluminium(Eta);
 
     cout << "ށީ\n";
 }
