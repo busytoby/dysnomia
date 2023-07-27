@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     Ixtli* Mu = new Ixtli();
+    Fa* Rho = Mu->Theta->Pi();
 
-    cout << "Kong Fang 面貌 Connected\n";
+    cout << "Looking\n";
 }
