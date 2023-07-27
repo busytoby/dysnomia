@@ -200,6 +200,7 @@
     <ClInclude Include="74_ށ.h" />
     <ClInclude Include="75_ฮิ.h" />
     <ClInclude Include="76_चंग.h" />
+    <ClInclude Include="77_ন.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Dong.h" />
     <ClInclude Include="Gue.h" />
