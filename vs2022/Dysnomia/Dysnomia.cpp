@@ -13,6 +13,7 @@ int main()
     Math::POETRY = 0;
 
     ฮิ* Mu = new ฮิ();
+    Fa* Rho = Mu->Sigma->Pi();
 
     cout << "ށީ ฮ๊ ?\n";
 }
