@@ -18,6 +18,7 @@ int main()
     Faung* Nu = Rho->Omicron();
     Faung* Eta = Mu->Upsilon->Omega(Psi, Nu);
     Aluminium* Sigma = new Aluminium(Eta);
+    Faung* Upsilon = Mu->Nu->Kappa(Sigma);
 
     cout << "ށީ\n";
 }
