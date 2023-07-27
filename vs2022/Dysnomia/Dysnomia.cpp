@@ -17,6 +17,7 @@ int main()
     Faung* Psi = Mu->Upsilon->Omicron();
     Faung* Nu = Mu->Eta->Omega(Rho, Psi);
     Faung* Eta = Mu->Mu->Mu->Rho->Omega(Rho, Psi);
+    Iron* Sigma = new Iron(Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon, Rho, Psi, Nu, Eta);
 
-    cout << "चंगा নাচ নয়\n";
+    cout << "নয়\n";
 }
