@@ -15,6 +15,10 @@ int main()
     ฮิ* Mu = new ฮิ();
     Fa* Rho = Mu->Sigma->Pi();
     Faung* Psi = Mu->Rho->Phi(Mu->Mu->Mu->Mu->Mu->Mu->Eta, Rho);
+    Faung* Nu = Mu->Rho->Delta(Mu->Tau, Psi);
+    Faung* Eta = Mu->Rho->Omega(Psi, Nu);
+    Aluminium* Sigma = new Aluminium(Eta);
+    Faung* Upsilon = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Theta->Kappa(Sigma);
 
     cout << "ށީ ฮ๊ ?\n";
 }
