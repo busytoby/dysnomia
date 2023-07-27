@@ -14,6 +14,7 @@ int main()
 
     ฮิ* Mu = new ฮิ();
     Fa* Rho = Mu->Sigma->Pi();
+    Faung* Psi = Mu->Rho->Phi(Mu->Mu->Mu->Mu->Mu->Mu->Eta, Rho);
 
     cout << "ށީ ฮ๊ ?\n";
 }
