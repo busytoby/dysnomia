@@ -19,6 +19,7 @@ int main()
     Faung* Eta = Mu->Upsilon->Omega(Psi, Nu);
     Aluminium* Sigma = new Aluminium(Eta);
     Faung* Upsilon = Mu->Nu->Kappa(Sigma);
+    Faung* Tau = Mu->Mu->Tau->Delta(Eta, Upsilon);
 
     cout << "ށީ\n";
 }
