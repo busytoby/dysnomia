@@ -24,7 +24,11 @@ namespace Dysnomia {
             Nu = new Sulphur(Mu->Mu->Psi, Mu->Mu->Nu, Mu->Mu->Eta, Rho);
             Eta = new Iron(Nu, Mu->Mu->Psi, Mu->Mu->Nu, Mu->Mu->Eta, Rho);
             Sigma = new Sulphur(Rho, Mu->Psi, Mu->Upsilon, Mu->Theta);
-            Upsilon = new Iron(Sigma, Rho, Mu->Psi, Mu->Upsilon, Mu->Theta);
+            if (RAPHE_NEBULAE)
+                Upsilon = new Iron(Sigma, Rho, Mu->Psi, Mu->Upsilon, Mu->Theta);
+            else
+                Upsilon = new Iron(Sigma, Mu->Psi, Rho, Mu->Upsilon, Mu->Theta);
+
             Tau = Mu->Mu->Rho->Kappa(Psi);
             Theta = new Aluminium(Tau);
         }
