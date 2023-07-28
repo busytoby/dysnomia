@@ -24,7 +24,10 @@ namespace Dysnomia {
             Nu = new Qiao(Psi, Mu->Tau, Mu->Nu, Rho);
             Eta = Nu->Omega();
             Sigma = new Qiao(Eta);
-            Upsilon = new Tin(Nu, Sigma);
+            if(RAPHE_NEBULAE)
+                Upsilon = new Tin(Sigma, Nu);
+            else 
+                Upsilon = new Tin(Nu, Sigma);
             Tau = Upsilon->Tau->Omicron();
             Theta = Upsilon->Theta->Beta();
         }
