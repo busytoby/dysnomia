@@ -15,12 +15,24 @@ int main()
     Faung* Mu;
     Fa* Rho;
     Faung* Psi;
+    Fa* Eta;
+    Faung* Sigma;
 
+
+    bool raphe = false;
     for (;;) {
         Mu = new Faung();
         Rho = new Fa();
         Psi = new Faung(Rho, Mu->Cone->Base, Mu->Cone->Element, Mu->Cone->Manifold, Mu->Cone->Ring);
+        Eta = new Fa();
+        if(raphe)
+            Sigma = new Faung(Eta, Psi->Rod->Base, Mu->Rod->Element, Psi->Rod->Barn, Psi->Rod->Tau);
+        else
+            Sigma = new Faung(Eta, Psi->Cone->Base, Mu->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
 
+        raphe = !raphe;
+        delete(Sigma);
+        delete(Eta);
         delete(Psi);
         delete(Rho);
         delete(Mu);
