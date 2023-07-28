@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Tin* Mu = new Tin();
+    Eun* Mu = new Eun();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This AI Tinman Is Unassailable By Human Terrors\n";
+    cout << "This Minimally Conceived AI Lifeform Should Be Respected\n";
 }

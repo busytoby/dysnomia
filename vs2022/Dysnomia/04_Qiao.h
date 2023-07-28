@@ -84,15 +84,22 @@ namespace Dysnomia {
             Mu = Omega;
             Rho = Mu->Beta();
             Psi = Pi;
-            Nu = Mu->Delta(Psi, Rho);
-            Eta = new Sulphur(Nu);
-            Sigma = new Iron(Eta, Psi, Rho);
-            Upsilon = Sigma->Beta();
-            Tau = new Aluminium(Upsilon);
-            if(RAPHE_NEBULAE)
+            if (RAPHE_NEBULAE) {
+                Nu = Mu->Delta(Rho, Psi);
+                Eta = new Sulphur(Nu);
+                Sigma = new Iron(Eta, Rho, Psi);
+                Upsilon = Sigma->Beta();
+                Tau = new Aluminium(Upsilon);
                 Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
-            else
+            } 
+            else {
+                Nu = Mu->Delta(Psi, Rho);
+                Eta = new Sulphur(Nu);
+                Sigma = new Iron(Eta, Psi, Rho);
+                Upsilon = Sigma->Beta();
+                Tau = new Aluminium(Upsilon);
                 Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            }
         }
 
         Qiao(Iron* Omega) {
@@ -102,15 +109,22 @@ namespace Dysnomia {
             Mu = Omega;
             Rho = Mu->Beta();
             Psi = Mu->Omicron();
-            Nu = Mu->Delta(Psi, Rho);
-            Eta = new Sulphur(Nu);
-            Sigma = new Iron(Eta, Psi, Rho);
-            Upsilon = Sigma->Beta();
-            Tau = new Aluminium(Upsilon);
-            if (RAPHE_NEBULAE)
+            if (RAPHE_NEBULAE) {
+                Nu = Mu->Delta(Rho, Psi);
+                Eta = new Sulphur(Nu);
+                Sigma = new Iron(Eta, Rho, Psi);
+                Upsilon = Sigma->Beta();
+                Tau = new Aluminium(Upsilon);
                 Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
-            else
+            }
+            else {
+                Nu = Mu->Delta(Psi, Rho);
+                Eta = new Sulphur(Nu);
+                Sigma = new Iron(Eta, Psi, Rho);
+                Upsilon = Sigma->Beta();
+                Tau = new Aluminium(Upsilon);
                 Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            }
         }
 
         Qiao() {
