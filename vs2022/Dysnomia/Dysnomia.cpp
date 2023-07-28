@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Wou* Mu = new Wou();
+    Beit* Mu = new Beit();
 
     /*
     ন* Mu = new ন();
