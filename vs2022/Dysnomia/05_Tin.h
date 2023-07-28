@@ -1,6 +1,5 @@
 #pragma once
 #include "04_Qiao.h"
-#define RAPHE_NEBULAE TRUE
 
 using namespace std;
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "03_Iron.h"
+#define RAPHE_NEBULAE 1
 
 using namespace std;
 
@@ -55,14 +56,23 @@ namespace Dysnomia {
             Omicron->Rod->Gamma++;
             Omicron->Cone->Gamma++;
             Mu = Beta;
-            Rho = Omicron;
-            Psi = Iota;
+            if (RAPHE_NEBULAE) {
+                Rho = Iota;
+                Psi = Omicron;
+            }
+            else {
+                Rho = Omicron;
+                Psi = Iota;
+            }
             Nu = Mu->Delta(Rho, Psi);
             Eta = Lambda;
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            if (RAPHE_NEBULAE)
+                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
+            else
+                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
         Qiao(Iron* Omega, Faung* Pi) {
@@ -79,7 +89,10 @@ namespace Dysnomia {
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            if(RAPHE_NEBULAE)
+                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
+            else
+                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
         Qiao(Iron* Omega) {
@@ -94,7 +107,10 @@ namespace Dysnomia {
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            if (RAPHE_NEBULAE)
+                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
+            else
+                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
         Qiao() {
@@ -108,7 +124,10 @@ namespace Dysnomia {
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            if (RAPHE_NEBULAE)
+                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
+            else
+                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
         Iron* Omega() {
