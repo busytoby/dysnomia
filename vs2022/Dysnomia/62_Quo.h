@@ -29,7 +29,10 @@ namespace Dysnomia {
             Eta = new Aluminium(Sigma);
             Nu = Upsilon->Kappa(Eta);
             Psi = Theta->Upsilon->Nu->Sigma->Kappa(Eta);
-            Rho = Tau->Nu->Delta(Nu, Psi);
+            if(RAPHE_NEBULAE)
+                Rho = Tau->Nu->Delta(Psi, Nu);
+            else
+                Rho = Tau->Nu->Delta(Nu, Psi);
             Mu = new Aluminium(Rho);
         }
 
