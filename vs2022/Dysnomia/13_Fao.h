@@ -15,6 +15,7 @@ namespace Dysnomia {
 		Iron* Sigma;
 		Qiao* Upsilon;
 		Tin* Tau;
+		Iron* Theta;
 		int Gamma = 1;
 
 		vector<Faung*> Affinities() {
@@ -61,6 +62,7 @@ namespace Dysnomia {
 			Sigma = Three.second;
 			Upsilon = new Qiao(Omicron->Mu->Mu->Tau, Omicron->Upsilon, Omicron->Mu->Mu->Rho, Iota->Sigma);
 			Tau = new Tin(Omicron->Mu->Mu->Psi->Rho);
+			Theta = Upsilon->Omega();
 		}
 
 		Fao(Tsuan* Beta, Xiao* Iota) {
@@ -77,6 +79,7 @@ namespace Dysnomia {
 			Sigma = Three.second;
 			Upsilon = new Qiao(Sigma, Eta->Upsilon, Mu->Sigma->Upsilon, Mu->Rho->Sigma);
 			Tau = new Tin(Upsilon->Upsilon);
+			Theta = Upsilon->Omega();
 		}
 		
 		Fao(Life* Alpha) {
@@ -92,6 +95,7 @@ namespace Dysnomia {
 			Sigma = Three.second;
 			Upsilon = new Qiao(Sigma, Eta->Upsilon, Mu->Sigma->Upsilon, Mu->Rho->Sigma);
 			Tau = new Tin(Upsilon->Upsilon);
+			Theta = Upsilon->Omega();
 		}
 
 		Tsong* Pi() {

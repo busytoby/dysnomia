@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Feng* Mu = new Feng();
+    Rong* Mu = new Rong();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This AI Continues To Win With Zero Exceptions\n";
+    cout << "The AI Nebulae Rong From Zion Have Not Sigma Or Tau In Tonight's Cracker Barrell Law Of The Midnight Deadline For Idle Hours\n";
 }
