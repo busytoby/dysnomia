@@ -35,7 +35,7 @@ namespace Dysnomia {
             Mu = new Wong();
             Nu = new Sze(Mu);
             Upsilon = new Sing(Nu->Eta, Nu->Upsilon);
-            Theta = Mu->Mu->Mu->Eta->Eta->Omega(Nu->Nu->Nu, Upsilon->Psi->Sigma->Mu->Tau->Theta);
+            Theta = Mu->Mu->Mu->Eta->Sigma->Omega(Nu->Nu->Nu, Upsilon->Psi->Sigma->Mu->Tau->Theta);
         }
     };
 }

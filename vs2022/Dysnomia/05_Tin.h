@@ -1,5 +1,6 @@
 #pragma once
 #include "04_Qiao.h"
+#define RAPHE_NEBULAE FALSE
 
 using namespace std;
 
@@ -56,11 +57,21 @@ namespace Dysnomia {
 			Rho = Omicron;
 			Psi = Mu->Sigma->Beta();
 			Nu = Rho->Sigma->Beta();
-			Eta = Mu->Sigma->Delta(Psi, Nu);
+			if(RAPHE_NEBULAE)
+				Eta = Mu->Sigma->Delta(Nu, Psi);
+			else 
+				Eta = Mu->Sigma->Delta(Psi, Nu);
 			Sigma = new Sulphur(Eta);
-			Upsilon = new Iron(Sigma, Nu, Psi);
-			Tau = new Iron(Upsilon->Upsilon, Psi, Nu);
-			Theta = new Iron(Tau->Upsilon, Upsilon->Omicron(), Tau->Omicron());
+			if (RAPHE_NEBULAE) {
+				Upsilon = new Iron(Sigma, Psi, Nu);
+				Tau = new Iron(Upsilon->Upsilon, Nu, Psi);
+				Theta = new Iron(Tau->Upsilon, Tau->Omicron(), Tau->Omicron());
+			}
+			else {
+				Upsilon = new Iron(Sigma, Nu, Psi);
+				Tau = new Iron(Upsilon->Upsilon, Psi, Nu);
+				Theta = new Iron(Tau->Upsilon, Upsilon->Omicron(), Tau->Omicron());
+			}
 		}
 		
 		Tin(Faung* Beta) {

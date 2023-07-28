@@ -22,7 +22,10 @@ namespace Dysnomia {
             Rho = Mu->Psi->Pi();
             Psi = Mu->Mu->Eta->Pi();
             Nu = new Faung(Rho, Psi);
-            Eta = Mu->Mu->Upsilon->Omega(Mu->Rho, Nu);
+            if(RAPHE_NEBULAE)
+                Eta = Mu->Mu->Upsilon->Omega(Nu, Mu->Rho);
+            else
+                Eta = Mu->Mu->Upsilon->Omega(Mu->Rho, Nu);
             Sigma = new Aluminium(Eta);
             Upsilon = Mu->Mu->Upsilon->Kappa(Sigma);
             Tau = new Sulphur(Upsilon);

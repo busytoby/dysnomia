@@ -7,9 +7,10 @@ namespace Dysnomia {
         Pin* Mu;
         Tong* Rho;
         Tsong* Psi;
-        Fao* Nu;
-        Tsuan* Eta;
-        Huo* Sigma;
+        Nat* Nu;
+        Fao* Eta;
+        Tsuan* Sigma;
+        Huo* Upsilon;
         int Gamma = 1;
 
         Core() {
@@ -18,9 +19,10 @@ namespace Dysnomia {
             Mu = new Pin();
             Rho = Mu->Rho->Tau->Beta();
             Psi = Mu->Psi->Tau->Pi();
-            Nu = new Fao(Mu->Sigma->Nu->Mu->Rho->Upsilon, Mu->Sigma->Nu->Nu, new Nat(Rho));
-            Eta = Nu->Delta(Mu->Nu->Tau->Omicron());
-            Sigma = new Huo(Mu->Eta->Theta, Nu->Mu, Nu->Rho, Eta, Nu);
+            Nu = new Nat(Rho);
+            Eta = new Fao(Mu->Sigma->Nu->Mu->Rho->Upsilon, Mu->Sigma->Nu->Nu, Nu);
+            Sigma = Eta->Delta(Mu->Nu->Tau->Omicron());
+            Upsilon = new Huo(Mu->Eta->Theta, Eta->Mu, Eta->Rho, Sigma, Eta);
         }
 
         vector<Faung*> Affinities() {

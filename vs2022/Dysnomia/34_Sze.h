@@ -35,7 +35,7 @@ namespace Dysnomia {
                 cout << "Sze ";
             Beta->Gamma++;
             Mu = Beta;
-            Nu = new Xiao(new Tung(Mu->Eta, Mu->Mu->Mu->Sigma->Sigma->Tau, Mu->Mu->Theta));
+            Nu = new Xiao(new Tung(Mu->Eta, Mu->Mu->Mu->Upsilon->Sigma->Tau, Mu->Mu->Theta));
             Eta = new Wou(Mu->Mu->Mu->Mu->Sigma->Mu->Rho->Mu->Eta);
             Upsilon = new Wou(Mu->Mu->Mu->Mu->Sigma->Nu);
         }
