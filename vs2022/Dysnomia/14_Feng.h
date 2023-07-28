@@ -15,7 +15,7 @@ namespace Dysnomia {
         Iron* Sigma;
         Qiao* Upsilon;
         Xiao* Tau;
-        Tsuan* Theta;
+        Fa* Theta;
         int Gamma = 1;
 
         vector<Faung*> Affinities() {
@@ -78,7 +78,7 @@ namespace Dysnomia {
             Sigma = new Iron(Psi->Theta->Mu->Eta, Eta->Nu, Psi->Mu->Nu->Omicron());
             Upsilon = new Qiao(Sigma, Mu->Psi->Upsilon, Rho->Eta->Upsilon, Psi->Theta->Mu->Eta);
             Tau = new Xiao(Nu->Mu);
-            Theta = new Tsuan(Psi, Nu, Psi->Theta->Mu->Eta, Eta);
+            Theta = new Tsuan(Psi, Nu, Psi->Theta->Tau->Pi(), Eta);
         }
 
         Feng() {

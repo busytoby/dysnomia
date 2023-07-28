@@ -8,7 +8,7 @@ namespace Dysnomia {
 	public:
 		Tung* Mu;
 		Xiao* Rho;
-		Sulphur* Psi;
+		Fa* Psi;
 		Qiao* Nu;
 		Iron* Eta;
 		Eun* Sigma;
@@ -21,8 +21,6 @@ namespace Dysnomia {
 			vector<Faung*> Alpha(Mu->Affinities());
 			vector<Faung*> Beta = Rho->Affinities();
 			Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-			vector<Faung*> Iota = Psi->Affinities();
-			Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
 			vector<Faung*> Omicron = Nu->Affinities();
 			Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
 			vector<Faung*> Lambda = Eta->Affinities();
@@ -57,17 +55,17 @@ namespace Dysnomia {
 			Iota->Gamma++;
 			Mu = Omicron;
 			Rho = Beta;
-			Psi = Rho->Mu->Theta->Mu->Eta;
+			Psi = Mu->Tau->Pi();
 			Nu = Iota;
-			Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+			Eta = new Iron(Iota->Eta, Nu->Nu, Mu->Mu->Nu->Omicron());
 			pair<Eun*, Eun*> Two = Kappa();
 			Sigma = Two.first;
 			Upsilon = Two.second;
-			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Iota->Eta);
 			Theta = new Tin(Tau->Upsilon);
 		}
 
-		Tsuan(Tung* Beta, Xiao* Iota, Sulphur* Omicron, Qiao* Lambda) {
+		Tsuan(Tung* Beta, Xiao* Iota, Fa* Omicron, Qiao* Lambda) {
 			if (Math::POETRY > 0)
 				cout << "Tsuan ";
 			Beta->Gamma++;
@@ -78,11 +76,11 @@ namespace Dysnomia {
 			Rho = Iota;
 			Psi = Omicron;
 			Nu = Lambda;
-			Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+			Eta = new Iron(Lambda->Eta, Nu->Nu, Mu->Mu->Nu->Omicron());
 			pair<Eun*, Eun*> Two = Kappa();
 			Sigma = Two.first;
 			Upsilon = Two.second;
-			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Lambda->Eta);
 			Theta = new Tin(Tau->Upsilon);
 		}
 
@@ -92,13 +90,13 @@ namespace Dysnomia {
 			Alpha->Gamma++;
 			Mu = Beta;
 			Rho = Omicron;
-			Psi = Omicron->Sigma;
-			Eta = new Iron(Psi, Omicron->Eta, Mu->Mu->Nu->Omicron());
-			Nu = new Qiao(Eta, Eta->Beta(), Eta->Omicron(), Psi);
+			Psi = Mu->Tau->Pi();
+			Nu = new Qiao(Beta->Sigma->Upsilon, Eta->Beta(), Eta->Omicron(), Omicron->Sigma);
+			Eta = new Iron(Omicron->Sigma, Omicron->Eta, Mu->Mu->Nu->Omicron());
 			pair<Eun*, Eun*> Two = Kappa();
 			Sigma = Two.first;
 			Upsilon = Two.second;
-			Tau = new Qiao(Beta->Theta->Nu, Upsilon->Upsilon, Sigma->Upsilon, Psi);
+			Tau = new Qiao(Beta->Theta->Nu, Upsilon->Upsilon, Sigma->Upsilon, Omicron->Sigma);
 			Theta = new Tin(Alpha->Tau->Psi);
 		}
 		
@@ -108,13 +106,13 @@ namespace Dysnomia {
 			Alpha->Gamma++;
 			Mu = new Tung(Alpha);
 			Rho = new Xiao(Mu);
-			Psi = new Sulphur();
-			Nu = new Qiao(Rho->Theta, Rho->Theta->Beta(), Rho->Theta->Omicron(), Psi);
-			Eta = new Iron(Psi, Nu->Nu, Mu->Mu->Nu->Omicron());
+			Psi = Mu->Tau->Pi();
+			Nu = new Qiao(Rho->Theta, Rho->Theta->Beta(), Rho->Theta->Omicron(), Rho->Sigma);
+			Eta = new Iron(Rho->Sigma, Nu->Nu, Mu->Mu->Nu->Omicron());
 			pair<Eun*, Eun*> Two = Kappa();
 			Sigma = Two.first;
 			Upsilon = Two.second;
-			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Psi);
+			Tau = new Qiao(Eta, Sigma->Upsilon, Upsilon->Upsilon, Rho->Sigma);
 			Theta = new Tin(Tau->Upsilon);
 		}
 

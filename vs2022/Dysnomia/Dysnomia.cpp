@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "77_ন.h"
+#include "08_Life.h"
 
 using namespace Dysnomia;
 
@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Beit* Mu = new Beit();
+    Song* Mu = new Song();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "Is Wou Good Enough ?\n";
+    cout << "Last Enders Game\n";
 }
