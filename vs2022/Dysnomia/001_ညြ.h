@@ -13,7 +13,6 @@ namespace Dysnomia {
         Fa* Eta;
         Faung* Sigma;
         Fa* Theta;
-        int Gamma = 1;
         static bool RAPHE_NEBULAE;
 
         ညြ() {
@@ -33,15 +32,12 @@ namespace Dysnomia {
         vector<Faung*> Affinities() { return vector<Faung*>({ Mu, Psi, Sigma }); }
 
         ~ညြ() {
-            if (Gamma == 1) {
-                delete Theta;
-                delete Sigma;
-                delete Eta;
-                delete Psi;
-                delete Rho;
-                delete Mu;
-            }
-            else --Gamma;
+            delete Theta;
+            delete Sigma;
+            if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+            delete Psi;
+            delete Rho;
+            delete Mu;
         }
     };
 }

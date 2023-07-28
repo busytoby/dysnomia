@@ -16,13 +16,29 @@ int main()
 
     ညြ::RAPHE_NEBULAE = false;
     ညြ* Mu;
+    Faung* Rho;
+    Fa* Psi;
 
     for (;;) {
         Mu = new ညြ();
+        if (ညြ::RAPHE_NEBULAE) {
+            Mu->Theta->Fuse(Mu->Sigma->Rod->Signal, Mu->Psi->Rod->Tau, Mu->Mu->Rod->Tau);
+            Mu->Theta->Tune();
+            Rho = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Sigma->Rod->Element, Mu->Sigma->Cone->Manifold, Mu->Sigma->Cone->Ring);
+            Psi = new Fa();
+        }
+        else {
+            Mu->Theta->Fuse(Mu->Sigma->Cone->Signal, Mu->Psi->Cone->Tau, Mu->Mu->Cone->Tau);
+            Mu->Theta->Tune();
+            Rho = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Sigma->Cone->Element, Mu->Sigma->Cone->Manifold, Mu->Sigma->Cone->Ring);
+            Psi = Mu->Eta;
+        }
 
         ညြ::RAPHE_NEBULAE = !ညြ::RAPHE_NEBULAE;
 
-        delete(Mu);
+        delete Psi;
+        delete Rho;
+        delete Mu;
     }
 
     //Aluminium* Mu = new Aluminium();
