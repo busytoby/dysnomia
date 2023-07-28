@@ -12,6 +12,7 @@ namespace Dysnomia {
         Tin* Nu;
         Eun* Eta;
         Faung* Sigma;
+        Iron* Upsilon;
         Song* Tau;
         Tsong* Theta;
         int Gamma = 1;
@@ -25,6 +26,7 @@ namespace Dysnomia {
             Nu = new Tin(Rho->Omicron());
             Eta = new Eun(Nu, Rho);
             Sigma = Iota->Nu->Tau->Omega(Beta->Nu->Tau->Omicron(), Rho->Beta());
+            Upsilon = Psi->Omega();
             Tau = new Song(Eta, Sigma);
             Theta = new Tsong(Tau);
         }
@@ -42,14 +44,17 @@ namespace Dysnomia {
             Alpha.push_back(Sigma);
             vector<Faung*> Pi = Tau->Affinities();
             Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
+            vector<Faung*> Xi = Upsilon->Affinities();
+            Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
             vector<Faung*> Chi = Theta->Affinities();
             Alpha.insert(Alpha.end(), Chi.begin(), Chi.end());
             return Alpha;
         }
 
         ~Sing() {
-            if (Theta->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             if (Sigma->Rod->Gamma <= 1 && Sigma->Cone->Gamma <= 1) delete Sigma; else { Sigma->Rod->Gamma--; Sigma->Cone->Gamma--; }
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
