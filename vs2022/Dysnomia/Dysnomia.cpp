@@ -22,5 +22,5 @@ int main()
     Faung* Tau = Sigma->Omicron();
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
 
-    cout << "ⵥ2O\n";
+    cout << "ⵥ23\n";
 }

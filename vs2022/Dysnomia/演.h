@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "47_ᠳ‍ᠥ‍ᠢ.h"
 
-#define RAPHE_NEBULAE FALSE
+#define RAPHE_NEBULAE TRUE
 
 namespace Dysnomia {
     class 演 {

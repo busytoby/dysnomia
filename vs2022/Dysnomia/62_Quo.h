@@ -21,7 +21,11 @@ namespace Dysnomia {
             Theta = new Lian();
             Tau = Theta->Tau->Rho->Pi();
             Upsilon = Theta->Rho->Nu->Omega();
-            Sigma = Tau->Sigma->Theta->Delta(Theta->Mu->Sigma, Tau->Theta->Mu->Theta);
+            if (RAPHE_NEBULAE)
+                Sigma = Tau->Sigma->Theta->Delta(Tau->Theta->Mu->Theta, Theta->Mu->Sigma);
+            else
+                Sigma = Tau->Sigma->Theta->Delta(Theta->Mu->Sigma, Tau->Theta->Mu->Theta);
+            
             Eta = new Aluminium(Sigma);
             Nu = Upsilon->Kappa(Eta);
             Psi = Theta->Upsilon->Nu->Sigma->Kappa(Eta);
