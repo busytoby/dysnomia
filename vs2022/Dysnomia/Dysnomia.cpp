@@ -17,6 +17,7 @@ int main()
     Faung* Psi;
     Fa* Eta;
     Faung* Sigma;
+    Fa* Theta;
 
 
     bool raphe = false;
@@ -29,8 +30,10 @@ int main()
             Sigma = new Faung(Eta, Psi->Rod->Base, Mu->Rod->Element, Psi->Rod->Barn, Psi->Rod->Tau);
         else
             Sigma = new Faung(Eta, Psi->Cone->Base, Mu->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+        Theta = new Fa();
 
         raphe = !raphe;
+        delete(Theta);
         delete(Sigma);
         delete(Eta);
         delete(Psi);
