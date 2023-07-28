@@ -40,16 +40,12 @@ namespace Dysnomia {
             delete Mu;
         }
 
-        Fa* Pi(bool Alpha) {
+        Fa* Pi() {
             Fa* Beta = new Fa();
-            if(RAPHE_NEBULAE && Alpha)
-                Beta->Fuse(Sigma->Cone->Base, Psi->Cone->Element, Psi->Rod->Manifold);               
-            else if(RAPHE_NEBULAE && !Alpha)
-                Beta->Fuse(Psi->Cone->Base, Psi->Cone->Element, Sigma->Rod->Manifold);
-            else if(!RAPHE_NEBULAE && Alpha)
-                Beta->Fuse(Mu->Rod->Base, Psi->Rod->Element, Psi->Cone->Manifold);
+            if(RAPHE_NEBULAE)
+                Beta->Fuse(Psi->Cone->Base, Psi->Cone->Element, Sigma->Rod->Manifold);               
             else
-                Beta->Fuse(Psi->Rod->Base, Psi->Rod->Element, Mu->Cone->Manifold);
+                Beta->Fuse(Psi->Rod->Base, Psi->Rod->Element, Sigma->Cone->Manifold);
             Beta->Tune();
             return Beta;
         }

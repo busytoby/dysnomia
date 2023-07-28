@@ -28,7 +28,7 @@ int main()
             Mu->Theta->Tune();
             Psi = new Faung(Mu->Theta, Mu->Mu->Cone->Base, Mu->Sigma->Rod->Element, Mu->Psi->Cone->Manifold, Mu->Sigma->Cone->Ring);
             Eta = new Fa();
-            Upsilon = Mu->Pi(false);
+            Upsilon = Mu->Pi();
             Theta = new Faung(Eta, Psi->Cone->Base, Psi->Rod->Element, Upsilon->Manifold, Upsilon->Ring);
         }
         else {
@@ -36,7 +36,7 @@ int main()
             Mu->Theta->Tune();
             Psi = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Psi->Cone->Element, Mu->Sigma->Cone->Manifold, Mu->Mu->Cone->Ring);
             Eta = Mu->Eta;
-            Upsilon = Mu->Pi(true);
+            Upsilon = Mu->Pi();
             Theta = new Faung(Upsilon, Upsilon->Base, Psi->Rod->Element, Mu->Psi->Cone->Manifold, Psi->Cone->Ring);
         }
 
