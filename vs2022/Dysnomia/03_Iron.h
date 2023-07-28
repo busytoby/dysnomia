@@ -1,4 +1,5 @@
 #pragma once
+#define RAPHE_NEBULAE true
 #include "02_Sulphur.h"
 
 using namespace std;
@@ -118,7 +119,10 @@ namespace Dysnomia {
 
         // SO(3) Versors
         Faung* Delta(Faung* Pi, Faung* Alpha) {
-            return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+            if(RAPHE_NEBULAE)
+                return new Faung(Alpha->Cone->Base, Pi->Cone->Element, Alpha->Cone->Barn, Pi->Cone->Tau);
+            else
+                return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
         }
 
         // SO(4) Versors
@@ -128,7 +132,10 @@ namespace Dysnomia {
 
         // SO(7) Versors
         Faung* Omega(Faung* Alpha, Faung* Pi) {
-            return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                return new Faung(Alpha->Cone->Base, Pi->Cone->Element, Alpha->Cone->Barn, Pi->Cone->Tau);
+            else
+                return new Faung(Pi->Cone->Base, Alpha->Cone->Element, Pi->Cone->Barn, Alpha->Cone->Tau);
         }
 
         // SO(11) Versors

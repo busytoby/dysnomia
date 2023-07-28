@@ -1,5 +1,4 @@
 #pragma once
-#define RAPHE_NEBULAE true
 #include "03_Iron.h"
 
 using namespace std;
@@ -56,23 +55,14 @@ namespace Dysnomia {
             Omicron->Rod->Gamma++;
             Omicron->Cone->Gamma++;
             Mu = Beta;
-            if (RAPHE_NEBULAE) {
-                Rho = Iota;
-                Psi = Omicron;
-            }
-            else {
-                Rho = Omicron;
-                Psi = Iota;
-            }
+            Rho = Iota;
+            Psi = Omicron;
             Nu = Mu->Delta(Rho, Psi);
             Eta = Lambda;
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            if (RAPHE_NEBULAE)
-                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
-            else
-                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
         }
 
         Qiao(Iron* Omega, Faung* Pi) {

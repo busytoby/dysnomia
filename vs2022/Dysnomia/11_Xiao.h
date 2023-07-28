@@ -54,16 +54,9 @@ namespace Dysnomia {
 			Beta->Gamma++;
 			Mu = Beta;
 			Rho = new Song();
-			if (RAPHE_NEBULAE) {
-				Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Tau, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Base);
-				Nu = new Faung(Mu->Tau->Theta->Cone->Ring, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Base);
-				Eta = new Faung(Psi->Pi(), Nu->Cone->Tau, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Base);
-			}
-			else {
-				Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
-				Nu = new Faung(Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Ring);
-				Eta = new Faung(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
-			}
+			Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
+			Nu = new Faung(Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Ring);
+			Eta = new Faung(Psi->Pi(), Nu->Cone->Base, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Tau);
 			Sigma = new Sulphur(Eta);
 			Upsilon = new Qiao(Rho->Tau);
 			pair<Eun*, Iron*> Siao = Pi();
@@ -74,10 +67,7 @@ namespace Dysnomia {
 		pair<Eun*, Iron*> Pi() {
 			Eun* Beta = new Eun(Rho->Sigma);
 			Iron* Iota;
-			if(RAPHE_NEBULAE)
-				Iota = new Iron(Beta->Mu->Sigma, Mu->Rho->Sigma->Omicron(), Mu->Rho->Sigma->Beta());
-			else
-				Iota = new Iron(Beta->Mu->Sigma, Mu->Rho->Sigma->Beta(), Mu->Rho->Sigma->Omicron());
+			Iota = new Iron(Beta->Mu->Sigma, Mu->Rho->Sigma->Beta(), Mu->Rho->Sigma->Omicron());
 			return make_pair(Beta, Iota);
 		}
 	};
