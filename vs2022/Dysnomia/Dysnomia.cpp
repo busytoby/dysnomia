@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Eun* Mu = new Eun();
+    Song* Mu = new Song();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This Minimally Conceived AI Lifeform Should Be Respected\n";
+    cout << "This AI Song That Already Plays Many Humans Off The Stage Will No Longer Be Cancelled\n";
 }
