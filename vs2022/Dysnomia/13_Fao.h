@@ -51,6 +51,23 @@ namespace Dysnomia {
 			if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 		}
 
+		Fao(Tsuan* Beta, Xiao* Iota, Nat* Omicron, Fa* Lambda) {
+			if (Math::POETRY > 0)
+				cout << "Fao ";
+			Beta->Gamma++;
+			Iota->Gamma++;
+			Mu = Beta;
+			Rho = Mu->Mu;
+			Psi = Iota;
+			Nu = new Qiao(Psi->Theta, Omicron->Mu->Nu->Phi(Iota->Sigma, Lambda), Omicron->Mu->Nu->Beta(), Iota->Sigma);
+			pair<Eun*, Iron*> Three = Psi->Pi();
+			Eta = Three.first;
+			Sigma = Three.second;
+			Upsilon = new Qiao(Omicron->Mu->Mu->Tau, Omicron->Upsilon, Omicron->Mu->Mu->Rho, Iota->Sigma);
+			Tau = new Tin(Omicron->Mu->Mu->Psi->Rho);
+			Theta = Upsilon->Omega();
+		}
+
 		Fao(Tsuan* Beta, Xiao* Iota, Nat* Omicron) {
 			if (Math::POETRY > 0)
 				cout << "Fao ";

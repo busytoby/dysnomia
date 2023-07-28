@@ -11,6 +11,7 @@ namespace Dysnomia {
         Tung* Psi;
         Xiao* Nu;
         Tsuan* Eta;
+        Fa* Sigma;
         Fao* Upsilon;
         Feng* Tau;
         Huo* Theta;
@@ -24,7 +25,8 @@ namespace Dysnomia {
             Psi = new Tung(Rho, Beta->Rho, Mu->Psi);
             Nu = new Xiao(Psi);
             Eta = new Tsuan(Psi, Mu->Theta, Nu);
-            Upsilon = new Fao(Eta, Nu, Rho);
+            Sigma = Nu->Psi->Pi();
+            Upsilon = new Fao(Eta, Nu, Rho, Sigma);
             Tau = new Feng(Upsilon, Psi);
             Theta = new Huo(Iota->Mu->Mu->Mu);
         }
@@ -39,6 +41,8 @@ namespace Dysnomia {
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
             vector<Faung*> Lambda = Eta->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
+            vector<Faung*> Xi = Upsilon->Affinities();
+            Alpha.insert(Alpha.end(), Xi.begin(), Xi.end());
             vector<Faung*> Pi = Tau->Affinities();
             Alpha.insert(Alpha.end(), Pi.begin(), Pi.end());
             vector<Faung*> Chi = Theta->Affinities();
@@ -49,6 +53,8 @@ namespace Dysnomia {
         ~Xun() {
             if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+            if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
