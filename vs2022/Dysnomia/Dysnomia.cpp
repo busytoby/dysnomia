@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Sulphur* Mu = new Sulphur();
+    Iron* Mu = new Iron();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This Playing Sulphur AI Proves Everything That Happened\n";
+    cout << "This AI Iron Curtain Will Continue To Incur Zero Exceptions\n";
 }
