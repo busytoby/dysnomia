@@ -1,4 +1,5 @@
 #pragma once
+#define RAPHE_NEBULAE false
 #include <vector>
 #include "Faung.h"
 
@@ -42,13 +43,25 @@ namespace Dysnomia {
             Rho = Pi;
             Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
             Nu = new Fa();
-            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            if(RAPHE_NEBULAE)
+                Eta = new Faung(Nu, Psi->Rod->Base, Rho->Rod->Element, Psi->Rod->Barn, Psi->Rod->Tau);
+            else
+                Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
             Sigma = new Fa();
-            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            if(RAPHE_NEBULAE)
+                Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            else
+                Upsilon = new Faung(Sigma, Eta->Rod->Barn, Eta->Rod->Tau, Psi->Rod->Tau, Eta->Rod->Signal);               
             Tau = new Fa();
-            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                Tau->Fuse(Upsilon->Rod->Signal, Eta->Rod->Tau, Psi->Rod->Tau);
+            else
+                Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            if(RAPHE_NEBULAE)
+                Theta = new Faung(Tau, Upsilon->Cone->Ring, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Base);
+            else
+                Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
         Aluminium(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda, Int64 Xi) {
@@ -57,15 +70,30 @@ namespace Dysnomia {
             Beta->Gamma++;
             Mu = new Fa();
             Rho = new Faung(Beta, Iota, Omicron, Lambda, Xi);
-            Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
+            if (RAPHE_NEBULAE)
+                Psi = new Faung(Mu, Rho->Cone->Ring, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Base);
+            else
+                Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
             Nu = new Fa();
-            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                Eta = new Faung(Nu, Psi->Rod->Base, Rho->Rod->Element, Psi->Rod->Barn, Psi->Rod->Tau);
+            else
+                Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
             Sigma = new Fa();
-            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            if (RAPHE_NEBULAE)
+                Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            else
+                Upsilon = new Faung(Sigma, Eta->Rod->Barn, Eta->Rod->Tau, Psi->Rod->Tau, Eta->Rod->Signal);               
             Tau = new Fa();
-            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                Tau->Fuse(Upsilon->Rod->Signal, Eta->Rod->Tau, Psi->Rod->Tau);
+            else
+                Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            if (RAPHE_NEBULAE)
+                Theta = new Faung(Tau, Upsilon->Cone->Ring, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Base);
+            else
+                Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
         Aluminium() {
@@ -75,13 +103,25 @@ namespace Dysnomia {
             Rho = new Faung();
             Psi = new Faung(Mu, Rho->Cone->Base, Rho->Cone->Element, Rho->Cone->Manifold, Rho->Cone->Ring);
             Nu = new Fa();
-            Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                Eta = new Faung(Nu, Psi->Rod->Base, Rho->Rod->Element, Psi->Rod->Barn, Psi->Rod->Tau);
+            else
+                Eta = new Faung(Nu, Psi->Cone->Base, Rho->Cone->Element, Psi->Cone->Barn, Psi->Cone->Tau);
             Sigma = new Fa();
-            Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            if (RAPHE_NEBULAE)
+                Upsilon = new Faung(Sigma, Eta->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau, Eta->Cone->Barn);
+            else
+                Upsilon = new Faung(Sigma, Eta->Rod->Barn, Eta->Rod->Tau, Psi->Rod->Tau, Eta->Rod->Signal);               
             Tau = new Fa();
-            Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
+            if (RAPHE_NEBULAE)
+                Tau->Fuse(Upsilon->Rod->Signal, Eta->Rod->Tau, Psi->Rod->Tau);
+            else
+                Tau->Fuse(Upsilon->Cone->Signal, Eta->Cone->Tau, Psi->Cone->Tau);
             Tau->Tune();
-            Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Rod->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
+            if (RAPHE_NEBULAE)
+                Theta = new Faung(Tau, Upsilon->Cone->Ring, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Base);
+            else
+                Theta = new Faung(Tau, Upsilon->Cone->Base, Upsilon->Cone->Element, Upsilon->Cone->Manifold, Upsilon->Cone->Ring);
         }
 
         // First Quaternion

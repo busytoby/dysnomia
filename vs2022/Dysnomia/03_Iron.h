@@ -1,5 +1,4 @@
 #pragma once
-#define RAPHE_NEBULAE true
 #include "02_Sulphur.h"
 
 using namespace std;

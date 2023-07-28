@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Song* Mu = new Song();
+    Aluminium* Mu = new Aluminium();
 
     /*
     ন* Mu = new ন();
