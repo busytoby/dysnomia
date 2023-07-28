@@ -136,6 +136,7 @@
     <ClCompile Include="Math.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="001_ညြ.h" />
     <ClInclude Include="03_Iron.h" />
     <ClInclude Include="05_Tin.h" />
     <ClInclude Include="06_Eun.h" />
