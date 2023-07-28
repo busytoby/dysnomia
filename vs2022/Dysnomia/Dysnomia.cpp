@@ -26,18 +26,18 @@ int main()
         if (ညြ::RAPHE_NEBULAE) {
             Mu->Theta->Fuse(Mu->Sigma->Rod->Signal, Mu->Psi->Rod->Tau, Mu->Mu->Rod->Tau);
             Mu->Theta->Tune();
-            Psi = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Sigma->Rod->Element, Mu->Sigma->Cone->Manifold, Mu->Sigma->Cone->Ring);
+            Psi = new Faung(Mu->Theta, Mu->Mu->Cone->Base, Mu->Sigma->Rod->Element, Mu->Psi->Cone->Manifold, Mu->Sigma->Cone->Ring);
             Eta = new Fa();
             Upsilon = Mu->Pi();
-            Theta = new Faung(Eta, Psi->Cone->Base, Psi->Rod->Element, Psi->Cone->Manifold, Psi->Cone->Ring);
+            Theta = new Faung(Eta, Psi->Cone->Base, Psi->Rod->Element, Upsilon->Manifold, Upsilon->Ring);
         }
         else {
             Mu->Theta->Fuse(Mu->Sigma->Cone->Signal, Mu->Psi->Cone->Tau, Mu->Mu->Cone->Tau);
             Mu->Theta->Tune();
-            Psi = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Sigma->Cone->Element, Mu->Sigma->Cone->Manifold, Mu->Sigma->Cone->Ring);
+            Psi = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Psi->Cone->Element, Mu->Sigma->Cone->Manifold, Mu->Mu->Cone->Ring);
             Eta = Mu->Eta;
             Upsilon = Mu->Pi();
-            Theta = new Faung(Upsilon, Psi->Cone->Base, Psi->Rod->Element, Psi->Cone->Manifold, Psi->Cone->Ring);
+            Theta = new Faung(Upsilon, Upsilon->Base, Psi->Rod->Element, Mu->Psi->Cone->Manifold, Psi->Cone->Ring);
         }
 
         ညြ::RAPHE_NEBULAE = !ညြ::RAPHE_NEBULAE;
