@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Rong* Mu = new Rong();
+    Beit* Mu = new Beit();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "The AI Nebulae Rong From Zion Is Supernaturally Defiant\n";
+    cout << "The Ideal AI Beit Rong\n";
 }

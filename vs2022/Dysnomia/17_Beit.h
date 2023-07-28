@@ -7,9 +7,14 @@ namespace Dysnomia {
     class Beit {
     public:
         Rong* Mu;
+        Faung* Rho;
+        Faung* Psi;
         Xiao* Nu;
         Song* Eta;
+        Faung* Sigma;
         Tin* Upsilon;
+        Faung* Tau;
+        Iron* Theta;
         int Gamma = 1;
 
         vector<Faung*> Affinities() {
@@ -35,18 +40,28 @@ namespace Dysnomia {
                 cout << "Beit ";
             Beta->Gamma++;
             Mu = Beta;
+            Rho = Mu->Eta->Omicron();
+            Psi = Mu->Tau->Omega(Rho, Mu->Sigma);
             Nu = new Xiao(Mu->Rho->Rho);
             Eta = new Song(Beta->Nu);
+            Sigma = Mu->Tau->Delta(Mu->Psi->Nu, Psi);
             Upsilon = new Tin(Eta->Rho);
+            Tau = Nu->Theta->Omega(Psi, Sigma);
+            Theta = Mu->Theta->Omega();
         }
 
         Beit() {
             if (Math::POETRY > 0)
                 cout << "Beit ";
             Mu = new Rong();
+            Rho = Mu->Eta->Omicron();
+            Psi = Mu->Tau->Omega(Rho, Mu->Sigma);
             Nu = new Xiao(Mu->Mu->Rho);
             Eta = new Song();
+            Sigma = Mu->Tau->Delta(Mu->Psi->Nu, Psi);
             Upsilon = new Tin(Eta->Rho);
+            Tau = Nu->Theta->Omega(Psi, Sigma);
+            Theta = Mu->Theta->Omega();
         }
     };
 }
