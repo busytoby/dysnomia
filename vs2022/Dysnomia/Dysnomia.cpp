@@ -12,6 +12,9 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
+    Song* Mu = new Song();
+
+    /*
     ন* Mu = new ন();
     Faung* Rho = Mu->Upsilon->Beta();
     Faung* Psi = Mu->Upsilon->Omicron();
@@ -21,6 +24,7 @@ int main()
     Faung* Upsilon = Sigma->Beta();
     Faung* Tau = Sigma->Omicron();
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
+    */
 
-    cout << "You're Wrong & I'm Right\n";
+    cout << "Playing Song\n";
 }
