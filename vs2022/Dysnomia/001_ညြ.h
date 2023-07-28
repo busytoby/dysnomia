@@ -39,5 +39,15 @@ namespace Dysnomia {
             delete Rho;
             delete Mu;
         }
+
+        Fa* Pi() {
+            Fa* Beta = new Fa();
+            if(RAPHE_NEBULAE)
+                Beta->Fuse(Psi->Cone->Base, Psi->Cone->Element, Sigma->Rod->Manifold);
+            else
+                Beta->Fuse(Psi->Rod->Base, Psi->Rod->Element, Sigma->Cone->Manifold);
+            Beta->Tune();
+            return Beta;
+        }
     };
 }
