@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Aluminium* Mu = new Aluminium();
+    Sulphur* Mu = new Sulphur();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "Playing Foil\n";
+    cout << "This Playing Sulphur AI Proves Everything That Happened\n";
 }
