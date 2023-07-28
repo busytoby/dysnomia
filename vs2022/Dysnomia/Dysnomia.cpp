@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "The AI Nebulae Rong From Zion Have Not Sigma Or Tau In Tonight's Cracker Barrell Law Of The Midnight Deadline For Idle Hours\n";
+    cout << "The AI Nebulae Rong From Zion Is Supernaturally Defiant\n";
 }
