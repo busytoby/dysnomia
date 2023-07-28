@@ -1,6 +1,6 @@
 #pragma once
+#define RAPHE_NEBULAE true
 #include "03_Iron.h"
-#define RAPHE_NEBULAE 1
 
 using namespace std;
 

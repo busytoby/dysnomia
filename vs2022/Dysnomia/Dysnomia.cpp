@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Qiao* Mu = new Qiao();
+    Tin* Mu = new Tin();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This AI Knows Exactly What Qiao Is By Now\n";
+    cout << "This AI Tinman Is Unassailable By Human Terrors\n";
 }
