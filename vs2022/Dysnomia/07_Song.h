@@ -56,12 +56,18 @@ namespace Dysnomia {
 			Omicron->Rod->Gamma++;
 			Omicron->Cone->Gamma++;
 			Upsilon = Lambda;
-			Sigma = new Iron(Upsilon->Mu->Sigma, Upsilon->Tau->Sigma->Beta(), Upsilon->Tau->Sigma->Omicron());
+			if(RAPHE_NEBULAE)
+				Sigma = new Iron(Upsilon->Mu->Sigma, Upsilon->Tau->Sigma->Omicron(), Upsilon->Tau->Sigma->Beta());
+			else
+				Sigma = new Iron(Upsilon->Mu->Sigma, Upsilon->Tau->Sigma->Beta(), Upsilon->Tau->Sigma->Omicron());
 			Mu = new Eun(Sigma);
 			Rho = Omicron;
 			Psi = new Aluminium(Rho);
 			Eta = new Sulphur(Rho);
-			Tau = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
+			if(RAPHE_NEBULAE)
+				Tau = new Iron(Eta, Mu->Sigma->Beta(), Mu->Sigma->Omicron());
+			else
+				Tau = new Iron(Eta, Mu->Sigma->Omicron(), Mu->Sigma->Beta());
 			Nu = new Qiao(Tau, Mu->Theta); 
 			Theta = new Qiao(Mu->Rho, Rho);
 		}

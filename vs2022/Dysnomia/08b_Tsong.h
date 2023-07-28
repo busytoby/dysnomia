@@ -40,7 +40,10 @@ namespace Dysnomia {
             Mu = new Song();
             Rho = new Eun(Mu->Sigma);
             Psi = new Eun(Rho->Sigma);
-            Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Beta(), Mu->Tau->Omicron());
+            if(RAPHE_NEBULAE)
+                Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Omicron(), Mu->Tau->Beta());
+            else
+                Nu = new Iron(Mu->Mu->Mu->Sigma, Mu->Tau->Beta(), Mu->Tau->Omicron());
             Eta = new Tin(Nu->Kappa(Mu->Psi));
             Sigma = new Qiao(Nu, Rho->Mu->Nu);
             Upsilon = new Song(Psi);

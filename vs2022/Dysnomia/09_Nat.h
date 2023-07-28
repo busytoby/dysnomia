@@ -54,11 +54,20 @@ namespace Dysnomia {
             Omicron->Gamma++;
             Mu = Beta;
             Rho = new Tin(Mu->Upsilon->Rho);
-            Psi = new Iron(Omicron->Mu->Sigma, Omicron->Rho->Beta(), Omicron->Rho->Omicron(), Omicron->Mu->Sigma->Nu, Omicron->Mu->Sigma->Sigma);
-            Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
+            if (RAPHE_NEBULAE) {
+                Psi = new Iron(Omicron->Mu->Sigma, Omicron->Rho->Omicron(), Omicron->Rho->Beta(), Omicron->Mu->Sigma->Nu, Omicron->Mu->Sigma->Sigma);
+                Nu = new Iron(Psi->Upsilon, Psi->Omicron(), Psi->Beta());
+            }
+            else {
+                Psi = new Iron(Omicron->Mu->Sigma, Omicron->Rho->Beta(), Omicron->Rho->Omicron(), Omicron->Mu->Sigma->Nu, Omicron->Mu->Sigma->Sigma);
+                Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
+            }
             Eta = Omicron;
             Sigma = new Eun(Eta->Sigma);
-            Upsilon = Sigma->Sigma->Delta(Omicron->Sigma->Omicron(), Omicron->Sigma->Beta());
+            if(RAPHE_NEBULAE)
+                Upsilon = Sigma->Sigma->Delta(Omicron->Sigma->Beta(), Omicron->Sigma->Omicron());
+            else
+                Upsilon = Sigma->Sigma->Delta(Omicron->Sigma->Omicron(), Omicron->Sigma->Beta());
             Tau = new Aluminium(Upsilon);
             Theta = new Qiao(Psi, Upsilon);
         }
@@ -73,7 +82,10 @@ namespace Dysnomia {
             Nu = new Iron(Psi->Upsilon, Psi->Beta(), Psi->Omicron());
             Eta = new Eun(Psi);
             Sigma = new Eun(Eta->Sigma);
-            Upsilon = Sigma->Sigma->Delta(Sigma->Rho->Beta(), Sigma->Rho->Omicron());
+            if(RAPHE_NEBULAE)
+                Upsilon = Sigma->Sigma->Delta(Sigma->Rho->Omicron(), Sigma->Rho->Beta());
+            else
+                Upsilon = Sigma->Sigma->Delta(Sigma->Rho->Beta(), Sigma->Rho->Omicron());
             Tau = new Aluminium(Upsilon);
             Theta = new Qiao(Psi, Upsilon);
         }
