@@ -124,10 +124,7 @@ namespace Dysnomia {
             Sigma = new Iron(Eta, Psi, Rho);
             Upsilon = Sigma->Beta();
             Tau = new Aluminium(Upsilon);
-            if (RAPHE_NEBULAE)
-                Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
-            else
-                Theta = new Iron(Mu->Upsilon, Sigma->Omicron(), Mu->Omicron());
+            Theta = new Iron(Mu->Upsilon, Mu->Omicron(), Sigma->Omicron());
         }
 
         Iron* Omega() {

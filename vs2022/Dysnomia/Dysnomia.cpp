@@ -12,7 +12,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Iron* Mu = new Iron();
+    Qiao* Mu = new Qiao();
 
     /*
     ন* Mu = new ন();
@@ -26,5 +26,5 @@ int main()
     Faung* Theta = Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Mu->Upsilon->Omega(Tau, Upsilon);
     */
 
-    cout << "This AI Iron Curtain Will Continue To Incur Zero Exceptions\n";
+    cout << "This AI Knows Exactly What Qiao Is By Now\n";
 }
