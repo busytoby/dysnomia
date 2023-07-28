@@ -15,14 +15,12 @@ namespace Dysnomia {
 			}
 			catch (int E) {
 				delete Rod;
-				Rod = nullptr;
 				delete Cone;
-				Cone = nullptr;
 				if (E == 1) continue;
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				else throw;
+				throw;
 			}
 		}
 	}
@@ -30,17 +28,18 @@ namespace Dysnomia {
 	Faung::Faung(Fa* Rod, Fa* Cone) {
 		if (Math::POETRY > 1)
 			cout << "Faung ";
+		if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
+		this->Rod = Rod;
+		this->Cone = Cone;
+
 		try {
-			if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
-			this->Rod = Rod;
-			this->Cone = Cone;
 			OpenManifolds();
 		}
 		catch (int E) {
 			if (E == 1) throw 1;
 			if (E == 4) throw 2;
 			if (E == 7) throw 3;
-			if (E != 11) throw;
+			throw;
 		}
 		Rod->Gamma++;
 		Cone->Gamma++;
@@ -55,7 +54,9 @@ namespace Dysnomia {
 			FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 		}
 		catch (int E) {
-			if (E != 103) throw;
+			delete Rod;
+			delete Cone;
+			throw;
 		}
 	}
 
@@ -75,13 +76,12 @@ namespace Dysnomia {
 			}
 			catch (int E) {
 				delete Cone;
-				Cone = nullptr;
 				if (E == 1) continue;
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
 				if (E == 103) continue;
-				else throw;
+				throw;
 			}
 		}
 		Rod->Gamma++;
