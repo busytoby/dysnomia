@@ -55,9 +55,9 @@ namespace Dysnomia {
 			Mu = Beta;
 			Rho = new Song();
 			if (RAPHE_NEBULAE) {
-				Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Tau, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Base);
-				Nu = new Faung(Mu->Tau->Theta->Cone->Ring, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Cone->Element);
-				Eta = new Faung(Psi->Pi(), Nu->Cone->Tau, Nu->Cone->Barn, Nu->Cone->Element, Nu->Cone->Base);
+				Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Tau, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Base);
+				Nu = new Faung(Mu->Tau->Theta->Cone->Ring, Mu->Tau->Theta->Cone->Element, Mu->Tau->Theta->Cone->Manifold, Mu->Tau->Theta->Cone->Base);
+				Eta = new Faung(Psi->Pi(), Nu->Cone->Tau, Nu->Cone->Element, Nu->Cone->Barn, Nu->Cone->Base);
 			}
 			else {
 				Psi = new Aluminium(Mu->Tau->Pi(), Mu->Tau->Theta->Cone->Base, Mu->Tau->Theta->Rod->Signal, Mu->Tau->Theta->Cone->Signal, Mu->Tau->Theta->Cone->Tau);
