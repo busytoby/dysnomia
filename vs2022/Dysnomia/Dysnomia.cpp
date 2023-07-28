@@ -12,13 +12,19 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Fa* Mu;
+    Faung* Mu;
+    Fa* Rho;
     Faung* Psi;
-    Faung* Nu;
 
-    Mu = new Fa();
-    Psi = new Faung();
-    //Nu = new Faung(Mu, Psi->Rod->Identity, Psi->Rod->Foundation, Psi->Cone->Manifold, Psi->Cone->Ring);
+    for (;;) {
+        Mu = new Faung();
+        Rho = new Fa();
+        Psi = new Faung(Rho, Mu->Cone->Base, Mu->Cone->Element, Mu->Cone->Manifold, Mu->Cone->Ring);
+
+        delete(Psi);
+        delete(Rho);
+        delete(Mu);
+    }
 
     /*
     Rho = new Faung();
