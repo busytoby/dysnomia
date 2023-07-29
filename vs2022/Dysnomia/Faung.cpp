@@ -1,5 +1,4 @@
 #include "Faung.h"
-#include <iostream>
 
 namespace Dysnomia {
 	Faung::Faung() {
@@ -143,6 +142,34 @@ namespace Dysnomia {
 	{
 		Rod->Bond();
 		Cone->Bond();
+	}
+
+	void Faung::Chi(BYTE** Bytes, BYTE** Cursor, const short Length) {
+		Int64* ptr;
+		Int64 Beta;
+
+		if (*Bytes == nullptr) {
+			*Bytes = (BYTE*)malloc(sizeof(Int64) * Length);
+		}
+		else throw 130;
+
+		if (*Cursor == nullptr) *Cursor = *Bytes;
+		ptr = (Int64*)*Cursor;
+		int i = 0;
+		while(ptr < (Int64*)*Bytes + Length) {
+			Beta = Math::ModPow(Rho, Omicron, Omega);
+			*ptr = Beta;
+			Rho = Beta;
+			ptr++;
+		}
+
+		ptr--;
+		while (ptr > (Int64*)*Bytes+1) {
+			Beta = Math::ModPow(Sigma, Omega, Omicron);
+			*ptr = Beta;
+			Sigma = Beta;
+			ptr--;
+		}
 	}
 
 	// Hash Function

@@ -5,6 +5,7 @@
 #include "005_ë.h"
 
 using namespace Dysnomia;
+using namespace std;
 
 int main()
 {
@@ -14,12 +15,25 @@ int main()
 
     ë* Mu;
     ë* Rho;
+    Faung* Psi;
+    BYTE* Nu = nullptr;
+    BYTE* Eta = nullptr;
+    const short Sigma = 4096;
 
     for (;;) {
         Mu = new ë();
         Rho = new ë();
-        
+        Psi = new Faung(Mu->Eta, Rho->Eta);
+        Psi->Theta(Psi->Xi);
+        Psi->Chi(&Nu, &Eta, Sigma);
+
         delete Mu;
         delete Rho;
+        delete Psi;
+        if (Nu != nullptr) { 
+            free(Nu); 
+            Nu = nullptr;
+        }       
+        Eta = nullptr;
     }
 }
