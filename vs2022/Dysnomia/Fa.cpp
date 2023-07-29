@@ -137,45 +137,34 @@ namespace Dysnomia {
 			Barn == Rod->Barn);
 	}
 
-	/*
-	Int64 Fa::Charge(Int64 Psi, bool Decay)
+	Int64 Fa::Charge(Int64 Psi)
 	{
-		Int64 _barn = Math::ModPow(Barn, Psi, Ring);
-		if (Decay == false) Barn = _barn;
-		return _barn;
+		return Math::ModPow(Barn, Psi, Ring);
 	}
 
-	Int64 Fa::Induce(Int64 Sigma, bool Decay)
+	Int64 Fa::Induce(Int64 Sigma)
 	{
-		Int64 _ring = Math::ModPow(Sigma, Manifold, Ring);
-		if (Decay == false) Ring = _ring;
-		return _ring;
+		return Math::ModPow(Sigma, Manifold, Ring);
 	}
 
-	Int64 Fa::Torque(Int64 Sigma, bool Critical)
+	Int64 Fa::Torque(Int64 Sigma)
 	{
-		Int64 _channel;
-		if (Critical)
-			_channel = Manifold;
-		else
-			_channel = Channel;
-		return Math::ModPow(Sigma, Element, _channel);
+		return Math::ModPow(Sigma, Element, Channel);
 	}
 
-	Int64 Fa::Amplify(Int64 Upsilon, bool Critical)
+	Int64 Fa::Amplify(Int64 Upsilon)
 	{
-		return Torque(Upsilon, Critical);
+		return Torque(Upsilon);
 	}
 
-	Int64 Fa::Sustain(Int64 Ohm, bool Critical)
+	Int64 Fa::Sustain(Int64 Ohm)
 	{
-		return Torque(Ohm, Critical);
+		return Torque(Ohm);
 	}
 
 	void Fa::React(Int64 Pi, Int64 Theta)
 	{
 		Eta = Math::ModPow(Pi, Channel, Theta);
-		Nu = Math::ModPow(Pi, Theta, Channel);
+		Kappa = Math::ModPow(Pi, Theta, Channel);
 	}
-	*/
 }

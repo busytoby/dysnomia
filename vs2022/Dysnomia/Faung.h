@@ -17,6 +17,7 @@ namespace Dysnomia {
 		Fa* Cone = nullptr;
 
 		Int64 Phi, Eta, Mu, Xi;
+		Int64 Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega;
 
 		~Faung() {
 			if (Rod->Gamma == 1) delete Rod;
@@ -34,14 +35,12 @@ namespace Dysnomia {
 		void Compare(Fa*, string);
 		int Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
-		/*
 		void Charge(Int64);
-		void Induce(Int64);
-		void Torque(Int64);
-		void Amplify(Int64, bool);
-		void Sustain(Int64, bool);
-		void React(Int64);
-		array<Faung^>^ Denature();
-		*/
+		void Induce();
+		void Torque();
+		void Amplify();
+		void Sustain();
+		void React();
+		//array<Faung^>^ Denature();
 	};
 }

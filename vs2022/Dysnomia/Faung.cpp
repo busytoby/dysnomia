@@ -171,39 +171,39 @@ namespace Dysnomia {
 	}
 	*/
 
-	/*
-	void Faung::Charge(BigInteger Signal) {
-		if (Signal.IsZero) Signal = Rod->Signal;
-		Sigma = Cone->Charge(Signal, true);
+	void Faung::Charge(Int64 Signal) {
+		if (Signal == 0) Signal = Rod->Signal;
+		Sigma = Cone->Charge(Signal);
 	}
 
-	void Faung::Induce(BigInteger Sigma) {
-		Rho = Rod->Induce(Sigma, true);
+	void Faung::Induce() {
+		Rho = Rod->Induce(Sigma);
 	}
 
-	void Faung::Torque(BigInteger Sigma) {
-		Upsilon = Cone->Torque(Sigma, true);
+	void Faung::Torque() {
+		Upsilon = Cone->Torque(Rho);
 	}
 
-	void Faung::Amplify(BigInteger Upsilon, bool Critical) {
-		Ohm = Cone->Amplify(Upsilon, Critical);
+	void Faung::Amplify() {
+		Ohm = Cone->Amplify(Upsilon);
 	}
 
-	void Faung::Sustain(BigInteger Ohm, bool Critical) {
-		Pi = Cone->Sustain(Ohm, Critical);
+	void Faung::Sustain() {
+		Pi = Cone->Sustain(Ohm);
 	}
 
-	void Faung::React(BigInteger Pi) {
+	void Faung::React() {
 		Rod->React(Pi, Cone->Channel);
 		Cone->React(Pi, Rod->Channel);
-		if (Cone->Nu != Rod->Eta || Rod->Nu != Cone->Eta) throw gcnew Exception("ReactionException");
-		if (Rod->Eta == Rod->Nu) throw gcnew Exception("Gross");
-		Omicron = Cone->Nu;
-		Omega = Rod->Nu;
+		if (Cone->Kappa != Rod->Eta || Rod->Kappa != Cone->Eta) throw 100;
+		if (Rod->Eta == Rod->Kappa) throw 101;
+		Omicron = Cone->Kappa;
+		Omega = Rod->Kappa;
 	}
 
-	array<Faung^>^ Faung::Denature() {
-		array<Faung^>^ D = gcnew array<Faung^>(2);
+	/*
+	pair<Faung>* Faung::Denature() {
+		array<Faung^>^ D = new array<Faung^>(2);
 		D[0] = gcnew Faung(Rho, Upsilon, Ohm, Omicron);
 		D[1] = gcnew Faung(Rho, Upsilon, Ohm, Omega);
 		return D;
