@@ -35,7 +35,7 @@ int main()
             Psi = new Faung(Mu->Theta->Rho, Mu->Mu->Psi->Cone->Secret, Mu->Theta->Psi->Cone->Signal, Mu->Theta->Mu->Cone->Channel, Mu->Mu->Psi->Cone->Identity);
             Eta = Mu->Theta->Rho;
             Upsilon = Mu->Pi();
-            Theta = new Faung(Upsilon, Psi->Cone->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
+            Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
         }
 
         RAPHE_NEBULAE = !RAPHE_NEBULAE;
