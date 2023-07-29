@@ -32,5 +32,7 @@ int main()
         delete Psi;
         if (Nu != nullptr) { free(Nu); Nu = nullptr; }       
         Eta = nullptr;
+
+        cout << "My Needle Is Floating\n";
     }
 }
