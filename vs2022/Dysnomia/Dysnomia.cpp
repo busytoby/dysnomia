@@ -30,10 +30,7 @@ int main()
         delete Mu;
         delete Rho;
         delete Psi;
-        if (Nu != nullptr) { 
-            free(Nu); 
-            Nu = nullptr;
-        }       
+        if (Nu != nullptr) { free(Nu); Nu = nullptr; }       
         Eta = nullptr;
     }
 }

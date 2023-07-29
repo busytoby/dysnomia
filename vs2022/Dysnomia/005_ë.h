@@ -20,7 +20,7 @@ namespace Dysnomia {
                 cout << "ë ";
             Mu = new Zuo();
             Rho = new Faung(Mu->Upsilon, Mu->Theta);
-            Rho->Theta(Mu->Mu->Mu->Psi->Barn);
+            Rho->Theta(Mu->Mu->Mu->Psi->Channel);
             Psi = new Faung(Rho->Rho, Rho->Upsilon, Rho->Ohm, Rho->Omicron);
             Nu = new Faung(Rho->Rho, Rho->Upsilon, Rho->Ohm, Rho->Omega);
             Eta = new Fa();
