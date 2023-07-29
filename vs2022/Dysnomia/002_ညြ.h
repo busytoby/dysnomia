@@ -11,6 +11,7 @@ namespace Dysnomia {
         Faung* Eta;
         Fa* Upsilon;
         ည* Theta;
+        int Gamma = 1;
 
         ညြ(bool RAPHE_NEBULAE) {
             if (Math::POETRY > 0)
