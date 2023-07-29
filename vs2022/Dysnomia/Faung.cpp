@@ -167,7 +167,7 @@ namespace Dysnomia {
 		while (ptr > (Int64*)*Bytes) {
 			Beta = Math::ModPow(Ohm, Omega, Omicron);
 			*ptr = *ptr ^ Beta;
-			Ohm = Beta;
+			Ohm = *ptr;
 			ptr--;
 		}
 	}
