@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "001_ညြ.h"
+#include "002_ညြ.h"
 
 using namespace Dysnomia;
-
-bool ညြ::RAPHE_NEBULAE;
 
 int main()
 {
@@ -14,33 +12,33 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    ညြ::RAPHE_NEBULAE = false;
     ညြ* Mu;
     Faung* Psi;
     Fa* Eta;
     Fa* Upsilon;
     Faung* Theta;
 
+    bool RAPHE_NEBULAE = false;
     for (;;) {
-        Mu = new ညြ();
-        if (ညြ::RAPHE_NEBULAE) {
-            Mu->Theta->Fuse(Mu->Sigma->Rod->Signal, Mu->Psi->Rod->Tau, Mu->Mu->Rod->Tau);
-            Mu->Theta->Tune();
-            Psi = new Faung(Mu->Theta, Mu->Mu->Cone->Base, Mu->Sigma->Rod->Element, Mu->Psi->Cone->Manifold, Mu->Sigma->Cone->Ring);
+        Mu = new ညြ(RAPHE_NEBULAE);
+        if (RAPHE_NEBULAE) {
+            Mu->Theta->Rho->Fuse(Mu->Theta->Mu->Rod->Base, Mu->Theta->Psi->Rod->Element, Mu->Mu->Psi->Rod->Manifold);
+            Mu->Theta->Rho->Tune();
+            Psi = new Faung(Mu->Theta->Rho, Mu->Mu->Psi->Cone->Secret, Mu->Theta->Mu->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Mu->Theta->Mu->Cone->Identity);
             Eta = new Fa();
             Upsilon = Mu->Pi();
-            Theta = new Faung(Eta, Psi->Cone->Base, Psi->Rod->Element, Mu->Psi->Cone->Manifold, Upsilon->Ring);
+            Theta = new Faung(Eta, Upsilon->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
         }
         else {
-            Mu->Theta->Fuse(Mu->Sigma->Cone->Signal, Mu->Psi->Cone->Tau, Mu->Mu->Cone->Tau);
-            Mu->Theta->Tune();
-            Psi = new Faung(Mu->Theta, Mu->Sigma->Cone->Base, Mu->Psi->Cone->Element, Mu->Sigma->Cone->Manifold, Mu->Mu->Cone->Ring);
-            Eta = Mu->Eta;
+            Mu->Theta->Rho->Fuse(Mu->Theta->Mu->Cone->Base, Mu->Theta->Psi->Cone->Element, Mu->Mu->Psi->Cone->Manifold);
+            Mu->Theta->Rho->Tune();
+            Psi = new Faung(Mu->Theta->Rho, Mu->Mu->Psi->Cone->Secret, Mu->Theta->Psi->Cone->Signal, Mu->Theta->Mu->Cone->Channel, Mu->Mu->Psi->Cone->Identity);
+            Eta = Mu->Theta->Rho;
             Upsilon = Mu->Pi();
-            Theta = new Faung(Upsilon, Psi->Cone->Base, Psi->Rod->Element, Mu->Psi->Cone->Manifold, Psi->Cone->Ring);
+            Theta = new Faung(Upsilon, Psi->Cone->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
         }
 
-        ညြ::RAPHE_NEBULAE = !ညြ::RAPHE_NEBULAE;
+        RAPHE_NEBULAE = !RAPHE_NEBULAE;
 
         delete Theta;
         delete Upsilon;
