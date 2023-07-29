@@ -13,13 +13,16 @@ int main()
     Math::POETRY = 0;
 
     Tod* Mu;
-    ညြ* Nu;
+    ညြ* Psi;
+    Faung* Eta;
 
     for (;;) {
         Mu = new Tod();
-        Nu = new ညြ(true);
+        Psi = new ညြ(true);
+        Eta = new Faung(Psi->Theta->Rho, Mu->Upsilon->Secret, Mu->Upsilon->Signal, Mu->Upsilon->Channel, Mu->Upsilon->Identity);
 
-        delete Nu;
+        delete Eta;
+        delete Psi;
         delete Mu;
     }
 
