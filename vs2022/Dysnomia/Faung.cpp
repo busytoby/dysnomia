@@ -157,17 +157,17 @@ namespace Dysnomia {
 		ptr = (Int64*)*Cursor;
 		int i = 0;
 		while(ptr < (Int64*)*Bytes + Length) {
-			Beta = Math::ModPow(Rho, Omicron, Omega);
+			Beta = Math::ModPow(Pi, Omicron, Omega);
 			*ptr = Beta;
-			Rho = Beta;
+			Pi = Beta;
 			ptr++;
 		}
 
 		ptr--;
 		while (ptr > (Int64*)*Bytes) {
-			Beta = Math::ModPow(Sigma, Omega, Omicron);
+			Beta = Math::ModPow(Ohm, Omega, Omicron);
 			*ptr = *ptr ^ Beta;
-			Sigma = Beta;
+			Ohm = Beta;
 			ptr--;
 		}
 	}
