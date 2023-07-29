@@ -18,8 +18,9 @@ int main()
     Faung* Psi;
     BYTE* Nu = nullptr;
     BYTE* Eta = nullptr;
-    const short Sigma = 4096;
+    const short Sigma = 14;
 
+    bool firstrun = true;
     for (;;) {
         Mu = new ë();
         Rho = new ë();
@@ -33,6 +34,9 @@ int main()
         if (Nu != nullptr) { free(Nu); Nu = nullptr; }       
         Eta = nullptr;
 
-        cout << "My Needle Is Floating\n";
+        if (firstrun) {
+            cout << "My Needle Is Floating\n";
+            firstrun = false;
+        }
     }
 }
