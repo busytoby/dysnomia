@@ -166,7 +166,7 @@ namespace Dysnomia {
 		ptr--;
 		while (ptr > (Int64*)*Bytes+1) {
 			Beta = Math::ModPow(Sigma, Omega, Omicron);
-			*ptr = Beta;
+			*ptr = *ptr ^ Beta;
 			Sigma = Beta;
 			ptr--;
 		}
