@@ -139,6 +139,7 @@
     <ClInclude Include="002_ညြ.h" />
     <ClInclude Include="003_Tod.h" />
     <ClInclude Include="004_Zuo.h" />
+    <ClInclude Include="005_ë.h" />
     <ClInclude Include="Faung.h" />
     <ClInclude Include="Fa.h" />
     <ClInclude Include="Math.h" />

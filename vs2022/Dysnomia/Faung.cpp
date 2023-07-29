@@ -171,6 +171,15 @@ namespace Dysnomia {
 	}
 	*/
 
+	void Faung::Theta(Int64 Omicron) {
+		Charge(Omicron);
+		Induce();
+		Torque();
+		Amplify();
+		Sustain();
+		React();
+	}
+
 	void Faung::Charge(Int64 Signal) {
 		if (Signal == 0) Signal = Rod->Signal;
 		Sigma = Cone->Charge(Signal);

@@ -13,8 +13,8 @@ namespace Dysnomia {
 		void Ratchet();
 
 	public:
-		Fa* Rod = nullptr;
-		Fa* Cone = nullptr;
+		Fa* Rod;
+		Fa* Cone;
 
 		Int64 Phi, Eta, Mu, Xi;
 		Int64 Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega;
@@ -35,6 +35,7 @@ namespace Dysnomia {
 		void Compare(Fa*, string);
 		int Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
+		void Theta(Int64);
 		void Charge(Int64);
 		void Induce();
 		void Torque();

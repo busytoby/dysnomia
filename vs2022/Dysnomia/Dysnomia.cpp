@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
-#include "004_Zuo.h"
+#include "005_ë.h"
 
 using namespace Dysnomia;
 
@@ -12,26 +12,14 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Zuo* Mu = new Zuo();
-    Faung* Rho;
-    Faung* Psi;
-    Faung* Nu;
+    ë* Mu;
+    ë* Rho;
 
     for (;;) {
-        Mu = new Zuo();
-        Rho = new Faung(Mu->Upsilon, Mu->Theta);
-        Rho->Charge(Mu->Mu->Mu->Psi->Barn);
-        Rho->Induce();
-        Rho->Torque();
-        Rho->Amplify();
-        Rho->Sustain();
-        Rho->React();
-        Psi = new Faung(Rho->Rho, Rho->Upsilon, Rho->Ohm, Rho->Omicron);
-        Nu = new Faung(Rho->Rho, Rho->Upsilon, Rho->Ohm, Rho->Omega);
+        Mu = new ë();
+        Rho = new ë();
         
-        delete Nu;
-        delete Psi;
-        delete Rho;
         delete Mu;
+        delete Rho;
     }
 }

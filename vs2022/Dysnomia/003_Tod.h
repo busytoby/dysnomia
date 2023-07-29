@@ -1,4 +1,4 @@
-﻿#include <vector>
+﻿#pragma once
 #include "002_ညြ.h"
 
 using namespace std;
@@ -31,10 +31,10 @@ namespace Dysnomia {
         }
 
         ~Tod() {
-            if (Theta->Rod->Gamma <= 1 || Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
-            if (Psi->Rod->Gamma <= 1 || Psi->Cone->Gamma <= 1) delete Psi; else { Psi->Rod->Gamma--; Psi->Cone->Gamma--; }
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+            if (Psi->Rod->Gamma <= 1 || Psi->Cone->Gamma <= 1) delete Psi; else { Psi->Rod->Gamma--; Psi->Cone->Gamma--; }
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+            if (Theta->Rod->Gamma <= 1 || Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }            
         }
     };
 }
