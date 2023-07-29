@@ -17,7 +17,7 @@ namespace Dysnomia {
                 cout << "ည ";
             Mu = new Faung();
             Rho = new Fa();
-            Psi = new Faung(Rho, Mu->Cone->Base, Mu->Cone->Element, Mu->Cone->Manifold, Mu->Cone->Ring);
+            Psi = new Faung(Rho, Mu->Cone->Secret, Mu->Cone->Signal, Mu->Cone->Channel, Mu->Cone->Identity);
         }
 
         ည(Faung* Beta, Fa* Omicron) {
