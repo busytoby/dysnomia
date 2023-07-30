@@ -18,7 +18,7 @@ int main()
     Faung* Psi;
     BYTE* Nu = nullptr;
     BYTE* Eta = nullptr;
-    const short Sigma = 14;
+    const short Sigma = 78;
 
     bool firstrun = true;
     for (;;) {
