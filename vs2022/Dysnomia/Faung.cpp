@@ -80,8 +80,9 @@ namespace Dysnomia {
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				if (E == 103) {
+				if (E == 103) {					
 					if (Rod->Ring == Rod->Barn) Xi = Rod->Foundation;
+					if (Rod->Ring == 0) Xi = Rod->Barn;
 					continue;
 				}
 				throw;
@@ -204,14 +205,12 @@ namespace Dysnomia {
 
 	void Faung::Theta(Int64 Omicron) {
 		Charge(Omicron);
-		if (Sigma < 4194304) {
+		if (Sigma < 4194304)
 			Charge(0);
-			if (Sigma < 4194304) {
-				Charge(Mu);
-				if (Sigma < 4194304)
-					throw;
-			}
-		}
+		if (Sigma < 4194304)
+			Charge(Mu);
+		if (Sigma < 4194304)
+			throw;
 		Induce();
 		Torque();
 		Amplify();
