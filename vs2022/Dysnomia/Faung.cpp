@@ -40,12 +40,15 @@ namespace Dysnomia {
 				Failed = false;
 			}
 			catch (int E) {
+				this->Cone->Nu = 0;
 				if (E == 1) throw 1;
 				if (E == 4) throw 2;
 				if (E == 7) throw 3;
 				if (E == 103) {
 					if (this->Rod->Secret == this->Cone->Secret)
 						this->Rod->Secret = Math::Random();
+					if (this->Rod->Signal == this->Cone->Signal)
+						this->Cone->Signal = Math::Random();
 					continue;
 				}
 				throw;
