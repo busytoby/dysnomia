@@ -227,18 +227,27 @@ namespace Dysnomia {
 	*/
 
 	void Faung::Theta(Int64 Omicron) {
-		Charge(Omicron);
-		if (Sigma < 4194304)
-			Charge(0);
-		if (Sigma < 4194304)
-			Charge(Mu);
-		if (Sigma < 4194304)
-			throw;
-		Induce();
-		Torque();
-		Amplify();
-		Sustain();
-		React();
+		bool Failed = true;
+		while (Failed) {
+			try {
+				Charge(Omicron);
+				if (Sigma < 4194304)
+					Charge(0);
+				if (Sigma < 4194304)
+					Charge(Mu);
+				if (Sigma < 4194304)
+					throw;
+				Induce();
+				Torque();
+				Amplify();
+				Sustain();
+				React();
+				Failed = false;
+			}
+			catch (int E) {
+				continue;
+			}
+		}
 	}
 
 	void Faung::Charge(Int64 Signal) {

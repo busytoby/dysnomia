@@ -170,5 +170,6 @@ namespace Dysnomia {
 	{
 		Eta = Math::ModPow(Pi, Channel, Theta);
 		Kappa = Math::ModPow(Pi, Theta, Channel);
+		if (Eta == 0 || Kappa == 0) throw 114;
 	}
 }
