@@ -48,18 +48,23 @@ namespace Dysnomia {
 	Faung::Faung(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 		if (Math::POETRY > 1)
 			cout << "Faung ";
-		try {
-			Rod = new Fa();
-			Cone = new Fa();
-			FuseAndOpen(Rho, Upsilon, Ohm, Xi);
-		}
-		catch (int E) {
-			delete Rod;
-			delete Cone;
-			if (E == 103) {
-				continue;
+
+		bool Failed = true;
+		while (Failed) {
+			try {
+				Rod = new Fa();
+				Cone = new Fa();
+				FuseAndOpen(Rho, Upsilon, Ohm, Xi);
+				Failed = false;
 			}
-			throw;
+			catch (int E) {
+				delete Rod;
+				delete Cone;
+				if (E == 103) {
+					continue;
+				}
+				throw;
+			}
 		}
 	}
 
