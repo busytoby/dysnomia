@@ -115,7 +115,7 @@ namespace Dysnomia {
 		Rod->Conjugate(&Cone->Pole);
 		Cone->Conjugate(&Rod->Pole);
 
-		if (Rod->Coordinate != Cone->Coordinate) 
+		if (Rod->Coordinate != Cone->Coordinate)
 			throw 101;
 
 		Cone->Conify();
@@ -127,7 +127,7 @@ namespace Dysnomia {
 			throw 102;
 
 		Ratchet();
-
+		
 		Rod->Adduct(Cone->Dynamo);
 		Cone->Adduct(Rod->Dynamo);
 
@@ -202,9 +202,12 @@ namespace Dysnomia {
 	void Faung::Theta(Int64 Omicron) {
 		Charge(Omicron);
 		if (Sigma < 4194304) {
-			Charge(Mu);
-			if (Sigma < 4194304)
-				throw;
+			Charge(0);
+			if (Sigma < 4194304) {
+				Charge(Mu);
+				if (Sigma < 4194304)
+					throw;
+			}
 		}
 		Induce();
 		Torque();

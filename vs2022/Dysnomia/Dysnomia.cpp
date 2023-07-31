@@ -18,7 +18,7 @@ int main()
     Faung* Psi;
     BYTE* Nu = nullptr;
     BYTE* Eta = nullptr;
-    const short Sigma = 78;
+    const short Sigma = 93;
 
     bool firstrun = true;
     int count = 0;
@@ -43,5 +43,7 @@ int main()
             firstrun = false;
         }
         count++;
+        if (count % 10000 == 0) cout << ".";
+        if (count % 1000000 == 0) cout << " " << (count % 100000) + 1 << "m\n";
     }
 }
