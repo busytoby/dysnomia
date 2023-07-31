@@ -80,7 +80,10 @@ namespace Dysnomia {
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				if (E == 103) continue;
+				if (E == 103) {
+					if (Rod->Ring == Rod->Barn) Xi = Rod->Foundation;
+					continue;
+				}
 				throw;
 			}
 		}

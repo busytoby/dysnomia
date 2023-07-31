@@ -27,7 +27,7 @@ int main()
         Rho = new ë();
         Psi = new Faung(Mu->Eta, Rho->Eta);
         if (Psi->Xi == Psi->Cone->Barn)
-            Psi->Theta(Psi->Phi);
+            Psi->Theta(Psi->Cone->Tau);
         else
             Psi->Theta(Psi->Xi);
         Psi->Chi(&Nu, &Eta, Sigma);
