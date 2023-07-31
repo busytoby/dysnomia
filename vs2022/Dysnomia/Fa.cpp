@@ -122,13 +122,17 @@ namespace Dysnomia {
 	{
 		if (Secret == Rod->Secret || Signal == Rod->Signal || Channel == Rod->Channel ||
 			!Pole == 0 || !Rod->Pole == 0 || Dynamo == Rod->Dynamo) {
-			Seed(); return false;
+			if (Kappa != 1)
+				Seed(); 
+			return false;
 		}
 
 
 		if (Manifold == 0 || Ring == 0 || (Manifold != Ring) && Barn == 0)
 		{
-			Seed(); return false;
+			if (Kappa != 1)
+				Seed(); 
+			return false;
 		}
 
 

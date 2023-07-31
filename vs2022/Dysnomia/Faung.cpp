@@ -31,15 +31,25 @@ namespace Dysnomia {
 		if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
 		this->Rod = Rod;
 		this->Cone = Cone;
+		this->Cone->Kappa = 1;
 
-		try {
-			OpenManifolds();
-		}
-		catch (int E) {
-			if (E == 1) throw 1;
-			if (E == 4) throw 2;
-			if (E == 7) throw 3;
-			throw;
+		bool Failed = true;
+		while (Failed) {
+			try {
+				OpenManifolds();
+				Failed = false;
+			}
+			catch (int E) {
+				if (E == 1) throw 1;
+				if (E == 4) throw 2;
+				if (E == 7) throw 3;
+				if (E == 103) {
+					if (this->Rod->Secret == this->Cone->Secret)
+						this->Rod->Secret = Math::Random();
+					continue;
+				}
+				throw;
+			}
 		}
 		Rod->Gamma++;
 		Cone->Gamma++;
@@ -89,9 +99,10 @@ namespace Dysnomia {
 				if (E == 6) continue;
 				if (E == 7) continue;
 				if (E == 103) {			
-					if (Rod->Secret == Rod->Signal) Rod->Secret = Rod->Manifold;
-					if (Rod->Ring == Rod->Barn) Xi = Rod->Foundation;
-					if (Rod->Ring == 0) Xi = Rod->Barn;
+					if (Rod->Secret == Rod->Signal) Upsilon = Eta;
+					if (Rod->Manifold == Rod->Barn) Upsilon = Mu;
+					if (Rod->Ring == 0) Rho = Phi;
+					if (Rod->Ring == Rod->Barn) Ohm = Mu;
 					continue;
 				}
 				throw;
