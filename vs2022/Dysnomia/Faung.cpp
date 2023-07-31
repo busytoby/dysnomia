@@ -102,7 +102,7 @@ namespace Dysnomia {
 				if (E == 6) continue;
 				if (E == 7) continue;
 				if (E == 103) {			
-					if (Rod->Secret == Rod->Signal) Upsilon = Eta;
+					if (Rod->Secret == Rod->Signal) this->Rod->Signal = Eta;
 					if (Rod->Manifold == Rod->Barn) Upsilon = Mu;
 					if (Rod->Ring == 0) Rho = Phi;
 					if (Rod->Ring == Rod->Barn) Ohm = Mu;
@@ -236,7 +236,7 @@ namespace Dysnomia {
 				if (Sigma < 4194304)
 					Charge(Mu);
 				if (Sigma < 4194304)
-					throw;
+					throw 115;
 				Induce();
 				Torque();
 				Amplify();
