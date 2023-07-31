@@ -44,6 +44,6 @@ int main()
         }
         count++;
         if (count % 10000 == 0) cout << ".";
-        if (count % 1000000 == 0) cout << " " << (count % 100000) + 1 << "m\n";
+        if (count % 1000000 == 0) cout << " " << (count / 100000) << "m\n";
     }
 }
