@@ -56,6 +56,9 @@ namespace Dysnomia {
 		catch (int E) {
 			delete Rod;
 			delete Cone;
+			if (E == 103) {
+				continue;
+			}
 			throw;
 		}
 	}
@@ -80,7 +83,8 @@ namespace Dysnomia {
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				if (E == 103) {					
+				if (E == 103) {			
+					if (Rod->Secret == Rod->Signal) Rod->Secret = Rod->Manifold;
 					if (Rod->Ring == Rod->Barn) Xi = Rod->Foundation;
 					if (Rod->Ring == 0) Xi = Rod->Barn;
 					continue;
