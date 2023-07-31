@@ -21,11 +21,15 @@ int main()
     const short Sigma = 78;
 
     bool firstrun = true;
+    int count = 0;
     for (;;) {
         Mu = new ë();
         Rho = new ë();
         Psi = new Faung(Mu->Eta, Rho->Eta);
-        Psi->Theta(Psi->Xi);
+        if (Psi->Xi == Psi->Cone->Barn)
+            Psi->Theta(Psi->Phi);
+        else
+            Psi->Theta(Psi->Xi);
         Psi->Chi(&Nu, &Eta, Sigma);
 
         delete Mu;
@@ -38,5 +42,6 @@ int main()
             cout << "My Needle Is Floating\n";
             firstrun = false;
         }
+        count++;
     }
 }
