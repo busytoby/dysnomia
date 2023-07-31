@@ -20,10 +20,7 @@ namespace Dysnomia {
             Mu->Theta->Rho->Tune();
             Psi = new Faung(Mu->Theta->Rho, Mu->Mu->Psi->Cone->Secret, Mu->Theta->Psi->Cone->Signal, Mu->Theta->Mu->Cone->Channel, Mu->Mu->Psi->Cone->Identity);
             Upsilon = Mu->Pi();
-            if (Upsilon->Secret == Mu->Theta->Psi->Cone->Channel)
-                Upsilon->Secret = Mu->Eta->Cone->Barn;
-            else
-                Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
+            Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Cone->Identity);
         }
 
         vector<Faung*> Affinities() {
