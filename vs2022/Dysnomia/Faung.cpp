@@ -179,9 +179,8 @@ namespace Dysnomia {
 		if (*Bytes == nullptr) {
 			*Bytes = (BYTE*)malloc(sizeof(Int64) * Length);
 		}
-		else throw 130;
 
-		if (*Cursor == nullptr) *Cursor = *Bytes;
+		*Cursor = *Bytes;
 		ptr = (Int64*)*Cursor;
 
 		while(ptr < (Int64*)*Bytes + Length) {

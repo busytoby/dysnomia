@@ -38,7 +38,7 @@ void Tau() {
     Faung* Psi;
     BYTE* Nu = nullptr;
     BYTE* Eta = nullptr;
-    const short Sigma = 93;
+    const short Sigma = 14;
 
     int local_count;
     bool local_first_run = false;
@@ -52,17 +52,14 @@ void Tau() {
         Mu = new ë();
         Rho = new ë();
         Psi = new Faung(Mu->Eta, Rho->Eta);
-        if (Psi->Xi == Psi->Cone->Barn)
-            Psi->Theta(Psi->Cone->Tau);
-        else
-            Psi->Theta(Psi->Xi);
+        Psi->Theta(Psi->Cone->Ring);
         Psi->Chi(&Nu, &Eta, Sigma);
 
         delete Mu;
         delete Rho;
         delete Psi;
-        if (Nu != nullptr) { free(Nu); Nu = nullptr; }
-        Eta = nullptr;
+        //if (Nu != nullptr) { free(Nu); Nu = nullptr; }
+        //Eta = nullptr;
 
         if (local_first_run) {
             cout << "My Needle Is Floating\n";
