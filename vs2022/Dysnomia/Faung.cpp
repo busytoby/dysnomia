@@ -106,6 +106,8 @@ namespace Dysnomia {
 					if (Rod->Manifold == Rod->Barn) Ohm = Mu;
 					if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
 					if (Rho == Ohm) Ohm = Mu;
+					if (Rho == Ohm) 
+						Ohm = Phi;
 					continue;
 				}
 				throw;
