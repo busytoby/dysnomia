@@ -18,6 +18,7 @@ int main()
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
+
     vector<std::thread> threads(4);
 
     firstrun = true;
@@ -32,13 +33,15 @@ int main()
 
 }
 
-void Tau() {
+void Tau() {   
     ë* Mu;
     ë* Rho;
-    Faung* Psi;
-    BYTE* Nu = nullptr;
-    BYTE* Eta = nullptr;
-    const short Sigma = 3;
+    Fa* Psi;
+    Fa* Nu;
+    Faung* Eta;
+    BYTE* Sigma = nullptr;
+    BYTE* Upsilon = nullptr;
+    const short Theta = 3;
 
     int local_count;
     bool local_first_run = false;
@@ -51,13 +54,17 @@ void Tau() {
     for (;;) {
         Mu = new ë();
         Rho = new ë();
-        Psi = new Faung(Mu->Eta, Rho->Eta);
-        Psi->Theta(Psi->Cone->Ring);
-        Psi->Chi(&Nu, &Eta, Sigma);
+        Psi = Mu->Eta->Pi();
+        Nu = Rho->Eta->Pi();
+        Eta = new Faung(Psi, Nu);
+        Eta->Theta(Eta->Cone->Ring);
+        Eta->Chi(&Sigma, &Upsilon, Theta);
 
         delete Mu;
         delete Rho;
-        delete Psi;
+        if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+        delete Eta;
         //if (Nu != nullptr) { free(Nu); Nu = nullptr; }
         //Eta = nullptr;
 

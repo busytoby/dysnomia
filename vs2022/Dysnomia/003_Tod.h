@@ -7,7 +7,7 @@ namespace Dysnomia {
     class Tod {
     public:
         ညြ* Mu;
-        ည* Psi;
+        ညြ* Psi;
         Fa* Upsilon;
         Faung* Theta;
         int Gamma = 1;
@@ -18,9 +18,9 @@ namespace Dysnomia {
             Mu = new ညြ(false);
             Mu->Theta->Rho->Fuse(Mu->Theta->Mu->Cone->Base, Mu->Theta->Psi->Cone->Element, Mu->Mu->Psi->Cone->Manifold);
             Mu->Theta->Rho->Tune();
-            Psi = new ည(Mu->Theta->Mu, Mu->Theta->Rho);
+            Psi = new ညြ(true);
             Upsilon = Mu->Pi();
-            Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Mu->Rod->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Mu->Cone->Identity);
+            Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Upsilon->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Upsilon->Identity);
         }
 
         vector<Faung*> Affinities() {
