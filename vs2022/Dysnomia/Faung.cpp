@@ -105,6 +105,7 @@ namespace Dysnomia {
 					if (Rod->Secret == Rod->Signal) this->Rod->Signal = Eta;
 					if (Rod->Manifold == Rod->Barn) Ohm = Mu;
 					if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
+					if (Rho == Ohm) Ohm = Mu;
 					continue;
 				}
 				throw;

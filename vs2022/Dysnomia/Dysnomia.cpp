@@ -38,7 +38,7 @@ void Tau() {
     Faung* Psi;
     BYTE* Nu = nullptr;
     BYTE* Eta = nullptr;
-    const short Sigma = 14;
+    const short Sigma = 3;
 
     int local_count;
     bool local_first_run = false;
