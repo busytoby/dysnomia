@@ -81,10 +81,10 @@ namespace Dysnomia {
 		}
 	}
 
-	Faung::Faung(Fa* N, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
+	Faung::Faung(Fa* Beta, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
 		if (Math::POETRY > 1)
 			cout << "Faung ";
-		Rod = N;
+		Rod = Beta;
 		if (!Rod->Barn == 0) 
 			throw 100;
 
@@ -103,9 +103,8 @@ namespace Dysnomia {
 				if (E == 7) continue;
 				if (E == 103) {			
 					if (Rod->Secret == Rod->Signal) this->Rod->Signal = Eta;
-					if (Rod->Manifold == Rod->Barn) Upsilon = Mu;
-					if (Rod->Ring == 0) Rho = Phi;
-					if (Rod->Ring == Rod->Barn) Ohm = Mu;
+					if (Rod->Manifold == Rod->Barn) Ohm = Mu;
+					if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
 					continue;
 				}
 				throw;
@@ -180,7 +179,7 @@ namespace Dysnomia {
 			*Bytes = (BYTE*)malloc(sizeof(Int64) * Length);
 		}
 
-		*Cursor = *Bytes;
+		if (*Cursor == nullptr) *Cursor = *Bytes;
 		ptr = (Int64*)*Cursor;
 
 		while(ptr < (Int64*)*Bytes + Length) {
