@@ -248,6 +248,8 @@ namespace Dysnomia {
 			catch (int E) {
 				if (Cone->Kappa == 1 || Rod->Kappa == 1)
 					Omicron = Phi;
+				if (Cone->Eta == 1 || Rod->Eta == 1)
+					Omicron = Eta;
 				continue;
 			}
 		}
