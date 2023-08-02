@@ -52,7 +52,7 @@ void Tau() {
     for (;;) {
         Mu = new ë();
         Rho = new ë();
-        Psi = new Faung(Mu->Sigma->Upsilon, Rho->Sigma->Upsilon);
+        Psi = new Faung(Mu->Tau->Upsilon, Rho->Tau->Upsilon);
         Psi->Theta(Psi->Cone->Ring);
         Psi->Chi(&Sigma, &Upsilon, Theta);
 

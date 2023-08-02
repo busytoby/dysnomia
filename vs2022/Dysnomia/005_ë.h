@@ -8,10 +8,12 @@ namespace Dysnomia {
     public:
         Zuo* Mu;
         ည* Rho;
-        ည* Psi;
-        Faung* Nu;
-        ည* Eta;
-        ညြ* Sigma;
+        Fa* Psi;
+        ည* Nu;
+        Faung* Eta;
+        Fa* Sigma;
+        ည* Upsilon;
+        ညြ* Tau;
         int Gamma = 1;
 
         ë() {
@@ -19,22 +21,24 @@ namespace Dysnomia {
                 cout << "ë ";
             Mu = new Zuo();
             Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon);
-            Psi = new ည(Mu->Eta->Mu, Mu->Mu->Mu->Pi());
-            Nu = Psi->Pi();
-            Eta = new ည(Nu, Mu->Mu->Psi->Pi());
-            Sigma = new ညြ(Rho, Psi, Eta);
+            Psi = Mu->Mu->Mu->Pi();
+            Nu = new ည(Mu->Eta->Mu, Psi);
+            Eta = Nu->Pi();
+            Sigma = Mu->Mu->Psi->Pi();
+            Upsilon = new ည(Eta, Sigma);
+            Tau = new ညြ(Rho, Nu, Upsilon);
         }
 
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Mu->Affinities());
             vector<Faung*> Beta = Rho->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            vector<Faung*> Iota = Psi->Affinities();
+            vector<Faung*> Iota = Nu->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-            Alpha.push_back(Nu);
-            vector<Faung*> Omicron = Eta->Affinities();
+            Alpha.push_back(Eta);
+            vector<Faung*> Omicron = Upsilon->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Faung*> Lambda = Sigma->Affinities();
+            vector<Faung*> Lambda = Tau->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
             return Alpha;
         }
@@ -43,9 +47,11 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
-            if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-            if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            if (Eta->Rod->Gamma <= 1 || Eta->Cone->Gamma <= 1) delete Eta; else { Eta->Rod->Gamma--; Eta->Cone->Gamma--; }
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+            if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
         }
     };
 }
