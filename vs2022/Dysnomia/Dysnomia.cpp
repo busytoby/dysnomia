@@ -19,7 +19,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    vector<std::thread> threads(1);
+    vector<std::thread> threads(4);
 
     firstrun = true;
     counter = 0;
