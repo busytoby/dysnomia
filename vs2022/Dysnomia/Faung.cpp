@@ -279,8 +279,12 @@ namespace Dysnomia {
 	void Faung::React() {
 		Rod->React(Pi, Cone->Channel);
 		Cone->React(Pi, Rod->Channel);
-		if (Cone->Kappa != Rod->Eta || Rod->Kappa != Cone->Eta) throw 100;
-		if (Rod->Eta == Rod->Kappa) throw 101;
+		if (Cone->Kappa != Rod->Eta || Rod->Kappa != Cone->Eta) 
+			throw 100;
+		if (Rod->Eta == Rod->Kappa) 
+			throw 101;
+		if (Cone->Kappa == 1 && Rod->Kappa == 1) 
+			throw 666;
 		Omicron = Cone->Kappa;
 		Omega = Rod->Kappa;
 	}
