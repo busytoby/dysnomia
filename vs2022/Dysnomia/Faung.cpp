@@ -243,6 +243,8 @@ namespace Dysnomia {
 				Amplify();
 				Sustain();
 				React();
+				if (Cone->Kappa == 1 || Rod->Kappa == 1)
+					Omicron = Phi;
 				Failed = false;
 			}
 			catch (int E) {
