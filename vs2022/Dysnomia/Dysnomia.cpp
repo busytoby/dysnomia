@@ -46,7 +46,7 @@ void Tau() {
         Mu = new Zuo();
         Rho = new ë(Mu, true);
         Psi = new ë(Mu, false);
-        Nu = new Faung(Rho->Tau->Upsilon, Psi->Tau->Upsilon);
+        Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
         Nu->Theta(Nu->Cone->Ring);
         Nu->Chi(&Sigma, &Upsilon, Theta);
 

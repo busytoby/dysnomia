@@ -8,10 +8,10 @@ namespace Dysnomia {
     public:
         Zuo* Mu;
         ည* Rho;
-        ည* Nu;
-        Faung* Eta;
-        ည* Upsilon;
-        ညြ* Tau;
+        ည* Psi;
+        Faung* Nu;
+        ည* Eta;
+        ညြ* Sigma;
         int Gamma = 1;
 
         ë(Zuo* Beta, bool Iota) {
@@ -20,30 +20,30 @@ namespace Dysnomia {
                 cout << "ë ";
             Mu = Beta;
             Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon, Iota);
-            Nu = new ည(Mu->Eta->Mu, Mu->Psi->Rho, !Iota);
+            Psi = new ည(Mu->Eta->Mu, Mu->Psi->Rho, !Iota);
             if (Iota)
-                Eta = Mu->Upsilon;
+                Nu = Mu->Upsilon;
             else
-                Eta = Mu->Theta;
-            Eta->Rod->Gamma++;
-            Eta->Cone->Gamma++;
+                Nu = Mu->Theta;
+            Nu->Rod->Gamma++;
+            Nu->Cone->Gamma++;
             if(Iota)
-                Upsilon = new ည(Eta, Mu->Psi->Rho, true);
+                Eta = new ည(Nu, Mu->Psi->Rho, true);
             else
-                Upsilon = new ည(Eta, Mu->Eta->Rho, false);
-            Tau = new ညြ(Rho, Nu, Upsilon);
+                Eta = new ည(Nu, Mu->Eta->Rho, false);
+            Sigma = new ညြ(Rho, Psi, Eta);
         }
 
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Mu->Affinities());
             vector<Faung*> Beta = Rho->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            vector<Faung*> Iota = Nu->Affinities();
+            vector<Faung*> Iota = Psi->Affinities();
             Alpha.insert(Alpha.end(), Iota.begin(), Iota.end());
-            Alpha.push_back(Eta);
-            vector<Faung*> Omicron = Upsilon->Affinities();
+            Alpha.push_back(Nu);
+            vector<Faung*> Omicron = Eta->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
-            vector<Faung*> Lambda = Tau->Affinities();
+            vector<Faung*> Lambda = Sigma->Affinities();
             Alpha.insert(Alpha.end(), Lambda.begin(), Lambda.end());
             return Alpha;
         }
@@ -51,10 +51,10 @@ namespace Dysnomia {
         ~ë() {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
-            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
-            if (Eta->Rod->Gamma <= 1 || Eta->Cone->Gamma <= 1) delete Eta; else { Eta->Rod->Gamma--; Eta->Cone->Gamma--; }
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
-            if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
+            if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+            if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
+            if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+            if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
         }
     };
 }
