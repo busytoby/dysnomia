@@ -20,18 +20,18 @@ namespace Dysnomia {
             Psi = Pi();
         }
 
-        ည(Faung* Beta, Fa* Omicron, bool Iota) {
+        ည(Faung* Beta, Fa* Omicron, bool Lambda) {
             if (Math::POETRY > 0)
                 cout << "ည ";
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             Omicron->Gamma++;
-            if (Iota)
+            if (Lambda)
                 Mu = new Faung();
             else
                 Mu = Beta;
             Rho = Omicron;
-            if (Iota)
+            if (Lambda)
                 Psi = Beta;
             else
                 Psi = new Faung();
