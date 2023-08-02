@@ -65,13 +65,8 @@ void Tau() {
         //if (Sigma != nullptr) { free(Sigma); Sigma = nullptr; }
         //Upsilon = nullptr;
 
-        if (local_first_run) {
-            cout << "锚第\n";
-            local_first_run = false;
-        }
-
         local_count = ++counter;
-        if (local_count % 10000 == 0) cout << ".";
-        if (local_count % 1000000 == 0) cout << " " << (local_count / 1000000) << "m\n";
+        if (local_count % 10000 == 0) cout << "锚";
+        if (local_count % 1000000 == 0) cout << "第 " << (local_count / 1000000) << "m\n";
     }
 }
