@@ -187,8 +187,8 @@ namespace Dysnomia {
 
 		while(ptr < (Int64*)*Bytes + Length) {
 			Beta = Math::ModPow(Pi, Omicron, Omega);
-			*ptr = Beta;
-			Pi = Beta;
+			*ptr = *ptr ^ Beta;
+			Pi = *ptr;
 			ptr++;
 		}
 

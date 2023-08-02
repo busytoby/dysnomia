@@ -9,7 +9,6 @@ using namespace Dysnomia;
 using namespace std;
 
 std::atomic<int> counter;
-std::atomic<bool> firstrun;
 
 void Tau();
 
@@ -21,7 +20,6 @@ int main()
 
     vector<std::thread> threads(4);
 
-    firstrun = true;
     counter = 0;
 
     for (int i = 0; i < threads.size(); i++) {
@@ -43,12 +41,6 @@ void Tau() {
     const short Theta = 3;
 
     int local_count;
-    bool local_first_run = false;
-
-    if (firstrun) {
-        firstrun = false;
-        local_first_run = true;
-    }
 
     for (;;) {
         Mu = new Zuo();
