@@ -38,6 +38,7 @@ namespace Dysnomia {
             else
                 Eta = new Faung(Psi, Iota->Psi->Cone->Secret, Iota->Mu->Cone->Signal, Iota->Psi->Cone->Channel, Iota->Psi->Cone->Identity);
             Upsilon = new Fa();
+            Upsilon->Fuse(Beta->Psi->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Psi->Cone->Channel);
             Theta = Omicron;
         }
 

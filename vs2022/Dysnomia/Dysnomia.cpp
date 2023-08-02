@@ -36,9 +36,7 @@ int main()
 void Tau() {   
     ë* Mu;
     ë* Rho;
-    Fa* Psi;
-    Fa* Nu;
-    Faung* Eta;
+    Faung* Psi;
     BYTE* Sigma = nullptr;
     BYTE* Upsilon = nullptr;
     const short Theta = 3;
@@ -54,17 +52,13 @@ void Tau() {
     for (;;) {
         Mu = new ë();
         Rho = new ë();
-        Psi = Mu->Eta->Pi();
-        Nu = Rho->Eta->Pi();
-        Eta = new Faung(Psi, Nu);
-        Eta->Theta(Eta->Cone->Ring);
-        Eta->Chi(&Sigma, &Upsilon, Theta);
+        Psi = new Faung(Mu->Sigma->Upsilon, Rho->Sigma->Upsilon);
+        Psi->Theta(Psi->Cone->Ring);
+        Psi->Chi(&Sigma, &Upsilon, Theta);
 
         delete Mu;
         delete Rho;
-        if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
-        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
-        delete Eta;
+        delete Psi;
         //if (Nu != nullptr) { free(Nu); Nu = nullptr; }
         //Eta = nullptr;
 

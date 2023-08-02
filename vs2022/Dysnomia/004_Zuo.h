@@ -9,8 +9,7 @@ namespace Dysnomia {
         Tod* Mu;
         ည* Psi;
         ည* Eta;
-        Fa* Upsilon;
-        Fa* Theta;
+        Faung* Upsilon;
         int Gamma = 1;
 
         Zuo() {
@@ -19,8 +18,7 @@ namespace Dysnomia {
             Mu = new Tod();
             Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon);
             Eta = new ည(Mu->Psi->Theta->Mu, Mu->Upsilon);
-            Upsilon = Mu->Mu->Pi();
-            Theta = Mu->Psi->Pi();
+            Upsilon = Psi->Pi();
         }
 
         vector<Faung*> Affinities() {
@@ -29,6 +27,7 @@ namespace Dysnomia {
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
             vector<Faung*> Omicron = Eta->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+            Alpha.push_back(Upsilon);
             return Alpha;
         }
 
@@ -36,8 +35,7 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
-            if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
+            if (Upsilon->Rod->Gamma <= 1 || Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
         }
     };
 }
