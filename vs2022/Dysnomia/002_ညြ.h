@@ -26,6 +26,21 @@ namespace Dysnomia {
             Theta = new ည(Eta, Upsilon);
         }
 
+        ညြ(ည* Beta, ည* Iota, ည* Omicron) {
+            Beta->Gamma++;
+            Omicron->Gamma++;
+            if (Math::POETRY > 0)
+                cout << "ညြ ";
+            Mu = Beta;
+            Psi = new Fa();
+            if (Iota->Mu->Rod->Signal > Iota->Mu->Cone->Identity)
+                Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
+            else
+                Eta = new Faung(Psi, Iota->Psi->Cone->Secret, Iota->Mu->Cone->Signal, Iota->Psi->Cone->Channel, Iota->Psi->Cone->Identity);
+            Upsilon = new Fa();
+            Theta = Omicron;
+        }
+
         vector<Faung*> Affinities() { 
             vector<Faung*> Alpha(Mu->Affinities());
             Alpha.push_back(Eta);
@@ -44,11 +59,16 @@ namespace Dysnomia {
 
         Fa* Pi() {
             Fa* Beta = new Fa();
-            if (Eta->Cone->Signal == Mu->Psi->Rod->Secret)
+            if (Eta->Cone->Signal == Mu->Mu->Rod->Secret)
+                Beta->Fuse(Mu->Mu->Cone->Base, Mu->Mu->Cone->Element, Theta->Mu->Rod->Manifold);
+            else if (Eta->Cone->Signal == Mu->Mu->Cone->Secret)
+                Beta->Fuse(Mu->Mu->Rod->Base, Mu->Mu->Rod->Element, Theta->Mu->Cone->Manifold);
+            else if (Eta->Cone->Signal == Mu->Psi->Rod->Secret)
                 Beta->Fuse(Mu->Psi->Cone->Base, Mu->Psi->Cone->Element, Theta->Mu->Rod->Manifold);
             else if (Eta->Cone->Signal == Mu->Psi->Cone->Secret)
                 Beta->Fuse(Mu->Psi->Rod->Base, Mu->Psi->Rod->Element, Theta->Mu->Cone->Manifold);
-            else throw 1;
+            else
+                throw 1;
             Beta->Tune();
             return Beta;
         }

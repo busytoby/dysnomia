@@ -20,7 +20,7 @@ namespace Dysnomia {
             Rho = new ည(Mu->Eta->Mu, Mu->Mu->Upsilon);
             Psi = new ည(Rho->Mu, Mu->Upsilon);
             Nu = new ည(Psi->Mu, Mu->Theta);
-            Eta = new ညြ(true);
+            Eta = new ညြ(Rho, Psi, Nu);
         }
 
         vector<Faung*> Affinities() {
