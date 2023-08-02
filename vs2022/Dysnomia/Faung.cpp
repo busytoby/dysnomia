@@ -283,7 +283,7 @@ namespace Dysnomia {
 			throw 100;
 		if (Rod->Eta == Rod->Kappa) 
 			throw 101;
-		if (Cone->Kappa == 1 && Rod->Kappa == 1) 
+		if (Cone->Kappa <= 1 && Rod->Kappa <= 1) 
 			throw 666;
 		Omicron = Cone->Kappa;
 		Omega = Rod->Kappa;
