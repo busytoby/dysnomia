@@ -23,7 +23,7 @@ namespace Dysnomia {
             else
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
-            Theta = new ည(Eta, Upsilon);
+            Theta = new ည(Eta, Upsilon, false);
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {

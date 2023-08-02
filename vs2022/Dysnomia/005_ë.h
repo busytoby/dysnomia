@@ -19,8 +19,8 @@ namespace Dysnomia {
             if (Math::POETRY > 0)
                 cout << "ë ";
             Mu = Beta;
-            Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon);
-            Nu = new ည(Mu->Eta->Mu, Mu->Psi->Rho);
+            Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon, Iota);
+            Nu = new ည(Mu->Eta->Mu, Mu->Psi->Rho, !Iota);
             if (Iota)
                 Eta = Mu->Upsilon;
             else
@@ -28,9 +28,9 @@ namespace Dysnomia {
             Eta->Rod->Gamma++;
             Eta->Cone->Gamma++;
             if(Iota)
-                Upsilon = new ည(Eta, Mu->Psi->Rho);
+                Upsilon = new ည(Eta, Mu->Psi->Rho, true);
             else
-                Upsilon = new ည(Eta, Mu->Eta->Rho);
+                Upsilon = new ည(Eta, Mu->Eta->Rho, false);
             Tau = new ညြ(Rho, Nu, Upsilon);
         }
 

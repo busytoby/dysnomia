@@ -17,8 +17,8 @@ namespace Dysnomia {
             if (Math::POETRY > 0)
                 cout << "Zuo ";
             Mu = new Tod();
-            Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon);
-            Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau);
+            Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon, true);
+            Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau, false);
             Upsilon = Psi->Pi();
             Theta = Eta->Pi();
         }
