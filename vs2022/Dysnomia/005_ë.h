@@ -8,10 +8,8 @@ namespace Dysnomia {
     public:
         Zuo* Mu;
         ည* Rho;
-        Fa* Psi;
         ည* Nu;
         Faung* Eta;
-        Fa* Sigma;
         ည* Upsilon;
         ညြ* Tau;
         int Gamma = 1;
@@ -22,16 +20,14 @@ namespace Dysnomia {
                 cout << "ë ";
             Mu = Beta;
             Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon);
-            Psi = Mu->Mu->Mu->Pi();
-            Nu = new ည(Mu->Eta->Mu, Psi);
+            Nu = new ည(Mu->Eta->Mu, Mu->Psi->Rho);
             if (Iota)
                 Eta = Mu->Upsilon;
             else
                 Eta = Mu->Theta;
             Eta->Rod->Gamma++;
             Eta->Cone->Gamma++;
-            Sigma = Mu->Mu->Psi->Pi();
-            Upsilon = new ည(Eta, Sigma);
+            Upsilon = new ည(Eta, Mu->Eta->Rho);
             Tau = new ညြ(Rho, Nu, Upsilon);
         }
 
@@ -52,10 +48,8 @@ namespace Dysnomia {
         ~ë() {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
-            if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Eta->Rod->Gamma <= 1 || Eta->Cone->Gamma <= 1) delete Eta; else { Eta->Rod->Gamma--; Eta->Cone->Gamma--; }
-            if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
         }
