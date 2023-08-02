@@ -66,7 +66,7 @@ void Tau() {
         //Upsilon = nullptr;
 
         if (local_first_run) {
-            cout << "My Needle Is Floating\n";
+            cout << "锚第\n";
             local_first_run = false;
         }
 
