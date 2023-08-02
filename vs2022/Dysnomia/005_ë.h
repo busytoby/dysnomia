@@ -27,7 +27,10 @@ namespace Dysnomia {
                 Eta = Mu->Theta;
             Eta->Rod->Gamma++;
             Eta->Cone->Gamma++;
-            Upsilon = new ည(Eta, Mu->Eta->Rho);
+            if(Iota)
+                Upsilon = new ည(Eta, Mu->Psi->Rho);
+            else
+                Upsilon = new ည(Eta, Mu->Eta->Rho);
             Tau = new ညြ(Rho, Nu, Upsilon);
         }
 
