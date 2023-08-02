@@ -10,7 +10,6 @@ namespace Dysnomia {
         ညြ* Psi;
         Fa* Upsilon;
         Fa* Tau;
-        Faung* Theta;
         int Gamma = 1;
 
         Tod() {
@@ -22,14 +21,12 @@ namespace Dysnomia {
             Psi = new ညြ(true);
             Upsilon = Mu->Pi();
             Tau = Psi->Pi();
-            Theta = new Faung(Upsilon, Mu->Upsilon->Secret, Tau->Signal, Psi->Upsilon->Channel, Mu->Upsilon->Identity);
         }
 
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Mu->Affinities());
             vector<Faung*> Beta = Psi->Affinities();
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
-            Alpha.push_back(Theta);
             return Alpha;
         }
 
@@ -38,7 +35,6 @@ namespace Dysnomia {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
-            if (Theta->Rod->Gamma <= 1 || Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }            
         }
     };
 }
