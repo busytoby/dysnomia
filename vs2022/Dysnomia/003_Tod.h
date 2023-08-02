@@ -9,6 +9,7 @@ namespace Dysnomia {
         ညြ* Mu;
         ညြ* Psi;
         Fa* Upsilon;
+        Fa* Tau;
         Faung* Theta;
         int Gamma = 1;
 
@@ -20,6 +21,7 @@ namespace Dysnomia {
             Mu->Theta->Rho->Tune();
             Psi = new ညြ(true);
             Upsilon = Mu->Pi();
+            Tau = Psi->Pi();
             Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Upsilon->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Upsilon->Identity);
         }
 
@@ -35,6 +37,7 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+            if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
             if (Theta->Rod->Gamma <= 1 || Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }            
         }
     };

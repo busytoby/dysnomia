@@ -16,14 +16,20 @@ namespace Dysnomia {
         ညြ* Tau;
         int Gamma = 1;
 
-        ë() {
+        ë(Zuo* Beta, bool Iota) {
+            Beta->Gamma++;
             if (Math::POETRY > 0)
                 cout << "ë ";
-            Mu = new Zuo();
+            Mu = Beta;
             Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon);
             Psi = Mu->Mu->Mu->Pi();
             Nu = new ည(Mu->Eta->Mu, Psi);
-            Eta = Nu->Pi();
+            if (Iota)
+                Eta = Mu->Upsilon;
+            else
+                Eta = Mu->Theta;
+            Eta->Rod->Gamma++;
+            Eta->Cone->Gamma++;
             Sigma = Mu->Mu->Psi->Pi();
             Upsilon = new ည(Eta, Sigma);
             Tau = new ညြ(Rho, Nu, Upsilon);

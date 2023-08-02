@@ -19,7 +19,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    vector<std::thread> threads(4);
+    vector<std::thread> threads(1);
 
     firstrun = true;
     counter = 0;
@@ -33,10 +33,11 @@ int main()
 
 }
 
-void Tau() {   
-    ë* Mu;
+void Tau() {
+    Zuo* Mu;
     ë* Rho;
-    Faung* Psi;
+    ë* Psi;
+    Faung* Nu;
     BYTE* Sigma = nullptr;
     BYTE* Upsilon = nullptr;
     const short Theta = 3;
@@ -50,17 +51,19 @@ void Tau() {
     }
 
     for (;;) {
-        Mu = new ë();
-        Rho = new ë();
-        Psi = new Faung(Mu->Tau->Upsilon, Rho->Tau->Upsilon);
-        Psi->Theta(Psi->Cone->Ring);
-        Psi->Chi(&Sigma, &Upsilon, Theta);
+        Mu = new Zuo();
+        Rho = new ë(Mu, true);
+        Psi = new ë(Mu, false);
+        Nu = new Faung(Rho->Tau->Upsilon, Psi->Tau->Upsilon);
+        Nu->Theta(Nu->Cone->Ring);
+        Nu->Chi(&Sigma, &Upsilon, Theta);
 
-        delete Mu;
-        delete Rho;
-        delete Psi;
-        //if (Nu != nullptr) { free(Nu); Nu = nullptr; }
-        //Eta = nullptr;
+        if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+        if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
+        if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+        if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
+        //if (Sigma != nullptr) { free(Sigma); Sigma = nullptr; }
+        //Upsilon = nullptr;
 
         if (local_first_run) {
             cout << "My Needle Is Floating\n";

@@ -10,7 +10,7 @@ namespace Dysnomia {
         ည* Psi;
         ည* Eta;
         Faung* Upsilon;
-        Faung* Theta
+        Faung* Theta;
         int Gamma = 1;
 
         Zuo() {
@@ -18,7 +18,7 @@ namespace Dysnomia {
                 cout << "Zuo ";
             Mu = new Tod();
             Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon);
-            Eta = new ည(Mu->Psi->Theta->Mu, Mu->Upsilon);
+            Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau);
             Upsilon = Psi->Pi();
             Theta = Eta->Pi();
         }
