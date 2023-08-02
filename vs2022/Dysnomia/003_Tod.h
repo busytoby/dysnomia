@@ -22,7 +22,7 @@ namespace Dysnomia {
             Psi = new ညြ(true);
             Upsilon = Mu->Pi();
             Tau = Psi->Pi();
-            Theta = new Faung(Upsilon, Upsilon->Secret, Psi->Upsilon->Signal, Mu->Theta->Psi->Cone->Channel, Psi->Upsilon->Identity);
+            Theta = new Faung(Upsilon, Mu->Upsilon->Secret, Tau->Signal, Psi->Upsilon->Channel, Mu->Upsilon->Identity);
         }
 
         vector<Faung*> Affinities() {
