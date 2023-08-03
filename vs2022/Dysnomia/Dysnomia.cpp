@@ -39,7 +39,7 @@ void Tau() {
     ë* Rho;
     ë* Psi;
     Faung* Nu;
-    vector<Faung*> Eta(2);
+    vector<Faung*> Eta(400);
     Int64 Sigma;
 
     int local_count;
@@ -49,7 +49,7 @@ void Tau() {
         Rho = new ë(Mu, true);
         Psi = new ë(Mu, false);
         Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
-        Eta.resize(2);
+        
         for (int i = 0; i < Eta.size(); i++) {
             Nu->Theta(Phi);  
             Phi = Nu->Omicron;
@@ -60,13 +60,14 @@ void Tau() {
                 Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
         }
 
+
 //        Upsilon = new Faung(*Sigma, *++Sigma, *++Sigma, Nu->Phi);
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
         if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        Eta.clear();
+        for (int i = 0; i < Eta.size(); i++) delete Eta[i];
 
         //if (Sigma != nullptr) { free(Sigma); Sigma = nullptr; }
         //Upsilon = nullptr;
