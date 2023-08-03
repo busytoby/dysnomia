@@ -174,33 +174,6 @@ namespace Dysnomia {
 		Cone->Bond();
 	}
 
-	void Faung::Chi(BYTE** Bytes, BYTE** Cursor, const short Length) {
-		Int64* ptr;
-		Int64 Beta;
-
-		if (*Bytes == nullptr) {
-			*Bytes = (BYTE*)malloc(sizeof(Int64) * Length);
-		}
-
-		if (*Cursor == nullptr) *Cursor = *Bytes;
-		ptr = (Int64*)*Cursor;
-
-		while(ptr < (Int64*)*Bytes + Length) {
-			Beta = Math::ModPow(Pi, Omicron, Omega);
-			*ptr = *ptr ^ Beta;
-			Pi = *ptr;
-			ptr++;
-		}
-
-		ptr--;
-		while (ptr > (Int64*)*Bytes) {
-			Beta = Math::ModPow(Ohm, Omega, Omicron);
-			*ptr = *ptr ^ Beta;
-			Ohm = *ptr;
-			ptr--;
-		}
-	}
-
 	// Hash Function
 	/*
 	Int64 Faung::WaveFunction(String^ Psi)
@@ -227,15 +200,17 @@ namespace Dysnomia {
 	}
 	*/
 
-	void Faung::Theta(Int64 Omicron) {
+	void Faung::Theta() {
 		bool Failed = true;
 		while (Failed) {
 			try {
-				Charge(Omicron);
+				Charge(Pi > 0 ? Pi : Rod->Signal);
+				/*
 				if (Sigma < 4194304)
 					Charge(0);
 				if (Sigma < 4194304)
 					Charge(Mu);
+				*/
 				if (Sigma < 4194304)
 					throw 115;
 				Induce();
@@ -246,11 +221,14 @@ namespace Dysnomia {
 				Failed = false;
 			}
 			catch (int E) {
+				throw E;
+				/*
 				if (Cone->Kappa == 1 || Rod->Kappa == 1)
 					Omicron = Phi;
 				if (Cone->Eta == 1 || Rod->Eta == 1)
 					Omicron = Eta;
 				continue;
+				*/
 			}
 		}
 	}

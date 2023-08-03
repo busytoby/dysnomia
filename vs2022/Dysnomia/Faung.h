@@ -36,9 +36,8 @@ namespace Dysnomia {
 		void Compare(Faung*, string);
 		void Compare(Fa*, string);
 		int Find(Int64 N, string);
-		void Chi(BYTE**, BYTE**, const short);
 		//Int64 WaveFunction(String^);
-		void Theta(Int64);
+		void Theta();
 		void Charge(Int64);
 		void Induce();
 		void Torque();

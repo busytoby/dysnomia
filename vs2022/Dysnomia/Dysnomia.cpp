@@ -18,7 +18,7 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    vector<std::thread> threads(4);
+    vector<std::thread> threads(1);
 
     counter = 0;
 
@@ -36,8 +36,7 @@ void Tau() {
     ë* Rho;
     ë* Psi;
     Faung* Nu;
-    BYTE* Sigma = nullptr;
-    BYTE* Upsilon = nullptr;
+    Faung* Eta;
     const short Theta = 3;
 
     int local_count;
@@ -47,13 +46,21 @@ void Tau() {
         Rho = new ë(Mu, true);
         Psi = new ë(Mu, false);
         Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
-        Nu->Theta(Nu->Cone->Ring);
-        Nu->Chi(&Sigma, &Upsilon, Theta);
+        Nu->Theta();
+        Eta = new Faung(
+            Math::ModPow(Nu->Rho, Nu->Omicron, Nu->Omega),
+            Math::ModPow(Nu->Upsilon, Nu->Omicron, Nu->Omega),
+            Math::ModPow(Nu->Sigma, Nu->Omega, Nu->Omicron),
+            Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
+
+//        Upsilon = new Faung(*Sigma, *++Sigma, *++Sigma, Nu->Phi);
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
         if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
+        delete Eta;
+
         //if (Sigma != nullptr) { free(Sigma); Sigma = nullptr; }
         //Upsilon = nullptr;
 
