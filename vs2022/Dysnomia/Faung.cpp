@@ -96,20 +96,19 @@ namespace Dysnomia {
 				Failed = false;
 			}
 			catch (int E) {
+				if (Rod->Secret == Rod->Signal) this->Rod->Signal = Eta;
+				if (Rod->Channel == Cone->Channel) Xi = Ohm;
+				if (Rod->Manifold == Rod->Barn) Ohm = Mu;
+				if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
+				if (Xi == Ohm || Rho == Ohm) Ohm = Mu;
+				if (Rho == Ohm) Ohm = Phi;
+
 				delete Cone;
 				if (E == 1) continue;
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				if (E == 103) {			
-					if (Rod->Secret == Rod->Signal) this->Rod->Signal = Eta;
-					if (Rod->Manifold == Rod->Barn) Ohm = Mu;
-					if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
-					if (Rho == Ohm) Ohm = Mu;
-					if (Rho == Ohm) 
-						Ohm = Phi;
-					continue;
-				}
+				if (E == 103) continue;
 				throw;
 			}
 		}

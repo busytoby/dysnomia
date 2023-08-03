@@ -39,8 +39,8 @@ void Tau() {
     ë* Rho;
     ë* Psi;
     Faung* Nu;
-    vector<Faung*> Eta(400);
-    Int64 Sigma;
+    vector<Faung*> Eta(3);
+    Fa* Sigma;
 
     int local_count;
 
@@ -59,18 +59,16 @@ void Tau() {
                 Math::ModPow(Nu->Sigma, Nu->Omega, Nu->Omicron),
                 Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
         }
-
-
-//        Upsilon = new Faung(*Sigma, *++Sigma, *++Sigma, Nu->Phi);
+        Sigma = new Fa();
+        Sigma->Fuse(Eta[0]->Cone->Base, Eta[1]->Cone->Element, Eta[2]->Cone->Manifold);
+        Sigma->Tune();
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
         if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
         for (int i = 0; i < Eta.size(); i++) delete Eta[i];
-
-        //if (Sigma != nullptr) { free(Sigma); Sigma = nullptr; }
-        //Upsilon = nullptr;
+        delete Sigma;
 
         local_count = ++counter;
         if (local_count % 10000 == 0) cout << "锚";
