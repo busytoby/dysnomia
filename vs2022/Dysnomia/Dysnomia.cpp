@@ -36,8 +36,7 @@ void Tau() {
     ë* Rho;
     ë* Psi;
     Faung* Nu;
-    vector<Faung*> Eta(100);
-    const short Theta = 3;
+    vector<Faung*> Eta(28800);
 
     int local_count;
 
