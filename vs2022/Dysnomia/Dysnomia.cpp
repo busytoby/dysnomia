@@ -60,7 +60,7 @@ void Tau() {
                 Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
         }
         Sigma = new Fa();
-        Sigma->Fuse(Eta[0]->Cone->Base, Eta[1]->Cone->Element, Eta[2]->Cone->Manifold);
+        Sigma->Fuse(Eta[2]->Cone->Base, Eta[1]->Cone->Element, Eta[0]->Cone->Manifold);
         Sigma->Tune();
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
