@@ -211,7 +211,7 @@ namespace Dysnomia {
 				if (Sigma < 4194304)
 					Charge(Mu);
 				*/
-				if (Sigma < 4194304)
+				if (Sigma < 2)
 					throw 115;
 				Induce();
 				Torque();
