@@ -38,6 +38,7 @@ namespace Dysnomia {
 		int Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
 		void Theta();
+		void Theta(Int64);
 		void Charge(Int64);
 		void Induce();
 		void Torque();

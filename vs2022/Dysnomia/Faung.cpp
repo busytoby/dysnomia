@@ -201,10 +201,17 @@ namespace Dysnomia {
 	*/
 
 	void Faung::Theta() {
+		Theta(Pi > 0 ? Pi : Rod->Signal);
+	}
+
+	void Faung::Theta(Int64 Omicron) {
 		bool Failed = true;
 		while (Failed) {
 			try {
-				Charge(Pi > 0 ? Pi : Rod->Signal);
+				if (Omicron == 0)
+					Charge(Pi > 0 ? Pi : Rod->Signal);
+				else
+					Charge(Omicron);
 				/*
 				if (Sigma < 4194304)
 					Charge(0);

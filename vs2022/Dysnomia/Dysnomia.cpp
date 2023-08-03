@@ -8,7 +8,9 @@
 using namespace Dysnomia;
 using namespace std;
 
+const int nthreads = 4;
 std::atomic<int> counter;
+std::atomic<Int64> Phi;
 
 void Tau();
 
@@ -18,10 +20,11 @@ int main()
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    vector<std::thread> threads(4);
+    vector<std::thread> threads(nthreads);
 
     counter = 0;
-
+    Phi = 0;
+    
     for (int i = 0; i < threads.size(); i++) {
         threads[i] = thread(Tau);
     }
@@ -36,7 +39,8 @@ void Tau() {
     ë* Rho;
     ë* Psi;
     Faung* Nu;
-    vector<Faung*> Eta(28800);
+    vector<Faung*> Eta(2);
+    Int64 Sigma;
 
     int local_count;
 
@@ -45,8 +49,10 @@ void Tau() {
         Rho = new ë(Mu, true);
         Psi = new ë(Mu, false);
         Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
+        Eta.resize(2);
         for (int i = 0; i < Eta.size(); i++) {
-            Nu->Theta();
+            Nu->Theta(Phi);  
+            Phi = Nu->Omicron;
             Eta[i] = new Faung(
                 Math::ModPow(Nu->Rho, Nu->Omicron, Nu->Omega),
                 Math::ModPow(Nu->Upsilon, Nu->Omicron, Nu->Omega),
