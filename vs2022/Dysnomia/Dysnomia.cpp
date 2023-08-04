@@ -63,8 +63,8 @@ void Tau() {
         Sigma->Fuse(Eta[2]->Cone->Dynamo, Eta[1]->Cone->Ring, Eta[0]->Cone->Barn);
         Sigma->Tune();
         Sigma->Polarize();
-        Sigma->Conjugate(&Nu->Eta);
-        Phi = Sigma->Saturate(Nu->Rho, Sigma->Pole);
+        Sigma->Conjugate(&Eta[1]->Eta);
+        Phi = Sigma->Saturate(Eta[2]->Rho, Sigma->Pole);
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
