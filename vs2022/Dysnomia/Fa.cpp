@@ -120,9 +120,8 @@ namespace Dysnomia {
 
 	bool Fa::ManifoldCompare(Fa* Rod)
 	{
-		if (Secret == Rod->Secret || Signal == Rod->Signal || Channel == Rod->Channel ||
-			!Pole == 0 || !Rod->Pole == 0 || Dynamo == Rod->Dynamo) {
-			if (Kappa != 1)
+		if (Signal == Rod->Signal || !Pole == 0 || !Rod->Pole == 0) {
+			if (Kappa != -1)
 				Seed(); 
 			return false;
 		}
@@ -130,7 +129,7 @@ namespace Dysnomia {
 
 		if (Manifold == 0 || Ring == 0 || (Manifold != Ring) && Barn == 0)
 		{
-			if (Kappa != 1)
+			if (Kappa != -1)
 				Seed(); 
 			return false;
 		}

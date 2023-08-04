@@ -31,7 +31,7 @@ namespace Dysnomia {
 		if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
 		this->Rod = Rod;
 		this->Cone = Cone;
-		this->Cone->Kappa = 1;
+		this->Cone->Kappa = -1;
 
 		bool Failed = true;
 		while (Failed) {
@@ -92,12 +92,12 @@ namespace Dysnomia {
 		while (Failed) {
 			try {
 				Cone = new Fa();
+				Cone->Kappa = -1;
 				if (Rho == Ohm) Rho = Math::Random();
 				FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 				Failed = false;
 			}
 			catch (int E) {
-				if (Rod->Secret == Cone->Secret) Upsilon = Mu;
 				if (Rod->Signal == Cone->Signal) Rho = Cone->Tau;
 				if (Rod->Manifold == Rod->Barn) Ohm = Eta;
 				if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
