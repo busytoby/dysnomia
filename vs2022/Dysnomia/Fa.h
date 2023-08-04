@@ -13,7 +13,7 @@ namespace Dysnomia {
 
 	public:
 		Int64 Base, Secret, Signal, Channel, Pole, Identity, Foundation, Element, Dynamo, Manifold, Ring, Barn, Coordinate;
-		Int64 Tau, Eta, Kappa, Rho, Beta, Phi, Alpha, Iota;
+		Int64 Tau, Eta, Kappa, Rho, Beta, Phi;
 		short Nu;
 		int Gamma = 1;
 
