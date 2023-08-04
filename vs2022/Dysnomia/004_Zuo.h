@@ -19,10 +19,10 @@ namespace Dysnomia {
                 cout << "Zuo ";
             Mu = new Tod();
             Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon, true);
-            Mu->Psi->Theta->Rho->Fuse(Psi->Rho->Base, Psi->Rho->Element, Psi->Rho->Manifold);
+            Mu->Psi->Theta->Rho->Fuse(Psi->Rho->Secret, Psi->Rho->Signal, Psi->Rho->Channel);
             Mu->Psi->Theta->Rho->Tune();
             Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau, false);
-            Mu->Mu->Theta->Rho->Fuse(Eta->Rho->Signal, Eta->Rho->Channel, Eta->Rho->Identity);
+            Mu->Mu->Theta->Rho->Fuse(Eta->Rho->Secret, Eta->Rho->Signal, Eta->Rho->Channel);
             Mu->Mu->Theta->Rho->Tune();
             Sigma = new Faung(Mu->Mu->Theta->Rho, Mu->Psi->Theta->Rho);
             Upsilon = Psi->Pi();
