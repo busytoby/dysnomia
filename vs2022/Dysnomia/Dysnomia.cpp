@@ -66,6 +66,7 @@ void Tau() {
         Sigma->Polarize();
         Sigma->Conjugate(&Eta[1]->Eta);
         Phi = Sigma->Saturate(Eta[2]->Rho, Sigma->Pole);
+        Sigma->Open();
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
