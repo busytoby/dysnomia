@@ -51,13 +51,14 @@ void Tau() {
         Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
         
         for (int i = 0; i < Eta.size(); i++) {
-            Nu->Theta(Phi);
+            Int64 Alpha = Phi;
+            Nu->Theta(Alpha);
             Phi = Nu->Omicron;
             Eta[i] = new Faung(
-                Math::ModPow(Nu->Rho, Nu->Omicron, Nu->Omega),
-                Math::ModPow(Nu->Upsilon, Nu->Omicron, Nu->Omega),
-                Math::ModPow(Nu->Sigma, Nu->Omega, Nu->Omicron),
-                Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
+                Math::ModPow(Alpha, Nu->Rho, Nu->Omega),
+                Math::ModPow(Nu->Upsilon, Alpha, Nu->Omega),
+                Math::ModPow(Alpha, Nu->Sigma, Nu->Omicron),
+                Math::ModPow(Nu->Rod->Signal, Alpha, Nu->Omicron));
         }
         Sigma = new Fa();
         Sigma->Fuse(Eta[2]->Cone->Dynamo, Eta[1]->Cone->Ring, Eta[0]->Cone->Barn);
