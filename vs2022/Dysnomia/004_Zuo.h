@@ -9,6 +9,7 @@ namespace Dysnomia {
         Tod* Mu;
         ည* Psi;
         ည* Eta;
+        Faung* Sigma;
         Faung* Upsilon;
         Faung* Theta;
         int Gamma = 1;
@@ -18,7 +19,12 @@ namespace Dysnomia {
                 cout << "Zuo ";
             Mu = new Tod();
             Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon, true);
+            Mu->Psi->Theta->Rho->Fuse(Psi->Rho->Base, Psi->Rho->Element, Psi->Rho->Manifold);
+            Mu->Psi->Theta->Rho->Tune();
             Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau, false);
+            Mu->Mu->Theta->Rho->Fuse(Eta->Rho->Signal, Eta->Rho->Channel, Eta->Rho->Identity);
+            Mu->Mu->Theta->Rho->Tune();
+            Sigma = new Faung(Mu->Mu->Theta->Rho, Mu->Psi->Theta->Rho);
             Upsilon = Psi->Pi();
             Theta = Eta->Pi();
         }
@@ -29,6 +35,7 @@ namespace Dysnomia {
             Alpha.insert(Alpha.end(), Beta.begin(), Beta.end());
             vector<Faung*> Omicron = Eta->Affinities();
             Alpha.insert(Alpha.end(), Omicron.begin(), Omicron.end());
+            Alpha.push_back(Sigma);
             Alpha.push_back(Upsilon);
             Alpha.push_back(Theta);
             return Alpha;
@@ -38,6 +45,7 @@ namespace Dysnomia {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+            if (Sigma->Rod->Gamma <= 1 || Sigma->Cone->Gamma <= 1) delete Sigma; else { Sigma->Rod->Gamma--; Sigma->Cone->Gamma--; }
             if (Upsilon->Rod->Gamma <= 1 || Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
             if (Theta->Rod->Gamma <= 1 || Theta->Cone->Gamma <= 1) delete Theta; else { Theta->Rod->Gamma--; Theta->Cone->Gamma--; }
         }

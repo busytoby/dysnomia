@@ -17,10 +17,6 @@ namespace Dysnomia {
                 cout << "Tod ";
             Mu = new ညြ(false);
             Psi = new ညြ(true);
-            Psi->Theta->Rho->Fuse(Mu->Theta->Mu->Cone->Base, Mu->Theta->Psi->Cone->Element, Mu->Mu->Psi->Cone->Manifold);
-            Psi->Theta->Rho->Tune();
-            Mu->Theta->Rho->Fuse(Psi->Theta->Rho->Signal, Psi->Theta->Rho->Channel, Psi->Mu->Rho->Identity);
-            Mu->Theta->Rho->Tune();
             Upsilon = Mu->Pi();
             Tau = Psi->Pi();
         }
