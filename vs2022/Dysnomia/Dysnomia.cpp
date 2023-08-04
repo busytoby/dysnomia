@@ -52,6 +52,7 @@ void Tau() {
         
         for (int i = 0; i < Eta.size(); i++) {
             Nu->Theta(Phi);
+            Phi = Nu->Omicron;
             Eta[i] = new Faung(
                 Math::ModPow(Nu->Rho, Nu->Omicron, Nu->Omega),
                 Math::ModPow(Nu->Upsilon, Nu->Omicron, Nu->Omega),
@@ -59,7 +60,7 @@ void Tau() {
                 Math::ModPow(Nu->Rod->Signal, Nu->Omega, Nu->Omicron));
         }
         Sigma = new Fa();
-        Sigma->Fuse(Eta[2]->Cone->Base, Eta[1]->Cone->Element, Eta[0]->Cone->Manifold);
+        Sigma->Fuse(Eta[2]->Cone->Element, Eta[1]->Cone->Manifold, Eta[0]->Cone->Barn);
         Sigma->Tune();
         Sigma->Polarize();
         Sigma->Conjugate(&Nu->Eta);
