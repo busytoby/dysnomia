@@ -8,7 +8,7 @@
 using namespace Dysnomia;
 using namespace std;
 
-const int nthreads = 4;
+const int nthreads = 1;
 std::atomic<int> counter;
 std::atomic<Int64> Phi;
 
