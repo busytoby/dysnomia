@@ -92,6 +92,7 @@ namespace Dysnomia {
 		while (Failed) {
 			try {
 				Cone = new Fa();
+				if (Rho == Ohm) Rho = Math::Random();
 				FuseAndOpen(Rho, Upsilon, Ohm, Xi);
 				Failed = false;
 			}
