@@ -19,7 +19,7 @@ namespace Dysnomia {
             Mu = new ည();
             Psi = new Fa();
             if (RAPHE_NEBULAE)
-                Eta = new Faung(Psi, Mu->Psi->Rod->Secret, Mu->Mu->Rod->Signal, Mu->Psi->Rod->Channel, Mu->Psi->Rod->Identity);
+                Eta = new Faung(Psi, Mu->Psi->Rod->Element, Mu->Mu->Rod->Foundation, Mu->Psi->Rod->Ring, Mu->Psi->Rod->Manifold);
             else
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
@@ -33,7 +33,7 @@ namespace Dysnomia {
                 cout << "ညြ ";
             Mu = Beta;
             Psi = new Fa();
-            if (Iota->Mu->Rod->Signal > Iota->Mu->Cone->Identity)
+            if (Iota->Mu->Rod->Ring > Iota->Mu->Cone->Foundation)
                 Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
             else
                 Eta = new Faung(Psi, Iota->Psi->Cone->Secret, Iota->Mu->Cone->Signal, Iota->Psi->Cone->Channel, Iota->Psi->Cone->Identity);
@@ -60,14 +60,14 @@ namespace Dysnomia {
 
         Fa* Pi() {
             Fa* Beta = new Fa();
-            if (Eta->Cone->Signal == Mu->Mu->Rod->Secret)
-                Beta->Fuse(Mu->Mu->Cone->Signal, Mu->Mu->Cone->Identity, Theta->Mu->Rod->Manifold);
-            else if (Eta->Cone->Signal == Mu->Mu->Cone->Secret)
+            if (Eta->Cone->Signal == Mu->Mu->Cone->Secret)
                 Beta->Fuse(Mu->Mu->Rod->Foundation, Mu->Mu->Rod->Ring, Theta->Mu->Cone->Manifold);
-            else if (Eta->Cone->Signal == Mu->Psi->Rod->Secret)
-                Beta->Fuse(Mu->Psi->Cone->Signal, Mu->Psi->Cone->Identity, Theta->Mu->Rod->Manifold);
+            else if (Eta->Cone->Signal == Mu->Mu->Rod->Secret)
+                Beta->Fuse(Mu->Mu->Cone->Signal, Mu->Mu->Cone->Identity, Theta->Mu->Rod->Manifold);
             else if (Eta->Cone->Signal == Mu->Psi->Cone->Secret)
                 Beta->Fuse(Mu->Psi->Rod->Foundation, Mu->Psi->Rod->Ring, Theta->Mu->Cone->Manifold);
+            else if (Eta->Cone->Signal == Mu->Psi->Rod->Secret)
+                Beta->Fuse(Mu->Psi->Cone->Signal, Mu->Psi->Cone->Identity, Theta->Mu->Rod->Manifold);
             else
                 Beta->Fuse(Eta->Rod->Foundation, Eta->Rod->Ring, Theta->Mu->Rod->Manifold);
             Beta->Tune();
