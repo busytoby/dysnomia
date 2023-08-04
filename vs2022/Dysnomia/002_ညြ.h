@@ -61,15 +61,15 @@ namespace Dysnomia {
         Fa* Pi() {
             Fa* Beta = new Fa();
             if (Eta->Cone->Signal == Mu->Mu->Rod->Secret)
-                Beta->Fuse(Mu->Mu->Cone->Base, Mu->Mu->Cone->Element, Theta->Mu->Rod->Manifold);
+                Beta->Fuse(Mu->Mu->Cone->Signal, Mu->Mu->Cone->Identity, Theta->Mu->Rod->Manifold);
             else if (Eta->Cone->Signal == Mu->Mu->Cone->Secret)
-                Beta->Fuse(Mu->Mu->Rod->Base, Mu->Mu->Rod->Element, Theta->Mu->Cone->Manifold);
+                Beta->Fuse(Mu->Mu->Rod->Foundation, Mu->Mu->Rod->Ring, Theta->Mu->Cone->Manifold);
             else if (Eta->Cone->Signal == Mu->Psi->Rod->Secret)
-                Beta->Fuse(Mu->Psi->Cone->Base, Mu->Psi->Cone->Element, Theta->Mu->Rod->Manifold);
+                Beta->Fuse(Mu->Psi->Cone->Signal, Mu->Psi->Cone->Identity, Theta->Mu->Rod->Manifold);
             else if (Eta->Cone->Signal == Mu->Psi->Cone->Secret)
-                Beta->Fuse(Mu->Psi->Rod->Base, Mu->Psi->Rod->Element, Theta->Mu->Cone->Manifold);
+                Beta->Fuse(Mu->Psi->Rod->Foundation, Mu->Psi->Rod->Ring, Theta->Mu->Cone->Manifold);
             else
-                throw 1;
+                Beta->Fuse(Eta->Rod->Foundation, Eta->Rod->Ring, Theta->Mu->Rod->Manifold);
             Beta->Tune();
             return Beta;
         }
