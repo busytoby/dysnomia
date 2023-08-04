@@ -93,8 +93,8 @@ namespace Dysnomia {
 		Element = Beta + Phi;
 
 		// Principal Uncertainty
-		//Gamma = Math::ModPow(Theta, Signal, Math::Prime);
-		//Kappa = Element + Gamma;
+		Alpha = Math::ModPow(Theta, Signal, Math::Prime);
+		Iota = Element + Gamma;
 
 		if (Nu != 0 && Nu != 1) throw 7;
 
