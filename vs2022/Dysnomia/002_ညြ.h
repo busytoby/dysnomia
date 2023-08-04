@@ -33,12 +33,15 @@ namespace Dysnomia {
                 cout << "ညြ ";
             Mu = Beta;
             Psi = new Fa();
-            if (Iota->Mu->Rod->Ring > Iota->Mu->Cone->Foundation)
-                Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
+            if (Iota->Mu->Rod->Gamma == 5)
+                Eta = new Faung(Psi, Iota->Psi->Cone->Element, Iota->Mu->Cone->Foundation, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Manifold);
             else
-                Eta = new Faung(Psi, Iota->Psi->Cone->Secret, Iota->Mu->Cone->Signal, Iota->Psi->Cone->Channel, Iota->Psi->Cone->Identity);
+                Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
             Upsilon = new Fa();
-            Upsilon->Fuse(Beta->Mu->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Mu->Cone->Channel);
+            if (Iota->Mu->Rod->Gamma == 5)
+                Upsilon->Fuse(Beta->Mu->Rod->Foundation, Iota->Mu->Cone->Ring, Omicron->Mu->Cone->Manifold);
+            else
+                Upsilon->Fuse(Beta->Mu->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Mu->Cone->Channel);
             Theta = Omicron;
         }
 
