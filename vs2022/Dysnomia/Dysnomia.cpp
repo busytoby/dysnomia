@@ -8,7 +8,7 @@
 using namespace Dysnomia;
 using namespace std;
 
-const int nthreads = 1;
+const int nthreads = 4;
 std::atomic<int> counter;
 std::atomic<Int64> Phi;
 
@@ -51,8 +51,7 @@ void Tau() {
         Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
         
         for (int i = 0; i < Eta.size(); i++) {
-            Nu->Theta(Phi);  
-            Phi = Nu->Omicron;
+            Nu->Theta(Phi);
             Eta[i] = new Faung(
                 Math::ModPow(Nu->Rho, Nu->Omicron, Nu->Omega),
                 Math::ModPow(Nu->Upsilon, Nu->Omicron, Nu->Omega),
@@ -62,6 +61,9 @@ void Tau() {
         Sigma = new Fa();
         Sigma->Fuse(Eta[2]->Cone->Base, Eta[1]->Cone->Element, Eta[0]->Cone->Manifold);
         Sigma->Tune();
+        Sigma->Polarize();
+        Sigma->Conjugate(&Nu->Eta);
+        Phi = Sigma->Saturate(Nu->Rho, Sigma->Pole);
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
