@@ -3,7 +3,7 @@
 #include <time.h>
 #include <iostream>
 #include <thread>
-#include "005_ë.h"
+#include "006_锚.h"
 
 using namespace Dysnomia;
 using namespace std;
@@ -35,45 +35,23 @@ int main()
 }
 
 void Tau() {
-    Zuo* Mu;
-    ë* Rho;
-    ë* Psi;
-    Faung* Nu;
-    vector<Faung*> Eta(3);
-    Fa* Sigma;
+    锚* Mu;
+    Fa* Rho;
+    Fa* Psi;
+    //Faung* Nu;
 
     int local_count;
 
     for (;;) {
-        Mu = new Zuo();
-        Rho = new ë(Mu, true);
-        Psi = new ë(Mu, false);
-        Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
-        
-        for (int i = 0; i < Eta.size(); i++) {
-            Int64 Alpha = Phi;
-            Nu->Theta(Alpha);
-            Phi = Nu->Omicron;
-            Eta[i] = new Faung(
-                Math::ModPow(Alpha, Nu->Rho, Nu->Omega),
-                Math::ModPow(Nu->Upsilon, Alpha, Nu->Omega),
-                Math::ModPow(Alpha, Nu->Sigma, Nu->Omicron),
-                Math::ModPow(Nu->Rod->Signal, Alpha, Nu->Omicron));
-        }
-        Sigma = new Fa();
-        Sigma->Fuse(Eta[2]->Cone->Dynamo, Eta[1]->Cone->Ring, Eta[0]->Cone->Barn);
-        Sigma->Tune();
-        Sigma->Polarize();
-        Sigma->Conjugate(&Eta[1]->Eta);
-        Phi = Sigma->Saturate(Eta[2]->Rho, Sigma->Pole);
-        Sigma->Open();
+        Mu = new 锚();
+        Rho = Mu->Pi(Phi);
+        Psi = Mu->Pi(Rho->Eta);
+        Phi = Psi->Eta;
 
         if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
-        if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        for (int i = 0; i < Eta.size(); i++) delete Eta[i];
-        delete Sigma;
+        //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
 
         local_count = ++counter;
         if (local_count % 10000 == 0) cout << "锚";
