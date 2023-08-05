@@ -16,6 +16,7 @@ mutex Mu_Mutex;
 Int64 Phi;
 list<Fa*> Omicron;
 list<Fa*> Delta;
+list<ည*> Qi;
 
 void Gamma();
 void Beta();
@@ -59,12 +60,31 @@ void Gamma() {
             ည* Nu = new ည(Psi->Mu, Beta, false);
             ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
             Tod* Sigma = new Tod(Eta, Beta, Nu);
-            if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+            Fa* Upsilon = Sigma->Psi->Pi();
+            Faung* Tau = nullptr;
+            ည* Theta = nullptr;
+            Beta->Gamma--;
             Delta.pop_front();
             while (Delta.size()) {
-                Fa* Upsilon = Sigma->Psi->Pi();
+                if(Upsilon->Pole == 0) Upsilon->Polarize();
                 Beta = Delta.front();
-                if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+                if (Beta->Pole > 0) {
+                    Int64 Xi = (Upsilon->Coordinate + Beta->Eta + Beta->Beta) % Math::Prime;
+                    Upsilon->Conjugate(&Xi);
+                }
+                else if(Tau == nullptr) {
+                    Tau = new Faung(Upsilon, Beta);
+                    Theta = new ည(Tau, Beta, true);
+                    if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) { delete Tau; Tau = nullptr; } else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
+                    //Qi.push_back(Theta);
+                }
+                else {
+                    if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
+                    if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+                    Upsilon = Sigma->Psi->Pi();
+                    Tau = nullptr;
+                    //Int64 Xi = Theta->Psi->Rod->Coordinate + Beta->Signal + Beta->Channel;                    
+                }
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
                 Delta.pop_front();
             }
@@ -73,6 +93,7 @@ void Gamma() {
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             Mu_Mutex.unlock();
         }
         std::this_thread::sleep_for(90ms);
