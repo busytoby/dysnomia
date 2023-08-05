@@ -15,7 +15,7 @@ mutex Mu_Mutex;
 锚* Mu;
 Int64 Phi;
 
-void Tau();
+void Lambda();
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     Mu = new 锚();
     
     for (int i = 0; i < threads.size(); i++) {
-        threads[i] = thread(Tau);
+        threads[i] = thread(Lambda);
     }
 
     for (thread& th : threads)
@@ -40,7 +40,7 @@ int main()
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 }
 
-void Tau() {
+void Lambda() {
     Fa* Beta;
     Fa* Iota;
     //Faung* Nu;
