@@ -15,7 +15,9 @@ mutex Mu_Mutex;
 锚* Mu;
 Int64 Phi;
 list<Fa*> Omicron;
+list<Fa*> Delta;
 
+void Gamma();
 void Beta();
 void Lambda();
 
@@ -33,6 +35,7 @@ int main()
 
     Mu = new 锚();
     
+    threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
         threads[i] = thread(Lambda);
@@ -44,6 +47,23 @@ int main()
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 }
 
+void Gamma() {
+    for (;;) {
+        Mu_Mutex.lock();
+        if (Delta.size() == 0)
+            Mu_Mutex.unlock();
+        else {
+            while (Delta.size()) {
+                Fa* Beta = Delta.front();
+                if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+                Delta.pop_front();
+            }
+            Mu_Mutex.unlock();
+        }
+        std::this_thread::sleep_for(90ms);
+    }
+}
+
 void Beta() {
     for (;;) {
         Mu_Mutex.lock();
@@ -51,13 +71,15 @@ void Beta() {
             Mu_Mutex.unlock();
         else {
             while (Omicron.size()) {
-                Fa* Delta = Omicron.front();
+                Fa* Iota = Omicron.front();
                 Faung* Rho = Mu->Rho->Psi->Pi(false);
-                ည* Psi = new ည(Rho, Delta, true);
-                ည* Nu = new ည(Psi->Mu, Delta, false);
+                ည* Psi = new ည(Rho, Iota, true);
+                ည* Nu = new ည(Psi->Mu, Iota, false);
                 ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
-                Tod* Sigma = new Tod(Eta, Nu, Delta);
-                if (Delta->Gamma == 1) delete Delta; else Delta->Gamma--;
+                Tod* Sigma = new Tod(Eta, Nu, Iota);
+                Fa* Upsilon = Sigma->Psi->Pi();
+                Delta.push_back(Upsilon);
+                if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                 if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
                 if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
@@ -68,7 +90,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(10ms);
+        std::this_thread::sleep_for(30ms);
     }
 }
 
@@ -84,13 +106,14 @@ void Lambda() {
         Beta = Mu->Pi(Phi);
         Iota = Mu->Pi(Beta->Eta);
         Phi = Iota->Eta;
+        Delta.push_back(Beta);
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+        //if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
         //if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        std::this_thread::sleep_for(100ms);
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         local_count = ++counter;
         if (local_count % 10 == 0) cout << "第";
