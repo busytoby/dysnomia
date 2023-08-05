@@ -21,6 +21,15 @@ namespace Dysnomia {
             Tau = Psi->Pi();
         }
 
+        Tod(ညြ* Beta, ည* Iota, Fa* Omicron) {
+            if (Math::POETRY > 0)
+                cout << "Tod ";
+            Mu = Beta;
+            Psi = new ညြ(Mu->Theta, Iota, Mu->Mu);
+            Upsilon = Mu->Pi();
+            Tau = Omicron;
+        }
+
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Mu->Affinities());
             vector<Faung*> Beta = Psi->Affinities();

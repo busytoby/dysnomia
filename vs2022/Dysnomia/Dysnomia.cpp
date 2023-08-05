@@ -52,12 +52,23 @@ void Beta() {
         else {
             while (Omicron.size()) {
                 Fa* Delta = Omicron.front();
-                delete Delta;
+                Faung* Rho = Mu->Rho->Psi->Pi(false);
+                ည* Psi = new ည(Rho, Delta, true);
+                ည* Nu = new ည(Psi->Mu, Delta, false);
+                ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
+                Tod* Sigma = new Tod(Eta, Nu, Delta);
+                if (Delta->Gamma == 1) delete Delta; else Delta->Gamma--;
+                if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
+                if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+                if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+                if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+                if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+
                 Omicron.pop_front();
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::nanoseconds(rand() % 1000));
+        std::this_thread::sleep_for(10ms);
     }
 }
 
@@ -79,10 +90,10 @@ void Lambda() {
         if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
         //if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        std::this_thread::sleep_for(chrono::nanoseconds(rand() % 8000));
+        std::this_thread::sleep_for(100ms);
 
         local_count = ++counter;
-        if (local_count % 10000 == 0) cout << "第";
-        if (local_count % 1000000 == 0) cout << "錨 " << (local_count / 1000000) << "m\n";
+        if (local_count % 10 == 0) cout << "第";
+        if (local_count % 1000 == 0) cout << "錨 " << (local_count / 1000) << "k\n";
     }
 }

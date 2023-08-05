@@ -17,7 +17,7 @@ namespace Dysnomia {
                 cout << "ည ";
             Mu = new Faung();
             Rho = new Fa();
-            Psi = Pi();
+            Psi = Pi(true);
         }
 
         ည(Faung* Beta, Fa* Omicron, bool Lambda) {
@@ -37,8 +37,11 @@ namespace Dysnomia {
                 Psi = new Faung();
         }
 
-        Faung* Pi() {
-            return new Faung(Rho, Mu->Cone->Secret, Mu->Cone->Signal, Mu->Cone->Channel, Mu->Cone->Identity);
+        Faung* Pi(bool Lambda) {
+            if(Lambda)
+                return new Faung(Rho, Mu->Cone->Secret, Mu->Cone->Signal, Mu->Cone->Channel, Mu->Cone->Identity);
+            else
+                return new Faung(Mu->Cone->Dynamo, Mu->Cone->Ring, Mu->Cone->Barn, Mu->Cone->Manifold);
         }
 
         vector<Faung*> Affinities() { return vector<Faung*>({ Mu, Psi }); }
