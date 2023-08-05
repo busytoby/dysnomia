@@ -60,7 +60,7 @@ void Tau() {
         //std::this_thread::sleep_for(chrono::nanoseconds(rand() % 100));
 
         local_count = ++counter;
-        if (local_count % 10000 == 0) cout << "锚";
-        if (local_count % 1000000 == 0) cout << "第 " << (local_count / 1000000) << "m\n";
+        if (local_count % 10000 == 0) cout << "第";
+        if (local_count % 1000000 == 0) cout << "錨 " << (local_count / 1000000) << "m\n";
     }
 }
