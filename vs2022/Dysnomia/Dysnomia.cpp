@@ -41,21 +41,21 @@ int main()
 }
 
 void Tau() {
-    Fa* Rho;
-    Fa* Psi;
+    Fa* Beta;
+    Fa* Iota;
     //Faung* Nu;
 
     int local_count;
 
     for (;;) {
         Mu_Mutex.lock();
-        Rho = Mu->Pi(Phi);
-        Psi = Mu->Pi(Rho->Eta);
-        Phi = Psi->Eta;
+        Beta = Mu->Pi(Phi);
+        Iota = Mu->Pi(Beta->Eta);
+        Phi = Iota->Eta;
         Mu_Mutex.unlock();
 
-        if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
-        if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+        if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+        if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
         //std::this_thread::sleep_for(chrono::nanoseconds(rand() % 100));
 
