@@ -55,7 +55,18 @@ void Gamma() {
         else {
             while (Delta.size()) {
                 Fa* Beta = Delta.front();
+                Faung* Rho = Mu->Rho->Psi->Pi(false);
+                ည* Psi = new ည(Rho, Beta, true);
+                ည* Nu = new ည(Psi->Mu, Beta, false);
+                ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
+                Tod* Sigma = new Tod(Eta, Beta, Nu);
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+                if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
+                if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+                if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+                if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
+                if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+
                 Delta.pop_front();
             }
             Mu_Mutex.unlock();
@@ -75,8 +86,8 @@ void Beta() {
                 Faung* Rho = Mu->Rho->Psi->Pi(false);
                 ည* Psi = new ည(Rho, Iota, true);
                 ည* Nu = new ည(Psi->Mu, Iota, false);
-                ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
-                Tod* Sigma = new Tod(Eta, Nu, Iota);
+                ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
+                Tod* Sigma = new Tod(Eta, Iota, Nu);
                 Fa* Upsilon = Sigma->Psi->Pi();
                 Delta.push_back(Upsilon);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;

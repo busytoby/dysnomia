@@ -21,7 +21,7 @@ namespace Dysnomia {
             Tau = Psi->Pi();
         }
 
-        Tod(ညြ* Beta, ည* Iota, Fa* Omicron) {
+        Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
             if (Math::POETRY > 0)
                 cout << "Tod ";
             Mu = Beta;
