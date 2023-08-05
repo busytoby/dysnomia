@@ -8,7 +8,7 @@
 using namespace Dysnomia;
 using namespace std;
 
-const int nthreads = 4;
+const int nthreads = 11;
 std::atomic<int> counter;
 std::atomic<Int64> Phi;
 
@@ -52,6 +52,7 @@ void Tau() {
         if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
+        std::this_thread::sleep_for(chrono::nanoseconds(rand() % 1000));
 
         local_count = ++counter;
         if (local_count % 10000 == 0) cout << "锚";
