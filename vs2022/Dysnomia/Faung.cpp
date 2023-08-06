@@ -15,12 +15,7 @@ namespace Dysnomia {
 			catch (int E) {
 				delete Rod;
 				delete Cone;
-				if (E == 1) continue;
-				if (E == 4) continue;
-				if (E == 6) continue;
-				if (E == 7) continue;
-				if (E == 103) continue;
-				throw;
+				continue;
 			}
 		}
 	}
@@ -41,9 +36,9 @@ namespace Dysnomia {
 			}
 			catch (int E) {
 				this->Cone->Nu = 0;
-				if (E == 1) throw 1;
-				if (E == 4) throw 2;
-				if (E == 7) throw 3;
+				if (E == 1) throw E;
+				if (E == 4) throw E;
+				if (E == 7) throw E;
 				if (E == 103) {
 					if (this->Rod->Secret == this->Cone->Secret)
 						this->Rod->Secret = Math::Random();
