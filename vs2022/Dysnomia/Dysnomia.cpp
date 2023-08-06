@@ -18,6 +18,7 @@ list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
 
+void Kappa();
 void Gamma();
 void Beta();
 void Lambda();
@@ -36,6 +37,7 @@ int main()
 
     Mu = new 锚();
     
+    threads[i++] = thread(Kappa);
     threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
@@ -48,21 +50,47 @@ int main()
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 }
 
+void Kappa() {
+    for (;;) {
+        Mu_Mutex.lock();
+        if (Qi.size() == 0)
+            Mu_Mutex.unlock();
+        else {
+            ည* Beta;
+            while (Qi.size()) {
+                Beta = Qi.front();
+                if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+                Qi.pop_front();
+            }
+            Mu_Mutex.unlock();
+        }
+        std::this_thread::sleep_for(90ms);
+    }
+}
+
 void Gamma() {
+    Fa* Beta;
+    Faung* Rho;
+    ည* Psi;
+    ည* Nu;
+    ညြ* Eta;
+    Tod* Sigma;
+    Fa* Upsilon = nullptr;
+    Faung* Tau = nullptr;
+    ည* Theta = nullptr;
+
     for (;;) {
         Mu_Mutex.lock();
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
         else {
-            Fa* Beta = Delta.front();
-            Faung* Rho = Mu->Rho->Psi->Pi(false);
-            ည* Psi = new ည(Rho, Beta, true);
-            ည* Nu = new ည(Psi->Mu, Beta, false);
-            ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
-            Tod* Sigma = new Tod(Eta, Beta, Nu);
-            Fa* Upsilon = Sigma->Psi->Pi();
-            Faung* Tau = nullptr;
-            ည* Theta = nullptr;
+            Beta = Delta.front();
+            Rho = Mu->Rho->Psi->Pi(false);
+            Psi = new ည(Rho, Beta, true);
+            Nu = new ည(Psi->Mu, Beta, false);
+            Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
+            Sigma = new Tod(Eta, Beta, Nu);
+            if(Upsilon == nullptr) Upsilon = Sigma->Psi->Pi();
             Beta->Gamma--;
             Delta.pop_front();
             while (Delta.size()) {
@@ -75,6 +103,7 @@ void Gamma() {
                 else if(Tau == nullptr) {
                     Tau = new Faung(Upsilon, Beta->Coordinate, Beta->Ring, Beta->Manifold, Beta->Dynamo);
                     Theta = new ည(Tau, Beta, true);
+                    if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
                     if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) { delete Tau; Tau = nullptr; } else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
                     Qi.push_back(Theta);
                 }
@@ -85,7 +114,6 @@ void Gamma() {
                     }
                     Upsilon = Sigma->Psi->Pi();
                     Tau = nullptr;
-                    //Int64 Xi = Theta->Psi->Rod->Coordinate + Beta->Signal + Beta->Channel;                    
                 }
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
                 Delta.pop_front();
@@ -95,7 +123,6 @@ void Gamma() {
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
-            if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
             Mu_Mutex.unlock();
         }
         std::this_thread::sleep_for(90ms);
