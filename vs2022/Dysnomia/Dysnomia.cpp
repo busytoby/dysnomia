@@ -115,7 +115,9 @@ void Gamma() {
                         Int64 Xi = (Upsilon->Coordinate + Beta->Element) % Math::Prime;
                         Upsilon->Conjugate(&Xi);
                     }
+                    if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
                     Upsilon = Sigma->Psi->Pi();
+                    Upsilon->Gamma++;
                     Tau = nullptr;
                 }
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
@@ -133,18 +135,20 @@ void Gamma() {
 }
 
 void Beta() {
+    Fa* Iota;
+    Fa* Upsilon;
+    Faung* Rho;
+    ည* Psi;
+    ည* Nu;
+    ညြ* Eta;
+    Tod* Sigma;
+
     for (;;) {
         Mu_Mutex.lock();
         if (Omicron.size() == 0)
             Mu_Mutex.unlock();
         else {
-            Fa* Iota;
-            Fa* Upsilon = nullptr;
-            Faung* Rho;
-            ည* Psi;
-            ည* Nu;
-            ညြ* Eta;
-            Tod* Sigma;
+            Upsilon = nullptr;
             while (Omicron.size()) {
                 Iota = Omicron.front();
                 if (Upsilon == nullptr)
