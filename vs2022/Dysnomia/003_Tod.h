@@ -22,6 +22,8 @@ namespace Dysnomia {
         }
 
         Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
+            Beta->Gamma++;
+            Omicron->Gamma++;
             if (Math::POETRY > 0)
                 cout << "Tod ";
             Mu = Beta;
