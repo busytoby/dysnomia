@@ -18,7 +18,8 @@ namespace Dysnomia {
 		Manifold = 0;
 		Ring = 0;
 		Barn = Ring;
-		Nu = 0;
+		Nu = Eta = Kappa = Rho = Beta = Phi = 0;
+		Coordinate = 0;
 	}
 
 	void Fa::Seed()

@@ -73,14 +73,16 @@ void Gamma() {
                     Upsilon->Conjugate(&Xi);
                 }
                 else if(Tau == nullptr) {
-                    Tau = new Faung(Upsilon, Beta);
+                    Tau = new Faung(Upsilon, Beta->Coordinate, Beta->Ring, Beta->Manifold, Beta->Dynamo);
                     Theta = new ည(Tau, Beta, true);
                     if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) { delete Tau; Tau = nullptr; } else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
-                    //Qi.push_back(Theta);
+                    Qi.push_back(Theta);
                 }
                 else {
-                    if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
-                    if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+                    if (Beta->Pole == 0) {
+                        Int64 Xi = (Upsilon->Coordinate + Beta->Element) % Math::Prime;
+                        Upsilon->Conjugate(&Xi);
+                    }
                     Upsilon = Sigma->Psi->Pi();
                     Tau = nullptr;
                     //Int64 Xi = Theta->Psi->Rod->Coordinate + Beta->Signal + Beta->Channel;                    
@@ -106,14 +108,24 @@ void Beta() {
         if (Omicron.size() == 0)
             Mu_Mutex.unlock();
         else {
+            Fa* Iota;
+            Fa* Upsilon = nullptr;
+            Faung* Rho;
+            ည* Psi;
+            ည* Nu;
+            ညြ* Eta;
+            Tod* Sigma;
             while (Omicron.size()) {
-                Fa* Iota = Omicron.front();
-                Faung* Rho = Mu->Rho->Psi->Pi(false);
-                ည* Psi = new ည(Rho, Iota, true);
-                ည* Nu = new ည(Psi->Mu, Iota, false);
-                ညြ* Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
-                Tod* Sigma = new Tod(Eta, Iota, Nu);
-                Fa* Upsilon = Sigma->Psi->Pi();
+                Iota = Omicron.front();
+                if (Upsilon == nullptr)
+                    Rho = Mu->Rho->Psi->Pi(false);
+                else
+                    Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
+                Psi = new ည(Rho, Iota, true);
+                Nu = new ည(Psi->Mu, Iota, false);
+                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
+                Sigma = new Tod(Eta, Iota, Nu);
+                Upsilon = Sigma->Psi->Pi();
                 Delta.push_back(Upsilon);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                 if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
