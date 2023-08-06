@@ -54,21 +54,31 @@ int main()
 }
 
 void Kappa() {
+    ည* Beta;
+    ည* Rho;
+    ည* Psi;
+    ညြ* Nu;
+
+    Beta = new ည();
     for (;;) {
         Mu_Mutex.lock();
         if (Qi.size() == 0)
             Mu_Mutex.unlock();
         else {
-            ည* Beta;
+            Psi = new ည();
             while (Qi.size()) {
-                Beta = Qi.front();
-                if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
+                Rho = Qi.front();
+                Nu = new ညြ(Beta, Rho, Psi);
+                if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
+                if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
                 Qi.pop_front();
             }
+            if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             Mu_Mutex.unlock();
         }
         std::this_thread::sleep_for(90ms);
     }
+    if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
 }
 
 void Gamma() {
