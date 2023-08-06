@@ -39,6 +39,8 @@ int main()
     
     threads[i++] = thread(Kappa);
     threads[i++] = thread(Gamma);
+    threads[i++] = thread(Gamma);
+    threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
         threads[i] = thread(Lambda);
@@ -125,7 +127,7 @@ void Gamma() {
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(90ms);
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
     }
 }
 
