@@ -42,6 +42,7 @@ int main()
     threads[i++] = thread(Gamma);
     threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
+    threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
         threads[i] = thread(Lambda);
     }
