@@ -39,10 +39,10 @@ int main()
     
     threads[i++] = thread(Kappa);
     threads[i++] = thread(Gamma);
-    threads[i++] = thread(Gamma);
-    threads[i++] = thread(Gamma);
+//    threads[i++] = thread(Gamma);
+//    threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
-    threads[i++] = thread(Beta);
+//    threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
         threads[i] = thread(Lambda);
     }
@@ -168,7 +168,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(30ms);
+        std::this_thread::sleep_for(100ms);
     }
 }
 
