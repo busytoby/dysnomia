@@ -103,7 +103,10 @@ void Gamma() {
             Nu = new ည(Psi->Mu, Beta, false);
             Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
             Sigma = new Tod(Eta, Beta, Nu);
-            if(Upsilon == nullptr) Upsilon = Sigma->Psi->Pi();
+            if (Upsilon == nullptr) {
+                Upsilon = Sigma->Psi->Pi();
+                Upsilon->Gamma++;
+            }
             Beta->Gamma--;
             Delta.pop_front();
             while (Delta.size()) {
