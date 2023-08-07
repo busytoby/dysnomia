@@ -163,15 +163,29 @@ void Gamma() {
                     Upsilon->Conjugate(&Xi);
                 }
                 else if(Tau == nullptr) {
-                    Tau = new Faung(Upsilon, Beta->Coordinate, Beta->Ring, Beta->Manifold, Beta->Dynamo);
-                    Theta = new ည(Tau, Beta, true);
+                    if (GammaOneThread) {
+                        Tau = new Faung(Upsilon, Beta->Secret, Beta->Signal, Beta->Channel, Beta->Identity);
+                        Theta = new ည(Tau, Beta, true);
+                    } else if (GammaTwoThread) {
+                        Tau = new Faung(Upsilon, Beta->Coordinate, Beta->Ring, Beta->Manifold, Beta->Dynamo);
+                        Theta = new ည(Tau, Beta, false);
+                    } else {
+                        Tau = new Faung(Upsilon, Beta->Dynamo, Beta->Ring, Beta->Manifold, Beta->Coordinate);
+                        Theta = new ည(Tau, Beta, true);
+                    }
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
                     if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) { delete Tau; Tau = nullptr; } else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
                     Qi.push_back(Theta);
                 }
                 else {
                     if (Beta->Pole == 0) {
-                        Int64 Xi = (Upsilon->Coordinate + Beta->Element) % Math::Prime;
+                        Int64 Xi;
+                        if(GammaOneThread)
+                            Xi = (Upsilon->Coordinate + Beta->Rho) % Math::Prime;
+                        else if (GammaTwoThread)
+                            Xi = (Upsilon->Coordinate + Beta->Eta) % Math::Prime;
+                        else
+                            Xi = (Upsilon->Coordinate + Beta->Beta) % Math::Prime;
                         Upsilon->Conjugate(&Xi);
                     }
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
