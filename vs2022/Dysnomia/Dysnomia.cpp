@@ -129,19 +129,19 @@ void Gamma() {
         if (GammaOneThread) {
             Mu_Mutex.unlock();
             while(!GammaOneReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
             Mu_Mutex.lock();
         }
         else if (GammaTwoThread) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
             while (!GammaThreeReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
             Mu_Mutex.lock();
         }
 
@@ -241,7 +241,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
 
         Mu_Mutex.lock();
         local_count = ++counter;
