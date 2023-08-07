@@ -20,6 +20,8 @@ list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
 
+bool GammaOne = false;
+bool GammaTwo = false;
 bool BetaOne = false;
 void Kappa();
 void Gamma();
@@ -43,8 +45,8 @@ int main()
     
     threads[i++] = thread(Kappa);
     threads[i++] = thread(Gamma);
-//    threads[i++] = thread(Gamma);
-//    threads[i++] = thread(Gamma);
+    threads[i++] = thread(Gamma);
+    threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
     threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
@@ -104,7 +106,20 @@ void Gamma() {
     Faung* Tau = nullptr;
     ည* Theta = nullptr;
 
+    bool GammaOneThread = false;
+    bool GammaTwoThread = false;
     int local_count;
+
+    Mu_Mutex.lock();
+    if (GammaOne == false) {
+        GammaOneThread = true;
+        GammaOne = true;
+    }
+    else if (GammaTwo == false) {
+        GammaTwoThread = true;
+        GammaTwo = true;
+    }
+    Mu_Mutex.unlock();
 
     for (;;) {
         Mu_Mutex.lock();
@@ -112,11 +127,28 @@ void Gamma() {
             Mu_Mutex.unlock();
         else {
             Beta = Delta.front();
-            Rho = Mu->Rho->Psi->Pi(false);
-            Psi = new ည(Rho, Beta, true);
-            Nu = new ည(Psi->Mu, Beta, false);
-            Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
-            Sigma = new Tod(Eta, Beta, Nu);
+
+            if (GammaOneThread) {
+                Rho = Mu->Rho->Rho->Pi(false);
+                Psi = new ည(Rho, Beta, false);
+                Nu = new ည(Psi->Mu, Beta, true);
+                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
+                Sigma = new Tod(Eta, Beta, Nu);
+            }
+            else if (GammaTwoThread) {
+                Rho = Mu->Rho->Psi->Pi(false);
+                Psi = new ည(Rho, Beta, true);
+                Nu = new ည(Psi->Psi, Beta, false);
+                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
+                Sigma = new Tod(Eta, Beta, Nu);            }
+            else {
+                Rho = Mu->Rho->Eta->Pi(false);
+                Psi = new ည(Rho, Beta, false);
+                Nu = new ည(Mu->Rho->Eta->Psi, Beta, true);
+                Eta = new ညြ(Mu->Psi->Mu->Eta, Psi, Nu);
+                Sigma = new Tod(Eta, Beta, Psi);
+            }
+
             if (Upsilon == nullptr) {
                 Upsilon = Sigma->Psi->Pi();
                 Upsilon->Gamma++;
@@ -162,7 +194,18 @@ void Gamma() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"筡";
+        if (GammaOneThread) {
+            if (local_count % 18 == 0) wcout << L"筁";
+        }
+        else if (GammaTwoThread)
+        {
+            if (local_count % 18 == 0) wcout << L"笩";
+        }
+        else
+        {
+            if (local_count % 18 == 0) wcout << L"笫";
+        }
+
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }

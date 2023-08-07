@@ -39,7 +39,8 @@ namespace Dysnomia {
 
 	void Fa::Fuse(Int64 Rho, Int64 Upsilon, Int64 Ohm) {
 		Base = Upsilon;
-		if (Base < 0) throw 3;
+		if (Base < 0) 
+			throw 3;
 		Secret = Ohm;
 		Signal = Rho;
 	}
