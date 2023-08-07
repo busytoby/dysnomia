@@ -159,14 +159,14 @@ void Gamma() {
             }
             else if (GammaTwoThread) {
                 Rho = Mu->Rho->Psi->Pi(false);
-                Psi = new ည(Rho, Beta, true);
+                Psi = new ည(Rho, Beta, false);
                 Nu = new ည(Psi->Psi, Beta, false);
                 Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
                 Sigma = new Tod(Eta, Beta, Nu);            }
             else {
                 Rho = Mu->Rho->Eta->Pi(false);
-                Psi = new ည(Rho, Beta, false);
-                Nu = new ည(Mu->Rho->Eta->Psi, Beta, true);
+                Psi = new ည(Rho, Beta, true);
+                Nu = new ည(Mu->Rho->Eta->Psi, Beta, false);
                 Eta = new ညြ(Mu->Psi->Mu->Eta, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
             }
