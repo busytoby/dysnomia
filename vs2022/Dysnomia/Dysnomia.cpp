@@ -22,6 +22,9 @@ list<ည*> Qi;
 
 bool GammaOne = false;
 bool GammaTwo = false;
+bool GammaOneReady = true;
+bool GammaTwoReady = false;
+bool GammaThreeReady = false;
 bool BetaOne = false;
 void Kappa();
 void Gamma();
@@ -123,6 +126,25 @@ void Gamma() {
 
     for (;;) {
         Mu_Mutex.lock();
+        if (GammaOneThread) {
+            Mu_Mutex.unlock();
+            while(!GammaOneReady)
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+            Mu_Mutex.lock();
+        }
+        else if (GammaTwoThread) {
+            Mu_Mutex.unlock();
+            while (!GammaTwoReady)
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+            Mu_Mutex.lock();
+        }
+        else {
+            Mu_Mutex.unlock();
+            while (!GammaThreeReady)
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+            Mu_Mutex.lock();
+        }
+
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
         else {
@@ -201,6 +223,22 @@ void Gamma() {
             if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
             if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
             if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+
+            if (GammaOneThread) {
+                GammaOneReady = false;
+                GammaTwoReady = true;
+                GammaThreeReady = false;
+            } else if (GammaTwoThread) {
+                GammaOneReady = false;
+                GammaTwoReady = false;
+                GammaThreeReady = true;
+            }
+            else {
+                GammaOneReady = true;
+                GammaTwoReady = false;
+                GammaThreeReady = false;
+            }
+
             Mu_Mutex.unlock();
         }
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
