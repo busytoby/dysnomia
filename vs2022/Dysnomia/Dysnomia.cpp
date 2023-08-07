@@ -105,7 +105,7 @@ void Kappa() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"箇";
+        if (local_count % 18 == 0) wcout << L"箽";
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
     if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
