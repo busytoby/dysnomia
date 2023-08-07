@@ -106,7 +106,7 @@ void Alpha() {
             Mu_Mutex.unlock();
         }
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -165,7 +165,7 @@ void Kappa() {
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 600));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -328,7 +328,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -410,7 +410,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -435,7 +435,7 @@ void Lambda() {
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         local_count = ++counter;
         if (local_count % 18 == 0) wcout << L"第";
