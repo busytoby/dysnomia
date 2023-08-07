@@ -161,6 +161,7 @@ void Kappa() {
                 Qi.pop_front();
             }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+            AwaitingAlpha = true;
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
