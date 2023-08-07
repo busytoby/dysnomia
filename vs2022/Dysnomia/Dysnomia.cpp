@@ -20,12 +20,14 @@ list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
 
+bool AwaitingAlpha = false;
 bool GammaOne = false;
 bool GammaTwo = false;
 bool GammaOneReady = true;
 bool GammaTwoReady = false;
 bool GammaThreeReady = false;
 bool BetaOne = false;
+void Alpha();
 void Kappa();
 void Gamma();
 void Beta();
@@ -46,6 +48,8 @@ int main()
 
     Mu = new 锚();
     
+    threads[i++] = thread(Alpha);
+    threads[i++] = thread(Alpha);
     threads[i++] = thread(Kappa);
     threads[i++] = thread(Gamma);
     threads[i++] = thread(Gamma);
@@ -60,6 +64,56 @@ int main()
         th.join();
 
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+}
+
+void Alpha() {
+    int local_count;
+
+    for (;;) {
+        Mu_Mutex.lock();
+        if (!AwaitingAlpha) {
+            Mu_Mutex.unlock();
+            while (!AwaitingAlpha)
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+            Mu_Mutex.lock();
+        }
+
+        if (Delta.size() == 0)
+            Mu_Mutex.unlock();
+        else {
+            list<tuple<short, short, Int64>> Gamma;
+            list<Fa*>::iterator Beta = Delta.begin();
+            short idx = 0;
+            short cnt = 1;
+            Int64 Secret = (*Beta)->Secret;
+            while (Beta != Delta.end()) {
+                ++Beta;
+                if (Beta != Delta.end())
+                    if ((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && (*Beta)->Secret == Secret)
+                        cnt++;
+                    else {
+                        if((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal)
+                            Gamma.push_back(make_tuple(idx, cnt, Secret));
+                        idx+=cnt;
+                        cnt = 1;
+                        Secret = (*Beta)->Secret;
+                    }
+                else
+                    if(cnt > 1)
+                        Gamma.push_back(make_tuple(idx, cnt, Secret));
+            }
+            AwaitingAlpha = false;
+            Mu_Mutex.unlock();
+        }
+
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
+
+        Mu_Mutex.lock();
+        local_count = ++counter;
+        Mu_Mutex.unlock();
+        if (local_count % 18 == 0) wcout << L"簜";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+    }
 }
 
 void Kappa() {
@@ -151,7 +205,7 @@ void Gamma() {
         Mu_Mutex.lock();
         if (GammaOneThread) {
             Mu_Mutex.unlock();
-            while(!GammaOneReady)
+            while(!GammaOneReady || AwaitingAlpha)
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
@@ -269,6 +323,7 @@ void Gamma() {
                 GammaOneReady = true;
                 GammaTwoReady = false;
                 GammaThreeReady = false;
+                AwaitingAlpha = true;
             }
 
             Mu_Mutex.unlock();
