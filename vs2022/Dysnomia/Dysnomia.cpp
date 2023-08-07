@@ -368,7 +368,6 @@ void Beta() {
 void Lambda() {
     Fa* Beta;
     Fa* Iota;
-    //Faung* Nu;
 
     int local_count;
 
@@ -381,9 +380,6 @@ void Lambda() {
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        //if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
-        //if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
-        //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         local_count = ++counter;
