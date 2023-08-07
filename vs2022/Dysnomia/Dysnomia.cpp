@@ -110,12 +110,12 @@ void Kappa() {
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
 
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"箽";
+        if (local_count % 18 == 0) wcout << L"篱";
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
     if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
@@ -355,7 +355,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
 
         Mu_Mutex.lock();
         local_count = ++counter;
