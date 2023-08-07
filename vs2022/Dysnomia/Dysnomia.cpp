@@ -111,7 +111,7 @@ void Alpha() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"簜";
+        if (local_count % 18 == 0) wcout << L"簬";
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }
