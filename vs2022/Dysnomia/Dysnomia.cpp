@@ -100,6 +100,7 @@ void Kappa() {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             Mu_Mutex.unlock();
         }
+        if (Beta->Gamma != 1) throw 5;
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         Mu_Mutex.lock();
