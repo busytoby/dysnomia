@@ -70,6 +70,7 @@ void Kappa() {
     Fa* Eta;
     ည* Sigma;
     Tod* Upsilon;
+    Zuo* Tau;
 
     int local_count;
 
@@ -86,11 +87,14 @@ void Kappa() {
                 Eta = Nu->Pi();
                 Sigma = new ည(Nu->Eta, Eta, false);
                 Upsilon = new Tod(Nu, Eta, Sigma);
+                Tau = new Zuo(Upsilon);
+
                 if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
                 if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
                 if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
                 if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
+                if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
                 Qi.pop_front();
             }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;

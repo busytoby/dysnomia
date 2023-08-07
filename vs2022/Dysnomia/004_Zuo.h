@@ -29,6 +29,22 @@ namespace Dysnomia {
             Theta = Eta->Pi(true);
         }
 
+        Zuo(Tod* Beta) {
+            if (Math::POETRY > 6)
+                wcout << L"Zuo ";
+            Beta->Gamma++;
+            Mu = Beta;
+            Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon, true);
+            Mu->Mu->Theta->Rho->Fuse(Psi->Rho->Secret, Psi->Rho->Signal, Psi->Rho->Channel);
+            Mu->Mu->Theta->Rho->Tune();
+            Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau, false);
+            Mu->Psi->Theta->Rho->Fuse(Eta->Rho->Secret, Eta->Rho->Signal, Eta->Rho->Channel);
+            Mu->Psi->Theta->Rho->Tune();
+            Sigma = new Faung(Mu->Mu->Theta->Rho, Mu->Psi->Theta->Rho);
+            Upsilon = Psi->Pi(true);
+            Theta = Eta->Pi(true);
+        }
+
         vector<Faung*> Affinities() {
             vector<Faung*> Alpha(Mu->Affinities());
             vector<Faung*> Beta = Psi->Affinities();
