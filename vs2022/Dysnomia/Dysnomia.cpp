@@ -142,19 +142,19 @@ void Gamma() {
         if (GammaOneThread) {
             Mu_Mutex.unlock();
             while(!GammaOneReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
         else if (GammaTwoThread) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
             while (!GammaThreeReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
 
