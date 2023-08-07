@@ -258,7 +258,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 20));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 50));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -369,7 +369,7 @@ void Lambda() {
         //if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
         //if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         local_count = ++counter;
         if (local_count % 18 == 0) wcout << L"第";
