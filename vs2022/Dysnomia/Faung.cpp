@@ -2,8 +2,8 @@
 
 namespace Dysnomia {
 	Faung::Faung() {
-		if(Math::POETRY > 1)
-			cout << "Faung ";
+		if (Math::POETRY > 9)
+			wcout << L"Faung ";
 		bool Failed = true;
 		while (Failed) {
 			try {
@@ -21,8 +21,8 @@ namespace Dysnomia {
 	}
 
 	Faung::Faung(Fa* Rod, Fa* Cone) {
-		if (Math::POETRY > 1)
-			cout << "Faung ";
+		if (Math::POETRY > 9)
+			wcout << L"Faung ";
 		if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
 		this->Rod = Rod;
 		this->Cone = Cone;
@@ -54,8 +54,8 @@ namespace Dysnomia {
 	}
 
 	Faung::Faung(Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
-		if (Math::POETRY > 1)
-			cout << "Faung ";
+		if (Math::POETRY > 9)
+			wcout << L"Faung ";
 
 		bool Failed = true;
 		while (Failed) {
@@ -77,8 +77,8 @@ namespace Dysnomia {
 	}
 
 	Faung::Faung(Fa* Beta, Int64 Rho, Int64 Upsilon, Int64 Ohm, Int64 Xi) {
-		if (Math::POETRY > 1)
-			cout << "Faung ";
+		if (Math::POETRY > 9)
+			wcout << L"Faung ";
 		Rod = Beta;
 		if (!Rod->Barn == 0) 
 			throw 100;

@@ -16,8 +16,8 @@ namespace Dysnomia {
 
         ë(Zuo* Beta, bool Iota) {
             Beta->Gamma++;
-            if (Math::POETRY > 0)
-                cout << "ë ";
+            if (Math::POETRY > 6)
+                wcout << L"ë ";
             Mu = Beta;
             Rho = new ည(Mu->Psi->Mu, Mu->Mu->Upsilon, Iota);
             Psi = new ည(Mu->Eta->Mu, Mu->Psi->Rho, !Iota);

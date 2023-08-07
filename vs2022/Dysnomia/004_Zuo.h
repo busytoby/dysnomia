@@ -15,8 +15,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Zuo() {
-            if (Math::POETRY > 0)
-                cout << "Zuo ";
+            if (Math::POETRY > 6)
+                wcout << L"Zuo ";
             Mu = new Tod();
             Psi = new ည(Mu->Mu->Theta->Mu, Mu->Upsilon, true);
             Mu->Mu->Theta->Rho->Fuse(Psi->Rho->Secret, Psi->Rho->Signal, Psi->Rho->Channel);

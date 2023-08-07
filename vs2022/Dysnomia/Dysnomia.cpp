@@ -1,4 +1,6 @@
 ﻿#include <Windows.h>
+#include <fcntl.h>
+#include <io.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -18,6 +20,7 @@ list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
 
+bool BetaOne = false;
 void Kappa();
 void Gamma();
 void Beta();
@@ -25,6 +28,7 @@ void Lambda();
 
 int main()
 {
+    _setmode(_fileno(stdout), _O_U16TEXT);
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
@@ -42,7 +46,7 @@ int main()
 //    threads[i++] = thread(Gamma);
 //    threads[i++] = thread(Gamma);
     threads[i++] = thread(Beta);
-//    threads[i++] = thread(Beta);
+    threads[i++] = thread(Beta);
     for (; i < threads.size(); i++) {
         threads[i] = thread(Lambda);
     }
@@ -58,6 +62,8 @@ void Kappa() {
     ည* Rho;
     ည* Psi;
     ညြ* Nu;
+
+    int local_count;
 
     Beta = new ည();
     for (;;) {
@@ -76,7 +82,13 @@ void Kappa() {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(90ms);
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+
+        Mu_Mutex.lock();
+        local_count = ++counter;
+        Mu_Mutex.unlock();
+        if (local_count % 18 == 0) wcout << L"箇";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
     if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
 }
@@ -91,6 +103,8 @@ void Gamma() {
     Fa* Upsilon = nullptr;
     Faung* Tau = nullptr;
     ည* Theta = nullptr;
+
+    int local_count;
 
     for (;;) {
         Mu_Mutex.lock();
@@ -144,6 +158,12 @@ void Gamma() {
             Mu_Mutex.unlock();
         }
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+
+        Mu_Mutex.lock();
+        local_count = ++counter;
+        Mu_Mutex.unlock();
+        if (local_count % 18 == 0) wcout << L"筡";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }
 
@@ -156,6 +176,16 @@ void Beta() {
     ညြ* Eta;
     Tod* Sigma;
 
+    bool BetaOneThread = false;
+    int local_count;
+
+    Mu_Mutex.lock();
+    if (BetaOne == false) {
+        BetaOneThread = true;
+        BetaOne = true;
+    }
+    Mu_Mutex.unlock();
+
     for (;;) {
         Mu_Mutex.lock();
         if (Omicron.size() == 0)
@@ -167,7 +197,10 @@ void Beta() {
                 if (Upsilon == nullptr)
                     Rho = Mu->Rho->Psi->Pi(false);
                 else
-                    Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
+                    if (BetaOneThread)
+                        Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
+                    else
+                        Rho = new Faung(Upsilon, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
                 Psi = new ည(Rho, Iota, true);
                 Nu = new ည(Psi->Mu, Iota, false);
                 Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
@@ -185,7 +218,13 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(100ms);
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+
+        Mu_Mutex.lock();
+        local_count = ++counter;
+        Mu_Mutex.unlock();
+        if (local_count % 18 == 0) wcout << L"笚";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }
 
@@ -211,7 +250,7 @@ void Lambda() {
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         local_count = ++counter;
-        if (local_count % 10 == 0) cout << "第";
-        if (local_count % 1000 == 0) cout << "錨 " << (local_count / 1000) << "k\n";
+        if (local_count % 18 == 0) wcout << L"第";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }

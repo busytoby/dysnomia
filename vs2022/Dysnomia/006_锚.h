@@ -13,8 +13,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         锚() {
-            if (Math::POETRY > 0)
-                cout << "锚 ";
+            if (Math::POETRY > 5)
+                wcout << L"锚 ";
             Mu = new Zuo();
             Rho = new ë(Mu, true);
             Psi = new ë(Mu, false);

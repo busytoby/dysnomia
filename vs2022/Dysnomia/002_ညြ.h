@@ -14,8 +14,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         ညြ(bool RAPHE_NEBULAE) {
-            if (Math::POETRY > 0)
-                cout << "ညြ ";
+            if (Math::POETRY > 7)
+                wcout << L"ညြ ";
             Mu = new ည();
             Psi = new Fa();
             if (RAPHE_NEBULAE)
@@ -29,8 +29,8 @@ namespace Dysnomia {
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {
             Beta->Gamma++;
             Omicron->Gamma++;
-            if (Math::POETRY > 0)
-                cout << "ညြ ";
+            if (Math::POETRY > 7)
+                wcout << L"ညြ ";
             Mu = Beta;
             Psi = new Fa();
             if (Iota->Mu->Rod->Gamma == 5)

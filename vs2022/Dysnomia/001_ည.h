@@ -13,7 +13,7 @@ namespace Dysnomia {
         int Gamma = 1;
 
         ည() {
-            if (Math::POETRY > 0)
+            if (Math::POETRY > 8)
                 cout << "ည ";
             Mu = new Faung();
             Rho = new Fa();
@@ -21,8 +21,8 @@ namespace Dysnomia {
         }
 
         ည(Faung* Beta, Fa* Omicron, bool Lambda) {
-            if (Math::POETRY > 0)
-                cout << "ည ";
+            if (Math::POETRY > 8)
+                wcout << L"ည ";
             Beta->Rod->Gamma++;
             Beta->Cone->Gamma++;
             Omicron->Gamma++;

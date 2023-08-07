@@ -13,8 +13,8 @@ namespace Dysnomia {
         int Gamma = 1;
 
         Tod() {
-            if (Math::POETRY > 0)
-                cout << "Tod ";
+            if (Math::POETRY > 6)
+                wcout << L"Tod ";
             Mu = new ညြ(false);
             Psi = new ညြ(true);
             Upsilon = Mu->Pi();
@@ -24,7 +24,7 @@ namespace Dysnomia {
         Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
             Beta->Gamma++;
             Omicron->Gamma++;
-            if (Math::POETRY > 0)
+            if (Math::POETRY > 6)
                 cout << "Tod ";
             Mu = Beta;
             Psi = new ညြ(Mu->Theta, Iota, Mu->Mu);
