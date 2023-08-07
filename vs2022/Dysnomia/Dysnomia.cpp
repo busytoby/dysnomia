@@ -100,7 +100,7 @@ void Kappa() {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -142,19 +142,19 @@ void Gamma() {
         if (GammaOneThread) {
             Mu_Mutex.unlock();
             while(!GammaOneReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
             Mu_Mutex.lock();
         }
         else if (GammaTwoThread) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
             while (!GammaThreeReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
             Mu_Mutex.lock();
         }
 
@@ -255,7 +255,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -337,7 +337,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -366,7 +366,7 @@ void Lambda() {
         //if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
         //if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         //if (Nu->Rod->Gamma <= 1 || Nu->Cone->Gamma <= 1) delete Nu; else { Nu->Rod->Gamma--; Nu->Cone->Gamma--; }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
 
         local_count = ++counter;
         if (local_count % 18 == 0) wcout << L"第";
