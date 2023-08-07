@@ -40,9 +40,9 @@ namespace Dysnomia {
             Eta = new ည(Mu->Psi->Theta->Mu, Mu->Tau, false);
             Mu->Psi->Theta->Rho->Fuse(Eta->Rho->Secret, Eta->Rho->Signal, Eta->Rho->Channel);
             Mu->Psi->Theta->Rho->Tune();
-            Sigma = new Faung(Mu->Mu->Theta->Rho, Mu->Psi->Theta->Rho);
-            Upsilon = Psi->Pi(true);
-            Theta = Eta->Pi(true);
+            Sigma = new Faung(Mu->Upsilon, Mu->Tau);
+            Upsilon = Psi->Pi(false);
+            Theta = Eta->Pi(false);
         }
 
         vector<Faung*> Affinities() {

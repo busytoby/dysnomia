@@ -23,7 +23,8 @@ namespace Dysnomia {
 	Faung::Faung(Fa* Rod, Fa* Cone) {
 		if (Math::POETRY > 9)
 			wcout << L"Faung ";
-		if (!Rod->Barn == 0 || !Cone->Barn == 0) throw 4;
+		if (!Rod->Barn == 0 || !Cone->Barn == 0)
+			throw 4;
 		this->Rod = Rod;
 		this->Cone = Cone;
 		this->Cone->Kappa = -1;
