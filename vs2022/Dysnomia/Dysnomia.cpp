@@ -88,6 +88,10 @@ void Kappa() {
                 Sigma = new ည(Nu->Eta, Eta, false);
                 Upsilon = new Tod(Nu, Eta, Sigma);
                 Tau = new Zuo(Upsilon);
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Xi));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Phi));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Eta));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Mu));
 
                 if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
