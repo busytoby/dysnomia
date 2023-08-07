@@ -161,13 +161,14 @@ void Gamma() {
                 Rho = Mu->Rho->Psi->Pi(false);
                 Psi = new ည(Rho, Beta, false);
                 Nu = new ည(Psi->Psi, Beta, false);
-                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
-                Sigma = new Tod(Eta, Beta, Nu);            }
+                Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
+                Sigma = new Tod(Eta, Beta, Nu);           
+            }
             else {
                 Rho = Mu->Rho->Eta->Pi(false);
                 Psi = new ည(Rho, Beta, true);
                 Nu = new ည(Mu->Rho->Eta->Psi, Beta, false);
-                Eta = new ညြ(Mu->Psi->Mu->Eta, Psi, Nu);
+                Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
             }
 
