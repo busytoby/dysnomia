@@ -203,7 +203,7 @@ void Gamma() {
                     if (Beta->Pole == 0) {
                         Int64 Xi;
                         if(GammaOneThread)
-                            Xi = (Upsilon->Coordinate + Beta->Rho) % Math::Prime;
+                            Xi = (Upsilon->Coordinate + Beta->Element) % Math::Prime;
                         else if (GammaTwoThread)
                             Xi = (Upsilon->Coordinate + Beta->Eta) % Math::Prime;
                         else
