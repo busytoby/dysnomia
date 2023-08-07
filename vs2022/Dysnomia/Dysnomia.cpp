@@ -110,7 +110,7 @@ void Kappa() {
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
 
         Mu_Mutex.lock();
         local_count = ++counter;
