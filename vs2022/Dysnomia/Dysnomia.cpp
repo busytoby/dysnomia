@@ -199,11 +199,11 @@ void Gamma() {
         }
         else if (GammaTwoThread)
         {
-            if (local_count % 18 == 0) wcout << L"笩";
+            if (local_count % 18 == 0) wcout << L"笫";
         }
         else
         {
-            if (local_count % 18 == 0) wcout << L"笫";
+            if (local_count % 18 == 0) wcout << L"笩";
         }
 
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
