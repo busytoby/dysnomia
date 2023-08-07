@@ -142,25 +142,26 @@ void Gamma() {
         if (GammaOneThread) {
             Mu_Mutex.unlock();
             while(!GammaOneReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
         else if (GammaTwoThread) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
             while (!GammaThreeReady)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
 
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
         else {
+            bool Xi = false;
             Beta = Delta.front();
 
             if (GammaOneThread) {
@@ -191,7 +192,7 @@ void Gamma() {
             }
             Beta->Gamma--;
             Delta.pop_front();
-            while (Delta.size()) {
+            while (Delta.size() && !Xi) {
                 if(Upsilon->Pole == 0) Upsilon->Polarize();
                 Beta = Delta.front();
                 if (Beta->Pole > 0) {
@@ -212,6 +213,7 @@ void Gamma() {
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
                     if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) { delete Tau; Tau = nullptr; } else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
                     Qi.push_back(Theta);
+                    Xi = true;
                 }
                 else {
                     if (Beta->Pole == 0) {
@@ -255,7 +257,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 60));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -337,7 +339,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
 
         Mu_Mutex.lock();
         local_count = ++counter;
