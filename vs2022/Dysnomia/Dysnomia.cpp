@@ -92,14 +92,14 @@ void Alpha() {
                     if ((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && (*Beta)->Secret == Secret)
                         cnt++;
                     else {
-                        if((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal)
+                        if((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && cnt > 7)
                             Gamma.push_back(make_tuple(idx, cnt, Secret));
                         idx+=cnt;
                         cnt = 1;
                         Secret = (*Beta)->Secret;
                     }
                 else
-                    if(cnt > 1)
+                    if(cnt > 6)
                         Gamma.push_back(make_tuple(idx, cnt, Secret));
             }
             AwaitingAlpha = false;
