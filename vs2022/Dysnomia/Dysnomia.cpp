@@ -257,7 +257,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 60));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 20));
 
         Mu_Mutex.lock();
         local_count = ++counter;
