@@ -201,10 +201,20 @@ void Beta() {
                         Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
                     else
                         Rho = new Faung(Upsilon, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
-                Psi = new ည(Rho, Iota, true);
-                Nu = new ည(Psi->Mu, Iota, false);
-                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
-                Sigma = new Tod(Eta, Iota, Nu);
+
+                if (BetaOneThread) {
+                    Psi = new ည(Rho, Iota, true);
+                    Nu = new ည(Psi->Mu, Iota, false);
+                    Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
+                    Sigma = new Tod(Eta, Iota, Nu);
+                }
+                else {
+                    Psi = new ည(Rho, Iota, false);
+                    Nu = new ည(Psi->Mu, Iota, true);
+                    Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
+                    Sigma = new Tod(Eta, Iota, Psi);
+                }
+
                 Upsilon = Sigma->Psi->Pi();
                 Delta.push_back(Upsilon);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
@@ -223,7 +233,7 @@ void Beta() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << ((BetaOneThread) ? L"笚" : L"笛");
+        if (local_count % 18 == 0) wcout << (BetaOneThread) ? L"笚" : L"笚";
         if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }
