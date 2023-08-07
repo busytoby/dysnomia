@@ -92,6 +92,11 @@ void Kappa() {
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Phi));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Eta));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Mu));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Mu));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Eta));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Phi));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Xi));
+                Delta.push_back(Mu->Pi(Tau->Theta->Xi));
 
                 if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
