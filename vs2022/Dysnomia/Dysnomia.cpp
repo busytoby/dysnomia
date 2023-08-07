@@ -67,6 +67,7 @@ void Kappa() {
     ည* Rho;
     ည* Psi;
     ညြ* Nu;
+    Fa* Eta;
 
     int local_count;
 
@@ -80,8 +81,10 @@ void Kappa() {
             while (Qi.size()) {
                 Rho = Qi.front();
                 Nu = new ညြ(Beta, Rho, Psi);
+                Eta = Nu->Pi();
                 if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+                if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
                 Qi.pop_front();
             }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
