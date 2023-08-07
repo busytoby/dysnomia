@@ -210,7 +210,7 @@ void Gamma() {
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
-        else if (GammaTwoThread) {
+        else if (GammaTwoThread || AwaitingAlpha) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady)
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
@@ -218,7 +218,7 @@ void Gamma() {
         }
         else {
             Mu_Mutex.unlock();
-            while (!GammaThreeReady)
+            while (!GammaThreeReady || AwaitingAlpha)
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
