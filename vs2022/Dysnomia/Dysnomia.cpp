@@ -74,7 +74,7 @@ void Alpha() {
         if (!AwaitingAlpha) {
             Mu_Mutex.unlock();
             while (!AwaitingAlpha)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
 
@@ -106,7 +106,7 @@ void Alpha() {
             Mu_Mutex.unlock();
         }
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -151,6 +151,7 @@ void Kappa() {
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Phi));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Xi));
                 Delta.push_back(Mu->Pi(Tau->Theta->Xi));
+                AwaitingAlpha = true;
 
                 if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
@@ -161,11 +162,10 @@ void Kappa() {
                 Qi.pop_front();
             }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
-            AwaitingAlpha = true;
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -206,19 +206,19 @@ void Gamma() {
         Mu_Mutex.lock();
         if (GammaOneThread) {
             Mu_Mutex.unlock();
-            while(!GammaOneReady || AwaitingAlpha)
+            while(!GammaOneReady || (GammaOneReady && AwaitingAlpha))
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
-        else if (GammaTwoThread || AwaitingAlpha) {
+        else if (GammaTwoThread) {
             Mu_Mutex.unlock();
-            while (!GammaTwoReady)
+            while (!GammaTwoReady || (GammaTwoReady && AwaitingAlpha))
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
-            while (!GammaThreeReady || AwaitingAlpha)
+            while (!GammaThreeReady || (GammaThreeReady && AwaitingAlpha))
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
             Mu_Mutex.lock();
         }
@@ -324,12 +324,11 @@ void Gamma() {
                 GammaOneReady = true;
                 GammaTwoReady = false;
                 GammaThreeReady = false;
-                AwaitingAlpha = true;
             }
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 50));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -411,7 +410,7 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -436,7 +435,7 @@ void Lambda() {
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 500));
 
         local_count = ++counter;
         if (local_count % 18 == 0) wcout << L"第";
