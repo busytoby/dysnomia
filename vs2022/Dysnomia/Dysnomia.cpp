@@ -197,8 +197,14 @@ void Gamma() {
                 if(Upsilon->Pole == 0) Upsilon->Polarize();
                 Beta = Delta.front();
                 if (Beta->Pole > 0) {
-                    Int64 Xi = (Upsilon->Coordinate + Beta->Eta + Beta->Beta) % Math::Prime;
-                    Upsilon->Conjugate(&Xi);
+                    Int64 Chi;
+                    if(GammaOneThread)
+                        Chi = (Upsilon->Coordinate + Beta->Rho) % Math::Prime;
+                    else if (GammaTwoThread)
+                        Chi = (Upsilon->Coordinate + Beta->Beta) % Math::Prime;
+                    else
+                        Chi = (Upsilon->Coordinate + Beta->Eta) % Math::Prime;
+                    Upsilon->Conjugate(&Chi);
                 }
                 else if(Tau == nullptr) {
                     if (GammaOneThread) {
