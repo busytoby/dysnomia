@@ -75,18 +75,71 @@ void Omega(tuple<short, short, Int64> Alpha) {
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
     //bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
-    锚* Bu = Mu;
+    if (cnt != 10 || !Knowledge) return;
+
+    Fa* Rho1;
+    Fa* Rho2;
+    Fa* Rho3;
+    Faung* Psi1;
+    Faung* Psi2;
+    Faung* Psi3;
+    Int64 Nu = 0;
+    ည* Eta;
+    ည* Sigma;
+    ည* Upsilon;
+    ညြ* Tau;
+    Tod* Theta;
 
     if (idx + cnt > Delta.size()) throw 6;
     for (int i = 0; i < idx; i++)
         Beta++;
 
-    if ((*Beta)->Secret != Secret) throw 7;
-    for (int i = 1; i < cnt; i++) {
+    Rho1 = *Beta;
 
-        Beta++;
-        if ((*Beta)->Secret != Secret) throw 7;
-    }
+    Beta++;
+    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Dynamo);
+    Eta = new ည(Psi1, Rho1, Knowledge);
+
+    Beta++;
+    Nu = Eta->Psi->Rod->Avail((*Beta)->Barn);
+
+    Beta++;
+    Rho2 = *Beta;
+
+    Beta++;
+    Psi2 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Dynamo);
+    Sigma = new ည(Psi2, Rho2, !Knowledge);
+
+    Beta++;
+    Nu += Sigma->Psi->Rod->Avail((*Beta)->Barn) % Math::Prime;
+
+    Beta++;
+    Rho3 = *Beta;
+
+    Beta++;
+    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Dynamo);
+    Upsilon = new ည(Psi3, Rho3, Knowledge);
+
+    Beta++;
+    Nu += Upsilon->Psi->Rod->Avail((*Beta)->Barn) % Math::Prime;
+
+    Beta++;
+    if ((*Beta)->Identity != 0) throw 10;
+    (*Beta)->Secret = Nu;
+    Tau = new ညြ(Eta, Sigma, Upsilon);
+    Theta = new Tod(Tau, *Beta, Sigma);
+
+    Psi1->Rod->Gamma-=2;
+    Psi1->Cone->Gamma-=2;
+    Eta->Gamma--;
+    Psi2->Rod->Gamma-=2;
+    Psi2->Cone->Gamma-=2;
+    delete Sigma;
+    Psi3->Rod->Gamma-=2;
+    Psi3->Cone->Gamma-=2;
+    Upsilon->Gamma--;
+    Tau->Gamma--;
+    delete Theta;
 }
 
 void Alpha() {
@@ -115,15 +168,12 @@ void Alpha() {
                     if ((*Beta)->Secret == Secret)
                         cnt++;
                     else {
-                        if(cnt > 7)
+                        if (cnt > 9)
                             Gamma.push_front(make_tuple(idx, cnt, Secret));
-                        idx+=cnt;
+                        idx += cnt;
                         cnt = 1;
                         Secret = (*Beta)->Secret;
                     }
-                else
-                    if(cnt > 6)
-                        Gamma.push_front(make_tuple(idx, cnt, Secret));
             }
 
             if (Gamma.size() > 0) {

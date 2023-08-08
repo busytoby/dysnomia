@@ -70,5 +70,16 @@ namespace Dysnomia {
             Beta->Tune();
             return Beta;
         }
+
+        Faung* Pi(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda) {
+            Fa* Rho = new Fa();
+            Fa* Psi = new Fa();
+
+            Rho->Fuse(Beta->Foundation, Beta->Ring, Beta->Manifold);
+            Rho->Tune();
+            Psi->Fuse(Iota, Omicron, Lambda);
+            Psi->Tune();
+            return new Faung(Rho, Psi);
+        }
     };
 }
