@@ -124,7 +124,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Rho1 = *Beta;
 
     Beta++;
-    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Dynamo);
+    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Secret, (*Beta)->Signal, (*Beta)->Identity);
     Eta = new ည(Psi1, Rho1, Knowledge);
 
     Beta++;
@@ -144,7 +144,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Rho3 = *Beta;
 
     Beta++;
-    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Dynamo);
+    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Dynamo, (*Beta)->Ring, (*Beta)->Manifold);
     Upsilon = new ည(Psi3, Rho3, Knowledge);
 
     Beta++;
