@@ -72,6 +72,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short idx = std::get<0>(Alpha);
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
+    bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
     if (idx + cnt > Delta.size()) throw 6;
     for (int i = 0; i < idx; i++)
@@ -108,10 +109,10 @@ void Alpha() {
             while (Beta != Delta.end()) {
                 ++Beta;
                 if (Beta != Delta.end())
-                    if ((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && (*Beta)->Secret == Secret)
+                    if ((*Beta)->Secret == Secret)
                         cnt++;
                     else {
-                        if((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && cnt > 7)
+                        if(cnt > 7)
                             Gamma.push_front(make_tuple(idx, cnt, Secret));
                         idx+=cnt;
                         cnt = 1;
