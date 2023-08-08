@@ -72,7 +72,10 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short idx = std::get<0>(Alpha);
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
-    bool Sensation = (Secret != Mu->Rho->Sigma->Upsilon->Signal);
+    bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
+    //bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
+
+    锚* Bu = Mu;
 
     if (idx + cnt > Delta.size()) throw 6;
     for (int i = 0; i < idx; i++)
