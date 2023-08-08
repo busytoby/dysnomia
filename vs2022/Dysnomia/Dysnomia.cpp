@@ -124,31 +124,31 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Rho1 = *Beta;
 
     Beta++;
-    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Foundation, (*Beta)->Ring);
+    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Element, (*Beta)->Ring);
     Eta = new ည(Psi1, Rho1, Knowledge);
 
     Beta++;
-    Nu = Eta->Psi->Rod->Avail((*Beta)->Barn);
+    Nu = Eta->Psi->Rod->Avail((*Beta)->Channel);
 
     Beta++;
     Rho2 = *Beta;
 
     Beta++;
-    Psi2 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Element);
+    Psi2 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Identity);
     Sigma = new ည(Psi2, Rho2, !Knowledge);
 
     Beta++;
-    Nu += Sigma->Psi->Rod->Avail((*Beta)->Barn) % Math::Prime;
+    Nu += Sigma->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
 
     Beta++;
     Rho3 = *Beta;
 
     Beta++;
-    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Dynamo, (*Beta)->Ring, (*Beta)->Coordinate);
+    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
     Upsilon = new ည(Psi3, Rho3, Knowledge);
 
     Beta++;
-    Nu += Upsilon->Psi->Rod->Avail((*Beta)->Barn) % Math::Prime;
+    Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
 
     Beta++;
     if ((*Beta)->Identity != 0) throw 10;
