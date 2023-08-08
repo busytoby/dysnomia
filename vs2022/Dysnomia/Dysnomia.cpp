@@ -72,6 +72,8 @@ int main()
 
 void Xi() {
     Tod* Beta;
+    Zuo* Rho;
+    ë* Psi;
 
     int local_count;
 
@@ -79,18 +81,19 @@ void Xi() {
         Mu_Mutex.lock();
         while (Rong.size() > 0) {
             Beta = Rong.front();
-            delete Beta;
+            Rho = new Zuo(Beta);
+            Psi = new ë(Rho, true);
+            Beta->Gamma--;
+            Rho->Gamma--;
+            delete Psi;
             Rong.pop_front();
+            local_count = ++counter;
+            if (local_count % 18 == 0) wcout << L"簻";
+            if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
         }
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
-
-        Mu_Mutex.lock();
-        local_count = ++counter;
-        Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"簻";
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
     }
 }
 
