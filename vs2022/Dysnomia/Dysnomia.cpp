@@ -19,6 +19,7 @@ Int64 Phi;
 list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
+list<Tod*> Rong;
 
 bool AwaitingAlpha = false;
 bool GammaOne = false;
@@ -28,6 +29,7 @@ bool GammaTwoReady = false;
 bool GammaThreeReady = false;
 bool BetaOne = false;
 void Omega(tuple<short, short, Int64>);
+void Xi();
 void Alpha();
 void Kappa();
 void Gamma();
@@ -49,6 +51,7 @@ int main()
 
     Mu = new 锚();
     
+    threads[i++] = thread(Xi);
     threads[i++] = thread(Alpha);
     threads[i++] = thread(Alpha);
     threads[i++] = thread(Kappa);
@@ -65,6 +68,30 @@ int main()
         th.join();
 
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+}
+
+void Xi() {
+    Tod* Beta;
+
+    int local_count;
+
+    for (;;) {
+        Mu_Mutex.lock();
+        while (Rong.size() > 0) {
+            Beta = Rong.front();
+            delete Beta;
+            Rong.pop_front();
+        }
+        Mu_Mutex.unlock();
+
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+
+        Mu_Mutex.lock();
+        local_count = ++counter;
+        Mu_Mutex.unlock();
+        if (local_count % 18 == 0) wcout << L"簻";
+        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+    }
 }
 
 void Omega(tuple<short, short, Int64> Alpha) {
@@ -128,6 +155,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     (*Beta)->Secret = Nu;
     Tau = new ညြ(Eta, Sigma, Upsilon);
     Theta = new Tod(Tau, *Beta, Sigma);
+    Rong.push_back(Theta);
 
     Psi1->Rod->Gamma-=2;
     Psi1->Cone->Gamma-=2;
@@ -139,7 +167,6 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Psi3->Cone->Gamma-=2;
     Upsilon->Gamma--;
     Tau->Gamma--;
-    delete Theta;
 }
 
 void Alpha() {
