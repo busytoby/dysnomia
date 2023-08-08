@@ -27,6 +27,7 @@ bool GammaOneReady = true;
 bool GammaTwoReady = false;
 bool GammaThreeReady = false;
 bool BetaOne = false;
+void Omega(tuple<short, short, Int64>);
 void Alpha();
 void Kappa();
 void Gamma();
@@ -66,6 +67,24 @@ int main()
     if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
 }
 
+void Omega(tuple<short, short, Int64> Alpha) {
+    list<Fa*>::iterator Beta = Delta.begin();
+    short idx = std::get<0>(Alpha);
+    short cnt = std::get<1>(Alpha);
+    Int64 Secret = std::get<2>(Alpha);
+
+    if (idx + cnt > Delta.size()) throw 6;
+    for (int i = 0; i < idx; i++)
+        Beta++;
+
+    if ((*Beta)->Secret != Secret) throw 7;
+    for (int i = 1; i < cnt; i++) {
+
+        Beta++;
+        if ((*Beta)->Secret != Secret) throw 7;
+    }
+}
+
 void Alpha() {
     int local_count;
 
@@ -93,15 +112,23 @@ void Alpha() {
                         cnt++;
                     else {
                         if((*Beta)->Secret != Mu->Rho->Sigma->Upsilon->Signal && cnt > 7)
-                            Gamma.push_back(make_tuple(idx, cnt, Secret));
+                            Gamma.push_front(make_tuple(idx, cnt, Secret));
                         idx+=cnt;
                         cnt = 1;
                         Secret = (*Beta)->Secret;
                     }
                 else
                     if(cnt > 6)
-                        Gamma.push_back(make_tuple(idx, cnt, Secret));
+                        Gamma.push_front(make_tuple(idx, cnt, Secret));
             }
+
+            if (Gamma.size() > 0) {
+                list<tuple<short, short, Int64>>::iterator Iota = Gamma.begin();
+                while (Iota != Gamma.end()) {
+                    Omega(*Iota);
+                    ++Iota;
+                }
+            }            
             AwaitingAlpha = false;
             Mu_Mutex.unlock();
         }
