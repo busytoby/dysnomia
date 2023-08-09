@@ -176,7 +176,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
         Rong.push_back(Theta);
     }
     else {
-        Fa* Iota = new Fa();
+        Fa* Iota = Mu->Rho->Sigma->Pi();
         Iota->Secret = Nu;
         Tau = new ညြ(Eta, Sigma, Upsilon);
         Theta = new Tod(Tau, Iota, Sigma);
