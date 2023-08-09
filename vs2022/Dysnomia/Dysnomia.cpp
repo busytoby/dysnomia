@@ -123,7 +123,6 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Fa* Rho1;
     Fa* Rho2;
     Fa* Rho3;
-    Fa* Rho4;
     Faung* Psi1;
     Faung* Psi2;
     Faung* Psi3;
