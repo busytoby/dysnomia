@@ -84,8 +84,8 @@ void Xi() {
             Beta = Rong.front();
             Rho = new Zuo(Beta);
             Psi = new ë(Rho, true);
-            Nu = new Faung(Psi->Mu->Mu->Psi->Upsilon, Psi->Sigma->Upsilon);
-            // Psi->Mu->Mu->Mu->Upsilon remains unattached
+            Nu = new Faung(Psi->Mu->Mu->Mu->Upsilon, Psi->Sigma->Upsilon);
+            // Psi->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Rho->Gamma--;
             Nu->Rod->Gamma--;
