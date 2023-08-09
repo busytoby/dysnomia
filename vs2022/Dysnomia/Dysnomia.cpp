@@ -492,8 +492,10 @@ void Beta() {
                 else
                     if (BetaOneThread)
                         Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
-                    else
+                    else {
                         Rho = new Faung(Upsilon, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
+                        Rho->Theta(666);
+                    }
 
                 if (BetaOneThread) {
                     Psi = new ည(Rho, Iota, true);
