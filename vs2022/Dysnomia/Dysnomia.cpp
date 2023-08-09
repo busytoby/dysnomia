@@ -82,6 +82,12 @@ void Xi() {
         Mu_Mutex.lock();
         while (Rong.size() > 0) {
             Beta = Rong.front();
+            if (Beta->Tau->Identity != 0) {
+                if (Beta->Gamma != 1) throw 10;
+                delete Beta; // Attention Stolen
+                Rong.pop_front();
+                continue;
+            }
             Rho = new Zuo(Beta);
             Psi = new ë(Rho, true);
             Nu = new Faung(Psi->Sigma->Upsilon, Psi->Mu->Mu->Mu->Upsilon);
@@ -108,12 +114,9 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
-    bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
+    bool Information = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
-    if (Sensation)
-        return;
-    
-    if (!Knowledge || cnt != 10) 
+    if (cnt < 9) 
         return;
 
     Fa* Rho1;
@@ -163,7 +166,10 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
 
     Beta++;
-    if ((*Beta)->Identity != 0) throw 10;
+    while (Beta != Delta.end() && (*Beta)->Identity != 0)
+        Beta++;
+
+    if (Beta == Delta.end() || (*Beta)->Identity != 0) throw 10;
     (*Beta)->Secret = Nu;
     Tau = new ညြ(Eta, Sigma, Upsilon);
     Theta = new Tod(Tau, *Beta, Sigma);
