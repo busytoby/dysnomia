@@ -84,7 +84,7 @@ void Xi() {
             Beta = Rong.front();
             Rho = new Zuo(Beta);
             Psi = new ë(Rho, true);
-            Nu = new Faung(Psi->Mu->Mu->Mu->Upsilon, Psi->Sigma->Upsilon);
+            Nu = new Faung(Psi->Sigma->Upsilon, Psi->Mu->Mu->Mu->Upsilon);
             // Psi->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Rho->Gamma--;
@@ -98,7 +98,7 @@ void Xi() {
         }
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 4000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
     }
 }
 
