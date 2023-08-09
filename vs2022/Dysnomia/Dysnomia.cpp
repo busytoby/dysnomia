@@ -77,7 +77,7 @@ void Xi() {
     Faung* Nu;
 
     int local_count;
-    short queue_max = 12;
+    short queue_max = 20;
     int sleep_time = 100;
 
     for (;;) {
