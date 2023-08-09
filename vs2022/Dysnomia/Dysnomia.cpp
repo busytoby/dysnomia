@@ -114,7 +114,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
-    bool Information = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
+    //bool Information = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
     if (cnt < 9)
         return;
@@ -142,7 +142,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
     Beta++;
     Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Element, (*Beta)->Ring);
-    Eta = new ည(Psi1, Rho1, Knowledge);
+    Eta = new ည(Psi1, Rho1, !Knowledge);
 
     Beta++;
     Nu = Eta->Psi->Rod->Avail((*Beta)->Channel);
@@ -152,7 +152,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
     Beta++;
     Psi2 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Identity);
-    Sigma = new ည(Psi2, Rho2, !Knowledge);
+    Sigma = new ည(Psi2, Rho2, Knowledge);
 
     Beta++;
     Nu += Sigma->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
@@ -162,7 +162,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
     Beta++;
     Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
-    Upsilon = new ည(Psi3, Rho3, Knowledge);
+    Upsilon = new ည(Psi3, Rho3, !Knowledge);
 
     Beta++;
     Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
