@@ -77,9 +77,13 @@ void Xi() {
     Faung* Nu;
 
     int local_count;
+    short queue_max = 12;
+    int sleep_time = 100;
 
     for (;;) {
         Mu_Mutex.lock();
+        if (Rong.size() > queue_max) sleep_time /= 2;
+        else if (Rong.size() == 0) sleep_time *= 2;
         while (Rong.size() > 0) {
             Beta = Rong.front();
             if (Beta->Tau->Identity != 0) {
@@ -99,12 +103,12 @@ void Xi() {
             delete Psi;
             Rong.pop_front();
             local_count = ++counter;
-            if (local_count % 18 == 0) wcout << L"簻";
-            if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+            wcout << L"簻";
+            if (local_count % 55 == 0) wcout << L"錨\n";
         }
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 1000));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
     }
 }
 
@@ -205,6 +209,9 @@ void Omega(tuple<short, short, Int64> Alpha) {
 void Alpha() {
     int local_count;
 
+    short queue_max = 400;
+    int sleep_time = 100;
+
     for (;;) {
         Mu_Mutex.lock();
         if (!AwaitingAlpha) {
@@ -214,6 +221,8 @@ void Alpha() {
             Mu_Mutex.lock();
         }
 
+        if (Delta.size() > queue_max) sleep_time /= 2;
+        else if (Delta.size() == 0) sleep_time *= 2;
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
         else {
@@ -247,13 +256,13 @@ void Alpha() {
             Mu_Mutex.unlock();
         }
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 400));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
 
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"簬";
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+        wcout << L"簬";
+        if (local_count % 55 == 0) wcout << L"錨\n";
     }
 }
 
@@ -267,6 +276,9 @@ void Kappa() {
     Tod* Upsilon;
     Zuo* Tau;
 
+    short queue_max = 15;
+    int sleep_time = 100;
+
     int local_count;
 
     Beta = new ည();
@@ -276,6 +288,8 @@ void Kappa() {
             Mu_Mutex.unlock();
         else {
             Psi = new ည();
+            if (Qi.size() > queue_max) sleep_time /= 2;
+            else if (Qi.size() == 0) sleep_time *= 2;
             while (Qi.size() && !AwaitingAlpha) {
                 Rho = Qi.front();
                 Nu = new ညြ(Beta, Rho, Psi);
@@ -303,16 +317,15 @@ void Kappa() {
                 Qi.pop_front();
             }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
+
+            local_count = ++counter;
+            wcout << L"篱";
+            if (local_count % 55 == 0) wcout << L"錨\n";
+
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
-
-        Mu_Mutex.lock();
-        local_count = ++counter;
-        Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << L"篱";
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
     }
     if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
 }
@@ -330,6 +343,10 @@ void Gamma() {
 
     bool GammaOneThread = false;
     bool GammaTwoThread = false;
+
+    short queue_max = 200;
+    int sleep_time = 100;
+
     int local_count;
 
     Mu_Mutex.lock();
@@ -364,6 +381,8 @@ void Gamma() {
             Mu_Mutex.lock();
         }
 
+        if (Delta.size() > queue_max) sleep_time /= 2;
+        else if (Delta.size() == 0) sleep_time *= 2;
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
         else {
@@ -469,24 +488,25 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
+
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
 
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
         if (GammaOneThread) {
-            if (local_count % 18 == 0) wcout << L"筁";
+            wcout << L"筁";
         }
         else if (GammaTwoThread)
         {
-            if (local_count % 18 == 0) wcout << L"笫";
+            wcout << L"笫";
         }
         else
         {
-            if (local_count % 18 == 0) wcout << L"笩";
+            wcout << L"笩";
         }
 
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+        if (local_count % 55 == 0) wcout << L"錨\n";
     }
 }
 
@@ -500,6 +520,10 @@ void Beta() {
     Tod* Sigma;
 
     bool BetaOneThread = false;
+
+    short queue_max = 50;
+    int sleep_time = 100;
+
     int local_count;
 
     Mu_Mutex.lock();
@@ -511,6 +535,8 @@ void Beta() {
 
     for (;;) {
         Mu_Mutex.lock();
+        if (Omicron.size() > queue_max) sleep_time /= 2;
+        else if (Omicron.size() == 0) sleep_time *= 2;
         if (Omicron.size() == 0)
             Mu_Mutex.unlock();
         else {
@@ -552,13 +578,13 @@ void Beta() {
             }
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
 
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
-        if (local_count % 18 == 0) wcout << ((BetaOneThread) ? L"笚" : L"笛");
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+        wcout << ((BetaOneThread) ? L"笚" : L"笛");
+        if (local_count % 55 == 0) wcout << L"錨\n";
     }
 }
 
@@ -566,10 +592,18 @@ void Lambda() {
     Fa* Beta;
     Fa* Iota;
 
+    short queue_max = 40;
+    int sleep_time = 100;
+
     int local_count;
 
     for (;;) {
         Mu_Mutex.lock();
+        if (Delta.size() > queue_max || Omicron.size() > queue_max)
+            sleep_time *= 2;
+        else if (Delta.size() == 0 || Omicron.size() == 0)
+            sleep_time /= 2;
+
         Beta = Mu->Pi(Phi);
         Iota = Mu->Pi(Beta->Eta);
         Phi = Iota->Eta;
@@ -578,10 +612,10 @@ void Lambda() {
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
 
         local_count = ++counter;
-        if (local_count % 18 == 0) wcout << L"第";
-        if (local_count % 1000 == 0) wcout << L"錨 " << (local_count / 1000) << "k\n";
+        wcout << L"第";
+        if (local_count % 55 == 0) wcout << L"錨\n";
     }
 }
