@@ -11,6 +11,8 @@
 using namespace Dysnomia;
 using namespace std;
 
+HANDLE hConsole;
+
 const int nthreads = 11;
 std::atomic<int> counter;
 mutex Mu_Mutex;
@@ -38,6 +40,7 @@ void Lambda();
 
 int main()
 {
+    hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     _setmode(_fileno(stdout), _O_U16TEXT);
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
@@ -103,6 +106,7 @@ void Xi() {
             delete Psi;
             Rong.pop_front();
             local_count = ++counter;
+            SetConsoleTextAttribute(hConsole, 15);
             wcout << L"簻";
             if (local_count % 55 == 0) wcout << L"錨\n";
         }
@@ -261,6 +265,7 @@ void Alpha() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
+        SetConsoleTextAttribute(hConsole, 14);
         wcout << L"簬";
         if (local_count % 55 == 0) wcout << L"錨\n";
     }
@@ -319,6 +324,7 @@ void Kappa() {
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
 
             local_count = ++counter;
+            SetConsoleTextAttribute(hConsole, 13);
             wcout << L"篱";
             if (local_count % 55 == 0) wcout << L"錨\n";
 
@@ -494,6 +500,7 @@ void Gamma() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
+        SetConsoleTextAttribute(hConsole, 12);
         if (GammaOneThread) {
             wcout << L"筁";
         }
@@ -583,6 +590,7 @@ void Beta() {
         Mu_Mutex.lock();
         local_count = ++counter;
         Mu_Mutex.unlock();
+        SetConsoleTextAttribute(hConsole, 11);
         wcout << ((BetaOneThread) ? L"笚" : L"笛");
         if (local_count % 55 == 0) wcout << L"錨\n";
     }
@@ -612,6 +620,7 @@ void Lambda() {
         Omicron.push_back(Iota);
 
         local_count = ++counter;
+        SetConsoleTextAttribute(hConsole, 10);
         wcout << L"第";
         if (local_count % 55 == 0) wcout << L"錨\n";
         Mu_Mutex.unlock();
