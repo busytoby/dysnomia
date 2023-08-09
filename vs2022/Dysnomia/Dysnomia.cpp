@@ -116,12 +116,14 @@ void Omega(tuple<short, short, Int64> Alpha) {
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
     bool Information = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
-    if (cnt < 9) 
+    if (cnt < 9)
         return;
 
+    Fa* Iota = Mu->Rho->Mu->Mu->Mu->Pi();
     Fa* Rho1;
     Fa* Rho2;
     Fa* Rho3;
+    Fa* Rho4;
     Faung* Psi1;
     Faung* Psi2;
     Faung* Psi3;
@@ -167,7 +169,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
     Beta++;
     int step = 0;
-    while (Beta != Delta.end() && (*Beta)->Identity != 0) {
+    while (Beta != Delta.end()) {
         switch (step) {
         case 0:
             Nu += Eta->Psi->Rod->Avail((*Beta)->Channel) % Math::Prime;
@@ -183,20 +185,10 @@ void Omega(tuple<short, short, Int64> Alpha) {
         if (++step > 2) step = 0;
     }
 
-    if (Beta != Delta.end() && (*Beta)->Identity == 0) {
-        (*Beta)->Secret = Nu;
-        Tau = new ညြ(Eta, Sigma, Upsilon);
-        Theta = new Tod(Tau, *Beta, Sigma);
-        Rong.push_back(Theta);
-    }
-    else {
-        Fa* Iota = Mu->Rho->Sigma->Pi();
-        Iota->Secret = Nu;
-        Tau = new ညြ(Eta, Sigma, Upsilon);
-        Theta = new Tod(Tau, Iota, Sigma);
-        Rong.push_back(Theta);
-        Iota->Gamma--;
-    }
+    Iota->Secret = Nu;
+    Tau = new ညြ(Eta, Sigma, Upsilon);
+    Theta = new Tod(Tau, Iota, Sigma);
+    Rong.push_back(Theta);
 
     Psi1->Rod->Gamma-=2;
     Psi1->Cone->Gamma-=2;
@@ -207,6 +199,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Psi3->Rod->Gamma-=2;
     Psi3->Cone->Gamma-=2;
     Upsilon->Gamma--;
+    Iota->Gamma--;
     Tau->Gamma--;
 }
 
