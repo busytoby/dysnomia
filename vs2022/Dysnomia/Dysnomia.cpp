@@ -84,8 +84,8 @@ void Xi() {
             Beta = Rong.front();
             Rho = new Zuo(Beta);
             Psi = new ë(Rho, true);
-            Nu = new Faung(Psi->Mu->Mu->Mu->Upsilon, Psi->Mu->Mu->Psi->Upsilon);
-            // Psi->Sigma->Upsilon remains unattached
+            Nu = new Faung(Psi->Mu->Mu->Psi->Upsilon, Psi->Sigma->Upsilon);
+            // Psi->Mu->Mu->Mu->Upsilon remains unattached
             Beta->Gamma--;
             Rho->Gamma--;
             Nu->Rod->Gamma--;
@@ -112,7 +112,8 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
     if (Sensation)
         return;
-    else if (!Knowledge || cnt != 10) 
+    
+    if (!Knowledge || cnt != 10) 
         return;
 
     Fa* Rho1;
@@ -188,7 +189,7 @@ void Alpha() {
         if (!AwaitingAlpha) {
             Mu_Mutex.unlock();
             while (!AwaitingAlpha)
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
 
@@ -326,19 +327,19 @@ void Gamma() {
         if (GammaOneThread) {
             Mu_Mutex.unlock();
             while(!GammaOneReady || (GammaOneReady && AwaitingAlpha))
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
         else if (GammaTwoThread) {
             Mu_Mutex.unlock();
             while (!GammaTwoReady || (GammaTwoReady && AwaitingAlpha))
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
         else {
             Mu_Mutex.unlock();
             while (!GammaThreeReady || (GammaThreeReady && AwaitingAlpha))
-                std::this_thread::sleep_for(chrono::milliseconds(rand() % 5));
+                std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
             Mu_Mutex.lock();
         }
 
@@ -447,7 +448,7 @@ void Gamma() {
 
             Mu_Mutex.unlock();
         }
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -556,7 +557,7 @@ void Lambda() {
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
 
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 200));
 
         local_count = ++counter;
         if (local_count % 18 == 0) wcout << L"第";
