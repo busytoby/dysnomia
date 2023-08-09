@@ -612,11 +612,10 @@ void Lambda() {
         Omicron.push_back(Iota);
 
         local_count = ++counter;
+        wcout << L"第";
+        if (local_count % 55 == 0) wcout << L"錨\n";
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
-
-        wcout << L"第";
-        if (local_count % 55 == 0) wcout << L"錨\n";
     }
 }
