@@ -169,11 +169,20 @@ void Omega(tuple<short, short, Int64> Alpha) {
     while (Beta != Delta.end() && (*Beta)->Identity != 0)
         Beta++;
 
-    if (Beta == Delta.end() || (*Beta)->Identity != 0) throw 10;
-    (*Beta)->Secret = Nu;
-    Tau = new ညြ(Eta, Sigma, Upsilon);
-    Theta = new Tod(Tau, *Beta, Sigma);
-    Rong.push_back(Theta);
+    if (Beta != Delta.end() && (*Beta)->Identity == 0) {
+        (*Beta)->Secret = Nu;
+        Tau = new ညြ(Eta, Sigma, Upsilon);
+        Theta = new Tod(Tau, *Beta, Sigma);
+        Rong.push_back(Theta);
+    }
+    else {
+        Fa* Iota = new Fa();
+        Iota->Secret = Nu;
+        Tau = new ညြ(Eta, Sigma, Upsilon);
+        Theta = new Tod(Tau, Iota, Sigma);
+        Rong.push_back(Theta);
+        Iota->Gamma--;
+    }
 
     Psi1->Rod->Gamma-=2;
     Psi1->Cone->Gamma-=2;
