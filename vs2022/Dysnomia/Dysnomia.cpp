@@ -166,8 +166,10 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
 
     Beta++;
-    while (Beta != Delta.end() && (*Beta)->Identity != 0)
+    while (Beta != Delta.end() && (*Beta)->Identity != 0) {
+        Nu += Upsilon->Psi->Rod->Avail((*Beta)->Dynamo) % Math::Prime;
         Beta++;
+    }
 
     if (Beta != Delta.end() && (*Beta)->Identity == 0) {
         (*Beta)->Secret = Nu;
