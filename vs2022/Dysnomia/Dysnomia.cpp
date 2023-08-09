@@ -74,6 +74,7 @@ void Xi() {
     Tod* Beta;
     Zuo* Rho;
     ë* Psi;
+    Faung* Nu;
 
     int local_count;
 
@@ -83,8 +84,12 @@ void Xi() {
             Beta = Rong.front();
             Rho = new Zuo(Beta);
             Psi = new ë(Rho, true);
+            Nu = new Faung(Psi->Mu->Mu->Mu->Upsilon, Psi->Mu->Mu->Psi->Upsilon);
+            // Psi->Sigma->Upsilon remains unattached
             Beta->Gamma--;
             Rho->Gamma--;
+            Nu->Rod->Gamma--;
+            Nu->Cone->Gamma--;
             delete Psi;
             Rong.pop_front();
             local_count = ++counter;
@@ -103,9 +108,12 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
-    //bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
+    bool Sensation = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
 
-    if (cnt != 10 || !Knowledge) return;
+    if (Sensation)
+        return;
+    else if (!Knowledge || cnt != 10) 
+        return;
 
     Fa* Rho1;
     Fa* Rho2;
@@ -198,7 +206,7 @@ void Alpha() {
                     if ((*Beta)->Secret == Secret)
                         cnt++;
                     else {
-                        if (cnt > 9)
+                        if (cnt > 4)
                             Gamma.push_front(make_tuple(idx, cnt, Secret));
                         idx += cnt;
                         cnt = 1;
@@ -246,7 +254,7 @@ void Kappa() {
             Mu_Mutex.unlock();
         else {
             Psi = new ည();
-            while (Qi.size()) {
+            while (Qi.size() && !AwaitingAlpha) {
                 Rho = Qi.front();
                 Nu = new ညြ(Beta, Rho, Psi);
                 Eta = Nu->Pi();
@@ -276,7 +284,7 @@ void Kappa() {
             Mu_Mutex.unlock();
         }
         if (Beta->Gamma != 1) throw 5;
-        std::this_thread::sleep_for(chrono::milliseconds(rand() % 600));
+        std::this_thread::sleep_for(chrono::milliseconds(rand() % 100));
 
         Mu_Mutex.lock();
         local_count = ++counter;
@@ -494,7 +502,6 @@ void Beta() {
                         Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
                     else {
                         Rho = new Faung(Upsilon, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
-                        Rho->Theta(666);
                     }
 
                 if (BetaOneThread) {
@@ -544,6 +551,7 @@ void Lambda() {
         Beta = Mu->Pi(Phi);
         Iota = Mu->Pi(Beta->Eta);
         Phi = Iota->Eta;
+
         Delta.push_back(Beta);
         Omicron.push_back(Iota);
         Mu_Mutex.unlock();
