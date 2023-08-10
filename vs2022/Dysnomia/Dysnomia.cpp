@@ -86,7 +86,7 @@ void Xi() {
     for (;;) {
         Mu_Mutex.lock();
         if (Rong.size() > queue_max) sleep_time /= 2;
-        else if (Rong.size() == 0) sleep_time *= 2;
+        else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
         while (Rong.size() > 0) {
             Beta = Rong.front();
@@ -227,7 +227,7 @@ void Alpha() {
         }
 
         if (Delta.size() > queue_max) sleep_time /= 2;
-        else if (Delta.size() == 0) sleep_time *= 2;
+        else if (Delta.size() == 0 && sleep_time < 2000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
@@ -264,10 +264,10 @@ void Alpha() {
 
         Mu_Mutex.lock();
         local_count = ++counter;
-        Mu_Mutex.unlock();
         SetConsoleTextAttribute(hConsole, 14);
         wcout << L"簬";
         if (local_count % 55 == 0) wcout << L"錨\n";
+        Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
     }
@@ -296,7 +296,7 @@ void Kappa() {
         else {
             Psi = new ည();
             if (Qi.size() > queue_max) sleep_time /= 2;
-            else if (Qi.size() == 0) sleep_time *= 2;
+            else if (Qi.size() == 0 && sleep_time < 4000) sleep_time *= 2;
             if (sleep_time < 5) sleep_time = 5;
             while (Qi.size() && !AwaitingAlpha) {
                 Rho = Qi.front();
@@ -391,7 +391,7 @@ void Gamma() {
         }
 
         if (Delta.size() > queue_max) sleep_time /= 2;
-        else if (Delta.size() == 0) sleep_time *= 2;
+        else if (Delta.size() == 0 && sleep_time < 1000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
         if (Delta.size() == 0)
             Mu_Mutex.unlock();
@@ -501,7 +501,6 @@ void Gamma() {
 
         Mu_Mutex.lock();
         local_count = ++counter;
-        Mu_Mutex.unlock();
         SetConsoleTextAttribute(hConsole, 12);
         if (GammaOneThread) {
             wcout << L"筁";
@@ -516,6 +515,7 @@ void Gamma() {
         }
 
         if (local_count % 55 == 0) wcout << L"錨\n";
+        Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
     }
@@ -547,7 +547,7 @@ void Beta() {
     for (;;) {
         Mu_Mutex.lock();
         if (Omicron.size() > queue_max) sleep_time /= 2;
-        else if (Omicron.size() == 0) sleep_time *= 2;
+        else if (Omicron.size() == 0 && sleep_time < 4000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
         if (Omicron.size() == 0)
             Mu_Mutex.unlock();
@@ -592,10 +592,10 @@ void Beta() {
         }
         Mu_Mutex.lock();
         local_count = ++counter;
-        Mu_Mutex.unlock();
         SetConsoleTextAttribute(hConsole, 11);
         wcout << ((BetaOneThread) ? L"笚" : L"笛");
         if (local_count % 55 == 0) wcout << L"錨\n";
+        Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
     }
@@ -612,7 +612,7 @@ void Lambda() {
 
     for (;;) {
         Mu_Mutex.lock();
-        if (Delta.size() + Omicron.size() > queue_max)
+        if (Delta.size() + Omicron.size() > queue_max && sleep_time < 6000)
             sleep_time *= 2;
         else if (Delta.size() < queue_max && Omicron.size() == 0)
             sleep_time /= 2;
