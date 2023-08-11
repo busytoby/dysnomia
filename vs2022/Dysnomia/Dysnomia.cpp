@@ -547,14 +547,13 @@ void Gamma() {
                     }
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
 
-                    if (GammaOneThread || GammaTwoThread) {
+                    if (GammaOneThread)
+                        Upsilon = Mu->Psi->Mu->Mu->Psi->Pi();
+                    else if (GammaTwoThread)
                         Upsilon = Sigma->Psi->Pi();
-                        Upsilon->Gamma++;
-                    }
-                    else {
+                    else
                         Upsilon = Mu->Rho->Mu->Mu->Psi->Pi();
-                        Upsilon->Gamma++;
-                    }
+                    Upsilon->Gamma++;
                     Tau = nullptr;
                 }
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
