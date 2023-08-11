@@ -492,6 +492,14 @@ void Gamma() {
             while (Delta.size() && !Xi) {
                 if(Upsilon->Pole == 0) Upsilon->Polarize();
                 Beta = Delta.front();
+
+                if (Beta->Identity == 0) {
+                    Faung* Iota = new Faung(Beta, Sigma->Psi->Theta->Mu->Rod->Secret, Sigma->Psi->Theta->Mu->Rod->Signal, Sigma->Psi->Theta->Mu->Rod->Channel, Sigma->Psi->Theta->Mu->Rod->Identity);
+                    Iota->Cone->Gamma++;
+                    Delta.push_back(Iota->Cone);
+                    delete Iota;
+                }
+
                 if (Beta->Pole > 0) {
                     Int64 Chi;
                     if(GammaOneThread)
@@ -624,7 +632,7 @@ void Beta() {
                     if (BetaOneThread)
                         Rho = new Faung(Tau, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
                     else {
-                        Rho = new Faung(Tau, Iota->Manifold, Iota->Ring, Iota->Barn, Iota->Dynamo);
+                        Rho = new Faung(Tau, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
                     }
 
                 if (BetaOneThread) {
