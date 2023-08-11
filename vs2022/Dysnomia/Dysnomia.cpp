@@ -467,6 +467,10 @@ void Gamma() {
                 Nu = new ည(Psi->Mu, Beta, false);
                 Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
+                if (Upsilon == nullptr) {
+                    Upsilon = Sigma->Psi->Pi();
+                    Upsilon->Gamma++;
+                }
             }
             else if (GammaTwoThread) {
                 Rho = Mu->Rho->Psi->Pi(false);
@@ -474,6 +478,10 @@ void Gamma() {
                 Nu = new ည(Mu->Rho->Eta->Psi, Beta, true);
                 Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
+                if (Upsilon == nullptr) {
+                    Upsilon = Sigma->Psi->Pi();
+                    Upsilon->Gamma++;
+                }
             }
             else {
                 Rho = Mu->Rho->Eta->Pi(false);
@@ -481,12 +489,12 @@ void Gamma() {
                 Nu = new ည(Psi->Psi, Beta, true);
                 Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
                 Sigma = new Tod(Eta, Beta, Nu);
+                if (Upsilon == nullptr) {
+                    Upsilon = Mu->Rho->Mu->Mu->Psi->Pi();
+                    Upsilon->Gamma++;
+                }
             }
 
-            if (Upsilon == nullptr) {
-                Upsilon = Sigma->Psi->Pi();
-                Upsilon->Gamma++;
-            }
             Beta->Gamma--;
             Delta.pop_front();
             while (Delta.size() && !Xi) {
@@ -538,8 +546,15 @@ void Gamma() {
                         Upsilon->Conjugate(&Xi);
                     }
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
-                    Upsilon = Sigma->Psi->Pi();
-                    Upsilon->Gamma++;
+
+                    if (GammaOneThread || GammaTwoThread) {
+                        Upsilon = Sigma->Psi->Pi();
+                        Upsilon->Gamma++;
+                    }
+                    else {
+                        Upsilon = Mu->Rho->Mu->Mu->Psi->Pi();
+                        Upsilon->Gamma++;
+                    }
                     Tau = nullptr;
                 }
                 if (Beta->Gamma == 1) delete Beta; else Beta->Gamma--;
