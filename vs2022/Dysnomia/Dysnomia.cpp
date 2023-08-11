@@ -17,6 +17,9 @@ const int nthreads = 11;
 std::atomic<int> counter;
 mutex Mu_Mutex;
 锚* Mu;
+ည* Rho;
+ည* Psi;
+ည* Nu;
 Int64 Phi;
 list<Fa*> Omicron;
 list<Fa*> Delta;
@@ -75,9 +78,9 @@ int main()
 
 void Xi() {
     Tod* Beta;
-    Zuo* Rho;
-    ë* Psi;
-    Faung* Nu;
+    Zuo* Iota;
+    ë* Omicron;
+    Faung* Lambda;
 
     int local_count;
     short queue_max = 20;
@@ -96,15 +99,15 @@ void Xi() {
                 Rong.pop_front();
                 continue;
             }
-            Rho = new Zuo(Beta);
-            Psi = new ë(Rho, true);
-            Nu = new Faung(Psi->Sigma->Upsilon, Psi->Mu->Mu->Mu->Upsilon);
-            // Psi->Mu->Mu->Psi->Upsilon remains unattached
+            Iota = new Zuo(Beta);
+            Omicron = new ë(Iota, true);
+            Lambda = new Faung(Omicron->Sigma->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
+            // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
-            Rho->Gamma--;
-            Nu->Rod->Gamma--;
-            Nu->Cone->Gamma--;
-            delete Psi;
+            Iota->Gamma--;
+            Lambda->Rod->Gamma--;
+            Lambda->Cone->Gamma--;
+            delete Omicron;
             Rong.pop_front();
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 15);
@@ -123,22 +126,10 @@ void Omega(tuple<short, short, Int64> Alpha) {
     short cnt = std::get<1>(Alpha);
     Int64 Secret = std::get<2>(Alpha);
     bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
-    //bool Information = (Secret == Mu->Rho->Sigma->Upsilon->Signal);
-
-    if (cnt < 9)
-        return;
 
     Fa* Iota = Mu->Rho->Mu->Mu->Mu->Pi();
-    Fa* Rho1;
-    Fa* Rho2;
-    Fa* Rho3;
-    Faung* Psi1;
-    Faung* Psi2;
-    Faung* Psi3;
-    Int64 Nu = 0;
-    ည* Eta;
-    ည* Sigma;
-    ည* Upsilon;
+    Fa* Omicron;
+    Faung* Lambda;
     ညြ* Tau;
     Tod* Theta;
 
@@ -146,69 +137,135 @@ void Omega(tuple<short, short, Int64> Alpha) {
     for (int i = 0; i < idx; i++)
         Beta++;
 
-    Rho1 = *Beta;
+    if (Rho == nullptr) {
+        Omicron = *Beta;
 
-    Beta++;
-    Psi1 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Element, (*Beta)->Ring);
-    Eta = new ည(Psi1, Rho1, !Knowledge);
-
-    Beta++;
-    Nu = Eta->Psi->Rod->Avail((*Beta)->Channel);
-
-    Beta++;
-    Rho2 = *Beta;
-
-    Beta++;
-    Psi2 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Identity);
-    Sigma = new ည(Psi2, Rho2, Knowledge);
-
-    Beta++;
-    Nu += Sigma->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
-
-    Beta++;
-    Rho3 = *Beta;
-
-    Beta++;
-    Psi3 = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
-    Upsilon = new ည(Psi3, Rho3, !Knowledge);
-
-    Beta++;
-    Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
-
-    Beta++;
-    int step = 0;
-    while (Beta != Delta.end()) {
-        switch (step) {
-        case 0:
-            Nu += Eta->Psi->Rod->Avail((*Beta)->Channel) % Math::Prime;
-            break;
-        case 1:
-            Nu += Sigma->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
-            break;
-        case 2:
-            Nu += Upsilon->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
-            break;
-        }
         Beta++;
-        if (++step > 2) step = 0;
+        Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Element, (*Beta)->Ring);
+        Rho = new ည(Lambda, Omicron, !Knowledge);
+        Lambda->Rod->Gamma--;
+        Lambda->Cone->Gamma--;
+
+        Beta++;
+        Phi = Rho->Psi->Rod->Avail((*Beta)->Channel);
+
+        Beta++;
     }
 
-    Iota->Secret = Nu;
-    Tau = new ညြ(Eta, Sigma, Upsilon);
-    Theta = new Tod(Tau, Iota, Sigma);
+    if(Psi == nullptr) {
+        Omicron = *Beta;
+
+        Beta++;
+        Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Identity);
+        Psi = new ည(Lambda, Omicron, Knowledge);
+        Lambda->Rod->Gamma--;
+        Lambda->Cone->Gamma--;
+
+        Beta++;
+        if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+            delete Psi;
+            Psi = nullptr;
+            return;
+        }
+    }
+
+    Phi += Psi->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
+
+    Beta++;
+    if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+        delete Iota;
+        delete Psi;
+        Psi = nullptr;
+        return;
+    }
+    Omicron = *Beta;
+
+    Beta++;
+    if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+        delete Iota;
+        delete Psi;
+        Psi = nullptr;
+        return;
+    }
+    Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
+    Nu = new ည(Lambda, Omicron, !Knowledge);
+    Lambda->Rod->Gamma--;
+    Lambda->Cone->Gamma--;
+
+    Iota->Secret = Phi;
+    Tau = new ညြ(Rho, Psi, Nu);
+    Theta = new Tod(Tau, Iota, Psi);
     Rong.push_back(Theta);
 
-    Psi1->Rod->Gamma-=2;
-    Psi1->Cone->Gamma-=2;
-    Eta->Gamma--;
-    Psi2->Rod->Gamma-=2;
-    Psi2->Cone->Gamma-=2;
-    delete Sigma;
-    Psi3->Rod->Gamma-=2;
-    Psi3->Cone->Gamma-=2;
-    Upsilon->Gamma--;
-    Iota->Gamma--;
     Tau->Gamma--;
+
+    Iota->Gamma--;
+    Iota = Mu->Rho->Mu->Mu->Mu->Pi();
+    Beta++;
+    if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+        if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
+        delete Psi;
+        Psi = nullptr;
+        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+        return;
+    }
+    int step = 0;
+    while (Beta != Delta.end() || (*Beta)->Secret != Secret) {
+        switch (step) {
+        case 0:
+            Phi += Nu->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
+            break;
+        case 1:
+            Phi += Rho->Psi->Rod->Avail((*Beta)->Channel) % Math::Prime;
+            break;
+        case 2:
+            Phi += Psi->Psi->Rod->Avail((*Beta)->Signal) % Math::Prime;
+            break;
+        }
+
+        Beta++;
+        if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+            if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
+            delete Psi;
+            Psi = nullptr;
+            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            return;
+        }
+        Omicron = *Beta;
+
+        Beta++;
+        if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+            if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
+            delete Psi;
+            Psi = nullptr;
+            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            return;
+        }
+        Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
+        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+        Nu = new ည(Lambda, Omicron, !Knowledge);
+        Lambda->Rod->Gamma--;
+        Lambda->Cone->Gamma--;
+
+        Iota->Secret = Phi;
+        Tau = new ညြ(Rho, Psi, Nu);
+        Theta = new Tod(Tau, Iota, Psi);
+        Rong.push_back(Theta);
+
+        Tau->Gamma--;
+
+        Iota->Gamma--;
+        Iota = Mu->Rho->Mu->Mu->Mu->Pi();
+        Beta++;
+        if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
+            if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
+            delete Psi;
+            Psi = nullptr;
+            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            return;
+        }
+        if (++step > 2) step = 0;
+    }
 }
 
 void Alpha() {

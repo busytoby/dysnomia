@@ -79,6 +79,8 @@ namespace Dysnomia {
             Rho->Tune();
             Psi->Fuse(Iota, Omicron, Lambda);
             Psi->Tune();
+            Rho->Gamma--;
+            Psi->Gamma--;
             return new Faung(Rho, Psi);
         }
     };
