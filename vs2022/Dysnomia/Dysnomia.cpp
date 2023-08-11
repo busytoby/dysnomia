@@ -108,6 +108,7 @@ void Xi() {
             Lambda->Rod->Gamma--;
             Lambda->Cone->Gamma--;
             delete Omicron;
+            delete Lambda;
             Rong.pop_front();
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 15);
