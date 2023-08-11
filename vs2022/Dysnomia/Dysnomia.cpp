@@ -90,7 +90,7 @@ void Xi() {
         if (Rong.size() > queue_max) sleep_time /= 2;
         else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
-        while (Rong.size() > 0) {
+        while (Rong.size() > 3) {
             Beta = Rong.front();
             if (Beta->Tau->Identity != 0) {
                 if (Beta->Gamma != 1) throw 10;
@@ -100,12 +100,12 @@ void Xi() {
             }
             Iota = new Zuo(Beta);
             Omicron = new ë(Iota, true);
-            Lambda = new Faung(Omicron->Sigma->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
+            //Lambda = new Faung(Omicron->Sigma->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
             // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Iota->Gamma--;
             delete Omicron;
-            delete Lambda;
+            //delete Lambda;
             Rong.pop_front();
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 15);
