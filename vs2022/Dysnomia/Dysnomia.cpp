@@ -622,7 +622,7 @@ void Beta() {
                     if (BetaOneThread)
                         Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
                     else {
-                        Rho = new Faung(Upsilon, Iota->Dynamo, Iota->Ring, Iota->Barn, Iota->Manifold);
+                        Rho = new Faung(Upsilon, Iota->Manifold, Iota->Ring, Iota->Barn, Iota->Dynamo);
                     }
 
                 if (BetaOneThread) {
