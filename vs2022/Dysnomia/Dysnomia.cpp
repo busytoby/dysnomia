@@ -463,23 +463,23 @@ void Gamma() {
 
             if (GammaOneThread) {
                 Rho = Mu->Rho->Rho->Pi(false);
-                Psi = new ည(Rho, Beta, true);
-                Nu = new ည(Psi->Mu, Beta, true);
-                Eta = new ညြ(Mu->Rho->Mu->Psi, Nu, Psi);
-                Sigma = new Tod(Eta, Beta, Nu);
+                Psi = new ည(Rho, Beta, false);
+                Nu = new ည(Psi->Mu, Beta, false);
+                Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
+                Sigma = new Tod(Eta, Beta, Psi);
             }
             else if (GammaTwoThread) {
-                Rho = Mu->Rho->Eta->Pi(false);
+                Rho = Mu->Rho->Psi->Pi(false);
                 Psi = new ည(Rho, Beta, false);
                 Nu = new ည(Mu->Rho->Eta->Psi, Beta, true);
                 Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
-                Sigma = new Tod(Eta, Beta, Nu);
+                Sigma = new Tod(Eta, Beta, Psi);
             }
             else {
-                Rho = Mu->Rho->Psi->Pi(false);
-                Psi = new ည(Rho, Beta, false);
-                Nu = new ည(Psi->Psi, Beta, false);
-                Eta = new ညြ(Mu->Rho->Mu->Eta, Psi, Nu);
+                Rho = Mu->Rho->Eta->Pi(false);
+                Psi = new ည(Rho, Beta, true);
+                Nu = new ည(Psi->Psi, Beta, true);
+                Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
                 Sigma = new Tod(Eta, Beta, Psi);
             }
 
