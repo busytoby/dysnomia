@@ -19,7 +19,6 @@ mutex Mu_Mutex;
 锚* Mu;
 ည* Rho;
 ည* Psi;
-ည* Nu;
 Int64 Phi;
 list<Fa*> Omicron;
 list<Fa*> Delta;
@@ -129,6 +128,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Fa* Iota = Mu->Rho->Mu->Mu->Mu->Pi();
     Fa* Omicron;
     Faung* Lambda;
+    ည* Xi;
     ညြ* Tau;
     Tod* Theta;
 
@@ -162,8 +162,6 @@ void Omega(tuple<short, short, Int64> Alpha) {
 
         Beta++;
         if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
-            delete Psi;
-            Psi = nullptr;
             return;
         }
     }
@@ -173,8 +171,6 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Beta++;
     if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
         delete Iota;
-        delete Psi;
-        Psi = nullptr;
         return;
     }
     Omicron = *Beta;
@@ -182,17 +178,15 @@ void Omega(tuple<short, short, Int64> Alpha) {
     Beta++;
     if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
         delete Iota;
-        delete Psi;
-        Psi = nullptr;
         return;
     }
     Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
-    Nu = new ည(Lambda, Omicron, !Knowledge);
+    Xi = new ည(Lambda, Omicron, !Knowledge);
     Lambda->Rod->Gamma--;
     Lambda->Cone->Gamma--;
 
     Iota->Secret = Phi;
-    Tau = new ညြ(Rho, Psi, Nu);
+    Tau = new ညြ(Rho, Psi, Xi);
     Theta = new Tod(Tau, Iota, Psi);
     Rong.push_back(Theta);
 
@@ -205,14 +199,14 @@ void Omega(tuple<short, short, Int64> Alpha) {
         if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
         delete Psi;
         Psi = nullptr;
-        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+        if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
         return;
     }
     int step = 0;
     while (Beta != Delta.end() || (*Beta)->Secret != Secret) {
         switch (step) {
         case 0:
-            Phi += Nu->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
+            Phi += Xi->Psi->Rod->Avail((*Beta)->Foundation) % Math::Prime;
             break;
         case 1:
             Phi += Rho->Psi->Rod->Avail((*Beta)->Channel) % Math::Prime;
@@ -227,7 +221,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
             if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
             delete Psi;
             Psi = nullptr;
-            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
             return;
         }
         Omicron = *Beta;
@@ -237,17 +231,17 @@ void Omega(tuple<short, short, Int64> Alpha) {
             if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
             delete Psi;
             Psi = nullptr;
-            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
             return;
         }
         Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
-        if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
-        Nu = new ည(Lambda, Omicron, !Knowledge);
+        if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
+        Xi = new ည(Lambda, Omicron, !Knowledge);
         Lambda->Rod->Gamma--;
         Lambda->Cone->Gamma--;
 
         Iota->Secret = Phi;
-        Tau = new ညြ(Rho, Psi, Nu);
+        Tau = new ညြ(Rho, Psi, Xi);
         Theta = new Tod(Tau, Iota, Psi);
         Rong.push_back(Theta);
 
@@ -260,7 +254,7 @@ void Omega(tuple<short, short, Int64> Alpha) {
             if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
             delete Psi;
             Psi = nullptr;
-            if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
+            if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
             return;
         }
         if (++step > 2) step = 0;
