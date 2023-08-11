@@ -503,11 +503,11 @@ void Gamma() {
                 if (Beta->Pole > 0) {
                     Int64 Chi;
                     if(GammaOneThread)
-                        Chi = (Upsilon->Coordinate + Beta->Rho) % Math::Prime;
+                        Chi = (Upsilon->Coordinate + Beta->Eta) % Math::Prime;
                     else if (GammaTwoThread)
                         Chi = (Upsilon->Coordinate + Beta->Beta) % Math::Prime;
                     else
-                        Chi = (Upsilon->Coordinate + Beta->Eta) % Math::Prime;
+                        Chi = (Upsilon->Coordinate + Beta->Rho) % Math::Prime;
                     Upsilon->Conjugate(&Chi);
                 }
                 else if(Tau == nullptr) {
