@@ -345,7 +345,7 @@ void Kappa() {
     Tod* Upsilon;
     Zuo* Tau;
 
-    short queue_max = 15;
+    short queue_max = 30;
     int sleep_time = 100;
 
     int local_count;
@@ -359,7 +359,7 @@ void Kappa() {
             Psi = new ည();
             if (Qi.size() > queue_max) sleep_time /= 2;
             else if (Qi.size() == 0 && sleep_time < 4000) sleep_time *= 2;
-            if (sleep_time < 5) sleep_time = 5;
+            if (sleep_time < 20) sleep_time = 20;
             while (Qi.size() && !AwaitingAlpha) {
                 Rho = Qi.front();
                 Nu = new ညြ(Beta, Rho, Psi);
@@ -590,8 +590,8 @@ void Beta() {
     ည* Nu;
     ညြ* Eta;
     Tod* Sigma;
-    Fa* Upsilon;
-    Faung* Tau;
+    Faung* Upsilon;
+    Fa* Tau;
 
     bool BetaOneThread = false;
 
@@ -615,16 +615,16 @@ void Beta() {
         if (Omicron.size() == 0)
             Mu_Mutex.unlock();
         else {
-            Upsilon = nullptr;
+            Tau = nullptr;
             while (Omicron.size()) {
                 Iota = Omicron.front();
-                if (Upsilon == nullptr)
+                if (Tau == nullptr)
                     Rho = Mu->Rho->Psi->Pi(false);
                 else
                     if (BetaOneThread)
-                        Rho = new Faung(Upsilon, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
+                        Rho = new Faung(Tau, Iota->Secret, Iota->Signal, Iota->Channel, Iota->Identity);
                     else {
-                        Rho = new Faung(Upsilon, Iota->Manifold, Iota->Ring, Iota->Barn, Iota->Dynamo);
+                        Rho = new Faung(Tau, Iota->Manifold, Iota->Ring, Iota->Barn, Iota->Dynamo);
                     }
 
                 if (BetaOneThread) {
@@ -640,16 +640,16 @@ void Beta() {
                     Sigma = new Tod(Eta, Iota, Psi);
                 }
 
-                Upsilon = Sigma->Psi->Pi();
-                Tau = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
-                Delta.push_back(Upsilon);
+                Upsilon = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
+                Tau = Sigma->Psi->Pi();
+                Delta.push_back(Tau);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                 if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
                 if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
                 if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
                 if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
-                if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) delete Tau; else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
+                if (Upsilon->Rod->Gamma <= 1 || Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
 
                 Omicron.pop_front();
             }
