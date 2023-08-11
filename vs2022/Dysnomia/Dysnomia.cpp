@@ -105,8 +105,6 @@ void Xi() {
             // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Iota->Gamma--;
-            Lambda->Rod->Gamma--;
-            Lambda->Cone->Gamma--;
             delete Omicron;
             delete Lambda;
             Rong.pop_front();
