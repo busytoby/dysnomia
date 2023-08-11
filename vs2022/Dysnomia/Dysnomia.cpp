@@ -480,7 +480,7 @@ void Gamma() {
                 Psi = new ည(Rho, Beta, true);
                 Nu = new ည(Psi->Psi, Beta, true);
                 Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
-                Sigma = new Tod(Eta, Beta, Psi);
+                Sigma = new Tod(Eta, Beta, Nu);
             }
 
             if (Upsilon == nullptr) {
