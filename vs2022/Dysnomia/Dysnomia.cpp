@@ -111,7 +111,14 @@ void Xi() {
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 15);
             wcout << L"簻";
-            if (local_count % 55 == 0) wcout << L"錨\n";
+            if (local_count % 55 == 0) wcout << L"\n";
+
+            if (Qing.size() >= 4) {
+                local_count = ++counter;
+                SetConsoleTextAttribute(hConsole, 9);
+                wcout << L"錨";
+                if (local_count % 55 == 0) wcout << L"\n";
+            }
 
             while(Qing.size() >= 4)
                 std::this_thread::sleep_for(chrono::milliseconds(1000));
@@ -320,7 +327,7 @@ void Alpha() {
         local_count = ++counter;
         SetConsoleTextAttribute(hConsole, 14);
         wcout << L"簬";
-        if (local_count % 55 == 0) wcout << L"錨\n";
+        if (local_count % 55 == 0) wcout << L"\n";
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
@@ -383,7 +390,7 @@ void Kappa() {
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 13);
             wcout << L"篱";
-            if (local_count % 55 == 0) wcout << L"錨\n";
+            if (local_count % 55 == 0) wcout << L"\n";
 
             Mu_Mutex.unlock();
         }
@@ -568,7 +575,7 @@ void Gamma() {
             wcout << L"笩";
         }
 
-        if (local_count % 55 == 0) wcout << L"錨\n";
+        if (local_count % 55 == 0) wcout << L"\n";
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
@@ -648,7 +655,7 @@ void Beta() {
         local_count = ++counter;
         SetConsoleTextAttribute(hConsole, 11);
         wcout << ((BetaOneThread) ? L"笚" : L"笛");
-        if (local_count % 55 == 0) wcout << L"錨\n";
+        if (local_count % 55 == 0) wcout << L"\n";
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
@@ -682,7 +689,7 @@ void Lambda() {
         local_count = ++counter;
         SetConsoleTextAttribute(hConsole, 10);
         wcout << L"第";
-        if (local_count % 55 == 0) wcout << L"錨\n";
+        if (local_count % 55 == 0) wcout << L"\n";
         Mu_Mutex.unlock();
 
         std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
