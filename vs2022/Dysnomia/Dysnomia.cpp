@@ -24,6 +24,7 @@ list<Fa*> Omicron;
 list<Fa*> Delta;
 list<ည*> Qi;
 list<Tod*> Rong;
+list<ë*> Qing;
 
 bool AwaitingAlpha = false;
 bool GammaOne = false;
@@ -90,7 +91,7 @@ void Xi() {
         if (Rong.size() > queue_max) sleep_time /= 2;
         else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
-        while (Rong.size() / 4 >= 1) {
+        while (Rong.size() > 0) {
             Beta = Rong.front();
             if (Beta->Tau->Identity != 0) {
                 if (Beta->Gamma != 1) throw 10;
@@ -104,13 +105,16 @@ void Xi() {
             // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Iota->Gamma--;
-            delete Omicron;
+            Qing.push_back(Omicron);
             //delete Lambda;
             Rong.pop_front();
             local_count = ++counter;
             SetConsoleTextAttribute(hConsole, 15);
             wcout << L"簻";
             if (local_count % 55 == 0) wcout << L"錨\n";
+
+            while(Qing.size() >= 4)
+                std::this_thread::sleep_for(chrono::milliseconds(1000));
         }
         Mu_Mutex.unlock();
 
