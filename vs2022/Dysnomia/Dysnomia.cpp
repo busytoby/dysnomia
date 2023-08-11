@@ -105,7 +105,8 @@ void Xi() {
             // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Iota->Gamma--;
-            Qing.push_back(Omicron);
+            delete Omicron;
+            //Qing.push_back(Omicron);
             //delete Lambda;
             Rong.pop_front();
             local_count = ++counter;
@@ -584,12 +585,13 @@ void Gamma() {
 
 void Beta() {
     Fa* Iota;
-    Fa* Upsilon;
     Faung* Rho;
     ည* Psi;
     ည* Nu;
     ညြ* Eta;
     Tod* Sigma;
+    Fa* Upsilon;
+    Faung* Tau;
 
     bool BetaOneThread = false;
 
@@ -639,6 +641,7 @@ void Beta() {
                 }
 
                 Upsilon = Sigma->Psi->Pi();
+                Tau = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
                 Delta.push_back(Upsilon);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                 if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
@@ -646,6 +649,7 @@ void Beta() {
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
                 if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
                 if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
+                if (Tau->Rod->Gamma <= 1 || Tau->Cone->Gamma <= 1) delete Tau; else { Tau->Rod->Gamma--; Tau->Cone->Gamma--; }
 
                 Omicron.pop_front();
             }
