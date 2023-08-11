@@ -305,7 +305,7 @@ void Alpha() {
                     if ((*Beta)->Secret == Secret)
                         cnt++;
                     else {
-                        if (cnt > 4)
+                        if(cnt > 1)
                             Gamma.push_front(make_tuple(idx, cnt, Secret));
                         idx += cnt;
                         cnt = 1;
@@ -479,7 +479,7 @@ void Gamma() {
                 Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
                 if (Upsilon == nullptr) {
-                    Upsilon = Sigma->Psi->Pi();
+                    Upsilon = Mu->Mu->Mu->Psi->Pi();
                     Upsilon->Gamma++;
                 }
             }
@@ -490,7 +490,7 @@ void Gamma() {
                 Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
                 Sigma = new Tod(Eta, Beta, Nu);
                 if (Upsilon == nullptr) {
-                    Upsilon = Mu->Rho->Mu->Mu->Psi->Pi();
+                    Upsilon = Sigma->Psi->Pi();
                     Upsilon->Gamma++;
                 }
             }
@@ -548,11 +548,11 @@ void Gamma() {
                     if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
 
                     if (GammaOneThread)
-                        Upsilon = Mu->Psi->Mu->Mu->Psi->Pi();
+                        Upsilon = Mu->Mu->Mu->Psi->Pi();
                     else if (GammaTwoThread)
                         Upsilon = Sigma->Psi->Pi();
                     else
-                        Upsilon = Mu->Rho->Mu->Mu->Psi->Pi();
+                        Upsilon = Mu->Mu->Mu->Psi->Pi();
                     Upsilon->Gamma++;
                     Tau = nullptr;
                 }
@@ -664,6 +664,10 @@ void Beta() {
 
                 Upsilon = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
                 Tau = Sigma->Psi->Pi();
+                Upsilon->Cone->Gamma++;
+                Delta.push_back(Upsilon->Cone);
+                Upsilon->Rod->Gamma++;
+                Delta.push_back(Upsilon->Rod);
                 Delta.push_back(Tau);
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                 if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
@@ -671,7 +675,7 @@ void Beta() {
                 if (Nu->Gamma == 1) delete Nu; else Nu->Gamma--;
                 if (Eta->Gamma == 1) delete Eta; else Eta->Gamma--;
                 if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
-                if (Upsilon->Rod->Gamma <= 1 || Upsilon->Cone->Gamma <= 1) delete Upsilon; else { Upsilon->Rod->Gamma--; Upsilon->Cone->Gamma--; }
+                delete Upsilon;
 
                 Omicron.pop_front();
             }
