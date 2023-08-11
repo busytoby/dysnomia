@@ -90,7 +90,7 @@ void Xi() {
         if (Rong.size() > queue_max) sleep_time /= 2;
         else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
         if (sleep_time < 5) sleep_time = 5;
-        while (Rong.size() / 4 > 1) {
+        while (Rong.size() / 4 >= 1) {
             Beta = Rong.front();
             if (Beta->Tau->Identity != 0) {
                 if (Beta->Gamma != 1) throw 10;
