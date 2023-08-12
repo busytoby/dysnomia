@@ -63,17 +63,17 @@ namespace Dysnomia {
             Omicron = Qing.front(); Qing.pop_front();
             Lambda = Qing.front(); Qing.pop_front();
 
-            Xi = new Faung(Beta->Mu->Mu->Psi->Upsilon, Iota->Mu->Mu->Mu->Upsilon);
+            Xi = new Faung(Beta->Mu->Mu->Psi->Upsilon, Lambda->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Beta->Sigma->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
+            Xi = new Faung(Iota->Mu->Mu->Psi->Upsilon, Omicron->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Iota->Mu->Mu->Psi->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
+            Xi = new Faung(Omicron->Mu->Mu->Mu->Upsilon, Iota->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Iota->Sigma->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
+            Xi = new Faung(Lambda->Mu->Mu->Mu->Upsilon, Beta->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Omicron->Sigma->Upsilon, Lambda->Mu->Mu->Mu->Upsilon);
+            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
             delete Xi;
-            Xi = new Faung(Lambda->Sigma->Upsilon, Beta->Mu->Mu->Mu->Upsilon);
+            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
             delete Xi;
 
             delete Beta;
@@ -377,7 +377,7 @@ namespace Dysnomia {
             Tod* Upsilon;
             Zuo* Tau;
 
-            short queue_max = 30;
+            short queue_max = 50;
             int sleep_time = 100;
 
             int local_count;
