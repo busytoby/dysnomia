@@ -468,7 +468,7 @@ void Gamma() {
                 Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
                 if (Upsilon == nullptr) {
-                    Upsilon = Sigma->Psi->Pi();
+                    Upsilon = Mu->Mu->Mu->Psi->Pi();
                     Upsilon->Gamma++;
                 }
             }
@@ -479,7 +479,7 @@ void Gamma() {
                 Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
                 Sigma = new Tod(Eta, Beta, Psi);
                 if (Upsilon == nullptr) {
-                    Upsilon = Mu->Mu->Mu->Psi->Pi();
+                    Upsilon = Sigma->Mu->Pi();
                     Upsilon->Gamma++;
                 }
             }
@@ -508,7 +508,7 @@ void Gamma() {
                     else if (GammaTwoThread)
                         Iota = new Faung(Beta, Upsilon->Secret, Sigma->Tau->Signal, Upsilon->Channel, Upsilon->Identity);
                     else
-                        Iota = new Faung(Beta, Sigma->Psi->Theta->Mu->Rod->Secret, Sigma->Psi->Theta->Mu->Rod->Signal, Sigma->Psi->Theta->Mu->Rod->Channel, Sigma->Mu->Theta->Mu->Rod->Identity);
+                        Iota = new Faung(Beta, Sigma->Psi->Theta->Mu->Rod->Secret, Sigma->Psi->Theta->Mu->Rod->Signal, Sigma->Psi->Theta->Mu->Rod->Channel, Sigma->Mu->Mu->Mu->Rod->Identity);
                     Iota->Cone->Gamma++;
                     Delta.push_back(Iota->Cone);
                     delete Iota;
