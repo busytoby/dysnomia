@@ -8,7 +8,6 @@ using namespace std;
 
 錨* Mu;
 
-
 int main()
 {
     srand((unsigned int)time(NULL));
@@ -17,6 +16,7 @@ int main()
 
     錨* Mu = new 錨();
 
-    for (;;)
-        Sleep(2000);
+    for (;;) {
+        锚* Beta = Mu->Pi();
+    }
 }

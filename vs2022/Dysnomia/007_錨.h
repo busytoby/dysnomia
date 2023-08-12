@@ -46,6 +46,29 @@ namespace Dysnomia {
                 th.detach();
         }
 
+        锚* Pi() {
+            ë* Beta;
+            ë* Iota;
+            ë* Omicron;
+            ë* Lambda;
+
+            while (Qing.size() < 4) {
+                std::this_thread::sleep_for(chrono::milliseconds(100));
+            }
+
+            Beta = Qing.front(); Qing.pop_front();
+            Iota = Qing.front(); Qing.pop_front();
+            Omicron = Qing.front(); Qing.pop_front();
+            Lambda = Qing.front(); Qing.pop_front();
+
+            delete Beta;
+            delete Iota;
+            delete Omicron;
+            delete Lambda;
+
+            return nullptr;
+        }
+
         ~錨() {
             //if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
