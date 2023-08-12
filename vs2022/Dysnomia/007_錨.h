@@ -65,20 +65,20 @@ namespace Dysnomia {
 
             Xi = new Faung(Beta->Mu->Mu->Psi->Upsilon, Lambda->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Iota->Mu->Mu->Psi->Upsilon, Omicron->Sigma->Upsilon);
+            Xi = new Faung(Omicron->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Omicron->Mu->Mu->Mu->Upsilon, Iota->Sigma->Upsilon);
+            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Iota->Mu->Mu->Psi->Upsilon);
+            delete Xi;
+            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Omicron->Sigma->Upsilon);
+            delete Xi;
+            Xi = new Faung(Omicron->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
             delete Xi;
             Xi = new Faung(Lambda->Mu->Mu->Mu->Upsilon, Beta->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
-            delete Xi;
-            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
-            delete Xi;
-
+             
             delete Omicron;
             delete Iota;
-            // Beta->Sigma->Upsilon & Lambda->Mu->Mu->Psi->Upsilon Have Lost Pairings Here
+            // Beta->Mu->Mu->Mu->Upsilon & Lambda->Mu->Mu->Psi->Upsilon Have Lost Pairings Here
             delete Beta;
             delete Lambda;
 
