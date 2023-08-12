@@ -105,8 +105,8 @@ void Xi() {
             // Omicron->Mu->Mu->Psi->Upsilon remains unattached
             Beta->Gamma--;
             Iota->Gamma--;
-            delete Omicron;
-            //Qing.push_back(Omicron);
+            
+            Qing.push_back(Omicron);
             //delete Lambda;
             Rong.pop_front();
             local_count = ++counter;
