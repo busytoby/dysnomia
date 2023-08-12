@@ -52,6 +52,8 @@ namespace Dysnomia {
             ë* Omicron;
             ë* Lambda;
 
+            Faung* Xi;
+
             while (Qing.size() < 4) {
                 std::this_thread::sleep_for(chrono::milliseconds(100));
             }
@@ -60,6 +62,19 @@ namespace Dysnomia {
             Iota = Qing.front(); Qing.pop_front();
             Omicron = Qing.front(); Qing.pop_front();
             Lambda = Qing.front(); Qing.pop_front();
+
+            Xi = new Faung(Beta->Mu->Mu->Psi->Upsilon, Iota->Mu->Mu->Mu->Upsilon);
+            delete Xi;
+            Xi = new Faung(Beta->Sigma->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
+            delete Xi;
+            Xi = new Faung(Iota->Mu->Mu->Psi->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
+            delete Xi;
+            Xi = new Faung(Iota->Sigma->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
+            delete Xi;
+            Xi = new Faung(Omicron->Sigma->Upsilon, Lambda->Mu->Mu->Mu->Upsilon);
+            delete Xi;
+            Xi = new Faung(Lambda->Sigma->Upsilon, Beta->Mu->Mu->Mu->Upsilon);
+            delete Xi;
 
             delete Beta;
             delete Iota;
@@ -95,21 +110,11 @@ namespace Dysnomia {
         bool GammaTwoReady = false;
         bool GammaThreeReady = false;
         bool BetaOne = false;
-        /*
-        void Omega(tuple<short, short, Int64>);
-        void Xi();
-        void Alpha();
-        void Kappa();
-        void Gamma();
-        void Beta();
-        void Lambda();
-        */
 
         void Xi() {
             Tod* Beta;
             Zuo* Iota;
             ë* Omicron;
-            //Faung* Lambda;
 
             int local_count;
             short queue_max = 20;
@@ -130,8 +135,6 @@ namespace Dysnomia {
                     }
                     Iota = new Zuo(Beta);
                     Omicron = new ë(Iota, true);
-                    //Lambda = new Faung(Omicron->Sigma->Upsilon, Omicron->Mu->Mu->Mu->Upsilon);
-                    // Omicron->Mu->Mu->Psi->Upsilon remains unattached
                     Beta->Gamma--;
                     Iota->Gamma--;
 
