@@ -80,7 +80,7 @@ void Xi() {
     Tod* Beta;
     Zuo* Iota;
     ë* Omicron;
-    Faung* Lambda;
+    //Faung* Lambda;
 
     int local_count;
     short queue_max = 20;
@@ -367,14 +367,14 @@ void Kappa() {
                 Sigma = new ည(Nu->Eta, Eta, false);
                 Upsilon = new Tod(Nu, Eta, Sigma);
                 Tau = new Zuo(Upsilon);
-                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Xi));
-                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Phi));
-                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Eta));
-                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Mu));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Mu));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Eta));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Phi));
                 Delta.push_back(Mu->Pi(Tau->Mu->Mu->Eta->Xi));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Mu));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Eta));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Phi));
+                Delta.push_back(Mu->Pi(Tau->Mu->Mu->Mu->Mu->Xi));
                 Delta.push_back(Mu->Pi(Tau->Theta->Xi));
                 AwaitingAlpha = true;
 
