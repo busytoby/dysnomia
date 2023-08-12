@@ -18,9 +18,7 @@ int main()
     錨* Mu = new 錨();
 
     for (;;) {
-        for (int i = 1; i < 15; i++) {
-            Diatom* Beta = Mu->Pi(i);
-            delete Beta;
-        }
+        Diatom* Beta = Mu->Pi((rand() % 14) + 1);
+        delete Beta;
     }
 }
