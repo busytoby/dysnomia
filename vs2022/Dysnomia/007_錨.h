@@ -390,7 +390,7 @@ namespace Dysnomia {
                 else {
                     Psi = new ည();
                     if (Qi.size() > queue_max) sleep_time /= 2;
-                    else if (Qi.size() == 0 && sleep_time < 4000) sleep_time *= 2;
+                    else if (Qi.size() <= 5 && sleep_time < 4000) sleep_time *= 2;
                     if (sleep_time < 20) sleep_time = 20;
                     while (Qi.size() && !AwaitingAlpha) {
                         Rho = Qi.front();
