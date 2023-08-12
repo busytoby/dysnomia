@@ -96,7 +96,7 @@ namespace Dysnomia {
                 Mu_Mutex.lock();
                 if (Rong.size() > queue_max) sleep_time /= 2;
                 else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
-                if (sleep_time < 5) sleep_time = 5;
+                if (sleep_time < 20) sleep_time = 20;
                 while (Rong.size() > 0) {
                     Beta = Rong.front();
                     if (Beta->Tau->Identity != 0) {
@@ -290,13 +290,13 @@ namespace Dysnomia {
                 if (!AwaitingAlpha) {
                     Mu_Mutex.unlock();
                     while (!AwaitingAlpha)
-                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
                     Mu_Mutex.lock();
                 }
 
                 if (Delta.size() > queue_max) sleep_time /= 2;
                 else if (Delta.size() == 0 && sleep_time < 2000) sleep_time *= 2;
-                if (sleep_time < 5) sleep_time = 5;
+                if (sleep_time < 20) sleep_time = 20;
                 if (Delta.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -442,25 +442,25 @@ namespace Dysnomia {
                 if (GammaOneThread) {
                     Mu_Mutex.unlock();
                     while (!GammaOneReady || (GammaOneReady && AwaitingAlpha))
-                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
                     Mu_Mutex.lock();
                 }
                 else if (GammaTwoThread) {
                     Mu_Mutex.unlock();
                     while (!GammaTwoReady || (GammaTwoReady && AwaitingAlpha))
-                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
                     Mu_Mutex.lock();
                 }
                 else {
                     Mu_Mutex.unlock();
                     while (!GammaThreeReady || (GammaThreeReady && AwaitingAlpha))
-                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 10));
+                        std::this_thread::sleep_for(chrono::milliseconds(rand() % 40));
                     Mu_Mutex.lock();
                 }
 
                 if (Delta.size() > queue_max) sleep_time /= 2;
                 else if (Delta.size() == 0 && sleep_time < 1000) sleep_time *= 2;
-                if (sleep_time < 5) sleep_time = 5;
+                if (sleep_time < 20) sleep_time = 20;
                 if (Delta.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -649,7 +649,7 @@ namespace Dysnomia {
                 Mu_Mutex.lock();
                 if (Omicron.size() > queue_max) sleep_time /= 2;
                 else if (Omicron.size() == 0 && sleep_time < 4000) sleep_time *= 2;
-                if (sleep_time < 5) sleep_time = 5;
+                if (sleep_time < 20) sleep_time = 20;
                 if (Omicron.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -723,7 +723,7 @@ namespace Dysnomia {
                     sleep_time *= 2;
                 else if (Delta.size() < queue_max && Omicron.size() == 0)
                     sleep_time /= 2;
-                if (sleep_time < 5) sleep_time = 5;
+                if (sleep_time < 20) sleep_time = 20;
 
                 Beta = Mu->Pi(Phi);
                 Iota = Mu->Pi(Beta->Eta);
