@@ -1,6 +1,7 @@
 ﻿#include <Windows.h>
 #include <time.h>
 #include "007_錨.h"
+#include "Domain/Diatom.h"
 
 using namespace Dysnomia;
 using namespace std;
@@ -17,6 +18,9 @@ int main()
     錨* Mu = new 錨();
 
     for (;;) {
-        锚* Beta = Mu->Pi();
+        for (int i = 1; i < 15; i++) {
+            Diatom* Beta = Mu->Pi(i);
+            delete Beta;
+        }
     }
 }

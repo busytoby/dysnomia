@@ -6,6 +6,7 @@
 #include <thread>
 #include <mutex>
 #include "006_锚.h"
+#include "Domain/Diatom.h"
 
 using namespace std;
 
@@ -46,43 +47,13 @@ namespace Dysnomia {
                 th.detach();
         }
 
-        锚* Pi() {
-            ë* Beta;
-            ë* Iota;
-            ë* Omicron;
-            ë* Lambda;
-
-            Faung* Xi;
-
-            while (Qing.size() < 4) {
+        Diatom* Pi(int Number) {
+            if (Number > 14) throw 3;
+            while (Qing.size() < Number) {
                 std::this_thread::sleep_for(chrono::milliseconds(100));
             }
 
-            Beta = Qing.front(); Qing.pop_front();
-            Iota = Qing.front(); Qing.pop_front();
-            Omicron = Qing.front(); Qing.pop_front();
-            Lambda = Qing.front(); Qing.pop_front();
-
-            Xi = new Faung(Beta->Mu->Mu->Psi->Upsilon, Lambda->Sigma->Upsilon);
-            delete Xi;
-            Xi = new Faung(Omicron->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
-            delete Xi;
-            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Iota->Mu->Mu->Psi->Upsilon);
-            delete Xi;
-            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Omicron->Sigma->Upsilon);
-            delete Xi;
-            Xi = new Faung(Omicron->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
-            delete Xi;
-            Xi = new Faung(Lambda->Mu->Mu->Mu->Upsilon, Beta->Sigma->Upsilon);
-            delete Xi;
-             
-            delete Omicron;
-            delete Iota;
-            // Beta->Mu->Mu->Mu->Upsilon & Lambda->Mu->Mu->Psi->Upsilon Have Lost Pairings Here
-            delete Beta;
-            delete Lambda;
-
-            return nullptr;
+            return new Diatom(Qing, Number);
         }
 
         ~錨() {
@@ -147,14 +118,14 @@ namespace Dysnomia {
                     wcout << L"簻";
                     if (local_count % 55 == 0) wcout << L"\n";
 
-                    if (Qing.size() >= 4) {
+                    if (Qing.size() >= 15) {
                         local_count = ++counter;
                         SetConsoleTextAttribute(hConsole, 9);
                         wcout << L"錨";
                         if (local_count % 55 == 0) wcout << L"\n";
                     }
 
-                    while (Qing.size() >= 4)
+                    while (Qing.size() >= 15)
                         std::this_thread::sleep_for(chrono::milliseconds(100));
                 }
                 Mu_Mutex.unlock();
