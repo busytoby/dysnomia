@@ -71,14 +71,15 @@ namespace Dysnomia {
             delete Xi;
             Xi = new Faung(Lambda->Mu->Mu->Mu->Upsilon, Beta->Sigma->Upsilon);
             delete Xi;
-            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
+            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Lambda->Mu->Mu->Psi->Upsilon);
             delete Xi;
-            Xi = new Faung(Iota->Mu->Mu->Mu->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
+            Xi = new Faung(Beta->Mu->Mu->Mu->Upsilon, Omicron->Mu->Mu->Psi->Upsilon);
             delete Xi;
 
-            delete Beta;
-            delete Iota;
             delete Omicron;
+            delete Iota;
+            // Beta->Sigma->Upsilon & Lambda->Mu->Mu->Psi->Upsilon Have Lost Pairings Here
+            delete Beta;
             delete Lambda;
 
             return nullptr;
@@ -154,7 +155,7 @@ namespace Dysnomia {
                     }
 
                     while (Qing.size() >= 4)
-                        std::this_thread::sleep_for(chrono::milliseconds(1000));
+                        std::this_thread::sleep_for(chrono::milliseconds(100));
                 }
                 Mu_Mutex.unlock();
 
@@ -353,15 +354,13 @@ namespace Dysnomia {
                         }
                     }
                     AwaitingAlpha = false;
+
+                    local_count = ++counter;
+                    SetConsoleTextAttribute(hConsole, 14);
+                    wcout << L"簬";
+                    if (local_count % 55 == 0) wcout << L"\n";
                     Mu_Mutex.unlock();
                 }
-
-                Mu_Mutex.lock();
-                local_count = ++counter;
-                SetConsoleTextAttribute(hConsole, 14);
-                wcout << L"簬";
-                if (local_count % 55 == 0) wcout << L"\n";
-                Mu_Mutex.unlock();
 
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
             }
@@ -377,7 +376,7 @@ namespace Dysnomia {
             Tod* Upsilon;
             Zuo* Tau;
 
-            short queue_max = 50;
+            short queue_max = 40;
             int sleep_time = 100;
 
             int local_count;
@@ -390,7 +389,7 @@ namespace Dysnomia {
                 else {
                     Psi = new ည();
                     if (Qi.size() > queue_max) sleep_time /= 2;
-                    else if (Qi.size() <= 5 && sleep_time < 4000) sleep_time *= 2;
+                    else if (Qi.size() <= 20 && sleep_time < 4000) sleep_time *= 2;
                     if (sleep_time < 20) sleep_time = 20;
                     while (Qi.size() && !AwaitingAlpha) {
                         Rho = Qi.front();
@@ -417,13 +416,13 @@ namespace Dysnomia {
                         if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
                         if (Tau->Gamma == 1) delete Tau; else Tau->Gamma--;
                         Qi.pop_front();
+
+                        local_count = ++counter;
+                        SetConsoleTextAttribute(hConsole, 13);
+                        wcout << L"篱";
+                        if (local_count % 55 == 0) wcout << L"\n";
                     }
                     if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
-
-                    local_count = ++counter;
-                    SetConsoleTextAttribute(hConsole, 13);
-                    wcout << L"篱";
-                    if (local_count % 55 == 0) wcout << L"\n";
 
                     Mu_Mutex.unlock();
                 }
