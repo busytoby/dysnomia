@@ -504,11 +504,11 @@ void Gamma() {
                 if (Beta->Identity == 0) {
                     Faung* Iota;
                     if(GammaOneThread)
-                        Iota = new Faung(Beta, Sigma->Mu->Theta->Mu->Rod->Secret, Upsilon->Signal, Sigma->Mu->Mu->Psi->Rod->Channel, Sigma->Tau->Identity);
+                        Iota = new Faung(Beta, Sigma->Mu->Theta->Rho->Secret, Upsilon->Signal, Sigma->Mu->Mu->Rho->Channel, Sigma->Tau->Identity);
                     else if (GammaTwoThread)
                         Iota = new Faung(Beta, Upsilon->Secret, Sigma->Tau->Signal, Upsilon->Channel, Upsilon->Identity);
                     else
-                        Iota = new Faung(Beta, Sigma->Tau->Secret, Sigma->Psi->Theta->Psi->Rod->Signal, Sigma->Tau->Channel, Sigma->Mu->Mu->Mu->Rod->Identity);
+                        Iota = new Faung(Beta, Sigma->Tau->Secret, Sigma->Psi->Theta->Rho->Signal, Sigma->Tau->Channel, Sigma->Mu->Mu->Rho->Identity);
                     Iota->Cone->Gamma++;
                     Delta.push_back(Iota->Cone);
                     delete Iota;
