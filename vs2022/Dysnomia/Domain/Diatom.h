@@ -30,13 +30,13 @@ namespace Dysnomia {
 
             for (int i = 0, j = 1; i < Number; i++, j++) {
                 if (j == Number) j = 0;
-                if (!std::get<1>(Omicron[j])) {
-                    Iota = new Faung(Mu[i]->Mu->Mu->Mu->Upsilon, Mu[j]->Mu->Mu->Psi->Upsilon);
-                    std::get<1>(Omicron[j]) = true;
-                }
-                else {
+                if ((j % 2 || j == 0) && !std::get<2>(Omicron[j])) {
                     Iota = new Faung(Mu[i]->Mu->Mu->Mu->Upsilon, Mu[j]->Sigma->Upsilon);
                     std::get<2>(Omicron[j]) = true;
+                }
+                else {
+                    Iota = new Faung(Mu[i]->Mu->Mu->Mu->Upsilon, Mu[j]->Mu->Mu->Psi->Upsilon);
+                    std::get<1>(Omicron[j]) = true;
                 }
                 std::get<0>(Omicron[i]) = true;
                 delete Iota;
