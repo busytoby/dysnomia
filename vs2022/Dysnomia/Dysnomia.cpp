@@ -556,9 +556,9 @@ void Gamma() {
                     if (GammaOneThread)
                         Upsilon = Mu->Mu->Mu->Psi->Pi();
                     else if (GammaTwoThread)
-                        Upsilon = Sigma->Psi->Pi();
+                        Upsilon = Sigma->Mu->Pi();
                     else
-                        Upsilon = Mu->Mu->Mu->Psi->Pi();
+                        Upsilon = Sigma->Psi->Pi();
                     Upsilon->Gamma++;
                     Tau = nullptr;
                 }
