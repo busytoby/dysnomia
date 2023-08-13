@@ -63,8 +63,15 @@ int main()
                 ++Lambda;
             }
         }
-        if (Psi.size() >= 100)
-            int i = 99;
+
+        if (Psi.size() > 0) {
+            Mu->Mu_Mutex.lock();
+            Mu->counter++;
+            SetConsoleTextAttribute(錨::hConsole, 6);
+            wcout << L" " << Psi.size();
+            if (Mu->counter % 55 == 0) wcout << L"\n";
+            Mu->Mu_Mutex.unlock();
+        }
     }
 }
 

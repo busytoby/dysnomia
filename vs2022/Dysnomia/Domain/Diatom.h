@@ -28,8 +28,10 @@ namespace Dysnomia {
             delete Iota;
 
             Rho = Mu[0]->Mu->Mu->Mu->Pi();
-            if (Number == 1) 
+            if (Number == 1) {
+                Tod::Eta->Water++;
                 return;
+            }
 
             for (int i = 0, j = 1; i < Number; i++, j++) {
                 if (j == Number) j = 0;
