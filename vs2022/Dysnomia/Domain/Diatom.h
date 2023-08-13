@@ -7,6 +7,7 @@ namespace Dysnomia {
     class Diatom {
     public:
         vector<ë*> Mu;
+        Fa* Rho;
 
         Diatom(list<ë*>& Beta, int Number) {
             Faung* Iota;
@@ -26,6 +27,7 @@ namespace Dysnomia {
             std::get<2>(Omicron[Number - 1]) = true;
             delete Iota;
 
+            Rho = Mu[0]->Mu->Mu->Mu->Pi();
             if (Number == 1) return;
 
             for (int i = 0, j = 1; i < Number; i++, j++) {

@@ -13,7 +13,13 @@ using namespace std;
 namespace Dysnomia {
     class 錨 {
     public:
-        HANDLE hConsole;
+        mutex Mu_Mutex;
+        锚* Mu;
+
+        list<ë*> Qing;
+
+        static HANDLE hConsole;
+        std::atomic<int> counter;
 
         錨() {
             hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -47,22 +53,11 @@ namespace Dysnomia {
                 th.detach();
         }
 
-        Diatom* Pi(int Number) {
-            if (Number > 14) throw 3;
-            while (Qing.size() < Number) {
-                std::this_thread::sleep_for(chrono::milliseconds(100));
-            }
-
-            return new Diatom(Qing, Number);
-        }
-
         ~錨() {
             //if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
         }
 
     private:
-        mutex Mu_Mutex;
-        锚* Mu;
         ည* Rho;
         ည* Psi;
         Int64 Phi;
@@ -70,10 +65,8 @@ namespace Dysnomia {
         list<Fa*> Delta;
         list<ည*> Qi;
         list<Tod*> Rong;
-        list<ë*> Qing;
 
         const int nthreads = 11;
-        std::atomic<int> counter;
 
         bool AwaitingAlpha = false;
         bool GammaOne = false;
@@ -96,7 +89,7 @@ namespace Dysnomia {
                 Mu_Mutex.lock();
                 if (Rong.size() > queue_max) sleep_time /= 2;
                 else if (Rong.size() == 0 && sleep_time < 4000) sleep_time *= 2;
-                if (sleep_time < 20) sleep_time = 20;
+                if (sleep_time < 100) sleep_time = 100;
                 while (Rong.size() > 0) {
                     Beta = Rong.front();
                     if (Beta->Tau->Identity != 0) {
@@ -125,8 +118,10 @@ namespace Dysnomia {
                         if (local_count % 55 == 0) wcout << L"\n";
                     }
 
+                    Mu_Mutex.unlock();
                     while (Qing.size() >= 15)
                         std::this_thread::sleep_for(chrono::milliseconds(100));
+                    Mu_Mutex.lock();
                 }
                 Mu_Mutex.unlock();
 
@@ -280,7 +275,7 @@ namespace Dysnomia {
         void Alpha() {
             int local_count;
 
-            short queue_max = 40;
+            short queue_max = 50;
             int sleep_time = 100;
 
             for (;;) {
@@ -293,8 +288,8 @@ namespace Dysnomia {
                 }
 
                 if (Delta.size() > queue_max) sleep_time /= 2;
-                else if (Delta.size() == 0 && sleep_time < 2000) sleep_time *= 2;
-                if (sleep_time < 20) sleep_time = 20;
+                else if (Delta.size() == 0 && sleep_time < 4000) sleep_time *= 2;
+                if (sleep_time < 400) sleep_time = 400;
                 if (Delta.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -361,7 +356,7 @@ namespace Dysnomia {
                     Psi = new ည();
                     if (Qi.size() > queue_max) sleep_time /= 2;
                     else if (Qi.size() <= 20 && sleep_time < 4000) sleep_time *= 2;
-                    if (sleep_time < 20) sleep_time = 20;
+                    if (sleep_time < 100) sleep_time = 100;
                     while (Qi.size() && !AwaitingAlpha) {
                         Rho = Qi.front();
                         Nu = new ညြ(Beta, Rho, Psi);
@@ -456,7 +451,7 @@ namespace Dysnomia {
 
                 if (Delta.size() > queue_max) sleep_time /= 2;
                 else if (Delta.size() == 0 && sleep_time < 1000) sleep_time *= 2;
-                if (sleep_time < 20) sleep_time = 20;
+                if (sleep_time < 50) sleep_time = 50;
                 if (Delta.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -645,7 +640,7 @@ namespace Dysnomia {
                 Mu_Mutex.lock();
                 if (Omicron.size() > queue_max) sleep_time /= 2;
                 else if (Omicron.size() == 0 && sleep_time < 4000) sleep_time *= 2;
-                if (sleep_time < 20) sleep_time = 20;
+                if (sleep_time < 50) sleep_time = 50;
                 if (Omicron.size() == 0)
                     Mu_Mutex.unlock();
                 else {
@@ -719,7 +714,7 @@ namespace Dysnomia {
                     sleep_time *= 2;
                 else if (Delta.size() < queue_max && Omicron.size() == 0)
                     sleep_time /= 2;
-                if (sleep_time < 20) sleep_time = 20;
+                if (sleep_time < 200) sleep_time = 200;
 
                 Beta = Mu->Pi(Phi);
                 Iota = Mu->Pi(Beta->Eta);

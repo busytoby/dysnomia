@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "002_ညြ.h"
+#include "Domain/Atmos.h"
 
 using namespace std;
 
@@ -12,10 +13,13 @@ namespace Dysnomia {
         Fa* Tau;
         int Gamma = 1;
 
+        static Atmos* Eta;
+
         Tod() {
             if (Math::POETRY > 6)
                 wcout << L"Tod ";
             Mu = new ညြ(false);
+            if (Eta == nullptr) Eta = new Atmos(Mu->Psi);
             Psi = new ညြ(true);
             Upsilon = Mu->Pi();
             Tau = Psi->Pi();

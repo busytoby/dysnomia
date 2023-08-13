@@ -142,6 +142,7 @@
     <ClInclude Include="005_ë.h" />
     <ClInclude Include="006_锚.h" />
     <ClInclude Include="007_錨.h" />
+    <ClInclude Include="Domain\Atmos.h" />
     <ClInclude Include="Domain\Diatom.h" />
     <ClInclude Include="Faung.h" />
     <ClInclude Include="Fa.h" />
