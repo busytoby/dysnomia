@@ -102,7 +102,6 @@ namespace Dysnomia {
                 Tod::Eta->Water += 5;
                 return true;
             }
-            int i = 99;
             return false;
         }
 

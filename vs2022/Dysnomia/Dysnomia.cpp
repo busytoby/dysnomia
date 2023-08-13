@@ -55,6 +55,12 @@ int main()
                     delete* ((*Xi).second);
                     Tod::Eta->Rho.erase((*Xi).second);
                     Xi = Psi.erase(Xi);
+                    Mu->Mu_Mutex.lock();
+                    Mu->counter++;
+                    SetConsoleTextAttribute(錨::hConsole, 4);
+                    wcout << L"义";
+                    if (Mu->counter % 55 == 0) wcout << L"\n";
+                    Mu->Mu_Mutex.unlock();
                 } else
                     Xi++;
             }
