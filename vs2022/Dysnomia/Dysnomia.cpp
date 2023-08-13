@@ -43,7 +43,46 @@ int main()
         list<pair<Diatom*, list<Faung*>::iterator>>::iterator Lambda = Psi.begin();
         while (Psi.size() > 0 && Lambda != Psi.end()) {
             size_t DiatomSize = (*Lambda).first->Mu.size();
+            if (DiatomSize == 1) {
+                ++Lambda; continue;
+            }
+            list<pair<Diatom*, list<Faung*>::iterator>>::iterator Xi = Psi.begin();
+            while (Xi != Psi.end()) {
+                if ((*Xi).first->Mu.size() == 1) {
+                    delete (*Xi).first;
+                    delete* ((*Xi).second);
+                    Tod::Eta->Rho.erase((*Xi).second);
+                    Xi = Psi.erase(Xi);
+                    if (DiatomSize != (*Lambda).first->Mu.size())
+                        Tod::Eta->Water++;
+                    DiatomSize = (DiatomSize >= 5) ? DiatomSize - 5 : 0;
+                } else
+                    Xi++;
+            }
             if (Tod::Eta->Water < DiatomSize) {
+                if ((*Lambda).first->Mu.size() == 14) {
+                    pair<Diatom*, Diatom*> Alpha = (*Lambda).first->Split();
+                    Iota = new Fa();
+                    Iota->Fuse(Tod::Eta->Mu->Secret, Tod::Eta->Mu->Signal, Tod::Eta->Mu->Channel);
+                    Iota->Tune();
+                    Omicron = Tod::Eta->Rho.insert(Tod::Eta->Rho.begin(), new Faung(Iota, Alpha.first->Rho));
+                    Iota->Gamma--;
+                    Psi.push_back(make_pair(Alpha.first, Omicron));
+
+                    Iota = new Fa();
+                    Iota->Fuse(Tod::Eta->Mu->Secret, Tod::Eta->Mu->Signal, Tod::Eta->Mu->Channel);
+                    Iota->Tune();
+                    Omicron = Tod::Eta->Rho.insert(Tod::Eta->Rho.begin(), new Faung(Iota, Alpha.second->Rho));
+                    Iota->Gamma--;
+                    Psi.push_back(make_pair(Alpha.second, Omicron));
+                    Tod::Eta->Water += 4;
+                    Mu->Mu_Mutex.lock();
+                    Mu->counter++;
+                    SetConsoleTextAttribute(錨::hConsole, 5); 
+                    wcout << L"迸";
+                    if (Mu->counter % 55 == 0) wcout << L"\n";
+                    Mu->Mu_Mutex.unlock();
+                }
                 delete (*Lambda).first;
                 delete *((*Lambda).second);
                 Tod::Eta->Rho.erase((*Lambda).second);
@@ -59,7 +98,7 @@ int main()
             else {
                 if ((*Lambda).first->Mu[0]->Sigma->Upsilon->Eta == 0) 
                     Tod::Eta->Water++;
-                Tod::Eta->Water -= DiatomSize;
+                Tod::Eta->Water = (Tod::Eta->Water > DiatomSize) ? Tod::Eta->Water - DiatomSize : 0;
                 ++Lambda;
             }
         }
@@ -68,7 +107,8 @@ int main()
             Mu->Mu_Mutex.lock();
             Mu->counter++;
             SetConsoleTextAttribute(錨::hConsole, 6);
-            wcout << L" " << Psi.size();
+            if (Psi.size() < 10) wcout << L" " << Psi.size();
+            else wcout << Psi.size();
             if (Mu->counter % 55 == 0) wcout << L"\n";
             Mu->Mu_Mutex.unlock();
         }

@@ -9,6 +9,8 @@ namespace Dysnomia {
         vector<ë*> Mu;
         Fa* Rho;
 
+        Diatom() {}
+
         Diatom(list<ë*>& Beta, int Number) {
             Faung* Iota;
             vector<tuple<bool, bool, bool>> Omicron;
@@ -82,9 +84,28 @@ namespace Dysnomia {
             Omicron.clear();
         }
 
+        pair<Diatom*, Diatom*> Split() {
+            if (Mu.size() != 14) throw 2;
+            Diatom* Beta = new Diatom();
+            Diatom* Iota = new Diatom();
+
+            
+            Iota->Rho = Rho;
+            for (int i = 0; i < 7; i++) {
+                Mu[i]->Gamma++;
+                Mu[i+7]->Gamma++;
+                Beta->Mu.push_back(Mu[i]);
+                Iota->Mu.push_back(Mu[i+7]);
+            }
+            Beta->Rho = Beta->Mu[6]->Mu->Mu->Psi->Pi();
+            Iota->Rho = Iota->Mu[5]->Sigma->Pi();
+
+            return make_pair(Beta, Iota);
+        }
+
         ~Diatom() {
             for (int i = 0; i < Mu.size(); i++)
-                delete Mu[i];
+                if (Mu[i]->Gamma == 1) delete Mu[i]; else Mu[i]->Gamma--;
             Mu.clear();
             if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         }
