@@ -68,6 +68,7 @@ namespace Dysnomia {
             for (int i = 0; i < Mu.size(); i++)
                 delete Mu[i];
             Mu.clear();
+            if (Rho->Gamma == 1) delete Rho; else Rho->Gamma--;
         }
     };
 }

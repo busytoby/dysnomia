@@ -25,11 +25,12 @@ int main()
 
     for (;;) {
         Diatom* Beta = Pi((rand() % 14) + 1);
-               
+
         Fa* Iota = new Fa();
         Iota->Fuse(Tod::Eta->Mu->Secret, Tod::Eta->Mu->Signal, Tod::Eta->Mu->Channel);
         Iota->Tune();
         list<Faung*>::iterator Omicron = Tod::Eta->Rho.insert(Tod::Eta->Rho.begin(), new Faung(Iota, Beta->Rho));
+        Iota->Gamma--;
         Psi.push_back(make_pair(Beta, Omicron));
         
         Mu->Mu_Mutex.lock();
@@ -44,6 +45,7 @@ int main()
             size_t DiatomSize = (*Lambda).first->Mu.size();
             if (Tod::Eta->Water < DiatomSize) {
                 delete (*Lambda).first;
+                delete *((*Lambda).second);
                 Tod::Eta->Rho.erase((*Lambda).second);
                 Tod::Eta->Water += DiatomSize;
                 Lambda = Psi.erase(Lambda);
