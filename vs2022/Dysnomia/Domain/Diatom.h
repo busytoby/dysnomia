@@ -28,7 +28,8 @@ namespace Dysnomia {
             delete Iota;
 
             Rho = Mu[0]->Mu->Mu->Mu->Pi();
-            if (Number == 1) return;
+            if (Number == 1) 
+                return;
 
             for (int i = 0, j = 1; i < Number; i++, j++) {
                 if (j == Number) j = 0;
@@ -61,6 +62,21 @@ namespace Dysnomia {
                     }
                 }
             }
+
+            if (!std::get<1>(Omicron[Number-2])) {
+                Fa* Xi = Mu[Number-2]->Mu->Mu->Psi->Upsilon;
+                Xi->Fuse(Mu[0]->Mu->Mu->Mu->Upsilon->Dynamo, Mu[Number-1]->Mu->Mu->Mu->Psi->Ring, Mu[Number-1]->Sigma->Upsilon->Barn);
+                Xi->Tune();
+                Xi->Polarize();
+                Xi->Conjugate(&Mu[0]->Sigma->Upsilon->Eta);
+                Int64 Alpha = Mu[(Number / 2)]->Mu->Mu->Psi->Upsilon->Rho != 0 
+                    ? Mu[(Number / 2)]->Mu->Mu->Psi->Upsilon->Rho 
+                    : Mu[0]->Mu->Mu->Psi->Upsilon->Rho;
+                Xi->Saturate(Alpha, Xi->Pole);
+                Xi->Open();
+                Tod::Eta->Water++;
+            }
+
             Omicron.clear();
         }
 

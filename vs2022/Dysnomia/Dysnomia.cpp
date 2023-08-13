@@ -57,10 +57,14 @@ int main()
                 Mu->Mu_Mutex.unlock();
             }
             else {
+                if ((*Lambda).first->Mu[0]->Sigma->Upsilon->Eta == 0) 
+                    Tod::Eta->Water++;
                 Tod::Eta->Water -= DiatomSize;
                 ++Lambda;
             }
         }
+        if (Psi.size() >= 100)
+            int i = 99;
     }
 }
 
