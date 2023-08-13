@@ -49,14 +49,12 @@ int main()
             list<pair<Diatom*, list<Faung*>::iterator>>::iterator Xi = Psi.begin();
             while (Xi != Psi.end()) {
                 if ((*Xi).first->Mu.size() == 1) {
-                    // TODO: Physics of eating
+                    if (!(*Lambda).first->Eat((*Xi).first)) 
+                        break;;
                     delete (*Xi).first;
                     delete* ((*Xi).second);
                     Tod::Eta->Rho.erase((*Xi).second);
                     Xi = Psi.erase(Xi);
-                    if (DiatomSize != (*Lambda).first->Mu.size())
-                        Tod::Eta->Water++;
-                    DiatomSize = (DiatomSize >= 5) ? DiatomSize - 5 : 0;
                 } else
                     Xi++;
             }

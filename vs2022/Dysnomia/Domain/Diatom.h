@@ -9,11 +9,12 @@ namespace Dysnomia {
         vector<ë*> Mu;
         Fa* Rho;
 
+        vector<tuple<bool, bool, bool>> Omicron;
+
         Diatom() {}
 
         Diatom(list<ë*>& Beta, int Number) {
             Faung* Iota;
-            vector<tuple<bool, bool, bool>> Omicron;
             list<ë*>::iterator Lambda;
 
             if (Beta.size() < Number) throw 1;
@@ -67,6 +68,7 @@ namespace Dysnomia {
                 }
             }
 
+            /*
             if (!std::get<1>(Omicron[Number-2])) {
                 Fa* Xi = Mu[Number-2]->Mu->Mu->Psi->Upsilon;
                 Xi->Fuse(Mu[0]->Mu->Mu->Mu->Upsilon->Dynamo, Mu[Number-1]->Mu->Mu->Mu->Psi->Ring, Mu[Number-1]->Sigma->Upsilon->Barn);
@@ -80,12 +82,32 @@ namespace Dysnomia {
                 Xi->Open();
                 Tod::Eta->Water++;
             }
+            */
 
-            Omicron.clear();
+            //Omicron.clear();
+        }
+
+        bool Eat(Diatom* Beta) {
+            int Omega = Mu.size() - 2;
+            if (Beta->Mu.size() != 1) throw 4;
+            if (Mu[Omega]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
+                Beta->Mu[0]->Gamma++;               
+                ë* Iota = new ë(Beta->Mu[0]->Mu, true);
+                Mu.push_back(Iota);
+                Mu.push_back(Beta->Mu[0]);
+                Faung* Omicron = new Faung(Mu[Omega]->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
+                delete Omicron;
+                Omicron = new Faung(Iota->Mu->Mu->Mu->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
+                delete Omicron;
+                Tod::Eta->Water += 5;
+                return true;
+            }
+            int i = 99;
+            return false;
         }
 
         pair<Diatom*, Diatom*> Split() {
-            if (Mu.size() != 14) throw 2;
+            if (Mu.size() != 14) throw 3;
             Diatom* Beta = new Diatom();
             Diatom* Iota = new Diatom();
 
