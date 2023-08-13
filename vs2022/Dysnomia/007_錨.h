@@ -106,10 +106,6 @@ namespace Dysnomia {
                     Qing.push_back(Omicron);
                     //delete Lambda;
                     Rong.pop_front();
-                    local_count = ++counter;
-                    SetConsoleTextAttribute(hConsole, 15);
-                    wcout << L"簻";
-                    if (local_count % 55 == 0) wcout << L"\n";
 
                     if (Qing.size() >= 15) {
                         local_count = ++counter;
@@ -123,6 +119,12 @@ namespace Dysnomia {
                         std::this_thread::sleep_for(chrono::milliseconds(100));
                     Mu_Mutex.lock();
                 }
+
+                local_count = ++counter;
+                SetConsoleTextAttribute(hConsole, 15);
+                wcout << L"簻";
+                if (local_count % 55 == 0) wcout << L"\n";
+
                 Mu_Mutex.unlock();
 
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
