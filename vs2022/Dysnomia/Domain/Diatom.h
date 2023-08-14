@@ -59,8 +59,8 @@ namespace Dysnomia {
             if (Beta->Mu.size() != 1) throw 4;
             if (Mu[1]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
                 Beta->Mu[0]->Gamma++;               
-                Mu.insert(std::next(Mu.begin(), 2), Beta->Mu[0]);
-                Faung* Omicron = new Faung(Mu[1]->Mu->Mu->Psi->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
+                Mu.insert(std::next(Mu.begin(), 1), Beta->Mu[0]);
+                Faung* Omicron = new Faung(Beta->Mu[0]->Mu->Mu->Mu->Upsilon, Mu[1]->Mu->Mu->Psi->Upsilon);
                 delete Omicron;
                 Digesting = true;
                 return true;
