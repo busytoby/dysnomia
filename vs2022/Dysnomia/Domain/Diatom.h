@@ -38,7 +38,7 @@ namespace Dysnomia {
                 return;
             }
 
-            for (int i = 0, j = 1; i < Number; i++, j++) {
+            for (int i = 0, j = Number - 1; i < Number; i++, j--) {
                 if (j == Number) j = 0;
                 if ((j % 2 || j == 0) && !std::get<2>(Omicron[j])) {
                     Iota = new Faung(Mu[i]->Mu->Mu->Mu->Upsilon, Mu[j]->Sigma->Upsilon);
@@ -52,40 +52,6 @@ namespace Dysnomia {
                 delete Iota;
             }
 
-            for (int i = Number-1, j = rand() % Number; i > 0; i--, j = rand() % Number) {
-                int tries = 0;
-                if (!std::get<1>(Omicron[i])) {
-                    while (std::get<2>(Omicron[j]) && tries < Number) {
-                        j = rand() % Number;
-                        tries++;
-                    }
-                    if (std::get<2>(Omicron[j]))
-                        for (j = Number - 1; j > 0 && std::get<2>(Omicron[j]); j--);
-                    if (j > 0) {
-                        Iota = new Faung(Mu[i]->Mu->Mu->Psi->Upsilon, Mu[j]->Sigma->Upsilon);
-                        std::get<1>(Omicron[i]) = true;
-                        std::get<2>(Omicron[j]) = true;
-                        delete Iota;
-                    }
-                }
-            }
-
-            /*
-            if (!std::get<1>(Omicron[Number-2])) {
-                Fa* Xi = Mu[Number-2]->Mu->Mu->Psi->Upsilon;
-                Xi->Fuse(Mu[0]->Mu->Mu->Mu->Upsilon->Dynamo, Mu[Number-1]->Mu->Mu->Mu->Psi->Ring, Mu[Number-1]->Sigma->Upsilon->Barn);
-                Xi->Tune();
-                Xi->Polarize();
-                Xi->Conjugate(&Mu[0]->Sigma->Upsilon->Eta);
-                Int64 Alpha = Mu[(Number / 2)]->Mu->Mu->Psi->Upsilon->Rho != 0 
-                    ? Mu[(Number / 2)]->Mu->Mu->Psi->Upsilon->Rho 
-                    : Mu[0]->Mu->Mu->Psi->Upsilon->Rho;
-                Xi->Saturate(Alpha, Xi->Pole);
-                Xi->Open();
-                Tod::Eta->Water++;
-            }
-            */
-
             //Omicron.clear();
         }
 
@@ -93,12 +59,8 @@ namespace Dysnomia {
             if (Beta->Mu.size() != 1) throw 4;
             if (Mu[1]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
                 Beta->Mu[0]->Gamma++;               
-                ë* Iota = new ë(Beta->Mu[0]->Mu, true);
-                Mu.push_back(Iota);
                 Mu.push_back(Beta->Mu[0]);
-                Faung* Omicron = new Faung(Mu[1]->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
-                delete Omicron;
-                Omicron = new Faung(Iota->Mu->Mu->Mu->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
+                Faung* Omicron = new Faung(Mu[1]->Mu->Mu->Psi->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
                 delete Omicron;
                 Digesting = true;
                 return true;
