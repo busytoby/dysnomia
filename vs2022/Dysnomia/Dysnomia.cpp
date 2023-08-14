@@ -103,7 +103,7 @@ int main()
             else {
                 if ((*Lambda).first->Mu[0]->Sigma->Upsilon->Eta == 0) 
                     Tod::Eta->Water++;
-                Tod::Eta->Water = (Tod::Eta->Water > DiatomSize) ? Tod::Eta->Water - DiatomSize : 0;
+                Tod::Eta->Water = (Tod::Eta->Water > (DiatomSize/3)) ? Tod::Eta->Water - (DiatomSize/3) : 0;
                 ++Lambda;
             }
         }
