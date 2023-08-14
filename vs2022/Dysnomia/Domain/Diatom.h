@@ -11,6 +11,8 @@ namespace Dysnomia {
 
         vector<tuple<bool, bool, bool>> Omicron;
 
+        bool Digesting = false;
+
         Diatom() {}
 
         Diatom(list<ë*>& Beta, int Number) {
@@ -99,7 +101,7 @@ namespace Dysnomia {
                 delete Omicron;
                 Omicron = new Faung(Iota->Mu->Mu->Mu->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
                 delete Omicron;
-                Tod::Eta->Water += 5;
+                Digesting = true;
                 return true;
             }
             return false;

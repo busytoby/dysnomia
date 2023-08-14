@@ -108,15 +108,16 @@ int main()
             }
         }
 
+        Mu->Mu_Mutex.lock();
+        Mu->counter++;
+        SetConsoleTextAttribute(錨::hConsole, 6);
         if (Psi.size() > 0) {
-            Mu->Mu_Mutex.lock();
-            Mu->counter++;
-            SetConsoleTextAttribute(錨::hConsole, 6);
             if (Psi.size() < 10) wcout << L" " << Psi.size();
             else wcout << Psi.size();
-            if (Mu->counter % 55 == 0) wcout << L"\n";
-            Mu->Mu_Mutex.unlock();
         }
+        else wcout << L"--";
+        if (Mu->counter % 55 == 0) wcout << L"\n";
+        Mu->Mu_Mutex.unlock();
     }
 }
 
