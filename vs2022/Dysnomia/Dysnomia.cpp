@@ -122,10 +122,9 @@ int main()
 }
 
 Diatom* Pi(int Number) {
-    if (Number > 14) throw 3;
-    while (Mu->Qing.size() < Number) {
+    while (Mu->Qing.size() < 14) {
         std::this_thread::sleep_for(chrono::milliseconds(100));
     }
 
-    return new Diatom(Mu->Qing, Number);
+    return new Diatom(Mu->Qing);
 }

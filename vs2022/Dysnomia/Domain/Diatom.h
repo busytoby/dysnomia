@@ -15,16 +15,24 @@ namespace Dysnomia {
 
         Diatom() {}
 
-        Diatom(list<ë*>& Beta, int Number) {
+        Diatom(list<ë*>& Beta) {
             Faung* Iota;
             list<ë*>::iterator Lambda;
 
-            if (Beta.size() < Number) throw 1;
-            if (Number > 14) throw 2;
-            for (int i = 0; i < Number; i++) {
+            short Number = 0;
+            if (Beta.size() < 14) throw 1;
+            Int64 Base = 0;
+            Int64 Secret = 0;
+            for (int i = 0; i < 14; i++) {
+                ë* Alpha = Beta.front();
+                if (Base == 0) Base = Alpha->Mu->Mu->Psi->Upsilon->Base;
+                else if (Base != Alpha->Mu->Mu->Psi->Upsilon->Base) break;
+                if (Secret == 0) Secret = Alpha->Mu->Mu->Psi->Upsilon->Secret;
+                else if (Secret != Alpha->Mu->Mu->Psi->Upsilon->Secret) break;
                 Mu.push_back(Beta.front());
                 Beta.pop_front();
                 Omicron.push_back(make_tuple(false, false, false));
+                Number++;
             }
 
             Iota = new Faung(Mu[0]->Mu->Mu->Psi->Upsilon, Mu[Number - 1]->Sigma->Upsilon);
