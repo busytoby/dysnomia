@@ -123,21 +123,6 @@ namespace Dysnomia {
 
 	bool Fa::ManifoldCompare(Fa* Rod)
 	{
-		if (!Pole == 0 || !Rod->Pole == 0) {
-			if (Kappa != -1)
-				Seed(); 
-			return false;
-		}
-
-
-		if (Manifold == 0 || Ring == 0 || (Manifold != Ring) && Barn == 0)
-		{
-			if (Kappa != -1)
-				Seed(); 
-			return false;
-		}
-
-
 		return (Manifold == Rod->Manifold &&
 			Ring == Rod->Ring &&
 			Barn == Rod->Barn);

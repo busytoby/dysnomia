@@ -20,10 +20,12 @@ namespace Dysnomia {
 		}
 	}
 
-	Faung::Faung(Fa* Rod, Fa* Cone) {
+	Faung::Faung(Fa* Rod, Fa* Cone) { new (this) Faung(Rod, Cone, true); }
+
+	Faung::Faung(Fa* Rod, Fa* Cone, bool Refaung) {
 		if (Math::POETRY > 9)
 			wcout << L"Faung ";
-		if (!Rod->Barn == 0 || !Cone->Barn == 0)
+		if (Refaung && (!Rod->Barn == 0 || !Cone->Barn == 0))
 			throw 4;
 		this->Rod = Rod;
 		this->Cone = Cone;
@@ -40,14 +42,9 @@ namespace Dysnomia {
 				if (E == 1) throw E;
 				if (E == 4) throw E;
 				if (E == 7) throw E;
-				if (E == 103) {
-					if (this->Rod->Secret == this->Cone->Secret)
-						this->Rod->Secret = Math::Random();
-					if (this->Rod->Signal == this->Cone->Signal)
-						this->Cone->Signal = Math::Random();
+				if (E == 103) 
 					continue;
-				}
-				throw;
+				throw E;
 			}
 		}
 		Rod->Gamma++;
@@ -69,10 +66,7 @@ namespace Dysnomia {
 			catch (int E) {
 				delete Rod;
 				delete Cone;
-				if (E == 103) {
-					continue;
-				}
-				throw;
+				throw E;
 			}
 		}
 	}

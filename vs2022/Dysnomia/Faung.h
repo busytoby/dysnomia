@@ -29,6 +29,7 @@ namespace Dysnomia {
 		};
 		Faung();
 		Faung(Fa*, Fa*);
+		Faung(Fa*, Fa*, bool);
 		Faung(Int64, Int64, Int64, Int64);
 		Faung(Fa*, Int64, Int64, Int64, Int64);
 		void FuseAndOpen(Int64, Int64, Int64, Int64);

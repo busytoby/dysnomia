@@ -72,8 +72,7 @@ namespace Dysnomia {
             if (Mu.size() != 14) throw 3;
             Diatom* Beta = new Diatom();
             Diatom* Iota = new Diatom();
-
-            
+           
             Iota->Rho = Rho;
             for (int i = 0; i < 7; i++) {
                 Mu[i]->Gamma++;
