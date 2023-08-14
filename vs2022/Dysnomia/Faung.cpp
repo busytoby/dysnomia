@@ -42,8 +42,6 @@ namespace Dysnomia {
 				if (E == 1) throw E;
 				if (E == 4) throw E;
 				if (E == 7) throw E;
-				if (E == 103) 
-					continue;
 				throw E;
 			}
 		}
@@ -88,18 +86,12 @@ namespace Dysnomia {
 				Failed = false;
 			}
 			catch (int E) {
-				if (Rod->Signal == Cone->Signal) Rho = Cone->Tau;
-				if (Rod->Manifold == Rod->Barn) Ohm = Eta;
-				if (Rod->Ring == 0 || Rod->Ring == Rod->Barn) Rho = Phi;
-				if (Rho == Ohm) Ohm = Cone->Tau;
-
 				delete Cone;
 				if (E == 1) continue;
 				if (E == 4) continue;
 				if (E == 6) continue;
 				if (E == 7) continue;
-				if (E == 103) continue;
-				throw;
+				throw E;
 			}
 		}
 		Rod->Gamma++;
