@@ -60,7 +60,7 @@ namespace Dysnomia {
             if (Mu[1]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
                 Beta->Mu[0]->Gamma++;               
                 Mu.insert(std::next(Mu.begin(), 1), Beta->Mu[0]);
-                Faung* Omicron = new Faung(Beta->Mu[0]->Mu->Mu->Mu->Upsilon, Mu[1]->Mu->Mu->Psi->Upsilon);
+                Faung* Omicron = new Faung(Beta->Mu[0]->Mu->Mu->Mu->Upsilon, Mu[2]->Mu->Mu->Psi->Upsilon);
                 delete Omicron;
                 Digesting = true;
                 return true;
