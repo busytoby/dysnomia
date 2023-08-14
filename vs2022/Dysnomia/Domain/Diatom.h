@@ -52,7 +52,7 @@ namespace Dysnomia {
                 delete Iota;
             }
 
-            for (int i = 0, j = rand() % Number; i < Number; i++, j = rand() % Number) {
+            for (int i = Number-1, j = rand() % Number; i > 0; i--, j = rand() % Number) {
                 int tries = 0;
                 if (!std::get<1>(Omicron[i])) {
                     while (std::get<2>(Omicron[j]) && tries < Number) {
@@ -90,14 +90,13 @@ namespace Dysnomia {
         }
 
         bool Eat(Diatom* Beta) {
-            int Omega = Mu.size() - 2;
             if (Beta->Mu.size() != 1) throw 4;
-            if (Mu[Omega]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
+            if (Mu[1]->Mu->Mu->Psi->Upsilon->Phi == 0 && Beta->Mu[0]->Mu->Mu->Mu->Upsilon->Coordinate == 0) {
                 Beta->Mu[0]->Gamma++;               
                 ë* Iota = new ë(Beta->Mu[0]->Mu, true);
                 Mu.push_back(Iota);
                 Mu.push_back(Beta->Mu[0]);
-                Faung* Omicron = new Faung(Mu[Omega]->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
+                Faung* Omicron = new Faung(Mu[1]->Mu->Mu->Psi->Upsilon, Iota->Sigma->Upsilon);
                 delete Omicron;
                 Omicron = new Faung(Iota->Mu->Mu->Mu->Upsilon, Beta->Mu[0]->Mu->Mu->Mu->Upsilon);
                 delete Omicron;
