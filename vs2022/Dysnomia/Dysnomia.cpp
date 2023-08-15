@@ -3,6 +3,7 @@
 #include "007_錨.h"
 #include "Domain/Diatom.h"
 #include "Domain/Atmos.h"
+#include "Lib/Window.h"
 
 using namespace Dysnomia;
 using namespace std;
@@ -13,12 +14,18 @@ Atmos* Tod::Eta;
 錨* Mu;
 
 Diatom* Pi(int);
+void ShowWindow1();
 
 int main()
 {
+    HeapSetInformation(NULL, HeapEnableTerminationOnCorruption, NULL, 0);
+
     srand((unsigned int)time(NULL));
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
+
+    thread wnd = thread(ShowWindow1);
+    wnd.detach();
 
     Mu = new 錨();
     list<pair<Diatom*, list<Faung*>::iterator>> Psi;
@@ -127,4 +134,10 @@ Diatom* Pi(int Number) {
     }
 
     return new Diatom(Mu->Qing);
+}
+
+void ShowWindow1() {
+    Window* DW = new Window();
+    DW->Init();
+    DW->Step();    
 }
