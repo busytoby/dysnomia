@@ -10,11 +10,11 @@ using namespace std;
 
 HANDLE 錨::hConsole;
 
-ညြ* Mu;
-ညြ* Rho;
+Tod* Mu;
+
+Atmos* Tod::Eta;
 
 // 2
-//Atmos* Tod::Eta;
 //錨* Mu;
 
 // 2
@@ -26,8 +26,7 @@ int main() {
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Mu = new ညြ(true);
-    Rho = new ညြ(false);
+    Mu = new Tod();
 
     int v = 4;
 }

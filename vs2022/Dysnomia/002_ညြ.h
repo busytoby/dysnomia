@@ -78,7 +78,9 @@ namespace Dysnomia {
 
         Fa* Pi() {
             Fa* Beta = new Fa();
-            if (Eta->Cone->Signal == Mu->Psi->Cone->Secret)
+            if(Eta->Omicron != 0 && Eta->Omega != 0)
+                Beta->Fuse(Eta->Ohm, Eta->Omega, Eta->Omicron);
+            else if (Eta->Cone->Signal == Mu->Psi->Cone->Secret)
                 Beta->Fuse(Mu->Psi->Rod->Foundation, Mu->Psi->Rod->Ring, Theta->Mu->Cone->Manifold);
             else
                 Beta->Fuse(Eta->Rod->Foundation, Eta->Rod->Ring, Theta->Mu->Rod->Manifold);
