@@ -26,6 +26,11 @@ int main() {
     Math::POETRY = 0;
 
     Mu = new Fa();
+    Rho = new Fa();
+    Psi = new Faung(Mu, Rho);
+    Psi->Theta(666);
+    Mu->Torque(Mu->Kappa);
+    Rho->Torque(Rho->Kappa);
 
     int v = 4;
 }
