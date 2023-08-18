@@ -185,7 +185,7 @@ namespace Dysnomia {
 		Theta(Pi > 0 ? Pi : Rod->Signal);
 	}
 
-	void Faung::Omicron() {
+	void Faung::Lambda() {
 		Int64 Upsilon = Cone->Torque(Rod->Eta);
 		Int64 Ohm = Cone->Amplify(Upsilon);
 		Int64 Pi = Cone->Sustain(Ohm);
@@ -202,7 +202,6 @@ namespace Dysnomia {
 	}
 
 	void Faung::Beta(Int64 Iota) {
-		Theta(Iota);
 		Int64 Upsilon = Rod->Torque(Iota);
 		Int64 Ohm = Rod->Amplify(Upsilon);
 		Int64 Pi = Rod->Sustain(Ohm);

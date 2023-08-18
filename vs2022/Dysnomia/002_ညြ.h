@@ -24,6 +24,8 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
+            Mu->Mu->Beta(Eta->Rod->Barn);
+            Mu->Psi->Iota();
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {

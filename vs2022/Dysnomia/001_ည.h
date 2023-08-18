@@ -19,6 +19,7 @@ namespace Dysnomia {
             Rho = new Fa();
             Psi = Pi(true);
             Mu->Theta(Psi->Rod->Barn);
+            Psi->Theta(Mu->Rod->Barn);
             Psi->Beta(Mu->Rod->Barn);
         }
 
@@ -39,11 +40,13 @@ namespace Dysnomia {
                 Psi = new Faung();
 
             if (Lambda) {
+                Psi->Theta(Mu->Rod->Manifold);
                 Psi->Beta(Mu->Rod->Manifold);
                 Mu->Theta(Psi->Rod->Coordinate);
                 Psi->Iota();
             }
             else {
+                Mu->Theta(Psi->Rod->Manifold);
                 Mu->Beta(Psi->Rod->Manifold);
                 Psi->Theta(Mu->Rod->Barn);
             }

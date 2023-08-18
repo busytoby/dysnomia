@@ -10,7 +10,8 @@ using namespace std;
 
 HANDLE 錨::hConsole;
 
-ည* Mu;
+ညြ* Mu;
+ညြ* Rho;
 
 // 2
 //Atmos* Tod::Eta;
@@ -25,7 +26,8 @@ int main() {
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Mu = new ည();
+    Mu = new ညြ(true);
+    Rho = new ညြ(false);
 
     int v = 4;
 }
