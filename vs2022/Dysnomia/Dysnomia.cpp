@@ -32,8 +32,14 @@ int main() {
     Int64 Upsilon = Mu->Torque(666);
     Int64 Ohm = Mu->Amplify(Upsilon);
     Int64 Pi = Mu->Sustain(Ohm);
-    Mu->React(Pi, Rho->Channel);
-    Rho->React(Pi, Mu->Channel);
+    Mu->React(Pi, Rho->Dynamo);
+    Rho->React(Pi, Mu->Dynamo);
+
+    Int64 Upsilon2 = Rho->Torque(Mu->Kappa);
+    Int64 Ohm2 = Rho->Amplify(Upsilon2);
+    Int64 Pi2 = Rho->Sustain(Ohm2);
+    Mu->React(Pi2, Rho->Channel);
+    Rho->React(Pi2, Mu->Channel);
 
     int v = 4;
 }
