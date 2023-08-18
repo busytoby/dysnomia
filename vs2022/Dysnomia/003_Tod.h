@@ -23,7 +23,7 @@ namespace Dysnomia {
             Psi = new ညြ(true);
             Psi->Theta->Mu->Theta(Mu->Eta->Rod->Element);
             Psi->Theta->Mu->Beta(Mu->Eta->Rod->Element);
-            Mu->Eta->Beta(Psi->Theta->Mu->Rod->Foundation);
+            Mu->Eta->Beta(Psi->Theta->Psi->Cone->Manifold);
             Psi->Theta->Mu->Iota();
             Mu->Eta->Iota();
             Psi->Theta->Mu->Lambda();
