@@ -10,13 +10,19 @@ using namespace std;
 
 HANDLE 錨::hConsole;
 
+ည* Mu;
+
+/* 1
 Fa* Mu;
 Fa* Rho;
 Faung* Psi;
+*/
 
+// 2
 //Atmos* Tod::Eta;
 //錨* Mu;
 
+// 2
 //Diatom* Pi(int);
 //void ShowWindow1();
 
@@ -25,6 +31,9 @@ int main() {
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
+    Mu = new ည();
+
+    /* 1
     Mu = new Fa();
     Rho = new Fa();
     Psi = new Faung(Mu, Rho);
@@ -49,11 +58,11 @@ int main() {
 
     if (Mu->Eta != Rho->Kappa) throw 1;
     if (Mu->Kappa != Rho->Eta) throw 2;
-
+    */
     int v = 4;
 }
 
-/*
+/* 2
 int main()
 {
     HeapSetInformation(NULL, HeapEnableTerminationOnCorruption, NULL, 0);
@@ -167,7 +176,7 @@ int main()
 }
 */
 
-/*
+/* 2
 Diatom* Pi(int Number) {
     while (Mu->Qing.size() < 14) {
         std::this_thread::sleep_for(chrono::milliseconds(100));

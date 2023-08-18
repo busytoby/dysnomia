@@ -18,6 +18,8 @@ namespace Dysnomia {
             Mu = new Faung();
             Rho = new Fa();
             Psi = Pi(true);
+            Mu->Theta(Psi->Rod->Barn);
+            Psi->Beta(Mu->Rod->Barn);
         }
 
         ည(Faung* Beta, Fa* Omicron, bool Lambda) {
@@ -35,6 +37,15 @@ namespace Dysnomia {
                 Psi = Beta;
             else
                 Psi = new Faung();
+
+            if (Lambda) {
+                Mu->Theta(Psi->Rod->Barn);
+                Psi->Beta(Mu->Rod->Barn);
+            }
+            else {
+                Mu->Beta(Psi->Rod->Barn);
+                Psi->Theta(Mu->Rod->Barn);
+            }
         }
 
         Faung* Pi(bool Lambda) {

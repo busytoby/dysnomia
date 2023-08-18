@@ -38,6 +38,7 @@ namespace Dysnomia {
 		void Compare(Fa*, string);
 		int Find(Int64 N, string);
 		//Int64 WaveFunction(String^);
+		void Beta(Int64);
 		void Theta();
 		void Theta(Int64);
 		void Charge(Int64);
