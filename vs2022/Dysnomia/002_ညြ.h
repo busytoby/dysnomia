@@ -44,12 +44,20 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Iota->Psi->Cone->Manifold, Iota->Mu->Cone->Element, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Foundation);
             else
                 Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
+            Eta->Theta(Mu->Mu->Rod->Barn);
             Upsilon = new Fa();
             if (Iota->Mu->Rod->Gamma == 5)
                 Upsilon->Fuse(Beta->Mu->Rod->Foundation, Iota->Mu->Cone->Ring, Omicron->Mu->Cone->Manifold);
             else
                 Upsilon->Fuse(Beta->Mu->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Mu->Cone->Channel);
             Theta = Omicron;
+            Theta->Mu->Theta(Eta->Rod->Element);
+            Theta->Mu->Beta(Eta->Rod->Element);
+            Eta->Beta(Theta->Mu->Rod->Foundation);
+            Theta->Mu->Iota();
+            Eta->Iota();
+            Theta->Mu->Lambda();
+            Eta->Lambda();
         }
 
         vector<Faung*> Affinities() { 
