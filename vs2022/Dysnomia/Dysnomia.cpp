@@ -12,12 +12,6 @@ HANDLE 錨::hConsole;
 
 ည* Mu;
 
-/* 1
-Fa* Mu;
-Fa* Rho;
-Faung* Psi;
-*/
-
 // 2
 //Atmos* Tod::Eta;
 //錨* Mu;
@@ -33,32 +27,6 @@ int main() {
 
     Mu = new ည();
 
-    /* 1
-    Mu = new Fa();
-    Rho = new Fa();
-    Psi = new Faung(Mu, Rho);
-    Psi->Theta(666);
-    Int64 Upsilon = Mu->Torque(666);
-    Int64 Ohm = Mu->Amplify(Upsilon);
-    Int64 Pi = Mu->Sustain(Ohm);
-    Mu->React(Pi, Rho->Dynamo);
-    Rho->React(Pi, Mu->Dynamo);
-
-    Int64 Upsilon2 = Rho->Torque(Mu->Kappa);
-    Int64 Ohm2 = Rho->Amplify(Upsilon2);
-    Int64 Pi2 = Rho->Sustain(Ohm2);
-    Mu->React(Pi2, Mu->Channel);
-    Rho->React(Pi2, Rho->Channel);
-
-    Int64 Upsilon3 = Rho->Torque(Mu->Eta);
-    Int64 Ohm3 = Rho->Amplify(Upsilon3);
-    Int64 Pi3 = Rho->Sustain(Ohm3);
-    Rho->React(Pi3, Rho->Dynamo);
-    Mu->React(Pi3, Mu->Dynamo);
-
-    if (Mu->Eta != Rho->Kappa) throw 1;
-    if (Mu->Kappa != Rho->Eta) throw 2;
-    */
     int v = 4;
 }
 

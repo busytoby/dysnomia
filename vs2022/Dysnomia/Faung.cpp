@@ -185,6 +185,22 @@ namespace Dysnomia {
 		Theta(Pi > 0 ? Pi : Rod->Signal);
 	}
 
+	void Faung::Omicron() {
+		Int64 Upsilon = Cone->Torque(Rod->Eta);
+		Int64 Ohm = Cone->Amplify(Upsilon);
+		Int64 Pi = Cone->Sustain(Ohm);
+		Cone->React(Pi, Cone->Dynamo);
+		Rod->React(Pi, Rod->Dynamo);
+	}
+
+	void Faung::Iota() {
+		Int64 Upsilon = Cone->Torque(Rod->Kappa);
+		Int64 Ohm = Cone->Amplify(Upsilon);
+		Int64 Pi = Cone->Sustain(Ohm);
+		Rod->React(Pi, Rod->Channel);
+		Cone->React(Pi, Cone->Channel);
+	}
+
 	void Faung::Beta(Int64 Iota) {
 		Theta(Iota);
 		Int64 Upsilon = Rod->Torque(Iota);
