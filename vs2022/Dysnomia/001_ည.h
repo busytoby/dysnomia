@@ -39,8 +39,8 @@ namespace Dysnomia {
                 Psi = new Faung();
 
             if (Lambda) {
-                Mu->Theta(Psi->Rod->Barn);
                 Psi->Beta(Mu->Rod->Barn);
+                Mu->Theta(Psi->Rod->Barn);
             }
             else {
                 Mu->Beta(Psi->Rod->Barn);
