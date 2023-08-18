@@ -38,14 +38,17 @@ int main() {
     Int64 Upsilon2 = Rho->Torque(Mu->Kappa);
     Int64 Ohm2 = Rho->Amplify(Upsilon2);
     Int64 Pi2 = Rho->Sustain(Ohm2);
-    Mu->React(Pi2, Rho->Channel);
-    Rho->React(Pi2, Mu->Channel);
+    Mu->React(Pi2, Mu->Channel);
+    Rho->React(Pi2, Rho->Channel);
 
     Int64 Upsilon3 = Rho->Torque(Mu->Eta);
     Int64 Ohm3 = Rho->Amplify(Upsilon3);
     Int64 Pi3 = Rho->Sustain(Ohm3);
-    Mu->React(Pi3, Rho->Channel);
-    Rho->React(Pi3, Mu->Channel);
+    Mu->React(Pi3, Mu->Dynamo);
+    Rho->React(Pi3, Rho->Dynamo);
+
+    if (Mu->Eta != Rho->Kappa) throw 1;
+    if (Mu->Kappa != Rho->Eta) throw 2;
 
     int v = 4;
 }
