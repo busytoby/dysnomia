@@ -25,8 +25,8 @@ namespace Dysnomia {
             Psi->Theta->Mu->Beta(Mu->Eta->Rod->Element);
             Mu->Eta->Theta(Psi->Theta->Psi->Cone->Manifold);
             Mu->Eta->Beta(Psi->Theta->Psi->Cone->Manifold);
-            Psi->Theta->Mu->Iota();
             Mu->Eta->Iota();
+            Psi->Theta->Mu->Iota();
             Psi->Theta->Mu->Lambda();
             Mu->Eta->Lambda();
             Upsilon = Mu->Pi();
