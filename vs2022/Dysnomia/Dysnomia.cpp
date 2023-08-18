@@ -41,6 +41,12 @@ int main() {
     Mu->React(Pi2, Rho->Channel);
     Rho->React(Pi2, Mu->Channel);
 
+    Int64 Upsilon3 = Rho->Torque(Mu->Eta);
+    Int64 Ohm3 = Rho->Amplify(Upsilon3);
+    Int64 Pi3 = Rho->Sustain(Ohm3);
+    Mu->React(Pi3, Rho->Channel);
+    Rho->React(Pi3, Mu->Channel);
+
     int v = 4;
 }
 
