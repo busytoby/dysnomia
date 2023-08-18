@@ -29,6 +29,7 @@ namespace Dysnomia {
             Mu->Psi->Iota();
             Mu->Mu->Iota();
             Theta->Psi->Iota();
+            Theta->Psi->Lambda();
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {
