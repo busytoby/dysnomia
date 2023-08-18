@@ -41,6 +41,7 @@ namespace Dysnomia {
             if (Lambda) {
                 Psi->Beta(Mu->Rod->Manifold);
                 Mu->Theta(Psi->Rod->Coordinate);
+                Psi->Iota();
             }
             else {
                 Mu->Beta(Psi->Rod->Manifold);
