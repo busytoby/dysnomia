@@ -19,13 +19,15 @@ namespace Dysnomia {
             Mu = new ည();
             Psi = new Fa();
             if (RAPHE_NEBULAE)
-                Eta = new Faung(Psi, Mu->Psi->Rod->Element, Mu->Mu->Rod->Foundation, Mu->Psi->Rod->Ring, Mu->Psi->Rod->Manifold);
+                Eta = new Faung(Psi, Mu->Psi->Rod->Manifold, Mu->Mu->Rod->Element, Mu->Psi->Rod->Ring, Mu->Psi->Rod->Foundation);
             else
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
             Mu->Mu->Beta(Eta->Rod->Barn);
+            Theta->Psi->Beta(Mu->Mu->Cone->Kappa);
             Mu->Psi->Iota();
+            Mu->Mu->Iota();
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {
@@ -36,7 +38,7 @@ namespace Dysnomia {
             Mu = Beta;
             Psi = new Fa();
             if (Iota->Mu->Rod->Gamma == 5)
-                Eta = new Faung(Psi, Iota->Psi->Cone->Element, Iota->Mu->Cone->Foundation, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Manifold);
+                Eta = new Faung(Psi, Iota->Psi->Cone->Manifold, Iota->Mu->Cone->Element, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Foundation);
             else
                 Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
             Upsilon = new Fa();
