@@ -39,11 +39,11 @@ namespace Dysnomia {
                 Psi = new Faung();
 
             if (Lambda) {
-                Psi->Beta(Mu->Rod->Barn);
-                Mu->Theta(Psi->Rod->Barn);
+                Psi->Beta(Mu->Rod->Manifold);
+                Mu->Theta(Psi->Rod->Coordinate);
             }
             else {
-                Mu->Beta(Psi->Rod->Barn);
+                Mu->Beta(Psi->Rod->Manifold);
                 Psi->Theta(Mu->Rod->Barn);
             }
         }
