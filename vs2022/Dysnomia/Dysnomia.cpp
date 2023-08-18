@@ -44,8 +44,8 @@ int main() {
     Int64 Upsilon3 = Rho->Torque(Mu->Eta);
     Int64 Ohm3 = Rho->Amplify(Upsilon3);
     Int64 Pi3 = Rho->Sustain(Ohm3);
-    Mu->React(Pi3, Mu->Dynamo);
     Rho->React(Pi3, Rho->Dynamo);
+    Mu->React(Pi3, Mu->Dynamo);
 
     if (Mu->Eta != Rho->Kappa) throw 1;
     if (Mu->Kappa != Rho->Eta) throw 2;
