@@ -10,12 +10,27 @@ using namespace std;
 
 HANDLE 錨::hConsole;
 
-Atmos* Tod::Eta;
-錨* Mu;
+Fa* Mu;
+Fa* Rho;
+Faung* Psi;
 
-Diatom* Pi(int);
-void ShowWindow1();
+//Atmos* Tod::Eta;
+//錨* Mu;
 
+//Diatom* Pi(int);
+//void ShowWindow1();
+
+int main() {
+    srand((unsigned int)time(NULL));
+    Math::Prime = Math::MotzkinPrime;
+    Math::POETRY = 0;
+
+    Mu = new Fa();
+
+    int v = 4;
+}
+
+/*
 int main()
 {
     HeapSetInformation(NULL, HeapEnableTerminationOnCorruption, NULL, 0);
@@ -127,7 +142,9 @@ int main()
         Mu->Mu_Mutex.unlock();
     }
 }
+*/
 
+/*
 Diatom* Pi(int Number) {
     while (Mu->Qing.size() < 14) {
         std::this_thread::sleep_for(chrono::milliseconds(100));
@@ -141,3 +158,4 @@ void ShowWindow1() {
     DW->Init();
     DW->Step();    
 }
+*/
