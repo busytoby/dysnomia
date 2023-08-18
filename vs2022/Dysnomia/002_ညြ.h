@@ -24,10 +24,11 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
-            Mu->Mu->Beta(Eta->Rod->Barn);
             Theta->Psi->Beta(Mu->Mu->Cone->Kappa);
+            Mu->Mu->Beta(Eta->Rod->Element);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
+            Theta->Psi->Iota();
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {
