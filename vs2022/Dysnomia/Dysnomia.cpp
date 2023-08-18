@@ -29,8 +29,11 @@ int main() {
     Rho = new Fa();
     Psi = new Faung(Mu, Rho);
     Psi->Theta(666);
-    Mu->Torque(Mu->Kappa);
-    Rho->Torque(Rho->Kappa);
+    Int64 Upsilon = Rho->Torque(Mu->Kappa);
+    Int64 Ohm = Rho->Amplify(Upsilon);
+    Int64 Pi = Rho->Sustain(Ohm);
+    Mu->React(Pi, Rho->Channel);
+    Rho->React(Pi, Mu->Channel);
 
     int v = 4;
 }
