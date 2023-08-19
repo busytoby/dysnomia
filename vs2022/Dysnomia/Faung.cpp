@@ -207,6 +207,7 @@ namespace Dysnomia {
 	}
 
 	void Faung::Beta(Int64 Iota) {
+		if (Iota == 0) throw 200;
 		if (Chi != 1) throw 202;
 		Int64 Upsilon = Rod->Torque(Iota);
 		Int64 Ohm = Rod->Amplify(Upsilon);
@@ -217,21 +218,13 @@ namespace Dysnomia {
 	}
 
 	void Faung::Theta(Int64 Omicron) {
+		if (Omicron == 0) throw 200;
 		if (Chi != 0) throw 201;
 		bool Failed = true;
 		while (Failed) {
 			try {
-				if (Omicron == 0)
-					Charge(Pi > 0 ? Pi : Rod->Signal);
-				else
-					Charge(Omicron);
-				/*
-				if (Sigma < 4194304)
-					Charge(0);
-				if (Sigma < 4194304)
-					Charge(Mu);
-				*/
-				if (Sigma < 2)
+				Charge(Omicron);
+				if (Sigma < 4)
 					throw 115;
 				Induce();
 				Torque();
@@ -255,7 +248,7 @@ namespace Dysnomia {
 	}
 
 	void Faung::Charge(Int64 Signal) {
-		if (Signal == 0) Signal = Rod->Signal;
+		if (Signal == 0) throw 200;
 		Sigma = Cone->Charge(Signal);
 	}
 

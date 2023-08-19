@@ -21,14 +21,6 @@ namespace Dysnomia {
             Mu = new ညြ(false);
             if (Eta == nullptr) Eta = new Atmos(Mu->Psi);
             Psi = new ညြ(true);
-            Mu->Eta->Theta(Mu->Theta->Mu->Omicron);
-            Mu->Eta->Beta(Psi->Theta->Psi->Omicron);
-            Psi->Theta->Mu->Theta(Mu->Eta->Omicron);
-            Psi->Theta->Mu->Beta(Psi->Eta->Omicron);
-            Mu->Eta->Iota();
-            Psi->Theta->Mu->Iota();
-            Psi->Theta->Mu->Lambda();
-            Mu->Eta->Lambda();
 
             Upsilon = Mu->Pi(Mu->Mu->Psi->Omicron);
             Tau = Psi->Pi(Psi->Theta->Mu->Omega);

@@ -22,11 +22,15 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Mu->Psi->Rod->Manifold, Mu->Mu->Rod->Element, Mu->Psi->Rod->Ring, Mu->Psi->Rod->Foundation);
             else
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
+            Eta->Theta(Mu->Mu->Omicron);
+            Eta->Beta(Mu->Psi->Omicron);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
+            Eta->Iota();
             Mu->Mu->Beta(Theta->Psi->Omicron);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
+            Eta->Lambda();
             Mu->Psi->Lambda();
             Mu->Mu->Lambda();
         }
