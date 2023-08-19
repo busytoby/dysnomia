@@ -29,7 +29,7 @@ namespace Dysnomia {
             Theta = Eta->Pi(true);
 
             Sigma->Theta(Mu->Psi->Theta->Psi->Omicron);
-            Sigma->Beta(Mu->Psi->Theta->Psi->Omicron);
+            Sigma->Beta(Mu->Psi->Theta->Psi->Omega);
             Upsilon->Theta(Eta->Psi->Omega);
             Upsilon->Beta(Eta->Psi->Omega);
             Upsilon->Iota();
