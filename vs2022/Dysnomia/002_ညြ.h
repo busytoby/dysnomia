@@ -83,13 +83,13 @@ namespace Dysnomia {
             return Beta;
         }
 
-        Faung* Pi(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda) {
+        Faung* Pi(Fa* Beta, Int64 Iota, Int64 Omicron) {
             if (Beta->Kappa == 0) throw 5;
             Fa* Rho = new Fa();
             Fa* Psi = new Fa();
-            Rho->Fuse(Beta->Kappa, Omicron, Lambda);
+            Rho->Fuse(Beta->Kappa, Iota, Omicron);
             Rho->Tune();
-            Psi->Fuse(Iota, Omicron, Lambda);
+            Psi->Fuse(Iota, Beta->Kappa, Omicron);
             Psi->Tune();
             Rho->Gamma--;
             Psi->Gamma--;

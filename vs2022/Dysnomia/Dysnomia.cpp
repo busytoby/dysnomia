@@ -29,7 +29,7 @@ int main() {
 
     Mu = new Zuo();
 
-    int v = 104;
+    int v = 107;
 }
 
 /* 2
