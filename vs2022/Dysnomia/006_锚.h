@@ -26,20 +26,23 @@ namespace Dysnomia {
         }
 
         Fa* Pi(Int64 Alpha) {
-            throw 500; // this will produce water
             vector<Faung*> Beta(3);
             Fa* Iota;
             
-            Int64 Lambda = Alpha;
             for (int i = 0; i < Beta.size(); i++) {
-                Nu->Theta(Lambda);
-                Lambda = Nu->Omicron;
                 Beta[i] = new Faung(
-                    Math::ModPow(Lambda, Nu->Rho, Nu->Omega),
-                    Math::ModPow(Nu->Upsilon, Lambda, Nu->Omega),
-                    Math::ModPow(Lambda, Nu->Sigma, Nu->Omicron),
-                    Math::ModPow(Nu->Rod->Signal, Lambda, Nu->Omicron));
+                    Math::ModPow(Psi->Mu->Sigma->Ohm, Psi->Mu->Sigma->Pi, Psi->Nu->Omicron),
+                    Math::ModPow(Mu->Sigma->Ohm, Mu->Sigma->Pi, Psi->Nu->Omicron),
+                    Math::ModPow(Rho->Mu->Sigma->Ohm, Rho->Mu->Sigma->Pi, Psi->Nu->Omicron),
+                    Math::ModPow(Nu->Ohm, Nu->Pi, Psi->Nu->Omicron));
+                Beta[i]->Theta(Nu->Upsilon);
             }
+
+            if (!(Beta[0]->Xi == Beta[1]->Xi &&
+                Beta[2]->Xi == Beta[0]->Rod->Barn &&
+                Beta[1]->Cone->Barn == Beta[2]->Cone->Coordinate &&
+                Beta[2]->Rod->Coordinate == Beta[0]->Cone->Barn)) throw 101;
+
             Iota = new Fa();
             Iota->Fuse(Beta[2]->Cone->Dynamo, Beta[1]->Cone->Ring, Beta[0]->Cone->Barn);
             Iota->Tune();

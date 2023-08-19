@@ -1,16 +1,16 @@
 ﻿#include <Windows.h>
 #include <time.h>
-#include "006_锚.h"
-//#include "007_錨.h"
+//#include "006_锚.h"
+#include "007_錨.h"
 //#include "Domain/Diatom.h"
 #include "Domain/Atmos.h"
 
 using namespace Dysnomia;
 using namespace std;
 
-//HANDLE 錨::hConsole;
+HANDLE 錨::hConsole;
 
-锚* Mu;
+錨* Mu;
 
 Atmos* Tod::Eta;
 
@@ -27,7 +27,7 @@ int main() {
 
     for (;;) {
 
-        Mu = new 锚();
+        Mu = new 錨();
         //vector<Faung*> Nu = Mu->Affinities();
         //for (int i = 0; i < Nu.size(); i++) if (Nu[i]->Chi != 4) throw 500;
         delete Mu;

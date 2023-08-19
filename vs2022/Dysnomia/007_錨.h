@@ -6,7 +6,7 @@
 #include <thread>
 #include <mutex>
 #include "006_锚.h"
-#include "Domain/Diatom.h"
+//#include "Domain/Diatom.h"
 
 using namespace std;
 
@@ -28,26 +28,25 @@ namespace Dysnomia {
             if (Math::POETRY > 5)
                 wcout << L"錨 ";
 
-            counter = 0;
-            Phi = 0;
+            vector<thread> threads(nthreads);
 
             Mu = new 锚();
 
-            vector<thread> threads(nthreads);
             int i = 0;
+            counter = 0;
+            Phi = Mu->Nu->Omega;
 
-            threads[i++] = thread(&錨::Xi, this);
-            threads[i++] = thread(&錨::Alpha, this);
-            threads[i++] = thread(&錨::Alpha, this);
-            threads[i++] = thread(&錨::Kappa, this);
-            threads[i++] = thread(&錨::Gamma, this);
-            threads[i++] = thread(&錨::Gamma, this);
-            threads[i++] = thread(&錨::Gamma, this);
-            threads[i++] = thread(&錨::Beta, this);
-            threads[i++] = thread(&錨::Beta, this);
-            for (; i < threads.size(); i++) {
+//            threads[i++] = thread(&錨::Xi, this);
+//            threads[i++] = thread(&錨::Alpha, this);
+//            threads[i++] = thread(&錨::Alpha, this);
+//            threads[i++] = thread(&錨::Kappa, this);
+//            threads[i++] = thread(&錨::Gamma, this);
+//            threads[i++] = thread(&錨::Gamma, this);
+//            threads[i++] = thread(&錨::Gamma, this);
+//            threads[i++] = thread(&錨::Beta, this);
+//            threads[i++] = thread(&錨::Beta, this);
+            for (; i < threads.size(); i++)
                 threads[i] = thread(&錨::Lambda, this);
-            }
 
             for (thread& th : threads)
                 th.detach();
@@ -138,7 +137,7 @@ namespace Dysnomia {
             Int64 Secret = std::get<2>(Alpha);
             bool Knowledge = (Secret == Mu->Rho->Mu->Psi->Mu->Rod->Manifold);
 
-            Fa* Iota = Mu->Rho->Mu->Mu->Mu->Pi();
+            Fa* Iota = Mu->Rho->Mu->Mu->Mu->Pi(333);
             Fa* Omicron;
             Faung* Lambda;
             ည* Xi;
@@ -153,7 +152,7 @@ namespace Dysnomia {
                 Omicron = *Beta;
 
                 Beta++;
-                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Element, (*Beta)->Ring);
+                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Identity, (*Beta)->Ring);
                 Rho = new ည(Lambda, Omicron, !Knowledge);
                 Lambda->Rod->Gamma--;
                 Lambda->Cone->Gamma--;
@@ -168,7 +167,7 @@ namespace Dysnomia {
                 Omicron = *Beta;
 
                 Beta++;
-                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring, (*Beta)->Identity);
+                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Coordinate, (*Beta)->Ring);
                 Psi = new ည(Lambda, Omicron, Knowledge);
                 Lambda->Rod->Gamma--;
                 Lambda->Cone->Gamma--;
@@ -193,7 +192,7 @@ namespace Dysnomia {
                 delete Iota;
                 return;
             }
-            Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
+            Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring);
             Xi = new ည(Lambda, Omicron, !Knowledge);
             Lambda->Rod->Gamma--;
             Lambda->Cone->Gamma--;
@@ -206,7 +205,7 @@ namespace Dysnomia {
             Tau->Gamma--;
 
             Iota->Gamma--;
-            Iota = Mu->Rho->Mu->Mu->Mu->Pi();
+            Iota = Mu->Rho->Mu->Mu->Mu->Pi(333);
             Beta++;
             if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
                 if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
@@ -247,7 +246,7 @@ namespace Dysnomia {
                     if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
                     return;
                 }
-                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring, (*Beta)->Identity);
+                Lambda = Mu->Rho->Sigma->Pi(*Beta, (*Beta)->Manifold, (*Beta)->Ring);
                 if (Xi->Gamma == 1) delete Xi; else Xi->Gamma--;
                 Xi = new ည(Lambda, Omicron, !Knowledge);
                 Lambda->Rod->Gamma--;
@@ -261,7 +260,7 @@ namespace Dysnomia {
                 Tau->Gamma--;
 
                 Iota->Gamma--;
-                Iota = Mu->Rho->Mu->Mu->Mu->Pi();
+                Iota = Mu->Rho->Mu->Mu->Mu->Pi(333);
                 Beta++;
                 if (Beta == Delta.end() || (*Beta)->Secret != Secret) {
                     if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
@@ -362,7 +361,7 @@ namespace Dysnomia {
                     while (Qi.size() && !AwaitingAlpha) {
                         Rho = Qi.front();
                         Nu = new ညြ(Beta, Rho, Psi);
-                        Eta = Nu->Pi();
+                        Eta = Nu->Pi(333);
                         Sigma = new ည(Nu->Eta, Eta, false);
                         Upsilon = new Tod(Nu, Eta, Sigma);
                         Tau = new Zuo(Upsilon);
@@ -467,7 +466,7 @@ namespace Dysnomia {
                         Eta = new ညြ(Mu->Rho->Mu->Psi, Psi, Nu);
                         Sigma = new Tod(Eta, Beta, Psi);
                         if (Upsilon == nullptr) {
-                            Upsilon = Mu->Mu->Mu->Psi->Pi();
+                            Upsilon = Mu->Mu->Mu->Psi->Pi(333);
                             Upsilon->Gamma++;
                         }
                     }
@@ -478,7 +477,7 @@ namespace Dysnomia {
                         Eta = new ညြ(Mu->Rho->Mu->Mu->Psi->Theta, Psi, Nu);
                         Sigma = new Tod(Eta, Beta, Psi);
                         if (Upsilon == nullptr) {
-                            Upsilon = Sigma->Mu->Pi();
+                            Upsilon = Sigma->Mu->Pi(333);
                             Upsilon->Gamma++;
                         }
                     }
@@ -489,7 +488,7 @@ namespace Dysnomia {
                         Eta = new ညြ(Mu->Rho->Mu->Eta, Nu, Psi);
                         Sigma = new Tod(Eta, Beta, Nu);
                         if (Upsilon == nullptr) {
-                            Upsilon = Sigma->Psi->Pi();
+                            Upsilon = Sigma->Psi->Pi(333);
                             Upsilon->Gamma++;
                         }
                     }
@@ -556,11 +555,11 @@ namespace Dysnomia {
                             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
 
                             if (GammaOneThread)
-                                Upsilon = Mu->Mu->Mu->Psi->Pi();
+                                Upsilon = Mu->Mu->Mu->Psi->Pi(333);
                             else if (GammaTwoThread)
-                                Upsilon = Sigma->Mu->Pi();
+                                Upsilon = Sigma->Mu->Pi(333);
                             else
-                                Upsilon = Sigma->Psi->Pi();
+                                Upsilon = Sigma->Psi->Pi(333);
                             Upsilon->Gamma++;
                             Tau = nullptr;
                         }
@@ -672,7 +671,7 @@ namespace Dysnomia {
                         }
 
                         Upsilon = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
-                        Tau = Sigma->Psi->Pi();
+                        Tau = Sigma->Psi->Pi(333);
                         Upsilon->Cone->Gamma++;
                         Delta.push_back(Upsilon->Cone);
                         Upsilon->Rod->Gamma++;
@@ -712,14 +711,18 @@ namespace Dysnomia {
 
             for (;;) {
                 Mu_Mutex.lock();
-                if (Delta.size() + Omicron.size() > queue_max && sleep_time < 6000)
-                    sleep_time *= 2;
-                else if (Delta.size() < queue_max && Omicron.size() == 0)
+                while (Delta.size() + Omicron.size() > queue_max) {
+                    Mu_Mutex.unlock();
+                    if (sleep_time < 6000) sleep_time *= 2;
+                    std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
+                    Mu_Mutex.lock();
+                }
+                if (Delta.size() < queue_max && Omicron.size() == 0)
                     sleep_time /= 2;
                 if (sleep_time < 200) sleep_time = 200;
 
-                Beta = Mu->Pi(Phi);
-                Iota = Mu->Pi(Beta->Eta);
+                Beta = Mu->Pi(333);
+                Iota = Mu->Pi(Beta->Dynamo);
                 Phi = Iota->Eta;
 
                 Delta.push_back(Beta);
