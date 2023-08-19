@@ -32,6 +32,8 @@ int main() {
         Mu = new Zuo();
         Rho = new ë(Mu, true);
         Psi = new ë(Mu, false);
+        //vector<Faung*> Nu = ..->Affinities();
+        //for (int i = 0; i < Nu.size(); i++) if (Nu[i]->Chi != 4) throw 500;
         delete Mu;
         delete Rho;
         delete Psi;
