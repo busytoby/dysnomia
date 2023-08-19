@@ -9,12 +9,11 @@ namespace Dysnomia {
         Fa* Mu;
         list<Faung*> Rho;
 
-        Int64 Water;
+        vector<Faung*> Water;
 
         Atmos(Fa* Eta) {
             Eta->Gamma++;
             Mu = Eta;
-            Water = 0;
         }
 
         ~Atmos() {

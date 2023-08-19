@@ -51,7 +51,7 @@ namespace Dysnomia {
             Iota->Saturate(Beta[0]->Omega, Iota->Pole);
             Iota->Open();
 
-            for (int i = 0; i < Beta.size(); i++) delete Beta[i];
+            for (int i = 0; i < Beta.size(); i++) Tod::Eta->Water.push_back(Beta[i]);
             Beta.clear();
             return Iota;
         }
