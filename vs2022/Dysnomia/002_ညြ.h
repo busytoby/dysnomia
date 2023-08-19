@@ -87,7 +87,7 @@ namespace Dysnomia {
             if (Beta->Kappa == 0) throw 5;
             Fa* Rho = new Fa();
             Fa* Psi = new Fa();
-            Rho->Fuse(Beta->Kappa, Beta->Ring, Beta->Manifold);
+            Rho->Fuse(Beta->Kappa, Omicron, Lambda);
             Rho->Tune();
             Psi->Fuse(Iota, Omicron, Lambda);
             Psi->Tune();
