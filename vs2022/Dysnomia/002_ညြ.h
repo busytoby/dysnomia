@@ -30,9 +30,9 @@ namespace Dysnomia {
             Mu->Mu->Beta(Theta->Mu->Omicron);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
-            Eta->Lambda();
-            Mu->Psi->Lambda();
             Mu->Mu->Lambda();
+            Mu->Psi->Lambda();
+            Eta->Lambda();
         }
 
         ညြ(ည* Beta, ည* Iota, ည* Omicron) {
@@ -52,15 +52,11 @@ namespace Dysnomia {
             else
                 Upsilon->Fuse(Beta->Mu->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Mu->Cone->Channel);
             Theta = Omicron;
-            Eta->Theta(Mu->Mu->Omicron);
-            Theta->Mu->Theta(Mu->Psi->Omicron);
-            Theta->Mu->Beta(Mu->Psi->Omicron);
-            Eta->Beta(Theta->Mu->Omega);
-            Theta->Mu->Iota();
+
+            Eta->Theta(Theta->Mu->Omicron);
+            Eta->Beta(Mu->Mu->Omicron);
             Eta->Iota();
-            Theta->Mu->Lambda();
             Eta->Lambda();
-            int i = 99;
         }
 
         vector<Faung*> Affinities() { 

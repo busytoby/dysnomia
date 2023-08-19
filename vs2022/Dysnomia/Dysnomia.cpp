@@ -1,6 +1,6 @@
 ﻿#include <Windows.h>
 #include <time.h>
-#include "004_Zuo.h"
+#include "005_ë.h"
 //#include "007_錨.h"
 //#include "Domain/Diatom.h"
 #include "Domain/Atmos.h"
@@ -11,6 +11,8 @@ using namespace std;
 //HANDLE 錨::hConsole;
 
 Zuo* Mu;
+ë* Rho;
+ë* Psi;
 
 Atmos* Tod::Eta;
 
@@ -28,7 +30,11 @@ int main() {
     for (;;) {
 
         Mu = new Zuo();
+        Rho = new ë(Mu, true);
+        Psi = new ë(Mu, false);
         delete Mu;
+        delete Rho;
+        delete Psi;
         Sleep(100);
     }
 
