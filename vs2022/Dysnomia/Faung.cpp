@@ -147,6 +147,7 @@ namespace Dysnomia {
 		if (!Cone->ManifoldCompare(Rod)) 
 			throw 103;
 		this->Xi = Xi;
+		Chi = 0;
 	}
 
 	void Faung::Ratchet()
@@ -186,30 +187,37 @@ namespace Dysnomia {
 	}
 
 	void Faung::Lambda() {
+		if (Chi != 3) throw 204;
 		Int64 Upsilon = Cone->Torque(Rod->Eta);
 		Int64 Ohm = Cone->Amplify(Upsilon);
 		Int64 Pi = Cone->Sustain(Ohm);
 		Cone->React(Pi, Cone->Dynamo);
 		Rod->React(Pi, Rod->Dynamo);
+		Chi = 4;
 	}
 
 	void Faung::Iota() {
+		if (Chi != 2) throw 203;
 		Int64 Upsilon = Cone->Torque(Rod->Kappa);
 		Int64 Ohm = Cone->Amplify(Upsilon);
 		Int64 Pi = Cone->Sustain(Ohm);
 		Rod->React(Pi, Rod->Channel);
 		Cone->React(Pi, Cone->Channel);
+		Chi = 3;
 	}
 
 	void Faung::Beta(Int64 Iota) {
+		if (Chi != 1) throw 202;
 		Int64 Upsilon = Rod->Torque(Iota);
 		Int64 Ohm = Rod->Amplify(Upsilon);
 		Int64 Pi = Rod->Sustain(Ohm);
 		Rod->React(Pi, Cone->Dynamo);
 		Cone->React(Pi, Rod->Dynamo);
+		Chi = 2;
 	}
 
 	void Faung::Theta(Int64 Omicron) {
+		if (Chi != 0) throw 201;
 		bool Failed = true;
 		while (Failed) {
 			try {
@@ -231,6 +239,7 @@ namespace Dysnomia {
 				Sustain();
 				React();
 				Failed = false;
+				Chi = 1;
 			}
 			catch (int E) {
 				throw E;

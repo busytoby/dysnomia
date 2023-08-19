@@ -36,15 +36,17 @@ namespace Dysnomia {
             Rho = Omicron;
             if (Lambda) {
                 Psi = Beta;
-                Psi->Theta(Mu->Rod->Manifold);
-                Psi->Beta(Mu->Cone->Manifold);
                 Mu->Theta(Psi->Omicron);
+                Mu->Beta(Psi->Omicron);
+                Mu->Iota();
+                Mu->Lambda();
             }
             else {
                 Psi = new Faung();
-                Mu->Theta(Psi->Cone->Manifold);
-                Mu->Beta(Psi->Rod->Manifold);
                 Psi->Theta(Mu->Omicron);
+                Psi->Beta(Mu->Omicron);
+                Psi->Iota();
+                Psi->Lambda();
             }
         }
 

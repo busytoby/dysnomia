@@ -24,12 +24,9 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
-            Theta->Psi->Beta(Mu->Mu->Omicron);
-            Mu->Mu->Beta(Eta->Rod->Element);
+            Mu->Mu->Beta(Theta->Psi->Omicron);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
-            Theta->Psi->Iota();
-            Theta->Psi->Lambda();
             Mu->Psi->Lambda();
             Mu->Mu->Lambda();
         }
@@ -59,6 +56,7 @@ namespace Dysnomia {
             Eta->Iota();
             Theta->Mu->Lambda();
             Eta->Lambda();
+            int i = 99;
         }
 
         vector<Faung*> Affinities() { 

@@ -20,6 +20,7 @@ namespace Dysnomia {
 
 		Int64 Phi, Eta, Mu, Xi;
 		Int64 Sigma, Rho, Upsilon, Ohm, Pi, Omicron, Omega;
+		short Chi;
 
 		~Faung() {
 			if (Rod->Gamma == 1) delete Rod;
