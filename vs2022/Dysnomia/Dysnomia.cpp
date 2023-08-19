@@ -1,14 +1,15 @@
 ﻿#include <Windows.h>
 #include <time.h>
-#include "007_錨.h"
-#include "Domain/Diatom.h"
+#include "004_Zuo.h"
+//#include "007_錨.h"
+//#include "Domain/Diatom.h"
 #include "Domain/Atmos.h"
-#include "Lib/Window.h"
+//#include "Lib/Window.h"
 
 using namespace Dysnomia;
 using namespace std;
 
-HANDLE 錨::hConsole;
+//HANDLE 錨::hConsole;
 
 Zuo* Mu;
 
@@ -28,7 +29,7 @@ int main() {
 
     Mu = new Zuo();
 
-    int v = 100;
+    int v = 104;
 }
 
 /* 2

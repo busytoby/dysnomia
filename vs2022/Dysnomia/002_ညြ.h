@@ -75,10 +75,10 @@ namespace Dysnomia {
             if (Theta->Gamma == 1) delete Theta; else Theta->Gamma--;
         }
 
-        Fa* Pi() {
+        Fa* Pi(Int64 Alpha) {
             if (Eta->Omicron == 0 && Eta->Omega == 0) throw 4;
             Fa* Beta = new Fa();
-            Beta->Fuse(Theta->Mu->Cone->Coordinate, Eta->Omega, Eta->Omicron);
+            Beta->Fuse(Eta->Omicron, Alpha, Eta->Omega);
             Beta->Tune();
             return Beta;
         }

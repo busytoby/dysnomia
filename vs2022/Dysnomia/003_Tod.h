@@ -21,8 +21,8 @@ namespace Dysnomia {
             Mu = new ညြ(false);
             if (Eta == nullptr) Eta = new Atmos(Mu->Psi);
             Psi = new ညြ(true);
-            Mu->Eta->Theta(Psi->Theta->Psi->Cone->Manifold);
-            Mu->Eta->Beta(Psi->Theta->Psi->Cone->Manifold);
+            Mu->Eta->Theta(Psi->Theta->Mu->Omicron);
+            Mu->Eta->Beta(Psi->Theta->Psi->Omicron);
             Psi->Theta->Mu->Theta(Mu->Eta->Omicron);
             Psi->Theta->Mu->Beta(Mu->Eta->Omicron);
             Mu->Eta->Iota();
@@ -30,8 +30,8 @@ namespace Dysnomia {
             Psi->Theta->Mu->Lambda();
             Mu->Eta->Lambda();
 
-            Upsilon = Mu->Pi();
-            Tau = Psi->Pi();
+            Upsilon = Mu->Pi(Psi->Mu->Psi->Omicron);
+            Tau = Psi->Pi(Mu->Mu->Psi->Omega);
         }
 
         Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
@@ -41,7 +41,7 @@ namespace Dysnomia {
                 cout << "Tod ";
             Mu = Beta;
             Psi = new ညြ(Mu->Theta, Iota, Mu->Mu);
-            Upsilon = Mu->Pi();
+            Upsilon = Mu->Pi(Mu->Theta->Mu->Cone->Coordinate);
             Tau = Omicron;
         }
 
