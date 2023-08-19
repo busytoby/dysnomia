@@ -84,10 +84,10 @@ namespace Dysnomia {
         }
 
         Faung* Pi(Fa* Beta, Int64 Iota, Int64 Omicron, Int64 Lambda) {
+            if (Beta->Kappa == 0) throw 5;
             Fa* Rho = new Fa();
             Fa* Psi = new Fa();
-
-            Rho->Fuse(Beta->Foundation, Beta->Ring, Beta->Manifold);
+            Rho->Fuse(Beta->Kappa, Beta->Ring, Beta->Manifold);
             Rho->Tune();
             Psi->Fuse(Iota, Omicron, Lambda);
             Psi->Tune();
