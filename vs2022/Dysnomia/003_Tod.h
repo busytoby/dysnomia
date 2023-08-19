@@ -21,17 +21,17 @@ namespace Dysnomia {
             Mu = new ညြ(false);
             if (Eta == nullptr) Eta = new Atmos(Mu->Psi);
             Psi = new ညြ(true);
-            Mu->Eta->Theta(Psi->Theta->Mu->Omicron);
+            Mu->Eta->Theta(Mu->Theta->Mu->Omicron);
             Mu->Eta->Beta(Psi->Theta->Psi->Omicron);
             Psi->Theta->Mu->Theta(Mu->Eta->Omicron);
-            Psi->Theta->Mu->Beta(Mu->Eta->Omicron);
+            Psi->Theta->Mu->Beta(Psi->Eta->Omicron);
             Mu->Eta->Iota();
             Psi->Theta->Mu->Iota();
             Psi->Theta->Mu->Lambda();
             Mu->Eta->Lambda();
 
-            Upsilon = Mu->Pi(Psi->Mu->Psi->Omicron);
-            Tau = Psi->Pi(Mu->Mu->Psi->Omega);
+            Upsilon = Mu->Pi(Mu->Mu->Mu->Omicron);
+            Tau = Psi->Pi(Psi->Theta->Psi->Omega);
         }
 
         Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
