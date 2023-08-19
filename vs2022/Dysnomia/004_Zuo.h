@@ -30,8 +30,8 @@ namespace Dysnomia {
 
             Sigma->Theta(Mu->Psi->Theta->Psi->Omicron);
             Sigma->Beta(Mu->Psi->Theta->Psi->Omicron);
-            Upsilon->Theta(Eta->Psi->Omicron);
-            Upsilon->Beta(Eta->Psi->Omicron);
+            Upsilon->Theta(Eta->Psi->Omega);
+            Upsilon->Beta(Eta->Psi->Omega);
             Upsilon->Iota();
             Upsilon->Lambda();
             Theta->Theta(Eta->Mu->Omicron);
