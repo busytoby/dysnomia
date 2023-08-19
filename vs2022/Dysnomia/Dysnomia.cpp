@@ -28,7 +28,7 @@ int main() {
 
     Mu = new Zuo();
 
-    int v = 4;
+    int v = 100;
 }
 
 /* 2
