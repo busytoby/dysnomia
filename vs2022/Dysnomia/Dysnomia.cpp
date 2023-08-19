@@ -32,7 +32,7 @@ int main() {
         Sleep(100);
     }
 
-    int v = 107;
+    int v = 100;
 }
 
 /* 2

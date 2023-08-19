@@ -27,7 +27,7 @@ namespace Dysnomia {
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
             Eta->Iota();
-            Mu->Mu->Beta(Theta->Psi->Omicron);
+            Mu->Mu->Beta(Theta->Mu->Omicron);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
             Eta->Lambda();
