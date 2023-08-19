@@ -147,7 +147,6 @@
     <ClInclude Include="Domain\Diatom.h" />
     <ClInclude Include="Faung.h" />
     <ClInclude Include="Fa.h" />
-    <ClInclude Include="Lib\Window.h" />
     <ClInclude Include="Math.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
