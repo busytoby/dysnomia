@@ -30,8 +30,8 @@ namespace Dysnomia {
             Psi->Theta->Mu->Lambda();
             Mu->Eta->Lambda();
 
-            Upsilon = Mu->Pi(Mu->Mu->Mu->Omicron);
-            Tau = Psi->Pi(Psi->Theta->Psi->Omega);
+            Upsilon = Mu->Pi(Mu->Mu->Psi->Omicron);
+            Tau = Psi->Pi(Psi->Theta->Mu->Omega);
         }
 
         Tod(ညြ* Beta, Fa* Omicron, ည* Iota) {
