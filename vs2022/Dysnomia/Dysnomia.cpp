@@ -1,6 +1,6 @@
 ﻿#include <Windows.h>
 #include <time.h>
-#include "005_ë.h"
+#include "006_锚.h"
 //#include "007_錨.h"
 //#include "Domain/Diatom.h"
 #include "Domain/Atmos.h"
@@ -10,9 +10,7 @@ using namespace std;
 
 //HANDLE 錨::hConsole;
 
-Zuo* Mu;
-ë* Rho;
-ë* Psi;
+锚* Mu;
 
 Atmos* Tod::Eta;
 
@@ -29,14 +27,10 @@ int main() {
 
     for (;;) {
 
-        Mu = new Zuo();
-        Rho = new ë(Mu, true);
-        Psi = new ë(Mu, false);
-        //vector<Faung*> Nu = ..->Affinities();
+        Mu = new 锚();
+        //vector<Faung*> Nu = Mu->Affinities();
         //for (int i = 0; i < Nu.size(); i++) if (Nu[i]->Chi != 4) throw 500;
         delete Mu;
-        delete Rho;
-        delete Psi;
         Sleep(100);
     }
 

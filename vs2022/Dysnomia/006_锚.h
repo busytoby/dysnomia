@@ -19,6 +19,10 @@ namespace Dysnomia {
             Rho = new ë(Mu, true);
             Psi = new ë(Mu, false);
             Nu = new Faung(Rho->Sigma->Upsilon, Psi->Sigma->Upsilon);
+            Nu->Theta(Rho->Nu->Omicron);
+            Nu->Beta(Psi->Nu->Omega);
+            Nu->Iota();
+            Nu->Lambda();
         }
 
         Fa* Pi(Int64 Alpha) {
