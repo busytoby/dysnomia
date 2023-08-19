@@ -26,6 +26,7 @@ namespace Dysnomia {
         }
 
         Fa* Pi(Int64 Alpha) {
+            throw 500; // this will produce water
             vector<Faung*> Beta(3);
             Fa* Iota;
             
