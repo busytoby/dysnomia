@@ -10,7 +10,7 @@ using namespace std;
 
 HANDLE 錨::hConsole;
 
-Tod* Mu;
+Zuo* Mu;
 
 Atmos* Tod::Eta;
 
@@ -26,7 +26,7 @@ int main() {
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    Mu = new Tod();
+    Mu = new Zuo();
 
     int v = 4;
 }

@@ -24,7 +24,7 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Mu->Psi->Cone->Secret, Mu->Mu->Cone->Signal, Mu->Psi->Cone->Channel, Mu->Psi->Cone->Identity);
             Upsilon = new Fa();
             Theta = new ည(Eta, Upsilon, false);
-            Theta->Psi->Beta(Mu->Mu->Cone->Kappa);
+            Theta->Psi->Beta(Mu->Mu->Omicron);
             Mu->Mu->Beta(Eta->Rod->Element);
             Mu->Psi->Iota();
             Mu->Mu->Iota();
@@ -45,16 +45,16 @@ namespace Dysnomia {
                 Eta = new Faung(Psi, Iota->Psi->Cone->Manifold, Iota->Mu->Cone->Element, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Foundation);
             else
                 Eta = new Faung(Psi, Iota->Psi->Rod->Secret, Iota->Mu->Rod->Signal, Iota->Psi->Rod->Channel, Iota->Psi->Rod->Identity);
-            Eta->Theta(Mu->Mu->Rod->Barn);
             Upsilon = new Fa();
             if (Iota->Mu->Rod->Gamma == 5)
                 Upsilon->Fuse(Beta->Mu->Rod->Foundation, Iota->Mu->Cone->Ring, Omicron->Mu->Cone->Manifold);
             else
                 Upsilon->Fuse(Beta->Mu->Rod->Secret, Iota->Mu->Cone->Signal, Omicron->Mu->Cone->Channel);
             Theta = Omicron;
-            Theta->Mu->Theta(Eta->Rod->Element);
-            Theta->Mu->Beta(Eta->Rod->Element);
-            Eta->Beta(Theta->Mu->Rod->Foundation);
+            Eta->Theta(Mu->Mu->Omicron);
+            Theta->Mu->Theta(Mu->Psi->Omicron);
+            Theta->Mu->Beta(Mu->Psi->Omicron);
+            Eta->Beta(Theta->Mu->Omega);
             Theta->Mu->Iota();
             Eta->Iota();
             Theta->Mu->Lambda();
