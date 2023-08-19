@@ -13,13 +13,14 @@ using namespace std;
 namespace Dysnomia {
     class 錨 {
     public:
+        static HANDLE hConsole;
+
         mutex Mu_Mutex;
         锚* Mu;
 
         list<ë*> Qing;
 
-        static HANDLE hConsole;
-        std::atomic<int> counter;
+        int counter;
 
         錨() {
             hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -28,13 +29,13 @@ namespace Dysnomia {
             if (Math::POETRY > 5)
                 wcout << L"錨 ";
 
-            vector<thread> threads(nthreads);
+            counter = 0;
+            Phi = 0;
 
             Mu = new 锚();
 
+            vector<thread> threads(nthreads);
             int i = 0;
-            counter = 0;
-            Phi = Mu->Nu->Omega;
 
 //            threads[i++] = thread(&錨::Xi, this);
 //            threads[i++] = thread(&錨::Alpha, this);
@@ -65,7 +66,7 @@ namespace Dysnomia {
         list<ည*> Qi;
         list<Tod*> Rong;
 
-        const int nthreads = 11;
+        const int nthreads = 2;
 
         bool AwaitingAlpha = false;
         bool GammaOne = false;
@@ -713,7 +714,8 @@ namespace Dysnomia {
                 Mu_Mutex.lock();
                 while (Delta.size() + Omicron.size() > queue_max) {
                     Mu_Mutex.unlock();
-                    if (sleep_time < 6000) sleep_time *= 2;
+                    if (sleep_time < 6000)
+                        sleep_time *= 2;
                     std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
                     Mu_Mutex.lock();
                 }
@@ -721,7 +723,7 @@ namespace Dysnomia {
                     sleep_time /= 2;
                 if (sleep_time < 200) sleep_time = 200;
 
-                Beta = Mu->Pi(333);
+                Beta = Mu->Pi(Mu->Nu->Upsilon);
                 Iota = Mu->Pi(Beta->Dynamo);
                 Phi = Iota->Eta;
 

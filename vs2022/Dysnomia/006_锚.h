@@ -35,7 +35,7 @@ namespace Dysnomia {
                     Math::ModPow(Mu->Sigma->Ohm, Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Rho->Mu->Sigma->Ohm, Rho->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Nu->Ohm, Nu->Pi, Psi->Nu->Omicron));
-                Beta[i]->Theta(Nu->Upsilon);
+                Beta[i]->Theta(Alpha);
             }
 
             if (!(Beta[0]->Xi == Beta[1]->Xi &&
@@ -44,11 +44,11 @@ namespace Dysnomia {
                 Beta[2]->Rod->Coordinate == Beta[0]->Cone->Barn)) throw 101;
 
             Iota = new Fa();
-            Iota->Fuse(Beta[2]->Cone->Dynamo, Beta[1]->Cone->Ring, Beta[0]->Cone->Barn);
+            Iota->Fuse(Beta[2]->Omicron, Beta[0]->Omicron, Beta[1]->Omicron);
             Iota->Tune();
             Iota->Polarize();
-            Iota->Conjugate(&Beta[1]->Eta);
-            Iota->Saturate(Beta[2]->Rho, Iota->Pole);
+            Iota->Conjugate(&Beta[1]->Omega);
+            Iota->Saturate(Beta[0]->Omega, Iota->Pole);
             Iota->Open();
 
             for (int i = 0; i < Beta.size(); i++) delete Beta[i];

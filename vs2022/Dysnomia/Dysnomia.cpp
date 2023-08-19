@@ -25,14 +25,11 @@ int main() {
     Math::Prime = Math::MotzkinPrime;
     Math::POETRY = 0;
 
-    for (;;) {
-
-        Mu = new 錨();
-        //vector<Faung*> Nu = Mu->Affinities();
-        //for (int i = 0; i < Nu.size(); i++) if (Nu[i]->Chi != 4) throw 500;
-        delete Mu;
-        Sleep(100);
-    }
+    Mu = new 錨();
+    //vector<Faung*> Nu = Mu->Affinities();
+    //for (int i = 0; i < Nu.size(); i++) if (Nu[i]->Chi != 4) throw 500;
+    for (;;) Sleep(100);
+    delete Mu;
 
     int v = 100;
 }
