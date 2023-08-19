@@ -21,10 +21,10 @@ namespace Dysnomia {
             Mu = new ညြ(false);
             if (Eta == nullptr) Eta = new Atmos(Mu->Psi);
             Psi = new ညြ(true);
-            Psi->Theta->Mu->Theta(Mu->Eta->Rod->Element);
-            Psi->Theta->Mu->Beta(Mu->Eta->Rod->Element);
             Mu->Eta->Theta(Psi->Theta->Psi->Cone->Manifold);
             Mu->Eta->Beta(Psi->Theta->Psi->Cone->Manifold);
+            Psi->Theta->Mu->Theta(Mu->Eta->Omicron);
+            Psi->Theta->Mu->Beta(Mu->Eta->Omicron);
             Mu->Eta->Iota();
             Psi->Theta->Mu->Iota();
             Psi->Theta->Mu->Lambda();
