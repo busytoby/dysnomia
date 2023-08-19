@@ -27,9 +27,10 @@ namespace Dysnomia {
             Sigma = new Faung(Mu->Mu->Theta->Rho, Mu->Psi->Theta->Rho);
             Sigma->Theta(Mu->Psi->Theta->Psi->Omicron);
             Sigma->Beta(Mu->Psi->Theta->Psi->Omicron);
+            Sigma->Iota();
+            Sigma->Lambda();
             Upsilon = Psi->Pi(true);
             Theta = Eta->Pi(true);
-
         }
 
         Zuo(Tod* Beta) {
