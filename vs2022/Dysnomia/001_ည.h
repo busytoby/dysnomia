@@ -42,7 +42,7 @@ namespace Dysnomia {
                 Mu->Lambda();
             }
             else {
-                Psi = new Faung();
+                Psi = Pi(false);
                 Psi->Theta(Mu->Omicron);
                 Psi->Beta(Mu->Omicron);
                 Psi->Iota();
