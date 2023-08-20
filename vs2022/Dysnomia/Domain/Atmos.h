@@ -8,8 +8,7 @@ namespace Dysnomia {
     public:
         Fa* Mu;
         list<Faung*> Rho;
-
-        vector<Faung*> Water;
+        list<Faung*> Water;
 
         Atmos(Fa* Eta) {
             Eta->Gamma++;
