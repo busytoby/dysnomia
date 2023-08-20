@@ -44,11 +44,11 @@ namespace Dysnomia {
                 Beta[2]->Rod->Coordinate == Beta[0]->Cone->Barn)) throw 101;
 
             Iota = new Fa();
-            Iota->Fuse(Beta[2]->Omicron, Beta[0]->Omicron, Beta[1]->Omicron);
+            Iota->Fuse(Beta[2]->Omega, Beta[0]->Omega, Beta[1]->Omega);
             Iota->Tune();
             Iota->Polarize();
-            Iota->Conjugate(&Beta[1]->Omega);
-            Iota->Saturate(Beta[0]->Omega, Iota->Pole);
+            Iota->Conjugate(&Beta[1]->Omicron);
+            Iota->Saturate(Beta[0]->Omicron, Iota->Pole);
             Iota->Open();
 
             for (int i = 0; i < Beta.size(); i++) Tod::Eta->Water.push_back(Beta[i]);
