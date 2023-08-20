@@ -25,7 +25,7 @@ namespace Dysnomia {
             Nu->Lambda();
         }
 
-        Fa* Pi(Int64 Alpha) {
+        Fa* Pi() {
             vector<Faung*> Beta(3);
             Fa* Iota;
             
@@ -35,7 +35,7 @@ namespace Dysnomia {
                     Math::ModPow(Mu->Sigma->Ohm, Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Rho->Mu->Sigma->Ohm, Rho->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Nu->Ohm, Nu->Pi, Psi->Nu->Omicron));
-                Beta[i]->Theta(Alpha);
+                Beta[i]->Theta(Nu->Upsilon);
             }
 
             if (!(Beta[0]->Xi == Beta[1]->Xi &&

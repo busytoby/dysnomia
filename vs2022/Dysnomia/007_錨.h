@@ -62,7 +62,6 @@ namespace Dysnomia {
         ည* Psi;
         Int64 Phi;
         list<Fa*> Omicron;
-        list<Fa*> Delta;
         list<ည*> Qi;
         list<Tod*> Rong;
 
@@ -76,6 +75,7 @@ namespace Dysnomia {
         bool GammaThreeReady = false;
         bool BetaOne = false;
 
+        /*
         void Xi() {
             Tod* Beta;
             Zuo* Iota;
@@ -613,6 +613,7 @@ namespace Dysnomia {
                 std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
             }
         }
+        */
 
         void Beta() {
             Fa* Iota;
@@ -648,7 +649,8 @@ namespace Dysnomia {
                 else {
                     Tau = nullptr;
                     while (Omicron.size()) {
-                        Iota = Omicron.front();
+                        Iota = Omicron.back();
+                        throw 500;
                         if (Tau == nullptr)
                             Rho = Mu->Rho->Psi->Pi(false);
                         else
@@ -672,12 +674,8 @@ namespace Dysnomia {
                         }
 
                         Upsilon = new Faung(Sigma->Mu->Upsilon, Sigma->Upsilon);
-                        Tau = Sigma->Psi->Pi(333);
-                        Upsilon->Cone->Gamma++;
-                        Delta.push_back(Upsilon->Cone);
-                        Upsilon->Rod->Gamma++;
-                        Delta.push_back(Upsilon->Rod);
-                        Delta.push_back(Tau);
+                        Tau = Sigma->Psi->Pi(true);
+
                         if (Iota->Gamma == 1) delete Iota; else Iota->Gamma--;
                         if (Rho->Rod->Gamma <= 1 || Rho->Cone->Gamma <= 1) delete Rho; else { Rho->Rod->Gamma--; Rho->Cone->Gamma--; }
                         if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
@@ -686,7 +684,7 @@ namespace Dysnomia {
                         if (Sigma->Gamma == 1) delete Sigma; else Sigma->Gamma--;
                         delete Upsilon;
 
-                        Omicron.pop_front();
+                        Omicron.pop_back();
                     }
                     Mu_Mutex.unlock();
                 }
@@ -712,23 +710,20 @@ namespace Dysnomia {
 
             for (;;) {
                 Mu_Mutex.lock();
-                while (Delta.size() + Omicron.size() > queue_max) {
+                while (Omicron.size() > queue_max) {
                     Mu_Mutex.unlock();
                     if (sleep_time < 6000)
                         sleep_time *= 2;
                     std::this_thread::sleep_for(chrono::milliseconds(rand() % sleep_time));
                     Mu_Mutex.lock();
                 }
-                if (Delta.size() < queue_max && Omicron.size() == 0)
+                if (Omicron.size() < 4)
                     sleep_time /= 2;
                 if (sleep_time < 200) sleep_time = 200;
 
-                Beta = Mu->Pi(Mu->Nu->Upsilon);
-                Iota = Mu->Pi(Beta->Dynamo);
-                Phi = Iota->Eta;
+                Beta = Mu->Pi();
 
-                Delta.push_back(Beta);
-                Omicron.push_back(Iota);
+                Omicron.push_front(Beta);
 
                 local_count = ++counter;
                 SetConsoleTextAttribute(hConsole, 10);
