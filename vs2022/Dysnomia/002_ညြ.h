@@ -7,6 +7,7 @@ namespace Dysnomia {
     class ညြ {
     public:
         ည* Mu;
+        list<Fa*>* Rho;
         Fa* Psi;
         Faung* Eta;
         Fa* Upsilon;
@@ -17,6 +18,7 @@ namespace Dysnomia {
             if (Math::POETRY > 7)
                 wcout << L"ညြ ";
             Mu = new ည();
+            Rho = new list<Fa*>();
             Psi = new Fa();
             if (RAPHE_NEBULAE)
                 Eta = new Faung(Psi, Mu->Psi->Rod->Manifold, Mu->Mu->Rod->Element, Mu->Psi->Rod->Ring, Mu->Psi->Rod->Foundation);
@@ -41,6 +43,7 @@ namespace Dysnomia {
             if (Math::POETRY > 7)
                 wcout << L"ညြ ";
             Mu = Beta;
+            Rho = new list<Fa*>();
             Psi = new Fa();
             if (Iota->Mu->Rod->Gamma == 5)
                 Eta = new Faung(Psi, Iota->Psi->Cone->Manifold, Iota->Mu->Cone->Element, Iota->Psi->Cone->Ring, Iota->Psi->Cone->Foundation);
@@ -69,6 +72,11 @@ namespace Dysnomia {
 
         ~ညြ() {
             if (Mu->Gamma == 1) delete Mu; else Mu->Gamma--;
+            while (Rho->size() > 0) {
+                Fa* Alpha = Rho->front();
+                if (Alpha->Gamma == 1) delete Alpha; else Alpha->Gamma--;
+                Rho->pop_front();
+            }
             if (Psi->Gamma == 1) delete Psi; else Psi->Gamma--;
             if (Eta->Rod->Gamma <= 1 || Eta->Cone->Gamma <= 1) delete Eta; else { Eta->Rod->Gamma--; Eta->Cone->Gamma--; }
             if (Upsilon->Gamma == 1) delete Upsilon; else Upsilon->Gamma--;
@@ -80,6 +88,8 @@ namespace Dysnomia {
             Fa* Beta = new Fa();
             Beta->Fuse(Eta->Omicron, Alpha, Eta->Omega);
             Beta->Tune();
+            Beta->Gamma++;
+            Rho->push_back(Beta);
             return Beta;
         }
 
