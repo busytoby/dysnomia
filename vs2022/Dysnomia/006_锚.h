@@ -31,11 +31,11 @@ namespace Dysnomia {
             
             for (int i = 0; i < Beta.size(); i++) {
                 Beta[i] = new Faung(
-                    Math::ModPow(Psi->Mu->Sigma->Ohm, Psi->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Mu->Sigma->Ohm, Mu->Sigma->Pi, Psi->Nu->Omicron),
+                    Math::ModPow(Psi->Mu->Sigma->Ohm, Psi->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Rho->Mu->Sigma->Ohm, Rho->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Nu->Pi, Nu->Ohm, Psi->Nu->Omicron));
-                Beta[i]->Theta(Nu->Upsilon);
+                Beta[i]->Theta(Psi->Eta->Rho->Identity);
             }
 
             if (!(Beta[0]->Xi == Beta[1]->Xi &&
@@ -44,11 +44,11 @@ namespace Dysnomia {
                 Beta[2]->Rod->Coordinate == Beta[0]->Cone->Barn)) throw 101;
 
             Iota = new Fa();
-            Iota->Fuse(Beta[2]->Omega, Beta[0]->Omega, Beta[1]->Omega);
+            Iota->Fuse(Beta[1]->Omega, Beta[0]->Omega, Beta[2]->Omega);
             Iota->Tune();
             Iota->Polarize();
-            Iota->Conjugate(&Beta[2]->Omicron);
-            Iota->Saturate(Beta[0]->Omicron, Iota->Pole);
+            Iota->Conjugate(&Beta[1]->Omicron);
+            Iota->Saturate(Beta[2]->Omicron, Iota->Pole);
             Iota->Open();
 
             for (int i = 0; i < Beta.size(); i++) Tod::Eta->Water.push_front(Beta[i]);
