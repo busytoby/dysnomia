@@ -700,9 +700,6 @@ namespace Dysnomia {
         }
 
         void Lambda() {
-            Fa* Beta;
-            Fa* Iota;
-
             short queue_max = 40;
             int sleep_time = 100;
 
@@ -710,6 +707,8 @@ namespace Dysnomia {
 
             for (;;) {
                 Mu_Mutex.lock();
+                Fa* Beta;
+
                 while (Omicron.size() > queue_max) {
                     Mu_Mutex.unlock();
                     if (sleep_time < 6000)
