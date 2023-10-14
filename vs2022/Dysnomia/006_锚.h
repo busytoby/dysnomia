@@ -34,7 +34,7 @@ namespace Dysnomia {
                     Math::ModPow(Psi->Mu->Sigma->Ohm, Psi->Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Mu->Sigma->Ohm, Mu->Sigma->Pi, Psi->Nu->Omicron),
                     Math::ModPow(Rho->Mu->Sigma->Ohm, Rho->Mu->Sigma->Pi, Psi->Nu->Omicron),
-                    Math::ModPow(Nu->Ohm, Nu->Pi, Psi->Nu->Omicron));
+                    Math::ModPow(Nu->Pi, Nu->Ohm, Psi->Nu->Omicron));
                 Beta[i]->Theta(Nu->Upsilon);
             }
 
