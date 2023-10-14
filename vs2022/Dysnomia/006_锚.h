@@ -48,7 +48,7 @@ namespace Dysnomia {
             Iota->Tune();
             Iota->Polarize();
             Iota->Conjugate(&Beta[1]->Omicron);
-            Iota->Saturate(Beta[2]->Omicron, Iota->Pole);
+            Iota->Saturate(Beta[0]->Omicron, Beta[2]->Omicron);
             Iota->Open();
 
             for (int i = 0; i < Beta.size(); i++) Tod::Eta->Water.push_front(Beta[i]);
